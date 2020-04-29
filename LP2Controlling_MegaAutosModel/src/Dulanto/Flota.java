@@ -9,7 +9,7 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Flota extends Empresa {
+public class Flota extends Empresa {//Definir constructor
     private int cantidadVehiculos; //Ojo
     
 }

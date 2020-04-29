@@ -11,10 +11,11 @@ import Cossio.CuentaContable;
  * @author Rodrigo
  */
 public abstract class AreaTrabajo {
+    private double total;
     private ArrayList<CuentaContable> cuentasContables;
     
     public AreaTrabajo(){
-        this.cuentasContables = new ArrayList<>();
+        this.cuentasContables = new ArrayList<CuentaContable>();
     }
 
     public ArrayList<CuentaContable> getCuentasContables() {
@@ -24,6 +25,18 @@ public abstract class AreaTrabajo {
     public void setCuentasContables(ArrayList<CuentaContable> cuentasContables) {
         this.cuentasContables = cuentasContables;
     }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+    
+    
+    
+    public abstract void calcularTotal(ArrayList<CuentaContable> cuentasContables);
     
     
 }

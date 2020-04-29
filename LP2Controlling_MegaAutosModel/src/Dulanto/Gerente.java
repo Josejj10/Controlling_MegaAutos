@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package Dulanto;
-
+import Cossio.Driver;
 /**
  *
  * @author Rodrigo
  */
-public class Gerente extends Usuario implements IConsultable{
+public class Gerente extends Usuario implements IModificar{
     
     public Gerente(){
         
@@ -17,8 +17,14 @@ public class Gerente extends Usuario implements IConsultable{
     public Gerente(String nombre, String email){
         super(nombre, email);
     }
+    
     @Override
-    public void modificarDrivers(){
+    public void modificarDriver(Driver driver){
         //Modificar drivers
+    }
+    
+    @Override
+    public void asignarRolUsuario(Usuario usuario){
+        //Asignar rol a un usuario creado
     }
 }

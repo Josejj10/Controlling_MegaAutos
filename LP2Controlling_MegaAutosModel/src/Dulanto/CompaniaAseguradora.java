@@ -9,6 +9,6 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class CompaniaAseguradora extends Empresa{
+public class CompaniaAseguradora extends Empresa{//Definir constructores
     
 }

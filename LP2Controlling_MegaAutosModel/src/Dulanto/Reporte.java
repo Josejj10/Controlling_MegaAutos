@@ -53,5 +53,8 @@ public class Reporte {
         this.local = local;
     }
     
-    
+    public String generarReporte(ArrayList<AreaTrabajo> areasTrabajo, Local local, Usuario usuario, int id){
+        //
+        return "Reporte";
+    }
 }

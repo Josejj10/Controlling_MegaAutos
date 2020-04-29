@@ -10,17 +10,8 @@ package Dulanto;
  * @author Rodrigo
  */
 public abstract class Cliente {
-    private String nombre; //Nombre o razon social
     private String telefono;
     private String correo;
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String getTelefono() {
         return telefono;

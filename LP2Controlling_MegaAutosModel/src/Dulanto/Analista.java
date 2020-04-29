@@ -14,7 +14,10 @@ public class Analista extends Usuario{
     public Analista(){
         
     }
+    
     public Analista(String nombre, String email){
         super(nombre, email);
     }
+    
+    
 }

@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 package Dulanto;
-
+import Cossio.Driver;
 /**
  *
  * @author Rodrigo
  */
-public interface IConsultable {
-    public void modificarDrivers();
+public interface IModificar {
+    public void modificarDriver(Driver driver);
+    public void asignarRolUsuario(Usuario usuario);
 }

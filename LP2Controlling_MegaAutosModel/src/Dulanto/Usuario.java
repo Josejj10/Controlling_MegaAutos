@@ -9,11 +9,12 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Usuario {
+public abstract class Usuario {
     private static int correlativo = 1;
     private int id;
     private String nombre;
     private String email;
+    private String contraseña;
     
     public Usuario(){
     }
@@ -40,6 +41,17 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
     
+    public void encriptarContraseña(String contraseña){
+        //Método para encriptar la contraseña del usuario
+    }
     
 }

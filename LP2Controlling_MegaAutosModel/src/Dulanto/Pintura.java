@@ -5,10 +5,17 @@
  */
 package Dulanto;
 
+import Cossio.CuentaContable;
+import java.util.ArrayList;
+
 /**
  *
  * @author Rodrigo
  */
 public class Pintura extends AreaTrabajo{
     
+    @Override
+    public void calcularTotal(ArrayList<CuentaContable> cuentasContables){
+        //
+    }
 }

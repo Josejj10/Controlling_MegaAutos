@@ -4,11 +4,54 @@
  * and open the template in the editor.
  */
 package Dulanto;
-
+import java.util.ArrayList;
+import Cossio.Local;
 /**
  *
  * @author Rodrigo
  */
 public class Reporte {
+    private int id;
+    private static int correlativo = 1;
+    private Usuario usuario;
+    private ArrayList<AreaTrabajo> areasTrabajo;
+    private Local local;
+
+    public Reporte(){
+        this.id = correlativo;
+        this.areasTrabajo = new ArrayList<>();
+        correlativo++;
+    }
+    public Reporte(Usuario usuario) {
+        this.usuario = usuario;
+        this.id = correlativo;
+        this.areasTrabajo = new ArrayList<>();
+        correlativo++;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public ArrayList<AreaTrabajo> getAreasTrabajo() {
+        return areasTrabajo;
+    }
+
+    public void setAreasTrabajo(ArrayList<AreaTrabajo> areasTrabajo) {
+        this.areasTrabajo = areasTrabajo;
+    }
+
+    public Local getLocal() {
+        return local;
+    }
+
+    public void setLocal(Local local) {
+        this.local = local;
+    }
+    
     
 }

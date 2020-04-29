@@ -9,7 +9,7 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Gerente extends Usuario{
+public class Gerente extends Usuario implements IConsultable{
     
     public Gerente(){
         
@@ -17,5 +17,8 @@ public class Gerente extends Usuario{
     public Gerente(String nombre, String email){
         super(nombre, email);
     }
-    
+    @Override
+    public void modificarDrivers(){
+        //Modificar drivers
+    }
 }

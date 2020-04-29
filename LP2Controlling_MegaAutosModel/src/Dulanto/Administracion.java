@@ -9,6 +9,6 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Administracion {
+public class Administracion extends AreaTrabajo {
     
 }

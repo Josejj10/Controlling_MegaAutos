@@ -9,11 +9,15 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class JefePlaneamiento extends Usuario{
+public class JefePlaneamiento extends Usuario implements IConsultable{
     public JefePlaneamiento(){
         
     }
     public JefePlaneamiento(String nombre, String email){
         super(nombre, email);
+    }
+    @Override
+    public void modificarDrivers(){
+        //Modificar drivers
     }
 }

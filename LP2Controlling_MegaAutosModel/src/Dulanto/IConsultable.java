@@ -9,6 +9,6 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Mecanica extends AreaTrabajo{
-    
+public interface IConsultable {
+    public void modificarDrivers();
 }

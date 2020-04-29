@@ -9,6 +9,6 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Planchado {
+public class Planchado extends AreaTrabajo{
     
 }

@@ -16,4 +16,21 @@ public class CuentaContable {
         this.ordenes = new ArrayList<OrdenTrabajo>();
         this.driver = driver;
     }
+
+    public ArrayList<OrdenTrabajo> getOrdenes() {
+        return ordenes;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setOrdenes(ArrayList<OrdenTrabajo> ordenes) {
+        this.ordenes = ordenes;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+    
 }

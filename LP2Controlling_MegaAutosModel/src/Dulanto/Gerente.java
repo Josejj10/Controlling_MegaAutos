@@ -9,6 +9,13 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Gerente {
+public class Gerente extends Usuario{
+    
+    public Gerente(){
+        
+    }
+    public Gerente(String nombre, String email){
+        super(nombre, email);
+    }
     
 }

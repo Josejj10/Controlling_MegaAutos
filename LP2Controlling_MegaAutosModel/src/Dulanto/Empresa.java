@@ -9,6 +9,17 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class Empresa {
+public abstract class Empresa extends Cliente {
+    private String ruc;
+
+    public String getRuc() {
+        return ruc;
+    }
+
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
+    }
+
+  
     
 }

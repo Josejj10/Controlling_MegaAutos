@@ -9,6 +9,7 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class CuentaCliente {
+public class CuentaCliente extends Cliente {
+    private String dni;
     
 }

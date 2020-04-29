@@ -9,6 +9,6 @@ package Dulanto;
  *
  * @author Rodrigo
  */
-public class CompaniaAseguradora {
+public class CompaniaAseguradora extends Empresa{
     
 }

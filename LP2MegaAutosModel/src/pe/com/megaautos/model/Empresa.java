@@ -1,0 +1,109 @@
+package pe.com.megaautos.model;
+
+import java.util.ArrayList;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Jose
+ */
+public class Empresa {
+    private String nombre;
+    private String ruc;
+    // Permisos con los que cuenta el usuario
+    // Son permisos para modificar clases o crear reportes
+    private ArrayList<Usuario> usuarios;
+    private ArrayList<Local> locales;
+    private ArrayList<AreaTrabajo> areasTrabajo;
+    
+
+    /*============================
+              Constructores
+     ============================*/    
+   
+    public Empresa(){
+        this.nombre = "MegaAutos";
+        this.ruc = "11111111111111";
+    }
+    
+    public Empresa(String nombre, String ruc){
+        this.nombre = nombre;
+        // Verificar RUC
+        this.ruc = ruc;
+    }
+    
+    /*============================
+           Getters y Setters
+     ============================*/
+    public String getNombre() {
+        return nombre;
+    }
+
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+  
+    public String getRuc() {
+        return ruc;
+    }
+
+  
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
+    }
+
+    /*============================
+              Metodos de listas
+    ============================*/
+    public void addUsuario(Usuario usuario) {
+        this.usuarios.add(usuario);
+    }
+    
+    public boolean removePermiso(Usuario usuario){
+        return this.usuarios.remove(usuario);
+    }
+    
+    public ArrayList<Usuario> getUsuarios() {
+        return usuarios;
+    }
+    
+    public void addLocal(Local local) {
+        this.locales.add(local);
+    }
+    
+    public boolean removeLocal(Local local){
+        return this.locales.remove(local);
+    }
+    
+    public ArrayList<Local> getLocales() {
+        return locales;
+    }
+    
+    public void addAreaTrabajo(AreaTrabajo area) {
+        this.areasTrabajo.add(area);
+    }
+    
+    public boolean removeAreaTrabajo(AreaTrabajo area){
+        return this.areasTrabajo.remove(area);
+    }
+    
+    public ArrayList<AreaTrabajo> getAreasTrabajo() {
+        return areasTrabajo;
+    }
+
+    /*============================
+                Reportes
+    ============================*/
+    
+    public String generarReporte(String tipoReporte){
+        String reporte = "null";
+        return reporte;
+    }
+}

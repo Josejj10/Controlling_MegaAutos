@@ -9,7 +9,7 @@ package pe.com.megaautos.model;
  *
  * @author JOSE
  */
-interface IConsultable {
+public interface IConsultable {
     public String consultarDatos();
     public void modificar();
 }

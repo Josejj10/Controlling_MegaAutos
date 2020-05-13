@@ -13,7 +13,7 @@ public class Vehiculo implements IConsultable{
     private int id;
     private String placa;
     private String tipoVehiculo;
-
+    private Cliente propietario;
     public Vehiculo(){
         
     }
@@ -56,4 +56,14 @@ public class Vehiculo implements IConsultable{
     public void modificar() {
         
     }
+
+    public Cliente getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Cliente propietario) {
+        this.propietario = propietario;
+    }
+
+
 }

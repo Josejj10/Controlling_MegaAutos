@@ -5,10 +5,16 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.ComprobantePago;
+
 /**
  *
  * @author Rodrigo
  */
 public interface ComprobantePagoDAO {
-    
+    int insertar(ComprobantePago comprobantePago);
+    int actualizar(ComprobantePago comprobantePago);
+    int eliminar(int idComprobantePago);
+    ArrayList<ComprobantePago> listar();
 }

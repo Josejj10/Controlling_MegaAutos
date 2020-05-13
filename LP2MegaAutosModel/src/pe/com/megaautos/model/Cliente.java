@@ -67,7 +67,7 @@ public class Cliente implements IConsultable{
         this.correo = correo;
     }    
     
-
+    
     @Override
     public String consultarDatos() {
         throw new UnsupportedOperationException("Not supported yet.");

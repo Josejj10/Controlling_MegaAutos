@@ -74,7 +74,7 @@ public class VehiculoMySQL implements VehiculoDAO{
             //executeUpdate -> INSERT, UPDATE, DELETE
             ResultSet rs = st.executeQuery(sentencia);
             //Recorrer todas las filas que devuelve la ejecucion sentencia
-            /*while(rs.next()){
+            while(rs.next()){
                 Vehiculo vehiculo = new Vehiculo();
                 vehiculo.setIdPersona(rs.getInt("ID_EMPLEADO"));
                 vehiculo.setNombreCompleto(rs.getString("NOMBRE_COMPLETO"));
@@ -83,7 +83,7 @@ public class VehiculoMySQL implements VehiculoDAO{
                 vehiculo.setSueldo(rs.getFloat("SUELDO"));
                 vehiculo.setActivo(rs.getBoolean("ACTIVO"));
                 vehiculos.add(vehiculo);
-            }*/
+            }
             //cerrar conexion
             con.close();
         }catch(Exception ex){

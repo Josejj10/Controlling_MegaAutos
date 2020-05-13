@@ -5,10 +5,16 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.Sede;
+
 /**
  *
  * @author Rodrigo
  */
 public interface SedeDAO {
-    
+    int insertar(Sede sede);
+    int actualizar(Sede sede);
+    int eliminar(int idSede);
+    ArrayList<Sede> listar();
 }

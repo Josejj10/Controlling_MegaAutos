@@ -10,9 +10,10 @@ package pe.com.megaautos.model;
  * @author Rodrigo
  */
 public class Vehiculo implements IConsultable{
+    private int id;
     private String placa;
     private String tipoVehiculo;
-
+    private Cliente propietario;
     public Vehiculo(){
         
     }
@@ -46,5 +47,23 @@ public class Vehiculo implements IConsultable{
     @Override
     public void modificar() {
         
+    }
+
+    public Cliente getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Cliente propietario) {
+        this.propietario = propietario;
+    }
+
+    
+    public int getId() {
+        return id;
+    }
+
+    
+    public void setId(int id) {
+        this.id = id;
     }
 }

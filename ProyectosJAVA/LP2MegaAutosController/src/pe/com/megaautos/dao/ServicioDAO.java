@@ -5,10 +5,15 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.Servicio;
 /**
  *
  * @author Rodrigo
  */
 public interface ServicioDAO {
-    
+    int insertar(Servicio servicio);
+    int actualizar(Servicio servicio);
+    int eliminar(int idServicio);
+    ArrayList<Servicio> listar();
 }

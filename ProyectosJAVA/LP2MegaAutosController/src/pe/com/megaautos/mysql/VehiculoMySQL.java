@@ -3,8 +3,7 @@ package pe.com.megaautos.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.ResultSet;      
 import java.util.ArrayList;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.VehiculoDAO;
@@ -27,15 +26,15 @@ public class VehiculoMySQL implements VehiculoDAO{
                     DBManager.user, DBManager.password);
             
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_VEHICULO(?,?,?)}");
+                    "{call INSERTAR_VEHICULO(?,?,?,?)}");
             // Insertar Vehiculo recibirá la placa, el nombre del tipo vehiculo
             // Y el id del propietario
             // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
             // Por su id, para poder insertarlo en la tabla 
             cs.registerOutParameter("_ID_VEHICULO", java.sql.Types.INTEGER);
-            cs.setString(3, vehiculo.getPlaca().toUpperCase());
-            cs.setString(4, vehiculo.getTipoVehiculo().toUpperCase());
-            cs.setInt(2, vehiculo.getPropietario().getId());
+            cs.setString("_PLACA", vehiculo.getPlaca().toUpperCase());
+            cs.setString("_TIPO_VEHICULO", vehiculo.getTipoVehiculo().toUpperCase());
+            cs.setInt("_ID_PROPIETARIO", vehiculo.getPropietario().getId());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_VEHICULO");
             con.close();

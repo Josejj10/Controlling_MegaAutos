@@ -5,11 +5,17 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.Usuario;
+
 
 /**
  *
  * @author Rodrigo
  */
 public interface UsuarioDAO {
-    
+    int insertar(Usuario usuario);
+    int actualizar(Usuario usuario);
+    int eliminar(int idUsuario);
+    ArrayList<Usuario> listar();
 }

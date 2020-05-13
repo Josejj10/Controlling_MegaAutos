@@ -5,10 +5,16 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.Driver;
+
 /**
  *
  * @author Rodrigo
  */
 public interface DriverDAO {
-    
+    int insertar(Driver driver);
+    int actualizar(Driver driver);
+    int eliminar(int idDriver);
+    ArrayList<Driver> listar();
 }

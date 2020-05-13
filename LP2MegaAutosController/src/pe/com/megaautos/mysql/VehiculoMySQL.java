@@ -8,11 +8,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.VehiculoDAO;
+import pe.com.megaautos.dao.ClienteDAO;
+import pe.com.megaautos.model.Cliente;
 import pe.com.megaautos.model.Vehiculo;
 
 public class VehiculoMySQL implements VehiculoDAO{
 
-    Connection con;
+        Connection con;
     
     @Override
     public int insertar(Vehiculo vehiculo) {
@@ -31,8 +33,8 @@ public class VehiculoMySQL implements VehiculoDAO{
             // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
             // Por su id, para poder insertarlo en la tabla 
             cs.registerOutParameter("_ID_VEHICULO", java.sql.Types.INTEGER);
-            cs.setString(3, vehiculo.getPlaca());
-            cs.setString(4, vehiculo.getTipoVehiculo());
+            cs.setString(3, vehiculo.getPlaca().toUpperCase());
+            cs.setString(4, vehiculo.getTipoVehiculo().toUpperCase());
             cs.setInt(2, vehiculo.getPropietario().getId());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_VEHICULO");
@@ -64,22 +66,22 @@ public class VehiculoMySQL implements VehiculoDAO{
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            //Ejecutar una sentencia
-            String sentencia = "SELECT * FROM VEHICULO INNER JOIN "
-                    + "PERSONA ON PERSONA.ID_PERSONA = EMPLEADO.ID_EMPLEADO";
-            Statement st = con.createStatement();
-            //executeQuery -> SELECT
-            //executeUpdate -> INSERT, UPDATE, DELETE
-            ResultSet rs = st.executeQuery(sentencia);
+            // Listar vehiculo devuelve una lista de vehiculo 
+            // con Placa, ID_tipo_vehiculo  y ID_propietario
+            CallableStatement cs = con.prepareCall(
+                    "{call LISTAR_VEHICULO()}");
+            ResultSet rs = cs.executeQuery();
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){
                 Vehiculo vehiculo = new Vehiculo();
-                vehiculo.setIdPersona(rs.getInt("ID_EMPLEADO"));
-                vehiculo.setNombreCompleto(rs.getString("NOMBRE_COMPLETO"));
-                vehiculo.setDNI(rs.getString("DNI"));
-                vehiculo.setCargo(rs.getString("CARGO"));
-                vehiculo.setSueldo(rs.getFloat("SUELDO"));
-                vehiculo.setActivo(rs.getBoolean("ACTIVO"));
+                vehiculo.setId(rs.getInt("ID_VEHICULO"));
+                vehiculo.setPlaca(rs.getString("PLACA"));
+                vehiculo.setTipoVehiculo(rs.getString("TIPO_VEHICULO"));
+                // Para agregar el cliente a vehículo
+                // Se asume que el Cliente YA ESTA en la BD
+                ClienteDAO daoCliente = new ClienteMySQL();
+                Cliente prop = daoCliente.buscar(rs.getInt("ID_PROPIETARIO"));
+                vehiculo.setPropietario(prop);
                 vehiculos.add(vehiculo);
             }
             //cerrar conexion

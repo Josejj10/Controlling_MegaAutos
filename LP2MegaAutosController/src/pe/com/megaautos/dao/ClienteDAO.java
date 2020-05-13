@@ -5,6 +5,7 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
 import pe.com.megaautos.model.Cliente;
 
 /**
@@ -12,5 +13,9 @@ import pe.com.megaautos.model.Cliente;
  * @author Rodrigo
  */
 public interface ClienteDAO {
-    public Cliente buscar(int id);
+    Cliente buscar(int id);
+    int insertar(Cliente cliente);
+    int actualizar(Cliente cliente);
+    int eliminar(int idCliente);
+    ArrayList<Cliente> listar();
 }

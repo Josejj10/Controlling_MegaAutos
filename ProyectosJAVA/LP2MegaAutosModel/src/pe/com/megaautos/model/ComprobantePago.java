@@ -7,7 +7,8 @@ public class ComprobantePago {
     private String tipoComprobante;
     private Date fecha;
     private OrdenTrabajo ordenTrabajo;    
-            
+    private double monto;
+    
     public ComprobantePago(){
     }
     public ComprobantePago(String numeroComprobante, String tipoComprobante, Date fecha){
@@ -60,5 +61,19 @@ public class ComprobantePago {
      */
     public void setOrdenTrabajo(OrdenTrabajo ordenTrabajo) {
         this.ordenTrabajo = ordenTrabajo;
+    }
+
+    /**
+     * @return the monto
+     */
+    public double getMonto() {
+        return monto;
+    }
+
+    /**
+     * @param monto the monto to set
+     */
+    public void setMonto(double monto) {
+        this.monto = monto;
     }
 }

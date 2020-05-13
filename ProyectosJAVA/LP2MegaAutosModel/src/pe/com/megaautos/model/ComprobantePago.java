@@ -56,23 +56,19 @@ public class ComprobantePago {
         return ordenTrabajo;
     }
 
-    /**
-     * @param ordenTrabajo the ordenTrabajo to set
-     */
     public void setOrdenTrabajo(OrdenTrabajo ordenTrabajo) {
         this.ordenTrabajo = ordenTrabajo;
     }
 
-    /**
-     * @return the monto
-     */
+    public void setOrdenTrabajo(int idOrdenTrabajo) {
+        // TODO implementar buscar id orden trabajo
+        this.ordenTrabajo = new OrdenTrabajo();
+    }
+
     public double getMonto() {
         return monto;
     }
 
-    /**
-     * @param monto the monto to set
-     */
     public void setMonto(double monto) {
         this.monto = monto;
     }

@@ -3,6 +3,7 @@ package pe.com.megaautos.model;
 public class SubtipoServicio implements IConsultable{
     private int id;
     private String nombre;
+    private int idServicio;
     
     public SubtipoServicio(){
         
@@ -36,6 +37,14 @@ public class SubtipoServicio implements IConsultable{
     @Override
     public void modificar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public int getIdServicio() {
+        return idServicio;
+    }
+
+    public void setIdServicio(int idServicio) {
+        this.idServicio = idServicio;
     }
     
 }

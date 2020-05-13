@@ -43,6 +43,27 @@ public class UsuarioMySQL implements UsuarioDAO {
             cs.setString("_PASSWORD", usuario.getPassword());
             java.sql.Date sqlDate = new java.sql.Date(usuario.getFechaCreado().getTime());
             cs.setDate("_FECHA_CREACION", sqlDate);
+            
+            /*
+            //  INSERTAR PERMISOS
+            for permiso in permisos{
+               cs.prepareCall("{call INSERTAR_PERMISO(?,?}");
+               cs.setString("_PERMISO", permiso);
+               cs.setId("_ID_USUARIO", usuario.getId());
+               cs.executeUpdate(); 
+                EL SQL Seria algo como:
+                - PROCEDURE INSERTAR PERMISO( 
+                - IN _PERMISO VARCHAR(20)
+                - IN _ID_USUARIO INT)
+               BEGIN
+                -- BUSCAR SI _PERMISO EXISTE EN TABLA PERMISOS Y RETORNAR ID
+                -- ELSE CREAR PERMISO EN TABLA PERMISOS Y ALMACENAR ID LOCALMENTE EN SQL
+                -- INSERTAR EL ID DE PERMISO Y EL ID USUARIO EN LA TABLA PERMISOXUSUARIO
+                -- NO DEVOLVER NADA
+              
+            }
+            */
+            
             cs.executeUpdate();
             rpta = cs.getInt("_ID_USUARIO");
             con.close();

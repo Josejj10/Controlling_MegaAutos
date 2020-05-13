@@ -17,5 +17,6 @@ public interface AreaTrabajoDAO {
     int actualizar(AreaTrabajo areaTrabajo);
     int eliminar(int idAreaTrabajo);
     ArrayList<AreaTrabajo> listar();
+    AreaTrabajo buscar(int idAreaTrabajo);
     
 }

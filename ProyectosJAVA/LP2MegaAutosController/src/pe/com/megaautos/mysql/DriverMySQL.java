@@ -88,5 +88,32 @@ public class DriverMySQL implements DriverDAO {
         //Devolviendo los vehiculos
         return drivers;
     }
+
+    @Override
+    public Driver buscar(int idDriver) {
+        Driver driver = new Driver();
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer una conexión a la BD
+            Connection con = DriverManager.
+            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            // Llama a un select * from cliente where ID_CLIENTE = id
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_DRIVER(?)}");
+            cs.setInt("_ID_DRIVER", idDriver);
+            ResultSet rs = cs.executeQuery();
+            //Recorrer todas las filas que devuelve la ejecucion sentencia
+            while(rs.next()){
+                driver.setId(idDriver);
+                driver.setFormula(rs.getDouble("VALOR"));
+            }
+            //cerrar conexion
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return driver;
+    }
     
 }

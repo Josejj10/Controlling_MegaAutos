@@ -13,6 +13,7 @@ import pe.com.megaautos.model.CuentaContable;
  * @author Rodrigo
  */
 public interface CuentaContableDAO {
+    CuentaContable buscar(int idCuentaContable);
     int insertar(CuentaContable cuentaContable);
     int actualizar(CuentaContable cuentaContable);
     int eliminar(int idCuentaContable);

@@ -94,4 +94,38 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
         return areaTrabajos;    
     }
     
+    @Override 
+    public AreaTrabajo buscar(int idAreaTrabajo){
+        AreaTrabajo areaTrabajo = new AreaTrabajo();
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer una conexión a la BD
+            Connection con = DriverManager.
+            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            // Llama a un select * from cliente where ID_CLIENTE = id
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_AREA_TRABAJO(?)}");
+            cs.setInt("_ID_AREA_TRABAJO", idAreaTrabajo);
+            ResultSet rs = cs.executeQuery();
+            //Recorrer todas las filas que devuelve la ejecucion sentencia
+            while(rs.next()){
+                areaTrabajo.setId(idAreaTrabajo);
+                areaTrabajo.setTotalEgresos(rs.getDouble("TOTAL_EGRESOS"));
+                areaTrabajo.setTotalIngresos(rs.getDouble("TOTAL_INGRESOS"));
+                areaTrabajo.setNombre(rs.getString("NOMBRE"));
+                // TODO, ver como hacer con AreaTrabajoxCuentaContable
+                // Probablemente tambien habria que buscar, pero quiza tenga 
+                // DeadLock porque ATxCC busca una AT y esta busca sus ATxCC
+                // Pero buscar ATxCC va a buscar su AT
+                // Idea, podria ser solo con ID pero igual necesita sus ATxCC
+            }
+            //cerrar conexion
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return areaTrabajo;
+    }
 }
+

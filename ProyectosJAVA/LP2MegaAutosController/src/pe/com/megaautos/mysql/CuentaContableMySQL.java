@@ -10,7 +10,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashSet;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.CuentaContableDAO;
 import pe.com.megaautos.model.CuentaContable;
@@ -93,6 +92,37 @@ public class CuentaContableMySQL implements CuentaContableDAO{
         }
         //Devolviendo los vehiculos
         return cuentaContables;    
+    }
+
+    @Override
+    public CuentaContable buscar(int idCuentaContable) {
+       CuentaContable cuentaContable = new CuentaContable();
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer una conexión a la BD
+            Connection con = DriverManager.
+            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            // Llama a un select * from cliente where ID_CLIENTE = id
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_CUENTA_CONTABLE(?)}");
+            cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);
+            ResultSet rs = cs.executeQuery();
+            //Recorrer todas las filas que devuelve la ejecucion sentencia
+            while(rs.next()){
+                cuentaContable.setId(idCuentaContable);
+                cuentaContable.setMontoEgresos(rs.getDouble("MONTO_EGRESOS"));
+                cuentaContable.setMontoIngresos(rs.getDouble("MONTO_INGRESOS"));
+                cuentaContable.setNombre(rs.getString("NOMBRE"));
+                // TODO cuentaContable.setOrdenesTrabajo(ordenesTrabajo);
+                // Al parecer sería bucar en OTxCC igual a idOT, idCC
+            }
+            //cerrar conexion
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return cuentaContable;
     }
     
 }

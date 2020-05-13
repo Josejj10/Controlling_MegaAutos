@@ -17,4 +17,5 @@ public interface DriverDAO {
     int actualizar(Driver driver);
     int eliminar(int idDriver);
     ArrayList<Driver> listar();
+    Driver buscar(int idDriver);
 }

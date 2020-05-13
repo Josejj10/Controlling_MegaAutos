@@ -5,10 +5,16 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.AreaTrabajoCuentaContable;
+
 /**
  *
  * @author Rodrigo
  */
 public interface AreaTrabajoCuentaContableDAO {
-    
+    void insertar(AreaTrabajoCuentaContable atCc);
+    int actualizar(AreaTrabajoCuentaContable atCc);
+    int eliminar(int idAtCc);
+    ArrayList<AreaTrabajoCuentaContable> listar();
 }

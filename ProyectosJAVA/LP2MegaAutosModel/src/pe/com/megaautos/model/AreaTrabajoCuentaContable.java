@@ -59,4 +59,12 @@ public class AreaTrabajoCuentaContable {
     public void setAreaTrabajo(AreaTrabajo areaTrabajo) {
         this.areaTrabajo = areaTrabajo;
     }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
 }

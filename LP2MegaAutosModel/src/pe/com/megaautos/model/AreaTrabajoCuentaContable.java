@@ -15,6 +15,7 @@ public class AreaTrabajoCuentaContable {
     private double distribucionEgresos;
     private CuentaContable cuentaContable;
     private AreaTrabajo areaTrabajo;
+    private Driver driver;
 
     public AreaTrabajoCuentaContable() {
     }

@@ -1,4 +1,4 @@
-package pe.edu.pucp.lp2soft.mysql;
+package pe.com.megaautos.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -63,11 +63,9 @@ public class VehiculoMySQL implements VehiculoDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
-          getConnection("jdbc:mysql://"+
-         "inf28220201.cx9ws7aw0g5e.us-east-1.rds.amazonaws.com"+
-                  ":3306/lp2", "admin", "abcd1234");
+            getConnection(DBManager.url,DBManager.user, DBManager.password);
             //Ejecutar una sentencia
-            String sentencia = "SELECT * FROM EMPLEADO INNER JOIN "
+            String sentencia = "SELECT * FROM VEHICULO INNER JOIN "
                     + "PERSONA ON PERSONA.ID_PERSONA = EMPLEADO.ID_EMPLEADO";
             Statement st = con.createStatement();
             //executeQuery -> SELECT

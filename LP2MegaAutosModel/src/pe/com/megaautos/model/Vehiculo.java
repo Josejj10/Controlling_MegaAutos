@@ -23,6 +23,14 @@ public class Vehiculo implements IConsultable{
         this.tipoVehiculo = tipoVehiculo;
     }
     
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getPlaca() {
         return placa;
     }
@@ -57,13 +65,5 @@ public class Vehiculo implements IConsultable{
         this.propietario = propietario;
     }
 
-    
-    public int getId() {
-        return id;
-    }
 
-    
-    public void setId(int id) {
-        this.id = id;
-    }
 }

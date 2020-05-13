@@ -3,7 +3,7 @@ package pe.com.megaautos.model;
 import java.util.ArrayList;
 
 public class Servicio implements IConsultable{
-    private int id;
+    //private int id;
     private int codigoServicio;
     private String descripcion;
     private String tipoServicio;

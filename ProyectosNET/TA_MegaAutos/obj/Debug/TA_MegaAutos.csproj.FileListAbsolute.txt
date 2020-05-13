@@ -1,0 +1,14 @@
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\bin\Debug\TA_MegaAutos.exe.config
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\bin\Debug\TA_MegaAutos.exe
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\bin\Debug\TA_MegaAutos.pdb
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\bin\Debug\MetroFramework.Design.dll
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\bin\Debug\MetroFramework.dll
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\bin\Debug\MetroFramework.Fonts.dll
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.csprojAssemblyReference.cache
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.Properties.Resources.resources
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.csproj.GenerateResource.cache
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.csproj.CoreCompileInputs.cache
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.csproj.CopyComplete
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.exe
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.pdb
+D:\Documents\PUCP\LP2\TA\Visual\TA_MegaAutos\TA_MegaAutos\obj\Debug\TA_MegaAutos.Login_Screen.resources

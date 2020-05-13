@@ -18,7 +18,7 @@ public class Empresa {
     // Permisos con los que cuenta el usuario
     // Son permisos para modificar clases o crear reportes
     private ArrayList<Usuario> usuarios;
-    private ArrayList<Local> locales;
+    private ArrayList<Sede> sedes;
     private ArrayList<AreaTrabajo> areasTrabajo;
     
 
@@ -74,16 +74,16 @@ public class Empresa {
         return usuarios;
     }
     
-    public void addLocal(Local local) {
-        this.locales.add(local);
+    public void addSede(Sede sede) {
+        this.sedes.add(sede);
     }
     
-    public boolean removeLocal(Local local){
-        return this.locales.remove(local);
+    public boolean removeSede(Sede sede){
+        return this.sedes.remove(sede);
     }
     
-    public ArrayList<Local> getLocales() {
-        return locales;
+    public ArrayList<Sede> getSedes() {
+        return sedes;
     }
     
     public void addAreaTrabajo(AreaTrabajo area) {

@@ -11,8 +11,8 @@ import pe.com.megaautos.model.Vehiculo;
  * @author Jose
  */
 public interface VehiculoDAO {
-    int insertar();
-    int actualizar();
-    int eliminar(int idEmpleado);
-//    ArrayList<Vehiculo> listar();
+    int insertar(Vehiculo vehiculo);
+    int actualizar(Vehiculo vehiculo);
+    int eliminar(int idVehiculo);
+    ArrayList<Vehiculo> listar();
 }

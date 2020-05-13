@@ -64,7 +64,7 @@ public class Cliente implements IConsultable{
     }
 
     @Override
-    public void modificarDatos() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void modificar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

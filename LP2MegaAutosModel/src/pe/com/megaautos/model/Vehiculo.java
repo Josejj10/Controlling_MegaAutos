@@ -37,8 +37,14 @@ public class Vehiculo implements IConsultable{
     public void setTipoVehiculo(String tipoVehiculo) {
         this.tipoVehiculo = tipoVehiculo;
     }
-        
+      
+    @Override
     public String consultarDatos(){
         return "Placa: " + placa + " - Tipo de Vehiculo" + tipoVehiculo;
+    }
+
+    @Override
+    public void modificar() {
+        
     }
 }

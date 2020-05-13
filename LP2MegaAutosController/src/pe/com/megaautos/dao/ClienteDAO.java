@@ -5,10 +5,12 @@
  */
 package pe.com.megaautos.dao;
 
+import pe.com.megaautos.model.Cliente;
+
 /**
  *
  * @author Rodrigo
  */
 public interface ClienteDAO {
-    
+    public Cliente buscar(int id);
 }

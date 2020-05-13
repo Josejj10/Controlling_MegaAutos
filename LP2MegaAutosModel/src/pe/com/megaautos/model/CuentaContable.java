@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author Rodrigo
  */
 public class CuentaContable {
+    private int id;
     private String nombre;
     private double montoIngresos;
     private double montoEgresos;
@@ -26,6 +27,14 @@ public class CuentaContable {
         this.nombre = nombre;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNombre() {
         return nombre;
     }

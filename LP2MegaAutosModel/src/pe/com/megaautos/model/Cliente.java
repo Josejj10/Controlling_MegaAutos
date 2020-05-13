@@ -2,6 +2,7 @@ package pe.com.megaautos.model;
 
 
 public class Cliente implements IConsultable{
+    private int id;
     private String nombre;
     private String numDocumento;
     private String tipoDocumento;
@@ -17,7 +18,15 @@ public class Cliente implements IConsultable{
         this.telefono = telefono;
         this.correo = correo;
     }
+    
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNombre() {
         return nombre;
     }

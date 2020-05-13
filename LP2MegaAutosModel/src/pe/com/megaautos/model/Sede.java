@@ -1,6 +1,7 @@
 package pe.com.megaautos.model;
 
 public class Sede implements IConsultable{
+    private int id;
     private String distrito;
     
     public Sede(){
@@ -10,6 +11,14 @@ public class Sede implements IConsultable{
         this.distrito = distrito;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getDistrito() {
         return distrito;
     }

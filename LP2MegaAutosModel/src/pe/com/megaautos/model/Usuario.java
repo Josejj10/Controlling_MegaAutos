@@ -14,6 +14,7 @@ import java.util.Date;
  * @author Jose
  */
 public class Usuario {
+    private int id;
     private String nombre;
     private String correo;
     private String password;
@@ -55,6 +56,14 @@ public class Usuario {
     /*============================
            Getters y Setters
      ============================*/
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNombre() {
         return nombre;
     }

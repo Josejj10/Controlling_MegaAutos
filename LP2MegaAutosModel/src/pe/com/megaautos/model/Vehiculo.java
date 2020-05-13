@@ -10,6 +10,7 @@ package pe.com.megaautos.model;
  * @author Rodrigo
  */
 public class Vehiculo implements IConsultable{
+    private int id;
     private String placa;
     private String tipoVehiculo;
 
@@ -20,6 +21,14 @@ public class Vehiculo implements IConsultable{
     public Vehiculo(String placa, String tipoVehiculo) {
         this.placa = placa;
         this.tipoVehiculo = tipoVehiculo;
+    }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String getPlaca() {

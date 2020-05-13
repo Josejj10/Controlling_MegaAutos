@@ -10,6 +10,7 @@ package pe.com.megaautos.model;
  * @author Rodrigo
  */
 public class Driver {
+    private int id;
     private float formula;
     
     public Driver(){
@@ -20,6 +21,14 @@ public class Driver {
         this.formula = formula;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public float getFormula() {
         return formula;
     }

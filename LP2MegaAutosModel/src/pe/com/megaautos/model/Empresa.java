@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * @author Jose
  */
 public class Empresa {
+    private int id;
     private String nombre;
     private String ruc;
     // Permisos con los que cuenta el usuario
@@ -27,19 +28,35 @@ public class Empresa {
      ============================*/    
    
     public Empresa(){
+        this.usuarios = new ArrayList<>();
+        this.sedes = new ArrayList<>();
+        this.areasTrabajo = new ArrayList<>();
         this.nombre = "MegaAutos";
         this.ruc = "11111111111111";
     }
     
     public Empresa(String nombre, String ruc){
+        this.usuarios = new ArrayList<>();
+        this.sedes = new ArrayList<>();
+        this.areasTrabajo = new ArrayList<>();
         this.nombre = nombre;
         // Verificar RUC
         this.ruc = ruc;
     }
-    
+
+
     /*============================
-           Getters y Setters
-     ============================*/
+    Getters y Setters
+    ============================*/
+        
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
     }

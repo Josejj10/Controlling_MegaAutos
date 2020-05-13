@@ -1,6 +1,7 @@
 package pe.com.megaautos.model;
 
 public class SubtipoServicio implements IConsultable{
+    private int id;
     private String nombre;
     
     public SubtipoServicio(){
@@ -11,6 +12,14 @@ public class SubtipoServicio implements IConsultable{
         this.nombre = nombre;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+        
     public String getNombre() {
         return nombre;
     }

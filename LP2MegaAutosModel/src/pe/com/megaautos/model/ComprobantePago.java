@@ -2,6 +2,7 @@ package pe.com.megaautos.model;
 import java.util.Date;
 
 public class ComprobantePago {
+    private int id;
     private String numeroComprobante;
     private String tipoComprobante;
     private Date fecha;
@@ -14,6 +15,14 @@ public class ComprobantePago {
         this.fecha = fecha;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNumeroComprobante() {
         return numeroComprobante;
     }

@@ -1,17 +1,26 @@
 package pe.com.megaautos.model;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class OrdenTrabajo {
     //Atributos
+    private int id;
     private String numeroOrden;
     private Date fecha;
     private double totalIngresos;
     private double totalEgresos;
+    private Sede sede;
+    private ArrayList<Servicio> servicios;
+    private Cliente cliente;
+    private Vehiculo vehiculo;
+    private ComprobantePago comprobantePago;
     
     //Constructores
     public OrdenTrabajo(){
+        this.servicios = new ArrayList<>();
     }
     public OrdenTrabajo(String numeroOrden, Date fecha, double totalIngresos, double totalEgresos) {
+        this.servicios = new ArrayList<>();
         this.numeroOrden = numeroOrden;
         this.fecha = fecha;
         this.totalIngresos = totalIngresos;
@@ -19,6 +28,15 @@ public class OrdenTrabajo {
     }
     
     //Gets y Sets
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNumeroOrden() {
         return numeroOrden;
     }

@@ -5,10 +5,17 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.AreaTrabajo;
+
 /**
  *
  * @author Rodrigo
  */
 public interface AreaTrabajoDAO {
+    int insertar(AreaTrabajo areaTrabajo);
+    int actualizar(AreaTrabajo areaTrabajo);
+    int eliminar(int idAreaTrabajo);
+    ArrayList<AreaTrabajo> listar();
     
 }

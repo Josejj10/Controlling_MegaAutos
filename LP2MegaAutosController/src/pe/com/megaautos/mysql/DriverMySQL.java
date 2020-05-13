@@ -19,7 +19,7 @@ import pe.com.megaautos.model.Driver;
  * @author Jose
  */
 public class DriverMySQL implements DriverDAO {
-
+    Connection con;
     @Override
     public int insertar(Driver driver) {
         int rpta = 0;
@@ -30,24 +30,18 @@ public class DriverMySQL implements DriverDAO {
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_CLIENTE(?,?,?)}");
-            // Insertar Cliente recibirá el nombre, el tipo de cliente
+                    "{call INSERTAR_DRIVER(?,?)}");
+            // Insertar Driver recibirá el nombre, el tipo de driver
             // el tipo de documento, el numDocumento, el correo y telefono
             // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
             // Por su id, para poder insertarlo en la tabla 
-            cs.registerOutParameter("_ID_CLIENTE", java.sql.Types.INTEGER);
-            // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
-            cs.setString("_NOMBRE", cliente.getNombre().toUpperCase());
-            cs.setString("_TIPO_CLIENTE", cliente.getTipoCliente().toUpperCase());
-            cs.setString("_TIPO_DOCUMENTO", cliente.getTipoDocumento().toUpperCase());
-            cs.setString("_NUMERO_DOCUMENTO", cliente.getNumDocumento());
-            cs.setString("_CORREO", cliente.getCorreo());
-            cs.setString("_TELEFONO",cliente.getTelefono());
+            cs.registerOutParameter("_ID_DRIVER", java.sql.Types.INTEGER);
+            cs.setDouble("_DRIVER", driver.getFormula());
             cs.executeUpdate();
-            rpta = cs.getInt("_ID_CLIENTE");
+            rpta = cs.getInt("_ID_DRIVER");
             con.close();
             // Actualiza el ID del vehiculo insertado para tenerlo en Java
-            cliente.setId(rpta);
+            driver.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
         }
@@ -66,29 +60,25 @@ public class DriverMySQL implements DriverDAO {
 
     @Override
     public ArrayList<Driver> listar() {
-        ArrayList<Cliente> clientes = new ArrayList<>();
+        ArrayList<Driver> drivers = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Listar cliente devuelve una lista de clientes
-            // con ID_Cliente, nombre, tipo_cliente, tipo_doc
+            // Listar driver devuelve una lista de drivers
+            // con ID_Driver, nombre, tipo_driver, tipo_doc
             // numero_doc, correo y telefono
             CallableStatement cs = con.prepareCall(
-                    "{call LISTAR_CLIENTE()}");
+                    "{call LISTAR_DRIVER()}");
             ResultSet rs = cs.executeQuery();
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){
-                Cliente cliente = new Cliente();
-                cliente.setId(rs.getInt("ID_CLIENTE"));
-                cliente.setNombre(rs.getString("NOMBRE"));
-                cliente.setTipoCliente(rs.getString("TIPO_CLIENTE"));
-                cliente.setTipoDocumento(rs.getString("TIPO_DOC"));
-                cliente.setCorreo(rs.getString("CORREO"));
-                cliente.setTelefono(rs.getString("TELEFONO"));
-                clientes.add(cliente);
+                Driver driver = new Driver();
+                driver.setId(rs.getInt("ID_DRIVER"));
+                driver.setFormula(rs.getDouble("VALOR"));
+                drivers.add(driver);
             }
             //cerrar conexion
             con.close();
@@ -96,7 +86,7 @@ public class DriverMySQL implements DriverDAO {
             System.out.println(ex.getMessage());
         }
         //Devolviendo los vehiculos
-        return clientes;
+        return drivers;
     }
     
 }

@@ -40,7 +40,7 @@ public class ClienteMySQL implements ClienteDAO {
                 cliente.setId(rs.getInt("ID_CLIENTE"));
                 cliente.setNombre(rs.getString("NOMBRE"));
                 cliente.setTipoCliente(rs.getString("TIPO_CLIENTE"));
-                cliente.setTipoDocumento(rs.getString("TIPO_DOC"));
+                cliente.setTipoDocumento(rs.getString("TIPO_DOCUMENTO"));
                 cliente.setCorreo(rs.getString("CORREO"));
                 cliente.setTelefono(rs.getString("TELEFONO"));
             }
@@ -118,7 +118,7 @@ public class ClienteMySQL implements ClienteDAO {
                 cliente.setId(rs.getInt("ID_CLIENTE"));
                 cliente.setNombre(rs.getString("NOMBRE"));
                 cliente.setTipoCliente(rs.getString("TIPO_CLIENTE"));
-                cliente.setTipoDocumento(rs.getString("TIPO_DOC"));
+                cliente.setTipoDocumento(rs.getString("TIPO_DOCUMENTO"));
                 cliente.setCorreo(rs.getString("CORREO"));
                 cliente.setTelefono(rs.getString("TELEFONO"));
                 clientes.add(cliente);

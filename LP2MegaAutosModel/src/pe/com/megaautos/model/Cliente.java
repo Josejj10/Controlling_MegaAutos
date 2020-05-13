@@ -8,6 +8,7 @@ public class Cliente implements IConsultable{
     private String tipoDocumento;
     private String telefono;
     private String correo;
+    private String tipoCliente;
 
     public Cliente(){
     }
@@ -76,5 +77,13 @@ public class Cliente implements IConsultable{
     @Override
     public void modificar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getTipoCliente() {
+        return tipoCliente;
+    }
+
+    public void setTipoCliente(String tipoCliente) {
+        this.tipoCliente = tipoCliente;
     }
 }

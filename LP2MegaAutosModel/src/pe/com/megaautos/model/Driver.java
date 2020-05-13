@@ -11,13 +11,13 @@ package pe.com.megaautos.model;
  */
 public class Driver {
     private int id;
-    private float formula;
+    private double formula;
     
     public Driver(){
         
     }
 
-    public Driver(float formula) {
+    public Driver(double formula) {
         this.formula = formula;
     }
 
@@ -29,11 +29,11 @@ public class Driver {
         this.id = id;
     }
     
-    public float getFormula() {
+    public double getFormula() {
         return formula;
     }
 
-    public void setFormula(float formula) {
+    public void setFormula(double formula) {
         this.formula = formula;
     }
 }

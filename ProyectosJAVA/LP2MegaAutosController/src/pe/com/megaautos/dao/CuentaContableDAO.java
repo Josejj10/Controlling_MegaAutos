@@ -5,10 +5,17 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.CuentaContable;
+
 /**
  *
  * @author Rodrigo
  */
 public interface CuentaContableDAO {
+    int insertar(CuentaContable cuentaContable);
+    int actualizar(CuentaContable cuentaContable);
+    int eliminar(int idCuentaContable);
+    ArrayList<CuentaContable> listar();
     
 }

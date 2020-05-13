@@ -57,6 +57,22 @@ public class AreaTrabajo {
         return listaAreasCuentas;
     }
     
+    public Double getTotalIngresos() {
+        return totalIngresos;
+    }
+
+    public void setTotalIngresos(Double totalIngresos) {
+        this.totalIngresos = totalIngresos;
+    }
+
+    public Double getTotalEgresos() {
+        return totalEgresos;
+    }
+
+    public void setTotalEgresos(Double totalEgresos) {
+        this.totalEgresos = totalEgresos;
+    }
+    
     /*============================
              Otros Metodos
      ============================*/

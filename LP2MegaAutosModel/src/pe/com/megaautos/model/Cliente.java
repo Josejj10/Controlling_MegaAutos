@@ -66,6 +66,7 @@ public class Cliente implements IConsultable{
     public void setCorreo(String correo) {
         this.correo = correo;
     }    
+    
 
     @Override
     public String consultarDatos() {

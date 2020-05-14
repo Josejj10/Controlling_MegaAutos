@@ -11,9 +11,10 @@ public class ComprobantePago {
     
     public ComprobantePago(){
     }
-    public ComprobantePago(String numeroComprobante, String tipoComprobante, Date fecha){
+    public ComprobantePago(String numeroComprobante, String tipoComprobante, Date fecha, OrdenTrabajo ordenTrabajo){
         this.numeroComprobante = numeroComprobante;
         this.tipoComprobante = tipoComprobante;
+        this.ordenTrabajo = ordenTrabajo;
         this.fecha = fecha;
     }
 

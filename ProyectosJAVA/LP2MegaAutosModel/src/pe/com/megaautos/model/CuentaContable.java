@@ -70,7 +70,7 @@ public class CuentaContable {
     public void agregarOrdenTrabajo(OrdenTrabajo ot){
         this.ordenesTrabajo.add(ot);
     }
-    
+
     public OrdenTrabajo getOrdenTrabajo(int i){
         return this.ordenesTrabajo.get(i);
     }

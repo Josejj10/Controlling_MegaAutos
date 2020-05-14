@@ -68,9 +68,38 @@ public class OrdenTrabajo {
     public void setTotalEgresos(double totalEgresos) {
         this.totalEgresos = totalEgresos;
     }
-    
-    
-    
+
+    public Sede getSede() {
+        return sede;
+    }
+
+    public void setSede(Sede sede) {
+        this.sede = sede;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public ComprobantePago getComprobantePago() {
+        return comprobantePago;
+    }
+
+    public void setComprobantePago(ComprobantePago comprobantePago) {
+        this.comprobantePago = comprobantePago;
+    }
     
     //Métodos
     public int calcularTotal(){

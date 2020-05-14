@@ -60,10 +60,6 @@ public class ComprobantePago {
         this.ordenTrabajo = ordenTrabajo;
     }
 
-    public void setOrdenTrabajo(int idOrdenTrabajo) {
-        // TODO implementar buscar id orden trabajo
-        this.ordenTrabajo = new OrdenTrabajo();
-    }
 
     public double getMonto() {
         return monto;

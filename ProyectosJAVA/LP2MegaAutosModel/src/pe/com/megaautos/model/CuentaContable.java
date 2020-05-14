@@ -20,11 +20,15 @@ public class CuentaContable {
     
     public CuentaContable(){
         this.ordenesTrabajo = new ArrayList<>();
+        this.montoEgresos = 0.0;
+        this.montoIngresos = 0.0;
     }
     
     public CuentaContable(String nombre) {
         this.ordenesTrabajo = new ArrayList<>();
         this.nombre = nombre;
+        this.montoEgresos = 0.0;
+        this.montoIngresos = 0.0;
     }
 
     public int getId() {

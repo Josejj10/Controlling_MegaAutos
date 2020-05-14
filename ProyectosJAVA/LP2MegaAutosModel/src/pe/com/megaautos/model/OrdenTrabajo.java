@@ -19,12 +19,13 @@ public class OrdenTrabajo {
     public OrdenTrabajo(){
         this.servicios = new ArrayList<>();
     }
-    public OrdenTrabajo(String numeroOrden, Date fecha, double totalIngresos, double totalEgresos) {
+    public OrdenTrabajo(String numeroOrden, Date fecha, double totalIngresos, double totalEgresos, Sede sede) {
         this.servicios = new ArrayList<>();
         this.numeroOrden = numeroOrden;
         this.fecha = fecha;
         this.totalIngresos = totalIngresos;
         this.totalEgresos = totalEgresos;
+        this.sede = sede;
     }
     
     //Gets y Sets

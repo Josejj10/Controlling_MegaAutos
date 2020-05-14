@@ -13,6 +13,7 @@ import pe.com.megaautos.model.Sede;
  * @author Rodrigo
  */
 public interface SedeDAO {
+    Sede buscar(int idSede);
     int insertar(Sede sede);
     int actualizar(Sede sede);
     int eliminar(int idSede);

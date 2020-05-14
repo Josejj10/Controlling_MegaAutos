@@ -5,10 +5,18 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.ArrayList;
+import pe.com.megaautos.model.OrdenTrabajo;
+
 /**
  *
  * @author Rodrigo
  */
 public interface OrdenTrabajoDAO {
+    int insertar(OrdenTrabajo ordenTrabajo);
+    int actualizar(OrdenTrabajo ordenTrabajo);
+    int eliminar(int idOrdenTrabajo);
+    ArrayList<OrdenTrabajo> listar();
+    OrdenTrabajo buscar(int idOrdenTrabajo);
     
 }

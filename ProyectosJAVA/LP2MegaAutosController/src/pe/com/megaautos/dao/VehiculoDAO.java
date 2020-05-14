@@ -15,4 +15,5 @@ public interface VehiculoDAO {
     int actualizar(Vehiculo vehiculo);
     int eliminar(int idVehiculo);
     ArrayList<Vehiculo> listar();
+    Vehiculo buscar(int idVehiculo);
 }

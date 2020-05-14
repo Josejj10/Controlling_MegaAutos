@@ -97,7 +97,7 @@ public class ClienteMySQL implements ClienteDAO {
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
-                    "{call ACTUALIZAR_CLIENTE(?,?,?,?,?,?,?}");
+                    "{call ACTUALIZAR_CLIENTE(?,?,?,?,?,?,?)}");
             cs.setInt("_ID_CLIENTE", cliente.getId());
             cs.setString("_NOMBRE", cliente.getNombre());
             cs.setString("_TIPO_CLIENTE", cliente.getTipoCliente().toUpperCase());

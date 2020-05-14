@@ -104,7 +104,7 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo las atCcs
         return atCcs;    
     }
     

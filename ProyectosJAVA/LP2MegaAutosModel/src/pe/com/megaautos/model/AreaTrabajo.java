@@ -21,11 +21,15 @@ public class AreaTrabajo {
      ============================*/
     public AreaTrabajo(){
         listaAreasCuentas = new ArrayList<>();
+        this.totalEgresos = 0.0;
+        this.totalIngresos = 0.0;
     }
     
     public AreaTrabajo(String nombre){
         listaAreasCuentas = new ArrayList<>();
         this.nombre = nombre;
+        this.totalEgresos = 0.0;
+        this.totalIngresos = 0.0;
     }
     
     /*============================

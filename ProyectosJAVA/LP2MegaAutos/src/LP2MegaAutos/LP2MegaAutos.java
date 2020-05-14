@@ -22,6 +22,9 @@ import pe.com.megaautos.dao.SedeDAO;
 import pe.com.megaautos.dao.ServicioDAO;
 import pe.com.megaautos.model.Servicio;
 import pe.com.megaautos.mysql.ServicioMySQL;
+import pe.com.megaautos.dao.UsuarioDAO;
+import pe.com.megaautos.model.Usuario;
+import pe.com.megaautos.mysql.UsuarioMySQL;
 /**
  *
  * @author Jose
@@ -69,14 +72,17 @@ public class LP2MegaAutos {
 //            System.out.println(d.getDistrito());
 
         // Prueba Cliente/TipoCliente/Documento/TipoDocumento
-        Cliente cl1 = new Cliente("LUIS PEREZ", "465445", "DNI", "45644564", "a2020@pucp.edu.pe", "Personal");
-        ClienteDAO daoCliente = new ClienteMySQL();
-        daoCliente.insertar(cl1);
-        ArrayList<Cliente> clientes = new ArrayList<>();
-        clientes = daoCliente.listar();
-        for(Cliente c : clientes){
-            System.out.println(c.getId() + " " + c.getNombre() + " " + c.getTipoDocumento());
-        }
+        //Cliente cl1 = new Cliente("LUIS PEREZ", "465445", "DNI", "45644564", "a2020@pucp.edu.pe", "Personal");
+//        ClienteDAO daoCliente = new ClienteMySQL();
+//        Cliente cl1 = new Cliente();
+//        cl1 = daoCliente.buscar(13);
+//        //daoCliente.insertar(cl1);
+//        ArrayList<Cliente> clientes = new ArrayList<>();
+//        clientes = daoCliente.listar();
+//        for(Cliente c : clientes){
+//            System.out.println(c.getId() + " " + c.getNombre() + " " + c.getTipoDocumento());
+//        }
+//        System.out.println(cl1.getNombre());
 
 
         // Prueba Servicio/TipoServicio
@@ -92,13 +98,22 @@ public class LP2MegaAutos {
 //        }
 
         // Prueba Vehiculo
-        Vehiculo veh1 = new Vehiculo("BBB-444", "Camion", cl1);
-        VehiculoDAO daoVehiculo = new VehiculoMySQL();
-        daoVehiculo.insertar(veh1);
-        ArrayList<Vehiculo> vehiculos = new ArrayList<>();
-        vehiculos = daoVehiculo.listar();
-        for(Vehiculo v : vehiculos)
-            System.out.println(v.getId() + " " + v.getPlaca() + " " + v.getTipoVehiculo() + " " + v.getPropietario().getNombre());
+//        Vehiculo veh1 = new Vehiculo("BBB-444", "Camion", cl1);
+//        VehiculoDAO daoVehiculo = new VehiculoMySQL();
+//        daoVehiculo.insertar(veh1);
+//        ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+//        vehiculos = daoVehiculo.listar();
+//        for(Vehiculo v : vehiculos)
+//            System.out.println(v.getId() + " " + v.getPlaca() + " " + v.getTipoVehiculo() + " " + v.getPropietario().getNombre());
+    
+        // Prueba Usuario/TipoUsuario
+        Usuario us1 = new Usuario("Diego Berrospi", "a2040@pucp.edu.pe", "abc123", "Limpieza");
+        UsuarioDAO daoUsuario = new UsuarioMySQL();
+        daoUsuario.insertar(us1);
+        System.out.println(us1.getFechaCreado().getTime());
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        usuarios = daoUsuario.listar();
+        for(Usuario u : usuarios)
+            System.out.println(u.getId() + " " + u.getNombre() + " " + u.getCorreo() + " " + u.getTipoUsuario());
     }
-
 }

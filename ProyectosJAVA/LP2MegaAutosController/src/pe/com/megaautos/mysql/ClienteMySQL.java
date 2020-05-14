@@ -33,7 +33,7 @@ public class ClienteMySQL implements ClienteDAO {
             // Llama a un select * from cliente where ID_CLIENTE = id
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_CLIENTE(?)}");
-            cs.setInt("_ID", id);
+            cs.setInt("_ID_CLIENTE", id);
             ResultSet rs = cs.executeQuery();
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){

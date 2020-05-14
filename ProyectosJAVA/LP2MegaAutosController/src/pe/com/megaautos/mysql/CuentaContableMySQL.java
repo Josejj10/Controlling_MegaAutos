@@ -36,8 +36,8 @@ public class CuentaContableMySQL implements CuentaContableDAO{
             cs.registerOutParameter("_ID_CUENTA_CONTABLE", java.sql.Types.INTEGER);
             // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
             cs.setString("_NOMBRE", cuentaContable.getNombre().toUpperCase());
-            cs.setDouble("MONTO_INGRESOS",cuentaContable.getMontoIngresos());
-            cs.setDouble("MONTO_EGRESOS",cuentaContable.getMontoEgresos());
+            cs.setDouble("_MONTO_INGRESOS",cuentaContable.getMontoIngresos());
+            cs.setDouble("_MONTO_EGRESOS",cuentaContable.getMontoEgresos());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_CUENTA_CONTABLE");
             con.close();

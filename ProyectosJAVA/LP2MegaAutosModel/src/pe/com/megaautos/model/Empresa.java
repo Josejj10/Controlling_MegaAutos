@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class Empresa {
     private int id;
     private String nombre;
-    private String ruc;
     // Permisos con los que cuenta el usuario
     // Son permisos para modificar clases o crear reportes
     private ArrayList<Usuario> usuarios;
@@ -32,16 +31,13 @@ public class Empresa {
         this.sedes = new ArrayList<>();
         this.areasTrabajo = new ArrayList<>();
         this.nombre = "MegaAutos";
-        this.ruc = "11111111111111";
     }
     
-    public Empresa(String nombre, String ruc){
+    public Empresa(String nombre){
         this.usuarios = new ArrayList<>();
         this.sedes = new ArrayList<>();
         this.areasTrabajo = new ArrayList<>();
         this.nombre = nombre;
-        // Verificar RUC
-        this.ruc = ruc;
     }
 
 
@@ -64,16 +60,6 @@ public class Empresa {
     
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-  
-    public String getRuc() {
-        return ruc;
-    }
-
-  
-    public void setRuc(String ruc) {
-        this.ruc = ruc;
     }
 
     /*============================

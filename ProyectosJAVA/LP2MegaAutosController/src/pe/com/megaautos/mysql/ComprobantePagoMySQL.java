@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.ComprobantePagoDAO;
+import pe.com.megaautos.dao.OrdenTrabajoDAO;
 import pe.com.megaautos.model.ComprobantePago;
 
 /**
@@ -89,7 +90,9 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
                 comprobantePago.setTipoComprobante(rs.getString("TIPO_COMPROBANTE"));
                 comprobantePago.setMonto(rs.getDouble("MONTO"));
                 // setOrdenTrabajo lee int y lo busca
-                comprobantePago.setOrdenTrabajo(rs.getInt("ID_ORDEN_TRABAJO"));
+                OrdenTrabajoDAO daoOrdenTrabajo =
+                        new OrdenTrabajoMySQL();
+                comprobantePago.setOrdenTrabajo(daoOrdenTrabajo.buscar(rs.getInt("ID_ORDEN_TRABAJO")));
                 comprobantePago.setFecha(rs.getDate("FECHA"));
                 comprobantePagos.add(comprobantePago);
             }

@@ -84,8 +84,35 @@ public class SedeMySQL implements SedeDAO {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo las sedes
         return sedes;    
+    }
+
+    @Override
+    public Sede buscar(int idSede) {
+        Sede sede = new Sede();
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer una conexión a la BD
+            Connection con = DriverManager.
+            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            // Llama a un select * from sede where ID_SEDE = id
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_SEDE(?)}");
+            cs.setInt("_ID", idSede);
+            ResultSet rs = cs.executeQuery();
+            //Recorrer todas las filas que devuelve la ejecucion sentencia
+            while(rs.next()){
+                sede.setId(rs.getInt("ID_SEDE"));
+                sede.setDistrito(rs.getString("NOMBRE"));
+            }
+            //cerrar conexion
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return sede;
     }
     
 }

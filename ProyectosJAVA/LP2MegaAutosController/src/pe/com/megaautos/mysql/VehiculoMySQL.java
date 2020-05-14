@@ -92,4 +92,37 @@ public class VehiculoMySQL implements VehiculoDAO{
         return vehiculos;
     }
 
+    @Override
+    public Vehiculo buscar(int idVehiculo) {
+        Vehiculo vehiculo = new Vehiculo();
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer una conexión a la BD
+            Connection con = DriverManager.
+            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            // Llama a un select * from vehiculo where ID_VEHICULO = id
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_VEHICULO(?)}");
+            cs.setInt("_ID", idVehiculo);
+            ResultSet rs = cs.executeQuery();
+            //Recorrer todas las filas que devuelve la ejecucion sentencia
+            while(rs.next()){
+                vehiculo.setId(rs.getInt("ID_VEHICULO"));
+                vehiculo.setPlaca(rs.getString("PLACA"));
+                vehiculo.setTipoVehiculo(rs.getString("TIPO_VEHICULO"));
+                // Para agregar el cliente a vehículo
+                // Se asume que el Cliente YA ESTA en la BD
+                ClienteDAO daoCliente = new ClienteMySQL();
+                Cliente prop = daoCliente.buscar(rs.getInt("ID_PROPIETARIO"));
+                vehiculo.setPropietario(prop);
+            }
+            //cerrar conexion
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return vehiculo;
+    }
+
 }

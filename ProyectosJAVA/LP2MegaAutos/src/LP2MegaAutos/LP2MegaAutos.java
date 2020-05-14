@@ -14,6 +14,7 @@ import pe.com.megaautos.model.Vehiculo;
 import pe.com.megaautos.mysql.VehiculoMySQL;
 import pe.com.megaautos.mysql.ClienteMySQL;
 import pe.com.megaautos.dao.ClienteDAO;
+import pe.com.megaautos.dao.ComprobantePagoDAO;
 import pe.com.megaautos.dao.CuentaContableDAO;
 import pe.com.megaautos.model.Cliente;
 import pe.com.megaautos.dao.DriverDAO;
@@ -30,10 +31,12 @@ import pe.com.megaautos.model.Servicio;
 import pe.com.megaautos.mysql.ServicioMySQL;
 import pe.com.megaautos.dao.UsuarioDAO;
 import pe.com.megaautos.model.AreaTrabajo;
+import pe.com.megaautos.model.ComprobantePago;
 import pe.com.megaautos.model.CuentaContable;
 import pe.com.megaautos.model.OrdenTrabajo;
 import pe.com.megaautos.model.Usuario;
 import pe.com.megaautos.mysql.AreaTrabajoMySQL;
+import pe.com.megaautos.mysql.ComprobantePagoMySQL;
 import pe.com.megaautos.mysql.CuentaContableMySQL;
 import pe.com.megaautos.mysql.EmpresaMySQL;
 import pe.com.megaautos.mysql.OrdenTrabajoMySQL;
@@ -74,10 +77,10 @@ public class LP2MegaAutos {
 //        }
 
         // Prueba Sede
-        Sede s1 = new Sede("Pueblo Libre");
+        //Sede s1 = new Sede("Pueblo Libre");
 //        Sede s2 = new Sede("Miraflores");
-        SedeDAO daoSede = new SedeMySQL();
-        daoSede.insertar(s1);
+//        SedeDAO daoSede = new SedeMySQL();
+//        daoSede.insertar(s1);
 //        daoSede.insertar(s2);
 //        ArrayList<Sede> sedes = new ArrayList<>();
 //        sedes = daoSede.listar();
@@ -85,7 +88,7 @@ public class LP2MegaAutos {
 //            System.out.println(d.getDistrito());
 
         // Prueba Cliente/TipoCliente/Documento/TipoDocumento
-        Cliente cl1 = new Cliente("LUIS PEREZ", "465445", "DNI", "45644564", "a2020@pucp.edu.pe", "Personal");
+        //Cliente cl1 = new Cliente("LUIS PEREZ", "465445", "DNI", "45644564", "a2020@pucp.edu.pe", "Personal");
 //        ClienteDAO daoCliente = new ClienteMySQL();
 //        Cliente cl1 = new Cliente();
 //        cl1 = daoCliente.buscar(13);
@@ -111,7 +114,7 @@ public class LP2MegaAutos {
 //        }
 
         // Prueba Vehiculo
-        Vehiculo veh1 = new Vehiculo("BBB-444", "Camion", cl1);
+        //Vehiculo veh1 = new Vehiculo("BBB-444", "Camion", cl1);
 //        VehiculoDAO daoVehiculo = new VehiculoMySQL();
 //        daoVehiculo.insertar(veh1);
 //        ArrayList<Vehiculo> vehiculos = new ArrayList<>();
@@ -148,17 +151,26 @@ public class LP2MegaAutos {
 //            System.out.println(at.getNombre());
 
         // Prueba Orden Trabajo
-        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-        Date date = formato.parse("24-12-2020");
-        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0, s1);
-        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
-        daoOrdenTrabajo.insertar(ot1);
-        ot1.setCliente(cl1);
-        ot1.setVehiculo(veh1);
-        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
-        ots = daoOrdenTrabajo.listar();
-        for(OrdenTrabajo ot : ots)
-            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre() + " " + ot.getSede().getDistrito() + " " + ot.getVehiculo().getPlaca()); 
+//        ClienteDAO daoCliente = new ClienteMySQL();
+//        Cliente cl1 = new Cliente();
+//        cl1 = daoCliente.buscar(13);
+//        SedeDAO daoSede = new SedeMySQL();
+//        Sede s1 = new Sede();
+//        s1 = daoSede.buscar(2);
+//        VehiculoDAO daoVehiculo = new VehiculoMySQL();
+//        Vehiculo veh1 = new Vehiculo();
+//        veh1 = daoVehiculo.buscar(1);
+//        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+//        Date date = formato.parse("24-12-2020");
+//        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0, s1);
+//        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
+//        ot1.setCliente(cl1);
+//        ot1.setVehiculo(veh1);
+//        daoOrdenTrabajo.insertar(ot1);
+//        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
+//        ots = daoOrdenTrabajo.listar();
+//        for(OrdenTrabajo ot : ots)
+//            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre() + " " + ot.getSede().getDistrito() + " " + ot.getVehiculo().getPlaca());
 
         // Prueba CuentaContable
 //        CuentaContable ct1 = new CuentaContable("Planilla");
@@ -167,6 +179,21 @@ public class LP2MegaAutos {
 //        ArrayList<CuentaContable> cts = new ArrayList<>();
 //        cts = daoCuentaContable.listar();
 //        for(CuentaContable ct : cts)
-//            System.out.println(ct.getNombre());        
+//            System.out.println(ct.getNombre());
+
+        // Prueba Comprobante Pago
+        OrdenTrabajo ot1 = new OrdenTrabajo();
+        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
+        ot1 = daoOrdenTrabajo.buscar(1);
+        
+//        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+//        Date date = formato.parse("24-12-2020");
+//        ComprobantePago cp1 = new ComprobantePago("789456", "Boleta", date, ot1);
+        ComprobantePagoDAO daoComprobantePago = new ComprobantePagoMySQL();
+//        daoComprobantePago.insertar(cp1);
+        ArrayList<ComprobantePago> cps = new ArrayList<>();
+        cps = daoComprobantePago.listar();
+        for(ComprobantePago cp : cps)
+            System.out.println(cp.getNumeroComprobante() + " " + cp.getTipoComprobante() + " " + cp.getOrdenTrabajo().getNumeroOrden());        
     }
 }

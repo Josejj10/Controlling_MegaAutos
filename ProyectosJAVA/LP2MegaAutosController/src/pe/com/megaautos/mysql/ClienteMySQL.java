@@ -63,7 +63,7 @@ public class ClienteMySQL implements ClienteDAO {
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_CLIENTE(?,?,?)}");
+                    "{call INSERTAR_CLIENTE(?,?,?,?,?,?,?)}");
             // Insertar Cliente recibirá el nombre, el tipo de cliente
             // el tipo de documento, el numDocumento, el correo y telefono
             // En el procedure de MySQL, cambiara el nombre del tipo vehiculo

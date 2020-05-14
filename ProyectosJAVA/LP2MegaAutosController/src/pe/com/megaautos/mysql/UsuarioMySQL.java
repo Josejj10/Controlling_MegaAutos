@@ -105,7 +105,7 @@ public class UsuarioMySQL implements UsuarioDAO {
                 usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
                 usuario.setCorreo(rs.getString("CORREO"));
                 usuario.setPassword(rs.getString("PASSWRD"));
-                usuario.setFechaCreado(rs.getDate("FECHA_CRACION"));
+                //usuario.setFechaCreado(rs.getDate("FECHA_CREACION"));
                 usuarios.add(usuario);
             }
             //cerrar conexion

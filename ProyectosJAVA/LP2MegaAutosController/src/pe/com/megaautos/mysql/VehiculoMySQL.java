@@ -104,7 +104,7 @@ public class VehiculoMySQL implements VehiculoDAO{
             // Llama a un select * from vehiculo where ID_VEHICULO = id
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_VEHICULO(?)}");
-            cs.setInt("_ID", idVehiculo);
+            cs.setInt("_ID_VEHICULO", idVehiculo);
             ResultSet rs = cs.executeQuery();
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){

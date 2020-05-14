@@ -93,7 +93,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
                 OrdenTrabajoDAO daoOrdenTrabajo =
                         new OrdenTrabajoMySQL();
                 comprobantePago.setOrdenTrabajo(daoOrdenTrabajo.buscar(rs.getInt("ID_ORDEN_TRABAJO")));
-                comprobantePago.setFecha(rs.getDate("FECHA"));
+                //comprobantePago.setFecha(rs.getDate("FECHA"));
                 comprobantePagos.add(comprobantePago);
             }
             //cerrar conexion

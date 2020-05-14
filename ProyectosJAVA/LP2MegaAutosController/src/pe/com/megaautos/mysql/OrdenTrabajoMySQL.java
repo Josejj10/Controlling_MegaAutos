@@ -88,7 +88,8 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             while(rs.next()){
                 OrdenTrabajo ordenTrabajo = new OrdenTrabajo();
                 ordenTrabajo.setId(rs.getInt("ID_ORDEN_TRABAJO"));
-                ordenTrabajo.setFecha(rs.getDate("FECHA"));
+                //ordenTrabajo.setFecha(rs.getDate("FECHA"));
+                ordenTrabajo.setNumeroOrden(rs.getString("NUMERO_OT"));
                 ordenTrabajo.setTotalIngresos(rs.getDouble("TOTAL_INGRESOS"));
                 ordenTrabajo.setTotalEgresos(rs.getDouble("TOTAL_EGRESOS"));
                 ClienteDAO daoCliente =
@@ -123,7 +124,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             // Llama a un select * from ordenTrabajo where ID_ORDEN_TRABAJO = id
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_ORDEN_TRABAJO(?)}");
-            cs.setInt("_ID", idOrdenTrabajo);
+            cs.setInt("_ID_ORDEN_TRABAJO", idOrdenTrabajo);
             ResultSet rs = cs.executeQuery();
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){

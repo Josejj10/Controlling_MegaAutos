@@ -98,7 +98,7 @@ public class SedeMySQL implements SedeDAO {
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_SEDE(?)}");
-            cs.setInt("_ID", idSede);
+            cs.setInt("_ID_SEDE", idSede);
             ResultSet rs = cs.executeQuery();
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){

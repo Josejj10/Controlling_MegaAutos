@@ -185,12 +185,9 @@ public class LP2MegaAutos {
         OrdenTrabajo ot1 = new OrdenTrabajo();
         OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
         ot1 = daoOrdenTrabajo.buscar(1);
-        
-//        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-//        Date date = formato.parse("24-12-2020");
-//        ComprobantePago cp1 = new ComprobantePago("789456", "Boleta", date, ot1);
+
         ComprobantePagoDAO daoComprobantePago = new ComprobantePagoMySQL();
-//        daoComprobantePago.insertar(cp1);
+
         ArrayList<ComprobantePago> cps = new ArrayList<>();
         cps = daoComprobantePago.listar();
         for(ComprobantePago cp : cps)

@@ -37,6 +37,8 @@ public class LP2MegaAutos {
         vehiculos = daoVehiculo.listar();
         
         */
+        
+        // hola
         Driver dr = new Driver(1/10);
         Driver dr2 = new Driver(2/5);
         DriverDAO daoDriver = new DriverMySQL();

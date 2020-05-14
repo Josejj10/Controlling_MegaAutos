@@ -31,10 +31,8 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_AREA_TRABAJO(?,?,?,?)}");
-            // Insertar AreaTrabajo recibirá el nombre, el tipo de areaTrabajo
-            // el tipo de documento, el numDocumento, el correo y telefono
-            // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
-            // Por su id, para poder insertarlo en la tabla 
+            // Insertar AreaTrabajo recibirá el nombre, el total de ingresos 
+            // y de egresos. Devolvera el id
             cs.registerOutParameter("_ID_AREA_TRABAJO", java.sql.Types.INTEGER);
             // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
             cs.setString("_NOMBRE", areaTrabajo.getNombre().toUpperCase());
@@ -71,8 +69,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar areaTrabajo devuelve una lista de areaTrabajos
-            // con ID_AreaTrabajo, nombre, tipo_areaTrabajo, tipo_doc
-            // numero_doc, correo y telefono
+            // con ID_AreaTrabajo, nombre, total ingresos y egresos
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_AREA_TRABAJO()}");
             ResultSet rs = cs.executeQuery();
@@ -90,7 +87,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo las areas de trabajo
         return areaTrabajos;    
     }
     

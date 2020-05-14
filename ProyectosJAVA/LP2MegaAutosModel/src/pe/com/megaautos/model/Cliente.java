@@ -12,12 +12,13 @@ public class Cliente implements IConsultable{
 
     public Cliente(){
     }
-    public Cliente(String nombre, String numDocumento, String tipoDocumento, String telefono, String correo) {
+    public Cliente(String nombre, String numDocumento, String tipoDocumento, String telefono, String correo, String tipoCliente) {
         this.nombre = nombre;
         this.numDocumento = numDocumento;
         this.tipoDocumento = tipoDocumento;
         this.telefono = telefono;
         this.correo = correo;
+        this.tipoCliente = tipoCliente;
     }
     
     public int getId() {

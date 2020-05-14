@@ -18,9 +18,10 @@ public class Vehiculo implements IConsultable{
         
     }
 
-    public Vehiculo(String placa, String tipoVehiculo) {
+    public Vehiculo(String placa, String tipoVehiculo, Cliente propietario) {
         this.placa = placa;
         this.tipoVehiculo = tipoVehiculo;
+        this.propietario = propietario;
     }
     
     public int getId() {

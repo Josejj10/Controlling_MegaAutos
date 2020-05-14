@@ -7,14 +7,13 @@ public class Servicio implements IConsultable{
     private int codigoServicio;
     private String descripcion;
     private String tipoServicio;
-    private ArrayList<SubtipoServicio> subtipo;
 
     public Servicio(){
 
     }
     
-    public Servicio(int codigoServicio, String descripcion, String tipoServicio){
-        this.codigoServicio = codigoServicio;
+    public Servicio(String descripcion, String tipoServicio){
+        //this.codigoServicio = codigoServicio;
         this.descripcion = descripcion;
         this.tipoServicio = tipoServicio;
     }
@@ -41,18 +40,6 @@ public class Servicio implements IConsultable{
 
     public void setTipoServicio(String tipoServicio) {
         this.tipoServicio = tipoServicio;
-    }
-    
-    public void AgregarSubtipoServicio(SubtipoServicio subServicio){
-        this.subtipo.add(subServicio);
-    }
-    
-    public ArrayList<SubtipoServicio> getSubtipoServicio(){
-        return this.subtipo;
-    }
-    
-    public SubtipoServicio getSubtipoServicio(int num){
-        return this.subtipo.get(num);
     }
 
     @Override

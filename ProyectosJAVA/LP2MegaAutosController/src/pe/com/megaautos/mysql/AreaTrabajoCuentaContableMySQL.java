@@ -36,7 +36,7 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?,?)}");
+                    "{call INSERTAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?,?,?,?)}");
             // Insertar AreaTrabajoCuentaContable recibirá 
             // Id area trabajo, Id cuentacontable e IdDriver  
             // Y no devolvera nada 

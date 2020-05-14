@@ -48,12 +48,45 @@ public class EmpresaMySQL implements EmpresaDAO{
 
     @Override
     public int actualizar(Empresa empresa) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_EMPRESA(?,?)}");
+            cs.setInt("_ID_EMPRESA", empresa.getId());
+            cs.setString("_NOMBRE", empresa.getNombre().toUpperCase());
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override
     public int eliminar(int idEmpresa) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ELIMINAR_EMPRESA(?)}");
+            cs.setInt("_ID_EMPRESA", idEmpresa);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override

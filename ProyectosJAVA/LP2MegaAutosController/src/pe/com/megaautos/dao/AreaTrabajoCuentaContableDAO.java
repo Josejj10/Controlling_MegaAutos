@@ -15,6 +15,6 @@ import pe.com.megaautos.model.AreaTrabajoCuentaContable;
 public interface AreaTrabajoCuentaContableDAO {
     void insertar(AreaTrabajoCuentaContable atCc);
     int actualizar(AreaTrabajoCuentaContable atCc);
-    int eliminar(int idAtCc);
+    int eliminar(int idAtCc, int idCuentaContable);
     ArrayList<AreaTrabajoCuentaContable> listar();
 }

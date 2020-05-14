@@ -47,12 +47,48 @@ public class DriverMySQL implements DriverDAO {
 
     @Override
     public int actualizar(Driver driver) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+        try{
+            //Registar el JAR de conexion
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                   "{call ACTUALIZAR_DRIVER(?, ?)}");
+            //Actualizar Driver recibirá el id_driver y su valor
+            cs.setInt("_ID_DRIVER", driver.getId());
+            cs.setDouble("_DRIVER", driver.getFormula());
+            //El procedure de MySQL, cambiará el valor en base a su id.
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            rpta = 1;
+        }
+        return rpta;
     }
 
     @Override
     public int eliminar(int idDriver) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+        try{
+            //Registar el JAR de conexion
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                        DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                   "{call ELIMINAR_DRIVER(?)}");
+            //Actualizar Driver recibirá el id_driver y su valor
+            cs.setInt("_ID_DRIVER", idDriver);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            rpta = 1;
+        }
+        return rpta;
     }
 
     @Override

@@ -61,12 +61,53 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
 
     @Override
     public int actualizar(OrdenTrabajo ordenTrabajo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_ORDEN_TRABAJO(?,?,?,?,?,?,?,?)}");
+            cs.setInt("_ID_ORDEN_TRABAJO", ordenTrabajo.getId());
+            cs.setString("_NUMERO_OT", ordenTrabajo.getNumeroOrden().toUpperCase());
+            java.sql.Date fechaSql = 
+                    new java.sql.Date(ordenTrabajo.getFecha().getTime());
+            cs.setDate("_FECHA",fechaSql);
+            cs.setDouble("_TOTAL_INGRESOS",ordenTrabajo.getTotalIngresos());
+            cs.setDouble("_TOTAL_EGRESOS",ordenTrabajo.getTotalEgresos());
+            cs.setInt("_ID_SEDE",ordenTrabajo.getSede().getId());
+            cs.setInt("_ID_CLIENTE",ordenTrabajo.getCliente().getId());
+            cs.setInt("_ID_VEHICULO",ordenTrabajo.getVehiculo().getId());
+            cs.executeUpdate();
+            con.close();            
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override
     public int eliminar(int idOrdenTrabajo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_ORDEN_TRABAJO(?)}");
+            cs.setInt("_ID_ORDEN_TRABAJO", idOrdenTrabajo);
+            cs.executeUpdate();
+            con.close();            
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override

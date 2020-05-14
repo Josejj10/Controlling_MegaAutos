@@ -89,12 +89,50 @@ public class ClienteMySQL implements ClienteDAO {
 
     @Override
     public int actualizar(Cliente cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_CLIENTE(?,?,?,?,?,?,?}");
+            cs.setInt("_ID_CLIENTE", cliente.getId());
+            cs.setString("_NOMBRE", cliente.getNombre());
+            cs.setString("_TIPO_CLIENTE", cliente.getTipoCliente().toUpperCase());
+            cs.setString("_TIPO_DOCUMENTO", cliente.getTipoDocumento().toUpperCase());
+            cs.setString("_NUMERO_DOCUMENTO", cliente.getNumDocumento());
+            cs.setString("_CORREO", cliente.getCorreo());
+            cs.setString("_TELEFONO",cliente.getTelefono());
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+        return rpta;
     }
 
     @Override
     public int eliminar(int idCliente) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ELIMINAR_CLIENTE(?)}");
+            cs.setInt("_ID_CLIENTE", idCliente);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+        return rpta;    
     }
 
     @Override

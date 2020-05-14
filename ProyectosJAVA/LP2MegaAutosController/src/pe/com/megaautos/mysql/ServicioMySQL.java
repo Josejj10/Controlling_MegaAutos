@@ -52,12 +52,46 @@ public class ServicioMySQL implements ServicioDAO{
 
     @Override
     public int actualizar(Servicio servicio) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_SERVICIO(?,?,?)}");
+            cs.setInt("_ID_SERVICIO", servicio.getCodigoServicio());
+            cs.setString("_DESCRIPCION", servicio.getDescripcion().toUpperCase());
+            cs.setString("_TIPO_SERVICIO", servicio.getTipoServicio().toUpperCase());
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;   
     }
 
     @Override
     public int eliminar(int idServicio) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+        try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ELIMINAR_SERVICIO(?)}");
+            cs.setInt("_ID_SERVICIO", idServicio);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;    
     }
 
     @Override

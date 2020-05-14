@@ -59,12 +59,51 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
 
     @Override
     public int actualizar(ComprobantePago comprobantePago) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_COMPROBANTE(?,?,?,?,?,?)}");
+            cs.setInt("_ID_COMPROBANTE", comprobantePago.getId());
+            cs.setString("_NUM_COMPRO", comprobantePago.getNumeroComprobante());
+            cs.setDouble("_MONTO", comprobantePago.getMonto());
+            cs.setString("_TIPO_COMPROBANTE", comprobantePago.getTipoComprobante().toUpperCase());
+            cs.setInt("_ID_ORDEN_TRABAJO", comprobantePago.getOrdenTrabajo().getId());
+            java.sql.Date fechaSql = 
+                    new java.sql.Date(comprobantePago.getFecha().getTime());
+            cs.setDate("_FECHA",fechaSql);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override
     public int eliminar(int idComprobantePago) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ELIMINAR_COMPROBANTE(?)}");
+            cs.setInt("_ID_COMPROBANTE", idComprobantePago);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override

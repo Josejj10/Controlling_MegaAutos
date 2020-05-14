@@ -56,12 +56,51 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
 
     @Override
     public int actualizar(AreaTrabajoCuentaContable atCc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?,?,?,?)}");
+            cs.setInt("_ID_AREA_TRABAJO", atCc.getAreaTrabajo().getId());
+            cs.setInt("_ID_CUENTA_CONTABLE", atCc.getCuentaContable().getId());
+            cs.setInt("_ID_DRIVER", atCc.getDriver().getId());
+            cs.setDouble("_DISTRIBUCION_INGRESOS", atCc.getDistribucionIngresos());
+            cs.setDouble("_DISTRIBUCION_EGRESOS", atCc.getDistribucionEgresos());
+            cs.executeUpdate();
+            con.close();
+         
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+	     rpta = 1;
+        }
+        return rpta;
     }
 
     @Override
-    public int eliminar(int idAtCc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int eliminar(int idAtCc, int idCuentaContable) {
+        int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ELIMINAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?)}");
+            cs.setInt("_ID_AREA_TRABAJO", idAtCc);
+            cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);
+            cs.executeUpdate();
+            con.close();
+         
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+	     rpta = 1;
+        }
+    return rpta;	
     }
 
     @Override

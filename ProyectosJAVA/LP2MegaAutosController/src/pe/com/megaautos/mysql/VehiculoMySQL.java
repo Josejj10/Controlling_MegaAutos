@@ -48,12 +48,49 @@ public class VehiculoMySQL implements VehiculoDAO{
 
     @Override
     public int actualizar(Vehiculo vehiculo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_VEHICULO(?,?,?,?)}");
+            cs.setInt("_ID_VEHICULO", vehiculo.getId());
+            cs.setString("_PLACA", vehiculo.getPlaca().toUpperCase());
+            cs.setString("_TIPO_VEHICULO", vehiculo.getTipoVehiculo().toUpperCase());
+            cs.setInt("_ID_PROPIETARIO", vehiculo.getPropietario().getId());
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override
     public int eliminar(int idVehiculo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            
+            CallableStatement cs = con.prepareCall(
+                    "{call ELIMINAR_VEHICULO(?)}");
+            cs.setInt("_ID_VEHICULO", idVehiculo);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override

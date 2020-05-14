@@ -51,12 +51,47 @@ public class CuentaContableMySQL implements CuentaContableDAO{
 
     @Override
     public int actualizar(CuentaContable cuentaContable) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_CUENTA_CONTABLE(?,?,?,?)}");
+            cs.setInt("_ID_CUENTA_CONTABLE", cuentaContable.getId());
+            cs.setString("_NOMBRE", cuentaContable.getNombre().toUpperCase());
+            cs.setDouble("_MONTO_INGRESOS",cuentaContable.getMontoIngresos());
+            cs.setDouble("_MONTO_EGRESOS",cuentaContable.getMontoEgresos());
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override
     public int eliminar(int idCuentaContable) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         int rpta = 0;
+         try{
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);
+            CallableStatement cs = con.prepareCall(
+                    "{call ELIMINAR_CUENTA_CONTABLE(?)}");
+            cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);
+            cs.executeUpdate();
+            con.close();
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+             rpta = 1;
+        }
+         return rpta;
     }
 
     @Override

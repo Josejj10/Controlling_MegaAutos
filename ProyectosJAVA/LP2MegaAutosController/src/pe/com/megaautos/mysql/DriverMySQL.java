@@ -31,16 +31,13 @@ public class DriverMySQL implements DriverDAO {
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_DRIVER(?,?)}");
-            // Insertar Driver recibirá el nombre, el tipo de driver
-            // el tipo de documento, el numDocumento, el correo y telefono
-            // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
-            // Por su id, para poder insertarlo en la tabla 
+            // Insertar Driver recibirá la formula del driver
             cs.registerOutParameter("_ID_DRIVER", java.sql.Types.INTEGER);
             cs.setDouble("_DRIVER", driver.getFormula());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_DRIVER");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID del driver insertado para tenerlo en Java
             driver.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -68,8 +65,7 @@ public class DriverMySQL implements DriverDAO {
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar driver devuelve una lista de drivers
-            // con ID_Driver, nombre, tipo_driver, tipo_doc
-            // numero_doc, correo y telefono
+            // con ID_Driver y el valor, que es la formula
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_DRIVER()}");
             ResultSet rs = cs.executeQuery();
@@ -85,7 +81,7 @@ public class DriverMySQL implements DriverDAO {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo los drivers
         return drivers;
     }
 
@@ -98,7 +94,6 @@ public class DriverMySQL implements DriverDAO {
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Llama a un select * from cliente where ID_CLIENTE = id
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_DRIVER(?)}");
             cs.setInt("_ID_DRIVER", idDriver);

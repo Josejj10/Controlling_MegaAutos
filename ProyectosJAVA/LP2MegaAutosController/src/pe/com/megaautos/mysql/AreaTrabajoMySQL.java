@@ -41,7 +41,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
             cs.executeUpdate();
             rpta = cs.getInt("_ID_AREA_TRABAJO");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID del area de trabajo insertada para tenerlo en Java
             areaTrabajo.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -100,7 +100,6 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Llama a un select * from cliente where ID_CLIENTE = id
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_AREA_TRABAJO(?)}");
             cs.setInt("_ID_AREA_TRABAJO", idAreaTrabajo);

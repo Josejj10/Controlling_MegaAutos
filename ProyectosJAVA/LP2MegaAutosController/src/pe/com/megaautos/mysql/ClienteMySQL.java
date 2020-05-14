@@ -79,7 +79,7 @@ public class ClienteMySQL implements ClienteDAO {
             cs.executeUpdate();
             rpta = cs.getInt("_ID_CLIENTE");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID del cliente insertado para tenerlo en Java
             cliente.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());

@@ -32,9 +32,7 @@ public class UsuarioMySQL implements UsuarioDAO {
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_USUARIO(?,?,?,?,?,?)}");
             // Insertar Usuario recibirá el nombre, el tipo de usuario
-            // el tipo de documento, el numDocumento, el correo y telefono
-            // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
-            // Por su id, para poder insertarlo en la tabla 
+            // la fecha creacion, el correo y password
             cs.registerOutParameter("_ID_USUARIO", java.sql.Types.INTEGER);
             // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
             cs.setString("_NOMBRE", usuario.getNombre().toUpperCase());
@@ -67,7 +65,7 @@ public class UsuarioMySQL implements UsuarioDAO {
             cs.executeUpdate();
             rpta = cs.getInt("_ID_USUARIO");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID del usuario insertado para tenerlo en Java
             usuario.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -94,9 +92,8 @@ public class UsuarioMySQL implements UsuarioDAO {
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Listar usuario devuelve una lista de usuarios
-            // con ID_Usuario, nombre, tipo_usuario, tipo_doc
-            // numero_doc, correo y telefono
+            // Listar usuarios devuelve una lista de usuarios
+            // con ID_Usuario, nombre, tipo_usuario, correo, passwrd y fecha
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_USUARIO()}");
             ResultSet rs = cs.executeQuery();
@@ -116,7 +113,7 @@ public class UsuarioMySQL implements UsuarioDAO {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo los usuarios
         return usuarios;    
     }
     

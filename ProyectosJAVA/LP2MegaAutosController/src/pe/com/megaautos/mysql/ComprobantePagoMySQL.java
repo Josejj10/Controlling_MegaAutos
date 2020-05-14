@@ -35,7 +35,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
             // Insertar ComprobantePago recibirá el numero comprobante
             // el monto, la id de orden de trabajo el tipo de comprobantePago
             // el tipo de documento, el numDocumento, el correo y telefono
-            // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
+            // En el procedure de MySQL, cambiara el nombre del tipo comprobante
             // Por su id, para poder insertarlo en la tabla 
             cs.registerOutParameter("_ID_COMPROBANTE", java.sql.Types.INTEGER);
             // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
@@ -49,7 +49,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
             cs.executeUpdate();
             rpta = cs.getInt("_ID_COMPROBANTE");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID del comprobante insertado para tenerlo en Java
             comprobantePago.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -77,8 +77,8 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar comprobantePago devuelve una lista de comprobantePagos
-            // con ID_ComprobantePago, nombre, tipo_comprobantePago, tipo_doc
-            // numero_doc, correo y telefono
+            // con ID_ComprobantePago, numero comprobante, tipo comprobante
+            // monto, id_orden trabajo y fecha
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_COMPROBANTE()}");
             ResultSet rs = cs.executeQuery();
@@ -101,7 +101,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo los comprobantes
         return comprobantePagos;    
     }
     

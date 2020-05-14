@@ -34,10 +34,9 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_ORDEN_TRABAJO(?,?,?,?,?,?,?,?)}");
-            // Insertar OrdenTrabajo recibirá el nombre, el tipo de ordenTrabajo
-            // el tipo de documento, el numDocumento, el correo y telefono
-            // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
-            // Por su id, para poder insertarlo en la tabla 
+            // Insertar OrdenTrabajo recibirá el numeroOT, la fecha,
+            // el total de ingresos y de egresos, y los id de sede, cliente y 
+            // vehiculo
             cs.registerOutParameter("_ID_ORDEN_TRABAJO", java.sql.Types.INTEGER);
             // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
             cs.setString("_NUMERO_OT", ordenTrabajo.getNumeroOrden().toUpperCase());
@@ -52,7 +51,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             cs.executeUpdate();
             rpta = cs.getInt("_ID_ORDEN_TRABAJO");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID de la OT insertado para tenerlo en Java
             ordenTrabajo.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -80,8 +79,8 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar ordenTrabajo devuelve una lista de ordenTrabajos
-            // con ID_OrdenTrabajo, nombre, tipo_ordenTrabajo, tipo_doc
-            // numero_doc, correo y telefono
+            // con id, fecha, total de ingresos y egresos,
+            // y busca la Sede, Cliente y Vehiculo en la BD
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_ORDEN_TRABAJO()}");
             ResultSet rs = cs.executeQuery();

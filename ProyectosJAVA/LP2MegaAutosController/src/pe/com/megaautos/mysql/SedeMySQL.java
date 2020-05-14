@@ -39,7 +39,7 @@ public class SedeMySQL implements SedeDAO {
             cs.executeUpdate();
             rpta = cs.getInt("_ID_SEDE");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID de la sede insertada para tenerlo en Java
             sede.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -67,8 +67,7 @@ public class SedeMySQL implements SedeDAO {
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar sede devuelve una lista de sedes
-            // con ID_Sede, nombre, tipo_sede, tipo_doc
-            // numero_doc, correo y telefono
+            // con id y nombre
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_SEDE()}");
             ResultSet rs = cs.executeQuery();
@@ -97,7 +96,6 @@ public class SedeMySQL implements SedeDAO {
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Llama a un select * from sede where ID_SEDE = id
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_SEDE(?)}");
             cs.setInt("_ID", idSede);

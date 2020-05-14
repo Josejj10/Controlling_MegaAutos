@@ -66,8 +66,7 @@ public class EmpresaMySQL implements EmpresaDAO{
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar empresa devuelve una lista de empresas
-            // con ID_Empresa, nombre, tipo_empresa, tipo_doc
-            // numero_doc, correo y telefono
+            // con id y nombre
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_EMPRESA()}");
             ResultSet rs = cs.executeQuery();
@@ -83,7 +82,7 @@ public class EmpresaMySQL implements EmpresaDAO{
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo las empresas
         return empresas;    
     }
     

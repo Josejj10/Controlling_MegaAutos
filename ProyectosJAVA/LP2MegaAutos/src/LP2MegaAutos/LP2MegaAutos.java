@@ -4,8 +4,11 @@
  * and open the template in the editor.
  */
 package LP2MegaAutos;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ArrayList;
+import pe.com.megaautos.dao.AreaTrabajoDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.model.Vehiculo;
 import pe.com.megaautos.mysql.VehiculoMySQL;
@@ -13,6 +16,8 @@ import pe.com.megaautos.mysql.ClienteMySQL;
 import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.model.Cliente;
 import pe.com.megaautos.dao.DriverDAO;
+import pe.com.megaautos.dao.EmpresaDAO;
+import pe.com.megaautos.dao.OrdenTrabajoDAO;
 import pe.com.megaautos.model.Driver;
 import pe.com.megaautos.model.Empresa;
 import pe.com.megaautos.mysql.DriverMySQL;
@@ -23,7 +28,12 @@ import pe.com.megaautos.dao.ServicioDAO;
 import pe.com.megaautos.model.Servicio;
 import pe.com.megaautos.mysql.ServicioMySQL;
 import pe.com.megaautos.dao.UsuarioDAO;
+import pe.com.megaautos.model.AreaTrabajo;
+import pe.com.megaautos.model.OrdenTrabajo;
 import pe.com.megaautos.model.Usuario;
+import pe.com.megaautos.mysql.AreaTrabajoMySQL;
+import pe.com.megaautos.mysql.EmpresaMySQL;
+import pe.com.megaautos.mysql.OrdenTrabajoMySQL;
 import pe.com.megaautos.mysql.UsuarioMySQL;
 /**
  *
@@ -34,7 +44,7 @@ public class LP2MegaAutos {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // TODO code application logic here
         //Vehiculo vehiculo= new Vehiculo("");
         /*ArrayList<Vehiculo> vehiculos =
@@ -107,13 +117,44 @@ public class LP2MegaAutos {
 //            System.out.println(v.getId() + " " + v.getPlaca() + " " + v.getTipoVehiculo() + " " + v.getPropietario().getNombre());
     
         // Prueba Usuario/TipoUsuario
-        Usuario us1 = new Usuario("Diego Berrospi", "a2040@pucp.edu.pe", "abc123", "Limpieza");
-        UsuarioDAO daoUsuario = new UsuarioMySQL();
-        daoUsuario.insertar(us1);
-        System.out.println(us1.getFechaCreado().getTime());
-        ArrayList<Usuario> usuarios = new ArrayList<>();
-        usuarios = daoUsuario.listar();
-        for(Usuario u : usuarios)
-            System.out.println(u.getId() + " " + u.getNombre() + " " + u.getCorreo() + " " + u.getTipoUsuario());
+//        Usuario us1 = new Usuario("Diego Berrospi", "a2040@pucp.edu.pe", "abc123", "Limpieza");
+//        UsuarioDAO daoUsuario = new UsuarioMySQL();
+//        daoUsuario.insertar(us1);
+//        System.out.println(us1.getFechaCreado().getTime());
+//        ArrayList<Usuario> usuarios = new ArrayList<>();
+//        usuarios = daoUsuario.listar();
+//        for(Usuario u : usuarios)
+//            System.out.println(u.getId() + " " + u.getNombre() + " " + u.getCorreo() + " " + u.getTipoUsuario());
+
+        // Prueba Empresa
+//        Empresa emp1 = new Empresa("MegaAutos");
+//        EmpresaDAO daoEmpresa = new EmpresaMySQL();
+//        daoEmpresa.insertar(emp1);
+//        ArrayList<Empresa> empresas = new ArrayList<>();
+//        empresas = daoEmpresa.listar();
+//        for(Empresa e : empresas)
+//            System.out.println(e.getNombre());
+        
+        // Area Trabajo
+//        AreaTrabajo at1 = new AreaTrabajo("Planchado");
+//        AreaTrabajoDAO daoAreaTrabajo = new AreaTrabajoMySQL();
+//        daoAreaTrabajo.insertar(at1);
+//        ArrayList<AreaTrabajo> ats = new ArrayList<>();
+//        ats = daoAreaTrabajo.listar();
+//        for(AreaTrabajo at : ats)
+//            System.out.println(at.getNombre());
+
+        // Prueba Orden Trabajo
+//        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+//        Date date = formato.parse("24-12-2020");
+//        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0);
+//        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
+//        daoOrdenTrabajo.insertar(ot1);
+//        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
+//        ots = daoOrdenTrabajo.listar();
+//        for(OrdenTrabajo ot : ots)
+//            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre()); 
+
+        
     }
 }

@@ -121,7 +121,6 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){
                 AreaTrabajoCuentaContable atCc = new AreaTrabajoCuentaContable();
-                atCc.setId(rs.getInt("ID_AREA_TRABAJO_X_CUENTA_CONTABLE"));
                 atCc.setDistribucionEgresos(rs.getInt("DISTRIBUCION_EGRESOS"));
                 atCc.setDistribucionIngresos(rs.getInt("DISTRIBUCION_INGRESOS"));
                 // Insertar AreaTrabajo

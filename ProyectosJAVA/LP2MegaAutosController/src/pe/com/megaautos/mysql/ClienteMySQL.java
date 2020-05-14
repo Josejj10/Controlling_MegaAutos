@@ -106,9 +106,8 @@ public class ClienteMySQL implements ClienteDAO {
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Listar cliente devuelve una lista de clientes
-            // con ID_Cliente, nombre, tipo_cliente, tipo_doc
-            // numero_doc, correo y telefono
+            // Listar cliente devuelve id, nombre, tipo cliente
+            // tipo documento, correo y telefono
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_CLIENTE()}");
             ResultSet rs = cs.executeQuery();
@@ -128,7 +127,7 @@ public class ClienteMySQL implements ClienteDAO {
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo los clientes
         return clientes;    
     }
     

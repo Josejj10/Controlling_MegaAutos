@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.HashSet;
 import pe.com.megaautos.dao.AreaTrabajoDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.model.Vehiculo;
@@ -67,9 +68,19 @@ public class LP2MegaAutos {
         //Prueba Driver
 //        Driver dr = new Driver(1/10);
 //        Driver dr2 = new Driver(2/5);
-//        DriverDAO daoDriver = new DriverMySQL();
+        DriverDAO daoDriver = new DriverMySQL();
 //        daoDriver.insertar(dr);
 //        daoDriver.insertar(dr2);
+//        ArrayList<Driver> drivers = new ArrayList<>();
+//        drivers = daoDriver.listar();
+//        for(Driver d : drivers){
+//            System.out.println(d.getFormula());
+//        }
+//        Driver dr3 = new Driver();
+//        dr3 = daoDriver.buscar(3);
+//        dr3.setFormula(0.65);
+//        daoDriver.actualizar(dr3);
+//        daoDriver.eliminar(6);
 //        ArrayList<Driver> drivers = new ArrayList<>();
 //        drivers = daoDriver.listar();
 //        for(Driver d : drivers){
@@ -82,6 +93,12 @@ public class LP2MegaAutos {
 //        SedeDAO daoSede = new SedeMySQL();
 //        daoSede.insertar(s1);
 //        daoSede.insertar(s2);
+
+//        Sede s3 = new Sede();
+//        s3 = daoSede.buscar(13);
+//        s3.setDistrito("La Molina");
+//        daoSede.actualizar(s3);
+//        daoSede.eliminar(5);
 //        ArrayList<Sede> sedes = new ArrayList<>();
 //        sedes = daoSede.listar();
 //        for(Sede d : sedes)
@@ -99,6 +116,18 @@ public class LP2MegaAutos {
 //            System.out.println(c.getId() + " " + c.getNombre() + " " + c.getTipoDocumento());
 //        }
 //        System.out.println(cl1.getNombre());
+
+//        Cliente c2 = new Cliente();
+//        c2 = daoCliente.buscar(14);
+//        c2.setTipoCliente("Empresa");
+//        c2.setTelefono("4421210");
+//        daoCliente.actualizar(c2);
+//        daoCliente.eliminar(7);
+//        ArrayList<Cliente> clientes = new ArrayList<>();
+//        clientes = daoCliente.listar();
+//        for(Cliente c : clientes){
+//            System.out.println(c.getId() + " " + c.getNombre() + " " + c.getTipoDocumento());
+//        }
 
 
         // Prueba Servicio/TipoServicio
@@ -182,15 +211,15 @@ public class LP2MegaAutos {
 //            System.out.println(ct.getNombre());
 
         // Prueba Comprobante Pago
-        OrdenTrabajo ot1 = new OrdenTrabajo();
-        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
-        ot1 = daoOrdenTrabajo.buscar(1);
-
-        ComprobantePagoDAO daoComprobantePago = new ComprobantePagoMySQL();
-
-        ArrayList<ComprobantePago> cps = new ArrayList<>();
-        cps = daoComprobantePago.listar();
-        for(ComprobantePago cp : cps)
-            System.out.println(cp.getNumeroComprobante() + " " + cp.getTipoComprobante() + " " + cp.getOrdenTrabajo().getNumeroOrden());        
+//        OrdenTrabajo ot1 = new OrdenTrabajo();
+//        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
+//        ot1 = daoOrdenTrabajo.buscar(1);
+//
+//        ComprobantePagoDAO daoComprobantePago = new ComprobantePagoMySQL();
+//
+//        ArrayList<ComprobantePago> cps = new ArrayList<>();
+//        cps = daoComprobantePago.listar();
+//        for(ComprobantePago cp : cps)
+//            System.out.println(cp.getNumeroComprobante() + " " + cp.getTipoComprobante() + " " + cp.getOrdenTrabajo().getNumeroOrden());        
     }
 }

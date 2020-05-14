@@ -68,7 +68,7 @@ public class LP2MegaAutos {
         //Prueba Driver
 //        Driver dr = new Driver(1/10);
 //        Driver dr2 = new Driver(2/5);
-        DriverDAO daoDriver = new DriverMySQL();
+ //       DriverDAO daoDriver = new DriverMySQL();
 //        daoDriver.insertar(dr);
 //        daoDriver.insertar(dr2);
 //        ArrayList<Driver> drivers = new ArrayList<>();

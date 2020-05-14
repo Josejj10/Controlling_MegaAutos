@@ -31,10 +31,8 @@ public class CuentaContableMySQL implements CuentaContableDAO{
                     DBManager.user, DBManager.password);
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_CUENTA_CONTABLE(?,?,?,?)}");
-            // Insertar CuentaContable recibirá el nombre, el tipo de cuentaContable
-            // el tipo de documento, el numDocumento, el correo y telefono
-            // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
-            // Por su id, para poder insertarlo en la tabla 
+            // Insertar CuentaContable recibirá el nombre y los montos ingresos
+            // y egresos, devolvera id
             cs.registerOutParameter("_ID_CUENTA_CONTABLE", java.sql.Types.INTEGER);
             // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
             cs.setString("_NOMBRE", cuentaContable.getNombre().toUpperCase());
@@ -43,7 +41,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
             cs.executeUpdate();
             rpta = cs.getInt("_ID_CUENTA_CONTABLE");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID de la cuentaContable insertada para tenerla en Java
             cuentaContable.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -71,8 +69,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar cuentaContable devuelve una lista de cuentaContables
-            // con ID_CuentaContable, nombre, tipo_cuentaContable, tipo_doc
-            // numero_doc, correo y telefono
+            // con ID_CuentaContable, nombre y monto ingresos y egresos
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_CUENTA_CONTABLE()}");
             ResultSet rs = cs.executeQuery();
@@ -90,7 +87,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo las cuentas 
         return cuentaContables;    
     }
 
@@ -103,7 +100,6 @@ public class CuentaContableMySQL implements CuentaContableDAO{
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Llama a un select * from cliente where ID_CLIENTE = id
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_CUENTA_CONTABLE(?)}");
             cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);

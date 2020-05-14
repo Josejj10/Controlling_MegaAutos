@@ -42,7 +42,7 @@ public class ServicioMySQL implements ServicioDAO{
             cs.executeUpdate();
             rpta = cs.getInt("_ID_SERVICIO");
             con.close();
-            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+            // Actualiza el ID del Servicio insertado para tenerlo en Java
             servicio.setCodigoServicio(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
@@ -70,8 +70,7 @@ public class ServicioMySQL implements ServicioDAO{
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar servicio devuelve una lista de servicios
-            // con ID_Servicio, nombre, tipo_servicio, tipo_doc
-            // numero_doc, correo y telefono
+            // con ID_Servicio, descripcion y tipo_servicio
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_SERVICIO()}");
             ResultSet rs = cs.executeQuery();
@@ -88,7 +87,7 @@ public class ServicioMySQL implements ServicioDAO{
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo los servicios
         return servicios;
     }
     

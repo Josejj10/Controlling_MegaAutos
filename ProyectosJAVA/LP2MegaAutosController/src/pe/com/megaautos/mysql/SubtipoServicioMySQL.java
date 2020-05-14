@@ -68,8 +68,7 @@ public class SubtipoServicioMySQL implements SubtipoServicioDAO{
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar subServ devuelve una lista de subServs
-            // con ID_SubtipoServicio, nombre, tipo_subServ, tipo_doc
-            // numero_doc, correo y telefono
+            // con su id, nombre y la id del servicio
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_SUBTIPO_SERVICIO()}");
             ResultSet rs = cs.executeQuery();
@@ -86,7 +85,7 @@ public class SubtipoServicioMySQL implements SubtipoServicioDAO{
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        //Devolviendo los vehiculos
+        //Devolviendo los subtipos servicio
         return subServs;    
     }
     

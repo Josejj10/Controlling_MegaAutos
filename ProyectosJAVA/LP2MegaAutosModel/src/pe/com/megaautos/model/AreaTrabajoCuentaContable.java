@@ -10,7 +10,6 @@ package pe.com.megaautos.model;
  * @author Rodrigo
  */
 public class AreaTrabajoCuentaContable {
-    private int id;
     private double distribucionIngresos;
     private double distribucionEgresos;
     private CuentaContable cuentaContable;
@@ -20,14 +19,6 @@ public class AreaTrabajoCuentaContable {
     public AreaTrabajoCuentaContable() {
     }
     
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public double getDistribucionIngresos() {
         return distribucionIngresos;
     }

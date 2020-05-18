@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.DriverDAO;
 import pe.com.megaautos.model.Driver;
@@ -25,10 +26,11 @@ public class DriverMySQL implements DriverDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_DRIVER(?,?)}");
             // Insertar Driver recibirá la formula del driver
@@ -50,10 +52,11 @@ public class DriverMySQL implements DriverDAO {
         int rpta = 0;
         try{
             //Registar el JAR de conexion
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                    "{call ACTUALIZAR_DRIVER(?, ?)}");
             //Actualizar Driver recibirá el id_driver y su valor
@@ -74,10 +77,11 @@ public class DriverMySQL implements DriverDAO {
         int rpta = 0;
         try{
             //Registar el JAR de conexion
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                        DBManager.user, DBManager.password);
+                        DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                    "{call ELIMINAR_DRIVER(?)}");
             //Actualizar Driver recibirá el id_driver y su valor
@@ -96,12 +100,13 @@ public class DriverMySQL implements DriverDAO {
         ArrayList<Driver> drivers = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar driver devuelve una lista de drivers
-            // con ID_Driver y el valor, que es la formula
+            // con ID_Driver y el valor, que es la formula*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_DRIVER()}");
             ResultSet rs = cs.executeQuery();
@@ -126,10 +131,11 @@ public class DriverMySQL implements DriverDAO {
         Driver driver = new Driver();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
-            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            getConnection(DBManager.url,DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_DRIVER(?)}");
             cs.setInt("_ID_DRIVER", idDriver);

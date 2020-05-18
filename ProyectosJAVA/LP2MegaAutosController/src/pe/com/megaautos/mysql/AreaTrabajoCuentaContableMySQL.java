@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.AreaTrabajoCuentaContableDAO;
 import pe.com.megaautos.dao.AreaTrabajoDAO;
@@ -31,10 +32,11 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?,?,?,?)}");
             // Insertar AreaTrabajoCuentaContable recibirá 
@@ -59,10 +61,11 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?,?,?,?)}");
             cs.setInt("_ID_AREA_TRABAJO", atCc.getAreaTrabajo().getId());
@@ -85,10 +88,11 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?)}");
             cs.setInt("_ID_AREA_TRABAJO", idAtCc);
@@ -108,13 +112,14 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
         ArrayList<AreaTrabajoCuentaContable> atCcs = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar atCc devuelve una lista de atCcs
             // con ID_AreaTrabajoCuentaContable, nombre, tipo_atCc, tipo_doc
-            // numero_doc, correo y telefono
+            // numero_doc, correo y telefono*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_AREA_TRABAJO_X_CUENTA_CONTABLE()}");
             ResultSet rs = cs.executeQuery();

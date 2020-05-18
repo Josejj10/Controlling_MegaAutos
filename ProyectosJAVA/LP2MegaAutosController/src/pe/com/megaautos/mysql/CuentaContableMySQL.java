@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.CuentaContableDAO;
 import pe.com.megaautos.model.CuentaContable;
@@ -25,10 +26,11 @@ public class CuentaContableMySQL implements CuentaContableDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_CUENTA_CONTABLE(?,?,?,?)}");
             // Insertar CuentaContable recibirá el nombre y los montos ingresos
@@ -54,10 +56,11 @@ public class CuentaContableMySQL implements CuentaContableDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_CUENTA_CONTABLE(?,?,?,?)}");
             cs.setInt("_ID_CUENTA_CONTABLE", cuentaContable.getId());
@@ -78,10 +81,11 @@ public class CuentaContableMySQL implements CuentaContableDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_CUENTA_CONTABLE(?)}");
             cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);
@@ -99,12 +103,13 @@ public class CuentaContableMySQL implements CuentaContableDAO{
         ArrayList<CuentaContable> cuentaContables = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar cuentaContable devuelve una lista de cuentaContables
-            // con ID_CuentaContable, nombre y monto ingresos y egresos
+            // con ID_CuentaContable, nombre y monto ingresos y egresos*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_CUENTA_CONTABLE()}");
             ResultSet rs = cs.executeQuery();
@@ -131,10 +136,11 @@ public class CuentaContableMySQL implements CuentaContableDAO{
        CuentaContable cuentaContable = new CuentaContable();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
-            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            getConnection(DBManager.url,DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_CUENTA_CONTABLE(?)}");
             cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);

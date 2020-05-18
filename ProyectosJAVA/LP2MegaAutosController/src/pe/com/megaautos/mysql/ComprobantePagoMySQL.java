@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.ComprobantePagoDAO;
 import pe.com.megaautos.dao.OrdenTrabajoDAO;
@@ -26,10 +27,11 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_COMPROBANTE(?,?,?,?,?,?)}");
             // Insertar ComprobantePago recibirá el numero comprobante
@@ -62,10 +64,11 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_COMPROBANTE(?,?,?,?,?,?)}");
             cs.setInt("_ID_COMPROBANTE", comprobantePago.getId());
@@ -90,10 +93,11 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_COMPROBANTE(?)}");
             cs.setInt("_ID_COMPROBANTE", idComprobantePago);
@@ -111,13 +115,14 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         ArrayList<ComprobantePago> comprobantePagos = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar comprobantePago devuelve una lista de comprobantePagos
             // con ID_ComprobantePago, numero comprobante, tipo comprobante
-            // monto, id_orden trabajo y fecha
+            // monto, id_orden trabajo y fecha*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_COMPROBANTE()}");
             ResultSet rs = cs.executeQuery();

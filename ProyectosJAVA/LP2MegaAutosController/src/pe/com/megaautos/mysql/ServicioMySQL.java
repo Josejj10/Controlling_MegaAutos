@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.ServicioDAO;
 import pe.com.megaautos.model.Servicio;
@@ -25,10 +26,11 @@ public class ServicioMySQL implements ServicioDAO{
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_SERVICIO(?,?,?)}");
             // Insertar Servicio devuelve idServicio, 
@@ -55,10 +57,11 @@ public class ServicioMySQL implements ServicioDAO{
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_SERVICIO(?,?,?)}");
             cs.setInt("_ID_SERVICIO", servicio.getCodigoServicio());
@@ -78,10 +81,11 @@ public class ServicioMySQL implements ServicioDAO{
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_SERVICIO(?)}");
             cs.setInt("_ID_SERVICIO", idServicio);
@@ -99,12 +103,13 @@ public class ServicioMySQL implements ServicioDAO{
          ArrayList<Servicio> servicios = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar servicio devuelve una lista de servicios
-            // con ID_Servicio, descripcion y tipo_servicio
+            // con ID_Servicio, descripcion y tipo_servicio*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_SERVICIO()}");
             ResultSet rs = cs.executeQuery();

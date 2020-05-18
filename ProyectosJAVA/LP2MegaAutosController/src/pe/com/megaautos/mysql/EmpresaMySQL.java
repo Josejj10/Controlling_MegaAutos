@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.EmpresaDAO;
 import pe.com.megaautos.model.Empresa;
@@ -25,10 +26,11 @@ public class EmpresaMySQL implements EmpresaDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_EMPRESA(?,?)}");
             // Insertar Empresa recibirá el nombre de la empresa
@@ -51,10 +53,11 @@ public class EmpresaMySQL implements EmpresaDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_EMPRESA(?,?)}");
             cs.setInt("_ID_EMPRESA", empresa.getId());
@@ -73,10 +76,11 @@ public class EmpresaMySQL implements EmpresaDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_EMPRESA(?)}");
             cs.setInt("_ID_EMPRESA", idEmpresa);
@@ -94,12 +98,13 @@ public class EmpresaMySQL implements EmpresaDAO{
         ArrayList<Empresa> empresas = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar empresa devuelve una lista de empresas
-            // con id y nombre
+            // con id y nombre*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_EMPRESA()}");
             ResultSet rs = cs.executeQuery();

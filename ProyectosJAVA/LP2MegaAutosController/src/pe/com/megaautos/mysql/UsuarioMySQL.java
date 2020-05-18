@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.UsuarioDAO;
 import pe.com.megaautos.model.Usuario;
@@ -25,10 +26,11 @@ public class UsuarioMySQL implements UsuarioDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_USUARIO(?,?,?,?,?,?)}");
             // Insertar Usuario recibirá el nombre, el tipo de usuario
@@ -77,11 +79,12 @@ public class UsuarioMySQL implements UsuarioDAO {
     public int actualizar(Usuario usuario) {
         int rpta = 0;
         try{
+            Connection con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_USUARIO(?,?,?,?,?,?)}");
             cs.setInt("_ID_USUARIO", usuario.getId());
@@ -104,11 +107,12 @@ public class UsuarioMySQL implements UsuarioDAO {
     public int eliminar(int idUsuario) {
         int rpta = 0;
         try{
+            Connection con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_USUARIO(?)}");
             cs.setInt("_ID_USUARIO", idUsuario);
@@ -125,11 +129,12 @@ public class UsuarioMySQL implements UsuarioDAO {
     public ArrayList<Usuario> listar() {
         ArrayList<Usuario> usuarios = new ArrayList<>();
         try{
+            Connection con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
-            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            getConnection(DBManager.url,DBManager.user, DBManager.password);*/
             // Listar usuarios devuelve una lista de usuarios
             // con ID_Usuario, nombre, tipo_usuario, correo, passwrd y fecha
             CallableStatement cs = con.prepareCall(

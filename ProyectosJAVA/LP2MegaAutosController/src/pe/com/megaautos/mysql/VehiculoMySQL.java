@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;      
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.dao.ClienteDAO;
@@ -19,12 +20,13 @@ public class VehiculoMySQL implements VehiculoDAO{
     public int insertar(Vehiculo vehiculo) {
         int rpta = 0;
          try{
+            Connection con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);
-            
+            */
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_VEHICULO(?,?,?,?)}");
             // Insertar Vehiculo recibirá la placa, el nombre del tipo vehiculo
@@ -51,11 +53,12 @@ public class VehiculoMySQL implements VehiculoDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);
-            
+            */
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_VEHICULO(?,?,?,?)}");
             cs.setInt("_ID_VEHICULO", vehiculo.getId());
@@ -76,11 +79,12 @@ public class VehiculoMySQL implements VehiculoDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);
-            
+            */
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_VEHICULO(?)}");
             cs.setInt("_ID_VEHICULO", idVehiculo);
@@ -98,12 +102,13 @@ public class VehiculoMySQL implements VehiculoDAO{
         ArrayList<Vehiculo> vehiculos = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar vehiculo devuelve una lista de vehiculo 
-            // con Placa, ID_tipo_vehiculo  y ID_propietario
+            // con Placa, ID_tipo_vehiculo  y ID_propietario*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_VEHICULO()}");
             ResultSet rs = cs.executeQuery();
@@ -134,11 +139,12 @@ public class VehiculoMySQL implements VehiculoDAO{
         Vehiculo vehiculo = new Vehiculo();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Llama a un select * from vehiculo where ID_VEHICULO = id
+            // Llama a un select * from vehiculo where ID_VEHICULO = id*/
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_VEHICULO(?)}");
             cs.setInt("_ID_VEHICULO", idVehiculo);

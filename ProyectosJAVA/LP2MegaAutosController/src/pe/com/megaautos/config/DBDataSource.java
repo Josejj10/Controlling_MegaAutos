@@ -26,8 +26,8 @@ public class DBDataSource {
 			ds.setJdbcUrl(DBManager.url);
 			ds.setUser(DBManager.user);
 			ds.setPassword(DBManager.password);
-			
-			ds.setMinPoolSize(3);
+                        ds.setInitialPoolSize(5);
+			ds.setMinPoolSize(5);
                         // Establecer max statements para PreparedStatement pooling
                         ds.setMaxStatements(200);
 			ds.setAcquireIncrement(5);

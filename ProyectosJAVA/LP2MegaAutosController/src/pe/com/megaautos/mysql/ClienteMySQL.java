@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.model.Cliente;
@@ -26,11 +27,12 @@ public class ClienteMySQL implements ClienteDAO {
         Cliente cliente = new Cliente();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Llama a un select * from cliente where ID_CLIENTE = id
+            // Llama a un select * from cliente where ID_CLIENTE = id*/
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_CLIENTE(?)}");
             cs.setInt("_ID_CLIENTE", id);
@@ -57,11 +59,12 @@ public class ClienteMySQL implements ClienteDAO {
     public int insertar(Cliente cliente) {
         int rpta = 0;
          try{
+            Connection con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_CLIENTE(?,?,?,?,?,?,?)}");
             // Insertar Cliente recibirá el nombre, el tipo de cliente
@@ -92,10 +95,11 @@ public class ClienteMySQL implements ClienteDAO {
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_CLIENTE(?,?,?,?,?,?,?)}");
             cs.setInt("_ID_CLIENTE", cliente.getId());
@@ -119,10 +123,11 @@ public class ClienteMySQL implements ClienteDAO {
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_CLIENTE(?)}");
             cs.setInt("_ID_CLIENTE", idCliente);
@@ -140,12 +145,13 @@ public class ClienteMySQL implements ClienteDAO {
         ArrayList<Cliente> clientes = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar cliente devuelve id, nombre, tipo cliente
-            // tipo documento, correo y telefono
+            // tipo documento, correo y telefono*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_CLIENTE()}");
             ResultSet rs = cs.executeQuery();

@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.dao.OrdenTrabajoDAO;
@@ -28,10 +29,11 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_ORDEN_TRABAJO(?,?,?,?,?,?,?,?)}");
             // Insertar OrdenTrabajo recibirá el numeroOT, la fecha,
@@ -64,10 +66,11 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_ORDEN_TRABAJO(?,?,?,?,?,?,?,?)}");
             cs.setInt("_ID_ORDEN_TRABAJO", ordenTrabajo.getId());
@@ -92,12 +95,13 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
     @Override
     public int eliminar(int idOrdenTrabajo) {
         int rpta = 0;
-         try{
+         try{             
+            Connection con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_ORDEN_TRABAJO(?)}");
             cs.setInt("_ID_ORDEN_TRABAJO", idOrdenTrabajo);
@@ -113,12 +117,13 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
     @Override
     public ArrayList<OrdenTrabajo> listar() {
         ArrayList<OrdenTrabajo> ordenTrabajos = new ArrayList<>();
-        try{
+        try{            
+            Connection con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
-            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            getConnection(DBManager.url,DBManager.user, DBManager.password);*/
             // Listar ordenTrabajo devuelve una lista de ordenTrabajos
             // con id, fecha, total de ingresos y egresos,
             // y busca la Sede, Cliente y Vehiculo en la BD
@@ -158,11 +163,12 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
         OrdenTrabajo ordenTrabajo = new OrdenTrabajo();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
-            // Llama a un select * from ordenTrabajo where ID_ORDEN_TRABAJO = id
+            // Llama a un select * from ordenTrabajo where ID_ORDEN_TRABAJO = id*/
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_ORDEN_TRABAJO(?)}");
             cs.setInt("_ID_ORDEN_TRABAJO", idOrdenTrabajo);

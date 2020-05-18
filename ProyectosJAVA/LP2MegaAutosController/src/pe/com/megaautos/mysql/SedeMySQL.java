@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.SedeDAO;
 import pe.com.megaautos.model.Sede;
@@ -25,10 +26,11 @@ public class SedeMySQL implements SedeDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call INSERTAR_SEDE(?,?)}");
             // Insertar Sede recibirá el distrito de la sede y lo inserta
@@ -52,10 +54,11 @@ public class SedeMySQL implements SedeDAO {
         int rpta = 0;
         try{
         //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_SEDE(?,?)}");   
             cs.setInt("_ID_SEDE", sede.getId());
@@ -74,10 +77,11 @@ public class SedeMySQL implements SedeDAO {
         int rpta = 0;
         try{
         //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);
+                    DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ELIMINAR_SEDE(?)}");   
             cs.setInt("_ID_SEDE", idSede);
@@ -95,12 +99,13 @@ public class SedeMySQL implements SedeDAO {
         ArrayList<Sede> sedes = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
             getConnection(DBManager.url,DBManager.user, DBManager.password);
             // Listar sede devuelve una lista de sedes
-            // con id y nombre
+            // con id y nombre*/
             CallableStatement cs = con.prepareCall(
                     "{call LISTAR_SEDE()}");
             ResultSet rs = cs.executeQuery();
@@ -125,10 +130,11 @@ public class SedeMySQL implements SedeDAO {
         Sede sede = new Sede();
         try{
             //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
-            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            getConnection(DBManager.url,DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call BUSCAR_SEDE(?)}");
             cs.setInt("_ID_SEDE", idSede);

@@ -13,10 +13,6 @@ import java.sql.SQLException;
  * @author Jose
  */
 public class DBDataSource {
-	private static final String DB_USERNAME="db.username";
-	private static final String DB_PASSWORD="db.password";
-	private static final String DB_URL ="db.url";
-	private static final String DB_DRIVER_CLASS="driver.class.name";
         
         private static ComboPooledDataSource ds;
 	static{
@@ -26,12 +22,14 @@ public class DBDataSource {
 			ds.setJdbcUrl(DBManager.url);
 			ds.setUser(DBManager.user);
 			ds.setPassword(DBManager.password);
+                        
+                        
                         ds.setInitialPoolSize(5);
 			ds.setMinPoolSize(5);
+                        ds.setAcquireIncrement(5);                        
                         // Establecer max statements para PreparedStatement pooling
                         ds.setMaxStatements(200);
-			ds.setAcquireIncrement(5);
-			
+                        
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}

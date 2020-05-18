@@ -55,25 +55,55 @@ public class LP2MegaAutos {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args){
-        
-        try{
-            Connection con = DBDataSource.getConnection();
-            Statement st = con.createStatement();
-            String sql = "SELECT * FROM USUARIO";
-            ResultSet rs = st.executeQuery(sql);
-            while(rs.next()){
-                int id = rs.getInt("ID_USUARIO");
-                String nom = rs.getString("NOMBRE")+"\t";
-                String correo = rs.getString("CORREO")+"\t";
-                String pwd = rs.getString("PASSWRD");
-                System.out.println(id+"\t" + nom  + correo + pwd);
-            }                   
-        }
-        catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        
+    public static void main(String[] args) throws ParseException{
+//        
+//        try{
+//            Connection con = DBDataSource.getConnection();
+//            Statement st = con.createStatement();
+//            String sql = "SELECT * FROM USUARIO";
+//            ResultSet rs = st.executeQuery(sql);
+//            while(rs.next()){
+//                int id = rs.getInt("ID_USUARIO");
+//                String nom = rs.getString("NOMBRE")+"\t";
+//                String correo = rs.getString("CORREO")+"\t";
+//                String pwd = rs.getString("PASSWRD");
+//                System.out.println(id+"\t" + nom  + correo + pwd);
+//            }                   
+//        }
+//        catch(Exception ex){
+//            System.out.println(ex.getMessage());
+//        }
+//        
+//        Usuario us1 = new Usuario("Diego Villegas", "a2040@pucp.edu.pe", "abc123", "Limpieza");
+//        UsuarioDAO daoUsuario = new UsuarioMySQL();
+//        daoUsuario.insertar(us1);
+//        System.out.println(us1.getFechaCreado().getTime());
+//        ArrayList<Usuario> usuarios = new ArrayList<>();
+//        usuarios = daoUsuario.listar();
+//        for(Usuario u : usuarios)
+//            System.out.println(u.getId() + " " + u.getNombre() + " " + u.getCorreo() + " " + u.getTipoUsuario());
+
+        ClienteDAO daoCliente = new ClienteMySQL();
+        Cliente cl1 = new Cliente();
+        cl1 = daoCliente.buscar(13);
+        SedeDAO daoSede = new SedeMySQL();
+        Sede s1 = new Sede();
+        s1 = daoSede.buscar(2);
+        VehiculoDAO daoVehiculo = new VehiculoMySQL();
+        Vehiculo veh1 = new Vehiculo();
+        veh1 = daoVehiculo.buscar(1);
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = formato.parse("24-12-2020");
+        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0, s1);
+        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
+        ot1.setCliente(cl1);
+        ot1.setVehiculo(veh1);
+        daoOrdenTrabajo.insertar(ot1);
+        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
+        ots = daoOrdenTrabajo.listar();
+        for(OrdenTrabajo ot : ots)
+            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre() + " " + ot.getSede().getDistrito() + " " + ot.getVehiculo().getPlaca());
+
         
         /* PRUEBAS SQL
         //Prueba Driver

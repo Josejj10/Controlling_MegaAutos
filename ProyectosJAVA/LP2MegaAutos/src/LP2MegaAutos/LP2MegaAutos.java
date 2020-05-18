@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package LP2MegaAutos;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,6 +45,7 @@ import pe.com.megaautos.mysql.CuentaContableMySQL;
 import pe.com.megaautos.mysql.EmpresaMySQL;
 import pe.com.megaautos.mysql.OrdenTrabajoMySQL;
 import pe.com.megaautos.mysql.UsuarioMySQL;
+import pe.com.megaautos.config.DBDataSource;
 /**
  *
  * @author Jose
@@ -51,20 +55,27 @@ public class LP2MegaAutos {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ParseException {
-        // TODO code application logic here
-        //Vehiculo vehiculo= new Vehiculo("");
-        /*ArrayList<Vehiculo> vehiculos =
-                new ArrayList<>();
+    public static void main(String[] args){
         
-        VehiculoDAO daoVehiculo = 
-                new VehiculoMySQL();
+        try{
+            Connection con = DBDataSource.getConnection();
+            Statement st = con.createStatement();
+            String sql = "SELECT * FROM USUARIO";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                int id = rs.getInt("ID_USUARIO");
+                String nom = rs.getString("NOMBRE")+"\t";
+                String correo = rs.getString("CORREO")+"\t";
+                String pwd = rs.getString("PASSWRD");
+                System.out.println(id+"\t" + nom  + correo + pwd);
+            }                   
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
         
-        daoVehiculo.insertar(vehiculo);
-        vehiculos = daoVehiculo.listar();
         
-        */
-        
+        /* PRUEBAS SQL
         //Prueba Driver
 //        Driver dr = new Driver(1/10);
 //        Driver dr2 = new Driver(2/5);
@@ -221,5 +232,6 @@ public class LP2MegaAutos {
 //        cps = daoComprobantePago.listar();
 //        for(ComprobantePago cp : cps)
 //            System.out.println(cp.getNumeroComprobante() + " " + cp.getTipoComprobante() + " " + cp.getOrdenTrabajo().getNumeroOrden());        
+*/
     }
 }

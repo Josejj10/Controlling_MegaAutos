@@ -1,5 +1,5 @@
 ﻿using ShadowPanel;
-namespace TA_MegaAutos
+namespace LP2MegaAutos
 {
     partial class Login_Screen
     {
@@ -80,7 +80,7 @@ namespace TA_MegaAutos
             // 
             // boton_minimizar
             // 
-            this.boton_minimizar.BackgroundImage = global::TA_MegaAutos.Properties.Resources.boton_minimizar;
+            this.boton_minimizar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_minimizar;
             this.boton_minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.boton_minimizar.FlatAppearance.BorderSize = 0;
             this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
@@ -98,7 +98,7 @@ namespace TA_MegaAutos
             // boton_cerrar
             // 
             this.boton_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
-            this.boton_cerrar.BackgroundImage = global::TA_MegaAutos.Properties.Resources.boton_cerrar;
+            this.boton_cerrar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_cerrar;
             this.boton_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.boton_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.boton_cerrar.FlatAppearance.BorderSize = 0;
@@ -134,7 +134,7 @@ namespace TA_MegaAutos
             // panel_background
             // 
             this.panel_background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.panel_background.BackgroundImage = global::TA_MegaAutos.Properties.Resources.background_login;
+            this.panel_background.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_login;
             this.panel_background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_background.Controls.Add(this.boton_olvido_password);
             this.panel_background.Controls.Add(this.panel_toggle_nocturno);
@@ -159,7 +159,7 @@ namespace TA_MegaAutos
             this.boton_olvido_password.AutoSize = true;
             this.boton_olvido_password.Cursor = System.Windows.Forms.Cursors.Hand;
             this.boton_olvido_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_olvido_password.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.boton_olvido_password.Font = new System.Drawing.Font("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.boton_olvido_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.boton_olvido_password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.boton_olvido_password.Location = new System.Drawing.Point(112, 409);
@@ -168,10 +168,14 @@ namespace TA_MegaAutos
             this.boton_olvido_password.TabIndex = 5;
             this.boton_olvido_password.Text = "Olvidé mi contraseña";
             this.boton_olvido_password.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.boton_olvido_password.MouseDown += new System.Windows.Forms.MouseEventHandler(this.boton_olvido_password_MouseDown);
+            this.boton_olvido_password.MouseEnter += new System.EventHandler(this.boton_olvido_password_MouseEnter);
+            this.boton_olvido_password.MouseLeave += new System.EventHandler(this.boton_olvido_password_MouseLeave);
+            this.boton_olvido_password.MouseUp += new System.Windows.Forms.MouseEventHandler(this.boton_olvido_password_MouseUp);
             // 
             // panel_toggle_nocturno
             // 
-            this.panel_toggle_nocturno.BackgroundImage = global::TA_MegaAutos.Properties.Resources.toggle_white;
+            this.panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_white;
             this.panel_toggle_nocturno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_toggle_nocturno.Controls.Add(this.boton_toggle_nocturno);
             this.panel_toggle_nocturno.Location = new System.Drawing.Point(23, 448);
@@ -181,7 +185,7 @@ namespace TA_MegaAutos
             // 
             // boton_toggle_nocturno
             // 
-            this.boton_toggle_nocturno.BackgroundImage = global::TA_MegaAutos.Properties.Resources.toggle_modo_nocturno_desactivado;
+            this.boton_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_desactivado;
             this.boton_toggle_nocturno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.boton_toggle_nocturno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.boton_toggle_nocturno.FlatAppearance.BorderSize = 0;
@@ -221,6 +225,7 @@ namespace TA_MegaAutos
             this.boton_acceder.TabIndex = 0;
             this.boton_acceder.Text = "Acceder";
             this.boton_acceder.UseVisualStyleBackColor = false;
+            this.boton_acceder.Click += new System.EventHandler(this.boton_acceder_Click);
             // 
             // panel_seleccionado_correo
             // 
@@ -304,7 +309,7 @@ namespace TA_MegaAutos
             // boton_ver_password
             // 
             this.boton_ver_password.BackColor = System.Drawing.Color.Transparent;
-            this.boton_ver_password.BackgroundImage = global::TA_MegaAutos.Properties.Resources.boton_see_password;
+            this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
             this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.boton_ver_password.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.boton_ver_password.FlatAppearance.BorderSize = 0;
@@ -413,11 +418,10 @@ namespace TA_MegaAutos
             this.titulo_login.Tag = "titulo";
             this.titulo_login.Text = "MegaAutos";
             this.titulo_login.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.titulo_login.Paint += new System.Windows.Forms.PaintEventHandler(this.titulo_login_Paint);
             // 
             // panel_logo_empresa
             // 
-            this.panel_logo_empresa.BackgroundImage = global::TA_MegaAutos.Properties.Resources.logo_megaautos;
+            this.panel_logo_empresa.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
             this.panel_logo_empresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel_logo_empresa.Location = new System.Drawing.Point(14, 11);
             this.panel_logo_empresa.Name = "panel_logo_empresa";
@@ -472,7 +476,6 @@ namespace TA_MegaAutos
         private System.Windows.Forms.Label label_password;
         private System.Windows.Forms.Panel panel_seleccionado_correo;
         private System.Windows.Forms.Panel panel_seleccionado_password;
-        private ShadowPanel.ShadowPanelRight shadowPanel1;
         private ShadowPanel.ShadowPanelRight panel_password;
         private ShadowPanel.ShadowPanelRight panel_correo;
         private ShadowPanelRight panel_acceder;

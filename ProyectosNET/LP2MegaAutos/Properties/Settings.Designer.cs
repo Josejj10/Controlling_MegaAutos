@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TA_MegaAutos.Properties
+namespace LP2MegaAutos.Properties
 {
 
 

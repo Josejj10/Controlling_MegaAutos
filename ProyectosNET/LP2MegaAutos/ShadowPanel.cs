@@ -29,11 +29,11 @@ namespace ShadowPanel
         private int shadowMargin = 2;
 
         // static for good perfomance 
-        static Image shadowDownRight = global::TA_MegaAutos.Properties.Resources.tshadowdownright;
-        static Image shadowDownLeft = global::TA_MegaAutos.Properties.Resources.tshadowdownleft;
-        static Image shadowDown= global::TA_MegaAutos.Properties.Resources.tshadowdown;
-        static Image shadowRight= global::TA_MegaAutos.Properties.Resources.tshadowright;
-        static Image shadowTopRight= global::TA_MegaAutos.Properties.Resources.tshadowtopright;
+        static Image shadowDownRight = global::LP2MegaAutos.Properties.Resources.tshadowdownright;
+        static Image shadowDownLeft = global::LP2MegaAutos.Properties.Resources.tshadowdownleft;
+        static Image shadowDown= global::LP2MegaAutos.Properties.Resources.tshadowdown;
+        static Image shadowRight= global::LP2MegaAutos.Properties.Resources.tshadowright;
+        static Image shadowTopRight= global::LP2MegaAutos.Properties.Resources.tshadowtopright;
 
         public ShadowPanelRight()
         {

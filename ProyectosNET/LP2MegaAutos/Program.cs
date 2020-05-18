@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TA_MegaAutos
+namespace LP2MegaAutos
 {
     static class Program
     {

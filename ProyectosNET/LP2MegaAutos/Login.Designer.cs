@@ -35,8 +35,8 @@ namespace LP2MegaAutos
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.title_bar_2 = new System.Windows.Forms.Panel();
             this.reloj_dark = new System.Windows.Forms.Timer(this.components);
-            this.panel_background = new System.Windows.Forms.Panel();
-            this.boton_olvido_password = new System.Windows.Forms.Label();
+            this.z = new System.Windows.Forms.Panel();
+            this.boton_olvido_password = new LP2MegaAutos.CustomControls.ClickableText();
             this.panel_toggle_nocturno = new System.Windows.Forms.Panel();
             this.boton_toggle_nocturno = new System.Windows.Forms.Button();
             this.panel_acceder = new ShadowPanel.ShadowPanelRight();
@@ -56,7 +56,7 @@ namespace LP2MegaAutos
             this.titulo_login = new System.Windows.Forms.Label();
             this.panel_logo_empresa = new System.Windows.Forms.Panel();
             this.title_bar.SuspendLayout();
-            this.panel_background.SuspendLayout();
+            this.z.SuspendLayout();
             this.panel_toggle_nocturno.SuspendLayout();
             this.panel_acceder.SuspendLayout();
             this.panel_correo.SuspendLayout();
@@ -65,7 +65,7 @@ namespace LP2MegaAutos
             // 
             // title_bar
             // 
-            this.title_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.title_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.title_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.title_bar.Controls.Add(this.boton_minimizar);
             this.title_bar.Controls.Add(this.boton_cerrar);
@@ -97,15 +97,15 @@ namespace LP2MegaAutos
             // 
             // boton_cerrar
             // 
-            this.boton_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.boton_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.boton_cerrar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_cerrar;
             this.boton_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.boton_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.boton_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.boton_cerrar.FlatAppearance.BorderSize = 0;
             this.boton_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_cerrar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
             this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
             this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
             this.boton_cerrar.Name = "boton_cerrar";
@@ -131,50 +131,48 @@ namespace LP2MegaAutos
             this.reloj_dark.Interval = 25;
             this.reloj_dark.Tick += new System.EventHandler(this.reloj_dark_Tick);
             // 
-            // panel_background
+            // z
             // 
-            this.panel_background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.panel_background.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_login;
-            this.panel_background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_background.Controls.Add(this.boton_olvido_password);
-            this.panel_background.Controls.Add(this.panel_toggle_nocturno);
-            this.panel_background.Controls.Add(this.panel_acceder);
-            this.panel_background.Controls.Add(this.panel_seleccionado_correo);
-            this.panel_background.Controls.Add(this.panel_correo);
-            this.panel_background.Controls.Add(this.panel_seleccionado_password);
-            this.panel_background.Controls.Add(this.panel_password);
-            this.panel_background.Controls.Add(this.label_texto_amarillo);
-            this.panel_background.Controls.Add(this.subtitulo_login);
-            this.panel_background.Controls.Add(this.label_texto_gris);
-            this.panel_background.Controls.Add(this.titulo_login);
-            this.panel_background.Controls.Add(this.panel_logo_empresa);
-            this.panel_background.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel_background.Location = new System.Drawing.Point(0, 32);
-            this.panel_background.Name = "panel_background";
-            this.panel_background.Size = new System.Drawing.Size(832, 520);
-            this.panel_background.TabIndex = 1;
+            this.z.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.z.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_login;
+            this.z.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.z.Controls.Add(this.boton_olvido_password);
+            this.z.Controls.Add(this.panel_toggle_nocturno);
+            this.z.Controls.Add(this.panel_acceder);
+            this.z.Controls.Add(this.panel_seleccionado_correo);
+            this.z.Controls.Add(this.panel_correo);
+            this.z.Controls.Add(this.panel_seleccionado_password);
+            this.z.Controls.Add(this.panel_password);
+            this.z.Controls.Add(this.label_texto_amarillo);
+            this.z.Controls.Add(this.subtitulo_login);
+            this.z.Controls.Add(this.label_texto_gris);
+            this.z.Controls.Add(this.titulo_login);
+            this.z.Controls.Add(this.panel_logo_empresa);
+            this.z.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.z.Location = new System.Drawing.Point(0, 32);
+            this.z.Name = "z";
+            this.z.Size = new System.Drawing.Size(832, 520);
+            this.z.TabIndex = 1;
             // 
             // boton_olvido_password
             // 
-            this.boton_olvido_password.AutoSize = true;
+            this.boton_olvido_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.boton_olvido_password.Cursor = System.Windows.Forms.Cursors.Hand;
             this.boton_olvido_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_olvido_password.Font = new System.Drawing.Font("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.boton_olvido_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.boton_olvido_password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.boton_olvido_password.Location = new System.Drawing.Point(112, 409);
+            this.boton_olvido_password.Location = new System.Drawing.Point(112, 410);
             this.boton_olvido_password.Name = "boton_olvido_password";
             this.boton_olvido_password.Size = new System.Drawing.Size(141, 17);
-            this.boton_olvido_password.TabIndex = 5;
+            this.boton_olvido_password.TabIndex = 6;
             this.boton_olvido_password.Text = "Olvidé mi contraseña";
             this.boton_olvido_password.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.boton_olvido_password.MouseDown += new System.Windows.Forms.MouseEventHandler(this.boton_olvido_password_MouseDown);
-            this.boton_olvido_password.MouseEnter += new System.EventHandler(this.boton_olvido_password_MouseEnter);
-            this.boton_olvido_password.MouseLeave += new System.EventHandler(this.boton_olvido_password_MouseLeave);
-            this.boton_olvido_password.MouseUp += new System.Windows.Forms.MouseEventHandler(this.boton_olvido_password_MouseUp);
+            this.boton_olvido_password.Click += new System.EventHandler(this.boton_olvido_password_Click);
             // 
             // panel_toggle_nocturno
             // 
+            this.panel_toggle_nocturno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_white;
             this.panel_toggle_nocturno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_toggle_nocturno.Controls.Add(this.boton_toggle_nocturno);
@@ -239,6 +237,7 @@ namespace LP2MegaAutos
             // 
             // panel_correo
             // 
+            this.panel_correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel_correo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
             this.panel_correo.Controls.Add(this.textBox_correo);
             this.panel_correo.Controls.Add(this.label_correo);
@@ -257,12 +256,12 @@ namespace LP2MegaAutos
             this.textBox_correo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox_correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.textBox_correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_correo.Font = new System.Drawing.Font("Montserrat", 10.5F, System.Drawing.FontStyle.Bold);
+            this.textBox_correo.Font = new System.Drawing.Font("Montserrat SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
             this.textBox_correo.Location = new System.Drawing.Point(18, 27);
             this.textBox_correo.MinimumSize = new System.Drawing.Size(232, 22);
             this.textBox_correo.Name = "textBox_correo";
-            this.textBox_correo.Size = new System.Drawing.Size(266, 18);
+            this.textBox_correo.Size = new System.Drawing.Size(266, 19);
             this.textBox_correo.TabIndex = 1;
             this.textBox_correo.Tag = "form";
             this.textBox_correo.Click += new System.EventHandler(this.textBox_correo_Click);
@@ -273,7 +272,7 @@ namespace LP2MegaAutos
             this.label_correo.AutoSize = true;
             this.label_correo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_correo.Font = new System.Drawing.Font("Montserrat SemiBold", 11F, System.Drawing.FontStyle.Bold);
-            this.label_correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
+            this.label_correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.label_correo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_correo.Location = new System.Drawing.Point(14, 5);
             this.label_correo.Name = "label_correo";
@@ -295,6 +294,7 @@ namespace LP2MegaAutos
             // 
             // panel_password
             // 
+            this.panel_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel_password.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
             this.panel_password.Controls.Add(this.boton_ver_password);
             this.panel_password.Controls.Add(this.textBox_password);
@@ -311,6 +311,7 @@ namespace LP2MegaAutos
             this.boton_ver_password.BackColor = System.Drawing.Color.Transparent;
             this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
             this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_ver_password.Cursor = System.Windows.Forms.Cursors.Hand;
             this.boton_ver_password.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.boton_ver_password.FlatAppearance.BorderSize = 0;
             this.boton_ver_password.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
@@ -333,13 +334,13 @@ namespace LP2MegaAutos
             this.textBox_password.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.textBox_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_password.Font = new System.Drawing.Font("Montserrat", 10.5F, System.Drawing.FontStyle.Bold);
+            this.textBox_password.Font = new System.Drawing.Font("Montserrat SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
             this.textBox_password.Location = new System.Drawing.Point(18, 25);
             this.textBox_password.MinimumSize = new System.Drawing.Size(232, 22);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.PasswordChar = '•';
-            this.textBox_password.Size = new System.Drawing.Size(232, 18);
+            this.textBox_password.Size = new System.Drawing.Size(232, 19);
             this.textBox_password.TabIndex = 2;
             this.textBox_password.Tag = "form";
             this.textBox_password.Click += new System.EventHandler(this.textBox_password_Click);
@@ -350,7 +351,7 @@ namespace LP2MegaAutos
             this.label_password.AutoSize = true;
             this.label_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_password.Font = new System.Drawing.Font("Montserrat SemiBold", 11F, System.Drawing.FontStyle.Bold);
-            this.label_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
+            this.label_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.label_password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_password.Location = new System.Drawing.Point(14, 3);
             this.label_password.Name = "label_password";
@@ -363,6 +364,7 @@ namespace LP2MegaAutos
             // label_texto_amarillo
             // 
             this.label_texto_amarillo.AutoSize = true;
+            this.label_texto_amarillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.label_texto_amarillo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_texto_amarillo.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
             this.label_texto_amarillo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
@@ -377,9 +379,10 @@ namespace LP2MegaAutos
             // subtitulo_login
             // 
             this.subtitulo_login.AutoSize = true;
+            this.subtitulo_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.subtitulo_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subtitulo_login.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
-            this.subtitulo_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
+            this.subtitulo_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.subtitulo_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.subtitulo_login.Location = new System.Drawing.Point(35, 128);
             this.subtitulo_login.Name = "subtitulo_login";
@@ -392,9 +395,10 @@ namespace LP2MegaAutos
             // label_texto_gris
             // 
             this.label_texto_gris.AutoSize = true;
+            this.label_texto_gris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.label_texto_gris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_texto_gris.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label_texto_gris.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
+            this.label_texto_gris.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.label_texto_gris.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label_texto_gris.Location = new System.Drawing.Point(36, 178);
             this.label_texto_gris.Name = "label_texto_gris";
@@ -407,13 +411,14 @@ namespace LP2MegaAutos
             // titulo_login
             // 
             this.titulo_login.AutoSize = true;
+            this.titulo_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.titulo_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titulo_login.Font = new System.Drawing.Font("Montserrat", 22F, System.Drawing.FontStyle.Bold);
-            this.titulo_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.titulo_login.Font = new System.Drawing.Font("League Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.titulo_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.titulo_login.Location = new System.Drawing.Point(33, 87);
             this.titulo_login.Name = "titulo_login";
-            this.titulo_login.Size = new System.Drawing.Size(198, 41);
+            this.titulo_login.Size = new System.Drawing.Size(112, 35);
             this.titulo_login.TabIndex = 0;
             this.titulo_login.Tag = "titulo";
             this.titulo_login.Text = "MegaAutos";
@@ -421,6 +426,7 @@ namespace LP2MegaAutos
             // 
             // panel_logo_empresa
             // 
+            this.panel_logo_empresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel_logo_empresa.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
             this.panel_logo_empresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel_logo_empresa.Location = new System.Drawing.Point(14, 11);
@@ -437,7 +443,7 @@ namespace LP2MegaAutos
             this.ControlBox = false;
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
-            this.Controls.Add(this.panel_background);
+            this.Controls.Add(this.z);
             this.DisplayHeader = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -448,8 +454,8 @@ namespace LP2MegaAutos
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.title_bar.ResumeLayout(false);
-            this.panel_background.ResumeLayout(false);
-            this.panel_background.PerformLayout();
+            this.z.ResumeLayout(false);
+            this.z.PerformLayout();
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.panel_acceder.ResumeLayout(false);
             this.panel_correo.ResumeLayout(false);
@@ -466,7 +472,7 @@ namespace LP2MegaAutos
         private System.Windows.Forms.Button boton_cerrar;
         private System.Windows.Forms.Button boton_minimizar;
         private System.Windows.Forms.Panel title_bar_2;
-        private System.Windows.Forms.Panel panel_background;
+        private System.Windows.Forms.Panel z;
         private System.Windows.Forms.Panel panel_logo_empresa;
         private System.Windows.Forms.Label titulo_login;
         private System.Windows.Forms.Label subtitulo_login;
@@ -486,7 +492,7 @@ namespace LP2MegaAutos
         private System.Windows.Forms.Panel panel_toggle_nocturno;
         private System.Windows.Forms.Button boton_toggle_nocturno;
         private System.Windows.Forms.Timer reloj_dark;
-        private System.Windows.Forms.Label boton_olvido_password;
+        private LP2MegaAutos.CustomControls.ClickableText boton_olvido_password;
     }
 }
 

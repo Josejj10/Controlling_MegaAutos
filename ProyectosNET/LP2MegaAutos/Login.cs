@@ -4,20 +4,44 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework;
 using ShadowPanel;
+using System.Drawing.Text;
+using System.Reflection;
+using System.IO;
+using System.Runtime.InteropServices;
+
 
 namespace LP2MegaAutos
 {
     public partial class Login_Screen : MetroFramework.Forms.MetroForm
     {
+        // Embed font en la app
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
+            IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
+        private PrivateFontCollection fonts = new PrivateFontCollection();
+        Font mb;
+
+
         public Login_Screen()
         {
             InitializeComponent();
             textBox_correo.Select();
+            // Embed Montserrat Bold
+            byte[] fontData = Properties.Resources.Montserrat_Regular;
+            IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
+            System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
+            uint dummy = 0;
+            fonts.AddMemoryFont(fontPtr, Properties.Resources.Montserrat_Regular.Length);
+            AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.Montserrat_Regular.Length, IntPtr.Zero, ref dummy);
+            System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
+            mb = new Font(fonts.Families[0], 22, FontStyle.Bold);
+            this.titulo_login.Font = mb;
+
         }
 
         #region title_bar
@@ -152,11 +176,24 @@ namespace LP2MegaAutos
 
         #endregion seleccion_textbox
 
+        #region Clickable Text
+
+        #region olvido_password
+        
+        void boton_olvido_password_Click(object sender, EventArgs e)
+        {
+            // TODO funcion de olvido Password
+            MessageBox.Show("¿Olvidaste tu Contraseña?");
+        }
+        #endregion olvido_password
+
+        #endregion Clickable Text
+
         #region botones
 
         #region see_password
         // Variables a usar
-        private bool mouseDownB, password_seen = false;
+        private bool password_seen = false;
 
 
         // Ver password
@@ -179,52 +216,16 @@ namespace LP2MegaAutos
         }
         #endregion see_password
 
-        #region olvido_password
-
-        // Maneja el click de Olvido password 
-        // TODO GENERALIZARLO EN UN PAQUETE PARA TODOS LOS BOTONES
-        // RECIBIENDO PARAMETROS DE COLORES
-        // Y DE LA FUNCION QUE SE QUIERA CREAR CUANDO SE DA CLICK
-        private void boton_olvido_password_MouseEnter(object sender, EventArgs e)
-        {
-
-            boton_olvido_password.ForeColor = Color.FromArgb(191, 90, 108);
-        }
-
-        private void boton_olvido_password_MouseLeave(object sender, EventArgs e)
-        {
-            if (!mouseDownB)
-            {
-                boton_olvido_password.ForeColor = Color.FromArgb(227, 65, 94);
-            }
-        }
-
-        private void boton_olvido_password_MouseDown(object sender, MouseEventArgs e)
-        {
-            boton_olvido_password.ForeColor = Color.FromArgb(181, 51, 74);
-            mouseDownB = true;
-        }
-
-        private void boton_olvido_password_MouseUp(object sender, MouseEventArgs e)
-        {
-            boton_olvido_password.ForeColor = Color.FromArgb(227, 65, 94);
-            // TODO Ir a pagina de recuperacion de password
-            label_correo.Text = "Click";
-            mouseDownB = false;
-        }
-
-        #endregion olvido_password
-
 
         private void boton_acceder_Click(object sender, EventArgs e)
         {
-
+            // TODO 
         }
 
         #endregion botones
         #endregion inputs
 
-        #region dark_mode
+        #region Dark Mode
 
         // Variables a usar
         private bool dark_mode = false; // false = Modo Nocturno desactivado por default
@@ -305,10 +306,11 @@ namespace LP2MegaAutos
             }
         }
 
+
         private void activar_dark_mode()
         {
             // Casos particulares
-            panel_background.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_nocturno;
+            z.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_nocturno;
             boton_ver_password.FlatAppearance.BorderColor = boton_ver_password.FlatAppearance.MouseDownBackColor
                 = boton_ver_password.FlatAppearance.MouseOverBackColor = Color.FromArgb(67, 71, 76);
             panel_correo.PanelColor = Color.FromArgb(67, 71, 76);
@@ -316,6 +318,8 @@ namespace LP2MegaAutos
             // Demas
             iterar_activar_dark(this);
         }
+
+     
 
         private void iterar_activar_dark(Control parent)
         {
@@ -358,7 +362,7 @@ namespace LP2MegaAutos
         private void desactivar_dark_mode()
         {
             // Casos particulares
-            panel_background.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_login;
+            z.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_login;
             boton_ver_password.FlatAppearance.BorderColor = boton_ver_password.FlatAppearance.MouseDownBackColor
                 = boton_ver_password.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 255);
             panel_correo.PanelColor = Color.FromArgb(255, 255, 255);
@@ -408,6 +412,6 @@ namespace LP2MegaAutos
             }
         }
 
-        #endregion dark_mode
+        #endregion Dark Mode
     }
 }

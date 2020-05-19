@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,6 +70,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClickableText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClickableText.Designer.cs">
+      <DependentUpon>ClickableText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colores.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +102,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,76 +117,115 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boton_cerrar.png" />
+    <EmbeddedResource Include="Resources\boton_cerrar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boton_cerrar_hover.png" />
+    <EmbeddedResource Include="Resources\boton_cerrar_hover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boton_minimizar.png" />
+    <EmbeddedResource Include="Resources\boton_minimizar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boton_minimizar_hover.png" />
+    <EmbeddedResource Include="Resources\boton_minimizar_hover.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background_login.png" />
+    <EmbeddedResource Include="Resources\background_login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo_megaautos.png" />
+    <EmbeddedResource Include="Resources\Fonts\Lato_Black.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-BlackItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-BoldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-Heavy.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-HeavyItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato_Italic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-Light.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-LightItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-MediumItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-Semibold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-SemiboldItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-Thin.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Lato-ThinItalic.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-Black.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-BlackItalic.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-Bold.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat_BoldItalic.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraBold.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraBoldItalic.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-MediumItalic.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBold.otf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBoldItalic.otf" />
+    <EmbeddedResource Include="Resources\logo_megaautos.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tshadowdown.png" />
+    <EmbeddedResource Include="Resources\tshadowdown.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tshadowdownleft.png" />
+    <EmbeddedResource Include="Resources\tshadowdownleft.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tshadowdownright.png" />
+    <EmbeddedResource Include="Resources\tshadowdownright.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tshadowright.png" />
+    <EmbeddedResource Include="Resources\tshadowright.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tshadowtopright.png" />
+    <EmbeddedResource Include="Resources\tshadowtopright.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boton_see_password.png" />
+    <EmbeddedResource Include="Resources\boton_see_password.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\boton_unsee_password.png" />
+    <EmbeddedResource Include="Resources\boton_unsee_password.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\triangulo_miscelaneo.png" />
+    <EmbeddedResource Include="Resources\triangulo_miscelaneo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\moon %281%29.png" />
+    <EmbeddedResource Include="Resources\moon %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_black.png" />
+    <EmbeddedResource Include="Resources\toggle_black.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_modo_nocturno_desactivado.png" />
+    <EmbeddedResource Include="Resources\toggle_modo_nocturno_desactivado.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_white.png" />
+    <EmbeddedResource Include="Resources\toggle_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_modo_nocturno_activado1.png" />
+    <EmbeddedResource Include="Resources\toggle_modo_nocturno_activado1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_modo_nocturno_desactivado1.png" />
+    <EmbeddedResource Include="Resources\toggle_modo_nocturno_desactivado1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_modo_nocturno_activado2.png" />
+    <EmbeddedResource Include="Resources\toggle_modo_nocturno_activado2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_modo_nocturno_desactivado2.png" />
+    <EmbeddedResource Include="Resources\toggle_modo_nocturno_desactivado2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\toggle_modo_nocturno_activado.png" />
+    <EmbeddedResource Include="Resources\toggle_modo_nocturno_activado.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background_nocturno.png" />
+    <EmbeddedResource Include="Resources\background_nocturno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

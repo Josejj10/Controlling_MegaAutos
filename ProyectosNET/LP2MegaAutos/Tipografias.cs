@@ -21,6 +21,27 @@ using System.Globalization;
 // https://docs.microsoft.com/en-us/windows/win32/api/wingdi/nf-wingdi-removefontmemresourceex
 // Agradecido con el de arriba
 
+// Los fonts que en Properties.Resources hasta ahora son:
+/* Lato
+ * Lato Black
+ * Lato Light
+ * Lato Medium
+ * Lato Semibold
+ * Lato Thin
+ * Montserrat
+ * Montserrat Black
+ * Montserrat ExtraBold
+ * Montserrat Medium
+ * Montserrat SemiBold
+*/
+// Es decir, solo esos se pueden usar
+// Para llamar a un font, por ejemplo para el objeto titulo_login se realiza:
+// this.titulo_login.Font = Tipografias.GetFromHash("Montserrat", 10 ,FontStyle.Bold);
+
+// Para agregar un font se tiene que embeddear el archivo .otf, .ttf, etc y 
+// ponerle al comienzo del nombre del recurso "font"
+// de manera: fontMontserrat, o fontLato
+// Los recursos se pueden encontrar en Resources.resx en la solucion de Visual Studio
 
 namespace LP2MegaAutos
 {
@@ -31,9 +52,8 @@ namespace LP2MegaAutos
          * ====================================*/
         // Almacenara todos los fonts
         private static PrivateFontCollection fonts = new PrivateFontCollection();
-
-        // Almacenara todos los handlers
-        private static IntPtr[] handlers;
+        
+        // Mapeara los fonts para poder llamarlos por nombre
         private static Hashtable fontsHash = new Hashtable();
 
         /* ====================================
@@ -43,12 +63,8 @@ namespace LP2MegaAutos
 
         // Agregar un font incrustado
         [DllImport("gdi32.dll")]
-        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
-            IntPtr pdv, [In] ref uint pcFonts);
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
 
-        // Para cleanup de los fonts agregados por este metodo
-        [DllImport("gdi32.dll")]
-        internal static extern bool RemoveFontMemResourceEx(IntPtr fh);
 
         #region funciones
         /* ====================================
@@ -61,11 +77,9 @@ namespace LP2MegaAutos
         {
             /////  TODO Idea: ITERAR POR TODOS LOS RESOURCES QUE ACABAN EN TTF Y OTF PARA AGREGARLOS AL PRIVATE FONT COLLECTION
             ///     Y USAR UNA TABLA HASH (?) PARA LA FUNCION GETFONT
-            Font font;
             byte[] fontData;
             string nombre;
             uint dummy = 0;
-            int numeroFont; // Para agregarlo a la tabla hash
             IntPtr fontPtr = IntPtr.Zero;
             ResourceSet resourceSet = Properties.Resources.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
@@ -85,11 +99,8 @@ namespace LP2MegaAutos
                     // Unmanaged font 
                     // Porque GDI+ creara un objeto font para controles como RichTextBox
                     // Y este unmanaged font asegurara que GDI reconozca el nombre del font
-                    IntPtr handle = AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
-                    // El handle se guarda en una lista de handles para luego poder 
-                    // Llamar a la funcion RemoveFontMemResourceEx(handle)
-                    // TODO almacenar Handle en lista de handles
-
+                    AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
+                    
                     // Copiar los datos a fontData
                     Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
                     
@@ -98,18 +109,20 @@ namespace LP2MegaAutos
 
                     // Libera el IntPtr, en ambos casos
                     Marshal.FreeCoTaskMem(fontPtr);
-
-                    // Recibir el numeroFont para agregar a la tabla hash
-                    numeroFont = fonts.Families.Length;
-
-                    fontsHash.Add(nombre.Remove(0,4), numeroFont);
-                    Console.WriteLine("Agregado font: " + nombre.Remove(0, 4));
                 }
             }
-            // Buscar archivos que acaben en .otf o .ttf 
+
+            // Agregar a tabla hash
+            for (int i = 0; i < fonts.Families.Length;i++)
+            {
+                nombre = fonts.Families[i].Name;
+                fontsHash.Add(nombre, i);
+                Console.WriteLine("Agregado font: " + nombre);
+            }
+
         }
 
-        public static Font GetFromHash(String nombre, float size)
+        public static Font GetFromHash(String nombre, float size, FontStyle fs)
         {
             if (!fontsHash.ContainsKey(nombre))
             {
@@ -117,48 +130,11 @@ namespace LP2MegaAutos
                 return null;
             }
             int key = (int)fontsHash[nombre];
-            Font mb = new Font(fonts.Families[key], size, FontStyle.Bold);
-            return mb;
+            Font font = new Font(fonts.Families[key], size, fs);
+            return font;
         }
-
-        public static Font GetSpecialFont(float size)
-        {
-            // Inicializar el font y recibir la data de Resources
-            Font mb;
-            byte[] fontData = Properties.Resources.fontMontserrat_Bold;
-
-            
-            // A pointer to a variable that specifies the number of fonts installed.
-            uint dummy = 0;
-            
-            //A pointer to a font resource.
-            IntPtr fontPtr = Marshal.AllocCoTaskMem(fontData.Length);
-
-            // Unmanaged font 
-            // Porque GDI+ creara un objeto font para controles como RichTextBox
-            // Y este unmanaged font asegurara que GDI reconozca el nombre del font
-            IntPtr handle = AddFontMemResourceEx(fontPtr, (uint) fontData.Length, IntPtr.Zero, ref dummy);
-            // TODO almacenar handle en lista de handles
-            // El handle se guarda en una lista de handles para luego poder 
-            // Llamar a la funcion RemoveFontMemResourceEx(handle)
-
-            Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
-            
-            fonts.AddMemoryFont(fontPtr, fontData.Length);
-            
-            /////// AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.Montserrat_Bold.Length,
-            ////////IntPtr.Zero, ref dummy);
-            // En el otro no llama a esta funcion
-
-            Marshal.FreeCoTaskMem(fontPtr);
-            // Libera el IntPtr, en ambos casos
-
-            
-            mb = new Font(fonts.Families[0], size, FontStyle.Bold);
-            // En el otro hace lo mismo, pero revisa si font.Families.Length > 0
-
-            return mb;
-        }
+       
         #endregion funciones
+
     }
 }

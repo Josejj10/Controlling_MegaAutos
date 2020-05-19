@@ -16,6 +16,7 @@ namespace LP2MegaAutos
         [STAThread]
         static void Main()
         {
+            Tipografias.inicializarFonts();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login_Screen());

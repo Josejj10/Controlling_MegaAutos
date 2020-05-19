@@ -26,9 +26,8 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             textBox_correo.Select();
-            this.titulo_login.Font = Tipografias.GetSpecialFont(10);
-            Tipografias.inicializarFonts();
-            this.titulo_login.Font = Tipografias.GetFromHash("Montserrat_BoldItalic", 30);
+            //this.titulo_login.Font = Tipografias.GetSpecialFont(10);
+            this.titulo_login.Font = Tipografias.GetFromHash("Montserrat", 10 ,FontStyle.Bold);
         }
 
         #region title_bar

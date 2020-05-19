@@ -143,9 +143,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Black {
+        internal static byte[] fontLato_Black {
             get {
-                object obj = ResourceManager.GetObject("Lato_Black", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Black", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_BlackItalic {
+        internal static byte[] fontLato_BlackItalic {
             get {
-                object obj = ResourceManager.GetObject("Lato_BlackItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_BlackItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Bold {
+        internal static byte[] fontLato_Bold {
             get {
-                object obj = ResourceManager.GetObject("Lato_Bold", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Bold", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_BoldItalic {
+        internal static byte[] fontLato_BoldItalic {
             get {
-                object obj = ResourceManager.GetObject("Lato_BoldItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_BoldItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Heavy {
+        internal static byte[] fontLato_Heavy {
             get {
-                object obj = ResourceManager.GetObject("Lato_Heavy", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Heavy", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_HeavyItalic {
+        internal static byte[] fontLato_HeavyItalic {
             get {
-                object obj = ResourceManager.GetObject("Lato_HeavyItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_HeavyItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Italic {
+        internal static byte[] fontLato_Italic {
             get {
-                object obj = ResourceManager.GetObject("Lato_Italic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Italic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Light {
+        internal static byte[] fontLato_Light {
             get {
-                object obj = ResourceManager.GetObject("Lato_Light", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Light", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_LightItalic {
+        internal static byte[] fontLato_LightItalic {
             get {
-                object obj = ResourceManager.GetObject("Lato_LightItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_LightItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Medium {
+        internal static byte[] fontLato_Medium {
             get {
-                object obj = ResourceManager.GetObject("Lato_Medium", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Medium", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_MediumItalic {
+        internal static byte[] fontLato_MediumItalic {
             get {
-                object obj = ResourceManager.GetObject("Lato_MediumItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_MediumItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Regular {
+        internal static byte[] fontLato_Regular {
             get {
-                object obj = ResourceManager.GetObject("Lato_Regular", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Regular", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -263,9 +263,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Semibold {
+        internal static byte[] fontLato_Semibold {
             get {
-                object obj = ResourceManager.GetObject("Lato_Semibold", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Semibold", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -273,9 +273,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_SemiboldItalic {
+        internal static byte[] fontLato_SemiboldItalic {
             get {
-                object obj = ResourceManager.GetObject("Lato_SemiboldItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_SemiboldItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -283,9 +283,9 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_Thin {
+        internal static byte[] fontLato_Thin {
             get {
-                object obj = ResourceManager.GetObject("Lato_Thin", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_Thin", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -293,9 +293,119 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Lato_ThinItalic {
+        internal static byte[] fontLato_ThinItalic {
             get {
-                object obj = ResourceManager.GetObject("Lato_ThinItalic", resourceCulture);
+                object obj = ResourceManager.GetObject("fontLato_ThinItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_Black {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_Black", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_BlackItalic {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_BlackItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_Bold {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_BoldItalic {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_BoldItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_ExtraBold {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_ExtraBold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_ExtraBoldItalic {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_ExtraBoldItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_Medium {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_Medium", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_MediumItalic {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_MediumItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_Regular {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_SemiBold {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_SemiBold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontMontserrat_SemiBoldItalic {
+            get {
+                object obj = ResourceManager.GetObject("fontMontserrat_SemiBoldItalic", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -307,116 +417,6 @@ namespace LP2MegaAutos.Properties {
             get {
                 object obj = ResourceManager.GetObject("logo_megaautos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_Black {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_Black", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_BlackItalic {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_BlackItalic", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_Bold {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_Bold", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_BoldItalic {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_BoldItalic", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_ExtraBold {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_ExtraBold", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_ExtraBoldItalic {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_ExtraBoldItalic", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_Medium {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_Medium", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_MediumItalic {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_MediumItalic", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_Regular {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_Regular", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_SemiBold {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_SemiBold", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Montserrat_SemiBoldItalic {
-            get {
-                object obj = ResourceManager.GetObject("Montserrat_SemiBoldItalic", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         

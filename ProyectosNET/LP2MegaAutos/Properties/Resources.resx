@@ -175,85 +175,85 @@
   <data name="toggle_modo_nocturno_activado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle_modo_nocturno_activado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lato_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato_Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fontLato_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fonts\Lato-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-BlackItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-BoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Heavy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Heavy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Heavy.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_HeavyItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_HeavyItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-HeavyItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato_Italic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Light.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Medium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_MediumItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_MediumItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-MediumItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Semibold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Semibold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Semibold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_SemiboldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_SemiboldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-SemiboldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_Thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_Thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Thin.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Lato_ThinItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontLato_ThinItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-ThinItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Black.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-BlackItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\MB.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fontMontserrat_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fonts\Montserrat-Bold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat_BoldItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_ExtraBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_ExtraBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-ExtraBold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_ExtraBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_ExtraBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-ExtraBoldItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Medium.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_MediumItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_MediumItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-MediumItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Regular.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_SemiBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_SemiBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-SemiBold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Montserrat_SemiBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fontMontserrat_SemiBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-SemiBoldItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -167,7 +167,7 @@ namespace LP2MegaAutos
             this.boton_olvido_password.Size = new System.Drawing.Size(141, 17);
             this.boton_olvido_password.TabIndex = 6;
             this.boton_olvido_password.Text = "Olvidé mi contraseña";
-            this.boton_olvido_password.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.boton_olvido_password.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.boton_olvido_password.Click += new System.EventHandler(this.boton_olvido_password_Click);
             // 
             // panel_toggle_nocturno
@@ -256,7 +256,7 @@ namespace LP2MegaAutos
             this.textBox_correo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox_correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.textBox_correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_correo.Font = new System.Drawing.Font("Montserrat SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_correo.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
             this.textBox_correo.Location = new System.Drawing.Point(18, 27);
             this.textBox_correo.MinimumSize = new System.Drawing.Size(232, 22);
@@ -334,7 +334,7 @@ namespace LP2MegaAutos
             this.textBox_password.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.textBox_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_password.Font = new System.Drawing.Font("Montserrat SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_password.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(71)))), ((int)(((byte)(76)))));
             this.textBox_password.Location = new System.Drawing.Point(18, 25);
             this.textBox_password.MinimumSize = new System.Drawing.Size(232, 22);
@@ -413,16 +413,17 @@ namespace LP2MegaAutos
             this.titulo_login.AutoSize = true;
             this.titulo_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.titulo_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titulo_login.Font = new System.Drawing.Font("League Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titulo_login.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titulo_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.titulo_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.titulo_login.Location = new System.Drawing.Point(33, 87);
             this.titulo_login.Name = "titulo_login";
-            this.titulo_login.Size = new System.Drawing.Size(112, 35);
+            this.titulo_login.Size = new System.Drawing.Size(190, 40);
             this.titulo_login.TabIndex = 0;
             this.titulo_login.Tag = "titulo";
             this.titulo_login.Text = "MegaAutos";
             this.titulo_login.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.titulo_login.Click += new System.EventHandler(this.titulo_login_Click);
             // 
             // panel_logo_empresa
             // 

@@ -19,29 +19,16 @@ namespace LP2MegaAutos
 {
     public partial class Login_Screen : MetroFramework.Forms.MetroForm
     {
-        // Embed font en la app
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
-            IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
-        private PrivateFontCollection fonts = new PrivateFontCollection();
-        Font mb;
+       
 
 
         public Login_Screen()
         {
             InitializeComponent();
             textBox_correo.Select();
-            // Embed Montserrat Bold
-            byte[] fontData = Properties.Resources.Montserrat_Regular;
-            IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
-            System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
-            uint dummy = 0;
-            fonts.AddMemoryFont(fontPtr, Properties.Resources.Montserrat_Regular.Length);
-            AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.Montserrat_Regular.Length, IntPtr.Zero, ref dummy);
-            System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
-            mb = new Font(fonts.Families[0], 22, FontStyle.Bold);
-            this.titulo_login.Font = mb;
-
+            this.titulo_login.Font = Tipografias.GetSpecialFont(10);
+            Tipografias.inicializarFonts();
+            this.titulo_login.Font = Tipografias.GetFromHash("Montserrat_BoldItalic", 30);
         }
 
         #region title_bar
@@ -319,7 +306,10 @@ namespace LP2MegaAutos
             iterar_activar_dark(this);
         }
 
-     
+        private void titulo_login_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void iterar_activar_dark(Control parent)
         {

@@ -20,14 +20,11 @@ namespace LP2MegaAutos
     public partial class Login_Screen : MetroFramework.Forms.MetroForm
     {
        
-
-
         public Login_Screen()
         {
             InitializeComponent();
             textBox_correo.Select();
-            //this.titulo_login.Font = Tipografias.GetSpecialFont(10);
-            this.titulo_login.Font = Tipografias.GetFromHash("Montserrat", 10 ,FontStyle.Bold);
+            this.titulo_login.Font = Tipografias.GetFromHash("Lato Thin",22 ,FontStyle.Bold);
         }
 
         #region title_bar
@@ -205,12 +202,18 @@ namespace LP2MegaAutos
 
         private void boton_acceder_Click(object sender, EventArgs e)
         {
-            // TODO 
+            // TODO boton acceder click
         }
 
         #endregion botones
         #endregion inputs
 
+        // TODO Evaluar si es necesario agregar mas Tags para Dark Mode 
+        // O sino agregar un List<string> para cada objeto desde los inicializadores
+        // Y leer de esa lista los tags
+        // Tags que se me ocurren: Nombres de los colores de Dark y White Mode (Contrast, etc.)
+        //                         Los que se estan usando actualmente: titulo, barra_login, etc.
+        // Tomar en cuenta también que al texto se le cambia forecolor y a los paneles el BackColor
         #region Dark Mode
 
         // Variables a usar

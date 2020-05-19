@@ -75,8 +75,6 @@ namespace LP2MegaAutos
         // Segun nombre
         public static void inicializarFonts()
         {
-            /////  TODO Idea: ITERAR POR TODOS LOS RESOURCES QUE ACABAN EN TTF Y OTF PARA AGREGARLOS AL PRIVATE FONT COLLECTION
-            ///     Y USAR UNA TABLA HASH (?) PARA LA FUNCION GETFONT
             byte[] fontData;
             string nombre;
             uint dummy = 0;
@@ -89,23 +87,23 @@ namespace LP2MegaAutos
                 //object resource = entry.Value;
                 nombre = entry.Key.ToString();
 
-                if (nombre.StartsWith("font")) { 
+                if (nombre.StartsWith("font")) {
                     // Inicializar el font
                     fontData = (byte[])entry.Value;
-                    
+                    //fontData = LP2MegaAutos.Properties.Resources.fontLato_Bold;
                     // Apuntar fontPtr al inicio
                     fontPtr = Marshal.AllocCoTaskMem(fontData.Length);
 
-                    // Unmanaged font 
-                    // Porque GDI+ creara un objeto font para controles como RichTextBox
-                    // Y este unmanaged font asegurara que GDI reconozca el nombre del font
-                    AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
-                    
                     // Copiar los datos a fontData
                     Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
                     
                     // Agregar font a lista de fonts
                     fonts.AddMemoryFont(fontPtr, fontData.Length);
+                    
+                    // Unmanaged font 
+                    // Porque GDI+ creara un objeto font para controles como RichTextBox
+                    // Y este unmanaged font asegurara que GDI reconozca el nombre del font
+                    AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
 
                     // Libera el IntPtr, en ambos casos
                     Marshal.FreeCoTaskMem(fontPtr);

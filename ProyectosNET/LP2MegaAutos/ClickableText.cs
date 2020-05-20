@@ -18,7 +18,7 @@ namespace LP2MegaAutos.CustomControls
             this.ForeColor = colorDefault;
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Font = new System.Drawing.Font("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.Font = Tipografias.GetFromHash("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AutoSize = false;
@@ -32,7 +32,7 @@ namespace LP2MegaAutos.CustomControls
             colorDown = cDown;
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Font = new System.Drawing.Font("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.Font = Tipografias.GetFromHash("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AutoSize = false;

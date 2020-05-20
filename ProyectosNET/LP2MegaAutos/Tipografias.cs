@@ -120,6 +120,7 @@ namespace LP2MegaAutos
 
         }
 
+        // Devuelve el Font requerido desde la tabla Hash
         public static Font GetFromHash(String nombre, float size, FontStyle fs)
         {
             if (!fontsHash.ContainsKey(nombre))
@@ -132,6 +133,30 @@ namespace LP2MegaAutos
             return font;
         }
        
+        // Itera por el control (usualmente se le pasa el form entero) y sus hijos 
+        // Mediante recursion para agregarle sus controles
+        public static void crearFonts(Control parent)
+        {
+            String nombre;
+            float size;
+            FontStyle fs;
+            // Usar recursion para recorrer todos los controles
+            foreach (Control c in parent.Controls)
+            {
+                if (parent.Controls != null) 
+                    crearFonts(c);
+                nombre = c.Font.Name;
+                if (!fontsHash.ContainsKey(nombre))
+                {
+                    Console.WriteLine(nombre +" no esta en Tabla Hash. Devolviendo font sin incrustar");
+                    return;
+                }
+                size = c.Font.Size;
+                fs = c.Font.Style;
+                c.Font = GetFromHash(nombre, size, fs);
+            }
+        }
+
         #endregion funciones
 
     }

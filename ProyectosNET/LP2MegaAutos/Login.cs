@@ -23,8 +23,23 @@ namespace LP2MegaAutos
         public Login_Screen()
         {
             InitializeComponent();
+            Tipografias.crearFonts(this);
             textBox_correo.Select();
-            this.titulo_login.Font = Tipografias.GetFromHash("Lato Thin",22 ,FontStyle.Bold);
+        }
+
+        private void inicializarFonts()
+        {
+            //this.titulo_login.Font = Tipografias.GetFromHash("Montserrat", 22, FontStyle.Bold);
+            //this.subtitulo_login.Font = Tipografias.GetFromHash("Montserrat", 15, FontStyle.Bold);
+            //this.label_texto_amarillo.Font = Tipografias.GetFromHash("Montserrat", 10, FontStyle.Bold);
+            //this.label_texto_gris.Font = Tipografias.GetFromHash("Montserrat", 10, FontStyle.Bold);
+            //this.label_correo.Font = Tipografias.GetFromHash("Montserrat Semibold", 11, FontStyle.Bold);
+            //this.label_password.Font = Tipografias.GetFromHash("Montserrat Semibold", 11, FontStyle.Bold);
+            //this.textBox_correo.Font = Tipografias.GetFromHash("Montserrat", 11.25f, FontStyle.Regular);
+            //this.textBox_password.Font = Tipografias.GetFromHash("Montserrat", 11.25f, FontStyle.Regular);
+            //this.boton_acceder.Font = Tipografias.GetFromHash("Montserrat", 12, FontStyle.Bold);
+            //this.label_Modo_Oscuro.Font = Tipografias.GetFromHash("Montserrat", 10, FontStyle.Bold);
+            //// Los fonts de los controladores ClickableText ya estan inicializados en sus constructores
         }
 
         #region title_bar
@@ -77,57 +92,6 @@ namespace LP2MegaAutos
 
         #endregion title_bar
 
-        //#region sombra texto
-        //private PointF SOMBRA_POINTF = new PointF(0, 2);
-
-        //private void titulo_login_Paint(object sender, PaintEventArgs e)
-        //{
-        //    TextShadow(e.Graphics, titulo_login.Text.ToString(), titulo_login.Font,
-        //      SOMBRA_POINTF, titulo_login.ForeColor);
-        //}
-
-
-        ////Agregar sombras al texto, con valores por default
-        //protected void TextShadow(Graphics graphics, string text, Font font,
-        //PointF mover, Color? shadow = null,
-        //int shadowAlpha = 16, int blurX = 2, int blurY = 6) // color opcional, 
-        //                                                    //cambiar pointF por 0,3 y default pointF
-        //{
-
-        //    const int DIST = 2;
-        //    for (int offset = 1; 0 <= offset; offset--)
-        //    {
-
-        //        var point = new PointF()
-        //        {
-        //            X = mover.X + (offset * DIST),
-        //            Y = mover.Y + (offset * DIST)
-        //        }; // Punto donde comenzar
-
-
-        ////Blur
-        //        if (offset > 0)
-        //        {
-
-        //            using (var blurBrush = new SolidBrush(Color.FromArgb((shadowAlpha / 2), shadow ?? Color.Black)))
-        //            {
-        //                for (int i = 1; i <= blurX; i++)
-        //                {
-        //                    graphics.DrawString(text, font, blurBrush, (point.X + i), point.Y);
-        //                    graphics.DrawString(text, font, blurBrush, (point.X - i), point.Y);
-        //                }
-        //                for (int j = 1; j <= blurY; j++)
-        //                    graphics.DrawString(text, font, blurBrush, (point.X), point.Y + j);
-
-        //            }
-        //        }
-        //    }
-
-        //}
-
-        //#endregion sombra
-
-
         #region inputs
 
         #region bordes
@@ -145,13 +109,13 @@ namespace LP2MegaAutos
 
         #region seleccion_textbox
         // Muestra un rectangulo en la seleccion de Correo o Contraseña
-        private void textBox_correo_Click(object sender, EventArgs e)
+        private void textBox_correo_Focus(object sender, EventArgs e)
         {
             panel_seleccionado_correo.Visible = true;
             panel_seleccionado_password.Visible = false;
         }
 
-        private void textBox_password_Click(object sender, EventArgs e)
+        private void textBox_password_Focus(object sender, EventArgs e)
         {
             panel_seleccionado_correo.Visible = false;
             panel_seleccionado_password.Visible = true;
@@ -199,7 +163,6 @@ namespace LP2MegaAutos
         }
         #endregion see_password
 
-
         private void boton_acceder_Click(object sender, EventArgs e)
         {
             // TODO boton acceder click
@@ -208,200 +171,16 @@ namespace LP2MegaAutos
         #endregion botones
         #endregion inputs
 
-        // TODO Evaluar si es necesario agregar mas Tags para Dark Mode 
-        // O sino agregar un List<string> para cada objeto desde los inicializadores
-        // Y leer de esa lista los tags
-        // Tags que se me ocurren: Nombres de los colores de Dark y White Mode (Contrast, etc.)
-        //                         Los que se estan usando actualmente: titulo, barra_login, etc.
-        // Tomar en cuenta también que al texto se le cambia forecolor y a los paneles el BackColor
         #region Dark Mode
-
-        // Variables a usar
-        private bool dark_mode = false; // false = Modo Nocturno desactivado por default
-        private int contador = 0;
-        const int MAX_TICKS = 7;
 
         private void boton_toggle_nocturno_Click(object sender, EventArgs e)
         {
-            dark_mode = !dark_mode;
-
-            if (dark_mode)
-            {
-                // Activar Modo Nocturno
-                // El boton del toggle se mueve activando el reloj
-                boton_toggle_nocturno.Enabled = false;
-                reloj_dark.Enabled = true;
-                reloj_dark.Start();
-                // Cambiar graficos a nocturnos
-
-                // Cambiar grafico del boton a activado
-                boton_toggle_nocturno.BackgroundImage =
-                    global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_activado;
-
-                boton_toggle_nocturno.BackColor = Color.FromArgb(67, 71, 76);
-                boton_toggle_nocturno.FlatAppearance.BorderColor = Color.FromArgb(67, 71, 76);
-                boton_toggle_nocturno.FlatAppearance.MouseDownBackColor = Color.FromArgb(67, 71, 76);
-                boton_toggle_nocturno.FlatAppearance.MouseOverBackColor = Color.FromArgb(67, 71, 76);
-                panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
-            }
-
-            else
-            {
-                // Desactivar Modo Nocturno
-                // El boton del toggle se mueve activando el reloj
-                boton_toggle_nocturno.Enabled = false;
-                reloj_dark.Enabled = true;
-                reloj_dark.Start();
-
-                // Cambiar grafico del boton a desactivado
-                boton_toggle_nocturno.BackgroundImage =
-                    global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_desactivado;
-                panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_white;
-
-                boton_toggle_nocturno.BackColor = Color.FromArgb(245, 245, 246);
-                boton_toggle_nocturno.FlatAppearance.BorderColor = Color.FromArgb(245, 245, 246);
-                boton_toggle_nocturno.FlatAppearance.MouseDownBackColor = Color.FromArgb(245, 245, 246);
-                boton_toggle_nocturno.FlatAppearance.MouseOverBackColor = Color.FromArgb(245, 245, 246);
-            }
+            DarkMode.cambiarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this,label_Modo_Oscuro);
         }
 
         private void reloj_dark_Tick(object sender, EventArgs e)
         {
-            contador++;
-            if (contador == MAX_TICKS)
-            {   // Reiniciar contador
-                contador = 0;
-                reloj_dark.Stop();
-                reloj_dark.Enabled = false;
-                boton_toggle_nocturno.Enabled = true;
-                // Activar modo Nocturno en todo
-                activar_dark_mode();
-
-            }
-            if (dark_mode)
-            {   // Activar
-
-                // Se mueve hacia la izquierda de 48,9 a 13,9
-                boton_toggle_nocturno.Location =
-                    new Point(boton_toggle_nocturno.Location.X - 5, boton_toggle_nocturno.Location.Y);
-            }
-            else
-            {   // Desactivar
-
-                // Se mueve hacia la derecha de 12,9 a 43,9
-                boton_toggle_nocturno.Location =
-                    new Point(boton_toggle_nocturno.Location.X + 5, boton_toggle_nocturno.Location.Y);
-                desactivar_dark_mode();
-            }
-        }
-
-
-        private void activar_dark_mode()
-        {
-            // Casos particulares
-            z.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_nocturno;
-            boton_ver_password.FlatAppearance.BorderColor = boton_ver_password.FlatAppearance.MouseDownBackColor
-                = boton_ver_password.FlatAppearance.MouseOverBackColor = Color.FromArgb(67, 71, 76);
-            panel_correo.PanelColor = Color.FromArgb(67, 71, 76);
-            panel_password.PanelColor = Color.FromArgb(67, 71, 76);
-            // Demas
-            iterar_activar_dark(this);
-        }
-
-        private void titulo_login_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iterar_activar_dark(Control parent)
-        {
-            foreach (Control c in parent.Controls)
-            {
-                if (parent.Controls != null)
-                {
-                    iterar_activar_dark(c);
-                }
-                if (c.BackColor.Equals(Color.FromArgb(245, 245, 246)))
-                    c.BackColor = Color.FromArgb(37, 40, 42);
-
-
-                if (c.Tag == null) continue;
-                switch (c.Tag.ToString())
-                {
-                    case "titulo":
-                        c.ForeColor = Color.FromArgb(245, 245, 246);
-
-                        break;
-                    case "subtitulo":
-                        c.ForeColor = Color.FromArgb(217, 217, 217);
-                        break;
-                    case "form":
-                        c.ForeColor = Color.FromArgb(172, 173, 173);
-                        if (c.GetType() != typeof(ShadowPanelRight))
-                            c.BackColor = Color.FromArgb(67, 71, 76);
-                        if (c.GetType() == typeof(TextBox))
-                            c.Font = new System.Drawing.Font("Montserrat", 10.5F);
-                        else
-                            c.Font = new System.Drawing.Font("Montserrat Semibold", 11F);
-
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        private void desactivar_dark_mode()
-        {
-            // Casos particulares
-            z.BackgroundImage = global::LP2MegaAutos.Properties.Resources.background_login;
-            boton_ver_password.FlatAppearance.BorderColor = boton_ver_password.FlatAppearance.MouseDownBackColor
-                = boton_ver_password.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 255);
-            panel_correo.PanelColor = Color.FromArgb(255, 255, 255);
-            panel_password.PanelColor = Color.FromArgb(255, 255, 255);
-            // Demas
-            iterar_desactivar_dark(this);
-        }
-
-        private void iterar_desactivar_dark(Control parent)
-        {
-            foreach (Control c in parent.Controls)
-            {
-                if (parent.Controls != null)
-                {
-                    iterar_desactivar_dark(c);
-                }
-
-                if (c.Tag != null && c.Tag.ToString() == "titlebar") continue;
-
-                if (c.BackColor.Equals(Color.FromArgb(37, 40, 42)))
-                    c.BackColor = Color.FromArgb(245, 245, 246);
-
-
-                if (c.Tag == null) continue;
-                switch (c.Tag.ToString())
-                {
-                    case "titulo":
-                        c.ForeColor = Color.FromArgb(37, 40, 42);
-
-                        break;
-                    case "subtitulo":
-                        c.ForeColor = Color.FromArgb(67, 71, 76);
-                        break;
-                    case "form":
-                        c.ForeColor = Color.FromArgb(67, 71, 76);
-                        if (c.GetType() != typeof(ShadowPanelRight))
-                            c.BackColor = Color.FromArgb(255, 255, 255);
-                        if (c.GetType() == typeof(TextBox))
-                            c.Font = new System.Drawing.Font("Montserrat", 10.5F);
-                        else
-                            c.Font = new System.Drawing.Font("Montserrat Semibold", 11F);
-
-                        break;
-                    default:
-                        break;
-                }
-            }
+            DarkMode.reloj_dark_Tick(reloj_dark, boton_toggle_nocturno);
         }
 
         #endregion Dark Mode

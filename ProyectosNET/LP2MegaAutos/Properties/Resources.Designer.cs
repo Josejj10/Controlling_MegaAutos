@@ -63,26 +63,6 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap background_login {
-            get {
-                object obj = ResourceManager.GetObject("background_login", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap background_nocturno {
-            get {
-                object obj = ResourceManager.GetObject("background_nocturno", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap boton_cerrar {
             get {
                 object obj = ResourceManager.GetObject("boton_cerrar", resourceCulture);
@@ -136,6 +116,16 @@ namespace LP2MegaAutos.Properties {
         internal static System.Drawing.Bitmap boton_unsee_password {
             get {
                 object obj = ResourceManager.GetObject("boton_unsee_password", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carroLogin {
+            get {
+                object obj = ResourceManager.GetObject("carroLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -456,16 +446,6 @@ namespace LP2MegaAutos.Properties {
         internal static System.Drawing.Bitmap toggle_white {
             get {
                 object obj = ResourceManager.GetObject("toggle_white", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap triangulo_miscelaneo {
-            get {
-                object obj = ResourceManager.GetObject("triangulo_miscelaneo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

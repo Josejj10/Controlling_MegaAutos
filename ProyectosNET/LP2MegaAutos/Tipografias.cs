@@ -33,7 +33,27 @@ using System.Globalization;
  * Montserrat ExtraBold
  * Montserrat Medium
  * Montserrat SemiBold
+ *========== Si se agregan mas, agregarlos a FontsDisponibles.cs como variables estaticas
 */
+
+public enum fontsD
+{
+    // Los fonts que en Properties.Resources hasta ahora son:
+     Ninguno, // Default
+     Lato,
+     Lato_Black,
+     Lato_Light,
+     Lato_Medium,
+     Lato_Semibold,
+     Lato_Thin,
+     Montserrat,
+     Montserrat_Black,
+     Montserrat_ExtraBold,
+     Montserrat_Medium,
+     Montserrat_SemiBold
+     // Si se agregan mas, agregarlos aca, y a la funcion switchFontsD
+}
+
 // Es decir, solo esos se pueden usar
 // Para llamar a un font, por ejemplo para el objeto titulo_login se realiza:
 // this.titulo_login.Font = Tipografias.GetFromHash("Montserrat", 10 ,FontStyle.Bold);
@@ -133,27 +153,66 @@ namespace LP2MegaAutos
             return font;
         }
        
-        // Itera por el control (usualmente se le pasa el form entero) y sus hijos 
-        // Mediante recursion para agregarle sus controles
-        public static void crearFonts(Control parent)
-        {
+        // Itera por el control (usualmente se le pasa el form entero y el TagsExtender del form) 
+        // y sus hijos mediante recursion para agregar los fonts correspondientes a cada control
+        public static void crearFonts(Control parent, TagsExtender tags)
+        {;
             String nombre;
             float size;
             FontStyle fs;
+            
+
             // Usar recursion para recorrer todos los controles
             foreach (Control c in parent.Controls)
             {
+                Console.WriteLine("Agregando el font a " + c.Name);
                 if (parent.Controls != null) 
-                    crearFonts(c);
-                nombre = c.Font.Name;
+                    crearFonts(c, tags);
+                //if (tags.GetTagFontName(c) == null) continue;
+                
+                nombre = switchFontsD(tags.GetTagFontName(c));
+                
+                if (nombre == "") continue; // No usa embedded font
+                
                 if (!fontsHash.ContainsKey(nombre))
                 {
                     Console.WriteLine(nombre +" no esta en Tabla Hash. Devolviendo font sin incrustar");
                     return;
                 }
-                size = c.Font.Size;
-                fs = c.Font.Style;
+                size = tags.GetTagFontSize(c);
+                fs = tags.GetTagFontStyle(c);
                 c.Font = GetFromHash(nombre, size, fs);
+            }
+        }
+
+        private static String switchFontsD(fontsD fName)
+        {
+            switch (fName)
+            {
+                case fontsD.Lato:
+                    return "Lato";
+                case fontsD.Lato_Black:
+                    return "Lato Black";
+                case fontsD.Lato_Light:
+                    return "Lato Light";
+                case fontsD.Lato_Medium:
+                    return "Lato Medium";
+                case fontsD.Lato_Semibold:
+                    return "Lato Semibold";
+                case fontsD.Lato_Thin:
+                    return "Lato Thin";
+                case fontsD.Montserrat:
+                    return "Montserrat";
+                case fontsD.Montserrat_Black:
+                    return "Montserrat Black";
+                case fontsD.Montserrat_ExtraBold:
+                    return "Montserrat ExtraBold";
+                case fontsD.Montserrat_Medium:
+                    return "Montserrat Medium";
+                case fontsD.Montserrat_SemiBold:
+                    return "Montserrat SemiBold";
+                default:
+                    return "";
             }
         }
 

@@ -23,23 +23,11 @@ namespace LP2MegaAutos
         public Login_Screen()
         {
             InitializeComponent();
-            Tipografias.crearFonts(this);
-            textBox_correo.Select();
-        }
-
-        private void inicializarFonts()
-        {
-            //this.titulo_login.Font = Tipografias.GetFromHash("Montserrat", 22, FontStyle.Bold);
-            //this.subtitulo_login.Font = Tipografias.GetFromHash("Montserrat", 15, FontStyle.Bold);
-            //this.label_texto_amarillo.Font = Tipografias.GetFromHash("Montserrat", 10, FontStyle.Bold);
-            //this.label_texto_gris.Font = Tipografias.GetFromHash("Montserrat", 10, FontStyle.Bold);
-            //this.label_correo.Font = Tipografias.GetFromHash("Montserrat Semibold", 11, FontStyle.Bold);
-            //this.label_password.Font = Tipografias.GetFromHash("Montserrat Semibold", 11, FontStyle.Bold);
-            //this.textBox_correo.Font = Tipografias.GetFromHash("Montserrat", 11.25f, FontStyle.Regular);
-            //this.textBox_password.Font = Tipografias.GetFromHash("Montserrat", 11.25f, FontStyle.Regular);
-            //this.boton_acceder.Font = Tipografias.GetFromHash("Montserrat", 12, FontStyle.Bold);
-            //this.label_Modo_Oscuro.Font = Tipografias.GetFromHash("Montserrat", 10, FontStyle.Bold);
-            //// Los fonts de los controladores ClickableText ya estan inicializados en sus constructores
+            
+            // Inicializa los fonts de este form
+            Tipografias.crearFonts(this,tags);
+            
+            textBox_correo.Select();// Para que le panel lateral aparezca
         }
 
         #region title_bar
@@ -162,6 +150,7 @@ namespace LP2MegaAutos
             }
         }
         #endregion see_password
+
 
         private void boton_acceder_Click(object sender, EventArgs e)
         {

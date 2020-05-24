@@ -21,7 +21,7 @@ namespace LP2MegaAutos
          *              Variables
          * ====================================*/
         private static bool dark_mode = false; // false = Modo Nocturno desactivado por default
-        
+        private static List<string> excepciones = new List<string>();
         // Para el reloj
         private static int contador = 0;
         const int MAX_TICKS = 7;
@@ -29,6 +29,21 @@ namespace LP2MegaAutos
         /* ====================================
          *              Funciones
          * ====================================*/
+
+        public static void agregarExcepcion(string e)
+        {
+            excepciones.Add(e);
+        }
+
+        public static bool esExcepcion(string e)
+        {
+            return excepciones.Contains(e);
+        }
+
+        public static void quitarExcepcion(string e)
+        {
+            excepciones.Remove(e);
+        }
 
         public static bool is_dark_mode_active()
         {
@@ -42,96 +57,84 @@ namespace LP2MegaAutos
 
         public static void cambiarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent, Label label_Modo_Oscuro)
         {
-            // Cambiar graficos a nocturnos
-            cambiar_color_mode(parent);
-
             if (dark_mode)
             {
                 // Desactivar Modo Nocturno
                 label_Modo_Oscuro.Text = "Modo Oscuro\nDesactivado";
-                // Y se bloquea para que no se active antes de que llegue al otro lado
-                // El boton del toggle se mueve activando el reloj
-                boton_toggle_nocturno.Enabled = false;
-                reloj_dark.Enabled = true;
-                reloj_dark.Start();
-
-                // Cambiar grafico del boton a desactivado
-                boton_toggle_nocturno.BackgroundImage =
-                    global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_desactivado;
-                panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_white;
             }
             else
             {
-
                 // Activar Modo Oscuro
                 label_Modo_Oscuro.Text = "Modo Oscuro\nActivado";
-                // El boton del toggle se mueve activando el reloj
-                // Y se bloquea para que no se active antes de que llegue al otro lado
-                boton_toggle_nocturno.Enabled = false;
-                reloj_dark.Enabled = true;
-                reloj_dark.Start();
-
-                // Cambiar grafico del boton a activado
-                boton_toggle_nocturno.BackgroundImage =
-                    global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_activado;
-                // Cambiar el panel
-                panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
             }
-            // Si esta en dark mode, pasar a white mode y viceversa
-            dark_mode = !dark_mode;
-
+            cambiarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, parent);
         }
-
 
         public static void cambiarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent)
         {
-            // Si esta en dark mode, pasar a white mode y viceversa
-            dark_mode = !dark_mode;
             // Cambiar graficos a nocturnos
             cambiar_color_mode(parent);
 
+            // El boton del toggle se mueve activando el reloj
+            // Y se bloquea para que no se active antes de que llegue al otro lado
+            boton_toggle_nocturno.Enabled = false;
+            reloj_dark.Enabled = true;
+            reloj_dark.Start();
+
             if (dark_mode)
             {
-                // Activar Modo Nocturno
-                // El boton del toggle se mueve activando el reloj
-                // Y se bloquea para que no se active antes de que llegue al otro lado
-                boton_toggle_nocturno.Enabled = false;
-                reloj_dark.Enabled = true;
-                reloj_dark.Start();
-
-                // Cambiar grafico del boton a activado
-                boton_toggle_nocturno.BackgroundImage =
-                    global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_activado;
-
-                boton_toggle_nocturno.BackColor = Dark_Mode.LowContrast;
-                boton_toggle_nocturno.FlatAppearance.BorderColor = Dark_Mode.LowContrast;
-                boton_toggle_nocturno.FlatAppearance.MouseDownBackColor = Dark_Mode.LowContrast;
-                boton_toggle_nocturno.FlatAppearance.MouseOverBackColor = Dark_Mode.LowContrast;
-
-                // Cambiar el panel
-                panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
-            }
-
-            else
-            {
-                // Desactivar Modo Nocturno
-                // El boton del toggle se mueve activando el reloj
-                boton_toggle_nocturno.Enabled = false;
-                reloj_dark.Enabled = true;
-                reloj_dark.Start();
-
+                // Desactivar Modo Oscuro
                 // Cambiar grafico del boton a desactivado
                 boton_toggle_nocturno.BackgroundImage =
                     global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_desactivado;
                 panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_white;
-
-                boton_toggle_nocturno.BackColor = White_Mode.LowContrast;
-                boton_toggle_nocturno.FlatAppearance.BorderColor = White_Mode.LowContrast;
-                boton_toggle_nocturno.FlatAppearance.MouseDownBackColor = White_Mode.LowContrast;
-                boton_toggle_nocturno.FlatAppearance.MouseOverBackColor = White_Mode.LowContrast;
             }
+            else
+            {
+                // Activar Modo Oscuro
+                // Cambiar grafico del boton a activado
+                boton_toggle_nocturno.BackgroundImage =
+                    global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_activado;
+                // Cambiar el panel
+                panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
+            }
+            // Si esta en dark mode, pasar a white mode y viceversa
+            dark_mode = !dark_mode;
         }
 
+
+        // Se debe de llamar cuando ya esta activado el dark mode
+        // Para inicializar los otros paneles
+        public static void inicarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent, Label label_Modo_Oscuro)
+        {
+            iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, parent);
+            label_Modo_Oscuro.Text = "Modo Oscuro\nActivado";
+        }
+
+        // Inicializa el dark mode en un form
+        // Se debe de llamar cuando ya esta activado el dark mode
+        // Para inicializar los otros paneles
+        public static void iniciarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent)
+        {
+            // Cambiar graficos a nocturnos
+            cambiar_color_mode(parent);
+
+            // El boton del toggle se mueve activando el reloj
+            // Y se bloquea para que no se active antes de que llegue al otro lado
+            boton_toggle_nocturno.Enabled = false;
+            reloj_dark.Enabled = true;
+            reloj_dark.Start();
+
+            // Activar Modo Oscuro
+            // Cambiar grafico del boton a activado
+            boton_toggle_nocturno.BackgroundImage =
+                global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_activado;
+            // Cambiar el panel
+            panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
+
+        }
+
+        // Inicializa el dark mode en un form
         // Se tiene que llamar desde el tick de un timer 
         // de la funcino de la funcion de la que lo quieres llamar reloj_dark_Tick()
         public static void reloj_dark_Tick(Timer reloj_dark, Button boton_toggle_nocturno)
@@ -145,14 +148,15 @@ namespace LP2MegaAutos
                 boton_toggle_nocturno.Enabled = true;
             }
             if (dark_mode)
-            {   
-                // Se mueve hacia la izquierda de 48,9 a 13,9
+            {
+                // Se mueve hacia la izquierda
                 boton_toggle_nocturno.Location =
                     new Point(boton_toggle_nocturno.Location.X - 5, boton_toggle_nocturno.Location.Y);
             }
             else
-            {   
-                // Se mueve hacia la derecha de 12,9 a 43,9
+            {
+                // Se mueve hacia la derecha
+                
                 boton_toggle_nocturno.Location =
                     new Point(boton_toggle_nocturno.Location.X + 5, boton_toggle_nocturno.Location.Y);
             }
@@ -164,9 +168,6 @@ namespace LP2MegaAutos
             foreach (Control c in parent.Controls)
             {
                 if (parent.Controls != null) cambiar_color_mode(c);
-                
-                // Pasa al siguiente loop si no tiene tag
-                if (c.Tag == null) continue;
                 // Llamar a funcion cambiarModoControl
                 cambiar_modo_control(c);
             }
@@ -175,12 +176,17 @@ namespace LP2MegaAutos
         private static void cambiar_modo_control(Control c)
         {
             // Ignorar segun tag
-            string tag = c.Tag.ToString();
-            switch (tag)
+            string nom = c.Name.ToString();
+            if (excepciones.Contains(nom)) return;
+            
+            // Si es un roundedPanel
+            if (c.GetType() == typeof(RoundedPanel))
+                Colores.cambiarRoundedPanelColor((RoundedPanel)c);
+            
+            switch (nom)
             {
-                case "titlebar":
-                    break;
-                case "toggle_oscuro":
+                case "boton_toggle_nocturno":
+                    // El toggle necesita otros colores
                     Colores.cambiarToggle((Button)c);
                     break;
                 default:

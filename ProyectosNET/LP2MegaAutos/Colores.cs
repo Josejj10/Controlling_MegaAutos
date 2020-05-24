@@ -149,7 +149,7 @@ namespace LP2MegaAutos
             }
             if (c.GetType() == typeof(ShadowPanelRight))
                 cambiarShadowPanelColor((ShadowPanelRight)c);
-            
+
             if (c.GetType() == typeof(ShadowPanelRight))
                 cambiarShadowPanelColor((ShadowPanelRight)c);
 
@@ -184,6 +184,12 @@ namespace LP2MegaAutos
         {
             s.PanelColor = opuesto(s.PanelColor);
         }
+
+        public static void cambiarRoundedPanelColor(RoundedPanel c)
+        {
+            c.cambiarColorPanel(opuesto(c.getColorPanel()));    
+        }
+
 
     }
 }

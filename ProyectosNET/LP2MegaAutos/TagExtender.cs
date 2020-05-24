@@ -27,7 +27,7 @@ namespace LP2MegaAutos
 
         public bool CanExtend(object extendee)
         {
-            return (extendee is Control && !(extendee is Form));
+            return (extendee is Control);
         }
 
         [Category("Data")]

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace LP2MegaAutos
 {
@@ -19,8 +21,18 @@ namespace LP2MegaAutos
             Tipografias.inicializarFonts();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Screen());
+            // Agregar excpciones del Modo Oscuro
+            DarkMode.agregarExcepcion("title_bar");
+            DarkMode.agregarExcepcion("title_bar_2");
+            DarkMode.agregarExcepcion("panelMenu");
+            Login_Screen login= new Login_Screen();
+            // Application.Run(login);
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new frmPrincipal());
+            }
         }
+
     }
 }
 

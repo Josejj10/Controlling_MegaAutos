@@ -350,15 +350,26 @@
             // 
             // frontBackground
             // 
-            this.frontBackground.Location = new System.Drawing.Point(27, 14);
+            this.frontBackground.ArcRadiusBorde = 15;
+            this.frontBackground.ArcRadiusColor = 15;
+            this.frontBackground.Location = new System.Drawing.Point(70, 25);
+            this.frontBackground.MenosHeightBorde = 1;
+            this.frontBackground.MenosHeightColor = 1;
+            this.frontBackground.MenosWidthBorde = 1;
+            this.frontBackground.MenosWidthColor = 1;
             this.frontBackground.Name = "frontBackground";
-            this.frontBackground.Size = new System.Drawing.Size(712, 487);
+            this.frontBackground.PorcLuzColorBorde = 0;
+            this.frontBackground.Size = new System.Drawing.Size(611, 470);
             this.frontBackground.TabIndex = 0;
             this.tags.SetTag2(this.frontBackground, null);
             this.tags.SetTag3(this.frontBackground, null);
             this.tags.SetTagFontName(this.frontBackground, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.frontBackground, 10F);
             this.tags.SetTagFontStyle(this.frontBackground, System.Drawing.FontStyle.Regular);
+            this.frontBackground.XBorde = 0;
+            this.frontBackground.XColor = 0;
+            this.frontBackground.YBorde = 0;
+            this.frontBackground.YColor = 0;
             // 
             // frmPrincipal
             // 

@@ -77,6 +77,9 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="ColorRoundedPanelExtender.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DarkMode.cs" />
     <Compile Include="frmLoading.cs">
       <SubType>Form</SubType>

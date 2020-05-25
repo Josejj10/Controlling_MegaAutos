@@ -36,21 +36,24 @@
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.reloj_dark = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new MetroFramework.Controls.MetroPanel();
+            this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
+            this.panel_logo_empresa = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panel_toggle_nocturno = new System.Windows.Forms.Panel();
             this.boton_toggle_nocturno = new System.Windows.Forms.Button();
-            this.btnAjustes = new System.Windows.Forms.Button();
-            this.btnVerReportes = new System.Windows.Forms.Button();
-            this.btnActualizarBD = new System.Windows.Forms.Button();
-            this.btnGenerarReporte = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.panel_logo_empresa = new System.Windows.Forms.Panel();
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlBackBackground = new System.Windows.Forms.Panel();
             this.frontBackground = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
+            this.colorRoundedPanelExtender1 = new LP2MegaAutos.ColorRoundedPanelExtender();
+            this.colorRoundedPanelExtender2 = new LP2MegaAutos.ColorRoundedPanelExtender();
             this.title_bar.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
+            this.panel_logo_empresa.SuspendLayout();
             this.panel_toggle_nocturno.SuspendLayout();
             this.pnlBackBackground.SuspendLayout();
+            this.frontBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // title_bar_2
@@ -147,13 +150,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.panelMenu.Controls.Add(this.roundedPanel2);
             this.panelMenu.Controls.Add(this.panel_toggle_nocturno);
-            this.panelMenu.Controls.Add(this.btnAjustes);
-            this.panelMenu.Controls.Add(this.btnVerReportes);
-            this.panelMenu.Controls.Add(this.btnActualizarBD);
-            this.panelMenu.Controls.Add(this.btnGenerarReporte);
-            this.panelMenu.Controls.Add(this.btnHome);
-            this.panelMenu.Controls.Add(this.panel_logo_empresa);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.HorizontalScrollbarBarColor = true;
             this.panelMenu.HorizontalScrollbarHighlightOnWheel = false;
@@ -173,6 +171,83 @@
             this.panelMenu.VerticalScrollbarBarColor = true;
             this.panelMenu.VerticalScrollbarHighlightOnWheel = false;
             this.panelMenu.VerticalScrollbarSize = 10;
+            // 
+            // roundedPanel2
+            // 
+            this.colorRoundedPanelExtender2.SetArcoRBorde(this.roundedPanel2, 15);
+            this.colorRoundedPanelExtender1.SetArcoRBorde(this.roundedPanel2, 15);
+            this.colorRoundedPanelExtender1.SetArcoRPanel(this.roundedPanel2, 15);
+            this.colorRoundedPanelExtender2.SetArcoRPanel(this.roundedPanel2, 15);
+            this.roundedPanel2.ArcRadiusBorde = 15;
+            this.roundedPanel2.ArcRadiusPanel = 15;
+            this.colorRoundedPanelExtender1.SetColorBorde(this.roundedPanel2, System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246))))));
+            this.colorRoundedPanelExtender2.SetColorBorde(this.roundedPanel2, System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246))))));
+            this.colorRoundedPanelExtender2.SetColorPanel(this.roundedPanel2, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))));
+            this.colorRoundedPanelExtender1.SetColorPanel(this.roundedPanel2, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))));
+            this.colorRoundedPanelExtender2.SetColorSistemaBorde(this.roundedPanel2, LP2MegaAutos.ColoresSistema.BackBackground);
+            this.colorRoundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel2, LP2MegaAutos.ColoresSistema.BackBackground);
+            this.colorRoundedPanelExtender2.SetColorSistemaPanel(this.roundedPanel2, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.colorRoundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel2, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.roundedPanel2.Controls.Add(this.panel_logo_empresa);
+            this.colorRoundedPanelExtender1.SetCorners(this.roundedPanel2, Plasmoid.Extensions.RectangleEdgeFilter.Left);
+            this.colorRoundedPanelExtender2.SetCorners(this.roundedPanel2, Plasmoid.Extensions.RectangleEdgeFilter.Left);
+            this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.roundedPanel2.Location = new System.Drawing.Point(9, 18);
+            this.roundedPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.roundedPanel2.MenosHeightBorde = 1;
+            this.roundedPanel2.MenosHeightPanel = 1;
+            this.roundedPanel2.MenosWidthBorde = 1;
+            this.roundedPanel2.MenosWidthPanel = 1;
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.PorcLuzColorBorde = 0;
+            this.roundedPanel2.Size = new System.Drawing.Size(80, 54);
+            this.roundedPanel2.TabIndex = 26;
+            this.tags.SetTag2(this.roundedPanel2, null);
+            this.tags.SetTag3(this.roundedPanel2, null);
+            this.tags.SetTagFontName(this.roundedPanel2, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.roundedPanel2, 10F);
+            this.tags.SetTagFontStyle(this.roundedPanel2, System.Drawing.FontStyle.Regular);
+            this.roundedPanel2.XBorde = 0;
+            this.roundedPanel2.XPanel = 0;
+            this.roundedPanel2.YBorde = 0;
+            this.roundedPanel2.YPanel = 0;
+            // 
+            // panel_logo_empresa
+            // 
+            this.panel_logo_empresa.BackColor = System.Drawing.Color.Transparent;
+            this.panel_logo_empresa.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.panel_logo_empresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel_logo_empresa.Controls.Add(this.btnHome);
+            this.panel_logo_empresa.Location = new System.Drawing.Point(13, 7);
+            this.panel_logo_empresa.Name = "panel_logo_empresa";
+            this.panel_logo_empresa.Size = new System.Drawing.Size(53, 44);
+            this.panel_logo_empresa.TabIndex = 17;
+            this.panel_logo_empresa.Tag = "logo";
+            this.tags.SetTag2(this.panel_logo_empresa, null);
+            this.tags.SetTag3(this.panel_logo_empresa, null);
+            this.tags.SetTagFontName(this.panel_logo_empresa, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.panel_logo_empresa, 10F);
+            this.tags.SetTagFontStyle(this.panel_logo_empresa, System.Drawing.FontStyle.Regular);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnHome.Location = new System.Drawing.Point(-13, -7);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(72, 54);
+            this.btnHome.TabIndex = 20;
+            this.tags.SetTag2(this.btnHome, null);
+            this.tags.SetTag3(this.btnHome, null);
+            this.tags.SetTagFontName(this.btnHome, fontsD.Montserrat);
+            this.tags.SetTagFontSize(this.btnHome, 12F);
+            this.tags.SetTagFontStyle(this.btnHome, System.Drawing.FontStyle.Bold);
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // panel_toggle_nocturno
             // 
@@ -216,122 +291,6 @@
             this.boton_toggle_nocturno.UseVisualStyleBackColor = false;
             this.boton_toggle_nocturno.Click += new System.EventHandler(this.boton_toggle_nocturno_Click);
             // 
-            // btnAjustes
-            // 
-            this.btnAjustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.btnAjustes.FlatAppearance.BorderSize = 0;
-            this.btnAjustes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
-            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAjustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnAjustes.Location = new System.Drawing.Point(0, 383);
-            this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(81, 45);
-            this.btnAjustes.TabIndex = 24;
-            this.tags.SetTag2(this.btnAjustes, null);
-            this.tags.SetTag3(this.btnAjustes, null);
-            this.tags.SetTagFontName(this.btnAjustes, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnAjustes, 12F);
-            this.tags.SetTagFontStyle(this.btnAjustes, System.Drawing.FontStyle.Bold);
-            this.btnAjustes.Text = "Home";
-            this.btnAjustes.UseVisualStyleBackColor = false;
-            // 
-            // btnVerReportes
-            // 
-            this.btnVerReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.btnVerReportes.FlatAppearance.BorderSize = 0;
-            this.btnVerReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
-            this.btnVerReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerReportes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnVerReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnVerReportes.Location = new System.Drawing.Point(0, 207);
-            this.btnVerReportes.Name = "btnVerReportes";
-            this.btnVerReportes.Size = new System.Drawing.Size(81, 45);
-            this.btnVerReportes.TabIndex = 23;
-            this.tags.SetTag2(this.btnVerReportes, null);
-            this.tags.SetTag3(this.btnVerReportes, null);
-            this.tags.SetTagFontName(this.btnVerReportes, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnVerReportes, 12F);
-            this.tags.SetTagFontStyle(this.btnVerReportes, System.Drawing.FontStyle.Bold);
-            this.btnVerReportes.Text = "Home";
-            this.btnVerReportes.UseVisualStyleBackColor = false;
-            // 
-            // btnActualizarBD
-            // 
-            this.btnActualizarBD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.btnActualizarBD.FlatAppearance.BorderSize = 0;
-            this.btnActualizarBD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
-            this.btnActualizarBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizarBD.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnActualizarBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnActualizarBD.Location = new System.Drawing.Point(0, 269);
-            this.btnActualizarBD.Name = "btnActualizarBD";
-            this.btnActualizarBD.Size = new System.Drawing.Size(81, 45);
-            this.btnActualizarBD.TabIndex = 22;
-            this.tags.SetTag2(this.btnActualizarBD, null);
-            this.tags.SetTag3(this.btnActualizarBD, null);
-            this.tags.SetTagFontName(this.btnActualizarBD, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnActualizarBD, 12F);
-            this.tags.SetTagFontStyle(this.btnActualizarBD, System.Drawing.FontStyle.Bold);
-            this.btnActualizarBD.Text = "Home";
-            this.btnActualizarBD.UseVisualStyleBackColor = false;
-            // 
-            // btnGenerarReporte
-            // 
-            this.btnGenerarReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
-            this.btnGenerarReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
-            this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarReporte.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGenerarReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnGenerarReporte.Location = new System.Drawing.Point(0, 147);
-            this.btnGenerarReporte.Name = "btnGenerarReporte";
-            this.btnGenerarReporte.Size = new System.Drawing.Size(81, 45);
-            this.btnGenerarReporte.TabIndex = 21;
-            this.tags.SetTag2(this.btnGenerarReporte, null);
-            this.tags.SetTag3(this.btnGenerarReporte, null);
-            this.tags.SetTagFontName(this.btnGenerarReporte, fontsD.Montserrat);
-            this.tags.SetTagFontSize(this.btnGenerarReporte, 12F);
-            this.tags.SetTagFontStyle(this.btnGenerarReporte, System.Drawing.FontStyle.Bold);
-            this.btnGenerarReporte.Text = "Home";
-            this.btnGenerarReporte.UseVisualStyleBackColor = false;
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnHome.Location = new System.Drawing.Point(0, 92);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(81, 45);
-            this.btnHome.TabIndex = 20;
-            this.tags.SetTag2(this.btnHome, null);
-            this.tags.SetTag3(this.btnHome, null);
-            this.tags.SetTagFontName(this.btnHome, fontsD.Montserrat);
-            this.tags.SetTagFontSize(this.btnHome, 12F);
-            this.tags.SetTagFontStyle(this.btnHome, System.Drawing.FontStyle.Bold);
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            // 
-            // panel_logo_empresa
-            // 
-            this.panel_logo_empresa.BackColor = System.Drawing.Color.Transparent;
-            this.panel_logo_empresa.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
-            this.panel_logo_empresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel_logo_empresa.Location = new System.Drawing.Point(16, 25);
-            this.panel_logo_empresa.Name = "panel_logo_empresa";
-            this.panel_logo_empresa.Size = new System.Drawing.Size(48, 40);
-            this.panel_logo_empresa.TabIndex = 17;
-            this.panel_logo_empresa.Tag = "logo";
-            this.tags.SetTag2(this.panel_logo_empresa, null);
-            this.tags.SetTag3(this.panel_logo_empresa, null);
-            this.tags.SetTagFontName(this.panel_logo_empresa, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.panel_logo_empresa, 10F);
-            this.tags.SetTagFontStyle(this.panel_logo_empresa, System.Drawing.FontStyle.Regular);
-            // 
             // pnlBackBackground
             // 
             this.pnlBackBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
@@ -350,13 +309,29 @@
             // 
             // frontBackground
             // 
+            this.colorRoundedPanelExtender2.SetArcoRBorde(this.frontBackground, 15);
+            this.colorRoundedPanelExtender1.SetArcoRBorde(this.frontBackground, 15);
+            this.colorRoundedPanelExtender1.SetArcoRPanel(this.frontBackground, 15);
+            this.colorRoundedPanelExtender2.SetArcoRPanel(this.frontBackground, 15);
             this.frontBackground.ArcRadiusBorde = 15;
-            this.frontBackground.ArcRadiusColor = 15;
+            this.frontBackground.ArcRadiusPanel = 15;
+            this.colorRoundedPanelExtender1.SetColorBorde(this.frontBackground, System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246))))));
+            this.colorRoundedPanelExtender2.SetColorBorde(this.frontBackground, System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246))))));
+            this.colorRoundedPanelExtender2.SetColorPanel(this.frontBackground, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))));
+            this.colorRoundedPanelExtender1.SetColorPanel(this.frontBackground, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))));
+            this.colorRoundedPanelExtender2.SetColorSistemaBorde(this.frontBackground, LP2MegaAutos.ColoresSistema.BackBackground);
+            this.colorRoundedPanelExtender1.SetColorSistemaBorde(this.frontBackground, LP2MegaAutos.ColoresSistema.BackBackground);
+            this.colorRoundedPanelExtender2.SetColorSistemaPanel(this.frontBackground, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.colorRoundedPanelExtender1.SetColorSistemaPanel(this.frontBackground, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.frontBackground.Controls.Add(this.roundedPanel1);
+            this.colorRoundedPanelExtender1.SetCorners(this.frontBackground, Plasmoid.Extensions.RectangleEdgeFilter.All);
+            this.colorRoundedPanelExtender2.SetCorners(this.frontBackground, Plasmoid.Extensions.RectangleEdgeFilter.All);
+            this.frontBackground.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.frontBackground.Location = new System.Drawing.Point(70, 25);
             this.frontBackground.MenosHeightBorde = 1;
-            this.frontBackground.MenosHeightColor = 1;
+            this.frontBackground.MenosHeightPanel = 1;
             this.frontBackground.MenosWidthBorde = 1;
-            this.frontBackground.MenosWidthColor = 1;
+            this.frontBackground.MenosWidthPanel = 1;
             this.frontBackground.Name = "frontBackground";
             this.frontBackground.PorcLuzColorBorde = 0;
             this.frontBackground.Size = new System.Drawing.Size(611, 470);
@@ -367,9 +342,47 @@
             this.tags.SetTagFontSize(this.frontBackground, 10F);
             this.tags.SetTagFontStyle(this.frontBackground, System.Drawing.FontStyle.Regular);
             this.frontBackground.XBorde = 0;
-            this.frontBackground.XColor = 0;
+            this.frontBackground.XPanel = 0;
             this.frontBackground.YBorde = 0;
-            this.frontBackground.YColor = 0;
+            this.frontBackground.YPanel = 0;
+            // 
+            // roundedPanel1
+            // 
+            this.colorRoundedPanelExtender2.SetArcoRBorde(this.roundedPanel1, 15);
+            this.colorRoundedPanelExtender1.SetArcoRBorde(this.roundedPanel1, 15);
+            this.colorRoundedPanelExtender1.SetArcoRPanel(this.roundedPanel1, 15);
+            this.colorRoundedPanelExtender2.SetArcoRPanel(this.roundedPanel1, 15);
+            this.roundedPanel1.ArcRadiusBorde = 15;
+            this.roundedPanel1.ArcRadiusPanel = 15;
+            this.colorRoundedPanelExtender1.SetColorBorde(this.roundedPanel1, System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246))))));
+            this.colorRoundedPanelExtender2.SetColorBorde(this.roundedPanel1, System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246))))));
+            this.colorRoundedPanelExtender2.SetColorPanel(this.roundedPanel1, System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161))))));
+            this.colorRoundedPanelExtender1.SetColorPanel(this.roundedPanel1, System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161))))));
+            this.colorRoundedPanelExtender2.SetColorSistemaBorde(this.roundedPanel1, LP2MegaAutos.ColoresSistema.BackBackground);
+            this.colorRoundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel1, LP2MegaAutos.ColoresSistema.BackBackground);
+            this.colorRoundedPanelExtender2.SetColorSistemaPanel(this.roundedPanel1, LP2MegaAutos.ColoresSistema.PrincipalAzulMetalico);
+            this.colorRoundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel1, LP2MegaAutos.ColoresSistema.PrincipalAzulMetalico);
+            this.colorRoundedPanelExtender1.SetCorners(this.roundedPanel1, Plasmoid.Extensions.RectangleEdgeFilter.Top);
+            this.colorRoundedPanelExtender2.SetCorners(this.roundedPanel1, Plasmoid.Extensions.RectangleEdgeFilter.Top);
+            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
+            this.roundedPanel1.Location = new System.Drawing.Point(0, 0);
+            this.roundedPanel1.MenosHeightBorde = 1;
+            this.roundedPanel1.MenosHeightPanel = 1;
+            this.roundedPanel1.MenosWidthBorde = 1;
+            this.roundedPanel1.MenosWidthPanel = 1;
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.PorcLuzColorBorde = 0;
+            this.roundedPanel1.Size = new System.Drawing.Size(611, 40);
+            this.roundedPanel1.TabIndex = 0;
+            this.tags.SetTag2(this.roundedPanel1, null);
+            this.tags.SetTag3(this.roundedPanel1, null);
+            this.tags.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.roundedPanel1, 10F);
+            this.tags.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
+            this.roundedPanel1.XBorde = 0;
+            this.roundedPanel1.XPanel = 0;
+            this.roundedPanel1.YBorde = 0;
+            this.roundedPanel1.YPanel = 0;
             // 
             // frmPrincipal
             // 
@@ -393,8 +406,11 @@
             this.Text = "frmPrincipal";
             this.title_bar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            this.roundedPanel2.ResumeLayout(false);
+            this.panel_logo_empresa.ResumeLayout(false);
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.pnlBackBackground.ResumeLayout(false);
+            this.frontBackground.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -410,13 +426,13 @@
         private TagsExtender tags;
         private System.Windows.Forms.Panel panel_logo_empresa;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnGenerarReporte;
-        private System.Windows.Forms.Button btnVerReportes;
-        private System.Windows.Forms.Button btnActualizarBD;
-        private System.Windows.Forms.Button btnAjustes;
         private System.Windows.Forms.Panel panel_toggle_nocturno;
         private System.Windows.Forms.Button boton_toggle_nocturno;
         private System.Windows.Forms.Panel pnlBackBackground;
         private RoundedPanel frontBackground;
+        private RoundedPanel roundedPanel1;
+        private RoundedPanel roundedPanel2;
+        private ColorRoundedPanelExtender colorRoundedPanelExtender1;
+        private ColorRoundedPanelExtender colorRoundedPanelExtender2;
     }
 }

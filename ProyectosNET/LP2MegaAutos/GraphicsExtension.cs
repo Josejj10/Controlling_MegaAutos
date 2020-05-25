@@ -431,6 +431,8 @@ namespace Plasmoid.Extensions
 			}
 		}
 	}
+
+	// Modifique esta parte para agregar mas opciones
 	public enum RectangleEdgeFilter
 	{
 		None = 0,
@@ -438,6 +440,20 @@ namespace Plasmoid.Extensions
 		TopRight = 2,
 		BottomLeft = 4,
 		BottomRight = 8,
+		Top = TopLeft | TopRight,
+		Bottom = BottomLeft | BottomRight,
+		Left = BottomLeft | TopLeft,
+		Right = BottomRight | TopRight,
+		TLeftBRight = TopLeft | BottomRight,
+		TRightBLeft = TopRight | BottomLeft,
+		TopBLeft= Top | BottomLeft,
+		TopBRight = Top| BottomRight,
+		BottomTLeft = TopLeft | Bottom,
+		BottomTRight = TopRight| Bottom,
+		LeftTRight = Left | TopRight,
+		LeftBRight = Left |BottomRight,
+		RightTLeft= Right| TopLeft,
+		RightBLeft = Right |BottomLeft,
 		All = TopLeft | TopRight | BottomLeft | BottomRight
 	}
 	public abstract class FontMetrics

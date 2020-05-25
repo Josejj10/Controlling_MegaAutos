@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,10 +59,12 @@ namespace LP2MegaAutos
 
     }
 
-    public class Colores
+
+    public class Colores : White_Mode
     {
         #region Denotive Colors
         public static Color Rosa = Color.FromArgb(227, 64, 94);
+        public static Color Morado = Color.FromArgb(174, 32, 226);
         public static Color VerdeSuccess = Color.FromArgb(152, 212, 73);
         public static Color AmarilloInteractivo = Color.FromArgb(247, 199, 45);
         public static Color AmarilloInteractivoMas1 = Color.FromArgb(247, 178, 83);
@@ -74,6 +77,64 @@ namespace LP2MegaAutos
         public static Color ClickableTextDefault = Rosa;
         public static Color ClickableTextEnter = Color.FromArgb(191, 90, 108);
         public static Color ClickableTextDown = Color.FromArgb(181, 51, 74);
+        public static Dictionary<ColoresSistema,Color> dColoresSistema = iniDicColorSis();
+        public static Dictionary<Color,ColoresSistema> dColores = iniDicColor();
+
+        public static Dictionary<ColoresSistema, Color> iniDicColorSis()
+        {
+            Dictionary<ColoresSistema, Color> d = new Dictionary<ColoresSistema, Color>();
+            d.Add(ColoresSistema.AmarilloInteractivo, Colores.AmarilloInteractivo);
+            d.Add(ColoresSistema.AmarilloInteractivoMas1,Colores.AmarilloInteractivoMas1);
+            d.Add(ColoresSistema.AmarilloInteractivoMas2,Colores.AmarilloInteractivoMas2);
+            d.Add(ColoresSistema.AmarilloInteractivoMenos1, Colores.AmarilloInteractivoMenos1);
+            d.Add(ColoresSistema.AmarilloInteractivoMenos2, Colores.AmarilloInteractivoMenos2);
+            d.Add(ColoresSistema.BackBackground, Colores.BackBackground);
+            d.Add(ColoresSistema.ChooseAmarillo, Colores.ChooseAmarillo);
+            d.Add(ColoresSistema.Disabled, Colores.Disabled);
+            d.Add(ColoresSistema.FormBackground, Colores.FormBackground);
+            d.Add(ColoresSistema.FormShape, Colores.FormShape);
+            d.Add(ColoresSistema.FormText, Colores.FormText);
+            d.Add(ColoresSistema.FrontBackground, Colores.FrontBackground);
+            d.Add(ColoresSistema.HighContrast, Colores.HighContrast);
+            d.Add(ColoresSistema.LowContrast, Colores.LowContrast);
+            d.Add(ColoresSistema.MediumContrast, Colores.MediumContrast);
+            d.Add(ColoresSistema.Morado, Colores.Morado);
+            d.Add(ColoresSistema.PrincipalAzulMetalico, Colores.PrincipalAzulMetalico);
+            d.Add(ColoresSistema.PrincipalIndigo, Colores.PrincipalIndigo);
+            d.Add(ColoresSistema.PrincipalRojo, Colores.PrincipalRojo);
+            d.Add(ColoresSistema.Rosa, Colores.Rosa);
+            d.Add(ColoresSistema.VerdeSuccess, Colores.VerdeSuccess);
+            d.Add(ColoresSistema.Transparent, Color.Transparent);
+            return d;
+        }
+
+        public static Dictionary<Color,ColoresSistema> iniDicColor()
+        {
+            Dictionary<Color, ColoresSistema> d = new Dictionary<Color, ColoresSistema>();
+            d.Add(Colores.AmarilloInteractivo, ColoresSistema.AmarilloInteractivo);
+            d.Add(Colores.AmarilloInteractivoMas1, ColoresSistema.AmarilloInteractivoMas1);
+            d.Add(Colores.AmarilloInteractivoMas2, ColoresSistema.AmarilloInteractivoMas2);
+            d.Add(Colores.AmarilloInteractivoMenos1, ColoresSistema.AmarilloInteractivoMenos1);
+            d.Add(Colores.AmarilloInteractivoMenos2, ColoresSistema.AmarilloInteractivoMenos2);
+            d.Add(Colores.BackBackground, ColoresSistema.BackBackground);
+            d.Add(Colores.ChooseAmarillo, ColoresSistema.ChooseAmarillo);
+            d.Add(Colores.Disabled, ColoresSistema.Disabled);
+            d.Add(Colores.FormBackground, ColoresSistema.FormBackground);
+            d.Add(Colores.FormShape, ColoresSistema.FormShape);
+            d.Add(Colores.FormText, ColoresSistema.FormText);
+            d.Add(Colores.FrontBackground, ColoresSistema.FrontBackground);
+            d.Add(Colores.HighContrast, ColoresSistema.HighContrast);
+            d.Add(Colores.LowContrast, ColoresSistema.LowContrast);
+            d.Add(Colores.MediumContrast, ColoresSistema.MediumContrast);
+            d.Add(Colores.Morado, ColoresSistema.Morado);
+            d.Add(Colores.PrincipalAzulMetalico, ColoresSistema.PrincipalAzulMetalico);
+            d.Add(Colores.PrincipalIndigo, ColoresSistema.PrincipalIndigo);
+            d.Add(Colores.PrincipalRojo, ColoresSistema.PrincipalRojo);
+            d.Add(Colores.Rosa, ColoresSistema.Rosa);
+            d.Add(Colores.VerdeSuccess, ColoresSistema.VerdeSuccess);
+            d.Add(Color.Transparent, ColoresSistema.Transparent);
+            return d;
+        }
 
         #endregion Denotive Colors
 
@@ -155,7 +216,6 @@ namespace LP2MegaAutos
 
         }
 
-
         public static void cambiarBackColor(Control c)
         {
             Console.WriteLine("Back: " + c.BackColor + " " + c.Name + "  ===>  " + opuesto(c.BackColor));
@@ -190,6 +250,64 @@ namespace LP2MegaAutos
             c.cambiarColorPanel(opuesto(c.getColorPanel()));    
         }
 
+        public static Color switchColoresSistema(ColoresSistema c)
+        {
+            switch (c)
+            {
+                case ColoresSistema.AmarilloInteractivo:
+                    return Colores.AmarilloInteractivo;
+                case ColoresSistema.AmarilloInteractivoMas1:
+                    return Colores.AmarilloInteractivoMas1;
+                case ColoresSistema.AmarilloInteractivoMas2:
+                    return Colores.AmarilloInteractivoMas2;
+                case ColoresSistema.AmarilloInteractivoMenos1:
+                    return Colores.AmarilloInteractivoMenos1;
+                case ColoresSistema.AmarilloInteractivoMenos2:
+                    return Colores.AmarilloInteractivoMenos2;
+                case ColoresSistema.BackBackground:
+                    return Colores.BackBackground;
+                case ColoresSistema.ChooseAmarillo:
+                    return Colores.ChooseAmarillo;
+                case ColoresSistema.Disabled:
+                    return Colores.Disabled;
+                case ColoresSistema.FormBackground:
+                    return Colores.FormBackground;
+                case ColoresSistema.FormShape:
+                    return Colores.FormShape;
+                case ColoresSistema.FormText:
+                    return Colores.FormText;
+                case ColoresSistema.FrontBackground:
+                    return Colores.FrontBackground;
+                case ColoresSistema.HighContrast:
+                    return Colores.HighContrast;
+                case ColoresSistema.LowContrast:
+                    return Colores.LowContrast;
+                case ColoresSistema.MediumContrast:
+                    return Colores.MediumContrast;
+                case ColoresSistema.Morado:
+                    return Colores.Morado;
+                case ColoresSistema.PrincipalAzulMetalico:
+                    return Colores.PrincipalAzulMetalico;
+                case ColoresSistema.PrincipalIndigo:
+                    return Colores.PrincipalIndigo;
+                case ColoresSistema.PrincipalRojo:
+                    return Colores.PrincipalRojo;
+                case ColoresSistema.Rosa:
+                    return Colores.Rosa;
+                case ColoresSistema.VerdeSuccess:
+                    return Colores.VerdeSuccess;
+                case ColoresSistema.Transparent:
+                    return Color.Transparent;
+            }
+            return Colores.HighContrast;
+        }
 
+    }
+    public enum ColoresSistema
+    {
+        Rosa, Morado, VerdeSuccess, AmarilloInteractivo, AmarilloInteractivoMas1, AmarilloInteractivoMas2,
+        AmarilloInteractivoMenos1, AmarilloInteractivoMenos2, PrincipalIndigo,
+        HighContrast, MediumContrast, LowContrast, BackBackground, FrontBackground, Disabled, PrincipalRojo,
+        PrincipalAzulMetalico, FormText, FormBackground, FormShape, ChooseAmarillo,Transparent
     }
 }

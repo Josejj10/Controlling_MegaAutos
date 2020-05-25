@@ -20,7 +20,7 @@ namespace LP2MegaAutos
             {
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
             }
-            Tipografias.crearFonts(this, tags);// Inicializa los fonts de este form
+            Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form
         }
 
 

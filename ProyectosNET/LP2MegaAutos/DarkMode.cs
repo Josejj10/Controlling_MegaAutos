@@ -177,11 +177,17 @@ namespace LP2MegaAutos
         {
             // Ignorar segun tag
             string nom = c.Name.ToString();
+           
             if (excepciones.Contains(nom)) return;
-            
+
+
             // Si es un roundedPanel
             if (c.GetType() == typeof(RoundedPanel))
+            {
                 Colores.cambiarRoundedPanelColor((RoundedPanel)c);
+                if (nom.Contains("Menu"))
+                    return;
+            }
             
             switch (nom)
             {

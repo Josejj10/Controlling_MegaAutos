@@ -77,7 +77,7 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
-    <Compile Include="ColorRoundedPanelExtender.cs">
+    <Compile Include="RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DarkMode.cs" />
@@ -114,6 +114,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ShadowPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemColorsExtender.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TagExtender.cs">

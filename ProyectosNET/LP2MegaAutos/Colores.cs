@@ -89,7 +89,7 @@ namespace LP2MegaAutos
             d.Add(ColoresSistema.AmarilloInteractivoMenos1, Colores.AmarilloInteractivoMenos1);
             d.Add(ColoresSistema.AmarilloInteractivoMenos2, Colores.AmarilloInteractivoMenos2);
             d.Add(ColoresSistema.BackBackground, Colores.BackBackground);
-            d.Add(ColoresSistema.ChooseAmarillo, Colores.ChooseAmarillo);
+            //d.Add(ColoresSistema.ChooseAmarillo, Colores.ChooseAmarillo);
             d.Add(ColoresSistema.Disabled, Colores.Disabled);
             d.Add(ColoresSistema.FormBackground, Colores.FormBackground);
             d.Add(ColoresSistema.FormShape, Colores.FormShape);
@@ -117,7 +117,7 @@ namespace LP2MegaAutos
             d.Add(Colores.AmarilloInteractivoMenos1, ColoresSistema.AmarilloInteractivoMenos1);
             d.Add(Colores.AmarilloInteractivoMenos2, ColoresSistema.AmarilloInteractivoMenos2);
             d.Add(Colores.BackBackground, ColoresSistema.BackBackground);
-            d.Add(Colores.ChooseAmarillo, ColoresSistema.ChooseAmarillo);
+            //d.Add(Colores.ChooseAmarillo, ColoresSistema.ChooseAmarillo);
             d.Add(Colores.Disabled, ColoresSistema.Disabled);
             d.Add(Colores.FormBackground, ColoresSistema.FormBackground);
             d.Add(Colores.FormShape, ColoresSistema.FormShape);

@@ -100,6 +100,12 @@
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="GraphicsExtension.cs" />
+    <Compile Include="pantallaAreaTrabajo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaInicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAreaTrabajo.resx">
+      <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>

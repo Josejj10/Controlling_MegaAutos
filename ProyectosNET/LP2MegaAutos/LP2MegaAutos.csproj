@@ -77,6 +77,12 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="pantallaInicioGerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInicioGerente.Designer.cs">
+      <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInicioGerente.resx">
+      <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

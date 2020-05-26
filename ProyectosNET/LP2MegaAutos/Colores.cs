@@ -89,7 +89,6 @@ namespace LP2MegaAutos
             d.Add(ColoresSistema.AmarilloInteractivoMenos1, Colores.AmarilloInteractivoMenos1);
             d.Add(ColoresSistema.AmarilloInteractivoMenos2, Colores.AmarilloInteractivoMenos2);
             d.Add(ColoresSistema.BackBackground, Colores.BackBackground);
-            //d.Add(ColoresSistema.ChooseAmarillo, Colores.ChooseAmarillo);
             d.Add(ColoresSistema.Disabled, Colores.Disabled);
             d.Add(ColoresSistema.FormBackground, Colores.FormBackground);
             d.Add(ColoresSistema.FormShape, Colores.FormShape);
@@ -117,7 +116,6 @@ namespace LP2MegaAutos
             d.Add(Colores.AmarilloInteractivoMenos1, ColoresSistema.AmarilloInteractivoMenos1);
             d.Add(Colores.AmarilloInteractivoMenos2, ColoresSistema.AmarilloInteractivoMenos2);
             d.Add(Colores.BackBackground, ColoresSistema.BackBackground);
-            //d.Add(Colores.ChooseAmarillo, ColoresSistema.ChooseAmarillo);
             d.Add(Colores.Disabled, ColoresSistema.Disabled);
             d.Add(Colores.FormBackground, ColoresSistema.FormBackground);
             d.Add(Colores.FormShape, ColoresSistema.FormShape);
@@ -247,67 +245,15 @@ namespace LP2MegaAutos
 
         public static void cambiarRoundedPanelColor(RoundedPanel c)
         {
-            c.cambiarColorPanel(opuesto(c.getColorPanel()));    
+            c.cambiarColorPanel(opuesto(c.getColorPanel()));
+            c.cambiarColorBorde(opuesto(c.getColorBorde()));
         }
-
-        public static Color switchColoresSistema(ColoresSistema c)
-        {
-            switch (c)
-            {
-                case ColoresSistema.AmarilloInteractivo:
-                    return Colores.AmarilloInteractivo;
-                case ColoresSistema.AmarilloInteractivoMas1:
-                    return Colores.AmarilloInteractivoMas1;
-                case ColoresSistema.AmarilloInteractivoMas2:
-                    return Colores.AmarilloInteractivoMas2;
-                case ColoresSistema.AmarilloInteractivoMenos1:
-                    return Colores.AmarilloInteractivoMenos1;
-                case ColoresSistema.AmarilloInteractivoMenos2:
-                    return Colores.AmarilloInteractivoMenos2;
-                case ColoresSistema.BackBackground:
-                    return Colores.BackBackground;
-                case ColoresSistema.ChooseAmarillo:
-                    return Colores.ChooseAmarillo;
-                case ColoresSistema.Disabled:
-                    return Colores.Disabled;
-                case ColoresSistema.FormBackground:
-                    return Colores.FormBackground;
-                case ColoresSistema.FormShape:
-                    return Colores.FormShape;
-                case ColoresSistema.FormText:
-                    return Colores.FormText;
-                case ColoresSistema.FrontBackground:
-                    return Colores.FrontBackground;
-                case ColoresSistema.HighContrast:
-                    return Colores.HighContrast;
-                case ColoresSistema.LowContrast:
-                    return Colores.LowContrast;
-                case ColoresSistema.MediumContrast:
-                    return Colores.MediumContrast;
-                case ColoresSistema.Morado:
-                    return Colores.Morado;
-                case ColoresSistema.PrincipalAzulMetalico:
-                    return Colores.PrincipalAzulMetalico;
-                case ColoresSistema.PrincipalIndigo:
-                    return Colores.PrincipalIndigo;
-                case ColoresSistema.PrincipalRojo:
-                    return Colores.PrincipalRojo;
-                case ColoresSistema.Rosa:
-                    return Colores.Rosa;
-                case ColoresSistema.VerdeSuccess:
-                    return Colores.VerdeSuccess;
-                case ColoresSistema.Transparent:
-                    return Color.Transparent;
-            }
-            return Colores.HighContrast;
-        }
-
     }
     public enum ColoresSistema
     {
         Rosa, Morado, VerdeSuccess, AmarilloInteractivo, AmarilloInteractivoMas1, AmarilloInteractivoMas2,
         AmarilloInteractivoMenos1, AmarilloInteractivoMenos2, PrincipalIndigo,
         HighContrast, MediumContrast, LowContrast, BackBackground, FrontBackground, Disabled, PrincipalRojo,
-        PrincipalAzulMetalico, FormText, FormBackground, FormShape, ChooseAmarillo,Transparent
+        PrincipalAzulMetalico, FormText, FormBackground, FormShape,Transparent
     }
 }

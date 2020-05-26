@@ -7,15 +7,15 @@ namespace LP2MegaAutos.CustomControls
 {
     public partial class ClickableText : Label
     {
-        Color colorDefault = Colores.ClickableTextDefault;
-        Color colorEnter = Colores.ClickableTextEnter;
-        Color colorDown = Colores.ClickableTextDown;
+        Color cDefault = Colores.ClickableTextDefault;
+        Color cEnter = Colores.ClickableTextEnter;
+        Color cDown = Colores.ClickableTextDown;
 
         #region  Public Constructors  
         public ClickableText()
         {
             // Default Color
-            this.ForeColor = colorDefault;
+            this.ForeColor = cDefault;
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Font = Tipografias.GetFromHash("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
@@ -27,9 +27,9 @@ namespace LP2MegaAutos.CustomControls
         public ClickableText(Color cDefault, Color cEnter, Color cDown)
         {
             this.ForeColor = cDefault;
-            colorDefault = cDefault;
-            colorEnter = cEnter;
-            colorDown = cDown;
+            this.cDefault = cDefault;
+            this.cEnter = cEnter;
+            this.cDown = cDown;
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Font = Tipografias.GetFromHash("Montserrat", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
@@ -44,22 +44,22 @@ namespace LP2MegaAutos.CustomControls
 
         protected override void OnMouseEnter(EventArgs e)
         {
-            this.ForeColor = colorEnter;
+            this.ForeColor = cEnter;
         }
 
         protected override void OnMouseLeave(EventArgs e)
         {
-            this.ForeColor = colorDefault;
+            this.ForeColor = cDefault;
         }
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            this.ForeColor = colorDown;
+            this.ForeColor = cDown;
         }
 
         #region OnMouseUpEvents
         protected override void OnMouseUp(MouseEventArgs e)
         {
-           this.ForeColor = colorDefault;
+           this.ForeColor = cDefault;
         }
 
         #endregion OnMouseUpEvents

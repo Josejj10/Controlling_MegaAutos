@@ -92,7 +92,7 @@ namespace LP2MegaAutos
         }
 
 
-        [Category("Data")]
+        [Category("Appearance")]
         [DisplayName("Font Size")]
         [Description("Para las Tipografias Embebidas")]
         public float GetTagFontSize(Control control)
@@ -102,7 +102,7 @@ namespace LP2MegaAutos
             return 10f; //Valor default
         }
 
-        [Category("Data")]
+        [Category("Appearance")]
         [DisplayName("Font Size")]
         [Description("Para las Tipografias Embebidas")]
         public void SetTagFontSize(Control control, float value)
@@ -114,7 +114,7 @@ namespace LP2MegaAutos
         }
 
 
-        [Category("Data")]
+        [Category("Appearance")]
         [DisplayName("Font Style")]
         [Description("Para las Tipografias Embebidas")]
         public FontStyle GetTagFontStyle(Control control)
@@ -124,7 +124,7 @@ namespace LP2MegaAutos
             return FontStyle.Regular;
         }
 
-        [Category("Data")]
+        [Category("Appearance")]
         [DisplayName("Font Style")]
         [Description("Para las Tipografias Embebidas")]
         public void SetTagFontStyle(Control control, FontStyle value)

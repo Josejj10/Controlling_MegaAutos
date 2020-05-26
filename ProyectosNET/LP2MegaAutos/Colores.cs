@@ -104,6 +104,8 @@ namespace LP2MegaAutos
             d.Add(ColoresSistema.Rosa, Colores.Rosa);
             d.Add(ColoresSistema.VerdeSuccess, Colores.VerdeSuccess);
             d.Add(ColoresSistema.Transparent, Color.Transparent);
+            d.Add(ColoresSistema.DMFrontBackground, Dark_Mode.FrontBackground);
+            d.Add(ColoresSistema.NegroPuro, Color.Black);
             return d;
         }
 
@@ -131,6 +133,8 @@ namespace LP2MegaAutos
             d.Add(Colores.Rosa, ColoresSistema.Rosa);
             d.Add(Colores.VerdeSuccess, ColoresSistema.VerdeSuccess);
             d.Add(Color.Transparent, ColoresSistema.Transparent);
+            d.Add(Dark_Mode.FrontBackground, ColoresSistema.DMFrontBackground);
+            d.Add(Color.Black, ColoresSistema.NegroPuro);
             return d;
         }
 
@@ -254,6 +258,6 @@ namespace LP2MegaAutos
         Rosa, Morado, VerdeSuccess, AmarilloInteractivo, AmarilloInteractivoMas1, AmarilloInteractivoMas2,
         AmarilloInteractivoMenos1, AmarilloInteractivoMenos2, PrincipalIndigo,
         HighContrast, MediumContrast, LowContrast, BackBackground, FrontBackground, Disabled, PrincipalRojo,
-        PrincipalAzulMetalico, FormText, FormBackground, FormShape,Transparent
+        PrincipalAzulMetalico, FormText, FormBackground, FormShape,Transparent, DMFrontBackground, NegroPuro
     }
 }

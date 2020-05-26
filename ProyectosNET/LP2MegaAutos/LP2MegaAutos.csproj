@@ -77,6 +77,12 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="pantallaActualizarUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaActualizarUsuarios.Designer.cs">
+      <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaActualizarUsuarios.resx">
+      <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>

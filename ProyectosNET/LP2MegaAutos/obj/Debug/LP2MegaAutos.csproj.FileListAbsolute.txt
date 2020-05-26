@@ -51,3 +51,6 @@ C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAut
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csproj.CopyComplete
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.exe
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pdb
+C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
+C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
+C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources

@@ -359,9 +359,9 @@
             this.btn_UsuariosU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.btn_UsuariosU2.ForeColor = System.Drawing.Color.White;
             this.systemColorsExtender1.SetForeColorSystem(this.btn_UsuariosU2, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_UsuariosU2.Location = new System.Drawing.Point(17, 3);
+            this.btn_UsuariosU2.Location = new System.Drawing.Point(13, 3);
             this.btn_UsuariosU2.Name = "btn_UsuariosU2";
-            this.btn_UsuariosU2.Size = new System.Drawing.Size(115, 64);
+            this.btn_UsuariosU2.Size = new System.Drawing.Size(116, 64);
             this.btn_UsuariosU2.TabIndex = 4;
             this.btn_UsuariosU2.Text = "Usuarios";
             this.btn_UsuariosU2.UseVisualStyleBackColor = false;

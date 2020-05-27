@@ -107,6 +107,12 @@
     <Compile Include="pantallaAgregarCliente.Designer.cs">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaAgregarDriver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAgregarDriver.Designer.cs">
+      <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaAgregarServicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="pantallaEditarCliente.Designer.cs">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaEditarDriver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaEditarDriver.Designer.cs">
+      <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaEditarInformacionPropia.cs">
       <SubType>UserControl</SubType>
@@ -259,6 +271,9 @@
     <EmbeddedResource Include="pantallaAgregarCliente.resx">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAgregarDriver.resx">
+      <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaAgregarServicio.resx">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarCliente.resx">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaEditarDriver.resx">
+      <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarInformacionPropia.resx">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>

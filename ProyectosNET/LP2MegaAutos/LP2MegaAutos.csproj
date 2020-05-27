@@ -402,6 +402,7 @@
   <ItemGroup>
     <Content Include="creditos.txt" />
     <Content Include="Resources\editar.png" />
+    <Content Include="Resources\magnifying-glass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

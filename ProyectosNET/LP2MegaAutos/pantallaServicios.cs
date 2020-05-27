@@ -37,14 +37,14 @@ namespace LP2MegaAutos
         private void btnEditarClick(Object sender, EventArgs e)
         {
             //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaInicioGerente.Instancia))
+            if (!this.Controls.Contains(pantallaEditarServicios.Instancia))
             {
-                this.Controls.Add(pantallaInicioGerente.Instancia);
-                pantallaInicioGerente.Instancia.Dock = DockStyle.Fill;
-                pantallaInicioGerente.Instancia.BringToFront();
+                this.Controls.Add(pantallaEditarServicios.Instancia);
+                pantallaEditarServicios.Instancia.Dock = DockStyle.Fill;
+                pantallaEditarServicios.Instancia.BringToFront();
             }
             else
-                pantallaInicioGerente.Instancia.BringToFront();
+                pantallaEditarServicios.Instancia.BringToFront();
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)
@@ -79,6 +79,36 @@ namespace LP2MegaAutos
             this.btnAZ.BackColor = Color.Transparent;
             this.btnZA.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btnReciente.BackColor = Color.Transparent;
+            this.btnAntiguo.BackColor = Color.Transparent;
+        }
+
+        private void btnAntiguo_Click(object sender, EventArgs e)
+        {
+            // Cambiar color rounded panels de atras
+            this.rndAZ.ColorPanel = Color.Transparent;
+            this.rndZA.ColorPanel = Color.Transparent;
+            this.rndAntiguo.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndReciente.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnAZ.BackColor = Color.Transparent;
+            this.btnAntiguo.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnReciente.BackColor = Color.Transparent;
+            this.btnZA.BackColor = Color.Transparent;
+        }
+
+        private void btnReciente_Click(object sender, EventArgs e)
+        {
+            // Cambiar color rounded panels de atras
+            this.rndAZ.ColorPanel = Color.Transparent;
+            this.rndReciente.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndZA.ColorPanel = Color.Transparent;
+            this.rndAntiguo.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnAZ.BackColor = Color.Transparent;
+            this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
         }
 

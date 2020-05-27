@@ -38,6 +38,8 @@ namespace LP2MegaAutos
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.reloj_dark = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new MetroFramework.Controls.MetroPanel();
+            this.rpBtnMenuGenerarReporte = new LP2MegaAutos.RoundedPanel();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.rpBtnMenuServicios = new LP2MegaAutos.RoundedPanel();
             this.btnServicios = new System.Windows.Forms.Button();
             this.rpBtnMenuHome = new LP2MegaAutos.RoundedPanel();
@@ -47,14 +49,13 @@ namespace LP2MegaAutos
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlBackBackground = new System.Windows.Forms.Panel();
             this.rpMain = new LP2MegaAutos.RoundedPanel();
-            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.title_bar.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.rpBtnMenuGenerarReporte.SuspendLayout();
             this.rpBtnMenuServicios.SuspendLayout();
             this.rpBtnMenuHome.SuspendLayout();
             this.panel_toggle_nocturno.SuspendLayout();
             this.pnlBackBackground.SuspendLayout();
-            this.rpMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // title_bar_2
@@ -151,6 +152,7 @@ namespace LP2MegaAutos
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.panelMenu.Controls.Add(this.rpBtnMenuGenerarReporte);
             this.panelMenu.Controls.Add(this.rpBtnMenuServicios);
             this.panelMenu.Controls.Add(this.rpBtnMenuHome);
             this.panelMenu.Controls.Add(this.panel_toggle_nocturno);
@@ -174,15 +176,66 @@ namespace LP2MegaAutos
             this.panelMenu.VerticalScrollbarHighlightOnWheel = false;
             this.panelMenu.VerticalScrollbarSize = 10;
             // 
+            // rpBtnMenuGenerarReporte
+            // 
+            this.rpBtnMenuGenerarReporte.ArcRadiusBorde = 15;
+            this.rpBtnMenuGenerarReporte.ArcRadiusPanel = 15;
+            this.rpBtnMenuGenerarReporte.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuGenerarReporte.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuGenerarReporte.Controls.Add(this.btnGenerarReporte);
+            this.rpBtnMenuGenerarReporte.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.rpBtnMenuGenerarReporte.Location = new System.Drawing.Point(9, 83);
+            this.rpBtnMenuGenerarReporte.Margin = new System.Windows.Forms.Padding(2);
+            this.rpBtnMenuGenerarReporte.MenosHeightBorde = 1;
+            this.rpBtnMenuGenerarReporte.MenosHeightPanel = 1;
+            this.rpBtnMenuGenerarReporte.MenosWidthBorde = 1;
+            this.rpBtnMenuGenerarReporte.MenosWidthPanel = 1;
+            this.rpBtnMenuGenerarReporte.Name = "rpBtnMenuGenerarReporte";
+            this.rpBtnMenuGenerarReporte.PorcLuzColorBorde = 0;
+            this.rpBtnMenuGenerarReporte.Size = new System.Drawing.Size(80, 54);
+            this.rpBtnMenuGenerarReporte.TabIndex = 28;
+            this.tags.SetTag2(this.rpBtnMenuGenerarReporte, null);
+            this.tags.SetTag3(this.rpBtnMenuGenerarReporte, null);
+            this.tags.SetTagFontName(this.rpBtnMenuGenerarReporte, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpBtnMenuGenerarReporte, 10F);
+            this.tags.SetTagFontStyle(this.rpBtnMenuGenerarReporte, System.Drawing.FontStyle.Regular);
+            this.rpBtnMenuGenerarReporte.XBorde = 0;
+            this.rpBtnMenuGenerarReporte.XPanel = 0;
+            this.rpBtnMenuGenerarReporte.YBorde = 0;
+            this.rpBtnMenuGenerarReporte.YPanel = 0;
+            // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReporte.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnGenerarReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
+            this.btnGenerarReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarReporte.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnGenerarReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnGenerarReporte.Location = new System.Drawing.Point(10, 3);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(62, 48);
+            this.btnGenerarReporte.TabIndex = 20;
+            this.tags.SetTag2(this.btnGenerarReporte, null);
+            this.tags.SetTag3(this.btnGenerarReporte, null);
+            this.tags.SetTagFontName(this.btnGenerarReporte, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnGenerarReporte, 12F);
+            this.tags.SetTagFontStyle(this.btnGenerarReporte, System.Drawing.FontStyle.Bold);
+            this.btnGenerarReporte.UseVisualStyleBackColor = false;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
+            // 
             // rpBtnMenuServicios
             // 
             this.rpBtnMenuServicios.ArcRadiusBorde = 15;
             this.rpBtnMenuServicios.ArcRadiusPanel = 15;
-            this.rpBtnMenuServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpBtnMenuServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpBtnMenuServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.rpBtnMenuServicios.Controls.Add(this.btnServicios);
             this.rpBtnMenuServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.rpBtnMenuServicios.Location = new System.Drawing.Point(9, 89);
+            this.rpBtnMenuServicios.Location = new System.Drawing.Point(9, 147);
             this.rpBtnMenuServicios.Margin = new System.Windows.Forms.Padding(2);
             this.rpBtnMenuServicios.MenosHeightBorde = 1;
             this.rpBtnMenuServicios.MenosHeightPanel = 1;
@@ -204,7 +257,7 @@ namespace LP2MegaAutos
             // 
             // btnServicios
             // 
-            this.btnServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnServicios.BackColor = System.Drawing.Color.Transparent;
             this.btnServicios.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
             this.btnServicios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnServicios.FlatAppearance.BorderSize = 0;
@@ -229,7 +282,7 @@ namespace LP2MegaAutos
             // 
             this.rpBtnMenuHome.ArcRadiusBorde = 15;
             this.rpBtnMenuHome.ArcRadiusPanel = 15;
-            this.rpBtnMenuHome.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpBtnMenuHome.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.rpBtnMenuHome.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpBtnMenuHome.Controls.Add(this.btnHome);
             this.rpBtnMenuHome.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
@@ -255,7 +308,7 @@ namespace LP2MegaAutos
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
             this.btnHome.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnHome.FlatAppearance.BorderSize = 0;
@@ -341,7 +394,6 @@ namespace LP2MegaAutos
             this.rpMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.rpMain.Controls.Add(this.rpTopMain);
             this.rpMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpMain.Location = new System.Drawing.Point(70, 25);
             this.rpMain.MenosHeightBorde = 1;
@@ -361,33 +413,6 @@ namespace LP2MegaAutos
             this.rpMain.XPanel = 0;
             this.rpMain.YBorde = 0;
             this.rpMain.YPanel = 0;
-            // 
-            // rpTopMain
-            // 
-            this.rpTopMain.ArcRadiusBorde = 15;
-            this.rpTopMain.ArcRadiusPanel = 15;
-            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 0);
-            this.rpTopMain.MenosHeightBorde = 1;
-            this.rpTopMain.MenosHeightPanel = 1;
-            this.rpTopMain.MenosWidthBorde = 1;
-            this.rpTopMain.MenosWidthPanel = 1;
-            this.rpTopMain.Name = "rpTopMain";
-            this.rpTopMain.PorcLuzColorBorde = 0;
-            this.rpTopMain.Size = new System.Drawing.Size(611, 40);
-            this.rpTopMain.TabIndex = 0;
-            this.tags.SetTag2(this.rpTopMain, null);
-            this.tags.SetTag3(this.rpTopMain, null);
-            this.tags.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpTopMain, 10F);
-            this.tags.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
-            this.rpTopMain.XBorde = 0;
-            this.rpTopMain.XPanel = 0;
-            this.rpTopMain.YBorde = 0;
-            this.rpTopMain.YPanel = 0;
             // 
             // frmPrincipal
             // 
@@ -411,11 +436,11 @@ namespace LP2MegaAutos
             this.Text = "frmPrincipal";
             this.title_bar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            this.rpBtnMenuGenerarReporte.ResumeLayout(false);
             this.rpBtnMenuServicios.ResumeLayout(false);
             this.rpBtnMenuHome.ResumeLayout(false);
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.pnlBackBackground.ResumeLayout(false);
-            this.rpMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -433,10 +458,11 @@ namespace LP2MegaAutos
         private System.Windows.Forms.Button boton_toggle_nocturno;
         private System.Windows.Forms.Panel pnlBackBackground;
         private RoundedPanel rpMain;
-        private RoundedPanel rpTopMain;
         private RoundedPanel rpBtnMenuHome;
         private System.Windows.Forms.Button btnHome;
         private RoundedPanel rpBtnMenuServicios;
         private System.Windows.Forms.Button btnServicios;
+        private RoundedPanel rpBtnMenuGenerarReporte;
+        private System.Windows.Forms.Button btnGenerarReporte;
     }
 }

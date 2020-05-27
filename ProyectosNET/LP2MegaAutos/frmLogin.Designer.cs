@@ -143,7 +143,7 @@ namespace LP2MegaAutos
             this.titulo_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.titulo_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.titulo_login.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titulo_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.titulo_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.titulo_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.titulo_login.Location = new System.Drawing.Point(22, 114);
             this.titulo_login.Name = "titulo_login";
@@ -657,6 +657,11 @@ namespace LP2MegaAutos
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Style = MetroFramework.MetroColorStyle.Black;
+            this.tags.SetTag2(this, null);
+            this.tags.SetTag3(this, null);
+            this.tags.SetTagFontName(this, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this, 10F);
+            this.tags.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.title_bar.ResumeLayout(false);
             this.fondoLoginTexto.ResumeLayout(false);

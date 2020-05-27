@@ -468,6 +468,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnl_Correo);
             this.Controls.Add(this.pnl_Telefono);
             this.Controls.Add(this.pnl_TipoDocumento);

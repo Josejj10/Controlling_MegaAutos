@@ -139,6 +139,20 @@ namespace LP2MegaAutos
             // Cambiar los botones y rPanel excepto el enviado
             cambiarColoresBotonesMenu(rpBtnMenuServicios);
         }
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+            if (!rpMain.Controls.Contains(pantallaGenerarReporte.Instancia))
+            {
+                rpMain.Controls.Add(pantallaGenerarReporte.Instancia);
+                pantallaGenerarReporte.Instancia.Dock = DockStyle.Fill;
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaGenerarReporte.Instancia.Parent);
+            }
+            pantallaGenerarReporte.Instancia.BringToFront();
+
+            // Cambiar los botones y rPanel excepto el enviado
+            cambiarColoresBotonesMenu(rpBtnMenuGenerarReporte);
+        }
         #endregion botonesClick
         
         #endregion panelMenu

@@ -23,6 +23,8 @@ namespace LP2MegaAutos
             Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form
         }
 
+            
+        
 
         #region title_bar
 
@@ -76,8 +78,9 @@ namespace LP2MegaAutos
         }
 
 
-        #endregion Dark Mode
 
+
+        #endregion Dark Mode
 
     }
 }

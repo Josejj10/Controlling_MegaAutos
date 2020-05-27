@@ -8,21 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+public enum tipoItem
+{
+    Driver,
+    Usuario,
+    Cliente,
+    Servicio
+}
+
 namespace LP2MegaAutos
 {
     public partial class itemLista : UserControl
     {
+
+        //private tipoItem _tipoItem;
         public itemLista()
         {
             InitializeComponent();
+            
         }
 
+        
+        #region Propiedades
         [Description("Texto Principal"), Category("Item Lista")]
         public string TextoPrincipal
         {
             get { return lblPrincipal.Text; }
             set { lblPrincipal.Text = value; }
         }
+
 
         [Description("Texto Secundario"), Category("Item Lista")]
         public string Textosecundario
@@ -63,8 +77,12 @@ namespace LP2MegaAutos
         [Description("Color Panel"), Category("Item Lista")]
         public Color ColorPanel
         {
-            get { return rpItem.getColorPanel(); }
-            set { rpItem.cambiarColorPanel(value); }
+            get{ return rpItem.getColorPanel();}
+            set { 
+                rpItem.cambiarColorPanel(value);
+                foreach (Control c in rpItem.Controls)
+                    c.BackColor = value;
+            }
         }
         [Description("Color Back"), Category("Item Lista")]
         public Color ColorBack
@@ -72,7 +90,27 @@ namespace LP2MegaAutos
             get { return rpItem.BackColor; }
             set { rpItem.BackColor = value; }
         }
+        #endregion Propiedades
+
+
+        // Para delegar el evento de Click al form que lo llamó,
+        // Se tiene que suscribir de manera: itemLista2.EditarClick+= btnEditarClick;
+        // Cuando se inserte  el itemLista (en el constructor si no se inserta de manera dinámica)
+        // https://stackoverflow.com/questions/4430523/how-do-i-subscribe-to-an-event-of-a-usercontrol
+        // Agradecido con el de arriba
+
+        public delegate void ButtonClickEventHandler(object sender, EventArgs e);
+        public event ButtonClickEventHandler EditarClick;
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = EditarClick;
+            if (h != null) h(this, e);
+        }
+
+       
     }
-
-
 }
+
+
+

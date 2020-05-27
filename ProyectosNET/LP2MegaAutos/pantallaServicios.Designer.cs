@@ -28,302 +28,409 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.il_Drivers3 = new LP2MegaAutos.itemLista();
-            this.il_Drivers2 = new LP2MegaAutos.itemLista();
-            this.il_Drivers1 = new LP2MegaAutos.itemLista();
-            this.rpn_ListaDrivers = new LP2MegaAutos.RoundedPanel();
-            this.btn_AgregarDriver = new System.Windows.Forms.Button();
-            this.lbl_ListaDrivers = new System.Windows.Forms.Label();
-            this.txt_BuscarUsuario = new System.Windows.Forms.TextBox();
-            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
-            this.btn_Reciente_Drivers = new System.Windows.Forms.Button();
-            this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
-            this.btn_Antiguo_Drivers = new System.Windows.Forms.Button();
-            this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
-            this.btn_ZA_Drivers = new System.Windows.Forms.Button();
-            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
-            this.btn_AZ_Drivers = new System.Windows.Forms.Button();
-            this.rpn_ListaDrivers.SuspendLayout();
-            this.roundedPanel4.SuspendLayout();
-            this.roundedPanel3.SuspendLayout();
-            this.roundedPanel2.SuspendLayout();
-            this.roundedPanel1.SuspendLayout();
+            this.txt_Buscar = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.il_Servicios2 = new LP2MegaAutos.itemLista();
+            this.il_Servicios3 = new LP2MegaAutos.itemLista();
+            this.il_Servicios1 = new LP2MegaAutos.itemLista();
+            this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
+            this.btn_Agregar = new System.Windows.Forms.Button();
+            this.lbl_ListaServicios = new System.Windows.Forms.Label();
+            this.rndReciente = new LP2MegaAutos.RoundedPanel();
+            this.btnReciente = new System.Windows.Forms.Button();
+            this.rndAntiguo = new LP2MegaAutos.RoundedPanel();
+            this.btnAntiguo = new System.Windows.Forms.Button();
+            this.rndZA = new LP2MegaAutos.RoundedPanel();
+            this.btnZA = new System.Windows.Forms.Button();
+            this.rndAZ = new LP2MegaAutos.RoundedPanel();
+            this.btnAZ = new System.Windows.Forms.Button();
+            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.panel1.SuspendLayout();
+            this.rpn_ListaServicios.SuspendLayout();
+            this.rndReciente.SuspendLayout();
+            this.rndAntiguo.SuspendLayout();
+            this.rndZA.SuspendLayout();
+            this.rndAZ.SuspendLayout();
             this.SuspendLayout();
             // 
-            // il_Drivers3
+            // txt_Buscar
             // 
-            this.il_Drivers3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers3.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers3.Location = new System.Drawing.Point(57, 364);
-            this.il_Drivers3.Name = "il_Drivers3";
-            this.il_Drivers3.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers3.TabIndex = 21;
-            this.il_Drivers3.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers3.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers3.TextoPrincipal = "Mecánica a domicilio";
-            this.il_Drivers3.Textosecundario = "Mecánica";
-            this.il_Drivers3.TextoTercero = "MEC-002";
+            this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_Buscar.Location = new System.Drawing.Point(36, 29);
+            this.txt_Buscar.Name = "txt_Buscar";
+            this.txt_Buscar.Size = new System.Drawing.Size(538, 18);
+            this.txt_Buscar.TabIndex = 17;
+            this.tagsExtender1.SetTag2(this.txt_Buscar, null);
+            this.tagsExtender1.SetTag3(this.txt_Buscar, null);
+            this.tagsExtender1.SetTagFontName(this.txt_Buscar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
+            this.txt_Buscar.Text = "Buscar";
+            this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
             // 
-            // il_Drivers2
+            // panel1
             // 
-            this.il_Drivers2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers2.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers2.Location = new System.Drawing.Point(57, 254);
-            this.il_Drivers2.Name = "il_Drivers2";
-            this.il_Drivers2.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers2.TabIndex = 20;
-            this.il_Drivers2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers2.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers2.TextoPrincipal = "Pintura en horno";
-            this.il_Drivers2.Textosecundario = "Pintura";
-            this.il_Drivers2.TextoTercero = "PIN-002";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.panel1.Controls.Add(this.il_Servicios2);
+            this.panel1.Controls.Add(this.il_Servicios3);
+            this.panel1.Controls.Add(this.il_Servicios1);
+            this.panel1.Location = new System.Drawing.Point(36, 142);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(538, 327);
+            this.panel1.TabIndex = 26;
+            this.tagsExtender1.SetTag2(this.panel1, null);
+            this.tagsExtender1.SetTag3(this.panel1, null);
+            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
-            // il_Drivers1
+            // il_Servicios2
             // 
-            this.il_Drivers1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers1.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers1.Location = new System.Drawing.Point(57, 146);
-            this.il_Drivers1.Name = "il_Drivers1";
-            this.il_Drivers1.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers1.TabIndex = 19;
-            this.il_Drivers1.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers1.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers1.TextoPrincipal = "Mantenimiento Preventivo";
-            this.il_Drivers1.Textosecundario = "Mecánica";
-            this.il_Drivers1.TextoTercero = "MEC-001";
+            this.il_Servicios2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Servicios2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Servicios2.ColorPanel = System.Drawing.Color.White;
+            this.il_Servicios2.Location = new System.Drawing.Point(21, 130);
+            this.il_Servicios2.Name = "il_Servicios2";
+            this.il_Servicios2.Size = new System.Drawing.Size(497, 104);
+            this.il_Servicios2.TabIndex = 20;
+            this.tagsExtender1.SetTag2(this.il_Servicios2, null);
+            this.tagsExtender1.SetTag3(this.il_Servicios2, null);
+            this.tagsExtender1.SetTagFontName(this.il_Servicios2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Servicios2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Servicios2, System.Drawing.FontStyle.Regular);
+            this.il_Servicios2.TextoAgregadoPor = "Percy Jackson";
+            this.il_Servicios2.TextoFecha = "dd - mm - aaaa";
+            this.il_Servicios2.TextoPrincipal = "Pintura en horno";
+            this.il_Servicios2.Textosecundario = "Pintura";
+            this.il_Servicios2.TextoTercero = "PIN-002";
             // 
-            // rpn_ListaDrivers
+            // il_Servicios3
             // 
-            this.rpn_ListaDrivers.ArcRadiusBorde = 15;
-            this.rpn_ListaDrivers.ArcRadiusPanel = 15;
-            this.rpn_ListaDrivers.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_ListaDrivers.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.rpn_ListaDrivers.Controls.Add(this.btn_AgregarDriver);
-            this.rpn_ListaDrivers.Controls.Add(this.lbl_ListaDrivers);
-            this.rpn_ListaDrivers.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpn_ListaDrivers.Location = new System.Drawing.Point(36, 106);
-            this.rpn_ListaDrivers.MenosHeightBorde = 1;
-            this.rpn_ListaDrivers.MenosHeightPanel = 1;
-            this.rpn_ListaDrivers.MenosWidthBorde = 1;
-            this.rpn_ListaDrivers.MenosWidthPanel = 1;
-            this.rpn_ListaDrivers.Name = "rpn_ListaDrivers";
-            this.rpn_ListaDrivers.PorcLuzColorBorde = 0;
-            this.rpn_ListaDrivers.Size = new System.Drawing.Size(538, 36);
-            this.rpn_ListaDrivers.TabIndex = 18;
-            this.rpn_ListaDrivers.XBorde = 0;
-            this.rpn_ListaDrivers.XPanel = 0;
-            this.rpn_ListaDrivers.YBorde = 0;
-            this.rpn_ListaDrivers.YPanel = 0;
+            this.il_Servicios3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Servicios3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Servicios3.ColorPanel = System.Drawing.Color.White;
+            this.il_Servicios3.Location = new System.Drawing.Point(21, 254);
+            this.il_Servicios3.Name = "il_Servicios3";
+            this.il_Servicios3.Size = new System.Drawing.Size(497, 104);
+            this.il_Servicios3.TabIndex = 21;
+            this.tagsExtender1.SetTag2(this.il_Servicios3, null);
+            this.tagsExtender1.SetTag3(this.il_Servicios3, null);
+            this.tagsExtender1.SetTagFontName(this.il_Servicios3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Servicios3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Servicios3, System.Drawing.FontStyle.Regular);
+            this.il_Servicios3.TextoAgregadoPor = "Percy Jackson";
+            this.il_Servicios3.TextoFecha = "dd - mm - aaaa";
+            this.il_Servicios3.TextoPrincipal = "Mecánica a domicilio";
+            this.il_Servicios3.Textosecundario = "Mecánica";
+            this.il_Servicios3.TextoTercero = "MEC-002";
             // 
-            // btn_AgregarDriver
+            // il_Servicios1
             // 
-            this.btn_AgregarDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.btn_AgregarDriver.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarDriver.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarDriver.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarDriver.Location = new System.Drawing.Point(432, 4);
-            this.btn_AgregarDriver.Name = "btn_AgregarDriver";
-            this.btn_AgregarDriver.Size = new System.Drawing.Size(94, 26);
-            this.btn_AgregarDriver.TabIndex = 6;
-            this.btn_AgregarDriver.Text = "+ Agregar";
-            this.btn_AgregarDriver.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_AgregarDriver.UseVisualStyleBackColor = false;
+            this.il_Servicios1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Servicios1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Servicios1.ColorPanel = System.Drawing.Color.White;
+            this.il_Servicios1.Location = new System.Drawing.Point(21, 6);
+            this.il_Servicios1.Name = "il_Servicios1";
+            this.il_Servicios1.Size = new System.Drawing.Size(497, 104);
+            this.il_Servicios1.TabIndex = 19;
+            this.tagsExtender1.SetTag2(this.il_Servicios1, null);
+            this.tagsExtender1.SetTag3(this.il_Servicios1, null);
+            this.tagsExtender1.SetTagFontName(this.il_Servicios1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Servicios1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Servicios1, System.Drawing.FontStyle.Regular);
+            this.il_Servicios1.TextoAgregadoPor = "Percy Jackson";
+            this.il_Servicios1.TextoFecha = "dd - mm - aaaa";
+            this.il_Servicios1.TextoPrincipal = "Mantenimiento Preventivo";
+            this.il_Servicios1.Textosecundario = "Mecánica";
+            this.il_Servicios1.TextoTercero = "MEC-001";
             // 
-            // lbl_ListaDrivers
+            // rpn_ListaServicios
             // 
-            this.lbl_ListaDrivers.AutoSize = true;
-            this.lbl_ListaDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.lbl_ListaDrivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_ListaDrivers.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ListaDrivers.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaDrivers.Location = new System.Drawing.Point(228, 5);
-            this.lbl_ListaDrivers.Name = "lbl_ListaDrivers";
-            this.lbl_ListaDrivers.Size = new System.Drawing.Size(84, 22);
-            this.lbl_ListaDrivers.TabIndex = 0;
-            this.lbl_ListaDrivers.Text = "Servicios";
-            this.lbl_ListaDrivers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rpn_ListaServicios.ArcRadiusBorde = 15;
+            this.rpn_ListaServicios.ArcRadiusPanel = 15;
+            this.rpn_ListaServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_ListaServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.rpn_ListaServicios.Controls.Add(this.btn_Agregar);
+            this.rpn_ListaServicios.Controls.Add(this.lbl_ListaServicios);
+            this.rpn_ListaServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
+            this.rpn_ListaServicios.Location = new System.Drawing.Point(36, 115);
+            this.rpn_ListaServicios.MenosHeightBorde = 1;
+            this.rpn_ListaServicios.MenosHeightPanel = 1;
+            this.rpn_ListaServicios.MenosWidthBorde = 1;
+            this.rpn_ListaServicios.MenosWidthPanel = 1;
+            this.rpn_ListaServicios.Name = "rpn_ListaServicios";
+            this.rpn_ListaServicios.PorcLuzColorBorde = 0;
+            this.rpn_ListaServicios.Size = new System.Drawing.Size(539, 27);
+            this.rpn_ListaServicios.TabIndex = 18;
+            this.tagsExtender1.SetTag2(this.rpn_ListaServicios, null);
+            this.tagsExtender1.SetTag3(this.rpn_ListaServicios, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_ListaServicios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_ListaServicios, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_ListaServicios, System.Drawing.FontStyle.Regular);
+            this.rpn_ListaServicios.XBorde = 0;
+            this.rpn_ListaServicios.XPanel = 0;
+            this.rpn_ListaServicios.YBorde = 0;
+            this.rpn_ListaServicios.YPanel = 0;
             // 
-            // txt_BuscarUsuario
+            // btn_Agregar
             // 
-            this.txt_BuscarUsuario.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_BuscarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_BuscarUsuario.Location = new System.Drawing.Point(36, 29);
-            this.txt_BuscarUsuario.Name = "txt_BuscarUsuario";
-            this.txt_BuscarUsuario.Size = new System.Drawing.Size(148, 25);
-            this.txt_BuscarUsuario.TabIndex = 17;
-            this.txt_BuscarUsuario.Text = "Buscar";
+            this.btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_Agregar.FlatAppearance.BorderSize = 0;
+            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_Agregar.Location = new System.Drawing.Point(441, 2);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(78, 23);
+            this.btn_Agregar.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.btn_Agregar, null);
+            this.tagsExtender1.SetTag3(this.btn_Agregar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 8F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Agregar, System.Drawing.FontStyle.Bold);
+            this.btn_Agregar.Text = "+ Agregar";
+            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Agregar.UseVisualStyleBackColor = false;
             // 
-            // roundedPanel4
+            // lbl_ListaServicios
             // 
-            this.roundedPanel4.ArcRadiusBorde = 8;
-            this.roundedPanel4.ArcRadiusPanel = 8;
-            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundedPanel4.Controls.Add(this.btn_Reciente_Drivers);
-            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel4.Location = new System.Drawing.Point(444, 65);
-            this.roundedPanel4.MenosHeightBorde = 1;
-            this.roundedPanel4.MenosHeightPanel = 1;
-            this.roundedPanel4.MenosWidthBorde = 1;
-            this.roundedPanel4.MenosWidthPanel = 1;
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.PorcLuzColorBorde = 0;
-            this.roundedPanel4.Size = new System.Drawing.Size(130, 35);
-            this.roundedPanel4.TabIndex = 25;
-            this.roundedPanel4.XBorde = 0;
-            this.roundedPanel4.XPanel = 0;
-            this.roundedPanel4.YBorde = 0;
-            this.roundedPanel4.YPanel = 0;
+            this.lbl_ListaServicios.AutoSize = true;
+            this.lbl_ListaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
+            this.lbl_ListaServicios.Location = new System.Drawing.Point(229, 2);
+            this.lbl_ListaServicios.Name = "lbl_ListaServicios";
+            this.lbl_ListaServicios.Size = new System.Drawing.Size(88, 19);
+            this.lbl_ListaServicios.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
+            this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ListaServicios, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Bold);
+            this.lbl_ListaServicios.Text = "Servicios";
+            this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Reciente_Drivers
+            // rndReciente
             // 
-            this.btn_Reciente_Drivers.BackColor = System.Drawing.Color.White;
-            this.btn_Reciente_Drivers.FlatAppearance.BorderSize = 0;
-            this.btn_Reciente_Drivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Reciente_Drivers.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reciente_Drivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_Reciente_Drivers.Location = new System.Drawing.Point(3, 2);
-            this.btn_Reciente_Drivers.Name = "btn_Reciente_Drivers";
-            this.btn_Reciente_Drivers.Size = new System.Drawing.Size(125, 30);
-            this.btn_Reciente_Drivers.TabIndex = 8;
-            this.btn_Reciente_Drivers.Text = "Reciente";
-            this.btn_Reciente_Drivers.UseVisualStyleBackColor = false;
+            this.rndReciente.ArcRadiusBorde = 8;
+            this.rndReciente.ArcRadiusPanel = 8;
+            this.rndReciente.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndReciente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndReciente.Controls.Add(this.btnReciente);
+            this.rndReciente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndReciente.Location = new System.Drawing.Point(444, 65);
+            this.rndReciente.MenosHeightBorde = 1;
+            this.rndReciente.MenosHeightPanel = 1;
+            this.rndReciente.MenosWidthBorde = 1;
+            this.rndReciente.MenosWidthPanel = 1;
+            this.rndReciente.Name = "rndReciente";
+            this.rndReciente.PorcLuzColorBorde = 0;
+            this.rndReciente.Size = new System.Drawing.Size(130, 35);
+            this.rndReciente.TabIndex = 25;
+            this.tagsExtender1.SetTag2(this.rndReciente, null);
+            this.tagsExtender1.SetTag3(this.rndReciente, null);
+            this.tagsExtender1.SetTagFontName(this.rndReciente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rndReciente, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rndReciente, System.Drawing.FontStyle.Regular);
+            this.rndReciente.XBorde = 0;
+            this.rndReciente.XPanel = 0;
+            this.rndReciente.YBorde = 0;
+            this.rndReciente.YPanel = 0;
             // 
-            // roundedPanel3
+            // btnReciente
             // 
-            this.roundedPanel3.ArcRadiusBorde = 8;
-            this.roundedPanel3.ArcRadiusPanel = 8;
-            this.roundedPanel3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.roundedPanel3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundedPanel3.Controls.Add(this.btn_Antiguo_Drivers);
-            this.roundedPanel3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel3.Location = new System.Drawing.Point(308, 65);
-            this.roundedPanel3.MenosHeightBorde = 1;
-            this.roundedPanel3.MenosHeightPanel = 1;
-            this.roundedPanel3.MenosWidthBorde = 1;
-            this.roundedPanel3.MenosWidthPanel = 1;
-            this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.PorcLuzColorBorde = 0;
-            this.roundedPanel3.Size = new System.Drawing.Size(130, 35);
-            this.roundedPanel3.TabIndex = 24;
-            this.roundedPanel3.XBorde = 0;
-            this.roundedPanel3.XPanel = 0;
-            this.roundedPanel3.YBorde = 0;
-            this.roundedPanel3.YPanel = 0;
+            this.btnReciente.BackColor = System.Drawing.Color.White;
+            this.btnReciente.FlatAppearance.BorderSize = 0;
+            this.btnReciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnReciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReciente.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnReciente.Location = new System.Drawing.Point(3, 2);
+            this.btnReciente.Name = "btnReciente";
+            this.btnReciente.Size = new System.Drawing.Size(125, 30);
+            this.btnReciente.TabIndex = 8;
+            this.tagsExtender1.SetTag2(this.btnReciente, null);
+            this.tagsExtender1.SetTag3(this.btnReciente, null);
+            this.tagsExtender1.SetTagFontName(this.btnReciente, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnReciente, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnReciente, System.Drawing.FontStyle.Bold);
+            this.btnReciente.Text = "Reciente";
+            this.btnReciente.UseVisualStyleBackColor = false;
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
-            // btn_Antiguo_Drivers
+            // rndAntiguo
             // 
-            this.btn_Antiguo_Drivers.BackColor = System.Drawing.Color.White;
-            this.btn_Antiguo_Drivers.FlatAppearance.BorderSize = 0;
-            this.btn_Antiguo_Drivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Antiguo_Drivers.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Antiguo_Drivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_Antiguo_Drivers.Location = new System.Drawing.Point(3, 2);
-            this.btn_Antiguo_Drivers.Name = "btn_Antiguo_Drivers";
-            this.btn_Antiguo_Drivers.Size = new System.Drawing.Size(125, 30);
-            this.btn_Antiguo_Drivers.TabIndex = 7;
-            this.btn_Antiguo_Drivers.Text = "Antiguo";
-            this.btn_Antiguo_Drivers.UseVisualStyleBackColor = false;
+            this.rndAntiguo.ArcRadiusBorde = 8;
+            this.rndAntiguo.ArcRadiusPanel = 8;
+            this.rndAntiguo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndAntiguo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndAntiguo.Controls.Add(this.btnAntiguo);
+            this.rndAntiguo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndAntiguo.Location = new System.Drawing.Point(308, 65);
+            this.rndAntiguo.MenosHeightBorde = 1;
+            this.rndAntiguo.MenosHeightPanel = 1;
+            this.rndAntiguo.MenosWidthBorde = 1;
+            this.rndAntiguo.MenosWidthPanel = 1;
+            this.rndAntiguo.Name = "rndAntiguo";
+            this.rndAntiguo.PorcLuzColorBorde = 0;
+            this.rndAntiguo.Size = new System.Drawing.Size(130, 35);
+            this.rndAntiguo.TabIndex = 24;
+            this.tagsExtender1.SetTag2(this.rndAntiguo, null);
+            this.tagsExtender1.SetTag3(this.rndAntiguo, null);
+            this.tagsExtender1.SetTagFontName(this.rndAntiguo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rndAntiguo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rndAntiguo, System.Drawing.FontStyle.Regular);
+            this.rndAntiguo.XBorde = 0;
+            this.rndAntiguo.XPanel = 0;
+            this.rndAntiguo.YBorde = 0;
+            this.rndAntiguo.YPanel = 0;
             // 
-            // roundedPanel2
+            // btnAntiguo
             // 
-            this.roundedPanel2.ArcRadiusBorde = 8;
-            this.roundedPanel2.ArcRadiusPanel = 8;
-            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundedPanel2.Controls.Add(this.btn_ZA_Drivers);
-            this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel2.Location = new System.Drawing.Point(172, 65);
-            this.roundedPanel2.MenosHeightBorde = 1;
-            this.roundedPanel2.MenosHeightPanel = 1;
-            this.roundedPanel2.MenosWidthBorde = 1;
-            this.roundedPanel2.MenosWidthPanel = 1;
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.PorcLuzColorBorde = 0;
-            this.roundedPanel2.Size = new System.Drawing.Size(130, 35);
-            this.roundedPanel2.TabIndex = 23;
-            this.roundedPanel2.XBorde = 0;
-            this.roundedPanel2.XPanel = 0;
-            this.roundedPanel2.YBorde = 0;
-            this.roundedPanel2.YPanel = 0;
+            this.btnAntiguo.BackColor = System.Drawing.Color.White;
+            this.btnAntiguo.FlatAppearance.BorderSize = 0;
+            this.btnAntiguo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAntiguo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAntiguo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAntiguo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAntiguo.Location = new System.Drawing.Point(3, 2);
+            this.btnAntiguo.Name = "btnAntiguo";
+            this.btnAntiguo.Size = new System.Drawing.Size(125, 30);
+            this.btnAntiguo.TabIndex = 7;
+            this.tagsExtender1.SetTag2(this.btnAntiguo, null);
+            this.tagsExtender1.SetTag3(this.btnAntiguo, null);
+            this.tagsExtender1.SetTagFontName(this.btnAntiguo, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnAntiguo, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnAntiguo, System.Drawing.FontStyle.Bold);
+            this.btnAntiguo.Text = "Antiguo";
+            this.btnAntiguo.UseVisualStyleBackColor = false;
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
-            // btn_ZA_Drivers
+            // rndZA
             // 
-            this.btn_ZA_Drivers.BackColor = System.Drawing.Color.White;
-            this.btn_ZA_Drivers.FlatAppearance.BorderSize = 0;
-            this.btn_ZA_Drivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZA_Drivers.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ZA_Drivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_ZA_Drivers.Location = new System.Drawing.Point(3, 3);
-            this.btn_ZA_Drivers.Name = "btn_ZA_Drivers";
-            this.btn_ZA_Drivers.Size = new System.Drawing.Size(125, 30);
-            this.btn_ZA_Drivers.TabIndex = 6;
-            this.btn_ZA_Drivers.Text = "Z - A";
-            this.btn_ZA_Drivers.UseVisualStyleBackColor = false;
-            this.btn_ZA_Drivers.Click += new System.EventHandler(this.btn_ZA_Drivers_Click);
+            this.rndZA.ArcRadiusBorde = 8;
+            this.rndZA.ArcRadiusPanel = 8;
+            this.rndZA.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndZA.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndZA.Controls.Add(this.btnZA);
+            this.rndZA.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndZA.Location = new System.Drawing.Point(172, 65);
+            this.rndZA.MenosHeightBorde = 1;
+            this.rndZA.MenosHeightPanel = 1;
+            this.rndZA.MenosWidthBorde = 1;
+            this.rndZA.MenosWidthPanel = 1;
+            this.rndZA.Name = "rndZA";
+            this.rndZA.PorcLuzColorBorde = 0;
+            this.rndZA.Size = new System.Drawing.Size(130, 35);
+            this.rndZA.TabIndex = 23;
+            this.tagsExtender1.SetTag2(this.rndZA, null);
+            this.tagsExtender1.SetTag3(this.rndZA, null);
+            this.tagsExtender1.SetTagFontName(this.rndZA, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rndZA, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rndZA, System.Drawing.FontStyle.Regular);
+            this.rndZA.XBorde = 0;
+            this.rndZA.XPanel = 0;
+            this.rndZA.YBorde = 0;
+            this.rndZA.YPanel = 0;
             // 
-            // roundedPanel1
+            // btnZA
             // 
-            this.roundedPanel1.ArcRadiusBorde = 8;
-            this.roundedPanel1.ArcRadiusPanel = 8;
-            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.roundedPanel1.Controls.Add(this.btn_AZ_Drivers);
-            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel1.Location = new System.Drawing.Point(36, 65);
-            this.roundedPanel1.MenosHeightBorde = 1;
-            this.roundedPanel1.MenosHeightPanel = 1;
-            this.roundedPanel1.MenosWidthBorde = 1;
-            this.roundedPanel1.MenosWidthPanel = 1;
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.PorcLuzColorBorde = 0;
-            this.roundedPanel1.Size = new System.Drawing.Size(130, 35);
-            this.roundedPanel1.TabIndex = 22;
-            this.roundedPanel1.XBorde = 0;
-            this.roundedPanel1.XPanel = 0;
-            this.roundedPanel1.YBorde = 0;
-            this.roundedPanel1.YPanel = 0;
+            this.btnZA.BackColor = System.Drawing.Color.White;
+            this.btnZA.FlatAppearance.BorderSize = 0;
+            this.btnZA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnZA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnZA.Location = new System.Drawing.Point(3, 2);
+            this.btnZA.Name = "btnZA";
+            this.btnZA.Size = new System.Drawing.Size(125, 30);
+            this.btnZA.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.btnZA, null);
+            this.tagsExtender1.SetTag3(this.btnZA, null);
+            this.tagsExtender1.SetTagFontName(this.btnZA, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnZA, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnZA, System.Drawing.FontStyle.Bold);
+            this.btnZA.Text = "Z - A";
+            this.btnZA.UseVisualStyleBackColor = false;
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
             // 
-            // btn_AZ_Drivers
+            // rndAZ
             // 
-            this.btn_AZ_Drivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.btn_AZ_Drivers.FlatAppearance.BorderSize = 0;
-            this.btn_AZ_Drivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AZ_Drivers.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AZ_Drivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_AZ_Drivers.Location = new System.Drawing.Point(3, 2);
-            this.btn_AZ_Drivers.Name = "btn_AZ_Drivers";
-            this.btn_AZ_Drivers.Size = new System.Drawing.Size(125, 30);
-            this.btn_AZ_Drivers.TabIndex = 5;
-            this.btn_AZ_Drivers.Text = "A - Z";
-            this.btn_AZ_Drivers.UseVisualStyleBackColor = false;
-            this.btn_AZ_Drivers.Click += new System.EventHandler(this.btn_AZ_Drivers_Click);
+            this.rndAZ.ArcRadiusBorde = 8;
+            this.rndAZ.ArcRadiusPanel = 8;
+            this.rndAZ.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndAZ.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndAZ.Controls.Add(this.btnAZ);
+            this.rndAZ.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndAZ.Location = new System.Drawing.Point(36, 65);
+            this.rndAZ.MenosHeightBorde = 1;
+            this.rndAZ.MenosHeightPanel = 1;
+            this.rndAZ.MenosWidthBorde = 1;
+            this.rndAZ.MenosWidthPanel = 1;
+            this.rndAZ.Name = "rndAZ";
+            this.rndAZ.PorcLuzColorBorde = 0;
+            this.rndAZ.Size = new System.Drawing.Size(130, 35);
+            this.rndAZ.TabIndex = 22;
+            this.tagsExtender1.SetTag2(this.rndAZ, null);
+            this.tagsExtender1.SetTag3(this.rndAZ, null);
+            this.tagsExtender1.SetTagFontName(this.rndAZ, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rndAZ, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rndAZ, System.Drawing.FontStyle.Regular);
+            this.rndAZ.XBorde = 0;
+            this.rndAZ.XPanel = 0;
+            this.rndAZ.YBorde = 0;
+            this.rndAZ.YPanel = 0;
+            // 
+            // btnAZ
+            // 
+            this.btnAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.btnAZ.FlatAppearance.BorderSize = 0;
+            this.btnAZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAZ.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAZ.Location = new System.Drawing.Point(3, 2);
+            this.btnAZ.Name = "btnAZ";
+            this.btnAZ.Size = new System.Drawing.Size(125, 30);
+            this.btnAZ.TabIndex = 5;
+            this.tagsExtender1.SetTag2(this.btnAZ, null);
+            this.tagsExtender1.SetTag3(this.btnAZ, null);
+            this.tagsExtender1.SetTagFontName(this.btnAZ, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnAZ, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnAZ, System.Drawing.FontStyle.Bold);
+            this.btnAZ.Text = "A - Z";
+            this.btnAZ.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // pantallaServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.il_Drivers3);
-            this.Controls.Add(this.il_Drivers2);
-            this.Controls.Add(this.il_Drivers1);
-            this.Controls.Add(this.rpn_ListaDrivers);
-            this.Controls.Add(this.txt_BuscarUsuario);
-            this.Controls.Add(this.roundedPanel4);
-            this.Controls.Add(this.roundedPanel3);
-            this.Controls.Add(this.roundedPanel2);
-            this.Controls.Add(this.roundedPanel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.rpn_ListaServicios);
+            this.Controls.Add(this.txt_Buscar);
+            this.Controls.Add(this.rndReciente);
+            this.Controls.Add(this.rndAntiguo);
+            this.Controls.Add(this.rndZA);
+            this.Controls.Add(this.rndAZ);
+            this.Controls.Add(this.panel1);
             this.Name = "pantallaServicios";
             this.Size = new System.Drawing.Size(611, 470);
-            this.rpn_ListaDrivers.ResumeLayout(false);
-            this.rpn_ListaDrivers.PerformLayout();
-            this.roundedPanel4.ResumeLayout(false);
-            this.roundedPanel3.ResumeLayout(false);
-            this.roundedPanel2.ResumeLayout(false);
-            this.roundedPanel1.ResumeLayout(false);
+            this.tagsExtender1.SetTag2(this, null);
+            this.tagsExtender1.SetTag3(this, null);
+            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this, 10F);
+            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.panel1.ResumeLayout(false);
+            this.rpn_ListaServicios.ResumeLayout(false);
+            this.rpn_ListaServicios.PerformLayout();
+            this.rndReciente.ResumeLayout(false);
+            this.rndAntiguo.ResumeLayout(false);
+            this.rndZA.ResumeLayout(false);
+            this.rndAZ.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,20 +438,22 @@
 
         #endregion
 
-        private itemLista il_Drivers3;
-        private itemLista il_Drivers2;
-        private itemLista il_Drivers1;
-        private RoundedPanel rpn_ListaDrivers;
-        private System.Windows.Forms.Button btn_AgregarDriver;
-        private System.Windows.Forms.Label lbl_ListaDrivers;
-        private System.Windows.Forms.TextBox txt_BuscarUsuario;
-        private RoundedPanel roundedPanel4;
-        private System.Windows.Forms.Button btn_Reciente_Drivers;
-        private RoundedPanel roundedPanel3;
-        private System.Windows.Forms.Button btn_Antiguo_Drivers;
-        private RoundedPanel roundedPanel2;
-        private System.Windows.Forms.Button btn_ZA_Drivers;
-        private RoundedPanel roundedPanel1;
-        private System.Windows.Forms.Button btn_AZ_Drivers;
+        private itemLista il_Servicios3;
+        private itemLista il_Servicios2;
+        private itemLista il_Servicios1;
+        private RoundedPanel rpn_ListaServicios;
+        private System.Windows.Forms.Button btn_Agregar;
+        private System.Windows.Forms.Label lbl_ListaServicios;
+        private System.Windows.Forms.TextBox txt_Buscar;
+        private RoundedPanel rndReciente;
+        private System.Windows.Forms.Button btnReciente;
+        private RoundedPanel rndAntiguo;
+        private System.Windows.Forms.Button btnAntiguo;
+        private RoundedPanel rndZA;
+        private System.Windows.Forms.Button btnZA;
+        private RoundedPanel rndAZ;
+        private System.Windows.Forms.Button btnAZ;
+        private System.Windows.Forms.Panel panel1;
+        private TagsExtender tagsExtender1;
     }
 }

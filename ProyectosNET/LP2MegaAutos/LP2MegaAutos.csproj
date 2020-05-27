@@ -113,11 +113,23 @@
     <Compile Include="pantallaAjustesUsuario.Designer.cs">
       <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaAreaTrabajo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaEditarInformacionPropia.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresa.Designer.cs">
+      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
@@ -154,12 +166,6 @@
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="GraphicsExtension.cs" />
-    <Compile Include="pantallaAreaTrabajo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pantallaAreaTrabajo.Designer.cs">
-      <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
-    </Compile>
     <Compile Include="pantallaInicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarInformacionPropia.resx">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInformacionEmpresa.resx">
+      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>

@@ -31,9 +31,9 @@
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.pnl_codServ = new System.Windows.Forms.Panel();
-            this.lbl_codServ = new System.Windows.Forms.Label();
-            this.txt_codServ = new System.Windows.Forms.TextBox();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
+            this.txt_codServ = new System.Windows.Forms.TextBox();
+            this.lbl_codServ = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_descripcion = new System.Windows.Forms.Panel();
             this.rnd_color_2 = new LP2MegaAutos.RoundedPanel();
@@ -63,7 +63,7 @@
             this.lbl_titulo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_titulo, null);
             this.tagsExtender1.SetTag3(this.lbl_titulo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_titulo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_titulo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_titulo, 22F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_titulo, System.Drawing.FontStyle.Bold);
             this.lbl_titulo.Text = "Mantenimiento preventivo";
@@ -74,7 +74,7 @@
             this.pnl_codServ.Controls.Add(this.txt_codServ);
             this.pnl_codServ.Controls.Add(this.lbl_codServ);
             this.pnl_codServ.Location = new System.Drawing.Point(161, 109);
-            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_codServ.Name = "pnl_codServ";
             this.pnl_codServ.Size = new System.Drawing.Size(292, 41);
             this.pnl_codServ.TabIndex = 1;
@@ -83,39 +83,6 @@
             this.tagsExtender1.SetTagFontName(this.pnl_codServ, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnl_codServ, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_codServ, System.Drawing.FontStyle.Regular);
-            // 
-            // lbl_codServ
-            // 
-            this.lbl_codServ.AutoSize = true;
-            this.lbl_codServ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_codServ.Location = new System.Drawing.Point(4, 2);
-            this.lbl_codServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_codServ.Name = "lbl_codServ";
-            this.lbl_codServ.Size = new System.Drawing.Size(112, 16);
-            this.lbl_codServ.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.lbl_codServ, null);
-            this.tagsExtender1.SetTag3(this.lbl_codServ, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_codServ, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_codServ, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_codServ, System.Drawing.FontStyle.Bold);
-            this.lbl_codServ.Text = "Código de servicio";
-            // 
-            // txt_codServ
-            // 
-            this.txt_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_codServ.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_codServ.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codServ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_codServ.Location = new System.Drawing.Point(7, 18);
-            this.txt_codServ.Name = "txt_codServ";
-            this.txt_codServ.Size = new System.Drawing.Size(284, 23);
-            this.txt_codServ.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_codServ, null);
-            this.tagsExtender1.SetTag3(this.txt_codServ, null);
-            this.tagsExtender1.SetTagFontName(this.txt_codServ, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_codServ, 19F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_codServ, System.Drawing.FontStyle.Bold);
-            this.txt_codServ.Text = "MEC-001";
             // 
             // rnd_color_1
             // 
@@ -142,6 +109,39 @@
             this.rnd_color_1.XPanel = 0;
             this.rnd_color_1.YBorde = 0;
             this.rnd_color_1.YPanel = 0;
+            // 
+            // txt_codServ
+            // 
+            this.txt_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_codServ.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_codServ.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codServ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_codServ.Location = new System.Drawing.Point(7, 18);
+            this.txt_codServ.Name = "txt_codServ";
+            this.txt_codServ.Size = new System.Drawing.Size(284, 23);
+            this.txt_codServ.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_codServ, null);
+            this.tagsExtender1.SetTag3(this.txt_codServ, null);
+            this.tagsExtender1.SetTagFontName(this.txt_codServ, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_codServ, 19F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_codServ, System.Drawing.FontStyle.Bold);
+            this.txt_codServ.Text = "MEC-001";
+            // 
+            // lbl_codServ
+            // 
+            this.lbl_codServ.AutoSize = true;
+            this.lbl_codServ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbl_codServ.Location = new System.Drawing.Point(4, 2);
+            this.lbl_codServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_codServ.Name = "lbl_codServ";
+            this.lbl_codServ.Size = new System.Drawing.Size(112, 16);
+            this.lbl_codServ.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_codServ, null);
+            this.tagsExtender1.SetTag3(this.lbl_codServ, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_codServ, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_codServ, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_codServ, System.Drawing.FontStyle.Bold);
+            this.lbl_codServ.Text = "Código de servicio";
             // 
             // panel1
             // 
@@ -366,7 +366,7 @@
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.lbl_titulo);
             this.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaEditarServicios";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
@@ -374,6 +374,7 @@
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.Load += new System.EventHandler(this.pantallaEditarServicios_Load);
             this.pnl_codServ.ResumeLayout(false);
             this.pnl_codServ.PerformLayout();
             this.pnl_descripcion.ResumeLayout(false);

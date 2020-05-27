@@ -15,9 +15,9 @@ namespace LP2MegaAutos
         public pantallaServicios()
         {
             InitializeComponent();
-            il_Drivers1.EditarClick += btnEditarClick;
-            il_Drivers2.EditarClick += btnEditarClick;
-            il_Drivers3.EditarClick += btnEditarClick;
+            il_Servicios1.EditarClick += btnEditarClick;
+            il_Servicios2.EditarClick += btnEditarClick;
+            il_Servicios3.EditarClick += btnEditarClick;
         }
 
         private void btnEditarClick(Object sender, EventArgs e)
@@ -25,13 +25,13 @@ namespace LP2MegaAutos
             MessageBox.Show("NO AUN");
         }
 
-        private void btn_AZ_Drivers_Click(object sender, EventArgs e)
+        private void btnAZ_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
             this.rndAZ.ColorPanel = Colores.AmarilloInteractivoMenos1;
             this.rndZA.ColorPanel = Color.Transparent;
             this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
+            this.rndReciente.ColorPanel = Color.Transparent;
 
             // Cambiar color botones de al frente
             this.btnZA.BackColor = Color.Transparent;
@@ -40,13 +40,13 @@ namespace LP2MegaAutos
             this.btnAntiguo.BackColor = Color.Transparent;
         }
 
-        private void btn_ZA_Drivers_Click(object sender, EventArgs e)
+        private void btnZA_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
             this.rndAZ.ColorPanel = Color.Transparent;
             this.rndZA.ColorPanel = Colores.AmarilloInteractivoMenos1;
             this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
+            this.rndReciente.ColorPanel = Color.Transparent;
 
             // Cambiar color botones de al frente
             this.btnAZ.BackColor = Color.Transparent;
@@ -55,19 +55,39 @@ namespace LP2MegaAutos
             this.btnAntiguo.BackColor = Color.Transparent;
         }
 
-        private void btn_Antiguo_Drivers_Click(object sender, EventArgs e)
+        private void btnAntiguo_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
             this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndZA.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
+            this.rndZA.ColorPanel = Color.Transparent;
+            this.rndAntiguo.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndReciente.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnAZ.BackColor = Color.Transparent;
+            this.btnAntiguo.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnReciente.BackColor = Color.Transparent;
+            this.btnZA.BackColor = Color.Transparent;
+        }
+
+        private void btnReciente_Click(object sender, EventArgs e)
+        {
+            // Cambiar color rounded panels de atras
+            this.rndAZ.ColorPanel = Color.Transparent;
+            this.rndReciente.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndZA.ColorPanel = Color.Transparent;
             this.rndAntiguo.ColorPanel = Color.Transparent;
 
             // Cambiar color botones de al frente
             this.btnAZ.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnReciente.BackColor = Color.Transparent;
+            this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
+        }
+
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            txt_Buscar.Text = string.Empty;
         }
     }
 }

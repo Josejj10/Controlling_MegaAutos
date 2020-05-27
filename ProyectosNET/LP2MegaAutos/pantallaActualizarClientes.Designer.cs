@@ -31,23 +31,33 @@
             this.il_Clientes3 = new LP2MegaAutos.itemLista();
             this.il_Clientes2 = new LP2MegaAutos.itemLista();
             this.il_Clientes1 = new LP2MegaAutos.itemLista();
-            this.rpn_ListaClientes = new LP2MegaAutos.RoundedPanel();
-            this.btn_AgregarCliente = new System.Windows.Forms.Button();
-            this.lbl_ListaClientes = new System.Windows.Forms.Label();
-            this.btn_Reciente_Cliente = new System.Windows.Forms.Button();
-            this.btn_Antiguo_Cliente = new System.Windows.Forms.Button();
-            this.btn_ZA_Cliente = new System.Windows.Forms.Button();
-            this.btn_AZ_Cliente = new System.Windows.Forms.Button();
-            this.txt_BuscarCliente = new System.Windows.Forms.TextBox();
-            this.rpn_ListaClientes.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
+            this.btn_Agregar = new System.Windows.Forms.Button();
+            this.lbl_ListaServicios = new System.Windows.Forms.Label();
+            this.txt_Buscar = new System.Windows.Forms.TextBox();
+            this.rndReciente = new LP2MegaAutos.RoundedPanel();
+            this.btnReciente = new System.Windows.Forms.Button();
+            this.rndAntiguo = new LP2MegaAutos.RoundedPanel();
+            this.btnAntiguo = new System.Windows.Forms.Button();
+            this.rndZA = new LP2MegaAutos.RoundedPanel();
+            this.btnZA = new System.Windows.Forms.Button();
+            this.rndAZ = new LP2MegaAutos.RoundedPanel();
+            this.btnAZ = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.rpn_ListaServicios.SuspendLayout();
+            this.rndReciente.SuspendLayout();
+            this.rndAntiguo.SuspendLayout();
+            this.rndZA.SuspendLayout();
+            this.rndAZ.SuspendLayout();
             this.SuspendLayout();
             // 
             // il_Clientes3
             // 
-            this.il_Clientes3.ColorBack = System.Drawing.Color.White;
+            this.il_Clientes3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Clientes3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Clientes3.ColorPanel = System.Drawing.Color.White;
-            this.il_Clientes3.Location = new System.Drawing.Point(57, 351);
+            this.il_Clientes3.Location = new System.Drawing.Point(21, 254);
             this.il_Clientes3.Name = "il_Clientes3";
             this.il_Clientes3.Size = new System.Drawing.Size(497, 104);
             this.il_Clientes3.TabIndex = 21;
@@ -59,10 +69,10 @@
             // 
             // il_Clientes2
             // 
-            this.il_Clientes2.ColorBack = System.Drawing.Color.White;
+            this.il_Clientes2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Clientes2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Clientes2.ColorPanel = System.Drawing.Color.White;
-            this.il_Clientes2.Location = new System.Drawing.Point(57, 241);
+            this.il_Clientes2.Location = new System.Drawing.Point(21, 130);
             this.il_Clientes2.Name = "il_Clientes2";
             this.il_Clientes2.Size = new System.Drawing.Size(497, 104);
             this.il_Clientes2.TabIndex = 20;
@@ -74,10 +84,10 @@
             // 
             // il_Clientes1
             // 
-            this.il_Clientes1.ColorBack = System.Drawing.Color.White;
+            this.il_Clientes1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Clientes1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Clientes1.ColorPanel = System.Drawing.Color.White;
-            this.il_Clientes1.Location = new System.Drawing.Point(57, 133);
+            this.il_Clientes1.Location = new System.Drawing.Point(21, 6);
             this.il_Clientes1.Name = "il_Clientes1";
             this.il_Clientes1.Size = new System.Drawing.Size(497, 104);
             this.il_Clientes1.TabIndex = 19;
@@ -87,131 +97,253 @@
             this.il_Clientes1.Textosecundario = "DNI : 70251648";
             this.il_Clientes1.TextoTercero = "mjavier@pucp.edu.pe";
             // 
-            // rpn_ListaClientes
+            // panel1
             // 
-            this.rpn_ListaClientes.ArcRadiusBorde = 15;
-            this.rpn_ListaClientes.ArcRadiusPanel = 15;
-            this.rpn_ListaClientes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_ListaClientes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.rpn_ListaClientes.Controls.Add(this.btn_AgregarCliente);
-            this.rpn_ListaClientes.Controls.Add(this.lbl_ListaClientes);
-            this.rpn_ListaClientes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpn_ListaClientes.Location = new System.Drawing.Point(36, 93);
-            this.rpn_ListaClientes.MenosHeightBorde = 1;
-            this.rpn_ListaClientes.MenosHeightPanel = 1;
-            this.rpn_ListaClientes.MenosWidthBorde = 1;
-            this.rpn_ListaClientes.MenosWidthPanel = 1;
-            this.rpn_ListaClientes.Name = "rpn_ListaClientes";
-            this.rpn_ListaClientes.PorcLuzColorBorde = 0;
-            this.rpn_ListaClientes.Size = new System.Drawing.Size(538, 36);
-            this.rpn_ListaClientes.TabIndex = 18;
-            this.rpn_ListaClientes.XBorde = 0;
-            this.rpn_ListaClientes.XPanel = 0;
-            this.rpn_ListaClientes.YBorde = 0;
-            this.rpn_ListaClientes.YPanel = 0;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.panel1.Controls.Add(this.il_Clientes3);
+            this.panel1.Controls.Add(this.il_Clientes1);
+            this.panel1.Controls.Add(this.il_Clientes2);
+            this.panel1.Location = new System.Drawing.Point(36, 142);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(538, 327);
+            this.panel1.TabIndex = 27;
             // 
-            // btn_AgregarCliente
+            // rpn_ListaServicios
             // 
-            this.btn_AgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.btn_AgregarCliente.FlatAppearance.BorderSize = 0;
-            this.btn_AgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AgregarCliente.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AgregarCliente.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarCliente.Location = new System.Drawing.Point(432, 4);
-            this.btn_AgregarCliente.Name = "btn_AgregarCliente";
-            this.btn_AgregarCliente.Size = new System.Drawing.Size(94, 26);
-            this.btn_AgregarCliente.TabIndex = 6;
-            this.btn_AgregarCliente.Text = "+ Agregar";
-            this.btn_AgregarCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_AgregarCliente.UseVisualStyleBackColor = false;
+            this.rpn_ListaServicios.ArcRadiusBorde = 15;
+            this.rpn_ListaServicios.ArcRadiusPanel = 15;
+            this.rpn_ListaServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_ListaServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.rpn_ListaServicios.Controls.Add(this.btn_Agregar);
+            this.rpn_ListaServicios.Controls.Add(this.lbl_ListaServicios);
+            this.rpn_ListaServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
+            this.rpn_ListaServicios.Location = new System.Drawing.Point(36, 115);
+            this.rpn_ListaServicios.MenosHeightBorde = 1;
+            this.rpn_ListaServicios.MenosHeightPanel = 1;
+            this.rpn_ListaServicios.MenosWidthBorde = 1;
+            this.rpn_ListaServicios.MenosWidthPanel = 1;
+            this.rpn_ListaServicios.Name = "rpn_ListaServicios";
+            this.rpn_ListaServicios.PorcLuzColorBorde = 0;
+            this.rpn_ListaServicios.Size = new System.Drawing.Size(539, 27);
+            this.rpn_ListaServicios.TabIndex = 28;
+            this.rpn_ListaServicios.XBorde = 0;
+            this.rpn_ListaServicios.XPanel = 0;
+            this.rpn_ListaServicios.YBorde = 0;
+            this.rpn_ListaServicios.YPanel = 0;
             // 
-            // lbl_ListaClientes
+            // btn_Agregar
             // 
-            this.lbl_ListaClientes.AutoSize = true;
-            this.lbl_ListaClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.lbl_ListaClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_ListaClientes.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ListaClientes.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaClientes.Location = new System.Drawing.Point(213, 4);
-            this.lbl_ListaClientes.Name = "lbl_ListaClientes";
-            this.lbl_ListaClientes.Size = new System.Drawing.Size(101, 29);
-            this.lbl_ListaClientes.TabIndex = 0;
-            this.lbl_ListaClientes.Text = "Clientes";
-            this.lbl_ListaClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_Agregar.FlatAppearance.BorderSize = 0;
+            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.ForeColor = System.Drawing.Color.White;
+            this.btn_Agregar.Location = new System.Drawing.Point(441, 2);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(78, 23);
+            this.btn_Agregar.TabIndex = 6;
+            this.btn_Agregar.Text = "+ Agregar";
+            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Agregar.UseVisualStyleBackColor = false;
             // 
-            // btn_Reciente_Cliente
+            // lbl_ListaServicios
             // 
-            this.btn_Reciente_Cliente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Reciente_Cliente.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reciente_Cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btn_Reciente_Cliente.Location = new System.Drawing.Point(444, 52);
-            this.btn_Reciente_Cliente.Name = "btn_Reciente_Cliente";
-            this.btn_Reciente_Cliente.Size = new System.Drawing.Size(130, 35);
-            this.btn_Reciente_Cliente.TabIndex = 17;
-            this.btn_Reciente_Cliente.Text = "Reciente";
-            this.btn_Reciente_Cliente.UseVisualStyleBackColor = false;
+            this.lbl_ListaServicios.AutoSize = true;
+            this.lbl_ListaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
+            this.lbl_ListaServicios.Location = new System.Drawing.Point(229, 2);
+            this.lbl_ListaServicios.Name = "lbl_ListaServicios";
+            this.lbl_ListaServicios.Size = new System.Drawing.Size(78, 22);
+            this.lbl_ListaServicios.TabIndex = 0;
+            this.lbl_ListaServicios.Text = "Clientes";
+            this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_Antiguo_Cliente
+            // txt_Buscar
             // 
-            this.btn_Antiguo_Cliente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Antiguo_Cliente.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Antiguo_Cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btn_Antiguo_Cliente.Location = new System.Drawing.Point(308, 52);
-            this.btn_Antiguo_Cliente.Name = "btn_Antiguo_Cliente";
-            this.btn_Antiguo_Cliente.Size = new System.Drawing.Size(130, 35);
-            this.btn_Antiguo_Cliente.TabIndex = 16;
-            this.btn_Antiguo_Cliente.Text = "Antiguo";
-            this.btn_Antiguo_Cliente.UseVisualStyleBackColor = false;
+            this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_Buscar.Location = new System.Drawing.Point(36, 29);
+            this.txt_Buscar.Name = "txt_Buscar";
+            this.txt_Buscar.Size = new System.Drawing.Size(538, 18);
+            this.txt_Buscar.TabIndex = 29;
+            this.txt_Buscar.Text = "Buscar";
             // 
-            // btn_ZA_Cliente
+            // rndReciente
             // 
-            this.btn_ZA_Cliente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ZA_Cliente.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ZA_Cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btn_ZA_Cliente.Location = new System.Drawing.Point(172, 52);
-            this.btn_ZA_Cliente.Name = "btn_ZA_Cliente";
-            this.btn_ZA_Cliente.Size = new System.Drawing.Size(130, 35);
-            this.btn_ZA_Cliente.TabIndex = 15;
-            this.btn_ZA_Cliente.Text = "Z - A";
-            this.btn_ZA_Cliente.UseVisualStyleBackColor = false;
+            this.rndReciente.ArcRadiusBorde = 8;
+            this.rndReciente.ArcRadiusPanel = 8;
+            this.rndReciente.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndReciente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndReciente.Controls.Add(this.btnReciente);
+            this.rndReciente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndReciente.Location = new System.Drawing.Point(444, 65);
+            this.rndReciente.MenosHeightBorde = 1;
+            this.rndReciente.MenosHeightPanel = 1;
+            this.rndReciente.MenosWidthBorde = 1;
+            this.rndReciente.MenosWidthPanel = 1;
+            this.rndReciente.Name = "rndReciente";
+            this.rndReciente.PorcLuzColorBorde = 0;
+            this.rndReciente.Size = new System.Drawing.Size(130, 35);
+            this.rndReciente.TabIndex = 33;
+            this.rndReciente.XBorde = 0;
+            this.rndReciente.XPanel = 0;
+            this.rndReciente.YBorde = 0;
+            this.rndReciente.YPanel = 0;
             // 
-            // btn_AZ_Cliente
+            // btnReciente
             // 
-            this.btn_AZ_Cliente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_AZ_Cliente.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AZ_Cliente.Location = new System.Drawing.Point(36, 52);
-            this.btn_AZ_Cliente.Name = "btn_AZ_Cliente";
-            this.btn_AZ_Cliente.Size = new System.Drawing.Size(130, 35);
-            this.btn_AZ_Cliente.TabIndex = 14;
-            this.btn_AZ_Cliente.Text = "A - Z";
-            this.btn_AZ_Cliente.UseVisualStyleBackColor = false;
+            this.btnReciente.BackColor = System.Drawing.Color.White;
+            this.btnReciente.FlatAppearance.BorderSize = 0;
+            this.btnReciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnReciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReciente.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnReciente.Location = new System.Drawing.Point(3, 2);
+            this.btnReciente.Name = "btnReciente";
+            this.btnReciente.Size = new System.Drawing.Size(125, 30);
+            this.btnReciente.TabIndex = 8;
+            this.btnReciente.Text = "Reciente";
+            this.btnReciente.UseVisualStyleBackColor = false;
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
-            // txt_BuscarCliente
+            // rndAntiguo
             // 
-            this.txt_BuscarCliente.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_BuscarCliente.Location = new System.Drawing.Point(36, 16);
-            this.txt_BuscarCliente.Name = "txt_BuscarCliente";
-            this.txt_BuscarCliente.Size = new System.Drawing.Size(148, 30);
-            this.txt_BuscarCliente.TabIndex = 13;
+            this.rndAntiguo.ArcRadiusBorde = 8;
+            this.rndAntiguo.ArcRadiusPanel = 8;
+            this.rndAntiguo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndAntiguo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndAntiguo.Controls.Add(this.btnAntiguo);
+            this.rndAntiguo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndAntiguo.Location = new System.Drawing.Point(308, 65);
+            this.rndAntiguo.MenosHeightBorde = 1;
+            this.rndAntiguo.MenosHeightPanel = 1;
+            this.rndAntiguo.MenosWidthBorde = 1;
+            this.rndAntiguo.MenosWidthPanel = 1;
+            this.rndAntiguo.Name = "rndAntiguo";
+            this.rndAntiguo.PorcLuzColorBorde = 0;
+            this.rndAntiguo.Size = new System.Drawing.Size(130, 35);
+            this.rndAntiguo.TabIndex = 32;
+            this.rndAntiguo.XBorde = 0;
+            this.rndAntiguo.XPanel = 0;
+            this.rndAntiguo.YBorde = 0;
+            this.rndAntiguo.YPanel = 0;
+            // 
+            // btnAntiguo
+            // 
+            this.btnAntiguo.BackColor = System.Drawing.Color.White;
+            this.btnAntiguo.FlatAppearance.BorderSize = 0;
+            this.btnAntiguo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAntiguo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAntiguo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAntiguo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAntiguo.Location = new System.Drawing.Point(3, 2);
+            this.btnAntiguo.Name = "btnAntiguo";
+            this.btnAntiguo.Size = new System.Drawing.Size(125, 30);
+            this.btnAntiguo.TabIndex = 7;
+            this.btnAntiguo.Text = "Antiguo";
+            this.btnAntiguo.UseVisualStyleBackColor = false;
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
+            // 
+            // rndZA
+            // 
+            this.rndZA.ArcRadiusBorde = 8;
+            this.rndZA.ArcRadiusPanel = 8;
+            this.rndZA.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndZA.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndZA.Controls.Add(this.btnZA);
+            this.rndZA.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndZA.Location = new System.Drawing.Point(172, 65);
+            this.rndZA.MenosHeightBorde = 1;
+            this.rndZA.MenosHeightPanel = 1;
+            this.rndZA.MenosWidthBorde = 1;
+            this.rndZA.MenosWidthPanel = 1;
+            this.rndZA.Name = "rndZA";
+            this.rndZA.PorcLuzColorBorde = 0;
+            this.rndZA.Size = new System.Drawing.Size(130, 35);
+            this.rndZA.TabIndex = 31;
+            this.rndZA.XBorde = 0;
+            this.rndZA.XPanel = 0;
+            this.rndZA.YBorde = 0;
+            this.rndZA.YPanel = 0;
+            // 
+            // btnZA
+            // 
+            this.btnZA.BackColor = System.Drawing.Color.White;
+            this.btnZA.FlatAppearance.BorderSize = 0;
+            this.btnZA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnZA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnZA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnZA.Location = new System.Drawing.Point(3, 2);
+            this.btnZA.Name = "btnZA";
+            this.btnZA.Size = new System.Drawing.Size(125, 30);
+            this.btnZA.TabIndex = 6;
+            this.btnZA.Text = "Z - A";
+            this.btnZA.UseVisualStyleBackColor = false;
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
+            // 
+            // rndAZ
+            // 
+            this.rndAZ.ArcRadiusBorde = 8;
+            this.rndAZ.ArcRadiusPanel = 8;
+            this.rndAZ.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndAZ.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndAZ.Controls.Add(this.btnAZ);
+            this.rndAZ.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndAZ.Location = new System.Drawing.Point(36, 65);
+            this.rndAZ.MenosHeightBorde = 1;
+            this.rndAZ.MenosHeightPanel = 1;
+            this.rndAZ.MenosWidthBorde = 1;
+            this.rndAZ.MenosWidthPanel = 1;
+            this.rndAZ.Name = "rndAZ";
+            this.rndAZ.PorcLuzColorBorde = 0;
+            this.rndAZ.Size = new System.Drawing.Size(130, 35);
+            this.rndAZ.TabIndex = 30;
+            this.rndAZ.XBorde = 0;
+            this.rndAZ.XPanel = 0;
+            this.rndAZ.YBorde = 0;
+            this.rndAZ.YPanel = 0;
+            // 
+            // btnAZ
+            // 
+            this.btnAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.btnAZ.FlatAppearance.BorderSize = 0;
+            this.btnAZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAZ.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnAZ.Location = new System.Drawing.Point(3, 2);
+            this.btnAZ.Name = "btnAZ";
+            this.btnAZ.Size = new System.Drawing.Size(125, 30);
+            this.btnAZ.TabIndex = 5;
+            this.btnAZ.Text = "A - Z";
+            this.btnAZ.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // pantallaActualizarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.Controls.Add(this.il_Clientes3);
-            this.Controls.Add(this.il_Clientes2);
-            this.Controls.Add(this.il_Clientes1);
-            this.Controls.Add(this.rpn_ListaClientes);
-            this.Controls.Add(this.btn_Reciente_Cliente);
-            this.Controls.Add(this.btn_Antiguo_Cliente);
-            this.Controls.Add(this.btn_ZA_Cliente);
-            this.Controls.Add(this.btn_AZ_Cliente);
-            this.Controls.Add(this.txt_BuscarCliente);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txt_Buscar);
+            this.Controls.Add(this.rndReciente);
+            this.Controls.Add(this.rndAntiguo);
+            this.Controls.Add(this.rndZA);
+            this.Controls.Add(this.rndAZ);
+            this.Controls.Add(this.rpn_ListaServicios);
+            this.Controls.Add(this.panel1);
             this.Name = "pantallaActualizarClientes";
             this.Size = new System.Drawing.Size(611, 470);
-            this.rpn_ListaClientes.ResumeLayout(false);
-            this.rpn_ListaClientes.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.rpn_ListaServicios.ResumeLayout(false);
+            this.rpn_ListaServicios.PerformLayout();
+            this.rndReciente.ResumeLayout(false);
+            this.rndAntiguo.ResumeLayout(false);
+            this.rndZA.ResumeLayout(false);
+            this.rndAZ.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,13 +354,18 @@
         private itemLista il_Clientes3;
         private itemLista il_Clientes2;
         private itemLista il_Clientes1;
-        private RoundedPanel rpn_ListaClientes;
-        private System.Windows.Forms.Button btn_AgregarCliente;
-        private System.Windows.Forms.Label lbl_ListaClientes;
-        private System.Windows.Forms.Button btn_Reciente_Cliente;
-        private System.Windows.Forms.Button btn_Antiguo_Cliente;
-        private System.Windows.Forms.Button btn_ZA_Cliente;
-        private System.Windows.Forms.Button btn_AZ_Cliente;
-        private System.Windows.Forms.TextBox txt_BuscarCliente;
+        private System.Windows.Forms.Panel panel1;
+        private RoundedPanel rpn_ListaServicios;
+        private System.Windows.Forms.Button btn_Agregar;
+        private System.Windows.Forms.Label lbl_ListaServicios;
+        private System.Windows.Forms.TextBox txt_Buscar;
+        private RoundedPanel rndReciente;
+        private System.Windows.Forms.Button btnReciente;
+        private RoundedPanel rndAntiguo;
+        private System.Windows.Forms.Button btnAntiguo;
+        private RoundedPanel rndZA;
+        private System.Windows.Forms.Button btnZA;
+        private RoundedPanel rndAZ;
+        private System.Windows.Forms.Button btnAZ;
     }
 }

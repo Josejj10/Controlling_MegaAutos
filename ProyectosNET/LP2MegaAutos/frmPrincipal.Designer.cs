@@ -38,6 +38,8 @@ namespace LP2MegaAutos
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.reloj_dark = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new MetroFramework.Controls.MetroPanel();
+            this.rpBtnMenuServicios = new LP2MegaAutos.RoundedPanel();
+            this.btnServicios = new System.Windows.Forms.Button();
             this.rpBtnMenuHome = new LP2MegaAutos.RoundedPanel();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel_toggle_nocturno = new System.Windows.Forms.Panel();
@@ -46,9 +48,9 @@ namespace LP2MegaAutos
             this.pnlBackBackground = new System.Windows.Forms.Panel();
             this.rpMain = new LP2MegaAutos.RoundedPanel();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
-            this.pantallaServicios1 = new LP2MegaAutos.pantallaServicios();
             this.title_bar.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.rpBtnMenuServicios.SuspendLayout();
             this.rpBtnMenuHome.SuspendLayout();
             this.panel_toggle_nocturno.SuspendLayout();
             this.pnlBackBackground.SuspendLayout();
@@ -149,6 +151,7 @@ namespace LP2MegaAutos
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.panelMenu.Controls.Add(this.rpBtnMenuServicios);
             this.panelMenu.Controls.Add(this.rpBtnMenuHome);
             this.panelMenu.Controls.Add(this.panel_toggle_nocturno);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -171,12 +174,63 @@ namespace LP2MegaAutos
             this.panelMenu.VerticalScrollbarHighlightOnWheel = false;
             this.panelMenu.VerticalScrollbarSize = 10;
             // 
+            // rpBtnMenuServicios
+            // 
+            this.rpBtnMenuServicios.ArcRadiusBorde = 15;
+            this.rpBtnMenuServicios.ArcRadiusPanel = 15;
+            this.rpBtnMenuServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpBtnMenuServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpBtnMenuServicios.Controls.Add(this.btnServicios);
+            this.rpBtnMenuServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.rpBtnMenuServicios.Location = new System.Drawing.Point(9, 89);
+            this.rpBtnMenuServicios.Margin = new System.Windows.Forms.Padding(2);
+            this.rpBtnMenuServicios.MenosHeightBorde = 1;
+            this.rpBtnMenuServicios.MenosHeightPanel = 1;
+            this.rpBtnMenuServicios.MenosWidthBorde = 1;
+            this.rpBtnMenuServicios.MenosWidthPanel = 1;
+            this.rpBtnMenuServicios.Name = "rpBtnMenuServicios";
+            this.rpBtnMenuServicios.PorcLuzColorBorde = 0;
+            this.rpBtnMenuServicios.Size = new System.Drawing.Size(80, 54);
+            this.rpBtnMenuServicios.TabIndex = 27;
+            this.tags.SetTag2(this.rpBtnMenuServicios, null);
+            this.tags.SetTag3(this.rpBtnMenuServicios, null);
+            this.tags.SetTagFontName(this.rpBtnMenuServicios, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpBtnMenuServicios, 10F);
+            this.tags.SetTagFontStyle(this.rpBtnMenuServicios, System.Drawing.FontStyle.Regular);
+            this.rpBtnMenuServicios.XBorde = 0;
+            this.rpBtnMenuServicios.XPanel = 0;
+            this.rpBtnMenuServicios.YBorde = 0;
+            this.rpBtnMenuServicios.YPanel = 0;
+            // 
+            // btnServicios
+            // 
+            this.btnServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnServicios.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnServicios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnServicios.FlatAppearance.BorderSize = 0;
+            this.btnServicios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnServicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnServicios.Location = new System.Drawing.Point(10, 3);
+            this.btnServicios.Name = "btnServicios";
+            this.btnServicios.Size = new System.Drawing.Size(62, 48);
+            this.btnServicios.TabIndex = 20;
+            this.tags.SetTag2(this.btnServicios, null);
+            this.tags.SetTag3(this.btnServicios, null);
+            this.tags.SetTagFontName(this.btnServicios, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnServicios, 12F);
+            this.tags.SetTagFontStyle(this.btnServicios, System.Drawing.FontStyle.Bold);
+            this.btnServicios.UseVisualStyleBackColor = false;
+            this.btnServicios.Click += new System.EventHandler(this.btnServicios_Click);
+            // 
             // rpBtnMenuHome
             // 
             this.rpBtnMenuHome.ArcRadiusBorde = 15;
             this.rpBtnMenuHome.ArcRadiusPanel = 15;
             this.rpBtnMenuHome.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpBtnMenuHome.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpBtnMenuHome.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpBtnMenuHome.Controls.Add(this.btnHome);
             this.rpBtnMenuHome.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.rpBtnMenuHome.Location = new System.Drawing.Point(9, 18);
@@ -220,6 +274,7 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnHome, 12F);
             this.tags.SetTagFontStyle(this.btnHome, System.Drawing.FontStyle.Bold);
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel_toggle_nocturno
             // 
@@ -286,7 +341,6 @@ namespace LP2MegaAutos
             this.rpMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.rpMain.Controls.Add(this.pantallaServicios1);
             this.rpMain.Controls.Add(this.rpTopMain);
             this.rpMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpMain.Location = new System.Drawing.Point(70, 25);
@@ -335,18 +389,6 @@ namespace LP2MegaAutos
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
             // 
-            // pantallaServicios1
-            // 
-            this.pantallaServicios1.Location = new System.Drawing.Point(0, 0);
-            this.pantallaServicios1.Name = "pantallaServicios1";
-            this.pantallaServicios1.Size = new System.Drawing.Size(611, 470);
-            this.pantallaServicios1.TabIndex = 21;
-            this.tags.SetTag2(this.pantallaServicios1, null);
-            this.tags.SetTag3(this.pantallaServicios1, null);
-            this.tags.SetTagFontName(this.pantallaServicios1, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.pantallaServicios1, 10F);
-            this.tags.SetTagFontStyle(this.pantallaServicios1, System.Drawing.FontStyle.Regular);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +411,7 @@ namespace LP2MegaAutos
             this.Text = "frmPrincipal";
             this.title_bar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            this.rpBtnMenuServicios.ResumeLayout(false);
             this.rpBtnMenuHome.ResumeLayout(false);
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.pnlBackBackground.ResumeLayout(false);
@@ -393,6 +436,7 @@ namespace LP2MegaAutos
         private RoundedPanel rpTopMain;
         private RoundedPanel rpBtnMenuHome;
         private System.Windows.Forms.Button btnHome;
-        private pantallaServicios pantallaServicios1;
+        private RoundedPanel rpBtnMenuServicios;
+        private System.Windows.Forms.Button btnServicios;
     }
 }

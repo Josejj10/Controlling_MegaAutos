@@ -12,6 +12,20 @@ namespace LP2MegaAutos
 {
     public partial class pantallaInicioGerente : UserControl
     {
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaInicioGerente _instancia;
+        public static pantallaInicioGerente Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaInicioGerente();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+
         public pantallaInicioGerente()
         {
             InitializeComponent();

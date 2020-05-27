@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.txt_BuscarUsuario = new System.Windows.Forms.TextBox();
-            this.btn_AZ = new System.Windows.Forms.Button();
-            this.btn_ZA = new System.Windows.Forms.Button();
-            this.btn_Antiguo = new System.Windows.Forms.Button();
-            this.btn_Reciente = new System.Windows.Forms.Button();
+            this.btn_AZ_Usuarios = new System.Windows.Forms.Button();
+            this.btn_ZA_Usuarios = new System.Windows.Forms.Button();
+            this.btn_Antiguo_Usuarios = new System.Windows.Forms.Button();
+            this.btn_Reciente_Usuarios = new System.Windows.Forms.Button();
             this.rpn_ListaUsuarios = new LP2MegaAutos.RoundedPanel();
             this.btn_AgregarUsuario = new System.Windows.Forms.Button();
             this.lbl_ListaUsuarios = new System.Windows.Forms.Label();
-            this.itemLista1 = new LP2MegaAutos.itemLista();
-            this.itemLista2 = new LP2MegaAutos.itemLista();
-            this.itemLista3 = new LP2MegaAutos.itemLista();
+            this.il_Usuarios1 = new LP2MegaAutos.itemLista();
+            this.il_Usuarios2 = new LP2MegaAutos.itemLista();
+            this.il_Usuarios3 = new LP2MegaAutos.itemLista();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpn_ListaUsuarios.SuspendLayout();
             this.SuspendLayout();
@@ -50,73 +50,78 @@
             this.txt_BuscarUsuario.Name = "txt_BuscarUsuario";
             this.txt_BuscarUsuario.Size = new System.Drawing.Size(148, 30);
             this.txt_BuscarUsuario.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.txt_BuscarUsuario, null);
+            this.tagsExtender1.SetTag3(this.txt_BuscarUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.txt_BuscarUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_BuscarUsuario, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_BuscarUsuario, System.Drawing.FontStyle.Regular);
             // 
-            // btn_AZ
+            // btn_AZ_Usuarios
             // 
-            this.btn_AZ.BackColor = System.Drawing.Color.Transparent;
-            this.btn_AZ.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AZ.Location = new System.Drawing.Point(36, 65);
-            this.btn_AZ.Name = "btn_AZ";
-            this.btn_AZ.Size = new System.Drawing.Size(130, 35);
-            this.btn_AZ.TabIndex = 1;
-            this.tagsExtender1.SetTag2(this.btn_AZ, null);
-            this.tagsExtender1.SetTag3(this.btn_AZ, null);
-            this.tagsExtender1.SetTagFontName(this.btn_AZ, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.btn_AZ, 15.75F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_AZ, System.Drawing.FontStyle.Bold);
-            this.btn_AZ.Text = "A - Z";
-            this.btn_AZ.UseVisualStyleBackColor = false;
+            this.btn_AZ_Usuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AZ_Usuarios.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AZ_Usuarios.Location = new System.Drawing.Point(36, 65);
+            this.btn_AZ_Usuarios.Name = "btn_AZ_Usuarios";
+            this.btn_AZ_Usuarios.Size = new System.Drawing.Size(130, 35);
+            this.btn_AZ_Usuarios.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.btn_AZ_Usuarios, null);
+            this.tagsExtender1.SetTag3(this.btn_AZ_Usuarios, null);
+            this.tagsExtender1.SetTagFontName(this.btn_AZ_Usuarios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_AZ_Usuarios, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_AZ_Usuarios, System.Drawing.FontStyle.Bold);
+            this.btn_AZ_Usuarios.Text = "A - Z";
+            this.btn_AZ_Usuarios.UseVisualStyleBackColor = false;
             // 
-            // btn_ZA
+            // btn_ZA_Usuarios
             // 
-            this.btn_ZA.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ZA.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ZA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btn_ZA.Location = new System.Drawing.Point(172, 65);
-            this.btn_ZA.Name = "btn_ZA";
-            this.btn_ZA.Size = new System.Drawing.Size(130, 35);
-            this.btn_ZA.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.btn_ZA, null);
-            this.tagsExtender1.SetTag3(this.btn_ZA, null);
-            this.tagsExtender1.SetTagFontName(this.btn_ZA, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.btn_ZA, 15.75F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_ZA, System.Drawing.FontStyle.Bold);
-            this.btn_ZA.Text = "Z - A";
-            this.btn_ZA.UseVisualStyleBackColor = false;
+            this.btn_ZA_Usuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZA_Usuarios.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ZA_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_ZA_Usuarios.Location = new System.Drawing.Point(172, 65);
+            this.btn_ZA_Usuarios.Name = "btn_ZA_Usuarios";
+            this.btn_ZA_Usuarios.Size = new System.Drawing.Size(130, 35);
+            this.btn_ZA_Usuarios.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.btn_ZA_Usuarios, null);
+            this.tagsExtender1.SetTag3(this.btn_ZA_Usuarios, null);
+            this.tagsExtender1.SetTagFontName(this.btn_ZA_Usuarios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_ZA_Usuarios, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_ZA_Usuarios, System.Drawing.FontStyle.Bold);
+            this.btn_ZA_Usuarios.Text = "Z - A";
+            this.btn_ZA_Usuarios.UseVisualStyleBackColor = false;
             // 
-            // btn_Antiguo
+            // btn_Antiguo_Usuarios
             // 
-            this.btn_Antiguo.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Antiguo.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Antiguo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btn_Antiguo.Location = new System.Drawing.Point(308, 65);
-            this.btn_Antiguo.Name = "btn_Antiguo";
-            this.btn_Antiguo.Size = new System.Drawing.Size(130, 35);
-            this.btn_Antiguo.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.btn_Antiguo, null);
-            this.tagsExtender1.SetTag3(this.btn_Antiguo, null);
-            this.tagsExtender1.SetTagFontName(this.btn_Antiguo, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.btn_Antiguo, 15.75F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_Antiguo, System.Drawing.FontStyle.Bold);
-            this.btn_Antiguo.Text = "Antiguo";
-            this.btn_Antiguo.UseVisualStyleBackColor = false;
+            this.btn_Antiguo_Usuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Antiguo_Usuarios.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Antiguo_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_Antiguo_Usuarios.Location = new System.Drawing.Point(308, 65);
+            this.btn_Antiguo_Usuarios.Name = "btn_Antiguo_Usuarios";
+            this.btn_Antiguo_Usuarios.Size = new System.Drawing.Size(130, 35);
+            this.btn_Antiguo_Usuarios.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.btn_Antiguo_Usuarios, null);
+            this.tagsExtender1.SetTag3(this.btn_Antiguo_Usuarios, null);
+            this.tagsExtender1.SetTagFontName(this.btn_Antiguo_Usuarios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_Antiguo_Usuarios, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Antiguo_Usuarios, System.Drawing.FontStyle.Bold);
+            this.btn_Antiguo_Usuarios.Text = "Antiguo";
+            this.btn_Antiguo_Usuarios.UseVisualStyleBackColor = false;
             // 
-            // btn_Reciente
+            // btn_Reciente_Usuarios
             // 
-            this.btn_Reciente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Reciente.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btn_Reciente.Location = new System.Drawing.Point(444, 65);
-            this.btn_Reciente.Name = "btn_Reciente";
-            this.btn_Reciente.Size = new System.Drawing.Size(130, 35);
-            this.btn_Reciente.TabIndex = 4;
-            this.tagsExtender1.SetTag2(this.btn_Reciente, null);
-            this.tagsExtender1.SetTag3(this.btn_Reciente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_Reciente, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.btn_Reciente, 15.75F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_Reciente, System.Drawing.FontStyle.Bold);
-            this.btn_Reciente.Text = "Reciente";
-            this.btn_Reciente.UseVisualStyleBackColor = false;
+            this.btn_Reciente_Usuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Reciente_Usuarios.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reciente_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_Reciente_Usuarios.Location = new System.Drawing.Point(444, 65);
+            this.btn_Reciente_Usuarios.Name = "btn_Reciente_Usuarios";
+            this.btn_Reciente_Usuarios.Size = new System.Drawing.Size(130, 35);
+            this.btn_Reciente_Usuarios.TabIndex = 4;
+            this.tagsExtender1.SetTag2(this.btn_Reciente_Usuarios, null);
+            this.tagsExtender1.SetTag3(this.btn_Reciente_Usuarios, null);
+            this.tagsExtender1.SetTagFontName(this.btn_Reciente_Usuarios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_Reciente_Usuarios, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Reciente_Usuarios, System.Drawing.FontStyle.Bold);
+            this.btn_Reciente_Usuarios.Text = "Reciente";
+            this.btn_Reciente_Usuarios.UseVisualStyleBackColor = false;
             // 
             // rpn_ListaUsuarios
             // 
@@ -185,74 +190,79 @@
             this.lbl_ListaUsuarios.Text = "Usuarios";
             this.lbl_ListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // itemLista1
+            // il_Usuarios1
             // 
-            this.itemLista1.ColorBack = System.Drawing.Color.White;
-            this.itemLista1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemLista1.ColorPanel = System.Drawing.Color.White;
-            this.itemLista1.Location = new System.Drawing.Point(53, 148);
-            this.itemLista1.Name = "itemLista1";
-            this.itemLista1.Size = new System.Drawing.Size(497, 104);
-            this.itemLista1.TabIndex = 6;
-            this.tagsExtender1.SetTag2(this.itemLista1, null);
-            this.tagsExtender1.SetTag3(this.itemLista1, null);
-            this.tagsExtender1.SetTagFontName(this.itemLista1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemLista1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemLista1, System.Drawing.FontStyle.Regular);
-            this.itemLista1.TextoAgregadoPor = "Percy Jackson";
-            this.itemLista1.TextoFecha = "dd - mm - aaaa";
-            this.itemLista1.TextoPrincipal = "Jonathan Berrospi";
-            this.itemLista1.Textosecundario = "Jefe de Logistica";
-            this.itemLista1.TextoTercero = "jberrospi@pucp.edu.pe";
+            this.il_Usuarios1.ColorBack = System.Drawing.Color.White;
+            this.il_Usuarios1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Usuarios1.ColorPanel = System.Drawing.Color.White;
+            this.il_Usuarios1.Location = new System.Drawing.Point(57, 148);
+            this.il_Usuarios1.Name = "il_Usuarios1";
+            this.il_Usuarios1.Size = new System.Drawing.Size(497, 104);
+            this.il_Usuarios1.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.il_Usuarios1, null);
+            this.tagsExtender1.SetTag3(this.il_Usuarios1, null);
+            this.tagsExtender1.SetTagFontName(this.il_Usuarios1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Usuarios1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Usuarios1, System.Drawing.FontStyle.Regular);
+            this.il_Usuarios1.TextoAgregadoPor = "Percy Jackson";
+            this.il_Usuarios1.TextoFecha = "dd - mm - aaaa";
+            this.il_Usuarios1.TextoPrincipal = "Jonathan Berrospi";
+            this.il_Usuarios1.Textosecundario = "Jefe de Logistica";
+            this.il_Usuarios1.TextoTercero = "jberrospi@pucp.edu.pe";
             // 
-            // itemLista2
+            // il_Usuarios2
             // 
-            this.itemLista2.ColorBack = System.Drawing.Color.White;
-            this.itemLista2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemLista2.ColorPanel = System.Drawing.Color.White;
-            this.itemLista2.Location = new System.Drawing.Point(53, 256);
-            this.itemLista2.Name = "itemLista2";
-            this.itemLista2.Size = new System.Drawing.Size(497, 104);
-            this.itemLista2.TabIndex = 7;
-            this.tagsExtender1.SetTag2(this.itemLista2, null);
-            this.tagsExtender1.SetTag3(this.itemLista2, null);
-            this.tagsExtender1.SetTagFontName(this.itemLista2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemLista2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemLista2, System.Drawing.FontStyle.Regular);
-            this.itemLista2.TextoAgregadoPor = "Percy Jackson";
-            this.itemLista2.TextoFecha = "dd - mm - aaaa";
-            this.itemLista2.TextoPrincipal = "Juan Villegaz";
-            this.itemLista2.Textosecundario = "Analista";
-            this.itemLista2.TextoTercero = "jvillegaz@pucp.edu.pe";
+            this.il_Usuarios2.ColorBack = System.Drawing.Color.White;
+            this.il_Usuarios2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Usuarios2.ColorPanel = System.Drawing.Color.White;
+            this.il_Usuarios2.Location = new System.Drawing.Point(57, 256);
+            this.il_Usuarios2.Name = "il_Usuarios2";
+            this.il_Usuarios2.Size = new System.Drawing.Size(497, 104);
+            this.il_Usuarios2.TabIndex = 7;
+            this.tagsExtender1.SetTag2(this.il_Usuarios2, null);
+            this.tagsExtender1.SetTag3(this.il_Usuarios2, null);
+            this.tagsExtender1.SetTagFontName(this.il_Usuarios2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Usuarios2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Usuarios2, System.Drawing.FontStyle.Regular);
+            this.il_Usuarios2.TextoAgregadoPor = "Percy Jackson";
+            this.il_Usuarios2.TextoFecha = "dd - mm - aaaa";
+            this.il_Usuarios2.TextoPrincipal = "Juan Villegaz";
+            this.il_Usuarios2.Textosecundario = "Analista";
+            this.il_Usuarios2.TextoTercero = "jvillegaz@pucp.edu.pe";
             // 
-            // itemLista3
+            // il_Usuarios3
             // 
-            this.itemLista3.ColorBack = System.Drawing.Color.White;
-            this.itemLista3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemLista3.ColorPanel = System.Drawing.Color.White;
-            this.itemLista3.Location = new System.Drawing.Point(53, 366);
-            this.itemLista3.Name = "itemLista3";
-            this.itemLista3.Size = new System.Drawing.Size(497, 104);
-            this.itemLista3.TabIndex = 8;
-            this.itemLista3.TextoAgregadoPor = "Percy Jackson";
-            this.itemLista3.TextoFecha = "dd - mm - aaaa";
-            this.itemLista3.TextoPrincipal = "TextoPrincipal";
-            this.itemLista3.Textosecundario = "TextoSecundario";
-            this.itemLista3.TextoTercero = "TextoTercerDato";
+            this.il_Usuarios3.ColorBack = System.Drawing.Color.White;
+            this.il_Usuarios3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Usuarios3.ColorPanel = System.Drawing.Color.White;
+            this.il_Usuarios3.Location = new System.Drawing.Point(57, 366);
+            this.il_Usuarios3.Name = "il_Usuarios3";
+            this.il_Usuarios3.Size = new System.Drawing.Size(497, 104);
+            this.il_Usuarios3.TabIndex = 8;
+            this.tagsExtender1.SetTag2(this.il_Usuarios3, null);
+            this.tagsExtender1.SetTag3(this.il_Usuarios3, null);
+            this.tagsExtender1.SetTagFontName(this.il_Usuarios3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Usuarios3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Usuarios3, System.Drawing.FontStyle.Regular);
+            this.il_Usuarios3.TextoAgregadoPor = "Percy Jackson";
+            this.il_Usuarios3.TextoFecha = "dd - mm - aaaa";
+            this.il_Usuarios3.TextoPrincipal = "TextoPrincipal";
+            this.il_Usuarios3.Textosecundario = "TextoSecundario";
+            this.il_Usuarios3.TextoTercero = "TextoTercerDato";
             // 
             // pantallaActualizarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.Controls.Add(this.itemLista3);
-            this.Controls.Add(this.itemLista2);
-            this.Controls.Add(this.itemLista1);
+            this.Controls.Add(this.il_Usuarios3);
+            this.Controls.Add(this.il_Usuarios2);
+            this.Controls.Add(this.il_Usuarios1);
             this.Controls.Add(this.rpn_ListaUsuarios);
-            this.Controls.Add(this.btn_Reciente);
-            this.Controls.Add(this.btn_Antiguo);
-            this.Controls.Add(this.btn_ZA);
-            this.Controls.Add(this.btn_AZ);
+            this.Controls.Add(this.btn_Reciente_Usuarios);
+            this.Controls.Add(this.btn_Antiguo_Usuarios);
+            this.Controls.Add(this.btn_ZA_Usuarios);
+            this.Controls.Add(this.btn_AZ_Usuarios);
             this.Controls.Add(this.txt_BuscarUsuario);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Name = "pantallaActualizarUsuarios";
@@ -271,16 +281,16 @@
 
         #endregion
         private System.Windows.Forms.TextBox txt_BuscarUsuario;
-        private System.Windows.Forms.Button btn_AZ;
-        private System.Windows.Forms.Button btn_ZA;
-        private System.Windows.Forms.Button btn_Antiguo;
-        private System.Windows.Forms.Button btn_Reciente;
+        private System.Windows.Forms.Button btn_AZ_Usuarios;
+        private System.Windows.Forms.Button btn_ZA_Usuarios;
+        private System.Windows.Forms.Button btn_Antiguo_Usuarios;
+        private System.Windows.Forms.Button btn_Reciente_Usuarios;
         private RoundedPanel rpn_ListaUsuarios;
         private System.Windows.Forms.Button btn_AgregarUsuario;
         private System.Windows.Forms.Label lbl_ListaUsuarios;
-        private itemLista itemLista1;
-        private itemLista itemLista2;
-        private itemLista itemLista3;
+        private itemLista il_Usuarios1;
+        private itemLista il_Usuarios2;
+        private itemLista il_Usuarios3;
         private TagsExtender tagsExtender1;
     }
 }

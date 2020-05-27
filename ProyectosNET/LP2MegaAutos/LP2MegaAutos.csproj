@@ -83,6 +83,12 @@
     <Compile Include="itemLista.Designer.cs">
       <DependentUpon>itemLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaActualizarDrivers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaActualizarDrivers.Designer.cs">
+      <DependentUpon>pantallaActualizarDrivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaActualizarUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="itemLista.resx">
       <DependentUpon>itemLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaActualizarDrivers.resx">
+      <DependentUpon>pantallaActualizarDrivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>

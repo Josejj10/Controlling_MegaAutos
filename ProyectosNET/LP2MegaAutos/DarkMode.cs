@@ -25,11 +25,12 @@ namespace LP2MegaAutos
         // Para el reloj
         private static int contador = 0;
         const int MAX_TICKS = 7;
-        
+
         /* ====================================
          *              Funciones
          * ====================================*/
 
+        #region De Apoyo
         public static void agregarExcepcion(string e)
         {
             excepciones.Add(e);
@@ -54,7 +55,9 @@ namespace LP2MegaAutos
         {
             return dark_mode == false;
         }
+        #endregion De Apoyo
 
+        #region Cambiar DM
         public static void cambiarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent, Label label_Modo_Oscuro)
         {
             if (dark_mode)
@@ -101,11 +104,12 @@ namespace LP2MegaAutos
             // Si esta en dark mode, pasar a white mode y viceversa
             dark_mode = !dark_mode;
         }
+        #endregion Cambiar DM
 
-
+        #region Iniciar DM 
         // Se debe de llamar cuando ya esta activado el dark mode
         // Para inicializar los otros paneles
-        public static void inicarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent, Label label_Modo_Oscuro)
+        public static void iniciarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent, Label label_Modo_Oscuro)
         {
             iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, parent);
             label_Modo_Oscuro.Text = "Modo Oscuro\nActivado";
@@ -133,6 +137,23 @@ namespace LP2MegaAutos
             panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
 
         }
+
+        #endregion Iniciar DM
+
+        #region Iniciar Sin Timer
+
+        // Inicializa el dark mode en un form
+        // Se debe de llamar cuando ya esta activado el dark mode
+        // Para inicializar los otros paneles
+        public static void iniciarSinTimer(Control parent)
+        {
+            // Cambiar graficos a nocturnos
+            dark_mode = false;
+            cambiar_color_mode(parent);
+            dark_mode = true;
+        }
+
+        #endregion Iniciar Sin Timer
 
         // Inicializa el dark mode en un form
         // Se tiene que llamar desde el tick de un timer 
@@ -167,7 +188,7 @@ namespace LP2MegaAutos
             // Usar recursion para recorrer todos los controles
             foreach (Control c in parent.Controls)
             {
-                if (parent.Controls != null) cambiar_color_mode(c);
+                if (c.Controls.Count != 0) cambiar_color_mode(c);
                 // Llamar a funcion cambiarModoControl
                 cambiar_modo_control(c);
             }

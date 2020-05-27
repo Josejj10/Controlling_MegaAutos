@@ -43,9 +43,9 @@
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
             this.txt_codServ = new System.Windows.Forms.TextBox();
             this.lbl_codServ = new System.Windows.Forms.Label();
-            this.lbl_titulo = new System.Windows.Forms.Label();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.txt_AgregarServicio = new System.Windows.Forms.TextBox();
             this.roundedPanel1.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
@@ -338,23 +338,6 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_codServ, System.Drawing.FontStyle.Bold);
             this.lbl_codServ.Text = "Código de servicio";
             // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_titulo.Location = new System.Drawing.Point(27, 42);
-            this.lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(387, 35);
-            this.lbl_titulo.TabIndex = 5;
-            this.tagsExtender1.SetTag2(this.lbl_titulo, null);
-            this.tagsExtender1.SetTag3(this.lbl_titulo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_titulo, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_titulo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_titulo, System.Drawing.FontStyle.Regular);
-            this.lbl_titulo.Text = "Agregar nombre de servicio...";
-            // 
             // rpTopMain
             // 
             this.rpTopMain.ArcRadiusBorde = 15;
@@ -382,18 +365,34 @@
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
             // 
+            // txt_AgregarServicio
+            // 
+            this.txt_AgregarServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_AgregarServicio.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.txt_AgregarServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_AgregarServicio.Location = new System.Drawing.Point(27, 42);
+            this.txt_AgregarServicio.Name = "txt_AgregarServicio";
+            this.txt_AgregarServicio.Size = new System.Drawing.Size(441, 35);
+            this.txt_AgregarServicio.TabIndex = 37;
+            this.tagsExtender1.SetTag2(this.txt_AgregarServicio, null);
+            this.tagsExtender1.SetTag3(this.txt_AgregarServicio, null);
+            this.tagsExtender1.SetTagFontName(this.txt_AgregarServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_AgregarServicio, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_AgregarServicio, System.Drawing.FontStyle.Bold);
+            this.txt_AgregarServicio.Text = "Agregar nombre del servicio...";
+            // 
             // pantallaAgregarServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.txt_AgregarServicio);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.pnl_tipoServicio);
             this.Controls.Add(this.pnl_descripcion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_codServ);
-            this.Controls.Add(this.lbl_titulo);
             this.Name = "pantallaAgregarServicio";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
@@ -430,8 +429,8 @@
         private RoundedPanel rnd_color_1;
         private System.Windows.Forms.TextBox txt_codServ;
         private System.Windows.Forms.Label lbl_codServ;
-        private System.Windows.Forms.Label lbl_titulo;
         private RoundedPanel rpTopMain;
         private TagsExtender tagsExtender1;
+        private System.Windows.Forms.TextBox txt_AgregarServicio;
     }
 }

@@ -113,6 +113,12 @@
     <Compile Include="pantallaAgregarServicio.Designer.cs">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaAgregarUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAgregarUsuario.Designer.cs">
+      <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaAjustesGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaEditarUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaEditarUsuario.Designer.cs">
+      <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
@@ -250,6 +262,9 @@
     <EmbeddedResource Include="pantallaAgregarServicio.resx">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAgregarUsuario.resx">
+      <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaAjustesGerente.resx">
       <DependentUpon>pantallaAjustesGerente.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarServicios.resx">
       <DependentUpon>pantallaEditarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaEditarUsuario.resx">
+      <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>

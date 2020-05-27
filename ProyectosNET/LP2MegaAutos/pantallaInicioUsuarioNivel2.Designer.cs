@@ -51,6 +51,7 @@
             this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
             this.roundedPanel6 = new LP2MegaAutos.RoundedPanel();
             this.roundedPanel7 = new LP2MegaAutos.RoundedPanel();
+            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpn_GenerarReporteU2.SuspendLayout();
             this.rpn_ReportesU2.SuspendLayout();
             this.rpn_Clientes.SuspendLayout();
@@ -70,6 +71,11 @@
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(269, 59);
             this.lblBienvenido.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.lblBienvenido, null);
+            this.tagsExtender1.SetTag3(this.lblBienvenido, null);
+            this.tagsExtender1.SetTagFontName(this.lblBienvenido, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.lblBienvenido, 32.25F);
+            this.tagsExtender1.SetTagFontStyle(this.lblBienvenido, System.Drawing.FontStyle.Regular);
             this.lblBienvenido.Text = "Bienvenido";
             // 
             // rpn_GenerarReporteU2
@@ -91,6 +97,11 @@
             this.rpn_GenerarReporteU2.PorcLuzColorBorde = 0;
             this.rpn_GenerarReporteU2.Size = new System.Drawing.Size(505, 100);
             this.rpn_GenerarReporteU2.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rpn_GenerarReporteU2, null);
+            this.tagsExtender1.SetTag3(this.rpn_GenerarReporteU2, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_GenerarReporteU2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_GenerarReporteU2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_GenerarReporteU2, System.Drawing.FontStyle.Regular);
             this.rpn_GenerarReporteU2.XBorde = 0;
             this.rpn_GenerarReporteU2.XPanel = 0;
             this.rpn_GenerarReporteU2.YBorde = 0;
@@ -103,11 +114,16 @@
             this.btn_GenerarReporteU2.FlatAppearance.BorderSize = 0;
             this.btn_GenerarReporteU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GenerarReporteU2.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GenerarReporteU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_GenerarReporteU2.ForeColor = System.Drawing.Color.White;
             this.btn_GenerarReporteU2.Location = new System.Drawing.Point(13, 3);
             this.btn_GenerarReporteU2.Name = "btn_GenerarReporteU2";
             this.btn_GenerarReporteU2.Size = new System.Drawing.Size(478, 94);
             this.btn_GenerarReporteU2.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_GenerarReporteU2, null);
+            this.tagsExtender1.SetTag3(this.btn_GenerarReporteU2, null);
+            this.tagsExtender1.SetTagFontName(this.btn_GenerarReporteU2, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_GenerarReporteU2, 24F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_GenerarReporteU2, System.Drawing.FontStyle.Bold);
             this.btn_GenerarReporteU2.Text = "Generar Reporte";
             this.btn_GenerarReporteU2.UseVisualStyleBackColor = false;
             // 
@@ -176,6 +192,11 @@
             this.rpn_ReportesU2.PorcLuzColorBorde = 0;
             this.rpn_ReportesU2.Size = new System.Drawing.Size(505, 100);
             this.rpn_ReportesU2.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.rpn_ReportesU2, null);
+            this.tagsExtender1.SetTag3(this.rpn_ReportesU2, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_ReportesU2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_ReportesU2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_ReportesU2, System.Drawing.FontStyle.Regular);
             this.rpn_ReportesU2.XBorde = 0;
             this.rpn_ReportesU2.XPanel = 0;
             this.rpn_ReportesU2.YBorde = 0;
@@ -188,11 +209,16 @@
             this.btn_ReportesU2.FlatAppearance.BorderSize = 0;
             this.btn_ReportesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ReportesU2.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReportesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_ReportesU2.ForeColor = System.Drawing.Color.White;
             this.btn_ReportesU2.Location = new System.Drawing.Point(13, 3);
             this.btn_ReportesU2.Name = "btn_ReportesU2";
             this.btn_ReportesU2.Size = new System.Drawing.Size(478, 94);
             this.btn_ReportesU2.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_ReportesU2, null);
+            this.tagsExtender1.SetTag3(this.btn_ReportesU2, null);
+            this.tagsExtender1.SetTagFontName(this.btn_ReportesU2, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_ReportesU2, 24F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_ReportesU2, System.Drawing.FontStyle.Bold);
             this.btn_ReportesU2.Text = "Reportes";
             this.btn_ReportesU2.UseVisualStyleBackColor = false;
             // 
@@ -261,6 +287,11 @@
             this.rpn_Clientes.PorcLuzColorBorde = 0;
             this.rpn_Clientes.Size = new System.Drawing.Size(140, 70);
             this.rpn_Clientes.TabIndex = 10;
+            this.tagsExtender1.SetTag2(this.rpn_Clientes, null);
+            this.tagsExtender1.SetTag3(this.rpn_Clientes, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_Clientes, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_Clientes, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_Clientes, System.Drawing.FontStyle.Regular);
             this.rpn_Clientes.XBorde = 0;
             this.rpn_Clientes.XPanel = 0;
             this.rpn_Clientes.YBorde = 0;
@@ -273,11 +304,16 @@
             this.btn_ClientesU2.FlatAppearance.BorderSize = 0;
             this.btn_ClientesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ClientesU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_ClientesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_ClientesU2.ForeColor = System.Drawing.Color.White;
             this.btn_ClientesU2.Location = new System.Drawing.Point(12, 3);
             this.btn_ClientesU2.Name = "btn_ClientesU2";
             this.btn_ClientesU2.Size = new System.Drawing.Size(115, 64);
             this.btn_ClientesU2.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.btn_ClientesU2, null);
+            this.tagsExtender1.SetTag3(this.btn_ClientesU2, null);
+            this.tagsExtender1.SetTagFontName(this.btn_ClientesU2, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_ClientesU2, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_ClientesU2, System.Drawing.FontStyle.Bold);
             this.btn_ClientesU2.Text = "Clientes";
             this.btn_ClientesU2.UseVisualStyleBackColor = false;
             // 
@@ -300,6 +336,11 @@
             this.rpn_Usuarios.PorcLuzColorBorde = 0;
             this.rpn_Usuarios.Size = new System.Drawing.Size(140, 70);
             this.rpn_Usuarios.TabIndex = 11;
+            this.tagsExtender1.SetTag2(this.rpn_Usuarios, null);
+            this.tagsExtender1.SetTag3(this.rpn_Usuarios, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_Usuarios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_Usuarios, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_Usuarios, System.Drawing.FontStyle.Regular);
             this.rpn_Usuarios.XBorde = 0;
             this.rpn_Usuarios.XPanel = 0;
             this.rpn_Usuarios.YBorde = 0;
@@ -312,11 +353,16 @@
             this.btn_UsuariosU2.FlatAppearance.BorderSize = 0;
             this.btn_UsuariosU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_UsuariosU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_UsuariosU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_UsuariosU2.ForeColor = System.Drawing.Color.White;
             this.btn_UsuariosU2.Location = new System.Drawing.Point(13, 3);
             this.btn_UsuariosU2.Name = "btn_UsuariosU2";
             this.btn_UsuariosU2.Size = new System.Drawing.Size(116, 64);
             this.btn_UsuariosU2.TabIndex = 4;
+            this.tagsExtender1.SetTag2(this.btn_UsuariosU2, null);
+            this.tagsExtender1.SetTag3(this.btn_UsuariosU2, null);
+            this.tagsExtender1.SetTagFontName(this.btn_UsuariosU2, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_UsuariosU2, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_UsuariosU2, System.Drawing.FontStyle.Bold);
             this.btn_UsuariosU2.Text = "Usuarios";
             this.btn_UsuariosU2.UseVisualStyleBackColor = false;
             // 
@@ -339,6 +385,11 @@
             this.roundedPanel3.PorcLuzColorBorde = 0;
             this.roundedPanel3.Size = new System.Drawing.Size(140, 70);
             this.roundedPanel3.TabIndex = 11;
+            this.tagsExtender1.SetTag2(this.roundedPanel3, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel3, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel3, System.Drawing.FontStyle.Regular);
             this.roundedPanel3.XBorde = 0;
             this.roundedPanel3.XPanel = 0;
             this.roundedPanel3.YBorde = 0;
@@ -351,11 +402,16 @@
             this.btn_DriversU2.FlatAppearance.BorderSize = 0;
             this.btn_DriversU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DriversU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_DriversU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_DriversU2.ForeColor = System.Drawing.Color.White;
             this.btn_DriversU2.Location = new System.Drawing.Point(12, 3);
             this.btn_DriversU2.Name = "btn_DriversU2";
             this.btn_DriversU2.Size = new System.Drawing.Size(115, 64);
             this.btn_DriversU2.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.btn_DriversU2, null);
+            this.tagsExtender1.SetTag3(this.btn_DriversU2, null);
+            this.tagsExtender1.SetTagFontName(this.btn_DriversU2, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_DriversU2, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_DriversU2, System.Drawing.FontStyle.Bold);
             this.btn_DriversU2.Text = "Drivers";
             this.btn_DriversU2.UseVisualStyleBackColor = false;
             // 
@@ -365,7 +421,7 @@
             this.rpn_Ajustes.ArcRadiusPanel = 15;
             this.rpn_Ajustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_Ajustes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_Ajustes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Ajustes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.rpn_Ajustes.Controls.Add(this.btnAjustesU2);
             this.rpn_Ajustes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Ajustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -378,6 +434,11 @@
             this.rpn_Ajustes.PorcLuzColorBorde = 0;
             this.rpn_Ajustes.Size = new System.Drawing.Size(140, 70);
             this.rpn_Ajustes.TabIndex = 12;
+            this.tagsExtender1.SetTag2(this.rpn_Ajustes, null);
+            this.tagsExtender1.SetTag3(this.rpn_Ajustes, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_Ajustes, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_Ajustes, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_Ajustes, System.Drawing.FontStyle.Regular);
             this.rpn_Ajustes.XBorde = 0;
             this.rpn_Ajustes.XPanel = 0;
             this.rpn_Ajustes.YBorde = 0;
@@ -390,11 +451,16 @@
             this.btnAjustesU2.FlatAppearance.BorderSize = 0;
             this.btnAjustesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjustesU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btnAjustesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnAjustesU2.ForeColor = System.Drawing.Color.White;
             this.btnAjustesU2.Location = new System.Drawing.Point(13, 3);
             this.btnAjustesU2.Name = "btnAjustesU2";
             this.btnAjustesU2.Size = new System.Drawing.Size(115, 64);
             this.btnAjustesU2.TabIndex = 4;
+            this.tagsExtender1.SetTag2(this.btnAjustesU2, null);
+            this.tagsExtender1.SetTag3(this.btnAjustesU2, null);
+            this.tagsExtender1.SetTagFontName(this.btnAjustesU2, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btnAjustesU2, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btnAjustesU2, System.Drawing.FontStyle.Bold);
             this.btnAjustesU2.Text = "Ajustes";
             this.btnAjustesU2.UseVisualStyleBackColor = false;
             // 
@@ -404,7 +470,7 @@
             this.rpn_CerrarSesion.ArcRadiusPanel = 15;
             this.rpn_CerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_CerrarSesion.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_CerrarSesion.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_CerrarSesion.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.rpn_CerrarSesion.Controls.Add(this.btn_CerrarSesionU2);
             this.rpn_CerrarSesion.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_CerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -417,6 +483,11 @@
             this.rpn_CerrarSesion.PorcLuzColorBorde = 0;
             this.rpn_CerrarSesion.Size = new System.Drawing.Size(140, 70);
             this.rpn_CerrarSesion.TabIndex = 13;
+            this.tagsExtender1.SetTag2(this.rpn_CerrarSesion, null);
+            this.tagsExtender1.SetTag3(this.rpn_CerrarSesion, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_CerrarSesion, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_CerrarSesion, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_CerrarSesion, System.Drawing.FontStyle.Regular);
             this.rpn_CerrarSesion.XBorde = 0;
             this.rpn_CerrarSesion.XPanel = 0;
             this.rpn_CerrarSesion.YBorde = 0;
@@ -429,11 +500,16 @@
             this.btn_CerrarSesionU2.FlatAppearance.BorderSize = 0;
             this.btn_CerrarSesionU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CerrarSesionU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_CerrarSesionU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_CerrarSesionU2.ForeColor = System.Drawing.Color.White;
             this.btn_CerrarSesionU2.Location = new System.Drawing.Point(12, 3);
             this.btn_CerrarSesionU2.Name = "btn_CerrarSesionU2";
             this.btn_CerrarSesionU2.Size = new System.Drawing.Size(115, 64);
             this.btn_CerrarSesionU2.TabIndex = 5;
+            this.tagsExtender1.SetTag2(this.btn_CerrarSesionU2, null);
+            this.tagsExtender1.SetTag3(this.btn_CerrarSesionU2, null);
+            this.tagsExtender1.SetTagFontName(this.btn_CerrarSesionU2, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_CerrarSesionU2, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_CerrarSesionU2, System.Drawing.FontStyle.Bold);
             this.btn_CerrarSesionU2.Text = "Cerrar Sesion";
             this.btn_CerrarSesionU2.UseVisualStyleBackColor = false;
             // 
@@ -489,7 +565,7 @@
             this.roundedPanel6.ArcRadiusPanel = 15;
             this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPanel6.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.roundedPanel6.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel6.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.roundedPanel6.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.roundedPanel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.roundedPanel6.Location = new System.Drawing.Point(453, 375);
@@ -512,7 +588,7 @@
             this.roundedPanel7.ArcRadiusPanel = 15;
             this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPanel7.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.roundedPanel7.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel7.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.roundedPanel7.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.roundedPanel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.roundedPanel7.Location = new System.Drawing.Point(0, 375);
@@ -533,6 +609,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Controls.Add(this.roundedPanel7);
             this.Controls.Add(this.roundedPanel6);
             this.Controls.Add(this.roundedPanel5);
@@ -552,6 +629,11 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Name = "pantallaInicioUsuarioNivel2";
             this.Size = new System.Drawing.Size(611, 470);
+            this.tagsExtender1.SetTag2(this, null);
+            this.tagsExtender1.SetTag3(this, null);
+            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this, 10F);
+            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.rpn_GenerarReporteU2.ResumeLayout(false);
             this.rpn_ReportesU2.ResumeLayout(false);
             this.rpn_Clientes.ResumeLayout(false);
@@ -589,5 +671,6 @@
         private RoundedPanel roundedPanel5;
         private RoundedPanel roundedPanel6;
         private RoundedPanel roundedPanel7;
+        private TagsExtender tagsExtender1;
     }
 }

@@ -80,6 +80,7 @@ namespace LP2MegaAutos
             DarkMode.reloj_dark_Tick(reloj_dark, boton_toggle_nocturno);
         }
 
+
         #endregion Dark Mode
 
 

@@ -203,7 +203,7 @@
             this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaServicios.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaServicios.Name = "lbl_ListaServicios";
-            this.lbl_ListaServicios.Size = new System.Drawing.Size(84, 22);
+            this.lbl_ListaServicios.Size = new System.Drawing.Size(88, 19);
             this.lbl_ListaServicios.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);

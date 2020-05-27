@@ -314,7 +314,7 @@ namespace LP2MegaAutos
             this.rpTopMain.ArcRadiusPanel = 15;
             this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
             this.rpTopMain.Location = new System.Drawing.Point(0, 0);
             this.rpTopMain.MenosHeightBorde = 1;
@@ -337,10 +337,10 @@ namespace LP2MegaAutos
             // 
             // itemLista1
             // 
-            this.itemLista1.ColorBack = System.Drawing.Color.White;
+            this.itemLista1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.itemLista1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.itemLista1.ColorPanel = System.Drawing.Color.White;
-            this.itemLista1.Location = new System.Drawing.Point(48, 106);
+            this.itemLista1.Location = new System.Drawing.Point(83, 139);
             this.itemLista1.Name = "itemLista1";
             this.itemLista1.Size = new System.Drawing.Size(497, 104);
             this.itemLista1.TabIndex = 1;

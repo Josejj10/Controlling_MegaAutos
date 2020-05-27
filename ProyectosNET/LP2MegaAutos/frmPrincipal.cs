@@ -24,6 +24,11 @@ namespace LP2MegaAutos
         }
 
 
+        public void btnEditarClick(EventArgs e)
+        {
+            
+        }
+
         #region title_bar
 
         #region botones

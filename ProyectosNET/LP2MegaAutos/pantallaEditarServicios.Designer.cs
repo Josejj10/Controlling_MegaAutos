@@ -45,6 +45,7 @@
             this.lbl_tipoServicio = new System.Windows.Forms.Label();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
+            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.pnl_codServ.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
@@ -122,8 +123,8 @@
             this.txt_codServ.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_codServ, null);
             this.tagsExtender1.SetTag3(this.txt_codServ, null);
-            this.tagsExtender1.SetTagFontName(this.txt_codServ, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_codServ, 19F);
+            this.tagsExtender1.SetTagFontName(this.txt_codServ, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_codServ, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_codServ, System.Drawing.FontStyle.Bold);
             this.txt_codServ.Text = "MEC-001";
             // 
@@ -211,8 +212,8 @@
             this.txt_descripcion.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_descripcion, null);
             this.tagsExtender1.SetTag3(this.txt_descripcion, null);
-            this.tagsExtender1.SetTagFontName(this.txt_descripcion, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_descripcion, 19F);
+            this.tagsExtender1.SetTagFontName(this.txt_descripcion, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_descripcion, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_descripcion, System.Drawing.FontStyle.Bold);
             this.txt_descripcion.Text = "Mantenimiento integral del vehiculo.\r\n";
             // 
@@ -286,8 +287,8 @@
             this.txt_tipoServicio.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_tipoServicio, null);
             this.tagsExtender1.SetTag3(this.txt_tipoServicio, null);
-            this.tagsExtender1.SetTagFontName(this.txt_tipoServicio, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_tipoServicio, 19F);
+            this.tagsExtender1.SetTagFontName(this.txt_tipoServicio, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_tipoServicio, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_tipoServicio, System.Drawing.FontStyle.Bold);
             this.txt_tipoServicio.Text = "Mecánica";
             // 
@@ -354,11 +355,39 @@
             this.btn_guardar.Text = "Guardar cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;
             // 
+            // rpTopMain
+            // 
+            this.rpTopMain.ArcRadiusBorde = 15;
+            this.rpTopMain.ArcRadiusPanel = 15;
+            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
+            this.rpTopMain.Location = new System.Drawing.Point(0, 0);
+            this.rpTopMain.MenosHeightBorde = 1;
+            this.rpTopMain.MenosHeightPanel = 1;
+            this.rpTopMain.MenosWidthBorde = 1;
+            this.rpTopMain.MenosWidthPanel = 1;
+            this.rpTopMain.Name = "rpTopMain";
+            this.rpTopMain.PorcLuzColorBorde = 0;
+            this.rpTopMain.Size = new System.Drawing.Size(611, 40);
+            this.rpTopMain.TabIndex = 29;
+            this.tagsExtender1.SetTag2(this.rpTopMain, null);
+            this.tagsExtender1.SetTag3(this.rpTopMain, null);
+            this.tagsExtender1.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpTopMain, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
+            this.rpTopMain.XBorde = 0;
+            this.rpTopMain.XPanel = 0;
+            this.rpTopMain.YBorde = 0;
+            this.rpTopMain.YPanel = 0;
+            // 
             // pantallaEditarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.pnl_tipoServicio);
             this.Controls.Add(this.pnl_descripcion);
@@ -406,5 +435,6 @@
         private System.Windows.Forms.Label lbl_tipoServicio;
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.Button btn_guardar;
+        private RoundedPanel rpTopMain;
     }
 }

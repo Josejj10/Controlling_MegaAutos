@@ -113,12 +113,6 @@
     <Compile Include="pantallaInicioUsuarioNivel2.Designer.cs">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaSede.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pantallaSede.Designer.cs">
-      <DependentUpon>pantallaSede.cs</DependentUpon>
-    </Compile>
     <Compile Include="RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -175,6 +169,18 @@
     <Compile Include="RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaSede.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaSede.Designer.cs">
+      <DependentUpon>pantallaSede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaServicios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaServicios.Designer.cs">
+      <DependentUpon>pantallaServicios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +221,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaServicios.resx">
+      <DependentUpon>pantallaServicios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />

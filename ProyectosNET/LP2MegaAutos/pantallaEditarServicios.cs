@@ -31,5 +31,10 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
         }
+
+        private void pantallaEditarServicios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

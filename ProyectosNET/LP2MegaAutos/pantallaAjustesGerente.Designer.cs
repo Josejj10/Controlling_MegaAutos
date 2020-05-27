@@ -28,62 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rpn_ListaPermisosGerente = new LP2MegaAutos.RoundedPanel();
-            this.btn_AgregarPermiso = new System.Windows.Forms.Button();
-            this.lbl_ListaPermisosGerente = new System.Windows.Forms.Label();
-            this.pn_ContrasenaGerente = new ShadowPanel.ShadowPanelRight();
-            this.lbl_PasswordGerente = new System.Windows.Forms.Label();
-            this.panel_seleccionado_password = new System.Windows.Forms.Panel();
-            this.lbl_PasswordGerenteLleno = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.sp_TipoGerente = new ShadowPanel.ShadowPanelRight();
-            this.lbl_TipoGerenteLleno = new System.Windows.Forms.Label();
-            this.lbl_TipoGerente = new System.Windows.Forms.Label();
+            this.btn_AgregarPermiso = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sp_DireccionGerente = new ShadowPanel.ShadowPanelRight();
-            this.lbl_DireccionGerenteLleno = new System.Windows.Forms.Label();
-            this.lbl_DireccionGerente = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.sp_CorreoGerente = new ShadowPanel.ShadowPanelRight();
-            this.lbl_CorreoGerenteLleno = new System.Windows.Forms.Label();
-            this.lbl_CorreoGerente = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbl_NombreGerente = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
+            this.txt_TipoUsuario = new System.Windows.Forms.TextBox();
+            this.lbl_TipoUsuario = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_Direccion = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.boton_ver_password = new System.Windows.Forms.Button();
-            this.rpn_ListaPermisosGerente.SuspendLayout();
-            this.pn_ContrasenaGerente.SuspendLayout();
-            this.sp_TipoGerente.SuspendLayout();
-            this.sp_DireccionGerente.SuspendLayout();
-            this.sp_CorreoGerente.SuspendLayout();
+            this.txt_NuevaCont = new System.Windows.Forms.TextBox();
+            this.lbl_Contraseña = new System.Windows.Forms.Label();
+            this.pnl_codServ = new System.Windows.Forms.Panel();
+            this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
+            this.txt_Correo = new System.Windows.Forms.TextBox();
+            this.lbl_Correo = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_NombreAjustes = new System.Windows.Forms.Label();
+            this.rpn_ListaPermisosUsuario = new LP2MegaAutos.RoundedPanel();
+            this.lbl_ListaPermisosUsuario = new System.Windows.Forms.Label();
+            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.pnl_codServ.SuspendLayout();
+            this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rpn_ListaPermisosGerente
-            // 
-            this.rpn_ListaPermisosGerente.ArcRadiusBorde = 15;
-            this.rpn_ListaPermisosGerente.ArcRadiusPanel = 15;
-            this.rpn_ListaPermisosGerente.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_ListaPermisosGerente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.rpn_ListaPermisosGerente.Controls.Add(this.btn_AgregarPermiso);
-            this.rpn_ListaPermisosGerente.Controls.Add(this.lbl_ListaPermisosGerente);
-            this.rpn_ListaPermisosGerente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpn_ListaPermisosGerente.Location = new System.Drawing.Point(36, 235);
-            this.rpn_ListaPermisosGerente.MenosHeightBorde = 1;
-            this.rpn_ListaPermisosGerente.MenosHeightPanel = 1;
-            this.rpn_ListaPermisosGerente.MenosWidthBorde = 1;
-            this.rpn_ListaPermisosGerente.MenosWidthPanel = 1;
-            this.rpn_ListaPermisosGerente.Name = "rpn_ListaPermisosGerente";
-            this.rpn_ListaPermisosGerente.PorcLuzColorBorde = 0;
-            this.rpn_ListaPermisosGerente.Size = new System.Drawing.Size(538, 36);
-            this.rpn_ListaPermisosGerente.TabIndex = 18;
-            this.tagsExtender1.SetTag2(this.rpn_ListaPermisosGerente, null);
-            this.tagsExtender1.SetTag3(this.rpn_ListaPermisosGerente, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_ListaPermisosGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_ListaPermisosGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_ListaPermisosGerente, System.Drawing.FontStyle.Regular);
-            this.rpn_ListaPermisosGerente.XBorde = 0;
-            this.rpn_ListaPermisosGerente.XPanel = 0;
-            this.rpn_ListaPermisosGerente.YBorde = 0;
-            this.rpn_ListaPermisosGerente.YPanel = 0;
             // 
             // btn_AgregarPermiso
             // 
@@ -92,10 +67,10 @@
             this.btn_AgregarPermiso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarPermiso.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AgregarPermiso.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarPermiso.Location = new System.Drawing.Point(432, 4);
+            this.btn_AgregarPermiso.Location = new System.Drawing.Point(435, 4);
             this.btn_AgregarPermiso.Name = "btn_AgregarPermiso";
             this.btn_AgregarPermiso.Size = new System.Drawing.Size(94, 26);
-            this.btn_AgregarPermiso.TabIndex = 6;
+            this.btn_AgregarPermiso.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btn_AgregarPermiso, null);
             this.tagsExtender1.SetTag3(this.btn_AgregarPermiso, null);
             this.tagsExtender1.SetTagFontName(this.btn_AgregarPermiso, fontsD.Ninguno);
@@ -105,344 +80,213 @@
             this.btn_AgregarPermiso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AgregarPermiso.UseVisualStyleBackColor = false;
             // 
-            // lbl_ListaPermisosGerente
-            // 
-            this.lbl_ListaPermisosGerente.AutoSize = true;
-            this.lbl_ListaPermisosGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lbl_ListaPermisosGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_ListaPermisosGerente.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ListaPermisosGerente.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaPermisosGerente.Location = new System.Drawing.Point(213, 4);
-            this.lbl_ListaPermisosGerente.Name = "lbl_ListaPermisosGerente";
-            this.lbl_ListaPermisosGerente.Size = new System.Drawing.Size(114, 29);
-            this.lbl_ListaPermisosGerente.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.lbl_ListaPermisosGerente, null);
-            this.tagsExtender1.SetTag3(this.lbl_ListaPermisosGerente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaPermisosGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_ListaPermisosGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaPermisosGerente, System.Drawing.FontStyle.Regular);
-            this.lbl_ListaPermisosGerente.Text = "Permisos";
-            this.lbl_ListaPermisosGerente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pn_ContrasenaGerente
-            // 
-            this.pn_ContrasenaGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.pn_ContrasenaGerente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
-            this.pn_ContrasenaGerente.Controls.Add(this.lbl_PasswordGerenteLleno);
-            this.pn_ContrasenaGerente.Controls.Add(this.boton_ver_password);
-            this.pn_ContrasenaGerente.Controls.Add(this.lbl_PasswordGerente);
-            this.pn_ContrasenaGerente.Controls.Add(this.panel_seleccionado_password);
-            this.pn_ContrasenaGerente.Location = new System.Drawing.Point(308, 92);
-            this.pn_ContrasenaGerente.Name = "pn_ContrasenaGerente";
-            this.pn_ContrasenaGerente.PanelColor = System.Drawing.Color.Empty;
-            this.pn_ContrasenaGerente.Size = new System.Drawing.Size(266, 60);
-            this.pn_ContrasenaGerente.TabIndex = 20;
-            this.pn_ContrasenaGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.pn_ContrasenaGerente, null);
-            this.tagsExtender1.SetTag3(this.pn_ContrasenaGerente, null);
-            this.tagsExtender1.SetTagFontName(this.pn_ContrasenaGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.pn_ContrasenaGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.pn_ContrasenaGerente, System.Drawing.FontStyle.Regular);
-            // 
-            // lbl_PasswordGerente
-            // 
-            this.lbl_PasswordGerente.AutoSize = true;
-            this.lbl_PasswordGerente.BackColor = System.Drawing.Color.White;
-            this.lbl_PasswordGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_PasswordGerente.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PasswordGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_PasswordGerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_PasswordGerente.Location = new System.Drawing.Point(16, 27);
-            this.lbl_PasswordGerente.Name = "lbl_PasswordGerente";
-            this.lbl_PasswordGerente.Size = new System.Drawing.Size(91, 19);
-            this.lbl_PasswordGerente.TabIndex = 0;
-            this.lbl_PasswordGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_PasswordGerente, null);
-            this.tagsExtender1.SetTag3(this.lbl_PasswordGerente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_PasswordGerente, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_PasswordGerente, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_PasswordGerente, System.Drawing.FontStyle.Bold);
-            this.lbl_PasswordGerente.Text = "Contraseña";
-            this.lbl_PasswordGerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel_seleccionado_password
-            // 
-            this.panel_seleccionado_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
-            this.panel_seleccionado_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_seleccionado_password.Location = new System.Drawing.Point(0, 1);
-            this.panel_seleccionado_password.Name = "panel_seleccionado_password";
-            this.panel_seleccionado_password.Size = new System.Drawing.Size(10, 54);
-            this.panel_seleccionado_password.TabIndex = 10;
-            this.tagsExtender1.SetTag2(this.panel_seleccionado_password, null);
-            this.tagsExtender1.SetTag3(this.panel_seleccionado_password, null);
-            this.tagsExtender1.SetTagFontName(this.panel_seleccionado_password, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel_seleccionado_password, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel_seleccionado_password, System.Drawing.FontStyle.Regular);
-            this.panel_seleccionado_password.Visible = false;
-            // 
-            // lbl_PasswordGerenteLleno
-            // 
-            this.lbl_PasswordGerenteLleno.AutoSize = true;
-            this.lbl_PasswordGerenteLleno.BackColor = System.Drawing.Color.White;
-            this.lbl_PasswordGerenteLleno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_PasswordGerenteLleno.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_PasswordGerenteLleno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_PasswordGerenteLleno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_PasswordGerenteLleno.Location = new System.Drawing.Point(16, 6);
-            this.lbl_PasswordGerenteLleno.Name = "lbl_PasswordGerenteLleno";
-            this.lbl_PasswordGerenteLleno.Size = new System.Drawing.Size(86, 18);
-            this.lbl_PasswordGerenteLleno.TabIndex = 11;
-            this.lbl_PasswordGerenteLleno.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_PasswordGerenteLleno, null);
-            this.tagsExtender1.SetTag3(this.lbl_PasswordGerenteLleno, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_PasswordGerenteLleno, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_PasswordGerenteLleno, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_PasswordGerenteLleno, System.Drawing.FontStyle.Bold);
-            this.lbl_PasswordGerenteLleno.Text = "*************";
-            this.lbl_PasswordGerenteLleno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // sp_TipoGerente
-            // 
-            this.sp_TipoGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.sp_TipoGerente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
-            this.sp_TipoGerente.Controls.Add(this.lbl_TipoGerenteLleno);
-            this.sp_TipoGerente.Controls.Add(this.lbl_TipoGerente);
-            this.sp_TipoGerente.Controls.Add(this.panel1);
-            this.sp_TipoGerente.Location = new System.Drawing.Point(308, 158);
-            this.sp_TipoGerente.Name = "sp_TipoGerente";
-            this.sp_TipoGerente.PanelColor = System.Drawing.Color.Empty;
-            this.sp_TipoGerente.Size = new System.Drawing.Size(266, 60);
-            this.sp_TipoGerente.TabIndex = 21;
-            this.sp_TipoGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.sp_TipoGerente, null);
-            this.tagsExtender1.SetTag3(this.sp_TipoGerente, null);
-            this.tagsExtender1.SetTagFontName(this.sp_TipoGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.sp_TipoGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.sp_TipoGerente, System.Drawing.FontStyle.Regular);
-            // 
-            // lbl_TipoGerenteLleno
-            // 
-            this.lbl_TipoGerenteLleno.AutoSize = true;
-            this.lbl_TipoGerenteLleno.BackColor = System.Drawing.Color.White;
-            this.lbl_TipoGerenteLleno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_TipoGerenteLleno.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_TipoGerenteLleno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_TipoGerenteLleno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_TipoGerenteLleno.Location = new System.Drawing.Point(16, 6);
-            this.lbl_TipoGerenteLleno.Name = "lbl_TipoGerenteLleno";
-            this.lbl_TipoGerenteLleno.Size = new System.Drawing.Size(153, 18);
-            this.lbl_TipoGerenteLleno.TabIndex = 11;
-            this.lbl_TipoGerenteLleno.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_TipoGerenteLleno, null);
-            this.tagsExtender1.SetTag3(this.lbl_TipoGerenteLleno, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TipoGerenteLleno, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_TipoGerenteLleno, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_TipoGerenteLleno, System.Drawing.FontStyle.Bold);
-            this.lbl_TipoGerenteLleno.Text = "Jefe de Planeamiento";
-            this.lbl_TipoGerenteLleno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbl_TipoGerente
-            // 
-            this.lbl_TipoGerente.AutoSize = true;
-            this.lbl_TipoGerente.BackColor = System.Drawing.Color.White;
-            this.lbl_TipoGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_TipoGerente.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TipoGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_TipoGerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_TipoGerente.Location = new System.Drawing.Point(16, 27);
-            this.lbl_TipoGerente.Name = "lbl_TipoGerente";
-            this.lbl_TipoGerente.Size = new System.Drawing.Size(122, 19);
-            this.lbl_TipoGerente.TabIndex = 0;
-            this.lbl_TipoGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_TipoGerente, null);
-            this.tagsExtender1.SetTag3(this.lbl_TipoGerente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TipoGerente, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_TipoGerente, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_TipoGerente, System.Drawing.FontStyle.Bold);
-            this.lbl_TipoGerente.Text = "Tipo de Usuario";
-            this.lbl_TipoGerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.panel1.Location = new System.Drawing.Point(35, 295);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 54);
-            this.panel1.TabIndex = 10;
+            this.panel1.Size = new System.Drawing.Size(538, 174);
+            this.panel1.TabIndex = 52;
             this.tagsExtender1.SetTag2(this.panel1, null);
             this.tagsExtender1.SetTag3(this.panel1, null);
             this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
-            this.panel1.Visible = false;
             // 
-            // sp_DireccionGerente
+            // panel7
             // 
-            this.sp_DireccionGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.sp_DireccionGerente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
-            this.sp_DireccionGerente.Controls.Add(this.lbl_DireccionGerenteLleno);
-            this.sp_DireccionGerente.Controls.Add(this.lbl_DireccionGerente);
-            this.sp_DireccionGerente.Controls.Add(this.panel2);
-            this.sp_DireccionGerente.Location = new System.Drawing.Point(36, 159);
-            this.sp_DireccionGerente.Name = "sp_DireccionGerente";
-            this.sp_DireccionGerente.PanelColor = System.Drawing.Color.Empty;
-            this.sp_DireccionGerente.Size = new System.Drawing.Size(266, 60);
-            this.sp_DireccionGerente.TabIndex = 23;
-            this.sp_DireccionGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.sp_DireccionGerente, null);
-            this.tagsExtender1.SetTag3(this.sp_DireccionGerente, null);
-            this.tagsExtender1.SetTagFontName(this.sp_DireccionGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.sp_DireccionGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.sp_DireccionGerente, System.Drawing.FontStyle.Regular);
+            this.panel7.Controls.Add(this.roundedPanel3);
+            this.panel7.Controls.Add(this.txt_TipoUsuario);
+            this.panel7.Controls.Add(this.lbl_TipoUsuario);
+            this.panel7.Location = new System.Drawing.Point(308, 184);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(259, 41);
+            this.panel7.TabIndex = 51;
+            this.tagsExtender1.SetTag2(this.panel7, null);
+            this.tagsExtender1.SetTag3(this.panel7, null);
+            this.tagsExtender1.SetTagFontName(this.panel7, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel7, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel7, System.Drawing.FontStyle.Regular);
             // 
-            // lbl_DireccionGerenteLleno
+            // roundedPanel3
             // 
-            this.lbl_DireccionGerenteLleno.AutoSize = true;
-            this.lbl_DireccionGerenteLleno.BackColor = System.Drawing.Color.White;
-            this.lbl_DireccionGerenteLleno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_DireccionGerenteLleno.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_DireccionGerenteLleno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_DireccionGerenteLleno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_DireccionGerenteLleno.Location = new System.Drawing.Point(16, 6);
-            this.lbl_DireccionGerenteLleno.Name = "lbl_DireccionGerenteLleno";
-            this.lbl_DireccionGerenteLleno.Size = new System.Drawing.Size(177, 18);
-            this.lbl_DireccionGerenteLleno.TabIndex = 11;
-            this.lbl_DireccionGerenteLleno.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_DireccionGerenteLleno, null);
-            this.tagsExtender1.SetTag3(this.lbl_DireccionGerenteLleno, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_DireccionGerenteLleno, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_DireccionGerenteLleno, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_DireccionGerenteLleno, System.Drawing.FontStyle.Bold);
-            this.lbl_DireccionGerenteLleno.Text = "Av. General Clement 878";
-            this.lbl_DireccionGerenteLleno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedPanel3.ArcRadiusBorde = 15;
+            this.roundedPanel3.ArcRadiusPanel = 15;
+            this.roundedPanel3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel3.Location = new System.Drawing.Point(2, 4);
+            this.roundedPanel3.MenosHeightBorde = 1;
+            this.roundedPanel3.MenosHeightPanel = 1;
+            this.roundedPanel3.MenosWidthBorde = 1;
+            this.roundedPanel3.MenosWidthPanel = 1;
+            this.roundedPanel3.Name = "roundedPanel3";
+            this.roundedPanel3.PorcLuzColorBorde = 0;
+            this.roundedPanel3.Size = new System.Drawing.Size(3, 36);
+            this.roundedPanel3.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.roundedPanel3, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel3, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel3, System.Drawing.FontStyle.Regular);
+            this.roundedPanel3.XBorde = 0;
+            this.roundedPanel3.XPanel = 0;
+            this.roundedPanel3.YBorde = 0;
+            this.roundedPanel3.YPanel = 0;
             // 
-            // lbl_DireccionGerente
+            // txt_TipoUsuario
             // 
-            this.lbl_DireccionGerente.AutoSize = true;
-            this.lbl_DireccionGerente.BackColor = System.Drawing.Color.White;
-            this.lbl_DireccionGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_DireccionGerente.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_DireccionGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_DireccionGerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_DireccionGerente.Location = new System.Drawing.Point(16, 27);
-            this.lbl_DireccionGerente.Name = "lbl_DireccionGerente";
-            this.lbl_DireccionGerente.Size = new System.Drawing.Size(78, 19);
-            this.lbl_DireccionGerente.TabIndex = 0;
-            this.lbl_DireccionGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_DireccionGerente, null);
-            this.tagsExtender1.SetTag3(this.lbl_DireccionGerente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_DireccionGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_DireccionGerente, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_DireccionGerente, System.Drawing.FontStyle.Bold);
-            this.lbl_DireccionGerente.Text = "Direccion";
-            this.lbl_DireccionGerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txt_TipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_TipoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_TipoUsuario.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TipoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_TipoUsuario.Location = new System.Drawing.Point(9, 0);
+            this.txt_TipoUsuario.Name = "txt_TipoUsuario";
+            this.txt_TipoUsuario.Size = new System.Drawing.Size(254, 23);
+            this.txt_TipoUsuario.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_TipoUsuario, null);
+            this.tagsExtender1.SetTag3(this.txt_TipoUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.txt_TipoUsuario, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_TipoUsuario, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_TipoUsuario, System.Drawing.FontStyle.Bold);
+            this.txt_TipoUsuario.Text = "Gerente";
             // 
-            // panel2
+            // lbl_TipoUsuario
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(0, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 54);
-            this.panel2.TabIndex = 10;
-            this.tagsExtender1.SetTag2(this.panel2, null);
-            this.tagsExtender1.SetTag3(this.panel2, null);
-            this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
-            this.panel2.Visible = false;
+            this.lbl_TipoUsuario.AutoSize = true;
+            this.lbl_TipoUsuario.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TipoUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbl_TipoUsuario.Location = new System.Drawing.Point(6, 24);
+            this.lbl_TipoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TipoUsuario.Name = "lbl_TipoUsuario";
+            this.lbl_TipoUsuario.Size = new System.Drawing.Size(98, 16);
+            this.lbl_TipoUsuario.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_TipoUsuario, null);
+            this.tagsExtender1.SetTag3(this.lbl_TipoUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_TipoUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_TipoUsuario, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_TipoUsuario, System.Drawing.FontStyle.Bold);
+            this.lbl_TipoUsuario.Text = "Tipo de Usuario";
             // 
-            // sp_CorreoGerente
+            // panel6
             // 
-            this.sp_CorreoGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.sp_CorreoGerente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
-            this.sp_CorreoGerente.Controls.Add(this.lbl_CorreoGerenteLleno);
-            this.sp_CorreoGerente.Controls.Add(this.lbl_CorreoGerente);
-            this.sp_CorreoGerente.Controls.Add(this.panel3);
-            this.sp_CorreoGerente.Location = new System.Drawing.Point(36, 91);
-            this.sp_CorreoGerente.Name = "sp_CorreoGerente";
-            this.sp_CorreoGerente.PanelColor = System.Drawing.Color.Empty;
-            this.sp_CorreoGerente.Size = new System.Drawing.Size(266, 60);
-            this.sp_CorreoGerente.TabIndex = 22;
-            this.sp_CorreoGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.sp_CorreoGerente, null);
-            this.tagsExtender1.SetTag3(this.sp_CorreoGerente, null);
-            this.tagsExtender1.SetTagFontName(this.sp_CorreoGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.sp_CorreoGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.sp_CorreoGerente, System.Drawing.FontStyle.Regular);
+            this.panel6.Controls.Add(this.roundedPanel1);
+            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.lbl_Direccion);
+            this.panel6.Location = new System.Drawing.Point(32, 184);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(266, 41);
+            this.panel6.TabIndex = 49;
+            this.tagsExtender1.SetTag2(this.panel6, null);
+            this.tagsExtender1.SetTag3(this.panel6, null);
+            this.tagsExtender1.SetTagFontName(this.panel6, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel6, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel6, System.Drawing.FontStyle.Regular);
             // 
-            // lbl_CorreoGerenteLleno
+            // roundedPanel1
             // 
-            this.lbl_CorreoGerenteLleno.AutoSize = true;
-            this.lbl_CorreoGerenteLleno.BackColor = System.Drawing.Color.White;
-            this.lbl_CorreoGerenteLleno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_CorreoGerenteLleno.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_CorreoGerenteLleno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_CorreoGerenteLleno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_CorreoGerenteLleno.Location = new System.Drawing.Point(16, 6);
-            this.lbl_CorreoGerenteLleno.Name = "lbl_CorreoGerenteLleno";
-            this.lbl_CorreoGerenteLleno.Size = new System.Drawing.Size(166, 18);
-            this.lbl_CorreoGerenteLleno.TabIndex = 11;
-            this.lbl_CorreoGerenteLleno.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_CorreoGerenteLleno, null);
-            this.tagsExtender1.SetTag3(this.lbl_CorreoGerenteLleno, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_CorreoGerenteLleno, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_CorreoGerenteLleno, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_CorreoGerenteLleno, System.Drawing.FontStyle.Bold);
-            this.lbl_CorreoGerenteLleno.Text = "jberrospi@pucp.edu.pe";
-            this.lbl_CorreoGerenteLleno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedPanel1.ArcRadiusBorde = 15;
+            this.roundedPanel1.ArcRadiusPanel = 15;
+            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel1.Location = new System.Drawing.Point(2, 4);
+            this.roundedPanel1.MenosHeightBorde = 1;
+            this.roundedPanel1.MenosHeightPanel = 1;
+            this.roundedPanel1.MenosWidthBorde = 1;
+            this.roundedPanel1.MenosWidthPanel = 1;
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.PorcLuzColorBorde = 0;
+            this.roundedPanel1.Size = new System.Drawing.Size(3, 36);
+            this.roundedPanel1.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.roundedPanel1, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
+            this.roundedPanel1.XBorde = 0;
+            this.roundedPanel1.XPanel = 0;
+            this.roundedPanel1.YBorde = 0;
+            this.roundedPanel1.YPanel = 0;
             // 
-            // lbl_CorreoGerente
+            // textBox1
             // 
-            this.lbl_CorreoGerente.AutoSize = true;
-            this.lbl_CorreoGerente.BackColor = System.Drawing.Color.White;
-            this.lbl_CorreoGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_CorreoGerente.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CorreoGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lbl_CorreoGerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_CorreoGerente.Location = new System.Drawing.Point(16, 27);
-            this.lbl_CorreoGerente.Name = "lbl_CorreoGerente";
-            this.lbl_CorreoGerente.Size = new System.Drawing.Size(59, 19);
-            this.lbl_CorreoGerente.TabIndex = 0;
-            this.lbl_CorreoGerente.Tag = "form";
-            this.tagsExtender1.SetTag2(this.lbl_CorreoGerente, null);
-            this.tagsExtender1.SetTag3(this.lbl_CorreoGerente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_CorreoGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_CorreoGerente, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_CorreoGerente, System.Drawing.FontStyle.Bold);
-            this.lbl_CorreoGerente.Text = "Correo";
-            this.lbl_CorreoGerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.textBox1.Location = new System.Drawing.Point(9, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(254, 23);
+            this.textBox1.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.textBox1, null);
+            this.tagsExtender1.SetTag3(this.textBox1, null);
+            this.tagsExtender1.SetTagFontName(this.textBox1, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.textBox1, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.textBox1, System.Drawing.FontStyle.Bold);
+            this.textBox1.Text = "Av. Los Álamos 878";
             // 
-            // panel3
+            // lbl_Direccion
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(0, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 54);
-            this.panel3.TabIndex = 10;
-            this.tagsExtender1.SetTag2(this.panel3, null);
-            this.tagsExtender1.SetTag3(this.panel3, null);
-            this.tagsExtender1.SetTagFontName(this.panel3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
-            this.panel3.Visible = false;
+            this.lbl_Direccion.AutoSize = true;
+            this.lbl_Direccion.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbl_Direccion.Location = new System.Drawing.Point(6, 24);
+            this.lbl_Direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Direccion.Name = "lbl_Direccion";
+            this.lbl_Direccion.Size = new System.Drawing.Size(62, 16);
+            this.lbl_Direccion.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_Direccion, null);
+            this.tagsExtender1.SetTag3(this.lbl_Direccion, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_Direccion, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_Direccion, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_Direccion, System.Drawing.FontStyle.Bold);
+            this.lbl_Direccion.Text = "Dirección";
             // 
-            // lbl_NombreGerente
+            // panel5
             // 
-            this.lbl_NombreGerente.AutoSize = true;
-            this.lbl_NombreGerente.Font = new System.Drawing.Font("Lato", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NombreGerente.Location = new System.Drawing.Point(28, 22);
-            this.lbl_NombreGerente.Name = "lbl_NombreGerente";
-            this.lbl_NombreGerente.Size = new System.Drawing.Size(370, 45);
-            this.lbl_NombreGerente.TabIndex = 24;
-            this.tagsExtender1.SetTag2(this.lbl_NombreGerente, null);
-            this.tagsExtender1.SetTag3(this.lbl_NombreGerente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_NombreGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_NombreGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_NombreGerente, System.Drawing.FontStyle.Regular);
-            this.lbl_NombreGerente.Text = "Jonathan McBerrospi";
+            this.panel5.Controls.Add(this.roundedPanel2);
+            this.panel5.Controls.Add(this.boton_ver_password);
+            this.panel5.Controls.Add(this.txt_NuevaCont);
+            this.panel5.Controls.Add(this.lbl_Contraseña);
+            this.panel5.Location = new System.Drawing.Point(306, 119);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(261, 41);
+            this.panel5.TabIndex = 50;
+            this.tagsExtender1.SetTag2(this.panel5, null);
+            this.tagsExtender1.SetTag3(this.panel5, null);
+            this.tagsExtender1.SetTagFontName(this.panel5, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel5, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel5, System.Drawing.FontStyle.Regular);
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.ArcRadiusBorde = 15;
+            this.roundedPanel2.ArcRadiusPanel = 15;
+            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel2.Location = new System.Drawing.Point(2, 4);
+            this.roundedPanel2.MenosHeightBorde = 1;
+            this.roundedPanel2.MenosHeightPanel = 1;
+            this.roundedPanel2.MenosWidthBorde = 1;
+            this.roundedPanel2.MenosWidthPanel = 1;
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.PorcLuzColorBorde = 0;
+            this.roundedPanel2.Size = new System.Drawing.Size(3, 36);
+            this.roundedPanel2.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.roundedPanel2, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel2, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel2, System.Drawing.FontStyle.Regular);
+            this.roundedPanel2.XBorde = 0;
+            this.roundedPanel2.XPanel = 0;
+            this.roundedPanel2.YBorde = 0;
+            this.roundedPanel2.YPanel = 0;
             // 
             // boton_ver_password
             // 
@@ -457,7 +301,7 @@
             this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(232, 21);
+            this.boton_ver_password.Location = new System.Drawing.Point(230, 4);
             this.boton_ver_password.Name = "boton_ver_password";
             this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
             this.boton_ver_password.TabIndex = 0;
@@ -470,17 +314,235 @@
             this.tagsExtender1.SetTagFontStyle(this.boton_ver_password, System.Drawing.FontStyle.Regular);
             this.boton_ver_password.UseVisualStyleBackColor = false;
             // 
+            // txt_NuevaCont
+            // 
+            this.txt_NuevaCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_NuevaCont.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NuevaCont.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NuevaCont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_NuevaCont.Location = new System.Drawing.Point(9, 3);
+            this.txt_NuevaCont.Name = "txt_NuevaCont";
+            this.txt_NuevaCont.PasswordChar = '*';
+            this.txt_NuevaCont.Size = new System.Drawing.Size(284, 23);
+            this.txt_NuevaCont.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_NuevaCont, null);
+            this.tagsExtender1.SetTag3(this.txt_NuevaCont, null);
+            this.tagsExtender1.SetTagFontName(this.txt_NuevaCont, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_NuevaCont, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NuevaCont, System.Drawing.FontStyle.Bold);
+            this.txt_NuevaCont.Text = "jmcberro@gmail.com";
+            // 
+            // lbl_Contraseña
+            // 
+            this.lbl_Contraseña.AutoSize = true;
+            this.lbl_Contraseña.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbl_Contraseña.Location = new System.Drawing.Point(6, 24);
+            this.lbl_Contraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Contraseña.Name = "lbl_Contraseña";
+            this.lbl_Contraseña.Size = new System.Drawing.Size(75, 16);
+            this.lbl_Contraseña.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_Contraseña, null);
+            this.tagsExtender1.SetTag3(this.lbl_Contraseña, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_Contraseña, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_Contraseña, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_Contraseña, System.Drawing.FontStyle.Bold);
+            this.lbl_Contraseña.Text = "Contraseña";
+            // 
+            // pnl_codServ
+            // 
+            this.pnl_codServ.Controls.Add(this.rnd_color_1);
+            this.pnl_codServ.Controls.Add(this.txt_Correo);
+            this.pnl_codServ.Controls.Add(this.lbl_Correo);
+            this.pnl_codServ.Location = new System.Drawing.Point(32, 119);
+            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_codServ.Name = "pnl_codServ";
+            this.pnl_codServ.Size = new System.Drawing.Size(266, 41);
+            this.pnl_codServ.TabIndex = 48;
+            this.tagsExtender1.SetTag2(this.pnl_codServ, null);
+            this.tagsExtender1.SetTag3(this.pnl_codServ, null);
+            this.tagsExtender1.SetTagFontName(this.pnl_codServ, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnl_codServ, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnl_codServ, System.Drawing.FontStyle.Regular);
+            // 
+            // rnd_color_1
+            // 
+            this.rnd_color_1.ArcRadiusBorde = 15;
+            this.rnd_color_1.ArcRadiusPanel = 15;
+            this.rnd_color_1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.rnd_color_1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.rnd_color_1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rnd_color_1.Location = new System.Drawing.Point(2, 4);
+            this.rnd_color_1.MenosHeightBorde = 1;
+            this.rnd_color_1.MenosHeightPanel = 1;
+            this.rnd_color_1.MenosWidthBorde = 1;
+            this.rnd_color_1.MenosWidthPanel = 1;
+            this.rnd_color_1.Name = "rnd_color_1";
+            this.rnd_color_1.PorcLuzColorBorde = 0;
+            this.rnd_color_1.Size = new System.Drawing.Size(3, 36);
+            this.rnd_color_1.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rnd_color_1, null);
+            this.tagsExtender1.SetTag3(this.rnd_color_1, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_color_1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_color_1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_color_1, System.Drawing.FontStyle.Regular);
+            this.rnd_color_1.XBorde = 0;
+            this.rnd_color_1.XPanel = 0;
+            this.rnd_color_1.YBorde = 0;
+            this.rnd_color_1.YPanel = 0;
+            // 
+            // txt_Correo
+            // 
+            this.txt_Correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Correo.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_Correo.Location = new System.Drawing.Point(9, 0);
+            this.txt_Correo.Name = "txt_Correo";
+            this.txt_Correo.Size = new System.Drawing.Size(254, 23);
+            this.txt_Correo.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_Correo, null);
+            this.tagsExtender1.SetTag3(this.txt_Correo, null);
+            this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_Correo, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_Correo, System.Drawing.FontStyle.Bold);
+            this.txt_Correo.Text = "ckent@pucp.edu.pe";
+            // 
+            // lbl_Correo
+            // 
+            this.lbl_Correo.AutoSize = true;
+            this.lbl_Correo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbl_Correo.Location = new System.Drawing.Point(6, 24);
+            this.lbl_Correo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Correo.Name = "lbl_Correo";
+            this.lbl_Correo.Size = new System.Drawing.Size(48, 16);
+            this.lbl_Correo.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_Correo, null);
+            this.tagsExtender1.SetTag3(this.lbl_Correo, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_Correo, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_Correo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_Correo, System.Drawing.FontStyle.Bold);
+            this.lbl_Correo.Text = "Correo";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.panel4.Location = new System.Drawing.Point(11, 89);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(589, 2);
+            this.panel4.TabIndex = 47;
+            this.tagsExtender1.SetTag2(this.panel4, null);
+            this.tagsExtender1.SetTag3(this.panel4, null);
+            this.tagsExtender1.SetTagFontName(this.panel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel4, System.Drawing.FontStyle.Regular);
+            // 
+            // lbl_NombreAjustes
+            // 
+            this.lbl_NombreAjustes.AutoSize = true;
+            this.lbl_NombreAjustes.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NombreAjustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.lbl_NombreAjustes.Location = new System.Drawing.Point(26, 44);
+            this.lbl_NombreAjustes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_NombreAjustes.Name = "lbl_NombreAjustes";
+            this.lbl_NombreAjustes.Size = new System.Drawing.Size(151, 35);
+            this.lbl_NombreAjustes.TabIndex = 46;
+            this.tagsExtender1.SetTag2(this.lbl_NombreAjustes, null);
+            this.tagsExtender1.SetTag3(this.lbl_NombreAjustes, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_NombreAjustes, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_NombreAjustes, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_NombreAjustes, System.Drawing.FontStyle.Bold);
+            this.lbl_NombreAjustes.Text = "Clark Kent";
+            // 
+            // rpn_ListaPermisosUsuario
+            // 
+            this.rpn_ListaPermisosUsuario.ArcRadiusBorde = 15;
+            this.rpn_ListaPermisosUsuario.ArcRadiusPanel = 15;
+            this.rpn_ListaPermisosUsuario.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_ListaPermisosUsuario.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.rpn_ListaPermisosUsuario.Controls.Add(this.lbl_ListaPermisosUsuario);
+            this.rpn_ListaPermisosUsuario.Controls.Add(this.btn_AgregarPermiso);
+            this.rpn_ListaPermisosUsuario.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
+            this.rpn_ListaPermisosUsuario.Location = new System.Drawing.Point(35, 253);
+            this.rpn_ListaPermisosUsuario.MenosHeightBorde = 1;
+            this.rpn_ListaPermisosUsuario.MenosHeightPanel = 1;
+            this.rpn_ListaPermisosUsuario.MenosWidthBorde = 1;
+            this.rpn_ListaPermisosUsuario.MenosWidthPanel = 1;
+            this.rpn_ListaPermisosUsuario.Name = "rpn_ListaPermisosUsuario";
+            this.rpn_ListaPermisosUsuario.PorcLuzColorBorde = 0;
+            this.rpn_ListaPermisosUsuario.Size = new System.Drawing.Size(538, 36);
+            this.rpn_ListaPermisosUsuario.TabIndex = 45;
+            this.tagsExtender1.SetTag2(this.rpn_ListaPermisosUsuario, null);
+            this.tagsExtender1.SetTag3(this.rpn_ListaPermisosUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_ListaPermisosUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_ListaPermisosUsuario, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_ListaPermisosUsuario, System.Drawing.FontStyle.Regular);
+            this.rpn_ListaPermisosUsuario.XBorde = 0;
+            this.rpn_ListaPermisosUsuario.XPanel = 0;
+            this.rpn_ListaPermisosUsuario.YBorde = 0;
+            this.rpn_ListaPermisosUsuario.YPanel = 0;
+            // 
+            // lbl_ListaPermisosUsuario
+            // 
+            this.lbl_ListaPermisosUsuario.AutoSize = true;
+            this.lbl_ListaPermisosUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lbl_ListaPermisosUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_ListaPermisosUsuario.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ListaPermisosUsuario.ForeColor = System.Drawing.Color.White;
+            this.lbl_ListaPermisosUsuario.Location = new System.Drawing.Point(213, 4);
+            this.lbl_ListaPermisosUsuario.Name = "lbl_ListaPermisosUsuario";
+            this.lbl_ListaPermisosUsuario.Size = new System.Drawing.Size(114, 29);
+            this.lbl_ListaPermisosUsuario.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.lbl_ListaPermisosUsuario, null);
+            this.tagsExtender1.SetTag3(this.lbl_ListaPermisosUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaPermisosUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ListaPermisosUsuario, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaPermisosUsuario, System.Drawing.FontStyle.Regular);
+            this.lbl_ListaPermisosUsuario.Text = "Permisos";
+            this.lbl_ListaPermisosUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // rpTopMain
+            // 
+            this.rpTopMain.ArcRadiusBorde = 15;
+            this.rpTopMain.ArcRadiusPanel = 15;
+            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
+            this.rpTopMain.Location = new System.Drawing.Point(0, 0);
+            this.rpTopMain.MenosHeightBorde = 1;
+            this.rpTopMain.MenosHeightPanel = 1;
+            this.rpTopMain.MenosWidthBorde = 1;
+            this.rpTopMain.MenosWidthPanel = 1;
+            this.rpTopMain.Name = "rpTopMain";
+            this.rpTopMain.PorcLuzColorBorde = 0;
+            this.rpTopMain.Size = new System.Drawing.Size(611, 40);
+            this.rpTopMain.TabIndex = 53;
+            this.tagsExtender1.SetTag2(this.rpTopMain, null);
+            this.tagsExtender1.SetTag3(this.rpTopMain, null);
+            this.tagsExtender1.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpTopMain, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
+            this.rpTopMain.XBorde = 0;
+            this.rpTopMain.XPanel = 0;
+            this.rpTopMain.YBorde = 0;
+            this.rpTopMain.YPanel = 0;
+            // 
             // pantallaAjustesGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.Controls.Add(this.lbl_NombreGerente);
-            this.Controls.Add(this.sp_DireccionGerente);
-            this.Controls.Add(this.sp_TipoGerente);
-            this.Controls.Add(this.sp_CorreoGerente);
-            this.Controls.Add(this.pn_ContrasenaGerente);
-            this.Controls.Add(this.rpn_ListaPermisosGerente);
+            this.Controls.Add(this.rpTopMain);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pnl_codServ);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.lbl_NombreAjustes);
+            this.Controls.Add(this.rpn_ListaPermisosUsuario);
             this.Name = "pantallaAjustesGerente";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
@@ -488,43 +550,46 @@
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
-            this.rpn_ListaPermisosGerente.ResumeLayout(false);
-            this.rpn_ListaPermisosGerente.PerformLayout();
-            this.pn_ContrasenaGerente.ResumeLayout(false);
-            this.pn_ContrasenaGerente.PerformLayout();
-            this.sp_TipoGerente.ResumeLayout(false);
-            this.sp_TipoGerente.PerformLayout();
-            this.sp_DireccionGerente.ResumeLayout(false);
-            this.sp_DireccionGerente.PerformLayout();
-            this.sp_CorreoGerente.ResumeLayout(false);
-            this.sp_CorreoGerente.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.pnl_codServ.ResumeLayout(false);
+            this.pnl_codServ.PerformLayout();
+            this.rpn_ListaPermisosUsuario.ResumeLayout(false);
+            this.rpn_ListaPermisosUsuario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private RoundedPanel rpn_ListaPermisosGerente;
-        private System.Windows.Forms.Button btn_AgregarPermiso;
-        private System.Windows.Forms.Label lbl_ListaPermisosGerente;
-        private ShadowPanel.ShadowPanelRight pn_ContrasenaGerente;
-        private System.Windows.Forms.Button boton_ver_password;
-        private System.Windows.Forms.Label lbl_PasswordGerente;
-        private System.Windows.Forms.Panel panel_seleccionado_password;
-        private System.Windows.Forms.Label lbl_PasswordGerenteLleno;
         private TagsExtender tagsExtender1;
-        private ShadowPanel.ShadowPanelRight sp_TipoGerente;
-        private System.Windows.Forms.Label lbl_TipoGerenteLleno;
-        private System.Windows.Forms.Label lbl_TipoGerente;
+        private System.Windows.Forms.Button btn_AgregarPermiso;
         private System.Windows.Forms.Panel panel1;
-        private ShadowPanel.ShadowPanelRight sp_DireccionGerente;
-        private System.Windows.Forms.Label lbl_DireccionGerenteLleno;
-        private System.Windows.Forms.Label lbl_DireccionGerente;
-        private System.Windows.Forms.Panel panel2;
-        private ShadowPanel.ShadowPanelRight sp_CorreoGerente;
-        private System.Windows.Forms.Label lbl_CorreoGerenteLleno;
-        private System.Windows.Forms.Label lbl_CorreoGerente;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbl_NombreGerente;
+        private System.Windows.Forms.Panel panel7;
+        private RoundedPanel roundedPanel3;
+        private System.Windows.Forms.TextBox txt_TipoUsuario;
+        private System.Windows.Forms.Label lbl_TipoUsuario;
+        private System.Windows.Forms.Panel panel6;
+        private RoundedPanel roundedPanel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl_Direccion;
+        private System.Windows.Forms.Panel panel5;
+        private RoundedPanel roundedPanel2;
+        private System.Windows.Forms.Button boton_ver_password;
+        private System.Windows.Forms.TextBox txt_NuevaCont;
+        private System.Windows.Forms.Label lbl_Contraseña;
+        private System.Windows.Forms.Panel pnl_codServ;
+        private RoundedPanel rnd_color_1;
+        private System.Windows.Forms.TextBox txt_Correo;
+        private System.Windows.Forms.Label lbl_Correo;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lbl_NombreAjustes;
+        private RoundedPanel rpn_ListaPermisosUsuario;
+        private System.Windows.Forms.Label lbl_ListaPermisosUsuario;
+        private RoundedPanel rpTopMain;
     }
 }

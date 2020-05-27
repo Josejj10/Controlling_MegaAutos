@@ -125,6 +125,12 @@
     <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaGenerarReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaGenerarReporte.Designer.cs">
+      <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarServicios.resx">
       <DependentUpon>pantallaEditarServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaGenerarReporte.resx">
+      <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>

@@ -84,3 +84,4 @@ D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemLista.resources
 >>>>>>> master
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaSede.resources

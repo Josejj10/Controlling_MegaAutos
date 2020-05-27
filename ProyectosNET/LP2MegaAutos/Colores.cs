@@ -15,7 +15,7 @@ namespace LP2MegaAutos
     public class White_Mode
     {
         // Contrast
-        public static Color HighContrast = Color.FromArgb(18, 18, 18);
+        public static Color HighContrast = Color.FromArgb(26, 37, 50);
         public static Color MediumContrast = Color.FromArgb(80, 80, 80);
         public static Color LowContrast = Color.FromArgb(142, 142, 147);
 
@@ -77,66 +77,7 @@ namespace LP2MegaAutos
         public static Color ClickableTextDefault = Rosa;
         public static Color ClickableTextEnter = Color.FromArgb(191, 90, 108);
         public static Color ClickableTextDown = Color.FromArgb(181, 51, 74);
-        public static Dictionary<ColoresSistema,Color> dColoresSistema = iniDicColorSis();
-        public static Dictionary<Color,ColoresSistema> dColores = iniDicColor();
-
-        public static Dictionary<ColoresSistema, Color> iniDicColorSis()
-        {
-            Dictionary<ColoresSistema, Color> d = new Dictionary<ColoresSistema, Color>();
-            d.Add(ColoresSistema.AmarilloInteractivo, Colores.AmarilloInteractivo);
-            d.Add(ColoresSistema.AmarilloInteractivoMas1,Colores.AmarilloInteractivoMas1);
-            d.Add(ColoresSistema.AmarilloInteractivoMas2,Colores.AmarilloInteractivoMas2);
-            d.Add(ColoresSistema.AmarilloInteractivoMenos1, Colores.AmarilloInteractivoMenos1);
-            d.Add(ColoresSistema.AmarilloInteractivoMenos2, Colores.AmarilloInteractivoMenos2);
-            d.Add(ColoresSistema.BackBackground, Colores.BackBackground);
-            d.Add(ColoresSistema.Disabled, Colores.Disabled);
-            d.Add(ColoresSistema.FormBackground, Colores.FormBackground);
-            d.Add(ColoresSistema.FormShape, Colores.FormShape);
-            d.Add(ColoresSistema.FormText, Colores.FormText);
-            d.Add(ColoresSistema.FrontBackground, Colores.FrontBackground);
-            d.Add(ColoresSistema.HighContrast, Colores.HighContrast);
-            d.Add(ColoresSistema.LowContrast, Colores.LowContrast);
-            d.Add(ColoresSistema.MediumContrast, Colores.MediumContrast);
-            d.Add(ColoresSistema.Morado, Colores.Morado);
-            d.Add(ColoresSistema.PrincipalAzulMetalico, Colores.PrincipalAzulMetalico);
-            d.Add(ColoresSistema.PrincipalIndigo, Colores.PrincipalIndigo);
-            d.Add(ColoresSistema.PrincipalRojo, Colores.PrincipalRojo);
-            d.Add(ColoresSistema.Rosa, Colores.Rosa);
-            d.Add(ColoresSistema.VerdeSuccess, Colores.VerdeSuccess);
-            d.Add(ColoresSistema.Transparent, Color.Transparent);
-            d.Add(ColoresSistema.DMFrontBackground, Dark_Mode.FrontBackground);
-            d.Add(ColoresSistema.NegroPuro, Color.Black);
-            return d;
-        }
-
-        public static Dictionary<Color,ColoresSistema> iniDicColor()
-        {
-            Dictionary<Color, ColoresSistema> d = new Dictionary<Color, ColoresSistema>();
-            d.Add(Colores.AmarilloInteractivo, ColoresSistema.AmarilloInteractivo);
-            d.Add(Colores.AmarilloInteractivoMas1, ColoresSistema.AmarilloInteractivoMas1);
-            d.Add(Colores.AmarilloInteractivoMas2, ColoresSistema.AmarilloInteractivoMas2);
-            d.Add(Colores.AmarilloInteractivoMenos1, ColoresSistema.AmarilloInteractivoMenos1);
-            d.Add(Colores.AmarilloInteractivoMenos2, ColoresSistema.AmarilloInteractivoMenos2);
-            d.Add(Colores.BackBackground, ColoresSistema.BackBackground);
-            d.Add(Colores.Disabled, ColoresSistema.Disabled);
-            d.Add(Colores.FormBackground, ColoresSistema.FormBackground);
-            d.Add(Colores.FormShape, ColoresSistema.FormShape);
-            d.Add(Colores.FormText, ColoresSistema.FormText);
-            d.Add(Colores.FrontBackground, ColoresSistema.FrontBackground);
-            d.Add(Colores.HighContrast, ColoresSistema.HighContrast);
-            d.Add(Colores.LowContrast, ColoresSistema.LowContrast);
-            d.Add(Colores.MediumContrast, ColoresSistema.MediumContrast);
-            d.Add(Colores.Morado, ColoresSistema.Morado);
-            d.Add(Colores.PrincipalAzulMetalico, ColoresSistema.PrincipalAzulMetalico);
-            d.Add(Colores.PrincipalIndigo, ColoresSistema.PrincipalIndigo);
-            d.Add(Colores.PrincipalRojo, ColoresSistema.PrincipalRojo);
-            d.Add(Colores.Rosa, ColoresSistema.Rosa);
-            d.Add(Colores.VerdeSuccess, ColoresSistema.VerdeSuccess);
-            d.Add(Color.Transparent, ColoresSistema.Transparent);
-            d.Add(Dark_Mode.FrontBackground, ColoresSistema.DMFrontBackground);
-            d.Add(Color.Black, ColoresSistema.NegroPuro);
-            return d;
-        }
+       
 
         #endregion Denotive Colors
 

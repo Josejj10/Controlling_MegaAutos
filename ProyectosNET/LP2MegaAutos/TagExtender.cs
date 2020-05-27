@@ -40,9 +40,6 @@ namespace LP2MegaAutos
             return null;
         }
         
-        [Category("Data")]
-        [DisplayName("Tag 2")]
-        [Description("Otro Tag por si lo necesitas :D.")]
         public void SetTag2(Control control, string value)
         {
             if (string.IsNullOrEmpty(value))
@@ -61,9 +58,6 @@ namespace LP2MegaAutos
             return null;
         }
 
-        [Category("Data")]
-        [DisplayName("Tag 3")]
-        [Description("Porque no hay segunda sin tercera.")]
         public void SetTag3(Control control, string value)
         {
             if (string.IsNullOrEmpty(value))
@@ -72,7 +66,7 @@ namespace LP2MegaAutos
                 tag3Values[control] = value;
         }
 
-        [Category("Data")]
+        [Category("Appearance")]
         [DisplayName("Font Name")]
         [Description("Para las Tipografias Embebidas.")]
         public fontsD GetTagFontName(Control control)
@@ -81,10 +75,7 @@ namespace LP2MegaAutos
                 return (fontsD)tagFontNameValues[control.Name];
             return fontsD.Ninguno; // Valor default es Ninguno, que devuelve ""
         }
-
-        [Category("Data")]
-        [DisplayName("Font Name")]
-        [Description("Para las Tipografias Embebidas.")]
+        
         public void SetTagFontName(Control control, fontsD value)
         {
             // Toca confiar en el gran Dieguito Maradona
@@ -101,10 +92,7 @@ namespace LP2MegaAutos
                 return (float)tagFontSizeValues[control];
             return 10f; //Valor default
         }
-
-        [Category("Appearance")]
-        [DisplayName("Font Size")]
-        [Description("Para las Tipografias Embebidas")]
+        
         public void SetTagFontSize(Control control, float value)
         {
             if (value == 0)
@@ -124,9 +112,6 @@ namespace LP2MegaAutos
             return FontStyle.Regular;
         }
 
-        [Category("Appearance")]
-        [DisplayName("Font Style")]
-        [Description("Para las Tipografias Embebidas")]
         public void SetTagFontStyle(Control control, FontStyle value)
         {
             // Aca hay que creer en Dieguito Maradona que 

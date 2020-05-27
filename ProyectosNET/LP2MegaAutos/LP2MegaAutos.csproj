@@ -152,9 +152,6 @@
     <Compile Include="ShadowPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SystemColorsExtender.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="TagExtender.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -329,6 +326,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\toggle_modo_nocturno_activado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="creditos.txt" />
+    <Content Include="Resources\editar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

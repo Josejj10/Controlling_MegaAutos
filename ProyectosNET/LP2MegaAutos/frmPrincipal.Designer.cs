@@ -45,8 +45,8 @@ namespace LP2MegaAutos
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlBackBackground = new System.Windows.Forms.Panel();
             this.rpMain = new LP2MegaAutos.RoundedPanel();
-            this.itemLista1 = new LP2MegaAutos.itemLista();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.itemLista1 = new LP2MegaAutos.itemLista();
             this.title_bar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.rpBtnMenuHome.SuspendLayout();
@@ -175,6 +175,8 @@ namespace LP2MegaAutos
             // 
             this.rpBtnMenuHome.ArcRadiusBorde = 15;
             this.rpBtnMenuHome.ArcRadiusPanel = 15;
+            this.rpBtnMenuHome.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpBtnMenuHome.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpBtnMenuHome.Controls.Add(this.btnHome);
             this.rpBtnMenuHome.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.rpBtnMenuHome.Location = new System.Drawing.Point(9, 18);
@@ -282,6 +284,8 @@ namespace LP2MegaAutos
             this.rpMain.ArcRadiusBorde = 15;
             this.rpMain.ArcRadiusPanel = 15;
             this.rpMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpMain.Controls.Add(this.itemLista1);
             this.rpMain.Controls.Add(this.rpTopMain);
             this.rpMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
@@ -304,23 +308,13 @@ namespace LP2MegaAutos
             this.rpMain.YBorde = 0;
             this.rpMain.YPanel = 0;
             // 
-            // itemLista1
-            // 
-            this.itemLista1.Location = new System.Drawing.Point(51, 112);
-            this.itemLista1.Name = "itemLista1";
-            this.itemLista1.Size = new System.Drawing.Size(497, 104);
-            this.itemLista1.TabIndex = 1;
-            this.tags.SetTag2(this.itemLista1, null);
-            this.tags.SetTag3(this.itemLista1, null);
-            this.tags.SetTagFontName(this.itemLista1, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.itemLista1, 10F);
-            this.tags.SetTagFontStyle(this.itemLista1, System.Drawing.FontStyle.Regular);
-            // 
             // rpTopMain
             // 
             this.rpTopMain.ArcRadiusBorde = 15;
             this.rpTopMain.ArcRadiusPanel = 15;
             this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
             this.rpTopMain.Location = new System.Drawing.Point(0, 0);
             this.rpTopMain.MenosHeightBorde = 1;
@@ -340,6 +334,26 @@ namespace LP2MegaAutos
             this.rpTopMain.XPanel = 0;
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
+            // 
+            // itemLista1
+            // 
+            this.itemLista1.ColorBack = System.Drawing.Color.White;
+            this.itemLista1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemLista1.ColorPanel = System.Drawing.Color.White;
+            this.itemLista1.Location = new System.Drawing.Point(48, 106);
+            this.itemLista1.Name = "itemLista1";
+            this.itemLista1.Size = new System.Drawing.Size(497, 104);
+            this.itemLista1.TabIndex = 1;
+            this.tags.SetTag2(this.itemLista1, null);
+            this.tags.SetTag3(this.itemLista1, null);
+            this.tags.SetTagFontName(this.itemLista1, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.itemLista1, 10F);
+            this.tags.SetTagFontStyle(this.itemLista1, System.Drawing.FontStyle.Regular);
+            this.itemLista1.TextoAgregadoPor = "Percy Jackson";
+            this.itemLista1.TextoFecha = "dd - mm - aaaa";
+            this.itemLista1.TextoPrincipal = "TextoPrincipal";
+            this.itemLista1.Textosecundario = "TextoSecundario";
+            this.itemLista1.TextoTercero = "TextoTercerDato";
             // 
             // frmPrincipal
             // 

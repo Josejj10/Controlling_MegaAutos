@@ -107,7 +107,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.panel1.Location = new System.Drawing.Point(19, 93);
+            this.panel1.Location = new System.Drawing.Point(12, 87);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(589, 2);
             this.panel1.TabIndex = 7;
@@ -174,7 +174,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_NumeroDocumento, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_NumeroDocumento, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NumeroDocumento, System.Drawing.FontStyle.Bold);
-            this.txt_NumeroDocumento.Text = "25816945";
             // 
             // lbl_NumeroDocumento
             // 
@@ -225,13 +224,13 @@
             this.txt_AgregarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_AgregarCliente.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
             this.txt_AgregarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.txt_AgregarCliente.Location = new System.Drawing.Point(19, 52);
+            this.txt_AgregarCliente.Location = new System.Drawing.Point(27, 42);
             this.txt_AgregarCliente.Name = "txt_AgregarCliente";
             this.txt_AgregarCliente.Size = new System.Drawing.Size(441, 35);
             this.txt_AgregarCliente.TabIndex = 36;
             this.tagsExtender1.SetTag2(this.txt_AgregarCliente, null);
             this.tagsExtender1.SetTag3(this.txt_AgregarCliente, null);
-            this.tagsExtender1.SetTagFontName(this.txt_AgregarCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_AgregarCliente, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_AgregarCliente, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_AgregarCliente, System.Drawing.FontStyle.Bold);
             this.txt_AgregarCliente.Text = "Agregar nombre del cliente...";
@@ -290,10 +289,9 @@
             this.txt_TIpoDocumento.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_TIpoDocumento, null);
             this.tagsExtender1.SetTag3(this.txt_TIpoDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.txt_TIpoDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_TIpoDocumento, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_TIpoDocumento, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.txt_TIpoDocumento, System.Drawing.FontStyle.Bold);
-            this.txt_TIpoDocumento.Text = "DNI";
             // 
             // lbl_TipoDocumento
             // 
@@ -366,10 +364,9 @@
             this.txt_Telefono.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_Telefono, null);
             this.tagsExtender1.SetTag3(this.txt_Telefono, null);
-            this.tagsExtender1.SetTagFontName(this.txt_Telefono, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_Telefono, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_Telefono, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Telefono, System.Drawing.FontStyle.Bold);
-            this.txt_Telefono.Text = "996857154";
             // 
             // lbl_Telefono
             // 
@@ -442,10 +439,9 @@
             this.txt_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_Correo, null);
             this.tagsExtender1.SetTag3(this.txt_Correo, null);
-            this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_Correo, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Correo, System.Drawing.FontStyle.Bold);
-            this.txt_Correo.Text = "jmc@pucp.edu.pe";
             // 
             // lbl_Correo
             // 

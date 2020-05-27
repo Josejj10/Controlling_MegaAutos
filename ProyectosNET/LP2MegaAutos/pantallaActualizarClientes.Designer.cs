@@ -69,8 +69,8 @@
             this.il_Clientes2.TextoAgregadoPor = "Percy Jackson";
             this.il_Clientes2.TextoFecha = "dd - mm - aaaa";
             this.il_Clientes2.TextoPrincipal = "Rodrigo Cossio";
-            this.il_Clientes2.Textosecundario = "121323454";
-            this.il_Clientes2.TextoTercero = "Pasaporte";
+            this.il_Clientes2.Textosecundario = "Pasaporte : 121323454";
+            this.il_Clientes2.TextoTercero = "rcossio@pucp.edu.pe";
             // 
             // il_Clientes1
             // 
@@ -84,8 +84,8 @@
             this.il_Clientes1.TextoAgregadoPor = "Percy Jackson";
             this.il_Clientes1.TextoFecha = "dd - mm - aaaa";
             this.il_Clientes1.TextoPrincipal = "Melvin Javier";
-            this.il_Clientes1.Textosecundario = "70251648";
-            this.il_Clientes1.TextoTercero = "DNI";
+            this.il_Clientes1.Textosecundario = "DNI : 70251648";
+            this.il_Clientes1.TextoTercero = "mjavier@pucp.edu.pe";
             // 
             // rpn_ListaClientes
             // 

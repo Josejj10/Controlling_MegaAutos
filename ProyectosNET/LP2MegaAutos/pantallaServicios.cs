@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaActualizarDrivers : UserControl
+    public partial class pantallaServicios : UserControl
     {
-        public pantallaActualizarDrivers()
+        public pantallaServicios()
         {
             InitializeComponent();
         }
-
     }
 }

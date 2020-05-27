@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos
 {
-    partial class pantallaSede
+    partial class pantallaServicios
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.il_Drivers3 = new LP2MegaAutos.itemLista();
             this.il_Drivers2 = new LP2MegaAutos.itemLista();
             this.il_Drivers1 = new LP2MegaAutos.itemLista();
             this.rpn_ListaDrivers = new LP2MegaAutos.RoundedPanel();
@@ -49,6 +50,21 @@
             this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // il_Drivers3
+            // 
+            this.il_Drivers3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Drivers3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Drivers3.ColorPanel = System.Drawing.Color.White;
+            this.il_Drivers3.Location = new System.Drawing.Point(57, 364);
+            this.il_Drivers3.Name = "il_Drivers3";
+            this.il_Drivers3.Size = new System.Drawing.Size(497, 104);
+            this.il_Drivers3.TabIndex = 21;
+            this.il_Drivers3.TextoAgregadoPor = "Percy Jackson";
+            this.il_Drivers3.TextoFecha = "dd - mm - aaaa";
+            this.il_Drivers3.TextoPrincipal = "Mecánica a domicilio";
+            this.il_Drivers3.Textosecundario = "Mecánica";
+            this.il_Drivers3.TextoTercero = "MEC-002";
+            // 
             // il_Drivers2
             // 
             this.il_Drivers2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
@@ -60,9 +76,9 @@
             this.il_Drivers2.TabIndex = 20;
             this.il_Drivers2.TextoAgregadoPor = "Percy Jackson";
             this.il_Drivers2.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers2.TextoPrincipal = "Taller Sur";
-            this.il_Drivers2.Textosecundario = "Surquillo";
-            this.il_Drivers2.TextoTercero = "Av. Ipsum Lorem 234";
+            this.il_Drivers2.TextoPrincipal = "Pintura en horno";
+            this.il_Drivers2.Textosecundario = "Pintura";
+            this.il_Drivers2.TextoTercero = "PIN-002";
             // 
             // il_Drivers1
             // 
@@ -75,9 +91,9 @@
             this.il_Drivers1.TabIndex = 19;
             this.il_Drivers1.TextoAgregadoPor = "Percy Jackson";
             this.il_Drivers1.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers1.TextoPrincipal = "Taller Principal";
-            this.il_Drivers1.Textosecundario = "Independencia";
-            this.il_Drivers1.TextoTercero = "Av. Lorem Ipsum 213";
+            this.il_Drivers1.TextoPrincipal = "Mantenimiento Preventivo";
+            this.il_Drivers1.Textosecundario = "Mecánica";
+            this.il_Drivers1.TextoTercero = "MEC-001";
             // 
             // rpn_ListaDrivers
             // 
@@ -124,11 +140,11 @@
             this.lbl_ListaDrivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaDrivers.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaDrivers.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaDrivers.Location = new System.Drawing.Point(240, 5);
+            this.lbl_ListaDrivers.Location = new System.Drawing.Point(228, 5);
             this.lbl_ListaDrivers.Name = "lbl_ListaDrivers";
-            this.lbl_ListaDrivers.Size = new System.Drawing.Size(59, 22);
+            this.lbl_ListaDrivers.Size = new System.Drawing.Size(84, 22);
             this.lbl_ListaDrivers.TabIndex = 0;
-            this.lbl_ListaDrivers.Text = "Sedes";
+            this.lbl_ListaDrivers.Text = "Servicios";
             this.lbl_ListaDrivers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_BuscarUsuario
@@ -285,10 +301,11 @@
             this.btn_AZ_Drivers.Text = "A - Z";
             this.btn_AZ_Drivers.UseVisualStyleBackColor = false;
             // 
-            // pantallaSede
+            // pantallaServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.il_Drivers3);
             this.Controls.Add(this.il_Drivers2);
             this.Controls.Add(this.il_Drivers1);
             this.Controls.Add(this.rpn_ListaDrivers);
@@ -297,7 +314,7 @@
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.roundedPanel1);
-            this.Name = "pantallaSede";
+            this.Name = "pantallaServicios";
             this.Size = new System.Drawing.Size(611, 470);
             this.rpn_ListaDrivers.ResumeLayout(false);
             this.rpn_ListaDrivers.PerformLayout();
@@ -311,6 +328,8 @@
         }
 
         #endregion
+
+        private itemLista il_Drivers3;
         private itemLista il_Drivers2;
         private itemLista il_Drivers1;
         private RoundedPanel rpn_ListaDrivers;

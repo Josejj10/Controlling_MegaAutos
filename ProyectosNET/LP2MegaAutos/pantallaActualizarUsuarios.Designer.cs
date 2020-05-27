@@ -39,6 +39,7 @@
             this.itemLista1 = new LP2MegaAutos.itemLista();
             this.itemLista2 = new LP2MegaAutos.itemLista();
             this.itemLista3 = new LP2MegaAutos.itemLista();
+            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpn_ListaUsuarios.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,11 @@
             this.btn_AZ.Name = "btn_AZ";
             this.btn_AZ.Size = new System.Drawing.Size(130, 35);
             this.btn_AZ.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.btn_AZ, null);
+            this.tagsExtender1.SetTag3(this.btn_AZ, null);
+            this.tagsExtender1.SetTagFontName(this.btn_AZ, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_AZ, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_AZ, System.Drawing.FontStyle.Bold);
             this.btn_AZ.Text = "A - Z";
             this.btn_AZ.UseVisualStyleBackColor = false;
             // 
@@ -70,6 +76,11 @@
             this.btn_ZA.Name = "btn_ZA";
             this.btn_ZA.Size = new System.Drawing.Size(130, 35);
             this.btn_ZA.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.btn_ZA, null);
+            this.tagsExtender1.SetTag3(this.btn_ZA, null);
+            this.tagsExtender1.SetTagFontName(this.btn_ZA, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_ZA, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_ZA, System.Drawing.FontStyle.Bold);
             this.btn_ZA.Text = "Z - A";
             this.btn_ZA.UseVisualStyleBackColor = false;
             // 
@@ -82,6 +93,11 @@
             this.btn_Antiguo.Name = "btn_Antiguo";
             this.btn_Antiguo.Size = new System.Drawing.Size(130, 35);
             this.btn_Antiguo.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.btn_Antiguo, null);
+            this.tagsExtender1.SetTag3(this.btn_Antiguo, null);
+            this.tagsExtender1.SetTagFontName(this.btn_Antiguo, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_Antiguo, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Antiguo, System.Drawing.FontStyle.Bold);
             this.btn_Antiguo.Text = "Antiguo";
             this.btn_Antiguo.UseVisualStyleBackColor = false;
             // 
@@ -94,6 +110,11 @@
             this.btn_Reciente.Name = "btn_Reciente";
             this.btn_Reciente.Size = new System.Drawing.Size(130, 35);
             this.btn_Reciente.TabIndex = 4;
+            this.tagsExtender1.SetTag2(this.btn_Reciente, null);
+            this.tagsExtender1.SetTag3(this.btn_Reciente, null);
+            this.tagsExtender1.SetTagFontName(this.btn_Reciente, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_Reciente, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Reciente, System.Drawing.FontStyle.Bold);
             this.btn_Reciente.Text = "Reciente";
             this.btn_Reciente.UseVisualStyleBackColor = false;
             // 
@@ -115,6 +136,11 @@
             this.rpn_ListaUsuarios.PorcLuzColorBorde = 0;
             this.rpn_ListaUsuarios.Size = new System.Drawing.Size(538, 36);
             this.rpn_ListaUsuarios.TabIndex = 5;
+            this.tagsExtender1.SetTag2(this.rpn_ListaUsuarios, null);
+            this.tagsExtender1.SetTag3(this.rpn_ListaUsuarios, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_ListaUsuarios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_ListaUsuarios, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_ListaUsuarios, System.Drawing.FontStyle.Regular);
             this.rpn_ListaUsuarios.XBorde = 0;
             this.rpn_ListaUsuarios.XPanel = 0;
             this.rpn_ListaUsuarios.YBorde = 0;
@@ -131,6 +157,11 @@
             this.btn_AgregarUsuario.Name = "btn_AgregarUsuario";
             this.btn_AgregarUsuario.Size = new System.Drawing.Size(94, 26);
             this.btn_AgregarUsuario.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.btn_AgregarUsuario, null);
+            this.tagsExtender1.SetTag3(this.btn_AgregarUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.btn_AgregarUsuario, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_AgregarUsuario, 9.74F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_AgregarUsuario, System.Drawing.FontStyle.Regular);
             this.btn_AgregarUsuario.Text = "+ Agregar";
             this.btn_AgregarUsuario.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AgregarUsuario.UseVisualStyleBackColor = false;
@@ -146,6 +177,11 @@
             this.lbl_ListaUsuarios.Name = "lbl_ListaUsuarios";
             this.lbl_ListaUsuarios.Size = new System.Drawing.Size(108, 29);
             this.lbl_ListaUsuarios.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.lbl_ListaUsuarios, null);
+            this.tagsExtender1.SetTag3(this.lbl_ListaUsuarios, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaUsuarios, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ListaUsuarios, 15.75F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaUsuarios, System.Drawing.FontStyle.Bold);
             this.lbl_ListaUsuarios.Text = "Usuarios";
             this.lbl_ListaUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -158,11 +194,16 @@
             this.itemLista1.Name = "itemLista1";
             this.itemLista1.Size = new System.Drawing.Size(497, 104);
             this.itemLista1.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.itemLista1, null);
+            this.tagsExtender1.SetTag3(this.itemLista1, null);
+            this.tagsExtender1.SetTagFontName(this.itemLista1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemLista1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemLista1, System.Drawing.FontStyle.Regular);
             this.itemLista1.TextoAgregadoPor = "Percy Jackson";
             this.itemLista1.TextoFecha = "dd - mm - aaaa";
-            this.itemLista1.TextoPrincipal = "TextoPrincipal";
-            this.itemLista1.Textosecundario = "TextoSecundario";
-            this.itemLista1.TextoTercero = "TextoTercerDato";
+            this.itemLista1.TextoPrincipal = "Jonathan Berrospi";
+            this.itemLista1.Textosecundario = "Jefe de Logistica";
+            this.itemLista1.TextoTercero = "jberrospi@pucp.edu.pe";
             // 
             // itemLista2
             // 
@@ -173,11 +214,16 @@
             this.itemLista2.Name = "itemLista2";
             this.itemLista2.Size = new System.Drawing.Size(497, 104);
             this.itemLista2.TabIndex = 7;
+            this.tagsExtender1.SetTag2(this.itemLista2, null);
+            this.tagsExtender1.SetTag3(this.itemLista2, null);
+            this.tagsExtender1.SetTagFontName(this.itemLista2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemLista2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemLista2, System.Drawing.FontStyle.Regular);
             this.itemLista2.TextoAgregadoPor = "Percy Jackson";
             this.itemLista2.TextoFecha = "dd - mm - aaaa";
-            this.itemLista2.TextoPrincipal = "TextoPrincipal";
-            this.itemLista2.Textosecundario = "TextoSecundario";
-            this.itemLista2.TextoTercero = "TextoTercerDato";
+            this.itemLista2.TextoPrincipal = "Juan Villegaz";
+            this.itemLista2.Textosecundario = "Analista";
+            this.itemLista2.TextoTercero = "jvillegaz@pucp.edu.pe";
             // 
             // itemLista3
             // 
@@ -211,6 +257,11 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Name = "pantallaActualizarUsuarios";
             this.Size = new System.Drawing.Size(611, 470);
+            this.tagsExtender1.SetTag2(this, null);
+            this.tagsExtender1.SetTag3(this, null);
+            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this, 10F);
+            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.rpn_ListaUsuarios.ResumeLayout(false);
             this.rpn_ListaUsuarios.PerformLayout();
             this.ResumeLayout(false);
@@ -230,5 +281,6 @@
         private itemLista itemLista1;
         private itemLista itemLista2;
         private itemLista itemLista3;
+        private TagsExtender tagsExtender1;
     }
 }

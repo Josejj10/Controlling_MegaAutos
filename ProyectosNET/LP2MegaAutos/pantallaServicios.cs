@@ -25,6 +25,11 @@ namespace LP2MegaAutos
             MessageBox.Show("NO AUN");
         }
 
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            txt_Buscar.Text = string.Empty;
+        }
+
         private void btnAZ_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
@@ -83,11 +88,6 @@ namespace LP2MegaAutos
             this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
-        }
-
-        private void txt_Buscar_Enter(object sender, EventArgs e)
-        {
-            txt_Buscar.Text = string.Empty;
         }
     }
 }

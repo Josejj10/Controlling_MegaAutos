@@ -54,8 +54,33 @@ C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAut
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
+<<<<<<< HEAD
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\LP2MegaAutos.exe.config
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\LP2MegaAutos.exe
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\LP2MegaAutos.pdb
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\MetroFramework.Design.dll
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\MetroFramework.dll
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\MetroFramework.Fonts.dll
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csprojAssemblyReference.cache
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.frmLoading.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Login_Screen.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.frmPrincipal.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAreaTrabajo.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicio.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaSede.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Properties.Resources.resources
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csproj.GenerateResource.cache
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csproj.CoreCompileInputs.cache
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csproj.CopyComplete
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.exe
+D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pdb
+=======
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAreaTrabajo.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemLista.resources
+>>>>>>> master

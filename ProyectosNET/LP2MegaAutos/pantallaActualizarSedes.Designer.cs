@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos
 {
-    partial class pantallaSede
+    partial class pantallaActualizarSedes
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaSede));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaActualizarSedes));
             this.il_Drivers2 = new LP2MegaAutos.itemLista();
             this.il_Drivers1 = new LP2MegaAutos.itemLista();
             this.rpn_ListaDrivers = new LP2MegaAutos.RoundedPanel();
@@ -439,7 +439,7 @@
             this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
             // 
-            // pantallaSede
+            // pantallaActualizarSedes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -453,7 +453,7 @@
             this.Controls.Add(this.rnd_AZ);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBuscar);
-            this.Name = "pantallaSede";
+            this.Name = "pantallaActualizarSedes";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);

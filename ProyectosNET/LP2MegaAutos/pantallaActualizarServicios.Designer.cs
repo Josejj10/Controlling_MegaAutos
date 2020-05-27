@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos
 {
-    partial class pantallaServicios
+    partial class pantallaActualizarServicios
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaServicios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaActualizarServicios));
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.il_Servicios2 = new LP2MegaAutos.itemLista();
@@ -213,7 +213,7 @@
             this.lbl_ListaServicios.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Montserrat);
             this.tagsExtender1.SetTagFontSize(this.lbl_ListaServicios, 12F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Bold);
             this.lbl_ListaServicios.Text = "Servicios";
@@ -466,7 +466,7 @@
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
             // 
-            // pantallaServicios
+            // pantallaActualizarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -480,7 +480,7 @@
             this.Controls.Add(this.rndZA);
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.panel1);
-            this.Name = "pantallaServicios";
+            this.Name = "pantallaActualizarServicios";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);

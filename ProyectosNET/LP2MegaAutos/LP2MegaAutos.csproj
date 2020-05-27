@@ -247,17 +247,17 @@
     <Compile Include="RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaSede.cs">
+    <Compile Include="pantallaActualizarSedes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaSede.Designer.cs">
-      <DependentUpon>pantallaSede.cs</DependentUpon>
+    <Compile Include="pantallaActualizarSedes.Designer.cs">
+      <DependentUpon>pantallaActualizarSedes.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaServicios.cs">
+    <Compile Include="pantallaActualizarServicios.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaServicios.Designer.cs">
-      <DependentUpon>pantallaServicios.cs</DependentUpon>
+    <Compile Include="pantallaActualizarServicios.Designer.cs">
+      <DependentUpon>pantallaActualizarServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaEditarServicios.cs">
       <SubType>UserControl</SubType>
@@ -340,16 +340,16 @@
     <EmbeddedResource Include="pantallaInicioUsuarioNivel2.resx">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaSede.resx">
-      <DependentUpon>pantallaSede.cs</DependentUpon>
+    <EmbeddedResource Include="pantallaActualizarSedes.resx">
+      <DependentUpon>pantallaActualizarSedes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaServicios.resx">
-      <DependentUpon>pantallaServicios.cs</DependentUpon>
+    <EmbeddedResource Include="pantallaActualizarServicios.resx">
+      <DependentUpon>pantallaActualizarServicios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />

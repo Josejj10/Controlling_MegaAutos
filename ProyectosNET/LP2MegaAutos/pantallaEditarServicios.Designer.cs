@@ -376,7 +376,7 @@
             this.txt_NombreServicio.TabIndex = 37;
             this.tagsExtender1.SetTag2(this.txt_NombreServicio, null);
             this.tagsExtender1.SetTag3(this.txt_NombreServicio, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NombreServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreServicio, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_NombreServicio, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreServicio, System.Drawing.FontStyle.Bold);
             this.txt_NombreServicio.Text = "Mantenimiento preventivo\r\n";

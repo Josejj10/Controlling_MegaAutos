@@ -41,6 +41,7 @@
             this.rpDiario = new LP2MegaAutos.RoundedPanel();
             this.btnDiario = new System.Windows.Forms.Button();
             this.rpBtnGenerarReporte = new LP2MegaAutos.RoundedPanel();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.rpFechaIni = new LP2MegaAutos.RoundedPanel();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.pnlImgFechaIni = new System.Windows.Forms.Panel();
@@ -57,9 +58,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pnlImgFechaFin = new System.Windows.Forms.Panel();
             this.pnlSede = new LP2MegaAutos.RoundedPanel();
-            this.pnlImgSede = new System.Windows.Forms.Panel();
             this.txtSede = new System.Windows.Forms.TextBox();
-            this.btnGenerarReporte = new System.Windows.Forms.Button();
+            this.pnlImgSede = new System.Windows.Forms.Panel();
             this.rndOtro.SuspendLayout();
             this.rndAnual.SuspendLayout();
             this.rndMensual.SuspendLayout();
@@ -339,6 +339,26 @@
             this.rpBtnGenerarReporte.YBorde = 0;
             this.rpBtnGenerarReporte.YPanel = 0;
             // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
+            this.btnGenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarReporte.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btnGenerarReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnGenerarReporte.Location = new System.Drawing.Point(16, 3);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(578, 61);
+            this.btnGenerarReporte.TabIndex = 32;
+            this.tags.SetTag2(this.btnGenerarReporte, null);
+            this.tags.SetTag3(this.btnGenerarReporte, null);
+            this.tags.SetTagFontName(this.btnGenerarReporte, fontsD.Lato);
+            this.tags.SetTagFontSize(this.btnGenerarReporte, 21.75F);
+            this.tags.SetTagFontStyle(this.btnGenerarReporte, System.Drawing.FontStyle.Regular);
+            this.btnGenerarReporte.Text = "Generar";
+            this.btnGenerarReporte.UseVisualStyleBackColor = false;
+            // 
             // rpFechaIni
             // 
             this.rpFechaIni.ArcRadiusBorde = 15;
@@ -591,7 +611,7 @@
             this.txt_InputBuscar.Location = new System.Drawing.Point(41, 7);
             this.txt_InputBuscar.Margin = new System.Windows.Forms.Padding(0);
             this.txt_InputBuscar.Name = "txt_InputBuscar";
-            this.txt_InputBuscar.Size = new System.Drawing.Size(315, 35);
+            this.txt_InputBuscar.Size = new System.Drawing.Size(315, 25);
             this.txt_InputBuscar.TabIndex = 18;
             this.tags.SetTag2(this.txt_InputBuscar, null);
             this.tags.SetTag3(this.txt_InputBuscar, null);
@@ -710,21 +730,6 @@
             this.pnlSede.YBorde = 0;
             this.pnlSede.YPanel = 0;
             // 
-            // pnlImgSede
-            // 
-            this.pnlImgSede.BackColor = System.Drawing.Color.Transparent;
-            this.pnlImgSede.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImgSede.BackgroundImage")));
-            this.pnlImgSede.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlImgSede.Location = new System.Drawing.Point(8, 10);
-            this.pnlImgSede.Name = "pnlImgSede";
-            this.pnlImgSede.Size = new System.Drawing.Size(25, 25);
-            this.pnlImgSede.TabIndex = 37;
-            this.tags.SetTag2(this.pnlImgSede, null);
-            this.tags.SetTag3(this.pnlImgSede, null);
-            this.tags.SetTagFontName(this.pnlImgSede, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.pnlImgSede, 10F);
-            this.tags.SetTagFontStyle(this.pnlImgSede, System.Drawing.FontStyle.Regular);
-            // 
             // txtSede
             // 
             this.txtSede.AutoCompleteCustomSource.AddRange(new string[] {
@@ -749,25 +754,20 @@
             this.tags.SetTagFontStyle(this.txtSede, System.Drawing.FontStyle.Regular);
             this.txtSede.Text = "Sede";
             // 
-            // btnGenerarReporte
+            // pnlImgSede
             // 
-            this.btnGenerarReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
-            this.btnGenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarReporte.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.btnGenerarReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnGenerarReporte.Location = new System.Drawing.Point(16, 3);
-            this.btnGenerarReporte.Name = "btnGenerarReporte";
-            this.btnGenerarReporte.Size = new System.Drawing.Size(578, 61);
-            this.btnGenerarReporte.TabIndex = 32;
-            this.tags.SetTag2(this.btnGenerarReporte, null);
-            this.tags.SetTag3(this.btnGenerarReporte, null);
-            this.tags.SetTagFontName(this.btnGenerarReporte, fontsD.Lato);
-            this.tags.SetTagFontSize(this.btnGenerarReporte, 21.75F);
-            this.tags.SetTagFontStyle(this.btnGenerarReporte, System.Drawing.FontStyle.Regular);
-            this.btnGenerarReporte.Text = "Generar";
-            this.btnGenerarReporte.UseVisualStyleBackColor = false;
+            this.pnlImgSede.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImgSede.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImgSede.BackgroundImage")));
+            this.pnlImgSede.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlImgSede.Location = new System.Drawing.Point(8, 10);
+            this.pnlImgSede.Name = "pnlImgSede";
+            this.pnlImgSede.Size = new System.Drawing.Size(25, 25);
+            this.pnlImgSede.TabIndex = 37;
+            this.tags.SetTag2(this.pnlImgSede, null);
+            this.tags.SetTag3(this.pnlImgSede, null);
+            this.tags.SetTagFontName(this.pnlImgSede, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.pnlImgSede, 10F);
+            this.tags.SetTagFontStyle(this.pnlImgSede, System.Drawing.FontStyle.Regular);
             // 
             // pantallaGenerarReporte
             // 
@@ -806,6 +806,7 @@
             this.rpPorVehiculo.ResumeLayout(false);
             this.rpPorCliente.ResumeLayout(false);
             this.rpInputBuscar.ResumeLayout(false);
+            this.rpInputBuscar.PerformLayout();
             this.rpFechaFin.ResumeLayout(false);
             this.pnlSede.ResumeLayout(false);
             this.pnlSede.PerformLayout();

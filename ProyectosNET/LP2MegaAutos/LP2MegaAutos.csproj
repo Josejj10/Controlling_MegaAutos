@@ -107,6 +107,12 @@
     <Compile Include="pantallaAgregarCliente.Designer.cs">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaAgregarSede.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAgregarSede.Designer.cs">
+      <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaAgregarServicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     </Compile>
     <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaEditarSedes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaEditarSedes.Designer.cs">
+      <DependentUpon>pantallaEditarSedes.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
@@ -247,6 +259,9 @@
     <EmbeddedResource Include="pantallaAgregarCliente.resx">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAgregarSede.resx">
+      <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaAgregarServicio.resx">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarInformacionPropia.resx">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaEditarSedes.resx">
+      <DependentUpon>pantallaEditarSedes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarServicios.resx">
       <DependentUpon>pantallaEditarServicios.cs</DependentUpon>

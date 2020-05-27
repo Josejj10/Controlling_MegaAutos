@@ -21,3 +21,5 @@ D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.exe
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pdb
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csprojAssemblyReference.cache
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarClientes.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarDrivers.resources

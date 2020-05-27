@@ -25,8 +25,10 @@ namespace LP2MegaAutos
         public itemLista()
         {
             InitializeComponent();
+            
         }
 
+        
         #region Propiedades
         [Description("Texto Principal"), Category("Item Lista")]
         public string TextoPrincipal
@@ -34,13 +36,6 @@ namespace LP2MegaAutos
             get { return lblPrincipal.Text; }
             set { lblPrincipal.Text = value; }
         }
-
-        //[Description("Determina que ventana se abrirar al darle click"), Category("Item Lista")]
-        //public tipoItem TipoItem
-        //{
-        //    get { return _tipoItem; }
-        //    set { _tipoItem = value; }
-        //}
 
 
         [Description("Texto Secundario"), Category("Item Lista")]
@@ -97,23 +92,23 @@ namespace LP2MegaAutos
         }
         #endregion Propiedades
 
-        //protected virtual void btnEditar_Click(object sender, EventArgs e)
-        //{
-        //    switch (_tipoItem)
-        //    {
-        //        case tipoItem.Cliente:
-        //            break;
-        //        case tipoItem.Driver:
-        //            break;
-        //        case tipoItem.Servicio:
-        //            break;
-        //        case tipoItem.Usuario:
-        //            break;
-        //        default:
-        //            MessageBox.Show("Nada aun");
-        //            break;
-        //    }
-        //}
+
+        // Para delegar el evento de Click al form que lo llamó,
+        // Se tiene que suscribir de manera: itemLista2.EditarClick+= btnEditarClick;
+        // Cuando se inserte  el itemLista (en el constructor si no se inserta de manera dinámica)
+        // https://stackoverflow.com/questions/4430523/how-do-i-subscribe-to-an-event-of-a-usercontrol
+        // Agradecido con el de arriba
+
+        public delegate void ButtonClickEventHandler(object sender, EventArgs e);
+        public event ButtonClickEventHandler EditarClick;
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = EditarClick;
+            if (h != null) h(this, e);
+        }
+
+       
     }
 }
 

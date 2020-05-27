@@ -36,7 +36,6 @@
             this.rpn_izqGR = new LP2MegaAutos.RoundedPanel();
             this.rpn_ReportesU2 = new LP2MegaAutos.RoundedPanel();
             this.btn_ReportesU2 = new System.Windows.Forms.Button();
-            this.systemColorsExtender1 = new LP2MegaAutos.SystemColorsExtender();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.rpn_Clientes = new LP2MegaAutos.RoundedPanel();
@@ -53,6 +52,7 @@
             this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
             this.roundedPanel6 = new LP2MegaAutos.RoundedPanel();
             this.roundedPanel7 = new LP2MegaAutos.RoundedPanel();
+            this.systemColorsExtender1 = new LP2MegaAutos.SystemColorsExtender();
             this.rpn_GenerarReporteU2.SuspendLayout();
             this.rpn_ReportesU2.SuspendLayout();
             this.rpn_Clientes.SuspendLayout();
@@ -65,8 +65,10 @@
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.systemColorsExtender1.SetBackColorSystem(this.lblBienvenido, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.lblBienvenido.Font = new System.Drawing.Font("Montserrat", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.lblBienvenido, LP2MegaAutos.ColoresSistema.HighContrast);
             this.lblBienvenido.Location = new System.Drawing.Point(171, 19);
             this.lblBienvenido.Name = "lblBienvenido";
@@ -80,6 +82,7 @@
             this.roundedPanelExtender1.SetArcoRPanel(this.rpn_GenerarReporteU2, 15);
             this.rpn_GenerarReporteU2.ArcRadiusBorde = 15;
             this.rpn_GenerarReporteU2.ArcRadiusPanel = 15;
+            this.rpn_GenerarReporteU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.systemColorsExtender1.SetBackColorSystem(this.rpn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.BackBackground);
             this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
@@ -110,7 +113,7 @@
             this.btn_GenerarReporteU2.FlatAppearance.BorderSize = 0;
             this.btn_GenerarReporteU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GenerarReporteU2.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GenerarReporteU2.ForeColor = System.Drawing.Color.White;
+            this.btn_GenerarReporteU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.btn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.btn_GenerarReporteU2.Location = new System.Drawing.Point(13, 3);
             this.btn_GenerarReporteU2.Name = "btn_GenerarReporteU2";
@@ -153,11 +156,13 @@
             this.roundedPanelExtender1.SetArcoRPanel(this.rpn_izqGR, 15);
             this.rpn_izqGR.ArcRadiusBorde = 15;
             this.rpn_izqGR.ArcRadiusPanel = 15;
+            this.rpn_izqGR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.systemColorsExtender1.SetBackColorSystem(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.BackBackground);
             this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
             this.roundedPanelExtender1.SetCorners(this.rpn_izqGR, Plasmoid.Extensions.RectangleEdgeFilter.Right);
             this.rpn_izqGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
+            this.rpn_izqGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_izqGR.Location = new System.Drawing.Point(0, 96);
             this.rpn_izqGR.MenosHeightBorde = 1;
@@ -179,6 +184,7 @@
             this.roundedPanelExtender1.SetArcoRPanel(this.rpn_ReportesU2, 15);
             this.rpn_ReportesU2.ArcRadiusBorde = 15;
             this.rpn_ReportesU2.ArcRadiusPanel = 15;
+            this.rpn_ReportesU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.systemColorsExtender1.SetBackColorSystem(this.rpn_ReportesU2, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_ReportesU2, LP2MegaAutos.ColoresSistema.BackBackground);
             this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_ReportesU2, LP2MegaAutos.ColoresSistema.PrincipalRojo);
@@ -209,7 +215,7 @@
             this.btn_ReportesU2.FlatAppearance.BorderSize = 0;
             this.btn_ReportesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ReportesU2.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReportesU2.ForeColor = System.Drawing.Color.White;
+            this.btn_ReportesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.btn_ReportesU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.btn_ReportesU2.Location = new System.Drawing.Point(13, 3);
             this.btn_ReportesU2.Name = "btn_ReportesU2";
@@ -311,7 +317,7 @@
             this.btn_ClientesU2.FlatAppearance.BorderSize = 0;
             this.btn_ClientesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ClientesU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_ClientesU2.ForeColor = System.Drawing.Color.White;
+            this.btn_ClientesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.btn_ClientesU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.btn_ClientesU2.Location = new System.Drawing.Point(12, 3);
             this.btn_ClientesU2.Name = "btn_ClientesU2";
@@ -357,7 +363,7 @@
             this.btn_UsuariosU2.FlatAppearance.BorderSize = 0;
             this.btn_UsuariosU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_UsuariosU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_UsuariosU2.ForeColor = System.Drawing.Color.White;
+            this.btn_UsuariosU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.btn_UsuariosU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.btn_UsuariosU2.Location = new System.Drawing.Point(13, 3);
             this.btn_UsuariosU2.Name = "btn_UsuariosU2";
@@ -403,7 +409,7 @@
             this.btn_DriversU2.FlatAppearance.BorderSize = 0;
             this.btn_DriversU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DriversU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_DriversU2.ForeColor = System.Drawing.Color.White;
+            this.btn_DriversU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.btn_DriversU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.btn_DriversU2.Location = new System.Drawing.Point(12, 3);
             this.btn_DriversU2.Name = "btn_DriversU2";
@@ -449,7 +455,7 @@
             this.btnAjustesU2.FlatAppearance.BorderSize = 0;
             this.btnAjustesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjustesU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btnAjustesU2.ForeColor = System.Drawing.Color.White;
+            this.btnAjustesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.btnAjustesU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.btnAjustesU2.Location = new System.Drawing.Point(13, 3);
             this.btnAjustesU2.Name = "btnAjustesU2";
@@ -495,7 +501,7 @@
             this.btn_CerrarSesionU2.FlatAppearance.BorderSize = 0;
             this.btn_CerrarSesionU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CerrarSesionU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_CerrarSesionU2.ForeColor = System.Drawing.Color.White;
+            this.btn_CerrarSesionU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.btn_CerrarSesionU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.btn_CerrarSesionU2.Location = new System.Drawing.Point(12, 3);
             this.btn_CerrarSesionU2.Name = "btn_CerrarSesionU2";
@@ -637,6 +643,7 @@
             this.Controls.Add(this.rpn_derGR);
             this.Controls.Add(this.rpn_GenerarReporteU2);
             this.Controls.Add(this.lblBienvenido);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this, LP2MegaAutos.ColoresSistema.HighContrast);
             this.Name = "pantallaInicioUsuarioNivel2";
             this.Size = new System.Drawing.Size(611, 470);

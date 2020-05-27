@@ -101,6 +101,12 @@
     <Compile Include="pantallaActualizarUsuarios.Designer.cs">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaAgregarCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAgregarCliente.Designer.cs">
+      <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaAgregarServicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAgregarCliente.resx">
+      <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaAgregarServicio.resx">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>

@@ -264,6 +264,7 @@
             this.btn_ZA_Drivers.TabIndex = 6;
             this.btn_ZA_Drivers.Text = "Z - A";
             this.btn_ZA_Drivers.UseVisualStyleBackColor = false;
+            this.btn_ZA_Drivers.Click += new System.EventHandler(this.btn_ZA_Drivers_Click);
             // 
             // roundedPanel1
             // 
@@ -300,6 +301,7 @@
             this.btn_AZ_Drivers.TabIndex = 5;
             this.btn_AZ_Drivers.Text = "A - Z";
             this.btn_AZ_Drivers.UseVisualStyleBackColor = false;
+            this.btn_AZ_Drivers.Click += new System.EventHandler(this.btn_AZ_Drivers_Click);
             // 
             // pantallaServicios
             // 

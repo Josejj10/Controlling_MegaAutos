@@ -21,15 +21,10 @@ namespace LP2MegaAutos
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
             }
             Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form
-            itemLista1.EditarClick+= btnEditarClick;
-            itemLista2.EditarClick+= btnEditarClick;
         }
 
             
-        public void btnEditarClick(Object sender, EventArgs e)
-        {
-            MessageBox.Show("SI SE PUDO");
-        }
+        
 
         #region title_bar
 
@@ -84,8 +79,8 @@ namespace LP2MegaAutos
 
 
 
+
         #endregion Dark Mode
 
-       
     }
 }

@@ -82,5 +82,66 @@ namespace LP2MegaAutos
 
         #endregion Dark Mode
 
+        #region panelMenu
+        private void cambiarRPMenu(RoundedPanel rp)
+        {
+            rp.ColorPanel = Color.Transparent;
+            foreach(Control btn in rp.Controls)
+                btn.BackColor = Color.Transparent;
+        }
+        private void cambiarColoresBotonesMenu(RoundedPanel rp)
+        {
+            // Itera por todos los botones del panel del Menu y cambia los colores
+            // A menos que sea el rp y btn enviados
+            // Cambiar color rounded panels de atras
+
+            foreach (Control c in panelMenu.Controls)
+            {
+                // Todos los controles que tiene son RoundedPanels, cambiar su color
+                if (c == rp) continue;
+                if (c is RoundedPanel) cambiarRPMenu((RoundedPanel)c);
+                
+            }
+            if (DarkMode.is_dark_mode_active())
+                rp.ColorPanel = Dark_Mode.BackBackground;
+            else
+                rp.ColorPanel = White_Mode.BackBackground;
+
+        }
+
+        #region botonesClick
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (!rpMain.Controls.Contains(pantallaInicioGerente.Instancia))
+            {
+                rpMain.Controls.Add(pantallaInicioGerente.Instancia);
+                pantallaInicioGerente.Instancia.Dock = DockStyle.Fill;
+                pantallaInicioGerente.Instancia.BringToFront();
+            }
+            else
+                pantallaInicioGerente.Instancia.BringToFront();
+
+            // Cambiar los botones y rPanel
+            cambiarColoresBotonesMenu(rpBtnMenuHome);
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            if (!rpMain.Controls.Contains(pantallaServicios.Instancia))
+            {
+                rpMain.Controls.Add(pantallaServicios.Instancia);
+                pantallaServicios.Instancia.Dock = DockStyle.Fill;
+                pantallaServicios.Instancia.BringToFront();
+            }
+            else
+                pantallaServicios.Instancia.BringToFront();
+
+            // Cambiar los botones y rPanel excepto el enviado
+            cambiarColoresBotonesMenu(rpBtnMenuServicios);
+        }
+        #endregion botonesClick
+        
+        #endregion panelMenu
+
     }
 }

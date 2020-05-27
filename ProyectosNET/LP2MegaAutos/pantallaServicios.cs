@@ -12,6 +12,20 @@ namespace LP2MegaAutos
 {
     public partial class pantallaServicios : UserControl
     {
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaServicios _instancia;
+        public static pantallaServicios Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaServicios();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+
         public pantallaServicios()
         {
             InitializeComponent();
@@ -22,7 +36,15 @@ namespace LP2MegaAutos
 
         private void btnEditarClick(Object sender, EventArgs e)
         {
-            MessageBox.Show("NO AUN");
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaInicioGerente.Instancia))
+            {
+                this.Controls.Add(pantallaInicioGerente.Instancia);
+                pantallaInicioGerente.Instancia.Dock = DockStyle.Fill;
+                pantallaInicioGerente.Instancia.BringToFront();
+            }
+            else
+                pantallaInicioGerente.Instancia.BringToFront();
         }
 
         private void btn_AZ_Drivers_Click(object sender, EventArgs e)
@@ -54,7 +76,6 @@ namespace LP2MegaAutos
             this.btn_Reciente_Drivers.BackColor = Color.Transparent;
             this.btn_Antiguo_Drivers.BackColor = Color.Transparent;
         }
-
 
     }
 }

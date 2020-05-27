@@ -35,6 +35,9 @@ namespace LP2MegaAutos
             btnPorVehiculo.Click += cambiarTxtInputBuscar;
             btnPorCliente.Click += cambiarTxtInputBuscar;
             txt_InputBuscar.AutoSize = false;
+            txtSede.AutoSize = false;
+            txt_InputBuscar.Size = new Size(315,30);
+            txtSede.Size = new Size(143, 30);
             //DarkMode.agregarExcepcion("rpBtnGenerarReporte");
             DarkMode.agregarExcepcion("btnGenerarReporte");
         }
@@ -42,21 +45,67 @@ namespace LP2MegaAutos
 
         private void btnDiario_Click(object sender, EventArgs e)
         {
+            // Cambiar color rounded panels de atras
+            this.rpDiario.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndAnual.ColorPanel = Color.Transparent;
+            this.rndMensual.ColorPanel = Color.Transparent;
+            this.rndOtro.ColorPanel = Color.Transparent;
 
+            // Cambiar color botones de al frente
+            this.btnAnual.BackColor = Color.Transparent;
+            this.btnDiario.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnMensual.BackColor = Color.Transparent;
+            this.btnOtro.BackColor = Color.Transparent;
+
+            // TODO Cambiar el tiempo reporte
+            //this._btnSeleccionado = "Vehiculo";
         }
 
         private void btnMensual_Click(object sender, EventArgs e)
         {
+            // Cambiar color rounded panels de atras
+            this.rndMensual.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rpDiario.ColorPanel = Color.Transparent;
+            this.rndAnual.ColorPanel = Color.Transparent;
+            this.rndOtro.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnDiario.BackColor = Color.Transparent;
+            this.btnMensual.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnAnual.BackColor = Color.Transparent;
+            this.btnOtro.BackColor = Color.Transparent;
 
         }
 
         private void btnAnual_Click(object sender, EventArgs e)
         {
+            // Cambiar color rounded panels de atras
+            this.rndAnual.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rpDiario.ColorPanel = Color.Transparent;
+            this.rndMensual.ColorPanel = Color.Transparent;
+            this.rndOtro.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnDiario.BackColor = Color.Transparent;
+            this.btnAnual.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnMensual.BackColor = Color.Transparent;
+            this.btnOtro.BackColor = Color.Transparent;
 
         }
 
         private void btnOtro_Click(object sender, EventArgs e)
         {
+            // Cambiar color rounded panels de atras
+            this.rndOtro.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rpDiario.ColorPanel = Color.Transparent;
+            this.rndMensual.ColorPanel = Color.Transparent;
+            this.rndAnual.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnDiario.BackColor = Color.Transparent;
+            this.btnOtro.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnMensual.BackColor = Color.Transparent;
+            this.btnAnual.BackColor = Color.Transparent;
 
         }
 

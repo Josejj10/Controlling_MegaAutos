@@ -44,6 +44,8 @@
             this.txt_codServ = new System.Windows.Forms.TextBox();
             this.lbl_codServ = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
+            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.roundedPanel1.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
@@ -67,6 +69,11 @@
             this.roundedPanel1.PorcLuzColorBorde = 0;
             this.roundedPanel1.Size = new System.Drawing.Size(280, 35);
             this.roundedPanel1.TabIndex = 10;
+            this.tagsExtender1.SetTag2(this.roundedPanel1, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
             this.roundedPanel1.XBorde = 0;
             this.roundedPanel1.XPanel = 0;
             this.roundedPanel1.YBorde = 0;
@@ -84,6 +91,11 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(278, 33);
             this.btn_guardar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_guardar, null);
+            this.tagsExtender1.SetTag3(this.btn_guardar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
             this.btn_guardar.Text = "Guardar cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;
             // 
@@ -97,6 +109,11 @@
             this.pnl_tipoServicio.Name = "pnl_tipoServicio";
             this.pnl_tipoServicio.Size = new System.Drawing.Size(292, 41);
             this.pnl_tipoServicio.TabIndex = 8;
+            this.tagsExtender1.SetTag2(this.pnl_tipoServicio, null);
+            this.tagsExtender1.SetTag3(this.pnl_tipoServicio, null);
+            this.tagsExtender1.SetTagFontName(this.pnl_tipoServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnl_tipoServicio, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnl_tipoServicio, System.Drawing.FontStyle.Regular);
             // 
             // rnd_color_3
             // 
@@ -114,6 +131,11 @@
             this.rnd_color_3.PorcLuzColorBorde = 0;
             this.rnd_color_3.Size = new System.Drawing.Size(3, 36);
             this.rnd_color_3.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rnd_color_3, null);
+            this.tagsExtender1.SetTag3(this.rnd_color_3, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_color_3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_color_3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_color_3, System.Drawing.FontStyle.Regular);
             this.rnd_color_3.XBorde = 0;
             this.rnd_color_3.XPanel = 0;
             this.rnd_color_3.YBorde = 0;
@@ -129,16 +151,27 @@
             this.txt_tipoServicio.Name = "txt_tipoServicio";
             this.txt_tipoServicio.Size = new System.Drawing.Size(284, 23);
             this.txt_tipoServicio.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_tipoServicio, null);
+            this.tagsExtender1.SetTag3(this.txt_tipoServicio, null);
+            this.tagsExtender1.SetTagFontName(this.txt_tipoServicio, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_tipoServicio, 14F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_tipoServicio, System.Drawing.FontStyle.Bold);
             // 
             // lbl_tipoServicio
             // 
             this.lbl_tipoServicio.AutoSize = true;
+            this.lbl_tipoServicio.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tipoServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lbl_tipoServicio.Location = new System.Drawing.Point(4, 2);
             this.lbl_tipoServicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_tipoServicio.Name = "lbl_tipoServicio";
-            this.lbl_tipoServicio.Size = new System.Drawing.Size(82, 13);
+            this.lbl_tipoServicio.Size = new System.Drawing.Size(97, 16);
             this.lbl_tipoServicio.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_tipoServicio, null);
+            this.tagsExtender1.SetTag3(this.lbl_tipoServicio, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_tipoServicio, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_tipoServicio, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_tipoServicio, System.Drawing.FontStyle.Bold);
             this.lbl_tipoServicio.Text = "Tipo de servicio";
             // 
             // pnl_descripcion
@@ -151,6 +184,11 @@
             this.pnl_descripcion.Name = "pnl_descripcion";
             this.pnl_descripcion.Size = new System.Drawing.Size(292, 145);
             this.pnl_descripcion.TabIndex = 9;
+            this.tagsExtender1.SetTag2(this.pnl_descripcion, null);
+            this.tagsExtender1.SetTag3(this.pnl_descripcion, null);
+            this.tagsExtender1.SetTagFontName(this.pnl_descripcion, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnl_descripcion, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnl_descripcion, System.Drawing.FontStyle.Regular);
             // 
             // rnd_color_2
             // 
@@ -168,6 +206,11 @@
             this.rnd_color_2.PorcLuzColorBorde = 0;
             this.rnd_color_2.Size = new System.Drawing.Size(3, 141);
             this.rnd_color_2.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rnd_color_2, null);
+            this.tagsExtender1.SetTag3(this.rnd_color_2, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_color_2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_color_2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_color_2, System.Drawing.FontStyle.Regular);
             this.rnd_color_2.XBorde = 0;
             this.rnd_color_2.XPanel = 0;
             this.rnd_color_2.YBorde = 0;
@@ -184,16 +227,27 @@
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(284, 128);
             this.txt_descripcion.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_descripcion, null);
+            this.tagsExtender1.SetTag3(this.txt_descripcion, null);
+            this.tagsExtender1.SetTagFontName(this.txt_descripcion, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_descripcion, 14F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_descripcion, System.Drawing.FontStyle.Bold);
             // 
             // lbl_desc
             // 
             this.lbl_desc.AutoSize = true;
+            this.lbl_desc.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_desc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lbl_desc.Location = new System.Drawing.Point(4, 2);
             this.lbl_desc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desc.Name = "lbl_desc";
-            this.lbl_desc.Size = new System.Drawing.Size(63, 13);
+            this.lbl_desc.Size = new System.Drawing.Size(75, 16);
             this.lbl_desc.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_desc, null);
+            this.tagsExtender1.SetTag3(this.lbl_desc, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_desc, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_desc, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_desc, System.Drawing.FontStyle.Bold);
             this.lbl_desc.Text = "Descripción";
             // 
             // panel1
@@ -203,6 +257,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(589, 2);
             this.panel1.TabIndex = 7;
+            this.tagsExtender1.SetTag2(this.panel1, null);
+            this.tagsExtender1.SetTag3(this.panel1, null);
+            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
             // pnl_codServ
             // 
@@ -214,6 +273,11 @@
             this.pnl_codServ.Name = "pnl_codServ";
             this.pnl_codServ.Size = new System.Drawing.Size(292, 41);
             this.pnl_codServ.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.pnl_codServ, null);
+            this.tagsExtender1.SetTag3(this.pnl_codServ, null);
+            this.tagsExtender1.SetTagFontName(this.pnl_codServ, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnl_codServ, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnl_codServ, System.Drawing.FontStyle.Regular);
             // 
             // rnd_color_1
             // 
@@ -231,6 +295,11 @@
             this.rnd_color_1.PorcLuzColorBorde = 0;
             this.rnd_color_1.Size = new System.Drawing.Size(3, 36);
             this.rnd_color_1.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rnd_color_1, null);
+            this.tagsExtender1.SetTag3(this.rnd_color_1, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_color_1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_color_1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_color_1, System.Drawing.FontStyle.Regular);
             this.rnd_color_1.XBorde = 0;
             this.rnd_color_1.XPanel = 0;
             this.rnd_color_1.YBorde = 0;
@@ -246,16 +315,27 @@
             this.txt_codServ.Name = "txt_codServ";
             this.txt_codServ.Size = new System.Drawing.Size(284, 23);
             this.txt_codServ.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_codServ, null);
+            this.tagsExtender1.SetTag3(this.txt_codServ, null);
+            this.tagsExtender1.SetTagFontName(this.txt_codServ, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_codServ, 14F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_codServ, System.Drawing.FontStyle.Bold);
             // 
             // lbl_codServ
             // 
             this.lbl_codServ.AutoSize = true;
+            this.lbl_codServ.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_codServ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lbl_codServ.Location = new System.Drawing.Point(4, 2);
             this.lbl_codServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_codServ.Name = "lbl_codServ";
-            this.lbl_codServ.Size = new System.Drawing.Size(94, 13);
+            this.lbl_codServ.Size = new System.Drawing.Size(112, 16);
             this.lbl_codServ.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_codServ, null);
+            this.tagsExtender1.SetTag3(this.lbl_codServ, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_codServ, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_codServ, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_codServ, System.Drawing.FontStyle.Bold);
             this.lbl_codServ.Text = "Código de servicio";
             // 
             // lbl_titulo
@@ -268,13 +348,46 @@
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(387, 35);
             this.lbl_titulo.TabIndex = 5;
+            this.tagsExtender1.SetTag2(this.lbl_titulo, null);
+            this.tagsExtender1.SetTag3(this.lbl_titulo, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_titulo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_titulo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_titulo, System.Drawing.FontStyle.Regular);
             this.lbl_titulo.Text = "Agregar nombre de servicio...";
+            // 
+            // rpTopMain
+            // 
+            this.rpTopMain.ArcRadiusBorde = 15;
+            this.rpTopMain.ArcRadiusPanel = 15;
+            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
+            this.rpTopMain.Location = new System.Drawing.Point(0, 0);
+            this.rpTopMain.MenosHeightBorde = 1;
+            this.rpTopMain.MenosHeightPanel = 1;
+            this.rpTopMain.MenosWidthBorde = 1;
+            this.rpTopMain.MenosWidthPanel = 1;
+            this.rpTopMain.Name = "rpTopMain";
+            this.rpTopMain.PorcLuzColorBorde = 0;
+            this.rpTopMain.Size = new System.Drawing.Size(611, 40);
+            this.rpTopMain.TabIndex = 30;
+            this.tagsExtender1.SetTag2(this.rpTopMain, null);
+            this.tagsExtender1.SetTag3(this.rpTopMain, null);
+            this.tagsExtender1.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpTopMain, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
+            this.rpTopMain.XBorde = 0;
+            this.rpTopMain.XPanel = 0;
+            this.rpTopMain.YBorde = 0;
+            this.rpTopMain.YPanel = 0;
             // 
             // pantallaAgregarServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.pnl_tipoServicio);
             this.Controls.Add(this.pnl_descripcion);
@@ -283,6 +396,11 @@
             this.Controls.Add(this.lbl_titulo);
             this.Name = "pantallaAgregarServicio";
             this.Size = new System.Drawing.Size(611, 470);
+            this.tagsExtender1.SetTag2(this, null);
+            this.tagsExtender1.SetTag3(this, null);
+            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this, 10F);
+            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.roundedPanel1.ResumeLayout(false);
             this.pnl_tipoServicio.ResumeLayout(false);
             this.pnl_tipoServicio.PerformLayout();
@@ -313,5 +431,7 @@
         private System.Windows.Forms.TextBox txt_codServ;
         private System.Windows.Forms.Label lbl_codServ;
         private System.Windows.Forms.Label lbl_titulo;
+        private RoundedPanel rpTopMain;
+        private TagsExtender tagsExtender1;
     }
 }

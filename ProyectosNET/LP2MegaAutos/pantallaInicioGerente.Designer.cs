@@ -89,6 +89,8 @@
             this.rpn_GenerarReporteGerente.ArcRadiusBorde = 15;
             this.rpn_GenerarReporteGerente.ArcRadiusPanel = 15;
             this.rpn_GenerarReporteGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_GenerarReporteGerente.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_GenerarReporteGerente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpn_GenerarReporteGerente.Controls.Add(this.btn_GenerarReporteGerente);
             this.rpn_GenerarReporteGerente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_GenerarReporteGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -126,6 +128,8 @@
             this.rpn_izqGR.ArcRadiusBorde = 15;
             this.rpn_izqGR.ArcRadiusPanel = 15;
             this.rpn_izqGR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_izqGR.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_izqGR.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpn_izqGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.rpn_izqGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.rpn_izqGR.Location = new System.Drawing.Point(0, 107);
@@ -147,6 +151,8 @@
             this.rpn_derGR.ArcRadiusBorde = 15;
             this.rpn_derGR.ArcRadiusPanel = 15;
             this.rpn_derGR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_derGR.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_derGR.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpn_derGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.rpn_derGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.rpn_derGR.Location = new System.Drawing.Point(558, 107);
@@ -168,6 +174,8 @@
             this.rpn_AreaTrabajo.ArcRadiusBorde = 15;
             this.rpn_AreaTrabajo.ArcRadiusPanel = 15;
             this.rpn_AreaTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_AreaTrabajo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_AreaTrabajo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
             this.rpn_AreaTrabajo.Controls.Add(this.btn_AreaTrabajoGerente);
             this.rpn_AreaTrabajo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_AreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -205,6 +213,8 @@
             this.rpn_Reportes.ArcRadiusBorde = 15;
             this.rpn_Reportes.ArcRadiusPanel = 15;
             this.rpn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Reportes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Reportes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
             this.rpn_Reportes.Controls.Add(this.btn_ReportesGerente);
             this.rpn_Reportes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Reportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -242,6 +252,8 @@
             this.rpn_Servicios.ArcRadiusBorde = 15;
             this.rpn_Servicios.ArcRadiusPanel = 15;
             this.rpn_Servicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Servicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Servicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
             this.rpn_Servicios.Controls.Add(this.btn_ServiciosGerente);
             this.rpn_Servicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Servicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -279,6 +291,8 @@
             this.rpn_Drivers.ArcRadiusBorde = 15;
             this.rpn_Drivers.ArcRadiusPanel = 15;
             this.rpn_Drivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Drivers.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Drivers.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
             this.rpn_Drivers.Controls.Add(this.btn_DriversGerente);
             this.rpn_Drivers.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Drivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -316,6 +330,8 @@
             this.rpn_Sedes.ArcRadiusBorde = 15;
             this.rpn_Sedes.ArcRadiusPanel = 15;
             this.rpn_Sedes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Sedes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Sedes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
             this.rpn_Sedes.Controls.Add(this.btn_SedesGerente);
             this.rpn_Sedes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Sedes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -353,6 +369,8 @@
             this.rpn_Usuarios.ArcRadiusBorde = 15;
             this.rpn_Usuarios.ArcRadiusPanel = 15;
             this.rpn_Usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Usuarios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Usuarios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
             this.rpn_Usuarios.Controls.Add(this.btn_UsuariosGerente);
             this.rpn_Usuarios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -390,6 +408,8 @@
             this.rpn_Clientes.ArcRadiusBorde = 15;
             this.rpn_Clientes.ArcRadiusPanel = 15;
             this.rpn_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Clientes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Clientes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
             this.rpn_Clientes.Controls.Add(this.btn_ClientesGerente);
             this.rpn_Clientes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -427,6 +447,8 @@
             this.rpn_Empresa.ArcRadiusBorde = 15;
             this.rpn_Empresa.ArcRadiusPanel = 15;
             this.rpn_Empresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Empresa.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Empresa.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
             this.rpn_Empresa.Controls.Add(this.btn_EmpresaGerente);
             this.rpn_Empresa.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Empresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -464,6 +486,8 @@
             this.rpn_CerrarSesion.ArcRadiusBorde = 15;
             this.rpn_CerrarSesion.ArcRadiusPanel = 15;
             this.rpn_CerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_CerrarSesion.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_CerrarSesion.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.rpn_CerrarSesion.Controls.Add(this.btn_CerrarSesionGerente);
             this.rpn_CerrarSesion.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_CerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -501,6 +525,8 @@
             this.rpn_Ajustes.ArcRadiusBorde = 15;
             this.rpn_Ajustes.ArcRadiusPanel = 15;
             this.rpn_Ajustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Ajustes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_Ajustes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.rpn_Ajustes.Controls.Add(this.btnAjustesGerente);
             this.rpn_Ajustes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Ajustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -538,6 +564,8 @@
             this.rpn_ActualizarBase.ArcRadiusBorde = 15;
             this.rpn_ActualizarBase.ArcRadiusPanel = 15;
             this.rpn_ActualizarBase.BackColor = System.Drawing.Color.Transparent;
+            this.rpn_ActualizarBase.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_ActualizarBase.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.rpn_ActualizarBase.Controls.Add(this.btn_ActualizarBDGerente);
             this.rpn_ActualizarBase.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_ActualizarBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -575,6 +603,8 @@
             this.roundedPanel2.ArcRadiusBorde = 15;
             this.roundedPanel2.ArcRadiusPanel = 15;
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.roundedPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.roundedPanel2.Location = new System.Drawing.Point(0, 382);
@@ -596,6 +626,8 @@
             this.roundedPanel3.ArcRadiusBorde = 15;
             this.roundedPanel3.ArcRadiusPanel = 15;
             this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.roundedPanel3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.roundedPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.roundedPanel3.Location = new System.Drawing.Point(527, 382);
@@ -616,6 +648,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.rpn_Sedes);

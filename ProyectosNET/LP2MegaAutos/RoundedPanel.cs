@@ -44,7 +44,31 @@ namespace LP2MegaAutos
         public int MenosHeightBorde { get => menosHeightBorde; set => menosHeightBorde = value; }
         public int PorcLuzColorBorde { get => porcLuzColorBorde; set => porcLuzColorBorde = value; }
         public RectangleEdgeFilter CornersRound { get => cornersRound; set => cornersRound = value; }
-
+        public Color ColorPanel
+        {
+            get
+            {
+                return this.colorPanel;
+            }
+            set
+            {
+                this.colorPanel = value;
+                this.Invalidate();
+            }
+        } 
+        
+        public Color ColorBorde
+        {
+            get
+            {
+                return this.colorBorde;
+            }
+            set
+            {
+                this.colorBorde= value;
+                this.Invalidate();
+            }
+        }
         public RoundedPanel()
         {
             InitializeComponent();
@@ -56,7 +80,7 @@ namespace LP2MegaAutos
             Graphics g = e.Graphics;
             
             g.SmoothingMode = SmoothingMode.AntiAlias;
-            g.FillRoundedRectangle(new SolidBrush(colorPanel), XPanel, YPanel, this.Width - MenosWidthPanel
+            g.FillRoundedRectangle(new SolidBrush(ColorPanel), XPanel, YPanel, this.Width - MenosWidthPanel
                 , this.Height - MenosHeightPanel, ArcRadiusPanel, CornersRound);
             g.DrawRoundedRectangle(new Pen(ControlPaint.Light(colorBorde, PorcLuzColorBorde)), XBorde,
                 YBorde, this.Width - MenosWidthBorde, this.Height - MenosHeightBorde, ArcRadiusBorde,cornersRound);
@@ -65,7 +89,7 @@ namespace LP2MegaAutos
         // Cambiar colores
         public void cambiarColorPanel(Color color)
         {
-            colorPanel = color;
+            ColorPanel = color;
             this.Invalidate();
         }
 
@@ -79,7 +103,7 @@ namespace LP2MegaAutos
         // Recibir colores del panel y borde
         public Color getColorPanel()
         {
-            return colorPanel;
+            return ColorPanel;
         }
 
         public Color getColorBorde()

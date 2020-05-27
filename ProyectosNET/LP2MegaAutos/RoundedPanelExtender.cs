@@ -13,13 +13,8 @@ using System.Windows.Forms;
 
 namespace LP2MegaAutos
 {
-    //[ProvideProperty("ColorPanel", typeof(RoundedPanel))]
-    [ProvideProperty("ColorSistemaPanel", typeof(RoundedPanel))]
-    [ProvideProperty("ColorSistemaBorde", typeof(RoundedPanel))]
+    [ProvideProperty("ColorPanel", typeof(RoundedPanel))]
     [ProvideProperty("ColorBorde", typeof(RoundedPanel))]
-    [ProvideProperty("ArcoRPanel", typeof(RoundedPanel))]
-    [ProvideProperty("ArcoRBorde", typeof(RoundedPanel))]
-    [ProvideProperty("Corners", typeof(RoundedPanel))]
 
     public class RoundedPanelExtender : Component, IExtenderProvider
     {
@@ -29,82 +24,30 @@ namespace LP2MegaAutos
         }
 
         [Category("Appearance")]
-        [DisplayName("RPanel Color Sistema")]
-        [Description("Del panel, no del borde. Cambia el color a un color de la clase Colores")]
-        public ColoresSistema GetColorSistemaPanel(RoundedPanel control)
-        {
-            if (Colores.dColores.ContainsKey(control.getColorPanel()))
-                return Colores.dColores[control.getColorPanel()];
-            return ColoresSistema.HighContrast;
-        }
-
-        public void SetColorSistemaPanel(RoundedPanel control, ColoresSistema value)
-        {
-            control.cambiarColorPanel(Colores.dColoresSistema[value]);
-        }
-
-        [Category("Appearance")]
-        [DisplayName("RBorde Color Sistema")]
-        [Description("Del borde, no del panel. Cambia el color a un color de la clase Colores.")]
-        public ColoresSistema GetColorSistemaBorde(RoundedPanel control)
-        {
-            if (Colores.dColores.ContainsKey(control.getColorBorde()))
-                return Colores.dColores[control.getColorBorde()];
-            return ColoresSistema.Transparent;
-        }
-
-        public void SetColorSistemaBorde(RoundedPanel control, ColoresSistema value)
-        {
-            control.cambiarColorBorde(Colores.dColoresSistema[value]);
-        }
-
-
-        [Category("Appearance")]
-        [DisplayName("RP Arco")]
+        [DisplayName("Color RPanel")]
         [Description("Del panel, no del borde.")]
-        public int GetArcoRPanel(RoundedPanel control)
+        public Color GetColorPanel(RoundedPanel control)
         {
-            return control.ArcRadiusPanel;
+            return control.getColorPanel();
+        }
+
+        public void SetColorPanel(RoundedPanel control, Color value)
+        {
+            control.cambiarColorPanel(value);
         }
 
         [Category("Appearance")]
-        [DisplayName("RP Arco")]
-        [Description("Del panel, no del borde.")]
-        public void SetArcoRPanel(RoundedPanel control, int value)
-        {
-            control.ArcRadiusPanel = value;
-        }
-
-        [Category("Appearance")]
-        [DisplayName("RB Arco")]
+        [DisplayName("Color RBorde")]
         [Description("Del borde, no del panel.")]
-        public int GetArcoRBorde(RoundedPanel control)
+        public Color GetColorBorde(RoundedPanel control)
         {
-            return control.ArcRadiusBorde;
+            return control.getColorBorde();
         }
 
-        [Category("Appearance")]
-        [DisplayName("RB Arco")]
-        [Description("Del borde, no del panel.")]
-        public void SetArcoRBorde(RoundedPanel control, int value)
+        public void SetColorBorde(RoundedPanel control, Color value)
         {
-            control.ArcRadiusBorde = value;
+            control.cambiarColorBorde(value);
         }
-
-        [Category("Appearance")]
-        [DisplayName("RP Corners")]
-        [Description("Esquinas a redondear.")]
-        public RectangleEdgeFilter GetCorners(RoundedPanel control)
-        {
-            return control.CornersRound;
-        }
-
-        public void SetCorners(RoundedPanel control, RectangleEdgeFilter value)
-        {
-            control.CornersRound = value;
-        }
-
-
 
     }
 }

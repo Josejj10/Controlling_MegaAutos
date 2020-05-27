@@ -34,8 +34,6 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.tags = new LP2MegaAutos.TagsExtender();
-            this.systemColorsExtender1 = new LP2MegaAutos.SystemColorsExtender();
-            this.roundedPanelExtender1 = new LP2MegaAutos.RoundedPanelExtender();
             this.frontBackground.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,12 +42,12 @@
             // 
             this.frontBackground.ArcRadiusBorde = 15;
             this.frontBackground.ArcRadiusPanel = 15;
-            this.systemColorsExtender1.SetBackColorSystem(this.frontBackground, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.frontBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.frontBackground.Controls.Add(this.panel1);
             this.frontBackground.Controls.Add(this.lblTitulo);
             this.frontBackground.Controls.Add(this.roundedPanel1);
             this.frontBackground.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.systemColorsExtender1.SetForeColorSystem(this.frontBackground, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.frontBackground.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.frontBackground.Location = new System.Drawing.Point(-1, 0);
             this.frontBackground.MenosHeightBorde = 1;
             this.frontBackground.MenosHeightPanel = 1;
@@ -72,9 +70,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.panel1, LP2MegaAutos.ColoresSistema.PrincipalAzulMetalico);
             this.panel1.Controls.Add(this.label2);
-            this.systemColorsExtender1.SetForeColorSystem(this.panel1, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panel1.Location = new System.Drawing.Point(21, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(543, 26);
@@ -88,13 +85,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.systemColorsExtender1.SetBackColorSystem(this.label2, LP2MegaAutos.ColoresSistema.PrincipalAzulMetalico);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.label2, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.label2.Location = new System.Drawing.Point(183, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 19);
+            this.label2.Size = new System.Drawing.Size(168, 22);
             this.label2.TabIndex = 1;
             this.tags.SetTag2(this.label2, null);
             this.tags.SetTag3(this.label2, null);
@@ -106,10 +102,9 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetBackColorSystem(this.lblTitulo, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblTitulo.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.systemColorsExtender1.SetForeColorSystem(this.lblTitulo, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.lblTitulo.Location = new System.Drawing.Point(14, 54);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(164, 39);
@@ -125,10 +120,9 @@
             // 
             this.roundedPanel1.ArcRadiusBorde = 15;
             this.roundedPanel1.ArcRadiusPanel = 15;
-            this.roundedPanel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel1, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel1, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.roundedPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.roundedPanel1.Location = new System.Drawing.Point(0, 1);
             this.roundedPanel1.MenosHeightBorde = 1;
             this.roundedPanel1.MenosHeightPanel = 1;
@@ -152,9 +146,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.systemColorsExtender1.SetBackColorSystem(this, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.Controls.Add(this.frontBackground);
-            this.systemColorsExtender1.SetForeColorSystem(this, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.Name = "pantallaAreaTrabajo";
             this.Size = new System.Drawing.Size(611, 470);
             this.tags.SetTag2(this, null);
@@ -178,7 +171,5 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private SystemColorsExtender systemColorsExtender1;
-        private RoundedPanelExtender roundedPanelExtender1;
     }
 }

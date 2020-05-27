@@ -54,3 +54,8 @@ C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAut
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAreaTrabajo.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemLista.resources

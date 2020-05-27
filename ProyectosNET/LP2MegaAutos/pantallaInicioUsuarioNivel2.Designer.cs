@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblBienvenido = new System.Windows.Forms.Label();
-            this.roundedPanelExtender1 = new LP2MegaAutos.RoundedPanelExtender();
             this.rpn_GenerarReporteU2 = new LP2MegaAutos.RoundedPanel();
             this.btn_GenerarReporteU2 = new System.Windows.Forms.Button();
             this.rpn_derGR = new LP2MegaAutos.RoundedPanel();
@@ -66,10 +65,15 @@
             // 
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetBackColorSystem(this.lblBienvenido, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.lblBienvenido.Font = new System.Drawing.Font("Montserrat", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.lblBienvenido, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+            this.lblBienvenido.Font = new System.Drawing.Font("Montserrat", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+>>>>>>> master
             this.lblBienvenido.Location = new System.Drawing.Point(171, 19);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(269, 59);
@@ -78,19 +82,18 @@
             // 
             // rpn_GenerarReporteU2
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_GenerarReporteU2, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_GenerarReporteU2, 15);
             this.rpn_GenerarReporteU2.ArcRadiusBorde = 15;
             this.rpn_GenerarReporteU2.ArcRadiusPanel = 15;
             this.rpn_GenerarReporteU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetBackColorSystem(this.rpn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.BackBackground);
             this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
+=======
+>>>>>>> master
             this.rpn_GenerarReporteU2.Controls.Add(this.btn_GenerarReporteU2);
-            this.roundedPanelExtender1.SetCorners(this.rpn_GenerarReporteU2, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_GenerarReporteU2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_GenerarReporteU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_GenerarReporteU2.Location = new System.Drawing.Point(53, 96);
             this.rpn_GenerarReporteU2.MenosHeightBorde = 1;
             this.rpn_GenerarReporteU2.MenosHeightPanel = 1;
@@ -108,13 +111,15 @@
             // btn_GenerarReporteU2
             // 
             this.btn_GenerarReporteU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
             this.btn_GenerarReporteU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_GenerarReporteU2.FlatAppearance.BorderSize = 0;
             this.btn_GenerarReporteU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GenerarReporteU2.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GenerarReporteU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this.btn_GenerarReporteU2, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.btn_GenerarReporteU2.Location = new System.Drawing.Point(13, 3);
             this.btn_GenerarReporteU2.Name = "btn_GenerarReporteU2";
             this.btn_GenerarReporteU2.Size = new System.Drawing.Size(478, 94);
@@ -124,18 +129,11 @@
             // 
             // rpn_derGR
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_derGR, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_derGR, 15);
             this.rpn_derGR.ArcRadiusBorde = 15;
             this.rpn_derGR.ArcRadiusPanel = 15;
             this.rpn_derGR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_derGR, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_derGR, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_derGR, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
-            this.roundedPanelExtender1.SetCorners(this.rpn_derGR, Plasmoid.Extensions.RectangleEdgeFilter.Left);
             this.rpn_derGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.rpn_derGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_derGR, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_derGR.Location = new System.Drawing.Point(558, 96);
             this.rpn_derGR.MenosHeightBorde = 1;
             this.rpn_derGR.MenosHeightPanel = 1;
@@ -152,11 +150,10 @@
             // 
             // rpn_izqGR
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_izqGR, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_izqGR, 15);
             this.rpn_izqGR.ArcRadiusBorde = 15;
             this.rpn_izqGR.ArcRadiusPanel = 15;
             this.rpn_izqGR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetBackColorSystem(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.BackBackground);
             this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
@@ -164,6 +161,10 @@
             this.rpn_izqGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.rpn_izqGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.systemColorsExtender1.SetForeColorSystem(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+            this.rpn_izqGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
+            this.rpn_izqGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+>>>>>>> master
             this.rpn_izqGR.Location = new System.Drawing.Point(0, 96);
             this.rpn_izqGR.MenosHeightBorde = 1;
             this.rpn_izqGR.MenosHeightPanel = 1;
@@ -180,19 +181,18 @@
             // 
             // rpn_ReportesU2
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_ReportesU2, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_ReportesU2, 15);
             this.rpn_ReportesU2.ArcRadiusBorde = 15;
             this.rpn_ReportesU2.ArcRadiusPanel = 15;
             this.rpn_ReportesU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetBackColorSystem(this.rpn_ReportesU2, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_ReportesU2, LP2MegaAutos.ColoresSistema.BackBackground);
             this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_ReportesU2, LP2MegaAutos.ColoresSistema.PrincipalRojo);
+=======
+>>>>>>> master
             this.rpn_ReportesU2.Controls.Add(this.btn_ReportesU2);
-            this.roundedPanelExtender1.SetCorners(this.rpn_ReportesU2, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_ReportesU2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_ReportesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_ReportesU2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_ReportesU2.Location = new System.Drawing.Point(53, 199);
             this.rpn_ReportesU2.MenosHeightBorde = 1;
             this.rpn_ReportesU2.MenosHeightPanel = 1;
@@ -210,13 +210,15 @@
             // btn_ReportesU2
             // 
             this.btn_ReportesU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_ReportesU2, LP2MegaAutos.ColoresSistema.PrincipalRojo);
             this.btn_ReportesU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_ReportesU2.FlatAppearance.BorderSize = 0;
             this.btn_ReportesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ReportesU2.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ReportesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this.btn_ReportesU2, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.btn_ReportesU2.Location = new System.Drawing.Point(13, 3);
             this.btn_ReportesU2.Name = "btn_ReportesU2";
             this.btn_ReportesU2.Size = new System.Drawing.Size(478, 94);
@@ -226,18 +228,11 @@
             // 
             // roundedPanel1
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel1, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel1, 15);
             this.roundedPanel1.ArcRadiusBorde = 15;
             this.roundedPanel1.ArcRadiusPanel = 15;
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel1, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel1, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel1, LP2MegaAutos.ColoresSistema.PrincipalRojo);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel1, Plasmoid.Extensions.RectangleEdgeFilter.Left);
             this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.roundedPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel1, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel1.Location = new System.Drawing.Point(558, 199);
             this.roundedPanel1.MenosHeightBorde = 1;
             this.roundedPanel1.MenosHeightPanel = 1;
@@ -254,18 +249,11 @@
             // 
             // roundedPanel2
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel2, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel2, 15);
             this.roundedPanel2.ArcRadiusBorde = 15;
             this.roundedPanel2.ArcRadiusPanel = 15;
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel2, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel2, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel2, LP2MegaAutos.ColoresSistema.PrincipalRojo);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel2, Plasmoid.Extensions.RectangleEdgeFilter.Right);
             this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.roundedPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel2.Location = new System.Drawing.Point(0, 199);
             this.roundedPanel2.MenosHeightBorde = 1;
             this.roundedPanel2.MenosHeightPanel = 1;
@@ -282,19 +270,12 @@
             // 
             // rpn_Clientes
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Clientes, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Clientes, 15);
             this.rpn_Clientes.ArcRadiusBorde = 15;
             this.rpn_Clientes.ArcRadiusPanel = 15;
             this.rpn_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.Morado);
             this.rpn_Clientes.Controls.Add(this.btn_ClientesU2);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Clientes, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Clientes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Clientes.Location = new System.Drawing.Point(235, 302);
             this.rpn_Clientes.MenosHeightBorde = 1;
             this.rpn_Clientes.MenosHeightPanel = 1;
@@ -312,13 +293,15 @@
             // btn_ClientesU2
             // 
             this.btn_ClientesU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_ClientesU2, LP2MegaAutos.ColoresSistema.Morado);
             this.btn_ClientesU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_ClientesU2.FlatAppearance.BorderSize = 0;
             this.btn_ClientesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ClientesU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.btn_ClientesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this.btn_ClientesU2, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.btn_ClientesU2.Location = new System.Drawing.Point(12, 3);
             this.btn_ClientesU2.Name = "btn_ClientesU2";
             this.btn_ClientesU2.Size = new System.Drawing.Size(115, 64);
@@ -328,19 +311,12 @@
             // 
             // rpn_Usuarios
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Usuarios, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Usuarios, 15);
             this.rpn_Usuarios.ArcRadiusBorde = 15;
             this.rpn_Usuarios.ArcRadiusPanel = 15;
             this.rpn_Usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.Morado);
             this.rpn_Usuarios.Controls.Add(this.btn_UsuariosU2);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Usuarios, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Usuarios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Usuarios.Location = new System.Drawing.Point(89, 302);
             this.rpn_Usuarios.MenosHeightBorde = 1;
             this.rpn_Usuarios.MenosHeightPanel = 1;
@@ -358,13 +334,15 @@
             // btn_UsuariosU2
             // 
             this.btn_UsuariosU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_UsuariosU2, LP2MegaAutos.ColoresSistema.Morado);
             this.btn_UsuariosU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_UsuariosU2.FlatAppearance.BorderSize = 0;
             this.btn_UsuariosU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_UsuariosU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.btn_UsuariosU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this.btn_UsuariosU2, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.btn_UsuariosU2.Location = new System.Drawing.Point(13, 3);
             this.btn_UsuariosU2.Name = "btn_UsuariosU2";
             this.btn_UsuariosU2.Size = new System.Drawing.Size(116, 64);
@@ -374,19 +352,12 @@
             // 
             // roundedPanel3
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel3, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel3, 15);
             this.roundedPanel3.ArcRadiusBorde = 15;
             this.roundedPanel3.ArcRadiusPanel = 15;
             this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel3, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel3, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel3, LP2MegaAutos.ColoresSistema.Morado);
             this.roundedPanel3.Controls.Add(this.btn_DriversU2);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel3, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.roundedPanel3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.roundedPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel3, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel3.Location = new System.Drawing.Point(381, 302);
             this.roundedPanel3.MenosHeightBorde = 1;
             this.roundedPanel3.MenosHeightPanel = 1;
@@ -404,13 +375,15 @@
             // btn_DriversU2
             // 
             this.btn_DriversU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_DriversU2, LP2MegaAutos.ColoresSistema.Morado);
             this.btn_DriversU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_DriversU2.FlatAppearance.BorderSize = 0;
             this.btn_DriversU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DriversU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.btn_DriversU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this.btn_DriversU2, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.btn_DriversU2.Location = new System.Drawing.Point(12, 3);
             this.btn_DriversU2.Name = "btn_DriversU2";
             this.btn_DriversU2.Size = new System.Drawing.Size(115, 64);
@@ -420,19 +393,12 @@
             // 
             // rpn_Ajustes
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Ajustes, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Ajustes, 15);
             this.rpn_Ajustes.ArcRadiusBorde = 15;
             this.rpn_Ajustes.ArcRadiusPanel = 15;
             this.rpn_Ajustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.LowContrast);
             this.rpn_Ajustes.Controls.Add(this.btnAjustesU2);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Ajustes, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Ajustes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Ajustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Ajustes.Location = new System.Drawing.Point(161, 375);
             this.rpn_Ajustes.MenosHeightBorde = 1;
             this.rpn_Ajustes.MenosHeightPanel = 1;
@@ -450,13 +416,15 @@
             // btnAjustesU2
             // 
             this.btnAjustesU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btnAjustesU2, LP2MegaAutos.ColoresSistema.LowContrast);
             this.btnAjustesU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAjustesU2.FlatAppearance.BorderSize = 0;
             this.btnAjustesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjustesU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.btnAjustesU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this.btnAjustesU2, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.btnAjustesU2.Location = new System.Drawing.Point(13, 3);
             this.btnAjustesU2.Name = "btnAjustesU2";
             this.btnAjustesU2.Size = new System.Drawing.Size(115, 64);
@@ -466,19 +434,12 @@
             // 
             // rpn_CerrarSesion
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_CerrarSesion, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_CerrarSesion, 15);
             this.rpn_CerrarSesion.ArcRadiusBorde = 15;
             this.rpn_CerrarSesion.ArcRadiusPanel = 15;
             this.rpn_CerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.LowContrast);
             this.rpn_CerrarSesion.Controls.Add(this.btn_CerrarSesionU2);
-            this.roundedPanelExtender1.SetCorners(this.rpn_CerrarSesion, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_CerrarSesion.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_CerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_CerrarSesion.Location = new System.Drawing.Point(307, 375);
             this.rpn_CerrarSesion.MenosHeightBorde = 1;
             this.rpn_CerrarSesion.MenosHeightPanel = 1;
@@ -496,13 +457,15 @@
             // btn_CerrarSesionU2
             // 
             this.btn_CerrarSesionU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_CerrarSesionU2, LP2MegaAutos.ColoresSistema.LowContrast);
             this.btn_CerrarSesionU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_CerrarSesionU2.FlatAppearance.BorderSize = 0;
             this.btn_CerrarSesionU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CerrarSesionU2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.btn_CerrarSesionU2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this.btn_CerrarSesionU2, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.btn_CerrarSesionU2.Location = new System.Drawing.Point(12, 3);
             this.btn_CerrarSesionU2.Name = "btn_CerrarSesionU2";
             this.btn_CerrarSesionU2.Size = new System.Drawing.Size(115, 64);
@@ -512,18 +475,11 @@
             // 
             // roundedPanel4
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel4, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel4, 15);
             this.roundedPanel4.ArcRadiusBorde = 15;
             this.roundedPanel4.ArcRadiusPanel = 15;
             this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel4, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel4, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel4, LP2MegaAutos.ColoresSistema.Morado);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel4, Plasmoid.Extensions.RectangleEdgeFilter.Left);
             this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.roundedPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel4, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel4.Location = new System.Drawing.Point(527, 302);
             this.roundedPanel4.MenosHeightBorde = 1;
             this.roundedPanel4.MenosHeightPanel = 1;
@@ -540,18 +496,11 @@
             // 
             // roundedPanel5
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel5, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel5, 15);
             this.roundedPanel5.ArcRadiusBorde = 15;
             this.roundedPanel5.ArcRadiusPanel = 15;
             this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel5, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel5, LP2MegaAutos.ColoresSistema.Morado);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel5, LP2MegaAutos.ColoresSistema.Morado);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel5, Plasmoid.Extensions.RectangleEdgeFilter.Right);
             this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.roundedPanel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel5, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel5.Location = new System.Drawing.Point(0, 302);
             this.roundedPanel5.MenosHeightBorde = 1;
             this.roundedPanel5.MenosHeightPanel = 1;
@@ -568,18 +517,11 @@
             // 
             // roundedPanel6
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel6, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel6, 15);
             this.roundedPanel6.ArcRadiusBorde = 15;
             this.roundedPanel6.ArcRadiusPanel = 15;
             this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel6, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel6, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel6, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel6, Plasmoid.Extensions.RectangleEdgeFilter.Left);
             this.roundedPanel6.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.roundedPanel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel6, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel6.Location = new System.Drawing.Point(453, 375);
             this.roundedPanel6.MenosHeightBorde = 1;
             this.roundedPanel6.MenosHeightPanel = 1;
@@ -596,18 +538,11 @@
             // 
             // roundedPanel7
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel7, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel7, 15);
             this.roundedPanel7.ArcRadiusBorde = 15;
             this.roundedPanel7.ArcRadiusPanel = 15;
             this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel7, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel7, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel7, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel7, Plasmoid.Extensions.RectangleEdgeFilter.Right);
             this.roundedPanel7.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.roundedPanel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel7, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel7.Location = new System.Drawing.Point(0, 375);
             this.roundedPanel7.MenosHeightBorde = 1;
             this.roundedPanel7.MenosHeightPanel = 1;
@@ -626,7 +561,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.systemColorsExtender1.SetBackColorSystem(this, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.Controls.Add(this.roundedPanel7);
             this.Controls.Add(this.roundedPanel6);
             this.Controls.Add(this.roundedPanel5);
@@ -644,7 +578,10 @@
             this.Controls.Add(this.rpn_GenerarReporteU2);
             this.Controls.Add(this.lblBienvenido);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+<<<<<<< HEAD
             this.systemColorsExtender1.SetForeColorSystem(this, LP2MegaAutos.ColoresSistema.HighContrast);
+=======
+>>>>>>> master
             this.Name = "pantallaInicioUsuarioNivel2";
             this.Size = new System.Drawing.Size(611, 470);
             this.rpn_GenerarReporteU2.ResumeLayout(false);
@@ -662,14 +599,12 @@
         #endregion
 
         private System.Windows.Forms.Label lblBienvenido;
-        private RoundedPanelExtender roundedPanelExtender1;
         private RoundedPanel rpn_GenerarReporteU2;
         private System.Windows.Forms.Button btn_GenerarReporteU2;
         private RoundedPanel rpn_derGR;
         private RoundedPanel rpn_izqGR;
         private RoundedPanel rpn_ReportesU2;
         private System.Windows.Forms.Button btn_ReportesU2;
-        private SystemColorsExtender systemColorsExtender1;
         private RoundedPanel roundedPanel1;
         private RoundedPanel roundedPanel2;
         private RoundedPanel rpn_Clientes;

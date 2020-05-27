@@ -54,6 +54,7 @@ C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAut
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
 C:\Users\JOSE\Documents\MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
+<<<<<<< HEAD
 D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\LP2MegaAutos.exe.config
 D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\LP2MegaAutos.exe
 D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\LP2MegaAutos.pdb
@@ -76,3 +77,10 @@ D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2Meg
 D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csproj.CopyComplete
 D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.exe
 D:\Documentos\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pdb
+=======
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaActualizarUsuarios.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAreaTrabajo.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemLista.resources
+>>>>>>> master

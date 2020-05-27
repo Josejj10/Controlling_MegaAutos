@@ -77,6 +77,12 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="itemLista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemLista.Designer.cs">
+      <DependentUpon>itemLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaActualizarUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemLista.resx">
+      <DependentUpon>itemLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>

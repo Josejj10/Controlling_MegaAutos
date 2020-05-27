@@ -28,36 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.systemColorsExtender1 = new LP2MegaAutos.SystemColorsExtender();
-            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.rpn_GenerarReporteGerente = new LP2MegaAutos.RoundedPanel();
-            this.roundedPanelExtender1 = new LP2MegaAutos.RoundedPanelExtender();
+            this.btn_GenerarReporteGerente = new System.Windows.Forms.Button();
             this.rpn_izqGR = new LP2MegaAutos.RoundedPanel();
             this.rpn_derGR = new LP2MegaAutos.RoundedPanel();
-            this.btn_GenerarReporteGerente = new System.Windows.Forms.Button();
             this.rpn_AreaTrabajo = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Reportes = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Servicios = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Drivers = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Sedes = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Usuarios = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Clientes = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Empresa = new LP2MegaAutos.RoundedPanel();
-            this.rpn_CerrarSesion = new LP2MegaAutos.RoundedPanel();
-            this.rpn_Ajustes = new LP2MegaAutos.RoundedPanel();
-            this.rpn_ActualizarBase = new LP2MegaAutos.RoundedPanel();
             this.btn_AreaTrabajoGerente = new System.Windows.Forms.Button();
+            this.rpn_Reportes = new LP2MegaAutos.RoundedPanel();
             this.btn_ReportesGerente = new System.Windows.Forms.Button();
+            this.rpn_Servicios = new LP2MegaAutos.RoundedPanel();
             this.btn_ServiciosGerente = new System.Windows.Forms.Button();
+            this.rpn_Drivers = new LP2MegaAutos.RoundedPanel();
             this.btn_DriversGerente = new System.Windows.Forms.Button();
-            this.btn_EmpresaGerente = new System.Windows.Forms.Button();
-            this.btn_ClientesGerente = new System.Windows.Forms.Button();
-            this.btn_UsuariosGerente = new System.Windows.Forms.Button();
+            this.rpn_Sedes = new LP2MegaAutos.RoundedPanel();
             this.btn_SedesGerente = new System.Windows.Forms.Button();
-            this.btn_ActualizarBDGerente = new System.Windows.Forms.Button();
-            this.btnAjustesGerente = new System.Windows.Forms.Button();
+            this.rpn_Usuarios = new LP2MegaAutos.RoundedPanel();
+            this.btn_UsuariosGerente = new System.Windows.Forms.Button();
+            this.rpn_Clientes = new LP2MegaAutos.RoundedPanel();
+            this.btn_ClientesGerente = new System.Windows.Forms.Button();
+            this.rpn_Empresa = new LP2MegaAutos.RoundedPanel();
+            this.btn_EmpresaGerente = new System.Windows.Forms.Button();
+            this.rpn_CerrarSesion = new LP2MegaAutos.RoundedPanel();
             this.btn_CerrarSesionGerente = new System.Windows.Forms.Button();
+            this.rpn_Ajustes = new LP2MegaAutos.RoundedPanel();
+            this.btnAjustesGerente = new System.Windows.Forms.Button();
+            this.rpn_ActualizarBase = new LP2MegaAutos.RoundedPanel();
+            this.btn_ActualizarBDGerente = new System.Windows.Forms.Button();
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
             this.rpn_GenerarReporteGerente.SuspendLayout();
@@ -77,35 +74,24 @@
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
-            this.systemColorsExtender1.SetBackColorSystem(this.lblBienvenido, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.lblBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lblBienvenido.Font = new System.Drawing.Font("Montserrat", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.systemColorsExtender1.SetForeColorSystem(this.lblBienvenido, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.lblBienvenido.Location = new System.Drawing.Point(171, 19);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(269, 59);
             this.lblBienvenido.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.lblBienvenido, null);
-            this.tagsExtender1.SetTag3(this.lblBienvenido, null);
-            this.tagsExtender1.SetTagFontName(this.lblBienvenido, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lblBienvenido, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lblBienvenido, System.Drawing.FontStyle.Regular);
             this.lblBienvenido.Text = "Bienvenido";
             this.lblBienvenido.Click += new System.EventHandler(this.lblBienvenido_Click);
             // 
             // rpn_GenerarReporteGerente
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_GenerarReporteGerente, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_GenerarReporteGerente, 15);
             this.rpn_GenerarReporteGerente.ArcRadiusBorde = 15;
             this.rpn_GenerarReporteGerente.ArcRadiusPanel = 15;
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_GenerarReporteGerente, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_GenerarReporteGerente, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_GenerarReporteGerente, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
+            this.rpn_GenerarReporteGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_GenerarReporteGerente.Controls.Add(this.btn_GenerarReporteGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_GenerarReporteGerente, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_GenerarReporteGerente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_GenerarReporteGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_GenerarReporteGerente, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_GenerarReporteGerente.Location = new System.Drawing.Point(53, 107);
             this.rpn_GenerarReporteGerente.MenosHeightBorde = 1;
             this.rpn_GenerarReporteGerente.MenosHeightPanel = 1;
@@ -115,28 +101,33 @@
             this.rpn_GenerarReporteGerente.PorcLuzColorBorde = 0;
             this.rpn_GenerarReporteGerente.Size = new System.Drawing.Size(505, 100);
             this.rpn_GenerarReporteGerente.TabIndex = 1;
-            this.tagsExtender1.SetTag2(this.rpn_GenerarReporteGerente, null);
-            this.tagsExtender1.SetTag3(this.rpn_GenerarReporteGerente, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_GenerarReporteGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_GenerarReporteGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_GenerarReporteGerente, System.Drawing.FontStyle.Regular);
             this.rpn_GenerarReporteGerente.XBorde = 0;
             this.rpn_GenerarReporteGerente.XPanel = 0;
             this.rpn_GenerarReporteGerente.YBorde = 0;
             this.rpn_GenerarReporteGerente.YPanel = 0;
             // 
+            // btn_GenerarReporteGerente
+            // 
+            this.btn_GenerarReporteGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.btn_GenerarReporteGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_GenerarReporteGerente.FlatAppearance.BorderSize = 0;
+            this.btn_GenerarReporteGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_GenerarReporteGerente.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GenerarReporteGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_GenerarReporteGerente.Location = new System.Drawing.Point(6, 3);
+            this.btn_GenerarReporteGerente.Name = "btn_GenerarReporteGerente";
+            this.btn_GenerarReporteGerente.Size = new System.Drawing.Size(493, 94);
+            this.btn_GenerarReporteGerente.TabIndex = 0;
+            this.btn_GenerarReporteGerente.Text = "Generar Reporte";
+            this.btn_GenerarReporteGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_izqGR
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_izqGR, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_izqGR, 15);
             this.rpn_izqGR.ArcRadiusBorde = 15;
             this.rpn_izqGR.ArcRadiusPanel = 15;
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
-            this.roundedPanelExtender1.SetCorners(this.rpn_izqGR, Plasmoid.Extensions.RectangleEdgeFilter.Right);
+            this.rpn_izqGR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_izqGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_izqGR, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.rpn_izqGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.rpn_izqGR.Location = new System.Drawing.Point(0, 107);
             this.rpn_izqGR.MenosHeightBorde = 1;
             this.rpn_izqGR.MenosHeightPanel = 1;
@@ -146,11 +137,6 @@
             this.rpn_izqGR.PorcLuzColorBorde = 0;
             this.rpn_izqGR.Size = new System.Drawing.Size(53, 100);
             this.rpn_izqGR.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.rpn_izqGR, null);
-            this.tagsExtender1.SetTag3(this.rpn_izqGR, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_izqGR, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_izqGR, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_izqGR, System.Drawing.FontStyle.Regular);
             this.rpn_izqGR.XBorde = 0;
             this.rpn_izqGR.XPanel = 0;
             this.rpn_izqGR.YBorde = 0;
@@ -158,18 +144,11 @@
             // 
             // rpn_derGR
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_derGR, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_derGR, 15);
             this.rpn_derGR.ArcRadiusBorde = 15;
             this.rpn_derGR.ArcRadiusPanel = 15;
             this.rpn_derGR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_derGR, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_derGR, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_derGR, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
-            this.roundedPanelExtender1.SetCorners(this.rpn_derGR, Plasmoid.Extensions.RectangleEdgeFilter.Left);
             this.rpn_derGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.rpn_derGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_derGR, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_derGR.Location = new System.Drawing.Point(558, 107);
             this.rpn_derGR.MenosHeightBorde = 1;
             this.rpn_derGR.MenosHeightPanel = 1;
@@ -179,51 +158,19 @@
             this.rpn_derGR.PorcLuzColorBorde = 0;
             this.rpn_derGR.Size = new System.Drawing.Size(53, 100);
             this.rpn_derGR.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.rpn_derGR, null);
-            this.tagsExtender1.SetTag3(this.rpn_derGR, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_derGR, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_derGR, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_derGR, System.Drawing.FontStyle.Regular);
             this.rpn_derGR.XBorde = 0;
             this.rpn_derGR.XPanel = 0;
             this.rpn_derGR.YBorde = 0;
             this.rpn_derGR.YPanel = 0;
             // 
-            // btn_GenerarReporteGerente
-            // 
-            this.btn_GenerarReporteGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_GenerarReporteGerente, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
-            this.btn_GenerarReporteGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_GenerarReporteGerente.FlatAppearance.BorderSize = 0;
-            this.btn_GenerarReporteGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_GenerarReporteGerente.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GenerarReporteGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_GenerarReporteGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_GenerarReporteGerente.Location = new System.Drawing.Point(6, 3);
-            this.btn_GenerarReporteGerente.Name = "btn_GenerarReporteGerente";
-            this.btn_GenerarReporteGerente.Size = new System.Drawing.Size(493, 94);
-            this.btn_GenerarReporteGerente.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.btn_GenerarReporteGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_GenerarReporteGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_GenerarReporteGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_GenerarReporteGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_GenerarReporteGerente, System.Drawing.FontStyle.Regular);
-            this.btn_GenerarReporteGerente.Text = "Generar Reporte";
-            this.btn_GenerarReporteGerente.UseVisualStyleBackColor = false;
-            // 
             // rpn_AreaTrabajo
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_AreaTrabajo, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_AreaTrabajo, 15);
             this.rpn_AreaTrabajo.ArcRadiusBorde = 15;
             this.rpn_AreaTrabajo.ArcRadiusPanel = 15;
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_AreaTrabajo, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_AreaTrabajo, LP2MegaAutos.ColoresSistema.PrincipalIndigo);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_AreaTrabajo, LP2MegaAutos.ColoresSistema.PrincipalRojo);
+            this.rpn_AreaTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_AreaTrabajo.Controls.Add(this.btn_AreaTrabajoGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_AreaTrabajo, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_AreaTrabajo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_AreaTrabajo, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.rpn_AreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.rpn_AreaTrabajo.Location = new System.Drawing.Point(16, 230);
             this.rpn_AreaTrabajo.MenosHeightBorde = 1;
             this.rpn_AreaTrabajo.MenosHeightPanel = 1;
@@ -233,31 +180,34 @@
             this.rpn_AreaTrabajo.PorcLuzColorBorde = 0;
             this.rpn_AreaTrabajo.Size = new System.Drawing.Size(140, 70);
             this.rpn_AreaTrabajo.TabIndex = 4;
-            this.tagsExtender1.SetTag2(this.rpn_AreaTrabajo, null);
-            this.tagsExtender1.SetTag3(this.rpn_AreaTrabajo, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_AreaTrabajo, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_AreaTrabajo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_AreaTrabajo, System.Drawing.FontStyle.Regular);
             this.rpn_AreaTrabajo.XBorde = 0;
             this.rpn_AreaTrabajo.XPanel = 0;
             this.rpn_AreaTrabajo.YBorde = 0;
             this.rpn_AreaTrabajo.YPanel = 0;
             // 
+            // btn_AreaTrabajoGerente
+            // 
+            this.btn_AreaTrabajoGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_AreaTrabajoGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_AreaTrabajoGerente.FlatAppearance.BorderSize = 0;
+            this.btn_AreaTrabajoGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AreaTrabajoGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_AreaTrabajoGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_AreaTrabajoGerente.Location = new System.Drawing.Point(13, 3);
+            this.btn_AreaTrabajoGerente.Name = "btn_AreaTrabajoGerente";
+            this.btn_AreaTrabajoGerente.Size = new System.Drawing.Size(115, 64);
+            this.btn_AreaTrabajoGerente.TabIndex = 1;
+            this.btn_AreaTrabajoGerente.Text = "Areas de Trabajo";
+            this.btn_AreaTrabajoGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Reportes
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Reportes, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Reportes, 15);
             this.rpn_Reportes.ArcRadiusBorde = 15;
             this.rpn_Reportes.ArcRadiusPanel = 15;
             this.rpn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Reportes, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Reportes, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Reportes, LP2MegaAutos.ColoresSistema.PrincipalRojo);
             this.rpn_Reportes.Controls.Add(this.btn_ReportesGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Reportes, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Reportes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Reportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Reportes, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Reportes.Location = new System.Drawing.Point(162, 230);
             this.rpn_Reportes.MenosHeightBorde = 1;
             this.rpn_Reportes.MenosHeightPanel = 1;
@@ -267,31 +217,34 @@
             this.rpn_Reportes.PorcLuzColorBorde = 0;
             this.rpn_Reportes.Size = new System.Drawing.Size(140, 70);
             this.rpn_Reportes.TabIndex = 5;
-            this.tagsExtender1.SetTag2(this.rpn_Reportes, null);
-            this.tagsExtender1.SetTag3(this.rpn_Reportes, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Reportes, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Reportes, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Reportes, System.Drawing.FontStyle.Regular);
             this.rpn_Reportes.XBorde = 0;
             this.rpn_Reportes.XPanel = 0;
             this.rpn_Reportes.YBorde = 0;
             this.rpn_Reportes.YPanel = 0;
             // 
+            // btn_ReportesGerente
+            // 
+            this.btn_ReportesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_ReportesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_ReportesGerente.FlatAppearance.BorderSize = 0;
+            this.btn_ReportesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ReportesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_ReportesGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_ReportesGerente.Location = new System.Drawing.Point(19, 3);
+            this.btn_ReportesGerente.Name = "btn_ReportesGerente";
+            this.btn_ReportesGerente.Size = new System.Drawing.Size(115, 64);
+            this.btn_ReportesGerente.TabIndex = 2;
+            this.btn_ReportesGerente.Text = "Reportes";
+            this.btn_ReportesGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Servicios
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Servicios, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Servicios, 15);
             this.rpn_Servicios.ArcRadiusBorde = 15;
             this.rpn_Servicios.ArcRadiusPanel = 15;
             this.rpn_Servicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Servicios, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Servicios, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Servicios, LP2MegaAutos.ColoresSistema.PrincipalRojo);
             this.rpn_Servicios.Controls.Add(this.btn_ServiciosGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Servicios, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Servicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Servicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Servicios, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Servicios.Location = new System.Drawing.Point(308, 230);
             this.rpn_Servicios.MenosHeightBorde = 1;
             this.rpn_Servicios.MenosHeightPanel = 1;
@@ -301,31 +254,34 @@
             this.rpn_Servicios.PorcLuzColorBorde = 0;
             this.rpn_Servicios.Size = new System.Drawing.Size(140, 70);
             this.rpn_Servicios.TabIndex = 5;
-            this.tagsExtender1.SetTag2(this.rpn_Servicios, null);
-            this.tagsExtender1.SetTag3(this.rpn_Servicios, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Servicios, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Servicios, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Servicios, System.Drawing.FontStyle.Regular);
             this.rpn_Servicios.XBorde = 0;
             this.rpn_Servicios.XPanel = 0;
             this.rpn_Servicios.YBorde = 0;
             this.rpn_Servicios.YPanel = 0;
             // 
+            // btn_ServiciosGerente
+            // 
+            this.btn_ServiciosGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_ServiciosGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_ServiciosGerente.FlatAppearance.BorderSize = 0;
+            this.btn_ServiciosGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ServiciosGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_ServiciosGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_ServiciosGerente.Location = new System.Drawing.Point(12, 3);
+            this.btn_ServiciosGerente.Name = "btn_ServiciosGerente";
+            this.btn_ServiciosGerente.Size = new System.Drawing.Size(120, 64);
+            this.btn_ServiciosGerente.TabIndex = 3;
+            this.btn_ServiciosGerente.Text = "Servicios";
+            this.btn_ServiciosGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Drivers
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Drivers, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Drivers, 15);
             this.rpn_Drivers.ArcRadiusBorde = 15;
             this.rpn_Drivers.ArcRadiusPanel = 15;
             this.rpn_Drivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Drivers, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Drivers, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Drivers, LP2MegaAutos.ColoresSistema.PrincipalRojo);
             this.rpn_Drivers.Controls.Add(this.btn_DriversGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Drivers, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Drivers.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Drivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Drivers, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Drivers.Location = new System.Drawing.Point(454, 230);
             this.rpn_Drivers.MenosHeightBorde = 1;
             this.rpn_Drivers.MenosHeightPanel = 1;
@@ -335,31 +291,34 @@
             this.rpn_Drivers.PorcLuzColorBorde = 0;
             this.rpn_Drivers.Size = new System.Drawing.Size(140, 70);
             this.rpn_Drivers.TabIndex = 5;
-            this.tagsExtender1.SetTag2(this.rpn_Drivers, null);
-            this.tagsExtender1.SetTag3(this.rpn_Drivers, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Drivers, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Drivers, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Drivers, System.Drawing.FontStyle.Regular);
             this.rpn_Drivers.XBorde = 0;
             this.rpn_Drivers.XPanel = 0;
             this.rpn_Drivers.YBorde = 0;
             this.rpn_Drivers.YPanel = 0;
             // 
+            // btn_DriversGerente
+            // 
+            this.btn_DriversGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_DriversGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_DriversGerente.FlatAppearance.BorderSize = 0;
+            this.btn_DriversGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DriversGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_DriversGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_DriversGerente.Location = new System.Drawing.Point(13, 3);
+            this.btn_DriversGerente.Name = "btn_DriversGerente";
+            this.btn_DriversGerente.Size = new System.Drawing.Size(114, 64);
+            this.btn_DriversGerente.TabIndex = 4;
+            this.btn_DriversGerente.Text = "Drivers";
+            this.btn_DriversGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Sedes
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Sedes, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Sedes, 15);
             this.rpn_Sedes.ArcRadiusBorde = 15;
             this.rpn_Sedes.ArcRadiusPanel = 15;
             this.rpn_Sedes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Sedes, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Sedes, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Sedes, LP2MegaAutos.ColoresSistema.Morado);
             this.rpn_Sedes.Controls.Add(this.btn_SedesGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Sedes, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Sedes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Sedes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Sedes, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Sedes.Location = new System.Drawing.Point(454, 306);
             this.rpn_Sedes.MenosHeightBorde = 1;
             this.rpn_Sedes.MenosHeightPanel = 1;
@@ -369,31 +328,34 @@
             this.rpn_Sedes.PorcLuzColorBorde = 0;
             this.rpn_Sedes.Size = new System.Drawing.Size(140, 70);
             this.rpn_Sedes.TabIndex = 7;
-            this.tagsExtender1.SetTag2(this.rpn_Sedes, null);
-            this.tagsExtender1.SetTag3(this.rpn_Sedes, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Sedes, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Sedes, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Sedes, System.Drawing.FontStyle.Regular);
             this.rpn_Sedes.XBorde = 0;
             this.rpn_Sedes.XPanel = 0;
             this.rpn_Sedes.YBorde = 0;
             this.rpn_Sedes.YPanel = 0;
             // 
+            // btn_SedesGerente
+            // 
+            this.btn_SedesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.btn_SedesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_SedesGerente.FlatAppearance.BorderSize = 0;
+            this.btn_SedesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SedesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_SedesGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_SedesGerente.Location = new System.Drawing.Point(13, 3);
+            this.btn_SedesGerente.Name = "btn_SedesGerente";
+            this.btn_SedesGerente.Size = new System.Drawing.Size(115, 64);
+            this.btn_SedesGerente.TabIndex = 5;
+            this.btn_SedesGerente.Text = "Sedes";
+            this.btn_SedesGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Usuarios
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Usuarios, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Usuarios, 15);
             this.rpn_Usuarios.ArcRadiusBorde = 15;
             this.rpn_Usuarios.ArcRadiusPanel = 15;
             this.rpn_Usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.Morado);
             this.rpn_Usuarios.Controls.Add(this.btn_UsuariosGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Usuarios, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Usuarios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Usuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Usuarios, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Usuarios.Location = new System.Drawing.Point(308, 306);
             this.rpn_Usuarios.MenosHeightBorde = 1;
             this.rpn_Usuarios.MenosHeightPanel = 1;
@@ -403,31 +365,34 @@
             this.rpn_Usuarios.PorcLuzColorBorde = 0;
             this.rpn_Usuarios.Size = new System.Drawing.Size(140, 70);
             this.rpn_Usuarios.TabIndex = 8;
-            this.tagsExtender1.SetTag2(this.rpn_Usuarios, null);
-            this.tagsExtender1.SetTag3(this.rpn_Usuarios, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Usuarios, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Usuarios, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Usuarios, System.Drawing.FontStyle.Regular);
             this.rpn_Usuarios.XBorde = 0;
             this.rpn_Usuarios.XPanel = 0;
             this.rpn_Usuarios.YBorde = 0;
             this.rpn_Usuarios.YPanel = 0;
             // 
+            // btn_UsuariosGerente
+            // 
+            this.btn_UsuariosGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.btn_UsuariosGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_UsuariosGerente.FlatAppearance.BorderSize = 0;
+            this.btn_UsuariosGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_UsuariosGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_UsuariosGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_UsuariosGerente.Location = new System.Drawing.Point(17, 3);
+            this.btn_UsuariosGerente.Name = "btn_UsuariosGerente";
+            this.btn_UsuariosGerente.Size = new System.Drawing.Size(115, 64);
+            this.btn_UsuariosGerente.TabIndex = 4;
+            this.btn_UsuariosGerente.Text = "Usuarios";
+            this.btn_UsuariosGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Clientes
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Clientes, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Clientes, 15);
             this.rpn_Clientes.ArcRadiusBorde = 15;
             this.rpn_Clientes.ArcRadiusPanel = 15;
             this.rpn_Clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.Morado);
             this.rpn_Clientes.Controls.Add(this.btn_ClientesGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Clientes, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Clientes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Clientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Clientes, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Clientes.Location = new System.Drawing.Point(162, 306);
             this.rpn_Clientes.MenosHeightBorde = 1;
             this.rpn_Clientes.MenosHeightPanel = 1;
@@ -437,31 +402,34 @@
             this.rpn_Clientes.PorcLuzColorBorde = 0;
             this.rpn_Clientes.Size = new System.Drawing.Size(140, 70);
             this.rpn_Clientes.TabIndex = 9;
-            this.tagsExtender1.SetTag2(this.rpn_Clientes, null);
-            this.tagsExtender1.SetTag3(this.rpn_Clientes, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Clientes, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Clientes, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Clientes, System.Drawing.FontStyle.Regular);
             this.rpn_Clientes.XBorde = 0;
             this.rpn_Clientes.XPanel = 0;
             this.rpn_Clientes.YBorde = 0;
             this.rpn_Clientes.YPanel = 0;
             // 
+            // btn_ClientesGerente
+            // 
+            this.btn_ClientesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.btn_ClientesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_ClientesGerente.FlatAppearance.BorderSize = 0;
+            this.btn_ClientesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ClientesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_ClientesGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_ClientesGerente.Location = new System.Drawing.Point(19, 3);
+            this.btn_ClientesGerente.Name = "btn_ClientesGerente";
+            this.btn_ClientesGerente.Size = new System.Drawing.Size(115, 64);
+            this.btn_ClientesGerente.TabIndex = 3;
+            this.btn_ClientesGerente.Text = "Clientes";
+            this.btn_ClientesGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Empresa
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Empresa, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Empresa, 15);
             this.rpn_Empresa.ArcRadiusBorde = 15;
             this.rpn_Empresa.ArcRadiusPanel = 15;
             this.rpn_Empresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Empresa, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Empresa, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Empresa, LP2MegaAutos.ColoresSistema.Morado);
             this.rpn_Empresa.Controls.Add(this.btn_EmpresaGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Empresa, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Empresa.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Empresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Empresa, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Empresa.Location = new System.Drawing.Point(16, 306);
             this.rpn_Empresa.MenosHeightBorde = 1;
             this.rpn_Empresa.MenosHeightPanel = 1;
@@ -471,31 +439,34 @@
             this.rpn_Empresa.PorcLuzColorBorde = 0;
             this.rpn_Empresa.Size = new System.Drawing.Size(140, 70);
             this.rpn_Empresa.TabIndex = 6;
-            this.tagsExtender1.SetTag2(this.rpn_Empresa, null);
-            this.tagsExtender1.SetTag3(this.rpn_Empresa, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Empresa, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Empresa, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Empresa, System.Drawing.FontStyle.Regular);
             this.rpn_Empresa.XBorde = 0;
             this.rpn_Empresa.XPanel = 0;
             this.rpn_Empresa.YBorde = 0;
             this.rpn_Empresa.YPanel = 0;
             // 
+            // btn_EmpresaGerente
+            // 
+            this.btn_EmpresaGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.btn_EmpresaGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_EmpresaGerente.FlatAppearance.BorderSize = 0;
+            this.btn_EmpresaGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_EmpresaGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_EmpresaGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_EmpresaGerente.Location = new System.Drawing.Point(13, 3);
+            this.btn_EmpresaGerente.Name = "btn_EmpresaGerente";
+            this.btn_EmpresaGerente.Size = new System.Drawing.Size(115, 64);
+            this.btn_EmpresaGerente.TabIndex = 2;
+            this.btn_EmpresaGerente.Text = "Empresa";
+            this.btn_EmpresaGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_CerrarSesion
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_CerrarSesion, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_CerrarSesion, 15);
             this.rpn_CerrarSesion.ArcRadiusBorde = 15;
             this.rpn_CerrarSesion.ArcRadiusPanel = 15;
             this.rpn_CerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.LowContrast);
             this.rpn_CerrarSesion.Controls.Add(this.btn_CerrarSesionGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_CerrarSesion, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_CerrarSesion.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_CerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_CerrarSesion, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_CerrarSesion.Location = new System.Drawing.Point(381, 382);
             this.rpn_CerrarSesion.MenosHeightBorde = 1;
             this.rpn_CerrarSesion.MenosHeightPanel = 1;
@@ -505,31 +476,34 @@
             this.rpn_CerrarSesion.PorcLuzColorBorde = 0;
             this.rpn_CerrarSesion.Size = new System.Drawing.Size(140, 70);
             this.rpn_CerrarSesion.TabIndex = 8;
-            this.tagsExtender1.SetTag2(this.rpn_CerrarSesion, null);
-            this.tagsExtender1.SetTag3(this.rpn_CerrarSesion, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_CerrarSesion, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_CerrarSesion, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_CerrarSesion, System.Drawing.FontStyle.Regular);
             this.rpn_CerrarSesion.XBorde = 0;
             this.rpn_CerrarSesion.XPanel = 0;
             this.rpn_CerrarSesion.YBorde = 0;
             this.rpn_CerrarSesion.YPanel = 0;
             // 
+            // btn_CerrarSesionGerente
+            // 
+            this.btn_CerrarSesionGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.btn_CerrarSesionGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_CerrarSesionGerente.FlatAppearance.BorderSize = 0;
+            this.btn_CerrarSesionGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CerrarSesionGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btn_CerrarSesionGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btn_CerrarSesionGerente.Location = new System.Drawing.Point(12, 3);
+            this.btn_CerrarSesionGerente.Name = "btn_CerrarSesionGerente";
+            this.btn_CerrarSesionGerente.Size = new System.Drawing.Size(115, 64);
+            this.btn_CerrarSesionGerente.TabIndex = 5;
+            this.btn_CerrarSesionGerente.Text = "Cerrar Sesion";
+            this.btn_CerrarSesionGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_Ajustes
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_Ajustes, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_Ajustes, 15);
             this.rpn_Ajustes.ArcRadiusBorde = 15;
             this.rpn_Ajustes.ArcRadiusPanel = 15;
             this.rpn_Ajustes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.LowContrast);
             this.rpn_Ajustes.Controls.Add(this.btnAjustesGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_Ajustes, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_Ajustes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Ajustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_Ajustes, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_Ajustes.Location = new System.Drawing.Point(235, 382);
             this.rpn_Ajustes.MenosHeightBorde = 1;
             this.rpn_Ajustes.MenosHeightPanel = 1;
@@ -539,31 +513,34 @@
             this.rpn_Ajustes.PorcLuzColorBorde = 0;
             this.rpn_Ajustes.Size = new System.Drawing.Size(140, 70);
             this.rpn_Ajustes.TabIndex = 9;
-            this.tagsExtender1.SetTag2(this.rpn_Ajustes, null);
-            this.tagsExtender1.SetTag3(this.rpn_Ajustes, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_Ajustes, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_Ajustes, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_Ajustes, System.Drawing.FontStyle.Regular);
             this.rpn_Ajustes.XBorde = 0;
             this.rpn_Ajustes.XPanel = 0;
             this.rpn_Ajustes.YBorde = 0;
             this.rpn_Ajustes.YPanel = 0;
             // 
+            // btnAjustesGerente
+            // 
+            this.btnAjustesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.btnAjustesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAjustesGerente.FlatAppearance.BorderSize = 0;
+            this.btnAjustesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btnAjustesGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnAjustesGerente.Location = new System.Drawing.Point(13, 3);
+            this.btnAjustesGerente.Name = "btnAjustesGerente";
+            this.btnAjustesGerente.Size = new System.Drawing.Size(115, 64);
+            this.btnAjustesGerente.TabIndex = 4;
+            this.btnAjustesGerente.Text = "Ajustes";
+            this.btnAjustesGerente.UseVisualStyleBackColor = false;
+            // 
             // rpn_ActualizarBase
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.rpn_ActualizarBase, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.rpn_ActualizarBase, 15);
             this.rpn_ActualizarBase.ArcRadiusBorde = 15;
             this.rpn_ActualizarBase.ArcRadiusPanel = 15;
             this.rpn_ActualizarBase.BackColor = System.Drawing.Color.Transparent;
-            this.systemColorsExtender1.SetBackColorSystem(this.rpn_ActualizarBase, LP2MegaAutos.ColoresSistema.Transparent);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.rpn_ActualizarBase, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.rpn_ActualizarBase, LP2MegaAutos.ColoresSistema.LowContrast);
             this.rpn_ActualizarBase.Controls.Add(this.btn_ActualizarBDGerente);
-            this.roundedPanelExtender1.SetCorners(this.rpn_ActualizarBase, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpn_ActualizarBase.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_ActualizarBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.rpn_ActualizarBase, LP2MegaAutos.ColoresSistema.HighContrast);
             this.rpn_ActualizarBase.Location = new System.Drawing.Point(89, 382);
             this.rpn_ActualizarBase.MenosHeightBorde = 1;
             this.rpn_ActualizarBase.MenosHeightPanel = 1;
@@ -573,272 +550,33 @@
             this.rpn_ActualizarBase.PorcLuzColorBorde = 0;
             this.rpn_ActualizarBase.Size = new System.Drawing.Size(140, 70);
             this.rpn_ActualizarBase.TabIndex = 6;
-            this.tagsExtender1.SetTag2(this.rpn_ActualizarBase, null);
-            this.tagsExtender1.SetTag3(this.rpn_ActualizarBase, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_ActualizarBase, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_ActualizarBase, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_ActualizarBase, System.Drawing.FontStyle.Regular);
             this.rpn_ActualizarBase.XBorde = 0;
             this.rpn_ActualizarBase.XPanel = 0;
             this.rpn_ActualizarBase.YBorde = 0;
             this.rpn_ActualizarBase.YPanel = 0;
             // 
-            // btn_AreaTrabajoGerente
-            // 
-            this.btn_AreaTrabajoGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_AreaTrabajoGerente, LP2MegaAutos.ColoresSistema.PrincipalRojo);
-            this.btn_AreaTrabajoGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_AreaTrabajoGerente.FlatAppearance.BorderSize = 0;
-            this.btn_AreaTrabajoGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AreaTrabajoGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_AreaTrabajoGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_AreaTrabajoGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_AreaTrabajoGerente.Location = new System.Drawing.Point(13, 3);
-            this.btn_AreaTrabajoGerente.Name = "btn_AreaTrabajoGerente";
-            this.btn_AreaTrabajoGerente.Size = new System.Drawing.Size(115, 64);
-            this.btn_AreaTrabajoGerente.TabIndex = 1;
-            this.tagsExtender1.SetTag2(this.btn_AreaTrabajoGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_AreaTrabajoGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_AreaTrabajoGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_AreaTrabajoGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_AreaTrabajoGerente, System.Drawing.FontStyle.Regular);
-            this.btn_AreaTrabajoGerente.Text = "Areas de Trabajo";
-            this.btn_AreaTrabajoGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_ReportesGerente
-            // 
-            this.btn_ReportesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_ReportesGerente, LP2MegaAutos.ColoresSistema.PrincipalRojo);
-            this.btn_ReportesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_ReportesGerente.FlatAppearance.BorderSize = 0;
-            this.btn_ReportesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ReportesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_ReportesGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_ReportesGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_ReportesGerente.Location = new System.Drawing.Point(19, 3);
-            this.btn_ReportesGerente.Name = "btn_ReportesGerente";
-            this.btn_ReportesGerente.Size = new System.Drawing.Size(115, 64);
-            this.btn_ReportesGerente.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.btn_ReportesGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_ReportesGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_ReportesGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_ReportesGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_ReportesGerente, System.Drawing.FontStyle.Regular);
-            this.btn_ReportesGerente.Text = "Reportes";
-            this.btn_ReportesGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_ServiciosGerente
-            // 
-            this.btn_ServiciosGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_ServiciosGerente, LP2MegaAutos.ColoresSistema.PrincipalRojo);
-            this.btn_ServiciosGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_ServiciosGerente.FlatAppearance.BorderSize = 0;
-            this.btn_ServiciosGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ServiciosGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_ServiciosGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_ServiciosGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_ServiciosGerente.Location = new System.Drawing.Point(12, 3);
-            this.btn_ServiciosGerente.Name = "btn_ServiciosGerente";
-            this.btn_ServiciosGerente.Size = new System.Drawing.Size(120, 64);
-            this.btn_ServiciosGerente.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.btn_ServiciosGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_ServiciosGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_ServiciosGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_ServiciosGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_ServiciosGerente, System.Drawing.FontStyle.Regular);
-            this.btn_ServiciosGerente.Text = "Servicios";
-            this.btn_ServiciosGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_DriversGerente
-            // 
-            this.btn_DriversGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_DriversGerente, LP2MegaAutos.ColoresSistema.PrincipalRojo);
-            this.btn_DriversGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_DriversGerente.FlatAppearance.BorderSize = 0;
-            this.btn_DriversGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DriversGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_DriversGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_DriversGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_DriversGerente.Location = new System.Drawing.Point(13, 3);
-            this.btn_DriversGerente.Name = "btn_DriversGerente";
-            this.btn_DriversGerente.Size = new System.Drawing.Size(114, 64);
-            this.btn_DriversGerente.TabIndex = 4;
-            this.tagsExtender1.SetTag2(this.btn_DriversGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_DriversGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_DriversGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_DriversGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_DriversGerente, System.Drawing.FontStyle.Regular);
-            this.btn_DriversGerente.Text = "Drivers";
-            this.btn_DriversGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_EmpresaGerente
-            // 
-            this.btn_EmpresaGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_EmpresaGerente, LP2MegaAutos.ColoresSistema.Morado);
-            this.btn_EmpresaGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_EmpresaGerente.FlatAppearance.BorderSize = 0;
-            this.btn_EmpresaGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_EmpresaGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_EmpresaGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_EmpresaGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_EmpresaGerente.Location = new System.Drawing.Point(13, 3);
-            this.btn_EmpresaGerente.Name = "btn_EmpresaGerente";
-            this.btn_EmpresaGerente.Size = new System.Drawing.Size(115, 64);
-            this.btn_EmpresaGerente.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.btn_EmpresaGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_EmpresaGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_EmpresaGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_EmpresaGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_EmpresaGerente, System.Drawing.FontStyle.Regular);
-            this.btn_EmpresaGerente.Text = "Empresa";
-            this.btn_EmpresaGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_ClientesGerente
-            // 
-            this.btn_ClientesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_ClientesGerente, LP2MegaAutos.ColoresSistema.Morado);
-            this.btn_ClientesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_ClientesGerente.FlatAppearance.BorderSize = 0;
-            this.btn_ClientesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ClientesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_ClientesGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_ClientesGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_ClientesGerente.Location = new System.Drawing.Point(19, 3);
-            this.btn_ClientesGerente.Name = "btn_ClientesGerente";
-            this.btn_ClientesGerente.Size = new System.Drawing.Size(115, 64);
-            this.btn_ClientesGerente.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.btn_ClientesGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_ClientesGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_ClientesGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_ClientesGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_ClientesGerente, System.Drawing.FontStyle.Regular);
-            this.btn_ClientesGerente.Text = "Clientes";
-            this.btn_ClientesGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_UsuariosGerente
-            // 
-            this.btn_UsuariosGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_UsuariosGerente, LP2MegaAutos.ColoresSistema.Morado);
-            this.btn_UsuariosGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_UsuariosGerente.FlatAppearance.BorderSize = 0;
-            this.btn_UsuariosGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UsuariosGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_UsuariosGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_UsuariosGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_UsuariosGerente.Location = new System.Drawing.Point(17, 3);
-            this.btn_UsuariosGerente.Name = "btn_UsuariosGerente";
-            this.btn_UsuariosGerente.Size = new System.Drawing.Size(115, 64);
-            this.btn_UsuariosGerente.TabIndex = 4;
-            this.tagsExtender1.SetTag2(this.btn_UsuariosGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_UsuariosGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_UsuariosGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_UsuariosGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_UsuariosGerente, System.Drawing.FontStyle.Regular);
-            this.btn_UsuariosGerente.Text = "Usuarios";
-            this.btn_UsuariosGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_SedesGerente
-            // 
-            this.btn_SedesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_SedesGerente, LP2MegaAutos.ColoresSistema.Morado);
-            this.btn_SedesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_SedesGerente.FlatAppearance.BorderSize = 0;
-            this.btn_SedesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SedesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_SedesGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_SedesGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_SedesGerente.Location = new System.Drawing.Point(13, 3);
-            this.btn_SedesGerente.Name = "btn_SedesGerente";
-            this.btn_SedesGerente.Size = new System.Drawing.Size(115, 64);
-            this.btn_SedesGerente.TabIndex = 5;
-            this.tagsExtender1.SetTag2(this.btn_SedesGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_SedesGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_SedesGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_SedesGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_SedesGerente, System.Drawing.FontStyle.Regular);
-            this.btn_SedesGerente.Text = "Sedes";
-            this.btn_SedesGerente.UseVisualStyleBackColor = false;
-            // 
             // btn_ActualizarBDGerente
             // 
             this.btn_ActualizarBDGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_ActualizarBDGerente, LP2MegaAutos.ColoresSistema.LowContrast);
             this.btn_ActualizarBDGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_ActualizarBDGerente.FlatAppearance.BorderSize = 0;
             this.btn_ActualizarBDGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ActualizarBDGerente.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
-            this.btn_ActualizarBDGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_ActualizarBDGerente, LP2MegaAutos.ColoresSistema.HighContrast);
+            this.btn_ActualizarBDGerente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btn_ActualizarBDGerente.Location = new System.Drawing.Point(13, 3);
             this.btn_ActualizarBDGerente.Name = "btn_ActualizarBDGerente";
             this.btn_ActualizarBDGerente.Size = new System.Drawing.Size(115, 64);
             this.btn_ActualizarBDGerente.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.btn_ActualizarBDGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_ActualizarBDGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_ActualizarBDGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_ActualizarBDGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_ActualizarBDGerente, System.Drawing.FontStyle.Regular);
             this.btn_ActualizarBDGerente.Text = "Actualizar Base de Datos";
             this.btn_ActualizarBDGerente.UseVisualStyleBackColor = false;
             // 
-            // btnAjustesGerente
-            // 
-            this.btnAjustesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btnAjustesGerente, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.btnAjustesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAjustesGerente.FlatAppearance.BorderSize = 0;
-            this.btnAjustesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjustesGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btnAjustesGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btnAjustesGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btnAjustesGerente.Location = new System.Drawing.Point(13, 3);
-            this.btnAjustesGerente.Name = "btnAjustesGerente";
-            this.btnAjustesGerente.Size = new System.Drawing.Size(115, 64);
-            this.btnAjustesGerente.TabIndex = 4;
-            this.tagsExtender1.SetTag2(this.btnAjustesGerente, null);
-            this.tagsExtender1.SetTag3(this.btnAjustesGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btnAjustesGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnAjustesGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnAjustesGerente, System.Drawing.FontStyle.Regular);
-            this.btnAjustesGerente.Text = "Ajustes";
-            this.btnAjustesGerente.UseVisualStyleBackColor = false;
-            // 
-            // btn_CerrarSesionGerente
-            // 
-            this.btn_CerrarSesionGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.btn_CerrarSesionGerente, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.btn_CerrarSesionGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_CerrarSesionGerente.FlatAppearance.BorderSize = 0;
-            this.btn_CerrarSesionGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CerrarSesionGerente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
-            this.btn_CerrarSesionGerente.ForeColor = System.Drawing.Color.White;
-            this.systemColorsExtender1.SetForeColorSystem(this.btn_CerrarSesionGerente, LP2MegaAutos.ColoresSistema.HighContrast);
-            this.btn_CerrarSesionGerente.Location = new System.Drawing.Point(12, 3);
-            this.btn_CerrarSesionGerente.Name = "btn_CerrarSesionGerente";
-            this.btn_CerrarSesionGerente.Size = new System.Drawing.Size(115, 64);
-            this.btn_CerrarSesionGerente.TabIndex = 5;
-            this.tagsExtender1.SetTag2(this.btn_CerrarSesionGerente, null);
-            this.tagsExtender1.SetTag3(this.btn_CerrarSesionGerente, null);
-            this.tagsExtender1.SetTagFontName(this.btn_CerrarSesionGerente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_CerrarSesionGerente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_CerrarSesionGerente, System.Drawing.FontStyle.Regular);
-            this.btn_CerrarSesionGerente.Text = "Cerrar Sesion";
-            this.btn_CerrarSesionGerente.UseVisualStyleBackColor = false;
-            // 
             // roundedPanel2
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel2, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel2, 15);
             this.roundedPanel2.ArcRadiusBorde = 15;
             this.roundedPanel2.ArcRadiusPanel = 15;
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel2, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel2, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel2, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel2, Plasmoid.Extensions.RectangleEdgeFilter.Right);
             this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
             this.roundedPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel2, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel2.Location = new System.Drawing.Point(0, 382);
             this.roundedPanel2.MenosHeightBorde = 1;
             this.roundedPanel2.MenosHeightPanel = 1;
@@ -848,11 +586,6 @@
             this.roundedPanel2.PorcLuzColorBorde = 0;
             this.roundedPanel2.Size = new System.Drawing.Size(83, 70);
             this.roundedPanel2.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.roundedPanel2, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel2, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel2, System.Drawing.FontStyle.Regular);
             this.roundedPanel2.XBorde = 0;
             this.roundedPanel2.XPanel = 0;
             this.roundedPanel2.YBorde = 0;
@@ -860,18 +593,11 @@
             // 
             // roundedPanel3
             // 
-            this.roundedPanelExtender1.SetArcoRBorde(this.roundedPanel3, 15);
-            this.roundedPanelExtender1.SetArcoRPanel(this.roundedPanel3, 15);
             this.roundedPanel3.ArcRadiusBorde = 15;
             this.roundedPanel3.ArcRadiusPanel = 15;
             this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.systemColorsExtender1.SetBackColorSystem(this.roundedPanel3, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.roundedPanelExtender1.SetColorSistemaBorde(this.roundedPanel3, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.roundedPanelExtender1.SetColorSistemaPanel(this.roundedPanel3, LP2MegaAutos.ColoresSistema.LowContrast);
-            this.roundedPanelExtender1.SetCorners(this.roundedPanel3, Plasmoid.Extensions.RectangleEdgeFilter.Left);
             this.roundedPanel3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.roundedPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this.roundedPanel3, LP2MegaAutos.ColoresSistema.HighContrast);
             this.roundedPanel3.Location = new System.Drawing.Point(527, 382);
             this.roundedPanel3.MenosHeightBorde = 1;
             this.roundedPanel3.MenosHeightPanel = 1;
@@ -881,11 +607,6 @@
             this.roundedPanel3.PorcLuzColorBorde = 0;
             this.roundedPanel3.Size = new System.Drawing.Size(84, 70);
             this.roundedPanel3.TabIndex = 4;
-            this.tagsExtender1.SetTag2(this.roundedPanel3, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel3, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel3, System.Drawing.FontStyle.Regular);
             this.roundedPanel3.XBorde = 0;
             this.roundedPanel3.XPanel = 0;
             this.roundedPanel3.YBorde = 0;
@@ -895,7 +616,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.systemColorsExtender1.SetBackColorSystem(this, LP2MegaAutos.ColoresSistema.FrontBackground);
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.rpn_Sedes);
@@ -914,14 +634,8 @@
             this.Controls.Add(this.rpn_GenerarReporteGerente);
             this.Controls.Add(this.lblBienvenido);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.systemColorsExtender1.SetForeColorSystem(this, LP2MegaAutos.ColoresSistema.HighContrast);
             this.Name = "pantallaInicioGerente";
             this.Size = new System.Drawing.Size(611, 470);
-            this.tagsExtender1.SetTag2(this, null);
-            this.tagsExtender1.SetTag3(this, null);
-            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this, 10F);
-            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.rpn_GenerarReporteGerente.ResumeLayout(false);
             this.rpn_AreaTrabajo.ResumeLayout(false);
             this.rpn_Reportes.ResumeLayout(false);
@@ -940,12 +654,8 @@
         }
 
         #endregion
-
-        private SystemColorsExtender systemColorsExtender1;
-        private TagsExtender tagsExtender1;
         private System.Windows.Forms.Label lblBienvenido;
         private RoundedPanel rpn_GenerarReporteGerente;
-        private RoundedPanelExtender roundedPanelExtender1;
         private RoundedPanel rpn_izqGR;
         private RoundedPanel rpn_derGR;
         private System.Windows.Forms.Button btn_GenerarReporteGerente;

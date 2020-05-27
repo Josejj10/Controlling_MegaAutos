@@ -1,4 +1,6 @@
-﻿namespace LP2MegaAutos
+﻿using System.Drawing;
+
+namespace LP2MegaAutos
 {
     partial class frmPrincipal
     {
@@ -43,8 +45,8 @@
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlBackBackground = new System.Windows.Forms.Panel();
             this.rpMain = new LP2MegaAutos.RoundedPanel();
+            this.itemLista1 = new LP2MegaAutos.itemLista();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
-            this.colorRoundedPanelExtender1 = new LP2MegaAutos.RoundedPanelExtender();
             this.title_bar.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.rpBtnMenuHome.SuspendLayout();
@@ -171,14 +173,9 @@
             // 
             // rpBtnMenuHome
             // 
-            this.colorRoundedPanelExtender1.SetArcoRBorde(this.rpBtnMenuHome, 15);
-            this.colorRoundedPanelExtender1.SetArcoRPanel(this.rpBtnMenuHome, 15);
             this.rpBtnMenuHome.ArcRadiusBorde = 15;
             this.rpBtnMenuHome.ArcRadiusPanel = 15;
-            this.colorRoundedPanelExtender1.SetColorSistemaBorde(this.rpBtnMenuHome, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.colorRoundedPanelExtender1.SetColorSistemaPanel(this.rpBtnMenuHome, LP2MegaAutos.ColoresSistema.BackBackground);
             this.rpBtnMenuHome.Controls.Add(this.btnHome);
-            this.colorRoundedPanelExtender1.SetCorners(this.rpBtnMenuHome, Plasmoid.Extensions.RectangleEdgeFilter.Left);
             this.rpBtnMenuHome.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.rpBtnMenuHome.Location = new System.Drawing.Point(9, 18);
             this.rpBtnMenuHome.Margin = new System.Windows.Forms.Padding(2);
@@ -282,15 +279,11 @@
             // 
             // rpMain
             // 
-            this.colorRoundedPanelExtender1.SetArcoRBorde(this.rpMain, 15);
-            this.colorRoundedPanelExtender1.SetArcoRPanel(this.rpMain, 15);
             this.rpMain.ArcRadiusBorde = 15;
             this.rpMain.ArcRadiusPanel = 15;
             this.rpMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.colorRoundedPanelExtender1.SetColorSistemaBorde(this.rpMain, LP2MegaAutos.ColoresSistema.BackBackground);
-            this.colorRoundedPanelExtender1.SetColorSistemaPanel(this.rpMain, LP2MegaAutos.ColoresSistema.FrontBackground);
+            this.rpMain.Controls.Add(this.itemLista1);
             this.rpMain.Controls.Add(this.rpTopMain);
-            this.colorRoundedPanelExtender1.SetCorners(this.rpMain, Plasmoid.Extensions.RectangleEdgeFilter.All);
             this.rpMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpMain.Location = new System.Drawing.Point(70, 25);
             this.rpMain.MenosHeightBorde = 1;
@@ -311,16 +304,23 @@
             this.rpMain.YBorde = 0;
             this.rpMain.YPanel = 0;
             // 
+            // itemLista1
+            // 
+            this.itemLista1.Location = new System.Drawing.Point(51, 112);
+            this.itemLista1.Name = "itemLista1";
+            this.itemLista1.Size = new System.Drawing.Size(497, 104);
+            this.itemLista1.TabIndex = 1;
+            this.tags.SetTag2(this.itemLista1, null);
+            this.tags.SetTag3(this.itemLista1, null);
+            this.tags.SetTagFontName(this.itemLista1, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.itemLista1, 10F);
+            this.tags.SetTagFontStyle(this.itemLista1, System.Drawing.FontStyle.Regular);
+            // 
             // rpTopMain
             // 
-            this.colorRoundedPanelExtender1.SetArcoRBorde(this.rpTopMain, 15);
-            this.colorRoundedPanelExtender1.SetArcoRPanel(this.rpTopMain, 15);
             this.rpTopMain.ArcRadiusBorde = 15;
             this.rpTopMain.ArcRadiusPanel = 15;
             this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.colorRoundedPanelExtender1.SetColorSistemaBorde(this.rpTopMain, LP2MegaAutos.ColoresSistema.FrontBackground);
-            this.colorRoundedPanelExtender1.SetColorSistemaPanel(this.rpTopMain, LP2MegaAutos.ColoresSistema.VerdeSuccess);
-            this.colorRoundedPanelExtender1.SetCorners(this.rpTopMain, Plasmoid.Extensions.RectangleEdgeFilter.Top);
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
             this.rpTopMain.Location = new System.Drawing.Point(0, 0);
             this.rpTopMain.MenosHeightBorde = 1;
@@ -386,7 +386,7 @@
         private RoundedPanel rpMain;
         private RoundedPanel rpTopMain;
         private RoundedPanel rpBtnMenuHome;
-        private RoundedPanelExtender colorRoundedPanelExtender1;
         private System.Windows.Forms.Button btnHome;
+        private itemLista itemLista1;
     }
 }

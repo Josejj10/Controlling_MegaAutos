@@ -12,6 +12,8 @@ namespace LP2MegaAutos
 {
     public partial class pantallaInicio : UserControl
     {
+    
+
         public pantallaInicio()
         {
             InitializeComponent();

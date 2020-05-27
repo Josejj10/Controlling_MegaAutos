@@ -41,10 +41,10 @@ namespace LP2MegaAutos
             {
                 this.Controls.Add(pantallaEditarServicios.Instancia);
                 pantallaEditarServicios.Instancia.Dock = DockStyle.Fill;
-                pantallaEditarServicios.Instancia.BringToFront();
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaEditarServicios.Instancia.Parent);
             }
-            else
-                pantallaEditarServicios.Instancia.BringToFront();
+            pantallaEditarServicios.Instancia.BringToFront();
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)

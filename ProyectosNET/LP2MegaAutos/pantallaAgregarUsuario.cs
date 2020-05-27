@@ -16,5 +16,10 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
         }
+
+        private void btn_AgregarPermiso_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Agregar");
+        }
     }
 }

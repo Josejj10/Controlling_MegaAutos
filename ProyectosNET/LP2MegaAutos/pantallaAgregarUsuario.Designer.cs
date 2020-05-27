@@ -545,6 +545,7 @@
             this.btn_AgregarPermiso.Text = "+ Agregar";
             this.btn_AgregarPermiso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AgregarPermiso.UseVisualStyleBackColor = false;
+            this.btn_AgregarPermiso.Click += new System.EventHandler(this.btn_AgregarPermiso_Click);
             // 
             // pantallaAgregarUsuario
             // 

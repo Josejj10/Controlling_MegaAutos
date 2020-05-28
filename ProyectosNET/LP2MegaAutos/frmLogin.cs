@@ -26,7 +26,6 @@ namespace LP2MegaAutos
             Tipografias.crearFonts(this,tags);// Inicializa los fonts de este form
             textBox_correo.Select();// Para que le panel lateral aparezca
             DarkMode.agregarExcepcion("boton_acceder");
-            
         }
 
 
@@ -35,7 +34,7 @@ namespace LP2MegaAutos
         #region botones
         private void boton_cerrar_MouseClick(object sender, EventArgs e)
         {
-            Close();
+            this.DialogResult = DialogResult.No;
         }
 
         private void boton_minimizar_MouseClick(object sender, MouseEventArgs e)

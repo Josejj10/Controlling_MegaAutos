@@ -55,11 +55,14 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.flpPermisos = new System.Windows.Forms.FlowLayoutPanel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.roundedPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // boton_ver_password
@@ -75,7 +78,7 @@
             this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(573, 121);
+            this.boton_ver_password.Location = new System.Drawing.Point(230, 4);
             this.boton_ver_password.Name = "boton_ver_password";
             this.boton_ver_password.Size = new System.Drawing.Size(28, 19);
             this.boton_ver_password.TabIndex = 0;
@@ -122,7 +125,7 @@
             this.lbl_ListaPermisosUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaPermisosUsuario.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaPermisosUsuario.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaPermisosUsuario.Location = new System.Drawing.Point(213, 12);
+            this.lbl_ListaPermisosUsuario.Location = new System.Drawing.Point(213, 4);
             this.lbl_ListaPermisosUsuario.Name = "lbl_ListaPermisosUsuario";
             this.lbl_ListaPermisosUsuario.Size = new System.Drawing.Size(114, 29);
             this.lbl_ListaPermisosUsuario.TabIndex = 0;
@@ -272,6 +275,7 @@
             this.panel5.Controls.Add(this.roundedPanel2);
             this.panel5.Controls.Add(this.txt_NuevaCont);
             this.panel5.Controls.Add(this.lbl_Contraseña);
+            this.panel5.Controls.Add(this.boton_ver_password);
             this.panel5.Location = new System.Drawing.Point(307, 117);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
@@ -318,7 +322,7 @@
             this.txt_NuevaCont.Location = new System.Drawing.Point(9, 3);
             this.txt_NuevaCont.Name = "txt_NuevaCont";
             this.txt_NuevaCont.PasswordChar = '*';
-            this.txt_NuevaCont.Size = new System.Drawing.Size(284, 23);
+            this.txt_NuevaCont.Size = new System.Drawing.Size(215, 23);
             this.txt_NuevaCont.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_NuevaCont, null);
             this.tagsExtender1.SetTag3(this.txt_NuevaCont, null);
@@ -528,7 +532,7 @@
             this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.flpPermisos.Location = new System.Drawing.Point(35, 274);
             this.flpPermisos.Name = "flpPermisos";
-            this.flpPermisos.Size = new System.Drawing.Size(538, 120);
+            this.flpPermisos.Size = new System.Drawing.Size(538, 133);
             this.flpPermisos.TabIndex = 46;
             this.tagsExtender1.SetTag2(this.flpPermisos, null);
             this.tagsExtender1.SetTag3(this.flpPermisos, null);
@@ -563,15 +567,63 @@
             this.roundedPanel4.YBorde = 0;
             this.roundedPanel4.YPanel = 0;
             // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.ArcRadiusBorde = 5;
+            this.roundedPanel5.ArcRadiusPanel = 5;
+            this.roundedPanel5.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel5.Controls.Add(this.btn_guardar);
+            this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel5.Location = new System.Drawing.Point(165, 413);
+            this.roundedPanel5.MenosHeightBorde = 1;
+            this.roundedPanel5.MenosHeightPanel = 1;
+            this.roundedPanel5.MenosWidthBorde = 1;
+            this.roundedPanel5.MenosWidthPanel = 1;
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.PorcLuzColorBorde = 0;
+            this.roundedPanel5.Size = new System.Drawing.Size(280, 35);
+            this.roundedPanel5.TabIndex = 48;
+            this.tagsExtender1.SetTag2(this.roundedPanel5, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel5, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel5, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel5, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel5, System.Drawing.FontStyle.Regular);
+            this.roundedPanel5.XBorde = 0;
+            this.roundedPanel5.XPanel = 0;
+            this.roundedPanel5.YBorde = 0;
+            this.roundedPanel5.YPanel = 0;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.Color.White;
+            this.btn_guardar.Location = new System.Drawing.Point(1, 1);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(278, 33);
+            this.btn_guardar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_guardar, null);
+            this.tagsExtender1.SetTag3(this.btn_guardar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
+            this.btn_guardar.Text = "Guardar Cambios";
+            this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            // 
             // pantallaAjustesUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.flpPermisos);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.boton_ver_password);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -597,6 +649,7 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.roundedPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -629,5 +682,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.FlowLayoutPanel flpPermisos;
         private RoundedPanel roundedPanel4;
+        private RoundedPanel roundedPanel5;
+        private System.Windows.Forms.Button btn_guardar;
     }
 }

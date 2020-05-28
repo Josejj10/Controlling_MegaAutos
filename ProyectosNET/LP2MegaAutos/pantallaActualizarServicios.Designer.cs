@@ -49,6 +49,7 @@
             this.pnlBuscar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.panel1.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
             this.rndReciente.SuspendLayout();
@@ -85,7 +86,7 @@
             this.panel1.Controls.Add(this.il_Servicios1);
             this.panel1.Location = new System.Drawing.Point(36, 142);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 327);
+            this.panel1.Size = new System.Drawing.Size(538, 314);
             this.panel1.TabIndex = 26;
             this.tagsExtender1.SetTag2(this.panel1, null);
             this.tagsExtender1.SetTag3(this.panel1, null);
@@ -467,11 +468,39 @@
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
             // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel4.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel4.TabIndex = 49;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
+            // 
             // pantallaActualizarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.txt_Buscar);
             this.Controls.Add(this.pnlBuscar);
@@ -523,5 +552,6 @@
         private System.Windows.Forms.Panel pnlBuscar;
         private RoundedPanel rpTopMain;
         private System.Windows.Forms.Panel panel2;
+        private RoundedPanel roundedPanel4;
     }
 }

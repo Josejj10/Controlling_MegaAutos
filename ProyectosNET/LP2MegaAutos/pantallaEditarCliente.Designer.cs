@@ -50,6 +50,7 @@
             this.txt_NumeroDocumento = new System.Windows.Forms.TextBox();
             this.lbl_NumeroDocumento = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
             this.pnl_Correo.SuspendLayout();
             this.pnl_Telefono.SuspendLayout();
             this.pnl_TipoDocumento.SuspendLayout();
@@ -369,10 +370,10 @@
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_guardar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
-            this.btn_guardar.Text = "Guardar cambios";
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
+            this.btn_guardar.Text = "Guardar Cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -465,11 +466,39 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_NumeroDocumento, System.Drawing.FontStyle.Regular);
             this.lbl_NumeroDocumento.Text = "Número de Documento";
             // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.ArcRadiusBorde = 5;
+            this.roundedPanel5.ArcRadiusPanel = 5;
+            this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel5.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel5.MenosHeightBorde = 1;
+            this.roundedPanel5.MenosHeightPanel = 1;
+            this.roundedPanel5.MenosWidthBorde = 1;
+            this.roundedPanel5.MenosWidthPanel = 1;
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.PorcLuzColorBorde = 0;
+            this.roundedPanel5.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel5.TabIndex = 49;
+            this.tagsExtender1.SetTag2(this.roundedPanel5, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel5, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel5, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel5, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel5, System.Drawing.FontStyle.Regular);
+            this.roundedPanel5.XBorde = 0;
+            this.roundedPanel5.XPanel = 0;
+            this.roundedPanel5.YBorde = 0;
+            this.roundedPanel5.YPanel = 0;
+            // 
             // pantallaEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.pnl_Correo);
             this.Controls.Add(this.pnl_Telefono);
             this.Controls.Add(this.pnl_TipoDocumento);
@@ -523,5 +552,6 @@
         private System.Windows.Forms.TextBox txt_NumeroDocumento;
         private System.Windows.Forms.Label lbl_NumeroDocumento;
         private TagsExtender tagsExtender1;
+        private RoundedPanel roundedPanel5;
     }
 }

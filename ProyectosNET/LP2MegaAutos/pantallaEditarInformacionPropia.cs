@@ -48,5 +48,10 @@ namespace LP2MegaAutos
                 }
         }
         #endregion Ver Password
+
+        private void btn_GuardarCambios_Click(object sender, EventArgs e)
+        {
+            this.SendToBack();
+        }
     }
 }

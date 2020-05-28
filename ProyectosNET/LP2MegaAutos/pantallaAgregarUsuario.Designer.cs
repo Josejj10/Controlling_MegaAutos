@@ -468,6 +468,7 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel2.Location = new System.Drawing.Point(36, 246);
             this.panel2.Name = "panel2";
@@ -545,6 +546,7 @@
             this.btn_AgregarPermiso.Text = "+ Agregar";
             this.btn_AgregarPermiso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AgregarPermiso.UseVisualStyleBackColor = false;
+            this.btn_AgregarPermiso.Click += new System.EventHandler(this.btn_AgregarPermiso_Click);
             // 
             // pantallaAgregarUsuario
             // 

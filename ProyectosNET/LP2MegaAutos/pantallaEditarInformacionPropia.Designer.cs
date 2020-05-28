@@ -52,6 +52,8 @@
             this.lbl_RepNCont = new System.Windows.Forms.Label();
             this.lbl_EditarNombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.boton_ver_password = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.rpn_Reportes.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
             this.pnl_Direccion.SuspendLayout();
@@ -114,10 +116,10 @@
             this.txt_ContraseñaActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ContraseñaActual.Font = new System.Drawing.Font("Lato", 12F);
             this.txt_ContraseñaActual.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_ContraseñaActual.Location = new System.Drawing.Point(67, 11);
+            this.txt_ContraseñaActual.Location = new System.Drawing.Point(18, 7);
             this.txt_ContraseñaActual.Name = "txt_ContraseñaActual";
             this.txt_ContraseñaActual.PasswordChar = '*';
-            this.txt_ContraseñaActual.Size = new System.Drawing.Size(100, 20);
+            this.txt_ContraseñaActual.Size = new System.Drawing.Size(196, 20);
             this.txt_ContraseñaActual.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.txt_ContraseñaActual, null);
             this.tagsExtender1.SetTag3(this.txt_ContraseñaActual, null);
@@ -322,6 +324,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.boton_ver_password);
             this.panel2.Controls.Add(this.roundedPanel2);
             this.panel2.Controls.Add(this.txt_NuevaCont);
             this.panel2.Controls.Add(this.lbl_NuevaCont);
@@ -399,6 +402,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.roundedPanel3);
             this.panel3.Controls.Add(this.txt_RepNCont);
             this.panel3.Controls.Add(this.lbl_RepNCont);
@@ -504,6 +508,59 @@
             this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
+            // boton_ver_password
+            // 
+            this.boton_ver_password.BackColor = System.Drawing.Color.Transparent;
+            this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_ver_password.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boton_ver_password.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.boton_ver_password.FlatAppearance.BorderSize = 0;
+            this.boton_ver_password.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.boton_ver_password.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.boton_ver_password.ForeColor = System.Drawing.Color.White;
+            this.boton_ver_password.Location = new System.Drawing.Point(261, 12);
+            this.boton_ver_password.Name = "boton_ver_password";
+            this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
+            this.boton_ver_password.TabIndex = 3;
+            this.boton_ver_password.TabStop = false;
+            this.boton_ver_password.Tag = "botonImagen";
+            this.tagsExtender1.SetTag2(this.boton_ver_password, null);
+            this.tagsExtender1.SetTag3(this.boton_ver_password, null);
+            this.tagsExtender1.SetTagFontName(this.boton_ver_password, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_ver_password, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_ver_password, System.Drawing.FontStyle.Regular);
+            this.boton_ver_password.UseVisualStyleBackColor = false;
+            this.boton_ver_password.Click += new System.EventHandler(this.boton_ver_password_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(261, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 25);
+            this.button1.TabIndex = 4;
+            this.button1.TabStop = false;
+            this.button1.Tag = "botonImagen";
+            this.tagsExtender1.SetTag2(this.button1, null);
+            this.tagsExtender1.SetTag3(this.button1, null);
+            this.tagsExtender1.SetTagFontName(this.button1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.button1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Regular);
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // pantallaEditarInformacionPropia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,5 +624,7 @@
         private System.Windows.Forms.Label lbl_RepNCont;
         private System.Windows.Forms.Label lbl_EditarNombre;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button boton_ver_password;
+        private System.Windows.Forms.Button button1;
     }
 }

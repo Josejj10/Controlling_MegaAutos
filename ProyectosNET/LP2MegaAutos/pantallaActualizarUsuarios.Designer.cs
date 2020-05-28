@@ -47,8 +47,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.pnlBuscar = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
             this.rndZA.SuspendLayout();
@@ -379,6 +379,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel1.Controls.Add(this.il_Usuarios1);
             this.panel1.Controls.Add(this.il_Usuarios2);
@@ -435,20 +436,6 @@
             this.tagsExtender1.SetTagFontSize(this.pnlBuscar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnlBuscar, System.Drawing.FontStyle.Regular);
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(26, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(25, 25);
-            this.panel2.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.panel2, null);
-            this.tagsExtender1.SetTag3(this.panel2, null);
-            this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
-            // 
             // txt_Buscar
             // 
             this.txt_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
@@ -465,6 +452,20 @@
             this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(26, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(25, 25);
+            this.panel2.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.panel2, null);
+            this.tagsExtender1.SetTag3(this.panel2, null);
+            this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
             // 
             // pantallaActualizarUsuarios
             // 

@@ -64,6 +64,7 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel2.Location = new System.Drawing.Point(36, 246);
             this.panel2.Name = "panel2";
@@ -129,7 +130,7 @@
             this.btn_AgregarPermiso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarPermiso.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AgregarPermiso.ForeColor = System.Drawing.Color.White;
-            this.btn_AgregarPermiso.Location = new System.Drawing.Point(435, 4);
+            this.btn_AgregarPermiso.Location = new System.Drawing.Point(432, 7);
             this.btn_AgregarPermiso.Name = "btn_AgregarPermiso";
             this.btn_AgregarPermiso.Size = new System.Drawing.Size(94, 26);
             this.btn_AgregarPermiso.TabIndex = 7;
@@ -141,6 +142,7 @@
             this.btn_AgregarPermiso.Text = "+ Agregar";
             this.btn_AgregarPermiso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AgregarPermiso.UseVisualStyleBackColor = false;
+            this.btn_AgregarPermiso.Click += new System.EventHandler(this.btn_AgregarPermiso_Click);
             // 
             // pnl_Correo
             // 
@@ -372,6 +374,7 @@
             // 
             // txt_EditarUsuario
             // 
+            this.txt_EditarUsuario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_EditarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_EditarUsuario.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
             this.txt_EditarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));

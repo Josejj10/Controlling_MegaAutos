@@ -77,6 +77,18 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="itemDetalleGrandeReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemDetalleGrandeReporte.Designer.cs">
+      <DependentUpon>itemDetalleGrandeReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itemDetalleReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemDetalleReporte.Designer.cs">
+      <DependentUpon>itemDetalleReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="itemLista.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -191,6 +203,12 @@
     <Compile Include="pantallaInicioUsuarioNivel2.Designer.cs">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaDetalleReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaDetalleReporte.Designer.cs">
+      <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -274,6 +292,12 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="itemDetalleGrandeReporte.resx">
+      <DependentUpon>itemDetalleGrandeReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemDetalleReporte.resx">
+      <DependentUpon>itemDetalleReporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="itemLista.resx">
       <DependentUpon>itemLista.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicioUsuarioNivel2.resx">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaDetalleReporte.resx">
+      <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaSede.resx">
       <DependentUpon>pantallaSede.cs</DependentUpon>

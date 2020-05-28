@@ -83,6 +83,12 @@
     <Compile Include="itemLista.Designer.cs">
       <DependentUpon>itemLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="itemListaReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemListaReporte.Designer.cs">
+      <DependentUpon>itemListaReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaActualizarClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="itemLista.resx">
       <DependentUpon>itemLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemListaReporte.resx">
+      <DependentUpon>itemListaReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarClientes.resx">
       <DependentUpon>pantallaActualizarClientes.cs</DependentUpon>

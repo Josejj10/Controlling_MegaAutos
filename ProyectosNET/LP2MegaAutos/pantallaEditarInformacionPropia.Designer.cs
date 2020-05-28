@@ -43,17 +43,18 @@
             this.txt_Direccion = new System.Windows.Forms.TextBox();
             this.lbl_Direccion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.boton_ver_password = new System.Windows.Forms.Button();
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.txt_NuevaCont = new System.Windows.Forms.TextBox();
             this.lbl_NuevaCont = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
             this.txt_RepNCont = new System.Windows.Forms.TextBox();
             this.lbl_RepNCont = new System.Windows.Forms.Label();
             this.lbl_EditarNombre = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.boton_ver_password = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_Reportes.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
             this.pnl_Direccion.SuspendLayout();
@@ -69,7 +70,7 @@
             this.btn_GuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GuardarCambios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.btn_GuardarCambios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btn_GuardarCambios.Location = new System.Drawing.Point(159, 411);
+            this.btn_GuardarCambios.Location = new System.Drawing.Point(159, 399);
             this.btn_GuardarCambios.Name = "btn_GuardarCambios";
             this.btn_GuardarCambios.Size = new System.Drawing.Size(291, 45);
             this.btn_GuardarCambios.TabIndex = 36;
@@ -91,7 +92,7 @@
             this.rpn_Reportes.Controls.Add(this.txt_ContraseñaActual);
             this.rpn_Reportes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Reportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.rpn_Reportes.Location = new System.Drawing.Point(189, 371);
+            this.rpn_Reportes.Location = new System.Drawing.Point(189, 359);
             this.rpn_Reportes.MenosHeightBorde = 1;
             this.rpn_Reportes.MenosHeightPanel = 1;
             this.rpn_Reportes.MenosWidthBorde = 1;
@@ -132,7 +133,7 @@
             // 
             this.lbl_ContraseñaActual.AutoSize = true;
             this.lbl_ContraseñaActual.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ContraseñaActual.Location = new System.Drawing.Point(242, 350);
+            this.lbl_ContraseñaActual.Location = new System.Drawing.Point(242, 338);
             this.lbl_ContraseñaActual.Name = "lbl_ContraseñaActual";
             this.lbl_ContraseñaActual.Size = new System.Drawing.Size(127, 18);
             this.lbl_ContraseñaActual.TabIndex = 38;
@@ -339,6 +340,33 @@
             this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
             // 
+            // boton_ver_password
+            // 
+            this.boton_ver_password.BackColor = System.Drawing.Color.Transparent;
+            this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_ver_password.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boton_ver_password.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.boton_ver_password.FlatAppearance.BorderSize = 0;
+            this.boton_ver_password.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.boton_ver_password.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.boton_ver_password.ForeColor = System.Drawing.Color.White;
+            this.boton_ver_password.Location = new System.Drawing.Point(261, 12);
+            this.boton_ver_password.Name = "boton_ver_password";
+            this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
+            this.boton_ver_password.TabIndex = 3;
+            this.boton_ver_password.TabStop = false;
+            this.boton_ver_password.Tag = "botonImagen";
+            this.tagsExtender1.SetTag2(this.boton_ver_password, null);
+            this.tagsExtender1.SetTag3(this.boton_ver_password, null);
+            this.tagsExtender1.SetTagFontName(this.boton_ver_password, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_ver_password, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_ver_password, System.Drawing.FontStyle.Regular);
+            this.boton_ver_password.UseVisualStyleBackColor = false;
+            this.boton_ver_password.Click += new System.EventHandler(this.boton_ver_password_Click);
+            // 
             // roundedPanel2
             // 
             this.roundedPanel2.ArcRadiusBorde = 15;
@@ -416,6 +444,32 @@
             this.tagsExtender1.SetTagFontName(this.panel3, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(261, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 25);
+            this.button1.TabIndex = 4;
+            this.button1.TabStop = false;
+            this.button1.Tag = "botonImagen";
+            this.tagsExtender1.SetTag2(this.button1, null);
+            this.tagsExtender1.SetTag3(this.button1, null);
+            this.tagsExtender1.SetTagFontName(this.button1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.button1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Regular);
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // roundedPanel3
             // 
@@ -508,64 +562,39 @@
             this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
-            // boton_ver_password
+            // roundedPanel4
             // 
-            this.boton_ver_password.BackColor = System.Drawing.Color.Transparent;
-            this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
-            this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.boton_ver_password.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boton_ver_password.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.boton_ver_password.FlatAppearance.BorderSize = 0;
-            this.boton_ver_password.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.boton_ver_password.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(261, 12);
-            this.boton_ver_password.Name = "boton_ver_password";
-            this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
-            this.boton_ver_password.TabIndex = 3;
-            this.boton_ver_password.TabStop = false;
-            this.boton_ver_password.Tag = "botonImagen";
-            this.tagsExtender1.SetTag2(this.boton_ver_password, null);
-            this.tagsExtender1.SetTag3(this.boton_ver_password, null);
-            this.tagsExtender1.SetTagFontName(this.boton_ver_password, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.boton_ver_password, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.boton_ver_password, System.Drawing.FontStyle.Regular);
-            this.boton_ver_password.UseVisualStyleBackColor = false;
-            this.boton_ver_password.Click += new System.EventHandler(this.boton_ver_password_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(261, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 25);
-            this.button1.TabIndex = 4;
-            this.button1.TabStop = false;
-            this.button1.Tag = "botonImagen";
-            this.tagsExtender1.SetTag2(this.button1, null);
-            this.tagsExtender1.SetTag3(this.button1, null);
-            this.tagsExtender1.SetTagFontName(this.button1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.button1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Regular);
-            this.button1.UseVisualStyleBackColor = false;
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(133)))), ((int)(((byte)(161)))));
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel4.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel4.TabIndex = 49;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
             // 
             // pantallaEditarInformacionPropia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_EditarNombre);
             this.Controls.Add(this.panel3);
@@ -626,5 +655,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button boton_ver_password;
         private System.Windows.Forms.Button button1;
+        private RoundedPanel roundedPanel4;
     }
 }

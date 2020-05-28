@@ -32,10 +32,9 @@ namespace LP2MegaAutos
 
         }
 
-        private void btn_AgregarPermiso_Click(object sender, EventArgs e)
+        private void btn_guardar_Click(object sender, EventArgs e)
         {
-            // TODO FORM
-            MessageBox.Show("Agregar:");
+            this.SendToBack();
         }
     }
 }

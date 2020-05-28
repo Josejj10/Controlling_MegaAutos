@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
             this.rpn_ListaPermisosUsuario = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaPermisosUsuario = new System.Windows.Forms.Label();
             this.btn_AgregarPermiso = new System.Windows.Forms.Button();
@@ -54,6 +53,8 @@
             this.txt_Contraseña = new System.Windows.Forms.TextBox();
             this.lbl_Contraseña = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
+            this.flpPermisos = new System.Windows.Forms.FlowLayoutPanel();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.pnl_Correo.SuspendLayout();
             this.pnl_Telefono.SuspendLayout();
@@ -61,20 +62,6 @@
             this.roundedPanel1.SuspendLayout();
             this.pnl_NumeroDocumento.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.panel2.Location = new System.Drawing.Point(36, 246);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(538, 174);
-            this.panel2.TabIndex = 64;
-            this.tagsExtender1.SetTag2(this.panel2, null);
-            this.tagsExtender1.SetTag3(this.panel2, null);
-            this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
             // 
             // rpn_ListaPermisosUsuario
             // 
@@ -142,7 +129,6 @@
             this.btn_AgregarPermiso.Text = "+ Agregar";
             this.btn_AgregarPermiso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AgregarPermiso.UseVisualStyleBackColor = false;
-            this.btn_AgregarPermiso.Click += new System.EventHandler(this.btn_AgregarPermiso_Click);
             // 
             // pnl_Correo
             // 
@@ -424,7 +410,7 @@
             this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel1.Controls.Add(this.btn_guardar);
             this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel1.Location = new System.Drawing.Point(175, 432);
+            this.roundedPanel1.Location = new System.Drawing.Point(165, 410);
             this.roundedPanel1.MenosHeightBorde = 1;
             this.roundedPanel1.MenosHeightPanel = 1;
             this.roundedPanel1.MenosWidthBorde = 1;
@@ -459,9 +445,10 @@
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
             this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_guardar, 15F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
-            this.btn_guardar.Text = "Guardar cambios";
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
+            this.btn_guardar.Text = "Guardar Cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // panel1
             // 
@@ -553,12 +540,53 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_Contraseña, System.Drawing.FontStyle.Regular);
             this.lbl_Contraseña.Text = "Contraseña";
             // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.ArcRadiusBorde = 5;
+            this.roundedPanel5.ArcRadiusPanel = 5;
+            this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel5.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel5.MenosHeightBorde = 1;
+            this.roundedPanel5.MenosHeightPanel = 1;
+            this.roundedPanel5.MenosWidthBorde = 1;
+            this.roundedPanel5.MenosWidthPanel = 1;
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.PorcLuzColorBorde = 0;
+            this.roundedPanel5.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel5.TabIndex = 65;
+            this.tagsExtender1.SetTag2(this.roundedPanel5, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel5, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel5, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel5, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel5, System.Drawing.FontStyle.Regular);
+            this.roundedPanel5.XBorde = 0;
+            this.roundedPanel5.XPanel = 0;
+            this.roundedPanel5.YBorde = 0;
+            this.roundedPanel5.YPanel = 0;
+            // 
+            // flpPermisos
+            // 
+            this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.flpPermisos.Location = new System.Drawing.Point(36, 246);
+            this.flpPermisos.Name = "flpPermisos";
+            this.flpPermisos.Size = new System.Drawing.Size(538, 158);
+            this.flpPermisos.TabIndex = 66;
+            this.tagsExtender1.SetTag2(this.flpPermisos, null);
+            this.tagsExtender1.SetTag3(this.flpPermisos, null);
+            this.tagsExtender1.SetTagFontName(this.flpPermisos, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpPermisos, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpPermisos, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.flpPermisos);
+            this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.rpn_ListaPermisosUsuario);
             this.Controls.Add(this.pnl_Correo);
             this.Controls.Add(this.pnl_Telefono);
@@ -592,8 +620,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
         private RoundedPanel rpn_ListaPermisosUsuario;
         private System.Windows.Forms.Label lbl_ListaPermisosUsuario;
         private System.Windows.Forms.Button btn_AgregarPermiso;
@@ -619,5 +645,7 @@
         private System.Windows.Forms.TextBox txt_Contraseña;
         private System.Windows.Forms.Label lbl_Contraseña;
         private TagsExtender tagsExtender1;
+        private RoundedPanel roundedPanel5;
+        private System.Windows.Forms.FlowLayoutPanel flpPermisos;
     }
 }

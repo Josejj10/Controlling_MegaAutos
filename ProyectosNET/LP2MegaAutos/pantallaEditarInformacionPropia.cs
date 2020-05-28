@@ -12,6 +12,19 @@ namespace LP2MegaAutos
 {
     public partial class pantallaEditarInformacionPropia : UserControl
     {
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaEditarInformacionPropia _instancia;
+        public static pantallaEditarInformacionPropia Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaEditarInformacionPropia();
+                return _instancia;
+            }
+        }
+        #endregion instancia
         public pantallaEditarInformacionPropia()
         {
             InitializeComponent();

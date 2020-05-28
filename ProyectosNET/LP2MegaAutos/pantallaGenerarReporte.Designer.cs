@@ -117,7 +117,6 @@
             this.tags.SetTagFontSize(this.lblTitulo, 21.75F);
             this.tags.SetTagFontStyle(this.lblTitulo, System.Drawing.FontStyle.Bold);
             this.lblTitulo.Text = "Generar Reporte";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // rndOtro
             // 
@@ -358,6 +357,7 @@
             this.tags.SetTagFontStyle(this.btnGenerarReporte, System.Drawing.FontStyle.Regular);
             this.btnGenerarReporte.Text = "Generar";
             this.btnGenerarReporte.UseVisualStyleBackColor = false;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // rpFechaIni
             // 

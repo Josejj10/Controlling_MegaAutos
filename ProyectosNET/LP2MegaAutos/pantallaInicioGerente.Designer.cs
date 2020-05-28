@@ -157,6 +157,11 @@
             this.rpn_izqGR.PorcLuzColorBorde = 0;
             this.rpn_izqGR.Size = new System.Drawing.Size(53, 100);
             this.rpn_izqGR.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rpn_izqGR, null);
+            this.tagsExtender1.SetTag3(this.rpn_izqGR, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_izqGR, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_izqGR, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_izqGR, System.Drawing.FontStyle.Regular);
             this.rpn_izqGR.XBorde = 0;
             this.rpn_izqGR.XPanel = 0;
             this.rpn_izqGR.YBorde = 0;
@@ -180,6 +185,11 @@
             this.rpn_derGR.PorcLuzColorBorde = 0;
             this.rpn_derGR.Size = new System.Drawing.Size(53, 100);
             this.rpn_derGR.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.rpn_derGR, null);
+            this.tagsExtender1.SetTag3(this.rpn_derGR, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_derGR, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_derGR, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_derGR, System.Drawing.FontStyle.Regular);
             this.rpn_derGR.XBorde = 0;
             this.rpn_derGR.XPanel = 0;
             this.rpn_derGR.YBorde = 0;
@@ -191,7 +201,7 @@
             this.rpn_AreaTrabajo.ArcRadiusPanel = 15;
             this.rpn_AreaTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_AreaTrabajo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_AreaTrabajo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
+            this.rpn_AreaTrabajo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.rpn_AreaTrabajo.Controls.Add(this.btn_AreaTrabajoGerente);
             this.rpn_AreaTrabajo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_AreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -216,7 +226,7 @@
             // 
             // btn_AreaTrabajoGerente
             // 
-            this.btn_AreaTrabajoGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_AreaTrabajoGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.btn_AreaTrabajoGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_AreaTrabajoGerente.FlatAppearance.BorderSize = 0;
             this.btn_AreaTrabajoGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -240,7 +250,7 @@
             this.rpn_Reportes.ArcRadiusPanel = 15;
             this.rpn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_Reportes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_Reportes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
+            this.rpn_Reportes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.rpn_Reportes.Controls.Add(this.btn_ReportesGerente);
             this.rpn_Reportes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Reportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -265,7 +275,7 @@
             // 
             // btn_ReportesGerente
             // 
-            this.btn_ReportesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_ReportesGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.btn_ReportesGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_ReportesGerente.FlatAppearance.BorderSize = 0;
             this.btn_ReportesGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -289,7 +299,7 @@
             this.rpn_Servicios.ArcRadiusPanel = 15;
             this.rpn_Servicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_Servicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_Servicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
+            this.rpn_Servicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.rpn_Servicios.Controls.Add(this.btn_ServiciosGerente);
             this.rpn_Servicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Servicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -314,7 +324,7 @@
             // 
             // btn_ServiciosGerente
             // 
-            this.btn_ServiciosGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_ServiciosGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.btn_ServiciosGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_ServiciosGerente.FlatAppearance.BorderSize = 0;
             this.btn_ServiciosGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -338,7 +348,7 @@
             this.rpn_Drivers.ArcRadiusPanel = 15;
             this.rpn_Drivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rpn_Drivers.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_Drivers.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(47)))), ((int)(((byte)(11)))));
+            this.rpn_Drivers.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.rpn_Drivers.Controls.Add(this.btn_DriversGerente);
             this.rpn_Drivers.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpn_Drivers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
@@ -363,7 +373,7 @@
             // 
             // btn_DriversGerente
             // 
-            this.btn_DriversGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_DriversGerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.btn_DriversGerente.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_DriversGerente.FlatAppearance.BorderSize = 0;
             this.btn_DriversGerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -742,6 +752,11 @@
             this.roundedPanel2.PorcLuzColorBorde = 0;
             this.roundedPanel2.Size = new System.Drawing.Size(83, 70);
             this.roundedPanel2.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.roundedPanel2, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel2, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel2, System.Drawing.FontStyle.Regular);
             this.roundedPanel2.XBorde = 0;
             this.roundedPanel2.XPanel = 0;
             this.roundedPanel2.YBorde = 0;
@@ -765,6 +780,11 @@
             this.roundedPanel3.PorcLuzColorBorde = 0;
             this.roundedPanel3.Size = new System.Drawing.Size(84, 70);
             this.roundedPanel3.TabIndex = 4;
+            this.tagsExtender1.SetTag2(this.roundedPanel3, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel3, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel3, System.Drawing.FontStyle.Regular);
             this.roundedPanel3.XBorde = 0;
             this.roundedPanel3.XPanel = 0;
             this.roundedPanel3.YBorde = 0;
@@ -774,7 +794,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.rpn_Sedes);

@@ -203,6 +203,18 @@
     <Compile Include="pantallaGenerarReporte.Designer.cs">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaInformacionEmpresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresa.Designer.cs">
+      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresaGerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresaGerente.Designer.cs">
+      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -372,6 +384,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaGenerarReporte.resx">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInformacionEmpresa.resx">
+      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInformacionEmpresaGerente.resx">
+      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>

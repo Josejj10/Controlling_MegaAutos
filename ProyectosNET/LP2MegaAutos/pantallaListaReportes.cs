@@ -93,8 +93,9 @@ namespace LP2MegaAutos
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            if (this.Parent.Controls.Contains(pantallaGenerarReporte.Instancia))
-                pantallaGenerarReporte.Instancia.BringToFront();
+            if (!this.Parent.Controls.Contains(pantallaGenerarReporte.Instancia))
+                this.Parent.Controls.Add(pantallaGenerarReporte.Instancia);
+            pantallaGenerarReporte.Instancia.BringToFront();
         }
     }
 }

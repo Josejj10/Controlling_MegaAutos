@@ -125,8 +125,7 @@ namespace LP2MegaAutos
             {
                 // Todos los controles que tiene son RoundedPanels, cambiar su color
                 if (c == rp) continue;
-                if (c is RoundedPanel) cambiarRPMenu((RoundedPanel)c);
-                
+                if (c is RoundedPanel) cambiarRPMenu((RoundedPanel)c);                
             }
             if (DarkMode.is_dark_mode_active())
                 rp.ColorPanel = Dark_Mode.BackBackground;

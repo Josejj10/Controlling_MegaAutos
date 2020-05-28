@@ -77,6 +77,12 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="frmResumenReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResumenReporte.Designer.cs">
+      <DependentUpon>frmResumenReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="itemDetalleGrandeReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +106,18 @@
     </Compile>
     <Compile Include="itemListaReporte.Designer.cs">
       <DependentUpon>itemListaReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itemListaResumen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemListaResumen.Designer.cs">
+      <DependentUpon>itemListaResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itemListaResumenReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemListaResumenReporte.Designer.cs">
+      <DependentUpon>itemListaResumenReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaActualizarClientes.cs">
       <SubType>UserControl</SubType>
@@ -209,6 +227,12 @@
     <Compile Include="pantallaDetalleReporte.Designer.cs">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaListaReportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaListaReportes.Designer.cs">
+      <DependentUpon>pantallaListaReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -274,6 +298,9 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmResumenReporte.resx">
+      <DependentUpon>frmResumenReporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="itemDetalleGrandeReporte.resx">
       <DependentUpon>itemDetalleGrandeReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +312,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="itemListaReporte.resx">
       <DependentUpon>itemListaReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemListaResumen.resx">
+      <DependentUpon>itemListaResumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemListaResumenReporte.resx">
+      <DependentUpon>itemListaResumenReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarClientes.resx">
       <DependentUpon>pantallaActualizarClientes.cs</DependentUpon>
@@ -345,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaDetalleReporte.resx">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaListaReportes.resx">
+      <DependentUpon>pantallaListaReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

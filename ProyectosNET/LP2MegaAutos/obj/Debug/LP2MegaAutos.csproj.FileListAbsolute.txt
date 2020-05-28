@@ -68,3 +68,7 @@ D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaDetalleReporte.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemDetalleReporte.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemListaReporte.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemListaResumen.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.itemListaResumenReporte.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaListaReportes.resources
+D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.frmResumenReporte.resources

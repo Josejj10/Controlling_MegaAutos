@@ -50,9 +50,11 @@ namespace LP2MegaAutos
 
         }
 
-        private void btnMensual_Click(object sender, EventArgs e)
+        private void btnResumen_Click(object sender, EventArgs e)
         {
             // Abrir Form Resumen
+            frmResumenReporte frmResumen = new frmResumenReporte();
+            frmResumen.Show();
         }
 
     }

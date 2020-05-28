@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.clickableText1 = new LP2MegaAutos.CustomControls.ClickableText();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.rpBtnGenerarReporte = new LP2MegaAutos.RoundedPanel();
             this.btnExportar = new System.Windows.Forms.Button();
@@ -46,8 +47,8 @@
             this.lblEgresos = new System.Windows.Forms.Label();
             this.rpIngresos = new LP2MegaAutos.RoundedPanel();
             this.rpEgresos = new LP2MegaAutos.RoundedPanel();
-            this.rndMensual = new LP2MegaAutos.RoundedPanel();
-            this.btnMensual = new System.Windows.Forms.Button();
+            this.rndResumen = new LP2MegaAutos.RoundedPanel();
+            this.btnResumen = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.itemDetalleGrandeReporte1 = new LP2MegaAutos.itemDetalleGrandeReporte();
             this.itemDetalleReporte1 = new LP2MegaAutos.itemDetalleReporte();
@@ -55,12 +56,11 @@
             this.itemDetalleGrandeReporte2 = new LP2MegaAutos.itemDetalleGrandeReporte();
             this.itemDetalleReporte2 = new LP2MegaAutos.itemDetalleReporte();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.clickableText1 = new LP2MegaAutos.CustomControls.ClickableText();
             this.rpTopMain.SuspendLayout();
             this.rpBtnGenerarReporte.SuspendLayout();
             this.pnlRojo.SuspendLayout();
             this.tlpDetalles.SuspendLayout();
-            this.rndMensual.SuspendLayout();
+            this.rndResumen.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,26 @@
             this.rpTopMain.XPanel = 0;
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
+            // 
+            // clickableText1
+            // 
+            this.clickableText1.BackColor = System.Drawing.Color.Transparent;
+            this.clickableText1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clickableText1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clickableText1.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clickableText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.clickableText1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clickableText1.Location = new System.Drawing.Point(553, 19);
+            this.clickableText1.Name = "clickableText1";
+            this.clickableText1.Size = new System.Drawing.Size(48, 18);
+            this.clickableText1.TabIndex = 34;
+            this.tags.SetTag2(this.clickableText1, null);
+            this.tags.SetTag3(this.clickableText1, null);
+            this.tags.SetTagFontName(this.clickableText1, fontsD.Montserrat_SemiBold);
+            this.tags.SetTagFontSize(this.clickableText1, 10F);
+            this.tags.SetTagFontStyle(this.clickableText1, System.Drawing.FontStyle.Underline);
+            this.clickableText1.Text = "Filtrar";
+            this.clickableText1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTitulo
             // 
@@ -401,54 +421,54 @@
             this.rpEgresos.YBorde = 0;
             this.rpEgresos.YPanel = 0;
             // 
-            // rndMensual
+            // rndResumen
             // 
-            this.rndMensual.ArcRadiusBorde = 8;
-            this.rndMensual.ArcRadiusPanel = 8;
-            this.rndMensual.BackColor = System.Drawing.Color.Transparent;
-            this.rndMensual.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.rndMensual.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.rndMensual.Controls.Add(this.btnMensual);
-            this.rndMensual.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndMensual.Location = new System.Drawing.Point(3, 111);
-            this.rndMensual.MenosHeightBorde = 1;
-            this.rndMensual.MenosHeightPanel = 1;
-            this.rndMensual.MenosWidthBorde = 1;
-            this.rndMensual.MenosWidthPanel = 1;
-            this.rndMensual.Name = "rndMensual";
-            this.rndMensual.PorcLuzColorBorde = 0;
-            this.rndMensual.Size = new System.Drawing.Size(139, 28);
-            this.rndMensual.TabIndex = 44;
-            this.tags.SetTag2(this.rndMensual, null);
-            this.tags.SetTag3(this.rndMensual, null);
-            this.tags.SetTagFontName(this.rndMensual, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rndMensual, 10F);
-            this.tags.SetTagFontStyle(this.rndMensual, System.Drawing.FontStyle.Regular);
-            this.rndMensual.XBorde = 0;
-            this.rndMensual.XPanel = 0;
-            this.rndMensual.YBorde = 0;
-            this.rndMensual.YPanel = 0;
+            this.rndResumen.ArcRadiusBorde = 8;
+            this.rndResumen.ArcRadiusPanel = 8;
+            this.rndResumen.BackColor = System.Drawing.Color.Transparent;
+            this.rndResumen.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rndResumen.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rndResumen.Controls.Add(this.btnResumen);
+            this.rndResumen.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndResumen.Location = new System.Drawing.Point(3, 111);
+            this.rndResumen.MenosHeightBorde = 1;
+            this.rndResumen.MenosHeightPanel = 1;
+            this.rndResumen.MenosWidthBorde = 1;
+            this.rndResumen.MenosWidthPanel = 1;
+            this.rndResumen.Name = "rndResumen";
+            this.rndResumen.PorcLuzColorBorde = 0;
+            this.rndResumen.Size = new System.Drawing.Size(139, 28);
+            this.rndResumen.TabIndex = 44;
+            this.tags.SetTag2(this.rndResumen, null);
+            this.tags.SetTag3(this.rndResumen, null);
+            this.tags.SetTagFontName(this.rndResumen, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rndResumen, 10F);
+            this.tags.SetTagFontStyle(this.rndResumen, System.Drawing.FontStyle.Regular);
+            this.rndResumen.XBorde = 0;
+            this.rndResumen.XPanel = 0;
+            this.rndResumen.YBorde = 0;
+            this.rndResumen.YPanel = 0;
             // 
-            // btnMensual
+            // btnResumen
             // 
-            this.btnMensual.BackColor = System.Drawing.Color.Transparent;
-            this.btnMensual.FlatAppearance.BorderSize = 0;
-            this.btnMensual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMensual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMensual.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
-            this.btnMensual.ForeColor = System.Drawing.Color.White;
-            this.btnMensual.Location = new System.Drawing.Point(3, 3);
-            this.btnMensual.Name = "btnMensual";
-            this.btnMensual.Size = new System.Drawing.Size(132, 22);
-            this.btnMensual.TabIndex = 6;
-            this.tags.SetTag2(this.btnMensual, null);
-            this.tags.SetTag3(this.btnMensual, null);
-            this.tags.SetTagFontName(this.btnMensual, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnMensual, 9F);
-            this.tags.SetTagFontStyle(this.btnMensual, System.Drawing.FontStyle.Regular);
-            this.btnMensual.Text = "Ver Resumen";
-            this.btnMensual.UseVisualStyleBackColor = false;
-            this.btnMensual.Click += new System.EventHandler(this.btnMensual_Click);
+            this.btnResumen.BackColor = System.Drawing.Color.Transparent;
+            this.btnResumen.FlatAppearance.BorderSize = 0;
+            this.btnResumen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnResumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResumen.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.btnResumen.ForeColor = System.Drawing.Color.White;
+            this.btnResumen.Location = new System.Drawing.Point(3, 3);
+            this.btnResumen.Name = "btnResumen";
+            this.btnResumen.Size = new System.Drawing.Size(132, 22);
+            this.btnResumen.TabIndex = 6;
+            this.tags.SetTag2(this.btnResumen, null);
+            this.tags.SetTag3(this.btnResumen, null);
+            this.tags.SetTagFontName(this.btnResumen, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnResumen, 9F);
+            this.tags.SetTagFontStyle(this.btnResumen, System.Drawing.FontStyle.Regular);
+            this.btnResumen.Text = "Ver Resumen";
+            this.btnResumen.UseVisualStyleBackColor = false;
+            this.btnResumen.Click += new System.EventHandler(this.btnResumen_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -580,26 +600,6 @@
             this.tags.SetTagFontSize(this.tableLayoutPanel1, 10F);
             this.tags.SetTagFontStyle(this.tableLayoutPanel1, System.Drawing.FontStyle.Regular);
             // 
-            // clickableText1
-            // 
-            this.clickableText1.BackColor = System.Drawing.Color.Transparent;
-            this.clickableText1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clickableText1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clickableText1.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clickableText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.clickableText1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.clickableText1.Location = new System.Drawing.Point(553, 19);
-            this.clickableText1.Name = "clickableText1";
-            this.clickableText1.Size = new System.Drawing.Size(48, 18);
-            this.clickableText1.TabIndex = 34;
-            this.tags.SetTag2(this.clickableText1, null);
-            this.tags.SetTag3(this.clickableText1, null);
-            this.tags.SetTagFontName(this.clickableText1, fontsD.Montserrat_SemiBold);
-            this.tags.SetTagFontSize(this.clickableText1, 10F);
-            this.tags.SetTagFontStyle(this.clickableText1, System.Drawing.FontStyle.Underline);
-            this.clickableText1.Text = "Filtrar";
-            this.clickableText1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // pantallaDetalleReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,7 +607,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.rndMensual);
+            this.Controls.Add(this.rndResumen);
             this.Controls.Add(this.rpEgresos);
             this.Controls.Add(this.rpIngresos);
             this.Controls.Add(this.lblEgresos);
@@ -629,7 +629,7 @@
             this.pnlRojo.ResumeLayout(false);
             this.tlpDetalles.ResumeLayout(false);
             this.tlpDetalles.PerformLayout();
-            this.rndMensual.ResumeLayout(false);
+            this.rndResumen.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -654,8 +654,8 @@
         private System.Windows.Forms.Label lblEgresos;
         private RoundedPanel rpIngresos;
         private RoundedPanel rpEgresos;
-        private RoundedPanel rndMensual;
-        private System.Windows.Forms.Button btnMensual;
+        private RoundedPanel rndResumen;
+        private System.Windows.Forms.Button btnResumen;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private itemDetalleGrandeReporte itemDetalleGrandeReporte1;
         private itemDetalleReporte itemDetalleReporte1;

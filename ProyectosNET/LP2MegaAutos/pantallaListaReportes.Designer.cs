@@ -47,13 +47,17 @@
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.lbl_ListaReportes = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.flpReportes = new System.Windows.Forms.FlowLayoutPanel();
+            this.itemListaReporte1 = new LP2MegaAutos.itemListaReporte();
+            this.itemListaReporte2 = new LP2MegaAutos.itemListaReporte();
+            this.itemListaReporte3 = new LP2MegaAutos.itemListaReporte();
             this.pnlBuscar.SuspendLayout();
             this.rnd_cliente.SuspendLayout();
             this.rnd_AreaTrabajo.SuspendLayout();
             this.rnd_vehiculo.SuspendLayout();
             this.rnd_todos.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
+            this.flpReportes.SuspendLayout();
             this.SuspendLayout();
             // 
             // rpTopMain
@@ -357,7 +361,7 @@
             this.btn_masFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_masFiltros.Location = new System.Drawing.Point(263, 111);
             this.btn_masFiltros.Name = "btn_masFiltros";
-            this.btn_masFiltros.Size = new System.Drawing.Size(84, 18);
+            this.btn_masFiltros.Size = new System.Drawing.Size(84, 17);
             this.btn_masFiltros.TabIndex = 42;
             this.btn_masFiltros.Tag = "button";
             this.tagsExtender1.SetTag2(this.btn_masFiltros, null);
@@ -377,14 +381,14 @@
             this.rpn_ListaServicios.Controls.Add(this.btn_Agregar);
             this.rpn_ListaServicios.Controls.Add(this.lbl_ListaReportes);
             this.rpn_ListaServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpn_ListaServicios.Location = new System.Drawing.Point(34, 132);
+            this.rpn_ListaServicios.Location = new System.Drawing.Point(18, 132);
             this.rpn_ListaServicios.MenosHeightBorde = 1;
             this.rpn_ListaServicios.MenosHeightPanel = 1;
             this.rpn_ListaServicios.MenosWidthBorde = 1;
             this.rpn_ListaServicios.MenosWidthPanel = 1;
             this.rpn_ListaServicios.Name = "rpn_ListaServicios";
             this.rpn_ListaServicios.PorcLuzColorBorde = 0;
-            this.rpn_ListaServicios.Size = new System.Drawing.Size(539, 27);
+            this.rpn_ListaServicios.Size = new System.Drawing.Size(574, 27);
             this.rpn_ListaServicios.TabIndex = 43;
             this.tagsExtender1.SetTag2(this.rpn_ListaServicios, null);
             this.tagsExtender1.SetTag3(this.rpn_ListaServicios, null);
@@ -435,27 +439,100 @@
             this.lbl_ListaReportes.Text = "Reportes";
             this.lbl_ListaReportes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // flpReportes
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.panel1.Location = new System.Drawing.Point(34, 159);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 301);
-            this.panel1.TabIndex = 44;
-            this.tagsExtender1.SetTag2(this.panel1, null);
-            this.tagsExtender1.SetTag3(this.panel1, null);
-            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
+            this.flpReportes.AutoScroll = true;
+            this.flpReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.flpReportes.Controls.Add(this.itemListaReporte3);
+            this.flpReportes.Controls.Add(this.itemListaReporte1);
+            this.flpReportes.Controls.Add(this.itemListaReporte2);
+            this.flpReportes.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flpReportes.Location = new System.Drawing.Point(18, 159);
+            this.flpReportes.Name = "flpReportes";
+            this.flpReportes.Size = new System.Drawing.Size(574, 295);
+            this.flpReportes.TabIndex = 44;
+            this.tagsExtender1.SetTag2(this.flpReportes, null);
+            this.tagsExtender1.SetTag3(this.flpReportes, null);
+            this.tagsExtender1.SetTagFontName(this.flpReportes, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpReportes, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpReportes, System.Drawing.FontStyle.Regular);
+            // 
+            // itemListaReporte1
+            // 
+            this.itemListaReporte1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemListaReporte1.ColorPanel = System.Drawing.Color.White;
+            this.itemListaReporte1.FechaGenerado = "24/05/2020";
+            this.itemListaReporte1.Location = new System.Drawing.Point(12, 172);
+            this.itemListaReporte1.MontoEgresos = "10.00";
+            this.itemListaReporte1.MontoIngresos = "1,000,000.00";
+            this.itemListaReporte1.MontoTotal = "100,000.00";
+            this.itemListaReporte1.Name = "itemListaReporte1";
+            this.itemListaReporte1.QuienGenero = "Percy Jackson";
+            this.itemListaReporte1.Sede = "Sede";
+            this.itemListaReporte1.Size = new System.Drawing.Size(542, 163);
+            this.itemListaReporte1.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.itemListaReporte1, null);
+            this.tagsExtender1.SetTag3(this.itemListaReporte1, null);
+            this.tagsExtender1.SetTagFontName(this.itemListaReporte1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemListaReporte1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte1, System.Drawing.FontStyle.Regular);
+            this.itemListaReporte1.TextoPrincipal = "Texto Principal";
+            // 
+            // itemListaReporte2
+            // 
+            this.itemListaReporte2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemListaReporte2.ColorPanel = System.Drawing.Color.White;
+            this.itemListaReporte2.FechaGenerado = "24/05/2020";
+            this.itemListaReporte2.Location = new System.Drawing.Point(12, 341);
+            this.itemListaReporte2.MontoEgresos = "10.00";
+            this.itemListaReporte2.MontoIngresos = "1,000,000.00";
+            this.itemListaReporte2.MontoTotal = "100,000.00";
+            this.itemListaReporte2.Name = "itemListaReporte2";
+            this.itemListaReporte2.QuienGenero = "Percy Jackson";
+            this.itemListaReporte2.Sede = "Sede";
+            this.itemListaReporte2.Size = new System.Drawing.Size(542, 163);
+            this.itemListaReporte2.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.itemListaReporte2, null);
+            this.tagsExtender1.SetTag3(this.itemListaReporte2, null);
+            this.tagsExtender1.SetTagFontName(this.itemListaReporte2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemListaReporte2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte2, System.Drawing.FontStyle.Regular);
+            this.itemListaReporte2.TextoPrincipal = "Texto Principal";
+            // 
+            // itemListaReporte3
+            // 
+            this.itemListaReporte3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemListaReporte3.ColorPanel = System.Drawing.Color.White;
+            this.itemListaReporte3.FechaGenerado = "24/05/2020";
+            this.itemListaReporte3.Location = new System.Drawing.Point(12, 3);
+            this.itemListaReporte3.MontoEgresos = "10.00";
+            this.itemListaReporte3.MontoIngresos = "1,000,000.00";
+            this.itemListaReporte3.MontoTotal = "100,000.00";
+            this.itemListaReporte3.Name = "itemListaReporte3";
+            this.itemListaReporte3.QuienGenero = "Percy Jackson";
+            this.itemListaReporte3.Sede = "Sede";
+            this.itemListaReporte3.Size = new System.Drawing.Size(542, 163);
+            this.itemListaReporte3.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.itemListaReporte3, null);
+            this.tagsExtender1.SetTag3(this.itemListaReporte3, null);
+            this.tagsExtender1.SetTagFontName(this.itemListaReporte3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemListaReporte3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte3, System.Drawing.FontStyle.Regular);
+            this.itemListaReporte3.TextoPrincipal = "Texto Principal";
             // 
             // pantallaListaReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.flpReportes);
             this.Controls.Add(this.rpn_ListaServicios);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_masFiltros);
             this.Controls.Add(this.rnd_cliente);
             this.Controls.Add(this.rnd_AreaTrabajo);
@@ -479,6 +556,7 @@
             this.rnd_todos.ResumeLayout(false);
             this.rpn_ListaServicios.ResumeLayout(false);
             this.rpn_ListaServicios.PerformLayout();
+            this.flpReportes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,6 +582,9 @@
         private RoundedPanel rpn_ListaServicios;
         private System.Windows.Forms.Button btn_Agregar;
         private System.Windows.Forms.Label lbl_ListaReportes;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flpReportes;
+        private itemListaReporte itemListaReporte3;
+        private itemListaReporte itemListaReporte1;
+        private itemListaReporte itemListaReporte2;
     }
 }

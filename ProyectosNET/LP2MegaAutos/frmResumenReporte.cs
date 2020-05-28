@@ -26,7 +26,7 @@ namespace LP2MegaAutos
             Close();
         }
 
-        private void boton_minimizar_MouseClick(object sender, MouseEventArgs e)
+        private void boton_minimizar_MouseClick(object sender, EventArgs e)
         {
             if (this.WindowState != FormWindowState.Minimized)
                 this.WindowState = FormWindowState.Minimized;
@@ -60,5 +60,7 @@ namespace LP2MegaAutos
             // Deberia mandar un msgbox de si quieres salir
             this.Close();
         }
+
+        
     }
 }

@@ -481,6 +481,9 @@
             this.tags.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.title_bar, 10F);
             this.tags.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // boton_minimizar
             // 
@@ -502,6 +505,7 @@
             this.tags.SetTagFontSize(this.boton_minimizar, 10F);
             this.tags.SetTagFontStyle(this.boton_minimizar, System.Drawing.FontStyle.Regular);
             this.boton_minimizar.UseVisualStyleBackColor = true;
+            this.boton_minimizar.Click += new System.EventHandler(this.boton_minimizar_MouseClick);
             // 
             // boton_cerrar
             // 
@@ -527,6 +531,7 @@
             this.tags.SetTagFontSize(this.boton_cerrar, 10F);
             this.tags.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
             this.boton_cerrar.UseVisualStyleBackColor = false;
+            this.boton_cerrar.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
             // 
             // frmResumenReporte
             // 

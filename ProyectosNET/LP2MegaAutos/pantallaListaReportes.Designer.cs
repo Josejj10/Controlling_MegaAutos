@@ -48,9 +48,9 @@
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.lbl_ListaReportes = new System.Windows.Forms.Label();
             this.flpReportes = new System.Windows.Forms.FlowLayoutPanel();
+            this.itemListaReporte3 = new LP2MegaAutos.itemListaReporte();
             this.itemListaReporte1 = new LP2MegaAutos.itemListaReporte();
             this.itemListaReporte2 = new LP2MegaAutos.itemListaReporte();
-            this.itemListaReporte3 = new LP2MegaAutos.itemListaReporte();
             this.pnlBuscar.SuspendLayout();
             this.rnd_cliente.SuspendLayout();
             this.rnd_AreaTrabajo.SuspendLayout();
@@ -419,6 +419,7 @@
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // lbl_ListaReportes
             // 
@@ -456,6 +457,29 @@
             this.tagsExtender1.SetTagFontName(this.flpReportes, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.flpReportes, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flpReportes, System.Drawing.FontStyle.Regular);
+            // 
+            // itemListaReporte3
+            // 
+            this.itemListaReporte3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemListaReporte3.ColorPanel = System.Drawing.Color.White;
+            this.itemListaReporte3.FechaGenerado = "24/05/2020";
+            this.itemListaReporte3.Location = new System.Drawing.Point(12, 3);
+            this.itemListaReporte3.MontoEgresos = "10.00";
+            this.itemListaReporte3.MontoIngresos = "1,000,000.00";
+            this.itemListaReporte3.MontoTotal = "100,000.00";
+            this.itemListaReporte3.Name = "itemListaReporte3";
+            this.itemListaReporte3.QuienGenero = "Percy Jackson";
+            this.itemListaReporte3.Sede = "Sede";
+            this.itemListaReporte3.Size = new System.Drawing.Size(542, 163);
+            this.itemListaReporte3.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.itemListaReporte3, null);
+            this.tagsExtender1.SetTag3(this.itemListaReporte3, null);
+            this.tagsExtender1.SetTagFontName(this.itemListaReporte3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemListaReporte3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte3, System.Drawing.FontStyle.Regular);
+            this.itemListaReporte3.TextoPrincipal = "Texto Principal";
             // 
             // itemListaReporte1
             // 
@@ -502,29 +526,6 @@
             this.tagsExtender1.SetTagFontSize(this.itemListaReporte2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.itemListaReporte2, System.Drawing.FontStyle.Regular);
             this.itemListaReporte2.TextoPrincipal = "Texto Principal";
-            // 
-            // itemListaReporte3
-            // 
-            this.itemListaReporte3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemListaReporte3.ColorPanel = System.Drawing.Color.White;
-            this.itemListaReporte3.FechaGenerado = "24/05/2020";
-            this.itemListaReporte3.Location = new System.Drawing.Point(12, 3);
-            this.itemListaReporte3.MontoEgresos = "10.00";
-            this.itemListaReporte3.MontoIngresos = "1,000,000.00";
-            this.itemListaReporte3.MontoTotal = "100,000.00";
-            this.itemListaReporte3.Name = "itemListaReporte3";
-            this.itemListaReporte3.QuienGenero = "Percy Jackson";
-            this.itemListaReporte3.Sede = "Sede";
-            this.itemListaReporte3.Size = new System.Drawing.Size(542, 163);
-            this.itemListaReporte3.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.itemListaReporte3, null);
-            this.tagsExtender1.SetTag3(this.itemListaReporte3, null);
-            this.tagsExtender1.SetTagFontName(this.itemListaReporte3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemListaReporte3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte3, System.Drawing.FontStyle.Regular);
-            this.itemListaReporte3.TextoPrincipal = "Texto Principal";
             // 
             // pantallaListaReportes
             // 

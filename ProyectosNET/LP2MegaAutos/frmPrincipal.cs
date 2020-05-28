@@ -127,14 +127,16 @@ namespace LP2MegaAutos
 
         private void btnServicios_Click(object sender, EventArgs e)
         {
-            if (!rpMain.Controls.Contains(pantallaServicios.Instancia))
+            if (!rpMain.Controls.Contains(pantallaActualizarDrivers.Instancia))
             {
-                rpMain.Controls.Add(pantallaServicios.Instancia);
-                pantallaServicios.Instancia.Dock = DockStyle.Fill;
-                pantallaServicios.Instancia.BringToFront();
+                rpMain.Controls.Add(pantallaActualizarDrivers.Instancia);
+                pantallaActualizarDrivers.Instancia.Dock = DockStyle.Fill;
+                pantallaActualizarDrivers.Instancia.BringToFront();
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaActualizarDrivers.Instancia.Parent);
             }
             else
-                pantallaServicios.Instancia.BringToFront();
+                pantallaActualizarDrivers.Instancia.BringToFront();
 
             // Cambiar los botones y rPanel excepto el enviado
             cambiarColoresBotonesMenu(rpBtnMenuServicios);

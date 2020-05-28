@@ -90,9 +90,9 @@
             this.txt_NombreSede.TabIndex = 43;
             this.tagsExtender1.SetTag2(this.txt_NombreSede, null);
             this.tagsExtender1.SetTag3(this.txt_NombreSede, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NombreSede, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_NombreSede, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_NombreSede, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreSede, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_NombreSede, 22F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NombreSede, System.Drawing.FontStyle.Bold);
             this.txt_NombreSede.Text = "Taller principal";
             // 
             // roundedPanel1
@@ -136,9 +136,9 @@
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
             this.btn_guardar.Text = "Guardar cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;
             // 
@@ -226,7 +226,7 @@
             this.lbl_teléfono.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_teléfono, null);
             this.tagsExtender1.SetTag3(this.lbl_teléfono, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_teléfono, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_teléfono, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_teléfono, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_teléfono, System.Drawing.FontStyle.Bold);
             this.lbl_teléfono.Text = "Teléfono";
@@ -302,7 +302,7 @@
             this.lbl_distrito.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_distrito, null);
             this.tagsExtender1.SetTag3(this.lbl_distrito, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_distrito, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_distrito, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_distrito, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_distrito, System.Drawing.FontStyle.Bold);
             this.lbl_distrito.Text = "Distrito";
@@ -378,7 +378,7 @@
             this.lbl_direccion.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_direccion, null);
             this.tagsExtender1.SetTag3(this.lbl_direccion, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_direccion, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_direccion, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_direccion, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_direccion, System.Drawing.FontStyle.Bold);
             this.lbl_direccion.Text = "Dirección";

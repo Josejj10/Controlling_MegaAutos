@@ -54,6 +54,7 @@
             this.rpn_ListaPermisosUsuario = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaPermisosUsuario = new System.Windows.Forms.Label();
             this.btn_AgregarPermiso = new System.Windows.Forms.Button();
+            this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
             this.pnl_Correo.SuspendLayout();
             this.pnl_Telefono.SuspendLayout();
             this.pnl_TipoDocumento.SuspendLayout();
@@ -338,7 +339,7 @@
             this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel1.Controls.Add(this.btn_guardar);
             this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel1.Location = new System.Drawing.Point(175, 432);
+            this.roundedPanel1.Location = new System.Drawing.Point(163, 417);
             this.roundedPanel1.MenosHeightBorde = 1;
             this.roundedPanel1.MenosHeightPanel = 1;
             this.roundedPanel1.MenosWidthBorde = 1;
@@ -473,7 +474,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel2.Location = new System.Drawing.Point(36, 246);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(538, 174);
+            this.panel2.Size = new System.Drawing.Size(538, 165);
             this.panel2.TabIndex = 54;
             this.tagsExtender1.SetTag2(this.panel2, null);
             this.tagsExtender1.SetTag3(this.panel2, null);
@@ -549,11 +550,39 @@
             this.btn_AgregarPermiso.UseVisualStyleBackColor = false;
             this.btn_AgregarPermiso.Click += new System.EventHandler(this.btn_AgregarPermiso_Click);
             // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.ArcRadiusBorde = 5;
+            this.roundedPanel5.ArcRadiusPanel = 5;
+            this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel5.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel5.MenosHeightBorde = 1;
+            this.roundedPanel5.MenosHeightPanel = 1;
+            this.roundedPanel5.MenosWidthBorde = 1;
+            this.roundedPanel5.MenosWidthPanel = 1;
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.PorcLuzColorBorde = 0;
+            this.roundedPanel5.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel5.TabIndex = 55;
+            this.tagsExtender1.SetTag2(this.roundedPanel5, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel5, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel5, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel5, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel5, System.Drawing.FontStyle.Regular);
+            this.roundedPanel5.XBorde = 0;
+            this.roundedPanel5.XPanel = 0;
+            this.roundedPanel5.YBorde = 0;
+            this.roundedPanel5.YPanel = 0;
+            // 
             // pantallaAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.rpn_ListaPermisosUsuario);
             this.Controls.Add(this.pnl_Correo);
@@ -615,5 +644,6 @@
         private RoundedPanel rpn_ListaPermisosUsuario;
         private System.Windows.Forms.Label lbl_ListaPermisosUsuario;
         private System.Windows.Forms.Button btn_AgregarPermiso;
+        private RoundedPanel roundedPanel5;
     }
 }

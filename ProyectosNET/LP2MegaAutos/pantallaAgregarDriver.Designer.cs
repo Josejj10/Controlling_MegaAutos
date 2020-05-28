@@ -46,6 +46,7 @@
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
             this.txt_Formula = new System.Windows.Forms.TextBox();
             this.lbl_Formula = new System.Windows.Forms.Label();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.pnl_AreaTrabajo.SuspendLayout();
             this.pnl_CuentaContable.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
@@ -57,7 +58,7 @@
             this.pnl_AreaTrabajo.Controls.Add(this.roundedPanel3);
             this.pnl_AreaTrabajo.Controls.Add(this.txt_AreaTrabajo);
             this.pnl_AreaTrabajo.Controls.Add(this.lbl_AreaTrabajo);
-            this.pnl_AreaTrabajo.Location = new System.Drawing.Point(159, 273);
+            this.pnl_AreaTrabajo.Location = new System.Drawing.Point(159, 247);
             this.pnl_AreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_AreaTrabajo.Name = "pnl_AreaTrabajo";
             this.pnl_AreaTrabajo.Size = new System.Drawing.Size(292, 41);
@@ -132,7 +133,7 @@
             this.pnl_CuentaContable.Controls.Add(this.roundedPanel2);
             this.pnl_CuentaContable.Controls.Add(this.txt_CuentaContable);
             this.pnl_CuentaContable.Controls.Add(this.lbl_CuentaContable);
-            this.pnl_CuentaContable.Location = new System.Drawing.Point(160, 215);
+            this.pnl_CuentaContable.Location = new System.Drawing.Point(160, 189);
             this.pnl_CuentaContable.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_CuentaContable.Name = "pnl_CuentaContable";
             this.pnl_CuentaContable.Size = new System.Drawing.Size(292, 41);
@@ -253,7 +254,7 @@
             this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel1.Controls.Add(this.btn_guardar);
             this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel1.Location = new System.Drawing.Point(165, 395);
+            this.roundedPanel1.Location = new System.Drawing.Point(165, 369);
             this.roundedPanel1.MenosHeightBorde = 1;
             this.roundedPanel1.MenosHeightPanel = 1;
             this.roundedPanel1.MenosWidthBorde = 1;
@@ -311,7 +312,7 @@
             this.pnl_NumeroDocumento.Controls.Add(this.rnd_color_1);
             this.pnl_NumeroDocumento.Controls.Add(this.txt_Formula);
             this.pnl_NumeroDocumento.Controls.Add(this.lbl_Formula);
-            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(160, 157);
+            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(160, 131);
             this.pnl_NumeroDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_NumeroDocumento.Name = "pnl_NumeroDocumento";
             this.pnl_NumeroDocumento.Size = new System.Drawing.Size(292, 41);
@@ -381,11 +382,39 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_Formula, System.Drawing.FontStyle.Bold);
             this.lbl_Formula.Text = "Formula";
             // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel4.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel4.TabIndex = 48;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
+            // 
             // pantallaAgregarDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.pnl_AreaTrabajo);
             this.Controls.Add(this.pnl_CuentaContable);
             this.Controls.Add(this.txt_AgregarCliente);
@@ -432,5 +461,6 @@
         private RoundedPanel rnd_color_1;
         private System.Windows.Forms.TextBox txt_Formula;
         private System.Windows.Forms.Label lbl_Formula;
+        private RoundedPanel roundedPanel4;
     }
 }

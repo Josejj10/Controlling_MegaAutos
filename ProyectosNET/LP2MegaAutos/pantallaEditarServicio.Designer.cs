@@ -46,6 +46,7 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.txt_NombreServicio = new System.Windows.Forms.TextBox();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.pnl_codServ.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
@@ -299,7 +300,7 @@
             this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel1.Controls.Add(this.btn_guardar);
             this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel1.Location = new System.Drawing.Point(168, 420);
+            this.roundedPanel1.Location = new System.Drawing.Point(168, 396);
             this.roundedPanel1.MenosHeightBorde = 1;
             this.roundedPanel1.MenosHeightPanel = 1;
             this.roundedPanel1.MenosWidthBorde = 1;
@@ -382,11 +383,39 @@
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreServicio, System.Drawing.FontStyle.Bold);
             this.txt_NombreServicio.Text = "Mantenimiento preventivo\r\n";
             // 
-            // pantallaEditarServicios
+            // roundedPanel4
+            // 
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel4.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel4.TabIndex = 55;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
+            // 
+            // pantallaEditarServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.txt_NombreServicio);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.roundedPanel1);
@@ -396,7 +425,7 @@
             this.Controls.Add(this.pnl_codServ);
             this.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "pantallaEditarServicios";
+            this.Name = "pantallaEditarServicio";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
@@ -435,5 +464,6 @@
         private System.Windows.Forms.Button btn_guardar;
         private RoundedPanel rpTopMain;
         private System.Windows.Forms.TextBox txt_NombreServicio;
+        private RoundedPanel roundedPanel4;
     }
 }

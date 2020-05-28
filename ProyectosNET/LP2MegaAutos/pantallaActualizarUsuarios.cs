@@ -12,9 +12,37 @@ namespace LP2MegaAutos
 {
     public partial class pantallaActualizarUsuarios : UserControl
     {
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaActualizarUsuarios _instancia;
+        public static pantallaActualizarUsuarios Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaActualizarUsuarios();
+                return _instancia;
+            }
+        }
+        #endregion instancia
         public pantallaActualizarUsuarios()
         {
             InitializeComponent();
+            il_Usuarios1.EditarClick += btnEditarClick;
+            il_Usuarios2.EditarClick += btnEditarClick;
+            il_Usuarios3.EditarClick += btnEditarClick;
+        }
+        private void btnEditarClick(Object sender, EventArgs e)
+        {
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaEditarUsuario.Instancia))
+            {
+                this.Controls.Add(pantallaEditarUsuario.Instancia);
+                pantallaEditarUsuario.Instancia.Dock = DockStyle.Fill;
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaEditarUsuario.Instancia.Parent);
+            }
+            pantallaEditarUsuario.Instancia.BringToFront();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

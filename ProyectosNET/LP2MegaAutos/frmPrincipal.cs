@@ -283,7 +283,7 @@ namespace LP2MegaAutos
             pantallaListaReportes.Instancia.BringToFront();
 
             // Cambiar los botones y rPanel excepto el enviado
-            cambiarColoresBotonesMenu(rpBtnMenuAjustes);
+            cambiarColoresBotonesMenu(rpBtnMenuReportes);
         }
 
         private void actualizarBD(object sender, EventArgs e)

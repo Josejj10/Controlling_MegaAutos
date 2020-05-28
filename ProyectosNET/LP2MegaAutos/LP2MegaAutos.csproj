@@ -215,6 +215,12 @@
     <Compile Include="pantallaInicioUsuarioNivel2.Designer.cs">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaListaReportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaListaReportes.Designer.cs">
+      <DependentUpon>pantallaListaReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -378,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarSedes.resx">
       <DependentUpon>pantallaActualizarSedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaListaReportes.resx">
+      <DependentUpon>pantallaListaReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

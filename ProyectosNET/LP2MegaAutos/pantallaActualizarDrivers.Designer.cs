@@ -383,7 +383,7 @@
             this.panel1.Controls.Add(this.il_Drivers2);
             this.panel1.Location = new System.Drawing.Point(36, 142);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 314);
+            this.panel1.Size = new System.Drawing.Size(538, 306);
             this.panel1.TabIndex = 27;
             this.tagsExtender1.SetTag2(this.panel1, null);
             this.tagsExtender1.SetTag3(this.panel1, null);

@@ -12,9 +12,40 @@ namespace LP2MegaAutos
 {
     public partial class pantallaAjustesUsuario : UserControl
     {
-        public pantallaAjustesUsuario()
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaAjustesUsuario _instancia;
+        public static pantallaAjustesUsuario Instancia
         {
-            InitializeComponent();
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaAjustesUsuario();
+                return _instancia;
+            }
         }
+        #endregion instancia
+
+        //public pantallaAjustesUsuario()
+        //{
+
+        //    InitializeComponent();
+        //    btnEditar = btnEditarClick;
+        //    btnEditar = btnEditarClick;
+        //    btnEditar = btnEditarClick;
+        //}
+        //private void btnEditarClick(Object sender, EventArgs e)
+        //{
+        //    //MessageBox.Show("NO AUN");
+        //    if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
+        //    {
+        //        this.Controls.Add(pantallaEditarInformacionPropia.Instancia);
+        //        pantallaEditarInformacionPropia.Instancia.Dock = DockStyle.Fill;
+        //        if (DarkMode.is_dark_mode_active())
+        //            DarkMode.iniciarSinTimer(pantallaEditarInformacionPropia.Instancia.Parent);
+        //    }
+        //    pantallaEditarInformacionPropia.Instancia.BringToFront();
+        //}
+
     }
 }

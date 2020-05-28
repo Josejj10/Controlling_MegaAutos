@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaAjustesUsuario));
             this.boton_ver_password = new System.Windows.Forms.Button();
             this.rpn_ListaPermisosUsuario = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaPermisosUsuario = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.txt_TipoUsuario = new System.Windows.Forms.TextBox();
             this.lbl_TipoUsuario = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -508,11 +510,38 @@
             this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.White;
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(560, 49);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(32, 32);
+            this.btnEditar.TabIndex = 45;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Tag = "botonImagen";
+            this.tagsExtender1.SetTag2(this.btnEditar, null);
+            this.tagsExtender1.SetTag3(this.btnEditar, null);
+            this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
             // pantallaAjustesUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -569,5 +598,6 @@
         private System.Windows.Forms.TextBox txt_TipoUsuario;
         private System.Windows.Forms.Label lbl_TipoUsuario;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

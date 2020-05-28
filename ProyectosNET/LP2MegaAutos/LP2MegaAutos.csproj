@@ -101,6 +101,12 @@
     <Compile Include="pantallaActualizarUsuarios.Designer.cs">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaAgregarAreaTrabajo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAgregarAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaAgregarCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +148,18 @@
     </Compile>
     <Compile Include="pantallaAjustesUsuario.Designer.cs">
       <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaAreaTrabajoxCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAreaTrabajoxCC.Designer.cs">
+      <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaEditarAreaTrabajo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaEditarAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaEditarCliente.cs">
       <SubType>UserControl</SubType>
@@ -292,6 +310,9 @@
     <EmbeddedResource Include="pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAgregarAreaTrabajo.resx">
+      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaAgregarCliente.resx">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +336,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAreaTrabajoxCC.resx">
+      <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaEditarAreaTrabajo.resx">
+      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarCliente.resx">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>

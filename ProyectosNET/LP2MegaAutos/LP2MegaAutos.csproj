@@ -77,6 +77,12 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="frmFiltrarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFiltrarReportes.Designer.cs">
+      <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="itemLista.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     <Compile Include="pantallaEditarServicio.Designer.cs">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmFiltrarReportes.resx">
+      <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>

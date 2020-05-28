@@ -198,9 +198,19 @@ namespace LP2MegaAutos
         }
         #endregion Tipo Reporte
 
-        private void lblTitulo_Click(object sender, EventArgs e)
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
+            if (!this.Parent.Controls.Contains(pantallaDetalleReporte.Instancia))
+            {
+                this.Parent.Controls.Add(pantallaDetalleReporte.Instancia);
+                pantallaDetalleReporte.Instancia.Dock = DockStyle.Fill;
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaDetalleReporte.Instancia.Parent);
+            }
+            pantallaDetalleReporte.Instancia.BringToFront();
 
+            // Cambiar los botones y rPanel excepto el enviado
+            // TODO
         }
     }
 }

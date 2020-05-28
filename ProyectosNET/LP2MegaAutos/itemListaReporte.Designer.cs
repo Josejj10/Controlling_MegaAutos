@@ -29,25 +29,29 @@
         private void InitializeComponent()
         {
             this.rpItem = new LP2MegaAutos.RoundedPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblGeneradoEl = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblPor = new System.Windows.Forms.Label();
+            this.lblQuienGenero = new System.Windows.Forms.Label();
+            this.tlpSede = new System.Windows.Forms.TableLayoutPanel();
+            this.lblSede = new System.Windows.Forms.Label();
             this.tloResumen = new System.Windows.Forms.TableLayoutPanel();
             this.lblResumen = new System.Windows.Forms.Label();
-            this.lblMontoTotal = new System.Windows.Forms.Label();
             this.lblEgresos = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblSol3 = new System.Windows.Forms.Label();
             this.lblSol2 = new System.Windows.Forms.Label();
-            this.lblMontoEgresos = new System.Windows.Forms.Label();
             this.lblIngresos = new System.Windows.Forms.Label();
             this.lblSol1 = new System.Windows.Forms.Label();
             this.lblMontoIngresos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblPor = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblGeneradoEl = new System.Windows.Forms.Label();
+            this.lblMontoEgresos = new System.Windows.Forms.Label();
+            this.lblMontoTotal = new System.Windows.Forms.Label();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpItem.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpSede.SuspendLayout();
             this.tloResumen.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,12 +61,9 @@
             this.rpItem.ArcRadiusPanel = 21;
             this.rpItem.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpItem.ColorPanel = System.Drawing.Color.White;
+            this.rpItem.Controls.Add(this.tableLayoutPanel1);
+            this.rpItem.Controls.Add(this.tlpSede);
             this.rpItem.Controls.Add(this.tloResumen);
-            this.rpItem.Controls.Add(this.label1);
-            this.rpItem.Controls.Add(this.lblNombre);
-            this.rpItem.Controls.Add(this.lblPor);
-            this.rpItem.Controls.Add(this.lblFecha);
-            this.rpItem.Controls.Add(this.lblGeneradoEl);
             this.rpItem.Controls.Add(this.lblPrincipal);
             this.rpItem.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpItem.Location = new System.Drawing.Point(0, 0);
@@ -83,6 +84,141 @@
             this.rpItem.XPanel = 0;
             this.rpItem.YBorde = 0;
             this.rpItem.YPanel = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
+            this.tableLayoutPanel1.Controls.Add(this.lblGeneradoEl, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblFecha, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblPor, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblQuienGenero, 3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 29);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 22);
+            this.tableLayoutPanel1.TabIndex = 47;
+            this.tagsExtender1.SetTag2(this.tableLayoutPanel1, null);
+            this.tagsExtender1.SetTag3(this.tableLayoutPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.tableLayoutPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.tableLayoutPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.tableLayoutPanel1, System.Drawing.FontStyle.Regular);
+            // 
+            // lblGeneradoEl
+            // 
+            this.lblGeneradoEl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblGeneradoEl.AutoSize = true;
+            this.lblGeneradoEl.BackColor = System.Drawing.Color.White;
+            this.lblGeneradoEl.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGeneradoEl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblGeneradoEl.Location = new System.Drawing.Point(3, 3);
+            this.lblGeneradoEl.Name = "lblGeneradoEl";
+            this.lblGeneradoEl.Size = new System.Drawing.Size(77, 16);
+            this.lblGeneradoEl.TabIndex = 7;
+            this.tagsExtender1.SetTag2(this.lblGeneradoEl, null);
+            this.tagsExtender1.SetTag3(this.lblGeneradoEl, null);
+            this.tagsExtender1.SetTagFontName(this.lblGeneradoEl, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblGeneradoEl, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lblGeneradoEl, System.Drawing.FontStyle.Regular);
+            this.lblGeneradoEl.Text = "Generado el ";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.White;
+            this.lblFecha.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblFecha.Location = new System.Drawing.Point(88, 3);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(84, 16);
+            this.lblFecha.TabIndex = 8;
+            this.tagsExtender1.SetTag2(this.lblFecha, null);
+            this.tagsExtender1.SetTag3(this.lblFecha, null);
+            this.tagsExtender1.SetTagFontName(this.lblFecha, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblFecha, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lblFecha, System.Drawing.FontStyle.Bold);
+            this.lblFecha.Text = "24/05/2020";
+            // 
+            // lblPor
+            // 
+            this.lblPor.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblPor.AutoSize = true;
+            this.lblPor.BackColor = System.Drawing.Color.White;
+            this.lblPor.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblPor.Location = new System.Drawing.Point(178, 3);
+            this.lblPor.Name = "lblPor";
+            this.lblPor.Size = new System.Drawing.Size(27, 16);
+            this.lblPor.TabIndex = 9;
+            this.tagsExtender1.SetTag2(this.lblPor, null);
+            this.tagsExtender1.SetTag3(this.lblPor, null);
+            this.tagsExtender1.SetTagFontName(this.lblPor, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblPor, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lblPor, System.Drawing.FontStyle.Regular);
+            this.lblPor.Text = "por";
+            // 
+            // lblQuienGenero
+            // 
+            this.lblQuienGenero.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblQuienGenero.AutoSize = true;
+            this.lblQuienGenero.BackColor = System.Drawing.Color.White;
+            this.lblQuienGenero.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuienGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblQuienGenero.Location = new System.Drawing.Point(211, 3);
+            this.lblQuienGenero.Name = "lblQuienGenero";
+            this.lblQuienGenero.Size = new System.Drawing.Size(90, 16);
+            this.lblQuienGenero.TabIndex = 10;
+            this.tagsExtender1.SetTag2(this.lblQuienGenero, null);
+            this.tagsExtender1.SetTag3(this.lblQuienGenero, null);
+            this.tagsExtender1.SetTagFontName(this.lblQuienGenero, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblQuienGenero, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lblQuienGenero, System.Drawing.FontStyle.Bold);
+            this.lblQuienGenero.Text = "Percy Jackson";
+            // 
+            // tlpSede
+            // 
+            this.tlpSede.BackColor = System.Drawing.Color.Transparent;
+            this.tlpSede.ColumnCount = 1;
+            this.tlpSede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSede.Controls.Add(this.lblSede, 0, 0);
+            this.tlpSede.Location = new System.Drawing.Point(387, 4);
+            this.tlpSede.Name = "tlpSede";
+            this.tlpSede.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tlpSede.RowCount = 1;
+            this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tlpSede.Size = new System.Drawing.Size(135, 24);
+            this.tlpSede.TabIndex = 21;
+            this.tagsExtender1.SetTag2(this.tlpSede, null);
+            this.tagsExtender1.SetTag3(this.tlpSede, null);
+            this.tagsExtender1.SetTagFontName(this.tlpSede, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.tlpSede, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.tlpSede, System.Drawing.FontStyle.Regular);
+            // 
+            // lblSede
+            // 
+            this.lblSede.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblSede.AutoSize = true;
+            this.lblSede.BackColor = System.Drawing.Color.Transparent;
+            this.lblSede.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.lblSede.Location = new System.Drawing.Point(85, 1);
+            this.lblSede.Name = "lblSede";
+            this.lblSede.Size = new System.Drawing.Size(47, 21);
+            this.lblSede.TabIndex = 19;
+            this.tagsExtender1.SetTag2(this.lblSede, null);
+            this.tagsExtender1.SetTag3(this.lblSede, null);
+            this.tagsExtender1.SetTagFontName(this.lblSede, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lblSede, 13F);
+            this.tagsExtender1.SetTagFontStyle(this.lblSede, System.Drawing.FontStyle.Bold);
+            this.lblSede.Text = "Sede";
             // 
             // tloResumen
             // 
@@ -132,25 +268,6 @@
             this.tagsExtender1.SetTagFontSize(this.lblResumen, 13F);
             this.tagsExtender1.SetTagFontStyle(this.lblResumen, System.Drawing.FontStyle.Regular);
             this.lblResumen.Text = "Resumen";
-            // 
-            // lblMontoTotal
-            // 
-            this.lblMontoTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMontoTotal.AutoSize = true;
-            this.lblMontoTotal.BackColor = System.Drawing.Color.White;
-            this.lblMontoTotal.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblMontoTotal.Location = new System.Drawing.Point(138, 75);
-            this.lblMontoTotal.Name = "lblMontoTotal";
-            this.lblMontoTotal.Size = new System.Drawing.Size(88, 18);
-            this.lblMontoTotal.TabIndex = 18;
-            this.tagsExtender1.SetTag2(this.lblMontoTotal, null);
-            this.tagsExtender1.SetTag3(this.lblMontoTotal, null);
-            this.tagsExtender1.SetTagFontName(this.lblMontoTotal, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblMontoTotal, 11F);
-            this.tagsExtender1.SetTagFontStyle(this.lblMontoTotal, System.Drawing.FontStyle.Bold);
-            this.lblMontoTotal.Text = "100,000.00";
-            this.lblMontoTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblEgresos
             // 
@@ -220,25 +337,6 @@
             this.tagsExtender1.SetTagFontStyle(this.lblSol2, System.Drawing.FontStyle.Regular);
             this.lblSol2.Text = "S/";
             // 
-            // lblMontoEgresos
-            // 
-            this.lblMontoEgresos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMontoEgresos.AutoSize = true;
-            this.lblMontoEgresos.BackColor = System.Drawing.Color.White;
-            this.lblMontoEgresos.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblMontoEgresos.Location = new System.Drawing.Point(178, 50);
-            this.lblMontoEgresos.Name = "lblMontoEgresos";
-            this.lblMontoEgresos.Size = new System.Drawing.Size(48, 18);
-            this.lblMontoEgresos.TabIndex = 17;
-            this.tagsExtender1.SetTag2(this.lblMontoEgresos, null);
-            this.tagsExtender1.SetTag3(this.lblMontoEgresos, null);
-            this.tagsExtender1.SetTagFontName(this.lblMontoEgresos, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblMontoEgresos, 11F);
-            this.tagsExtender1.SetTagFontStyle(this.lblMontoEgresos, System.Drawing.FontStyle.Regular);
-            this.lblMontoEgresos.Text = "10.00";
-            this.lblMontoEgresos.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // lblIngresos
             // 
             this.lblIngresos.AutoSize = true;
@@ -292,90 +390,43 @@
             this.lblMontoIngresos.Text = "1,000,000.00";
             this.lblMontoIngresos.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label1
+            // lblMontoEgresos
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.label1.Location = new System.Drawing.Point(449, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 21);
-            this.label1.TabIndex = 19;
-            this.tagsExtender1.SetTag2(this.label1, null);
-            this.tagsExtender1.SetTag3(this.label1, null);
-            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.label1, 13F);
-            this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Bold);
-            this.label1.Text = "Resumen";
+            this.lblMontoEgresos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMontoEgresos.AutoSize = true;
+            this.lblMontoEgresos.BackColor = System.Drawing.Color.White;
+            this.lblMontoEgresos.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblMontoEgresos.Location = new System.Drawing.Point(178, 50);
+            this.lblMontoEgresos.Name = "lblMontoEgresos";
+            this.lblMontoEgresos.Size = new System.Drawing.Size(48, 18);
+            this.lblMontoEgresos.TabIndex = 17;
+            this.tagsExtender1.SetTag2(this.lblMontoEgresos, null);
+            this.tagsExtender1.SetTag3(this.lblMontoEgresos, null);
+            this.tagsExtender1.SetTagFontName(this.lblMontoEgresos, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblMontoEgresos, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.lblMontoEgresos, System.Drawing.FontStyle.Regular);
+            this.lblMontoEgresos.Text = "10.00";
+            this.lblMontoEgresos.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // lblNombre
+            // lblMontoTotal
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.White;
-            this.lblNombre.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblNombre.Location = new System.Drawing.Point(199, 32);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(90, 16);
-            this.lblNombre.TabIndex = 10;
-            this.tagsExtender1.SetTag2(this.lblNombre, null);
-            this.tagsExtender1.SetTag3(this.lblNombre, null);
-            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblNombre, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lblNombre, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Text = "Percy Jackson";
-            // 
-            // lblPor
-            // 
-            this.lblPor.AutoSize = true;
-            this.lblPor.BackColor = System.Drawing.Color.White;
-            this.lblPor.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblPor.Location = new System.Drawing.Point(176, 32);
-            this.lblPor.Name = "lblPor";
-            this.lblPor.Size = new System.Drawing.Size(27, 16);
-            this.lblPor.TabIndex = 9;
-            this.tagsExtender1.SetTag2(this.lblPor, null);
-            this.tagsExtender1.SetTag3(this.lblPor, null);
-            this.tagsExtender1.SetTagFontName(this.lblPor, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblPor, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lblPor, System.Drawing.FontStyle.Regular);
-            this.lblPor.Text = "por";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.BackColor = System.Drawing.Color.White;
-            this.lblFecha.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblFecha.Location = new System.Drawing.Point(86, 32);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(94, 16);
-            this.lblFecha.TabIndex = 8;
-            this.tagsExtender1.SetTag2(this.lblFecha, null);
-            this.tagsExtender1.SetTag3(this.lblFecha, null);
-            this.tagsExtender1.SetTagFontName(this.lblFecha, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblFecha, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lblFecha, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Text = "dd - mm - aaaa";
-            // 
-            // lblGeneradoEl
-            // 
-            this.lblGeneradoEl.AutoSize = true;
-            this.lblGeneradoEl.BackColor = System.Drawing.Color.White;
-            this.lblGeneradoEl.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGeneradoEl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblGeneradoEl.Location = new System.Drawing.Point(12, 32);
-            this.lblGeneradoEl.Name = "lblGeneradoEl";
-            this.lblGeneradoEl.Size = new System.Drawing.Size(80, 16);
-            this.lblGeneradoEl.TabIndex = 7;
-            this.tagsExtender1.SetTag2(this.lblGeneradoEl, null);
-            this.tagsExtender1.SetTag3(this.lblGeneradoEl, null);
-            this.tagsExtender1.SetTagFontName(this.lblGeneradoEl, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblGeneradoEl, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lblGeneradoEl, System.Drawing.FontStyle.Regular);
-            this.lblGeneradoEl.Text = "Generado el ";
+            this.lblMontoTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMontoTotal.AutoSize = true;
+            this.lblMontoTotal.BackColor = System.Drawing.Color.White;
+            this.lblMontoTotal.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblMontoTotal.Location = new System.Drawing.Point(138, 75);
+            this.lblMontoTotal.Name = "lblMontoTotal";
+            this.lblMontoTotal.Size = new System.Drawing.Size(88, 18);
+            this.lblMontoTotal.TabIndex = 18;
+            this.tagsExtender1.SetTag2(this.lblMontoTotal, null);
+            this.tagsExtender1.SetTag3(this.lblMontoTotal, null);
+            this.tagsExtender1.SetTagFontName(this.lblMontoTotal, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblMontoTotal, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.lblMontoTotal, System.Drawing.FontStyle.Bold);
+            this.lblMontoTotal.Text = "100,000.00";
+            this.lblMontoTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPrincipal
             // 
@@ -409,6 +460,10 @@
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.rpItem.ResumeLayout(false);
             this.rpItem.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tlpSede.ResumeLayout(false);
+            this.tlpSede.PerformLayout();
             this.tloResumen.ResumeLayout(false);
             this.tloResumen.PerformLayout();
             this.ResumeLayout(false);
@@ -421,7 +476,7 @@
         private System.Windows.Forms.Label lblPrincipal;
         private System.Windows.Forms.Label lblIngresos;
         private System.Windows.Forms.Label lblResumen;
-        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblQuienGenero;
         private System.Windows.Forms.Label lblPor;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblGeneradoEl;
@@ -435,6 +490,8 @@
         private System.Windows.Forms.Label lblMontoEgresos;
         private System.Windows.Forms.Label lblMontoIngresos;
         private System.Windows.Forms.TableLayoutPanel tloResumen;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSede;
+        private System.Windows.Forms.TableLayoutPanel tlpSede;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

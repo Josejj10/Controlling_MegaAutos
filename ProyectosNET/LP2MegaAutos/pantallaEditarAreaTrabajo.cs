@@ -29,5 +29,10 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
         }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+        }
     }
 }

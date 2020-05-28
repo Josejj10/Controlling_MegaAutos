@@ -37,5 +37,10 @@ namespace LP2MegaAutos
             formCC.ShowDialog();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+        }
     }
 }

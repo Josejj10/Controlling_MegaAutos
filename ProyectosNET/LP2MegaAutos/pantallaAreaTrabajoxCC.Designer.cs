@@ -33,6 +33,7 @@
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.lbl_NombreAreaTrabajoxCC = new System.Windows.Forms.Label();
             this.rpn_ListaCCAreaTrabajo = new LP2MegaAutos.RoundedPanel();
+            this.btn_AgregarCuentaContable = new System.Windows.Forms.Button();
             this.lbl_ListaCCAreaTrabajo = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpn_ListaCCAreaTrabajo.SuspendLayout();
@@ -115,6 +116,7 @@
             this.rpn_ListaCCAreaTrabajo.ArcRadiusPanel = 15;
             this.rpn_ListaCCAreaTrabajo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpn_ListaCCAreaTrabajo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.rpn_ListaCCAreaTrabajo.Controls.Add(this.btn_AgregarCuentaContable);
             this.rpn_ListaCCAreaTrabajo.Controls.Add(this.lbl_ListaCCAreaTrabajo);
             this.rpn_ListaCCAreaTrabajo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.rpn_ListaCCAreaTrabajo.Location = new System.Drawing.Point(36, 123);
@@ -135,6 +137,27 @@
             this.rpn_ListaCCAreaTrabajo.XPanel = 0;
             this.rpn_ListaCCAreaTrabajo.YBorde = 0;
             this.rpn_ListaCCAreaTrabajo.YPanel = 0;
+            // 
+            // btn_AgregarCuentaContable
+            // 
+            this.btn_AgregarCuentaContable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btn_AgregarCuentaContable.FlatAppearance.BorderSize = 0;
+            this.btn_AgregarCuentaContable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AgregarCuentaContable.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AgregarCuentaContable.ForeColor = System.Drawing.Color.White;
+            this.btn_AgregarCuentaContable.Location = new System.Drawing.Point(440, 3);
+            this.btn_AgregarCuentaContable.Name = "btn_AgregarCuentaContable";
+            this.btn_AgregarCuentaContable.Size = new System.Drawing.Size(94, 26);
+            this.btn_AgregarCuentaContable.TabIndex = 8;
+            this.tagsExtender1.SetTag2(this.btn_AgregarCuentaContable, null);
+            this.tagsExtender1.SetTag3(this.btn_AgregarCuentaContable, null);
+            this.tagsExtender1.SetTagFontName(this.btn_AgregarCuentaContable, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_AgregarCuentaContable, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_AgregarCuentaContable, System.Drawing.FontStyle.Regular);
+            this.btn_AgregarCuentaContable.Text = "+ Agregar";
+            this.btn_AgregarCuentaContable.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_AgregarCuentaContable.UseVisualStyleBackColor = false;
+            this.btn_AgregarCuentaContable.Click += new System.EventHandler(this.btn_AgregarCuentaContable_Click);
             // 
             // lbl_ListaCCAreaTrabajo
             // 
@@ -188,5 +211,6 @@
         private System.Windows.Forms.Label lbl_NombreAreaTrabajoxCC;
         private RoundedPanel rpn_ListaCCAreaTrabajo;
         private System.Windows.Forms.Label lbl_ListaCCAreaTrabajo;
+        private System.Windows.Forms.Button btn_AgregarCuentaContable;
     }
 }

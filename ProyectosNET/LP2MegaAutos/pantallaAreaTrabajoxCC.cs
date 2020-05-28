@@ -12,10 +12,30 @@ namespace LP2MegaAutos
 {
     public partial class pantallaAreaTrabajoxCC : UserControl
     {
+
+        #region instancia
+        private static pantallaAreaTrabajoxCC _instancia;
+        public static pantallaAreaTrabajoxCC Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaAreaTrabajoxCC();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+
         public pantallaAreaTrabajoxCC()
         {
             InitializeComponent();
         }
 
+        private void btn_AgregarCuentaContable_Click(object sender, EventArgs e)
+        {
+            frmCuentaContable formCC = new frmCuentaContable();
+            formCC.ShowDialog();
+
+        }
     }
 }

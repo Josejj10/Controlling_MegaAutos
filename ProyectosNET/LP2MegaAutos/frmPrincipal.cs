@@ -157,6 +157,8 @@ namespace LP2MegaAutos
             // Cambiar los botones y rPanel excepto el enviado
             cambiarColoresBotonesMenu(rpBtnMenuServicios);
         }
+
+
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
             if (!rpMain.Controls.Contains(pantallaGenerarReporte.Instancia))

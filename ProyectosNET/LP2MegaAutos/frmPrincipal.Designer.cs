@@ -347,6 +347,7 @@ namespace LP2MegaAutos
             // btnMenuAjustes
             // 
             this.btnMenuAjustes.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuAjustes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuAjustes.BackgroundImage")));
             this.btnMenuAjustes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenuAjustes.FlatAppearance.BorderSize = 0;
             this.btnMenuAjustes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -448,6 +449,7 @@ namespace LP2MegaAutos
             // btnMenuUsuarios
             // 
             this.btnMenuUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuUsuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuUsuarios.BackgroundImage")));
             this.btnMenuUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenuUsuarios.FlatAppearance.BorderSize = 0;
             this.btnMenuUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -498,6 +500,7 @@ namespace LP2MegaAutos
             // btnClientes
             // 
             this.btnClientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnClientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClientes.BackgroundImage")));
             this.btnClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -599,6 +602,7 @@ namespace LP2MegaAutos
             // btnDrivers
             // 
             this.btnDrivers.BackColor = System.Drawing.Color.Transparent;
+            this.btnDrivers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDrivers.BackgroundImage")));
             this.btnDrivers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDrivers.FlatAppearance.BorderSize = 0;
             this.btnDrivers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

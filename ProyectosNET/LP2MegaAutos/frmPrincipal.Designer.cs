@@ -38,6 +38,8 @@ namespace LP2MegaAutos
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.reloj_dark = new System.Windows.Forms.Timer(this.components);
             this.panelMenu = new MetroFramework.Controls.MetroPanel();
+            this.rpBtnMenuCerrarSesion = new LP2MegaAutos.RoundedPanel();
+            this.btnMenuCerrarSesion = new System.Windows.Forms.Button();
             this.rpBtnMenuReportes = new LP2MegaAutos.RoundedPanel();
             this.btnMenuReportes = new System.Windows.Forms.Button();
             this.rpBtnMenuAjustes = new LP2MegaAutos.RoundedPanel();
@@ -66,10 +68,9 @@ namespace LP2MegaAutos
             this.pnlBackBackground = new System.Windows.Forms.Panel();
             this.rpMain = new LP2MegaAutos.RoundedPanel();
             this.pntIniGen = new LP2MegaAutos.pantallaInicioGerente();
-            this.rpBtnMenuCerrarSesion = new LP2MegaAutos.RoundedPanel();
-            this.btnMenuCerrarSesion = new System.Windows.Forms.Button();
             this.title_bar.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.rpBtnMenuCerrarSesion.SuspendLayout();
             this.rpBtnMenuReportes.SuspendLayout();
             this.rpBtnMenuAjustes.SuspendLayout();
             this.rpBtnMenuSedes.SuspendLayout();
@@ -84,7 +85,6 @@ namespace LP2MegaAutos
             this.panel_toggle_nocturno.SuspendLayout();
             this.pnlBackBackground.SuspendLayout();
             this.rpMain.SuspendLayout();
-            this.rpBtnMenuCerrarSesion.SuspendLayout();
             this.SuspendLayout();
             // 
             // title_bar_2
@@ -213,6 +213,57 @@ namespace LP2MegaAutos
             this.panelMenu.VerticalScrollbarBarColor = true;
             this.panelMenu.VerticalScrollbarHighlightOnWheel = false;
             this.panelMenu.VerticalScrollbarSize = 10;
+            // 
+            // rpBtnMenuCerrarSesion
+            // 
+            this.rpBtnMenuCerrarSesion.ArcRadiusBorde = 15;
+            this.rpBtnMenuCerrarSesion.ArcRadiusPanel = 15;
+            this.rpBtnMenuCerrarSesion.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuCerrarSesion.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuCerrarSesion.Controls.Add(this.btnMenuCerrarSesion);
+            this.rpBtnMenuCerrarSesion.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.rpBtnMenuCerrarSesion.Location = new System.Drawing.Point(30, 441);
+            this.rpBtnMenuCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.rpBtnMenuCerrarSesion.MenosHeightBorde = 1;
+            this.rpBtnMenuCerrarSesion.MenosHeightPanel = 1;
+            this.rpBtnMenuCerrarSesion.MenosWidthBorde = 1;
+            this.rpBtnMenuCerrarSesion.MenosWidthPanel = 1;
+            this.rpBtnMenuCerrarSesion.Name = "rpBtnMenuCerrarSesion";
+            this.rpBtnMenuCerrarSesion.PorcLuzColorBorde = 0;
+            this.rpBtnMenuCerrarSesion.Size = new System.Drawing.Size(59, 11);
+            this.rpBtnMenuCerrarSesion.TabIndex = 37;
+            this.tags.SetTag2(this.rpBtnMenuCerrarSesion, null);
+            this.tags.SetTag3(this.rpBtnMenuCerrarSesion, null);
+            this.tags.SetTagFontName(this.rpBtnMenuCerrarSesion, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpBtnMenuCerrarSesion, 10F);
+            this.tags.SetTagFontStyle(this.rpBtnMenuCerrarSesion, System.Drawing.FontStyle.Regular);
+            this.rpBtnMenuCerrarSesion.XBorde = 0;
+            this.rpBtnMenuCerrarSesion.XPanel = 0;
+            this.rpBtnMenuCerrarSesion.YBorde = 0;
+            this.rpBtnMenuCerrarSesion.YPanel = 0;
+            // 
+            // btnMenuCerrarSesion
+            // 
+            this.btnMenuCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenuCerrarSesion.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnMenuCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMenuCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnMenuCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenuCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuCerrarSesion.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMenuCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnMenuCerrarSesion.Location = new System.Drawing.Point(6, 3);
+            this.btnMenuCerrarSesion.Name = "btnMenuCerrarSesion";
+            this.btnMenuCerrarSesion.Size = new System.Drawing.Size(41, 10);
+            this.btnMenuCerrarSesion.TabIndex = 20;
+            this.tags.SetTag2(this.btnMenuCerrarSesion, null);
+            this.tags.SetTag3(this.btnMenuCerrarSesion, null);
+            this.tags.SetTagFontName(this.btnMenuCerrarSesion, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnMenuCerrarSesion, 12F);
+            this.tags.SetTagFontStyle(this.btnMenuCerrarSesion, System.Drawing.FontStyle.Bold);
+            this.btnMenuCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnMenuCerrarSesion.Click += new System.EventHandler(this.btnMenuCerrarSesion_Click);
             // 
             // rpBtnMenuReportes
             // 
@@ -347,7 +398,7 @@ namespace LP2MegaAutos
             // btnMenuSedes
             // 
             this.btnMenuSedes.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuSedes.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnMenuSedes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuSedes.BackgroundImage")));
             this.btnMenuSedes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenuSedes.FlatAppearance.BorderSize = 0;
             this.btnMenuSedes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -704,7 +755,7 @@ namespace LP2MegaAutos
             // btnServicios
             // 
             this.btnServicios.BackColor = System.Drawing.Color.Transparent;
-            this.btnServicios.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnServicios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnServicios.BackgroundImage")));
             this.btnServicios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnServicios.FlatAppearance.BorderSize = 0;
             this.btnServicios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -875,57 +926,6 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.pntIniGen, 10F);
             this.tags.SetTagFontStyle(this.pntIniGen, System.Drawing.FontStyle.Regular);
             // 
-            // rpBtnMenuCerrarSesion
-            // 
-            this.rpBtnMenuCerrarSesion.ArcRadiusBorde = 15;
-            this.rpBtnMenuCerrarSesion.ArcRadiusPanel = 15;
-            this.rpBtnMenuCerrarSesion.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.rpBtnMenuCerrarSesion.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.rpBtnMenuCerrarSesion.Controls.Add(this.btnMenuCerrarSesion);
-            this.rpBtnMenuCerrarSesion.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.rpBtnMenuCerrarSesion.Location = new System.Drawing.Point(30, 441);
-            this.rpBtnMenuCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
-            this.rpBtnMenuCerrarSesion.MenosHeightBorde = 1;
-            this.rpBtnMenuCerrarSesion.MenosHeightPanel = 1;
-            this.rpBtnMenuCerrarSesion.MenosWidthBorde = 1;
-            this.rpBtnMenuCerrarSesion.MenosWidthPanel = 1;
-            this.rpBtnMenuCerrarSesion.Name = "rpBtnMenuCerrarSesion";
-            this.rpBtnMenuCerrarSesion.PorcLuzColorBorde = 0;
-            this.rpBtnMenuCerrarSesion.Size = new System.Drawing.Size(59, 11);
-            this.rpBtnMenuCerrarSesion.TabIndex = 37;
-            this.tags.SetTag2(this.rpBtnMenuCerrarSesion, null);
-            this.tags.SetTag3(this.rpBtnMenuCerrarSesion, null);
-            this.tags.SetTagFontName(this.rpBtnMenuCerrarSesion, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpBtnMenuCerrarSesion, 10F);
-            this.tags.SetTagFontStyle(this.rpBtnMenuCerrarSesion, System.Drawing.FontStyle.Regular);
-            this.rpBtnMenuCerrarSesion.XBorde = 0;
-            this.rpBtnMenuCerrarSesion.XPanel = 0;
-            this.rpBtnMenuCerrarSesion.YBorde = 0;
-            this.rpBtnMenuCerrarSesion.YPanel = 0;
-            // 
-            // btnMenuCerrarSesion
-            // 
-            this.btnMenuCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuCerrarSesion.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
-            this.btnMenuCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMenuCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnMenuCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMenuCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMenuCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuCerrarSesion.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMenuCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnMenuCerrarSesion.Location = new System.Drawing.Point(6, 3);
-            this.btnMenuCerrarSesion.Name = "btnMenuCerrarSesion";
-            this.btnMenuCerrarSesion.Size = new System.Drawing.Size(41, 10);
-            this.btnMenuCerrarSesion.TabIndex = 20;
-            this.tags.SetTag2(this.btnMenuCerrarSesion, null);
-            this.tags.SetTag3(this.btnMenuCerrarSesion, null);
-            this.tags.SetTagFontName(this.btnMenuCerrarSesion, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnMenuCerrarSesion, 12F);
-            this.tags.SetTagFontStyle(this.btnMenuCerrarSesion, System.Drawing.FontStyle.Bold);
-            this.btnMenuCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnMenuCerrarSesion.Click += new System.EventHandler(this.btnMenuCerrarSesion_Click);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -948,6 +948,7 @@ namespace LP2MegaAutos
             this.Text = "frmPrincipal";
             this.title_bar.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
+            this.rpBtnMenuCerrarSesion.ResumeLayout(false);
             this.rpBtnMenuReportes.ResumeLayout(false);
             this.rpBtnMenuAjustes.ResumeLayout(false);
             this.rpBtnMenuSedes.ResumeLayout(false);
@@ -962,7 +963,6 @@ namespace LP2MegaAutos
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.pnlBackBackground.ResumeLayout(false);
             this.rpMain.ResumeLayout(false);
-            this.rpBtnMenuCerrarSesion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -161,11 +161,11 @@
     <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarSedes.cs">
+    <Compile Include="pantallaEditarSede.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarSedes.Designer.cs">
-      <DependentUpon>pantallaEditarSedes.cs</DependentUpon>
+    <Compile Include="pantallaEditarSede.Designer.cs">
+      <DependentUpon>pantallaEditarSede.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaEditarUsuario.cs">
       <SubType>UserControl</SubType>
@@ -259,11 +259,11 @@
     <Compile Include="pantallaActualizarServicios.Designer.cs">
       <DependentUpon>pantallaActualizarServicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarServicios.cs">
+    <Compile Include="pantallaEditarServicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarServicios.Designer.cs">
-      <DependentUpon>pantallaEditarServicios.cs</DependentUpon>
+    <Compile Include="pantallaEditarServicio.Designer.cs">
+      <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
@@ -319,11 +319,11 @@
     <EmbeddedResource Include="pantallaEditarInformacionPropia.resx">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarSedes.resx">
-      <DependentUpon>pantallaEditarSedes.cs</DependentUpon>
+    <EmbeddedResource Include="pantallaEditarSede.resx">
+      <DependentUpon>pantallaEditarSede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarServicios.resx">
-      <DependentUpon>pantallaEditarServicios.cs</DependentUpon>
+    <EmbeddedResource Include="pantallaEditarServicio.resx">
+      <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarUsuario.resx">
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>

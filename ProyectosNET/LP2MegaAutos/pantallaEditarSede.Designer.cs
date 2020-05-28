@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos
 {
-    partial class pantallaEditarSedes
+    partial class pantallaEditarSede
     {
         /// <summary> 
         /// Required designer variable.
@@ -141,6 +141,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
             this.btn_guardar.Text = "Guardar cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // panel1
             // 
@@ -383,7 +384,7 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_direccion, System.Drawing.FontStyle.Bold);
             this.lbl_direccion.Text = "Dirección";
             // 
-            // pantallaEditarSedes
+            // pantallaEditarSede
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -395,7 +396,7 @@
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.rpTopMain);
-            this.Name = "pantallaEditarSedes";
+            this.Name = "pantallaEditarSede";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);

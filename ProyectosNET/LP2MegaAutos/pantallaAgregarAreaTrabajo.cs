@@ -12,6 +12,19 @@ namespace LP2MegaAutos
 {
     public partial class pantallaAgregarAreaTrabajo : UserControl
     {
+        #region instancia
+        private static pantallaAgregarAreaTrabajo _instancia;
+        public static pantallaAgregarAreaTrabajo Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaAgregarAreaTrabajo();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+
         public pantallaAgregarAreaTrabajo()
         {
             InitializeComponent();

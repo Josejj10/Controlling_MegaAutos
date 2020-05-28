@@ -12,6 +12,19 @@ namespace LP2MegaAutos
 {
     public partial class pantallaInformacionEmpresaGerente : UserControl
     {
+        #region instancia
+        private static pantallaInformacionEmpresaGerente _instancia;
+        public static pantallaInformacionEmpresaGerente Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaInformacionEmpresaGerente();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+
         public pantallaInformacionEmpresaGerente()
         {
             InitializeComponent();

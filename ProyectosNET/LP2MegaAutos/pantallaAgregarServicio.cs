@@ -12,9 +12,30 @@ namespace LP2MegaAutos
 {
     public partial class pantallaAgregarServicio : UserControl
     {
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaAgregarServicio _instancia;
+        public static pantallaAgregarServicio Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaAgregarServicio();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+
         public pantallaAgregarServicio()
         {
             InitializeComponent();
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+            // TODO agregar metodos para limpiar la pantalla
+            // aka los textBoxs
         }
     }
 }

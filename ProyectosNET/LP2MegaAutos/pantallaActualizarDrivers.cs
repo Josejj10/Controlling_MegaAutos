@@ -121,5 +121,6 @@ namespace LP2MegaAutos
             this.btn_AZ.BackColor = Color.Transparent;
             this.btn_Antiguo.BackColor = Color.Transparent;
         }
+
     }
 }

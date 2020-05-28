@@ -37,6 +37,7 @@
             this.lbl_ListaCCAreaTrabajo = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.rpn_ListaCCAreaTrabajo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,11 +207,29 @@
             this.roundedPanel4.YBorde = 0;
             this.roundedPanel4.YPanel = 0;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(529, 427);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 57;
+            this.tagsExtender1.SetTag2(this.button1, null);
+            this.tagsExtender1.SetTag3(this.button1, null);
+            this.tagsExtender1.SetTagFontName(this.button1, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.button1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Regular);
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pantallaAreaTrabajoxCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
@@ -242,5 +261,6 @@
         private System.Windows.Forms.Label lbl_ListaCCAreaTrabajo;
         private System.Windows.Forms.Button btn_AgregarCuentaContable;
         private RoundedPanel roundedPanel4;
+        private System.Windows.Forms.Button button1;
     }
 }

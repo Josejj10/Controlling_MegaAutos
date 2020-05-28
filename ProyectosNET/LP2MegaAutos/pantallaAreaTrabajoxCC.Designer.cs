@@ -36,6 +36,7 @@
             this.btn_AgregarCuentaContable = new System.Windows.Forms.Button();
             this.lbl_ListaCCAreaTrabajo = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaCCAreaTrabajo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,11 +179,39 @@
             this.lbl_ListaCCAreaTrabajo.Text = "Cuentas Contables";
             this.lbl_ListaCCAreaTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(133)))), ((int)(((byte)(161)))));
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
+            this.roundedPanel4.Location = new System.Drawing.Point(0, 454);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(611, 16);
+            this.roundedPanel4.TabIndex = 56;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
+            // 
             // pantallaAreaTrabajoxCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.rpTopMain);
@@ -212,5 +241,6 @@
         private RoundedPanel rpn_ListaCCAreaTrabajo;
         private System.Windows.Forms.Label lbl_ListaCCAreaTrabajo;
         private System.Windows.Forms.Button btn_AgregarCuentaContable;
+        private RoundedPanel roundedPanel4;
     }
 }

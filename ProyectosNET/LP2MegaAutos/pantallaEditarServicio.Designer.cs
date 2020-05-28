@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos
 {
-    partial class pantallaEditarServicios
+    partial class pantallaEditarServicio
     {
         /// <summary> 
         /// Required designer variable.
@@ -337,6 +337,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
             this.btn_guardar.Text = "Guardar cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // rpTopMain
             // 
@@ -376,7 +377,7 @@
             this.txt_NombreServicio.TabIndex = 37;
             this.tagsExtender1.SetTag2(this.txt_NombreServicio, null);
             this.tagsExtender1.SetTag3(this.txt_NombreServicio, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NombreServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreServicio, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_NombreServicio, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreServicio, System.Drawing.FontStyle.Bold);
             this.txt_NombreServicio.Text = "Mantenimiento preventivo\r\n";

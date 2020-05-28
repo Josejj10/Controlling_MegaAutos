@@ -10,11 +10,40 @@ using System.Windows.Forms;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaSede : UserControl
+    public partial class pantallaActualizarSedes : UserControl
     {
-        public pantallaSede()
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaActualizarSedes _instancia;
+        public static pantallaActualizarSedes Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaActualizarSedes();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+
+        public pantallaActualizarSedes()
         {
             InitializeComponent();
+            il_Sedes1.EditarClick += btnEditarClick;
+            il_Sedes2.EditarClick += btnEditarClick;
+        }
+
+        private void btnEditarClick(Object sender, EventArgs e)
+        {
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaEditarSede.Instancia))
+            {
+                this.Controls.Add(pantallaEditarSede.Instancia);
+                pantallaEditarSede.Instancia.Dock = DockStyle.Fill;
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaEditarSede.Instancia.Parent);
+            }
+            pantallaEditarSede.Instancia.BringToFront();
         }
 
         private void btn_AZ_Click(object sender, EventArgs e)

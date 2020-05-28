@@ -46,9 +46,9 @@
             this.btnAZ = new System.Windows.Forms.Button();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.pnlBuscar = new System.Windows.Forms.Panel();
+            this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
             this.rndReciente.SuspendLayout();
@@ -67,6 +67,11 @@
             this.il_Clientes3.Name = "il_Clientes3";
             this.il_Clientes3.Size = new System.Drawing.Size(497, 104);
             this.il_Clientes3.TabIndex = 21;
+            this.tagsExtender1.SetTag2(this.il_Clientes3, null);
+            this.tagsExtender1.SetTag3(this.il_Clientes3, null);
+            this.tagsExtender1.SetTagFontName(this.il_Clientes3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Clientes3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Clientes3, System.Drawing.FontStyle.Regular);
             this.il_Clientes3.TextoAgregadoPor = "Percy Jackson";
             this.il_Clientes3.TextoFecha = "dd - mm - aaaa";
             this.il_Clientes3.TextoPrincipal = "TextoPrincipal";
@@ -82,6 +87,11 @@
             this.il_Clientes2.Name = "il_Clientes2";
             this.il_Clientes2.Size = new System.Drawing.Size(497, 104);
             this.il_Clientes2.TabIndex = 20;
+            this.tagsExtender1.SetTag2(this.il_Clientes2, null);
+            this.tagsExtender1.SetTag3(this.il_Clientes2, null);
+            this.tagsExtender1.SetTagFontName(this.il_Clientes2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Clientes2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Clientes2, System.Drawing.FontStyle.Regular);
             this.il_Clientes2.TextoAgregadoPor = "Percy Jackson";
             this.il_Clientes2.TextoFecha = "dd - mm - aaaa";
             this.il_Clientes2.TextoPrincipal = "Rodrigo Cossio";
@@ -97,6 +107,11 @@
             this.il_Clientes1.Name = "il_Clientes1";
             this.il_Clientes1.Size = new System.Drawing.Size(497, 104);
             this.il_Clientes1.TabIndex = 19;
+            this.tagsExtender1.SetTag2(this.il_Clientes1, null);
+            this.tagsExtender1.SetTag3(this.il_Clientes1, null);
+            this.tagsExtender1.SetTagFontName(this.il_Clientes1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Clientes1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Clientes1, System.Drawing.FontStyle.Regular);
             this.il_Clientes1.TextoAgregadoPor = "Percy Jackson";
             this.il_Clientes1.TextoFecha = "dd - mm - aaaa";
             this.il_Clientes1.TextoPrincipal = "Melvin Javier";
@@ -105,6 +120,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel1.Controls.Add(this.il_Clientes3);
             this.panel1.Controls.Add(this.il_Clientes1);
@@ -113,6 +129,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 327);
             this.panel1.TabIndex = 27;
+            this.tagsExtender1.SetTag2(this.panel1, null);
+            this.tagsExtender1.SetTag3(this.panel1, null);
+            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
             // rpn_ListaServicios
             // 
@@ -132,6 +153,11 @@
             this.rpn_ListaServicios.PorcLuzColorBorde = 0;
             this.rpn_ListaServicios.Size = new System.Drawing.Size(539, 27);
             this.rpn_ListaServicios.TabIndex = 28;
+            this.tagsExtender1.SetTag2(this.rpn_ListaServicios, null);
+            this.tagsExtender1.SetTag3(this.rpn_ListaServicios, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_ListaServicios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_ListaServicios, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_ListaServicios, System.Drawing.FontStyle.Regular);
             this.rpn_ListaServicios.XBorde = 0;
             this.rpn_ListaServicios.XPanel = 0;
             this.rpn_ListaServicios.YBorde = 0;
@@ -148,6 +174,11 @@
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(78, 23);
             this.btn_Agregar.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.btn_Agregar, null);
+            this.tagsExtender1.SetTag3(this.btn_Agregar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Agregar, System.Drawing.FontStyle.Regular);
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Agregar.UseVisualStyleBackColor = false;
@@ -163,6 +194,11 @@
             this.lbl_ListaServicios.Name = "lbl_ListaServicios";
             this.lbl_ListaServicios.Size = new System.Drawing.Size(78, 22);
             this.lbl_ListaServicios.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
+            this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ListaServicios, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Regular);
             this.lbl_ListaServicios.Text = "Clientes";
             this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -253,6 +289,11 @@
             this.btnAntiguo.Name = "btnAntiguo";
             this.btnAntiguo.Size = new System.Drawing.Size(125, 30);
             this.btnAntiguo.TabIndex = 7;
+            this.tagsExtender1.SetTag2(this.btnAntiguo, null);
+            this.tagsExtender1.SetTag3(this.btnAntiguo, null);
+            this.tagsExtender1.SetTagFontName(this.btnAntiguo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnAntiguo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnAntiguo, System.Drawing.FontStyle.Regular);
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.UseVisualStyleBackColor = false;
             this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
@@ -296,6 +337,11 @@
             this.btnZA.Name = "btnZA";
             this.btnZA.Size = new System.Drawing.Size(125, 30);
             this.btnZA.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.btnZA, null);
+            this.tagsExtender1.SetTag3(this.btnZA, null);
+            this.tagsExtender1.SetTagFontName(this.btnZA, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnZA, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnZA, System.Drawing.FontStyle.Regular);
             this.btnZA.Text = "Z - A";
             this.btnZA.UseVisualStyleBackColor = false;
             this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
@@ -339,6 +385,11 @@
             this.btnAZ.Name = "btnAZ";
             this.btnAZ.Size = new System.Drawing.Size(125, 30);
             this.btnAZ.TabIndex = 5;
+            this.tagsExtender1.SetTag2(this.btnAZ, null);
+            this.tagsExtender1.SetTag3(this.btnAZ, null);
+            this.tagsExtender1.SetTagFontName(this.btnAZ, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnAZ, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnAZ, System.Drawing.FontStyle.Regular);
             this.btnAZ.Text = "A - Z";
             this.btnAZ.UseVisualStyleBackColor = false;
             this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
@@ -360,6 +411,11 @@
             this.rpTopMain.PorcLuzColorBorde = 0;
             this.rpTopMain.Size = new System.Drawing.Size(611, 40);
             this.rpTopMain.TabIndex = 34;
+            this.tagsExtender1.SetTag2(this.rpTopMain, null);
+            this.tagsExtender1.SetTag3(this.rpTopMain, null);
+            this.tagsExtender1.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpTopMain, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
             this.rpTopMain.XBorde = 0;
             this.rpTopMain.XPanel = 0;
             this.rpTopMain.YBorde = 0;
@@ -380,20 +436,6 @@
             this.tagsExtender1.SetTagFontSize(this.pnlBuscar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnlBuscar, System.Drawing.FontStyle.Regular);
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(26, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(25, 25);
-            this.panel2.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.panel2, null);
-            this.tagsExtender1.SetTag3(this.panel2, null);
-            this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
-            // 
             // txt_Buscar
             // 
             this.txt_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
@@ -410,6 +452,20 @@
             this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(26, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(25, 25);
+            this.panel2.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.panel2, null);
+            this.tagsExtender1.SetTag3(this.panel2, null);
+            this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
             // 
             // pantallaActualizarClientes
             // 

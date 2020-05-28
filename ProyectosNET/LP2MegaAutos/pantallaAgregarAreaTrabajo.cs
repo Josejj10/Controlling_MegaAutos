@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaEditarSedes : UserControl
+    public partial class pantallaAgregarAreaTrabajo : UserControl
     {
-        public pantallaEditarSedes()
+        public pantallaAgregarAreaTrabajo()
         {
             InitializeComponent();
         }

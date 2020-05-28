@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos
 {
-    partial class pantallaSede
+    partial class pantallaActualizarSedes
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaSede));
-            this.il_Drivers2 = new LP2MegaAutos.itemLista();
-            this.il_Drivers1 = new LP2MegaAutos.itemLista();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaActualizarSedes));
+            this.il_Sedes2 = new LP2MegaAutos.itemLista();
+            this.il_Sedes1 = new LP2MegaAutos.itemLista();
             this.rpn_ListaDrivers = new LP2MegaAutos.RoundedPanel();
             this.btn_AgregarSede = new System.Windows.Forms.Button();
             this.lbl_ListaSedes = new System.Windows.Forms.Label();
@@ -57,45 +57,45 @@
             this.pnlBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // il_Drivers2
+            // il_Sedes2
             // 
-            this.il_Drivers2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers2.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers2.Location = new System.Drawing.Point(21, 130);
-            this.il_Drivers2.Name = "il_Drivers2";
-            this.il_Drivers2.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers2.TabIndex = 20;
-            this.tagsExtender1.SetTag2(this.il_Drivers2, null);
-            this.tagsExtender1.SetTag3(this.il_Drivers2, null);
-            this.tagsExtender1.SetTagFontName(this.il_Drivers2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Drivers2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Drivers2, System.Drawing.FontStyle.Regular);
-            this.il_Drivers2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers2.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers2.TextoPrincipal = "Taller Sur";
-            this.il_Drivers2.Textosecundario = "Surquillo";
-            this.il_Drivers2.TextoTercero = "Av. Ipsum Lorem 234";
+            this.il_Sedes2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Sedes2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Sedes2.ColorPanel = System.Drawing.Color.White;
+            this.il_Sedes2.Location = new System.Drawing.Point(21, 130);
+            this.il_Sedes2.Name = "il_Sedes2";
+            this.il_Sedes2.Size = new System.Drawing.Size(497, 104);
+            this.il_Sedes2.TabIndex = 20;
+            this.tagsExtender1.SetTag2(this.il_Sedes2, null);
+            this.tagsExtender1.SetTag3(this.il_Sedes2, null);
+            this.tagsExtender1.SetTagFontName(this.il_Sedes2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Sedes2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Sedes2, System.Drawing.FontStyle.Regular);
+            this.il_Sedes2.TextoAgregadoPor = "Percy Jackson";
+            this.il_Sedes2.TextoFecha = "dd - mm - aaaa";
+            this.il_Sedes2.TextoPrincipal = "Taller Sur";
+            this.il_Sedes2.Textosecundario = "Surquillo";
+            this.il_Sedes2.TextoTercero = "Av. Ipsum Lorem 234";
             // 
-            // il_Drivers1
+            // il_Sedes1
             // 
-            this.il_Drivers1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers1.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers1.Location = new System.Drawing.Point(21, 6);
-            this.il_Drivers1.Name = "il_Drivers1";
-            this.il_Drivers1.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers1.TabIndex = 19;
-            this.tagsExtender1.SetTag2(this.il_Drivers1, null);
-            this.tagsExtender1.SetTag3(this.il_Drivers1, null);
-            this.tagsExtender1.SetTagFontName(this.il_Drivers1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Drivers1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Drivers1, System.Drawing.FontStyle.Regular);
-            this.il_Drivers1.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers1.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers1.TextoPrincipal = "Taller Principal";
-            this.il_Drivers1.Textosecundario = "Independencia";
-            this.il_Drivers1.TextoTercero = "Av. Lorem Ipsum 213";
+            this.il_Sedes1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Sedes1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Sedes1.ColorPanel = System.Drawing.Color.White;
+            this.il_Sedes1.Location = new System.Drawing.Point(21, 6);
+            this.il_Sedes1.Name = "il_Sedes1";
+            this.il_Sedes1.Size = new System.Drawing.Size(497, 104);
+            this.il_Sedes1.TabIndex = 19;
+            this.tagsExtender1.SetTag2(this.il_Sedes1, null);
+            this.tagsExtender1.SetTag3(this.il_Sedes1, null);
+            this.tagsExtender1.SetTagFontName(this.il_Sedes1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Sedes1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Sedes1, System.Drawing.FontStyle.Regular);
+            this.il_Sedes1.TextoAgregadoPor = "Percy Jackson";
+            this.il_Sedes1.TextoFecha = "dd - mm - aaaa";
+            this.il_Sedes1.TextoPrincipal = "Taller Principal";
+            this.il_Sedes1.Textosecundario = "Independencia";
+            this.il_Sedes1.TextoTercero = "Av. Lorem Ipsum 213";
             // 
             // rpn_ListaDrivers
             // 
@@ -371,9 +371,10 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.panel1.Controls.Add(this.il_Drivers2);
-            this.panel1.Controls.Add(this.il_Drivers1);
+            this.panel1.Controls.Add(this.il_Sedes2);
+            this.panel1.Controls.Add(this.il_Sedes1);
             this.panel1.Location = new System.Drawing.Point(36, 142);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 327);
@@ -439,7 +440,7 @@
             this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
             // 
-            // pantallaSede
+            // pantallaActualizarSedes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -453,7 +454,7 @@
             this.Controls.Add(this.rnd_AZ);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBuscar);
-            this.Name = "pantallaSede";
+            this.Name = "pantallaActualizarSedes";
             this.Size = new System.Drawing.Size(611, 470);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
@@ -474,8 +475,8 @@
         }
 
         #endregion
-        private itemLista il_Drivers2;
-        private itemLista il_Drivers1;
+        private itemLista il_Sedes2;
+        private itemLista il_Sedes1;
         private RoundedPanel rpn_ListaDrivers;
         private System.Windows.Forms.Button btn_AgregarSede;
         private System.Windows.Forms.Label lbl_ListaSedes;

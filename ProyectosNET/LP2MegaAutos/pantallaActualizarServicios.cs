@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaServicios : UserControl
+    public partial class pantallaActualizarServicios : UserControl
     {
         // Singleton instance para poder crearlo en la pantalla menu
         #region instancia
-        private static pantallaServicios _instancia;
-        public static pantallaServicios Instancia
+        private static pantallaActualizarServicios _instancia;
+        public static pantallaActualizarServicios Instancia
         {
             get
             {
                 if (_instancia == null)
-                    _instancia = new pantallaServicios();
+                    _instancia = new pantallaActualizarServicios();
                 return _instancia;
             }
         }
         #endregion instancia
 
-        public pantallaServicios()
+        public pantallaActualizarServicios()
         {
             InitializeComponent();
             il_Servicios1.EditarClick += btnEditarClick;
@@ -37,14 +37,14 @@ namespace LP2MegaAutos
         private void btnEditarClick(Object sender, EventArgs e)
         {
             //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarServicios.Instancia))
+            if (!this.Controls.Contains(pantallaEditarServicio.Instancia))
             {
-                this.Controls.Add(pantallaEditarServicios.Instancia);
-                pantallaEditarServicios.Instancia.Dock = DockStyle.Fill;
+                this.Controls.Add(pantallaEditarServicio.Instancia);
+                pantallaEditarServicio.Instancia.Dock = DockStyle.Fill;
                 if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaEditarServicios.Instancia.Parent);
+                    DarkMode.iniciarSinTimer(pantallaEditarServicio.Instancia.Parent);
             }
-            pantallaEditarServicios.Instancia.BringToFront();
+            pantallaEditarServicio.Instancia.BringToFront();
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)

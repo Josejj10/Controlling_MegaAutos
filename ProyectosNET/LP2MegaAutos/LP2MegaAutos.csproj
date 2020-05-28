@@ -185,6 +185,12 @@
     <Compile Include="pantallaInicioGerente.Designer.cs">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaInicioUsuarioGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInicioUsuarioGeneral.Designer.cs">
+      <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaInicioUsuarioNivel2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -336,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicioGerente.resx">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInicioUsuarioGeneral.resx">
+      <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicioUsuarioNivel2.resx">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>

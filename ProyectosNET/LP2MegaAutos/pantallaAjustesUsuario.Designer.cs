@@ -496,6 +496,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel1.Location = new System.Drawing.Point(36, 293);
             this.panel1.Name = "panel1";

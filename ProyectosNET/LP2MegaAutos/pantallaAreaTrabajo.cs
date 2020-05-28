@@ -15,8 +15,24 @@ namespace LP2MegaAutos
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
+            //il_AreaTrabajo1.EditarClick += btnEditarClick;
+            //il_AreaTrabajo2.EditarClick += btnEditarClick;
+            //il_AreaTrabajo3.EditarClick += btnEditarClick;
         }
 
+/*        private void btnEditarClick(Object sender, EventArgs e)
+        {
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaEditarAreasTrabajo.Instancia))
+            {
+                this.Controls.Add(pantallaEditarAreasTrabajo.Instancia);
+                pantallaEditarAreasTrabajo.Instancia.Dock = DockStyle.Fill;
+                pantallaEditarAreasTrabajo.Instancia.BringToFront();
+            }
+            else
+                pantallaEditarAreasTrabajo.Instancia.BringToFront();
+        }
+*/
         private void btnAZ_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras

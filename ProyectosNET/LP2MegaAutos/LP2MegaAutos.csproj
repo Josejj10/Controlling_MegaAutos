@@ -89,6 +89,12 @@
     <Compile Include="itemLista.Designer.cs">
       <DependentUpon>itemLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="itemListaCuadrado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemListaCuadrado.Designer.cs">
+      <DependentUpon>itemListaCuadrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="itemListaReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="itemLista.resx">
       <DependentUpon>itemLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemListaCuadrado.resx">
+      <DependentUpon>itemListaCuadrado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="itemListaReporte.resx">
       <DependentUpon>itemListaReporte.cs</DependentUpon>

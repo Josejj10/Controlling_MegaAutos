@@ -30,9 +30,9 @@ namespace LP2MegaAutos
         //{
 
         //    InitializeComponent();
-        //    btnEditar = btnEditarClick;
-        //    btnEditar = btnEditarClick;
-        //    btnEditar = btnEditarClick;
+        //    btnEditar += btnEditarClick;
+        //    btnEditar += btnEditarClick;
+        //    btnEditar += btnEditarClick;
         //}
         //private void btnEditarClick(Object sender, EventArgs e)
         //{

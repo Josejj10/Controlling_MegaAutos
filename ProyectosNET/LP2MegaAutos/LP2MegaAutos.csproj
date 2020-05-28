@@ -77,6 +77,18 @@
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Colores.cs" />
+    <Compile Include="frmCuentaContable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentaContable.Designer.cs">
+      <DependentUpon>frmCuentaContable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFiltrarReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFiltrarReportes.Designer.cs">
+      <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmResumenReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </Compile>
     <Compile Include="itemLista.Designer.cs">
       <DependentUpon>itemLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itemListaCuadrado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemListaCuadrado.Designer.cs">
+      <DependentUpon>itemListaCuadrado.cs</DependentUpon>
     </Compile>
     <Compile Include="itemListaReporte.cs">
       <SubType>UserControl</SubType>
@@ -131,11 +149,29 @@
     <Compile Include="pantallaActualizarDrivers.Designer.cs">
       <DependentUpon>pantallaActualizarDrivers.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaActualizarSedes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaActualizarSedes.Designer.cs">
+      <DependentUpon>pantallaActualizarSedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaActualizarServicios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaActualizarServicios.Designer.cs">
+      <DependentUpon>pantallaActualizarServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaActualizarUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="pantallaActualizarUsuarios.Designer.cs">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaAgregarAreaTrabajo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAgregarAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaAgregarCliente.cs">
       <SubType>UserControl</SubType>
@@ -179,6 +215,18 @@
     <Compile Include="pantallaAjustesUsuario.Designer.cs">
       <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaAreaTrabajoxCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaAreaTrabajoxCC.Designer.cs">
+      <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaEditarAreaTrabajo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaEditarAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaEditarCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,6 +245,18 @@
     <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaEditarSede.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaEditarSede.Designer.cs">
+      <DependentUpon>pantallaEditarSede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaEditarServicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaEditarServicio.Designer.cs">
+      <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaEditarUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,11 +269,29 @@
     <Compile Include="pantallaGenerarReporte.Designer.cs">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="pantallaInformacionEmpresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresa.Designer.cs">
+      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresaGerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInformacionEmpresaGerente.Designer.cs">
+      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="pantallaInicioGerente.Designer.cs">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pantallaInicioUsuarioGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pantallaInicioUsuarioGeneral.Designer.cs">
+      <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaInicioUsuarioNivel2.cs">
       <SubType>UserControl</SubType>
@@ -289,6 +367,12 @@
     <Compile Include="RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCuentaContable.resx">
+      <DependentUpon>frmCuentaContable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFiltrarReportes.resx">
+      <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +394,9 @@
     <EmbeddedResource Include="itemLista.resx">
       <DependentUpon>itemLista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="itemListaCuadrado.resx">
+      <DependentUpon>itemListaCuadrado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="itemListaReporte.resx">
       <DependentUpon>itemListaReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,8 +412,17 @@
     <EmbeddedResource Include="pantallaActualizarDrivers.resx">
       <DependentUpon>pantallaActualizarDrivers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaActualizarSedes.resx">
+      <DependentUpon>pantallaActualizarSedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaActualizarServicios.resx">
+      <DependentUpon>pantallaActualizarServicios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAgregarAreaTrabajo.resx">
+      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaAgregarCliente.resx">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
@@ -352,6 +448,12 @@
     <EmbeddedResource Include="pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaAreaTrabajoxCC.resx">
+      <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaEditarAreaTrabajo.resx">
+      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarCliente.resx">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,17 +463,32 @@
     <EmbeddedResource Include="pantallaEditarInformacionPropia.resx">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaEditarSede.resx">
+      <DependentUpon>pantallaEditarSede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaEditarServicio.resx">
+      <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarUsuario.resx">
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaGenerarReporte.resx">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInformacionEmpresa.resx">
+      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInformacionEmpresaGerente.resx">
+      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicioGerente.resx">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallaInicioUsuarioGeneral.resx">
+      <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaInicioUsuarioNivel2.resx">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>

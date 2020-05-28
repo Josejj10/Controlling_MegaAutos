@@ -636,9 +636,12 @@
   <ItemGroup>
     <Content Include="creditos.txt" />
     <Content Include="Resources\analysis.png" />
+    <Content Include="Resources\automotive.png" />
     <Content Include="Resources\car.png" />
     <Content Include="Resources\database.png" />
     <Content Include="Resources\editar.png" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\logout.png" />
     <Content Include="Resources\magnifying-glass.png" />
     <Content Include="Resources\map.png" />
     <Content Include="Resources\reporte.png" />

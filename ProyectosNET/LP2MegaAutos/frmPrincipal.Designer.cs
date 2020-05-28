@@ -245,7 +245,7 @@ namespace LP2MegaAutos
             // btnMenuCerrarSesion
             // 
             this.btnMenuCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuCerrarSesion.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnMenuCerrarSesion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuCerrarSesion.BackgroundImage")));
             this.btnMenuCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenuCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnMenuCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -551,7 +551,7 @@ namespace LP2MegaAutos
             // btnMenuEmpresa
             // 
             this.btnMenuEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuEmpresa.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnMenuEmpresa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuEmpresa.BackgroundImage")));
             this.btnMenuEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenuEmpresa.FlatAppearance.BorderSize = 0;
             this.btnMenuEmpresa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -653,7 +653,7 @@ namespace LP2MegaAutos
             // btnAreasTrabajo
             // 
             this.btnAreasTrabajo.BackColor = System.Drawing.Color.Transparent;
-            this.btnAreasTrabajo.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
+            this.btnAreasTrabajo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAreasTrabajo.BackgroundImage")));
             this.btnAreasTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAreasTrabajo.FlatAppearance.BorderSize = 0;
             this.btnAreasTrabajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

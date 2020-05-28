@@ -50,5 +50,9 @@ namespace LP2MegaAutos
             pantallaEditarInformacionPropia.Instancia.BringToFront();
         }
 
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            this.SendToBack();
+        }
     }
 }

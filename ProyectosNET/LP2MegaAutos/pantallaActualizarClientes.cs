@@ -31,6 +31,8 @@ namespace LP2MegaAutos
             il_Clientes1.EditarClick += btnEditarClick;
             il_Clientes2.EditarClick += btnEditarClick;
             il_Clientes3.EditarClick += btnEditarClick;
+
+            this.btn_Agregar.Click += btnAgregarClick;
         }
         private void btnEditarClick(Object sender, EventArgs e)
         {
@@ -43,6 +45,19 @@ namespace LP2MegaAutos
                     DarkMode.iniciarSinTimer(pantallaEditarCliente.Instancia.Parent);
             }
             pantallaEditarCliente.Instancia.BringToFront();
+        }
+
+        private void btnAgregarClick(Object sender, EventArgs e)
+        {
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaAgregarCliente.Instancia))
+            {
+                this.Controls.Add(pantallaAgregarCliente.Instancia);
+                pantallaAgregarCliente.Instancia.Dock = DockStyle.Fill;
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaAgregarCliente.Instancia.Parent);
+            }
+            pantallaAgregarCliente.Instancia.BringToFront();
         }
 
         private void btnAZ_Click(object sender, EventArgs e)

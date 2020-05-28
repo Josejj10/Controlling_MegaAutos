@@ -24,28 +24,31 @@ namespace LP2MegaAutos
                 return _instancia;
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion instancia
 
-        //public pantallaAjustesUsuario()
-        //{
+        public pantallaAjustesUsuario()
+        {
 
-        //    InitializeComponent();
-        //    btnEditar += btnEditarClick;
-        //    btnEditar += btnEditarClick;
-        //    btnEditar += btnEditarClick;
-        //}
-        //private void btnEditarClick(Object sender, EventArgs e)
-        //{
-        //    //MessageBox.Show("NO AUN");
-        //    if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
-        //    {
-        //        this.Controls.Add(pantallaEditarInformacionPropia.Instancia);
-        //        pantallaEditarInformacionPropia.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaEditarInformacionPropia.Instancia.Parent);
-        //    }
-        //    pantallaEditarInformacionPropia.Instancia.BringToFront();
-        //}
+            InitializeComponent();
+            this.btnEditar.Click += btnEditar_Click;
+        }
+        private void btnEditarClick(Object sender, EventArgs e)
+        {
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
+            {
+                this.Controls.Add(pantallaEditarInformacionPropia.Instancia);
+                pantallaEditarInformacionPropia.Instancia.Dock = DockStyle.Fill;
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaEditarInformacionPropia.Instancia.Parent);
+            }
+            pantallaEditarInformacionPropia.Instancia.BringToFront();
+        }
 
     }
 }

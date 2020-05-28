@@ -95,6 +95,12 @@
     <Compile Include="itemLista.Designer.cs">
       <DependentUpon>itemLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="itemListaReporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemListaReporte.Designer.cs">
+      <DependentUpon>itemListaReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaActualizarClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,12 +178,6 @@
     </Compile>
     <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pantallaEditarSedes.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pantallaEditarSedes.Designer.cs">
-      <DependentUpon>pantallaEditarSedes.cs</DependentUpon>
     </Compile>
     <Compile Include="pantallaEditarUsuario.cs">
       <SubType>UserControl</SubType>
@@ -265,24 +265,6 @@
     <Compile Include="RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaSede.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pantallaSede.Designer.cs">
-      <DependentUpon>pantallaSede.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pantallaServicios.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pantallaServicios.Designer.cs">
-      <DependentUpon>pantallaServicios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pantallaEditarServicios.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pantallaEditarServicios.Designer.cs">
-      <DependentUpon>pantallaEditarServicios.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="itemLista.resx">
       <DependentUpon>itemLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemListaReporte.resx">
+      <DependentUpon>itemListaReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarClientes.resx">
       <DependentUpon>pantallaActualizarClientes.cs</DependentUpon>
@@ -343,12 +328,6 @@
     <EmbeddedResource Include="pantallaEditarInformacionPropia.resx">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarSedes.resx">
-      <DependentUpon>pantallaEditarSedes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarServicios.resx">
-      <DependentUpon>pantallaEditarServicios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="pantallaEditarUsuario.resx">
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,16 +346,10 @@
     <EmbeddedResource Include="pantallaDetalleReporte.resx">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaSede.resx">
-      <DependentUpon>pantallaSede.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pantallaServicios.resx">
-      <DependentUpon>pantallaServicios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />

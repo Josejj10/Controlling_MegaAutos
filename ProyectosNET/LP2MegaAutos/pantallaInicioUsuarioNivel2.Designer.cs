@@ -214,7 +214,7 @@
             // 
             // btn_ReportesU2
             // 
-            this.btn_ReportesU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.btn_ReportesU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
             this.btn_ReportesU2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_ReportesU2.FlatAppearance.BorderSize = 0;
             this.btn_ReportesU2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -649,7 +649,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.roundedPanel7);
             this.Controls.Add(this.roundedPanel6);
             this.Controls.Add(this.roundedPanel5);

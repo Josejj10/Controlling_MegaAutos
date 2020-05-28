@@ -25,19 +25,20 @@ namespace LP2MegaAutos
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-
-        }
         #endregion instancia
 
         public pantallaAjustesUsuario()
         {
 
             InitializeComponent();
-            this.btnEditar.Click += btnEditar_Click;
         }
-        private void btnEditarClick(Object sender, EventArgs e)
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            this.SendToBack();
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             //MessageBox.Show("NO AUN");
             if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
@@ -50,9 +51,5 @@ namespace LP2MegaAutos
             pantallaEditarInformacionPropia.Instancia.BringToFront();
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            this.SendToBack();
-        }
     }
 }

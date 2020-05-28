@@ -33,10 +33,10 @@ namespace LP2MegaAutos
         public pantallaAjustesGerente()
         {
             InitializeComponent();
-            this.btnEditar.Click += btnEditar_Click;
+            this.btnEditar.Click += btnEditarUsu_Click;
         }
 
-        private void btnEditarClick(Object sender, EventArgs e)
+        private void btnEditarUsu_Click(Object sender, EventArgs e)
         {
             //MessageBox.Show("NO AUN");
             if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
@@ -58,5 +58,6 @@ namespace LP2MegaAutos
         {
             MessageBox.Show("Agregar");
         }
+
     }
 }

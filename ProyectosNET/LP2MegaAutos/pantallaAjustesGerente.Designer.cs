@@ -548,6 +548,7 @@
             this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditarUsu_Click);
             // 
             // flpPermisos
             // 

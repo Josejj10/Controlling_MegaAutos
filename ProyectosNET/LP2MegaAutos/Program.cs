@@ -25,11 +25,21 @@ namespace LP2MegaAutos
             DarkMode.agregarExcepcion("title_bar");
             DarkMode.agregarExcepcion("title_bar_2");
             DarkMode.agregarExcepcion("panelMenu");
-            Login_Screen login= new Login_Screen();
-            // Application.Run(login);
-            if (login.ShowDialog() == DialogResult.OK)
+
+            while (true)
             {
-                Application.Run(new frmPrincipal());
+                Login_Screen login = new Login_Screen();
+                // Application.Run(login);
+                frmPrincipal frm = new frmPrincipal();
+                if (login.ShowDialog() == DialogResult.OK)
+                {
+                    if (frm.ShowDialog() == DialogResult.OK)
+                        continue;
+                    else
+                        break;
+                }
+                else
+                    break;
             }
         }
 

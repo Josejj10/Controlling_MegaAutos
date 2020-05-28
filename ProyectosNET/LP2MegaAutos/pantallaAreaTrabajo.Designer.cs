@@ -40,23 +40,23 @@
             this.btnZA = new System.Windows.Forms.Button();
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.il_AreaTrabajo2 = new LP2MegaAutos.itemLista();
-            this.il_AreaTrabajo3 = new LP2MegaAutos.itemLista();
-            this.il_AreaTrabajo1 = new LP2MegaAutos.itemLista();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlBuscar = new System.Windows.Forms.Panel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
+            this.il_AreaTrabajo1 = new LP2MegaAutos.itemLista();
+            this.il_AreaTrabajo2 = new LP2MegaAutos.itemLista();
+            this.il_AreaTrabajo3 = new LP2MegaAutos.itemLista();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.rpn_ListaServicios.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
             this.rndZA.SuspendLayout();
             this.rndAZ.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rpn_ListaServicios
@@ -116,7 +116,7 @@
             this.lbl_ListaAreasTrabajo.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaAreasTrabajo.Location = new System.Drawing.Point(190, 3);
             this.lbl_ListaAreasTrabajo.Name = "lbl_ListaAreasTrabajo";
-            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(158, 19);
+            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(151, 22);
             this.lbl_ListaAreasTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaAreasTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaAreasTrabajo, null);
@@ -318,83 +318,6 @@
             this.btnAZ.UseVisualStyleBackColor = false;
             this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.panel1.Controls.Add(this.il_AreaTrabajo2);
-            this.panel1.Controls.Add(this.il_AreaTrabajo3);
-            this.panel1.Controls.Add(this.il_AreaTrabajo1);
-            this.panel1.Location = new System.Drawing.Point(37, 143);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 305);
-            this.panel1.TabIndex = 31;
-            this.tagsExtender1.SetTag2(this.panel1, null);
-            this.tagsExtender1.SetTag3(this.panel1, null);
-            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
-            // 
-            // il_AreaTrabajo2
-            // 
-            this.il_AreaTrabajo2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_AreaTrabajo2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_AreaTrabajo2.ColorPanel = System.Drawing.Color.White;
-            this.il_AreaTrabajo2.Location = new System.Drawing.Point(21, 130);
-            this.il_AreaTrabajo2.Name = "il_AreaTrabajo2";
-            this.il_AreaTrabajo2.Size = new System.Drawing.Size(497, 104);
-            this.il_AreaTrabajo2.TabIndex = 20;
-            this.tagsExtender1.SetTag2(this.il_AreaTrabajo2, null);
-            this.tagsExtender1.SetTag3(this.il_AreaTrabajo2, null);
-            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo2, System.Drawing.FontStyle.Regular);
-            this.il_AreaTrabajo2.TextoAgregadoPor = "Percy Jackson";
-            this.il_AreaTrabajo2.TextoFecha = "dd - mm - aaaa";
-            this.il_AreaTrabajo2.TextoPrincipal = "Pintura en horno";
-            this.il_AreaTrabajo2.Textosecundario = "Pintura";
-            this.il_AreaTrabajo2.TextoTercero = "PIN-002";
-            // 
-            // il_AreaTrabajo3
-            // 
-            this.il_AreaTrabajo3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_AreaTrabajo3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_AreaTrabajo3.ColorPanel = System.Drawing.Color.White;
-            this.il_AreaTrabajo3.Location = new System.Drawing.Point(21, 254);
-            this.il_AreaTrabajo3.Name = "il_AreaTrabajo3";
-            this.il_AreaTrabajo3.Size = new System.Drawing.Size(497, 104);
-            this.il_AreaTrabajo3.TabIndex = 21;
-            this.tagsExtender1.SetTag2(this.il_AreaTrabajo3, null);
-            this.tagsExtender1.SetTag3(this.il_AreaTrabajo3, null);
-            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo3, System.Drawing.FontStyle.Regular);
-            this.il_AreaTrabajo3.TextoAgregadoPor = "Percy Jackson";
-            this.il_AreaTrabajo3.TextoFecha = "dd - mm - aaaa";
-            this.il_AreaTrabajo3.TextoPrincipal = "Mecánica a domicilio";
-            this.il_AreaTrabajo3.Textosecundario = "Mecánica";
-            this.il_AreaTrabajo3.TextoTercero = "MEC-002";
-            // 
-            // il_AreaTrabajo1
-            // 
-            this.il_AreaTrabajo1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_AreaTrabajo1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_AreaTrabajo1.ColorPanel = System.Drawing.Color.White;
-            this.il_AreaTrabajo1.Location = new System.Drawing.Point(21, 6);
-            this.il_AreaTrabajo1.Name = "il_AreaTrabajo1";
-            this.il_AreaTrabajo1.Size = new System.Drawing.Size(497, 104);
-            this.il_AreaTrabajo1.TabIndex = 19;
-            this.tagsExtender1.SetTag2(this.il_AreaTrabajo1, null);
-            this.tagsExtender1.SetTag3(this.il_AreaTrabajo1, null);
-            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo1, System.Drawing.FontStyle.Regular);
-            this.il_AreaTrabajo1.TextoAgregadoPor = "Percy Jackson";
-            this.il_AreaTrabajo1.TextoFecha = "dd - mm - aaaa";
-            this.il_AreaTrabajo1.TextoPrincipal = "Mantenimiento Preventivo";
-            this.il_AreaTrabajo1.Textosecundario = "Mecánica";
-            this.il_AreaTrabajo1.TextoTercero = "MEC-001";
-            // 
             // rpTopMain
             // 
             this.rpTopMain.ArcRadiusBorde = 15;
@@ -494,16 +417,97 @@
             this.roundedPanel4.YBorde = 0;
             this.roundedPanel4.YPanel = 0;
             // 
+            // il_AreaTrabajo1
+            // 
+            this.il_AreaTrabajo1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_AreaTrabajo1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_AreaTrabajo1.ColorPanel = System.Drawing.Color.White;
+            this.il_AreaTrabajo1.Location = new System.Drawing.Point(4, 116);
+            this.il_AreaTrabajo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.il_AreaTrabajo1.Name = "il_AreaTrabajo1";
+            this.il_AreaTrabajo1.Size = new System.Drawing.Size(497, 104);
+            this.il_AreaTrabajo1.TabIndex = 19;
+            this.tagsExtender1.SetTag2(this.il_AreaTrabajo1, null);
+            this.tagsExtender1.SetTag3(this.il_AreaTrabajo1, null);
+            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo1, System.Drawing.FontStyle.Regular);
+            this.il_AreaTrabajo1.TextoAgregadoPor = "Percy Jackson";
+            this.il_AreaTrabajo1.TextoFecha = "25/05/2019";
+            this.il_AreaTrabajo1.TextoPrincipal = "Mantenimiento Preventivo";
+            this.il_AreaTrabajo1.Textosecundario = "Mecánica";
+            this.il_AreaTrabajo1.TextoTercero = "MEC-001";
+            // 
+            // il_AreaTrabajo2
+            // 
+            this.il_AreaTrabajo2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_AreaTrabajo2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_AreaTrabajo2.ColorPanel = System.Drawing.Color.White;
+            this.il_AreaTrabajo2.Location = new System.Drawing.Point(4, 4);
+            this.il_AreaTrabajo2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.il_AreaTrabajo2.Name = "il_AreaTrabajo2";
+            this.il_AreaTrabajo2.Size = new System.Drawing.Size(497, 104);
+            this.il_AreaTrabajo2.TabIndex = 20;
+            this.tagsExtender1.SetTag2(this.il_AreaTrabajo2, null);
+            this.tagsExtender1.SetTag3(this.il_AreaTrabajo2, null);
+            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo2, System.Drawing.FontStyle.Regular);
+            this.il_AreaTrabajo2.TextoAgregadoPor = "Percy Jackson";
+            this.il_AreaTrabajo2.TextoFecha = "25/05/2019";
+            this.il_AreaTrabajo2.TextoPrincipal = "Pintura en horno";
+            this.il_AreaTrabajo2.Textosecundario = "Pintura";
+            this.il_AreaTrabajo2.TextoTercero = "PIN-002";
+            // 
+            // il_AreaTrabajo3
+            // 
+            this.il_AreaTrabajo3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_AreaTrabajo3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_AreaTrabajo3.ColorPanel = System.Drawing.Color.White;
+            this.il_AreaTrabajo3.Location = new System.Drawing.Point(4, 228);
+            this.il_AreaTrabajo3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.il_AreaTrabajo3.Name = "il_AreaTrabajo3";
+            this.il_AreaTrabajo3.Size = new System.Drawing.Size(497, 104);
+            this.il_AreaTrabajo3.TabIndex = 21;
+            this.tagsExtender1.SetTag2(this.il_AreaTrabajo3, null);
+            this.tagsExtender1.SetTag3(this.il_AreaTrabajo3, null);
+            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo3, System.Drawing.FontStyle.Regular);
+            this.il_AreaTrabajo3.TextoAgregadoPor = "Percy Jackson";
+            this.il_AreaTrabajo3.TextoFecha = "dd - mm - aaaa";
+            this.il_AreaTrabajo3.TextoPrincipal = "Mecánica a domicilio";
+            this.il_AreaTrabajo3.Textosecundario = "Mecánica";
+            this.il_AreaTrabajo3.TextoTercero = "MEC-002";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowLayoutPanel1.Controls.Add(this.il_AreaTrabajo2);
+            this.flowLayoutPanel1.Controls.Add(this.il_AreaTrabajo1);
+            this.flowLayoutPanel1.Controls.Add(this.il_AreaTrabajo3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(36, 142);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(539, 306);
+            this.flowLayoutPanel1.TabIndex = 22;
+            this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
+            this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaAreaTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.txt_Buscar);
             this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.rpTopMain);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.rndReciente);
             this.Controls.Add(this.rpn_ListaServicios);
             this.Controls.Add(this.rndAntiguo);
@@ -522,8 +526,8 @@
             this.rndAntiguo.ResumeLayout(false);
             this.rndZA.ResumeLayout(false);
             this.rndAZ.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.pnlBuscar.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,15 +545,15 @@
         private System.Windows.Forms.Button btnZA;
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
-        private System.Windows.Forms.Panel panel1;
-        private itemLista il_AreaTrabajo2;
-        private itemLista il_AreaTrabajo3;
-        private itemLista il_AreaTrabajo1;
         private TagsExtender tagsExtender1;
         private RoundedPanel rpTopMain;
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlBuscar;
         private RoundedPanel roundedPanel4;
+        private itemLista il_AreaTrabajo1;
+        private itemLista il_AreaTrabajo2;
+        private itemLista il_AreaTrabajo3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

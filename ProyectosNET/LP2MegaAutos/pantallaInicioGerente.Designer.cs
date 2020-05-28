@@ -58,6 +58,11 @@
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel6 = new LP2MegaAutos.RoundedPanel();
             this.rpn_GenerarReporteGerente.SuspendLayout();
             this.rpn_AreaTrabajo.SuspendLayout();
             this.rpn_Reportes.SuspendLayout();
@@ -76,18 +81,18 @@
             // 
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblBienvenido.Font = new System.Drawing.Font("Montserrat", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.lblBienvenido.Location = new System.Drawing.Point(171, 19);
+            this.lblBienvenido.Font = new System.Drawing.Font("Montserrat", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.lblBienvenido.Location = new System.Drawing.Point(167, 52);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(269, 59);
+            this.lblBienvenido.Size = new System.Drawing.Size(273, 40);
             this.lblBienvenido.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lblBienvenido, null);
             this.tagsExtender1.SetTag3(this.lblBienvenido, null);
             this.tagsExtender1.SetTagFontName(this.lblBienvenido, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.lblBienvenido, 32.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lblBienvenido, System.Drawing.FontStyle.Regular);
-            this.lblBienvenido.Text = "Bienvenido";
+            this.tagsExtender1.SetTagFontSize(this.lblBienvenido, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.lblBienvenido, System.Drawing.FontStyle.Bold);
+            this.lblBienvenido.Text = "Bienvenido, Jose";
             this.lblBienvenido.Click += new System.EventHandler(this.lblBienvenido_Click);
             // 
             // rpn_GenerarReporteGerente
@@ -138,6 +143,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_GenerarReporteGerente, System.Drawing.FontStyle.Bold);
             this.btn_GenerarReporteGerente.Text = "Generar Reporte";
             this.btn_GenerarReporteGerente.UseVisualStyleBackColor = false;
+            this.btn_GenerarReporteGerente.Click += new System.EventHandler(this.btn_GenerarReporteGerente_Click);
             // 
             // rpn_izqGR
             // 
@@ -155,7 +161,7 @@
             this.rpn_izqGR.MenosWidthPanel = 1;
             this.rpn_izqGR.Name = "rpn_izqGR";
             this.rpn_izqGR.PorcLuzColorBorde = 0;
-            this.rpn_izqGR.Size = new System.Drawing.Size(53, 100);
+            this.rpn_izqGR.Size = new System.Drawing.Size(47, 100);
             this.rpn_izqGR.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rpn_izqGR, null);
             this.tagsExtender1.SetTag3(this.rpn_izqGR, null);
@@ -176,14 +182,14 @@
             this.rpn_derGR.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpn_derGR.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
             this.rpn_derGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.rpn_derGR.Location = new System.Drawing.Point(558, 107);
+            this.rpn_derGR.Location = new System.Drawing.Point(564, 107);
             this.rpn_derGR.MenosHeightBorde = 1;
             this.rpn_derGR.MenosHeightPanel = 1;
             this.rpn_derGR.MenosWidthBorde = 1;
             this.rpn_derGR.MenosWidthPanel = 1;
             this.rpn_derGR.Name = "rpn_derGR";
             this.rpn_derGR.PorcLuzColorBorde = 0;
-            this.rpn_derGR.Size = new System.Drawing.Size(53, 100);
+            this.rpn_derGR.Size = new System.Drawing.Size(47, 100);
             this.rpn_derGR.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.rpn_derGR, null);
             this.tagsExtender1.SetTag3(this.rpn_derGR, null);
@@ -243,6 +249,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_AreaTrabajoGerente, System.Drawing.FontStyle.Bold);
             this.btn_AreaTrabajoGerente.Text = "Areas de Trabajo";
             this.btn_AreaTrabajoGerente.UseVisualStyleBackColor = false;
+            this.btn_AreaTrabajoGerente.Click += new System.EventHandler(this.btn_AreaTrabajoGerente_Click);
             // 
             // rpn_Reportes
             // 
@@ -292,6 +299,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_ReportesGerente, System.Drawing.FontStyle.Bold);
             this.btn_ReportesGerente.Text = "Reportes";
             this.btn_ReportesGerente.UseVisualStyleBackColor = false;
+            this.btn_ReportesGerente.Click += new System.EventHandler(this.btn_ReportesGerente_Click);
             // 
             // rpn_Servicios
             // 
@@ -341,6 +349,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_ServiciosGerente, System.Drawing.FontStyle.Bold);
             this.btn_ServiciosGerente.Text = "Servicios";
             this.btn_ServiciosGerente.UseVisualStyleBackColor = false;
+            this.btn_ServiciosGerente.Click += new System.EventHandler(this.btn_ServiciosGerente_Click);
             // 
             // rpn_Drivers
             // 
@@ -390,6 +399,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_DriversGerente, System.Drawing.FontStyle.Bold);
             this.btn_DriversGerente.Text = "Drivers";
             this.btn_DriversGerente.UseVisualStyleBackColor = false;
+            this.btn_DriversGerente.Click += new System.EventHandler(this.btn_DriversGerente_Click);
             // 
             // rpn_Sedes
             // 
@@ -439,6 +449,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_SedesGerente, System.Drawing.FontStyle.Bold);
             this.btn_SedesGerente.Text = "Sedes";
             this.btn_SedesGerente.UseVisualStyleBackColor = false;
+            this.btn_SedesGerente.Click += new System.EventHandler(this.btn_SedesGerente_Click);
             // 
             // rpn_Usuarios
             // 
@@ -488,6 +499,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_UsuariosGerente, System.Drawing.FontStyle.Bold);
             this.btn_UsuariosGerente.Text = "Usuarios";
             this.btn_UsuariosGerente.UseVisualStyleBackColor = false;
+            this.btn_UsuariosGerente.Click += new System.EventHandler(this.btn_UsuariosGerente_Click);
             // 
             // rpn_Clientes
             // 
@@ -537,6 +549,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_ClientesGerente, System.Drawing.FontStyle.Bold);
             this.btn_ClientesGerente.Text = "Clientes";
             this.btn_ClientesGerente.UseVisualStyleBackColor = false;
+            this.btn_ClientesGerente.Click += new System.EventHandler(this.btn_ClientesGerente_Click);
             // 
             // rpn_Empresa
             // 
@@ -586,6 +599,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_EmpresaGerente, System.Drawing.FontStyle.Bold);
             this.btn_EmpresaGerente.Text = "Empresa";
             this.btn_EmpresaGerente.UseVisualStyleBackColor = false;
+            this.btn_EmpresaGerente.Click += new System.EventHandler(this.btn_EmpresaGerente_Click);
             // 
             // rpn_CerrarSesion
             // 
@@ -635,6 +649,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_CerrarSesionGerente, System.Drawing.FontStyle.Bold);
             this.btn_CerrarSesionGerente.Text = "Cerrar Sesion";
             this.btn_CerrarSesionGerente.UseVisualStyleBackColor = false;
+            this.btn_CerrarSesionGerente.Click += new System.EventHandler(this.btn_CerrarSesionGerente_Click);
             // 
             // rpn_Ajustes
             // 
@@ -684,6 +699,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btnAjustesGerente, System.Drawing.FontStyle.Bold);
             this.btnAjustesGerente.Text = "Ajustes";
             this.btnAjustesGerente.UseVisualStyleBackColor = false;
+            this.btnAjustesGerente.Click += new System.EventHandler(this.btnAjustesGerente_Click);
             // 
             // rpn_ActualizarBase
             // 
@@ -733,6 +749,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_ActualizarBDGerente, System.Drawing.FontStyle.Bold);
             this.btn_ActualizarBDGerente.Text = "Actualizar Base de Datos";
             this.btn_ActualizarBDGerente.UseVisualStyleBackColor = false;
+            this.btn_ActualizarBDGerente.Click += new System.EventHandler(this.btn_ActualizarBDGerente_Click);
             // 
             // roundedPanel2
             // 
@@ -790,11 +807,155 @@
             this.roundedPanel3.YBorde = 0;
             this.roundedPanel3.YPanel = 0;
             // 
+            // rpTopMain
+            // 
+            this.rpTopMain.ArcRadiusBorde = 15;
+            this.rpTopMain.ArcRadiusPanel = 15;
+            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
+            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
+            this.rpTopMain.Location = new System.Drawing.Point(0, 0);
+            this.rpTopMain.MenosHeightBorde = 1;
+            this.rpTopMain.MenosHeightPanel = 1;
+            this.rpTopMain.MenosWidthBorde = 1;
+            this.rpTopMain.MenosWidthPanel = 1;
+            this.rpTopMain.Name = "rpTopMain";
+            this.rpTopMain.PorcLuzColorBorde = 0;
+            this.rpTopMain.Size = new System.Drawing.Size(611, 40);
+            this.rpTopMain.TabIndex = 33;
+            this.tagsExtender1.SetTag2(this.rpTopMain, null);
+            this.tagsExtender1.SetTag3(this.rpTopMain, null);
+            this.tagsExtender1.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpTopMain, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
+            this.rpTopMain.XBorde = 0;
+            this.rpTopMain.XPanel = 0;
+            this.rpTopMain.YBorde = 0;
+            this.rpTopMain.YPanel = 0;
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.ArcRadiusBorde = 5;
+            this.roundedPanel1.ArcRadiusPanel = 5;
+            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
+            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.roundedPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.roundedPanel1.Location = new System.Drawing.Point(596, 230);
+            this.roundedPanel1.MenosHeightBorde = 1;
+            this.roundedPanel1.MenosHeightPanel = 1;
+            this.roundedPanel1.MenosWidthBorde = 1;
+            this.roundedPanel1.MenosWidthPanel = 1;
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.PorcLuzColorBorde = 0;
+            this.roundedPanel1.Size = new System.Drawing.Size(15, 70);
+            this.roundedPanel1.TabIndex = 35;
+            this.tagsExtender1.SetTag2(this.roundedPanel1, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
+            this.roundedPanel1.XBorde = 0;
+            this.roundedPanel1.XPanel = 0;
+            this.roundedPanel1.YBorde = 0;
+            this.roundedPanel1.YPanel = 0;
+            // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.roundedPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.roundedPanel4.Location = new System.Drawing.Point(596, 306);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(15, 70);
+            this.roundedPanel4.TabIndex = 36;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
+            // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.ArcRadiusBorde = 5;
+            this.roundedPanel5.ArcRadiusPanel = 5;
+            this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel5.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
+            this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
+            this.roundedPanel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.roundedPanel5.Location = new System.Drawing.Point(0, 231);
+            this.roundedPanel5.MenosHeightBorde = 1;
+            this.roundedPanel5.MenosHeightPanel = 1;
+            this.roundedPanel5.MenosWidthBorde = 1;
+            this.roundedPanel5.MenosWidthPanel = 1;
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.PorcLuzColorBorde = 0;
+            this.roundedPanel5.Size = new System.Drawing.Size(15, 70);
+            this.roundedPanel5.TabIndex = 37;
+            this.tagsExtender1.SetTag2(this.roundedPanel5, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel5, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel5, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel5, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel5, System.Drawing.FontStyle.Regular);
+            this.roundedPanel5.XBorde = 0;
+            this.roundedPanel5.XPanel = 0;
+            this.roundedPanel5.YBorde = 0;
+            this.roundedPanel5.YPanel = 0;
+            // 
+            // roundedPanel6
+            // 
+            this.roundedPanel6.ArcRadiusBorde = 5;
+            this.roundedPanel6.ArcRadiusPanel = 5;
+            this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundedPanel6.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel6.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel6.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Right;
+            this.roundedPanel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.roundedPanel6.Location = new System.Drawing.Point(-1, 306);
+            this.roundedPanel6.MenosHeightBorde = 1;
+            this.roundedPanel6.MenosHeightPanel = 1;
+            this.roundedPanel6.MenosWidthBorde = 1;
+            this.roundedPanel6.MenosWidthPanel = 1;
+            this.roundedPanel6.Name = "roundedPanel6";
+            this.roundedPanel6.PorcLuzColorBorde = 0;
+            this.roundedPanel6.Size = new System.Drawing.Size(15, 70);
+            this.roundedPanel6.TabIndex = 38;
+            this.tagsExtender1.SetTag2(this.roundedPanel6, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel6, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel6, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel6, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel6, System.Drawing.FontStyle.Regular);
+            this.roundedPanel6.XBorde = 0;
+            this.roundedPanel6.XPanel = 0;
+            this.roundedPanel6.YBorde = 0;
+            this.roundedPanel6.YPanel = 0;
+            // 
             // pantallaInicioGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.roundedPanel6);
+            this.Controls.Add(this.roundedPanel5);
+            this.Controls.Add(this.roundedPanel4);
+            this.Controls.Add(this.roundedPanel1);
+            this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.rpn_Sedes);
@@ -868,5 +1029,10 @@
         private RoundedPanel roundedPanel2;
         private RoundedPanel roundedPanel3;
         private TagsExtender tagsExtender1;
+        private RoundedPanel rpTopMain;
+        private RoundedPanel roundedPanel1;
+        private RoundedPanel roundedPanel4;
+        private RoundedPanel roundedPanel5;
+        private RoundedPanel roundedPanel6;
     }
 }

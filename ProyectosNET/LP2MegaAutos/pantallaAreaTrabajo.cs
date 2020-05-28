@@ -12,27 +12,41 @@ namespace LP2MegaAutos
 {
     public partial class pantallaAreaTrabajo : UserControl
     {
+        // Singleton instance para poder crearlo en la pantalla menu
+        #region instancia
+        private static pantallaAreaTrabajo _instancia;
+        public static pantallaAreaTrabajo Instancia
+        {
+            get
+            {
+                if (_instancia == null)
+                    _instancia = new pantallaAreaTrabajo();
+                return _instancia;
+            }
+        }
+        #endregion instancia
+        
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
-            //il_AreaTrabajo1.EditarClick += btnEditarClick;
-            //il_AreaTrabajo2.EditarClick += btnEditarClick;
-            //il_AreaTrabajo3.EditarClick += btnEditarClick;
+            il_AreaTrabajo1.EditarClick += btnEditarClick;
+            il_AreaTrabajo2.EditarClick += btnEditarClick;
+            il_AreaTrabajo3.EditarClick += btnEditarClick;
         }
 
-/*        private void btnEditarClick(Object sender, EventArgs e)
+        private void btnEditarClick(Object sender, EventArgs e)
         {
             //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarAreasTrabajo.Instancia))
+            if (!this.Controls.Contains(pantallaEditarAreaTrabajo.Instancia))
             {
-                this.Controls.Add(pantallaEditarAreasTrabajo.Instancia);
-                pantallaEditarAreasTrabajo.Instancia.Dock = DockStyle.Fill;
-                pantallaEditarAreasTrabajo.Instancia.BringToFront();
+                this.Controls.Add(pantallaEditarAreaTrabajo.Instancia);
+                pantallaEditarAreaTrabajo.Instancia.Dock = DockStyle.Fill;
+                pantallaEditarAreaTrabajo.Instancia.BringToFront();
             }
             else
-                pantallaEditarAreasTrabajo.Instancia.BringToFront();
+                pantallaEditarAreaTrabajo.Instancia.BringToFront();
         }
-*/
+
         private void btnAZ_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
@@ -97,5 +111,6 @@ namespace LP2MegaAutos
         {
             txt_Buscar.Text = string.Empty;
         }
+
     }
 }

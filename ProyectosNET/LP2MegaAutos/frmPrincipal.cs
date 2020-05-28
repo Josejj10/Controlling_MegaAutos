@@ -125,8 +125,7 @@ namespace LP2MegaAutos
             {
                 // Todos los controles que tiene son RoundedPanels, cambiar su color
                 if (c == rp) continue;
-                if (c is RoundedPanel) cambiarRPMenu((RoundedPanel)c);
-                
+                if (c is RoundedPanel) cambiarRPMenu((RoundedPanel)c);                
             }
             if (DarkMode.is_dark_mode_active())
                 rp.ColorPanel = Dark_Mode.BackBackground;
@@ -158,6 +157,8 @@ namespace LP2MegaAutos
             // Cambiar los botones y rPanel excepto el enviado
             cambiarColoresBotonesMenu(rpBtnMenuServicios);
         }
+
+
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
             if (!rpMain.Controls.Contains(pantallaGenerarReporte.Instancia))

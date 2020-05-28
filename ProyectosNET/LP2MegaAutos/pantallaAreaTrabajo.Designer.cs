@@ -117,7 +117,7 @@
             this.lbl_ListaAreasTrabajo.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaAreasTrabajo.Location = new System.Drawing.Point(190, 3);
             this.lbl_ListaAreasTrabajo.Name = "lbl_ListaAreasTrabajo";
-            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(158, 19);
+            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(151, 22);
             this.lbl_ListaAreasTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaAreasTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaAreasTrabajo, null);
@@ -444,6 +444,7 @@
             this.il_AreaTrabajo1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_AreaTrabajo1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_AreaTrabajo1.ColorPanel = System.Drawing.Color.White;
+            this.il_AreaTrabajo1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.il_AreaTrabajo1.Location = new System.Drawing.Point(4, 4);
             this.il_AreaTrabajo1.Margin = new System.Windows.Forms.Padding(4);
             this.il_AreaTrabajo1.Name = "il_AreaTrabajo1";

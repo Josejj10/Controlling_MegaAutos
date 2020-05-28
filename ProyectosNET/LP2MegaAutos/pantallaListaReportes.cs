@@ -90,5 +90,11 @@ namespace LP2MegaAutos
             this.btn_AreaTrabajo.BackColor = Color.Transparent;
             this.btn_cliente.BackColor = Colores.AmarilloInteractivoMenos1;
         }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            if (this.Parent.Controls.Contains(pantallaGenerarReporte.Instancia))
+                pantallaGenerarReporte.Instancia.BringToFront();
+        }
     }
 }

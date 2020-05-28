@@ -81,6 +81,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_GuardarCambios, System.Drawing.FontStyle.Bold);
             this.btn_GuardarCambios.Text = "Guardar Cambios";
             this.btn_GuardarCambios.UseVisualStyleBackColor = false;
+            this.btn_GuardarCambios.Click += new System.EventHandler(this.btn_GuardarCambios_Click);
             // 
             // rpn_Reportes
             // 

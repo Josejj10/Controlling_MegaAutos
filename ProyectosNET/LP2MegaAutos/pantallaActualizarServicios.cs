@@ -37,14 +37,14 @@ namespace LP2MegaAutos
         private void btnEditarClick(Object sender, EventArgs e)
         {
             //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarServicios.Instancia))
+            if (!this.Controls.Contains(pantallaEditarServicio.Instancia))
             {
-                this.Controls.Add(pantallaEditarServicios.Instancia);
-                pantallaEditarServicios.Instancia.Dock = DockStyle.Fill;
+                this.Controls.Add(pantallaEditarServicio.Instancia);
+                pantallaEditarServicio.Instancia.Dock = DockStyle.Fill;
                 if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaEditarServicios.Instancia.Parent);
+                    DarkMode.iniciarSinTimer(pantallaEditarServicio.Instancia.Parent);
             }
-            pantallaEditarServicios.Instancia.BringToFront();
+            pantallaEditarServicio.Instancia.BringToFront();
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)

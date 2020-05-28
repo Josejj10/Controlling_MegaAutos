@@ -10,31 +10,30 @@ using System.Windows.Forms;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaEditarServicios : UserControl
+    public partial class pantallaEditarSede : UserControl
     {
         // Singleton instance para poder crearlo en la pantalla menu
         #region instancia
-        private static pantallaEditarServicios _instancia;
-        public static pantallaEditarServicios Instancia
+        private static pantallaEditarSede _instancia;
+        public static pantallaEditarSede Instancia
         {
             get
             {
                 if (_instancia == null)
-                    _instancia = new pantallaEditarServicios();
+                    _instancia = new pantallaEditarSede();
                 return _instancia;
             }
         }
         #endregion instancia
 
-
-        public pantallaEditarServicios()
+        public pantallaEditarSede()
         {
             InitializeComponent();
         }
 
-        private void pantallaEditarServicios_Load(object sender, EventArgs e)
+        private void btn_guardar_Click(object sender, EventArgs e)
         {
-
+            this.SendToBack();
         }
     }
 }

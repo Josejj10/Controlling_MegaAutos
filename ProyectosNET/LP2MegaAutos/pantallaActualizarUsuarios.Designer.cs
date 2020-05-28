@@ -50,8 +50,6 @@
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
-            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
-            this.btn_guardar = new System.Windows.Forms.Button();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
             this.rndZA.SuspendLayout();
@@ -59,7 +57,6 @@
             this.rpn_ListaServicios.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
-            this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // il_Usuarios1
@@ -390,7 +387,7 @@
             this.panel1.Controls.Add(this.il_Usuarios3);
             this.panel1.Location = new System.Drawing.Point(36, 142);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 265);
+            this.panel1.Size = new System.Drawing.Size(538, 306);
             this.panel1.TabIndex = 32;
             this.tagsExtender1.SetTag2(this.panel1, null);
             this.tagsExtender1.SetTag3(this.panel1, null);
@@ -498,59 +495,11 @@
             this.roundedPanel4.YBorde = 0;
             this.roundedPanel4.YPanel = 0;
             // 
-            // roundedPanel1
-            // 
-            this.roundedPanel1.ArcRadiusBorde = 5;
-            this.roundedPanel1.ArcRadiusPanel = 5;
-            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.roundedPanel1.Controls.Add(this.btn_guardar);
-            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel1.Location = new System.Drawing.Point(165, 413);
-            this.roundedPanel1.MenosHeightBorde = 1;
-            this.roundedPanel1.MenosHeightPanel = 1;
-            this.roundedPanel1.MenosWidthBorde = 1;
-            this.roundedPanel1.MenosWidthPanel = 1;
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.PorcLuzColorBorde = 0;
-            this.roundedPanel1.Size = new System.Drawing.Size(280, 35);
-            this.roundedPanel1.TabIndex = 50;
-            this.tagsExtender1.SetTag2(this.roundedPanel1, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
-            this.roundedPanel1.XBorde = 0;
-            this.roundedPanel1.XPanel = 0;
-            this.roundedPanel1.YBorde = 0;
-            this.roundedPanel1.YPanel = 0;
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar.FlatAppearance.BorderSize = 0;
-            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Location = new System.Drawing.Point(1, 1);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(278, 33);
-            this.btn_guardar.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.btn_guardar, null);
-            this.tagsExtender1.SetTag3(this.btn_guardar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
-            this.btn_guardar.Text = "Guardar cambios";
-            this.btn_guardar.UseVisualStyleBackColor = false;
-            // 
             // pantallaActualizarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.rpTopMain);
@@ -577,7 +526,6 @@
             this.panel1.ResumeLayout(false);
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
-            this.roundedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -604,7 +552,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_Buscar;
         private RoundedPanel roundedPanel4;
-        private RoundedPanel roundedPanel1;
-        private System.Windows.Forms.Button btn_guardar;
     }
 }

@@ -33,7 +33,9 @@ namespace LP2MegaAutos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            this.SendToBack();
+            this.Parent.Controls.Remove(this);
+            // TODO agregar metodos para limpiar la pantalla
+            // aka los textBoxs
         }
     }
 }

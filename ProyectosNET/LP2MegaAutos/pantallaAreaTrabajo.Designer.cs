@@ -110,7 +110,7 @@
             this.lbl_ListaAreasTrabajo.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaAreasTrabajo.Location = new System.Drawing.Point(190, 3);
             this.lbl_ListaAreasTrabajo.Name = "lbl_ListaAreasTrabajo";
-            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(158, 19);
+            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(151, 22);
             this.lbl_ListaAreasTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaAreasTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaAreasTrabajo, null);
@@ -331,6 +331,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel1.Controls.Add(this.il_Servicios2);
             this.panel1.Controls.Add(this.il_Servicios3);

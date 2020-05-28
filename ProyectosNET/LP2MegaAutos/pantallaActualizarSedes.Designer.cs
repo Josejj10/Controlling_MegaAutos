@@ -371,6 +371,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.panel1.Controls.Add(this.il_Sedes2);
             this.panel1.Controls.Add(this.il_Sedes1);

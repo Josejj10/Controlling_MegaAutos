@@ -29,8 +29,8 @@ namespace LP2MegaAutos
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
-            il_AreaTrabajo1.EditarClick += btnEditarClick;
             il_AreaTrabajo2.EditarClick += btnEditarClick;
+            il_AreaTrabajo1.EditarClick += btnEditarClick;
             il_AreaTrabajo3.EditarClick += btnEditarClick;
         }
 
@@ -112,5 +112,30 @@ namespace LP2MegaAutos
             txt_Buscar.Text = string.Empty;
         }
 
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaAgregarAreaTrabajo.Instancia))
+            {
+                this.Controls.Add(pantallaAgregarAreaTrabajo.Instancia);
+                pantallaAgregarAreaTrabajo.Instancia.Dock = DockStyle.Fill;
+                pantallaAgregarAreaTrabajo.Instancia.BringToFront();
+            }
+            else
+                pantallaAgregarAreaTrabajo.Instancia.BringToFront();
+        }
+
+        private void il_AreaTrabajo1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("NO AUN");
+            if (!this.Controls.Contains(pantallaAreaTrabajoxCC.Instancia))
+            {
+                this.Controls.Add(pantallaAreaTrabajoxCC.Instancia);
+                pantallaAreaTrabajoxCC.Instancia.Dock = DockStyle.Fill;
+                pantallaAreaTrabajoxCC.Instancia.BringToFront();
+            }
+            else
+                pantallaAreaTrabajoxCC.Instancia.BringToFront();
+        }
     }
 }

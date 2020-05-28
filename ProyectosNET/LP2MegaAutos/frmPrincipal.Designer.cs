@@ -296,8 +296,8 @@ namespace LP2MegaAutos
             // btnMenuReportes
             // 
             this.btnMenuReportes.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenuReportes.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
-            this.btnMenuReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMenuReportes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuReportes.BackgroundImage")));
+            this.btnMenuReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMenuReportes.FlatAppearance.BorderSize = 0;
             this.btnMenuReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMenuReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -399,7 +399,7 @@ namespace LP2MegaAutos
             // 
             this.btnMenuSedes.BackColor = System.Drawing.Color.Transparent;
             this.btnMenuSedes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMenuSedes.BackgroundImage")));
-            this.btnMenuSedes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMenuSedes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMenuSedes.FlatAppearance.BorderSize = 0;
             this.btnMenuSedes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMenuSedes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -704,8 +704,8 @@ namespace LP2MegaAutos
             // btnGenerarReporte
             // 
             this.btnGenerarReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btnGenerarReporte.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
-            this.btnGenerarReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGenerarReporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporte.BackgroundImage")));
+            this.btnGenerarReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
             this.btnGenerarReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnGenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -756,7 +756,7 @@ namespace LP2MegaAutos
             // 
             this.btnServicios.BackColor = System.Drawing.Color.Transparent;
             this.btnServicios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnServicios.BackgroundImage")));
-            this.btnServicios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnServicios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnServicios.FlatAppearance.BorderSize = 0;
             this.btnServicios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnServicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

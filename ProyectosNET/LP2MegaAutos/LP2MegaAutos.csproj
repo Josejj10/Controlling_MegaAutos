@@ -635,8 +635,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="creditos.txt" />
+    <Content Include="Resources\car.png" />
     <Content Include="Resources\editar.png" />
     <Content Include="Resources\magnifying-glass.png" />
+    <Content Include="Resources\map.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

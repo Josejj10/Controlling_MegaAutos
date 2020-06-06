@@ -70,281 +70,288 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClickableText.cs">
+    <Compile Include="Framework\UserControls\Items\itemMenuStrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Framework\UserControls\Items\itemMenuStrip.Designer.cs">
+      <DependentUpon>itemMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\UserControls\MetaDesign\ClickableText.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ClickableText.Designer.cs">
+    <Compile Include="Framework\UserControls\MetaDesign\ClickableText.Designer.cs">
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
-    <Compile Include="Colores.cs" />
-    <Compile Include="frmCuentaContable.cs">
+    <Compile Include="Framework\Colores.cs" />
+    <Compile Include="Framework\UserControls\PanelMenuStrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Framework\UserControls\PanelMenuStrip.Designer.cs">
+      <DependentUpon>PanelMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCuentaContable.Designer.cs">
+    <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.Designer.cs">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFiltrarReportes.cs">
+    <Compile Include="Reportes\frmFiltrarReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFiltrarReportes.Designer.cs">
+    <Compile Include="Reportes\frmFiltrarReportes.Designer.cs">
       <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmResumenReporte.cs">
+    <Compile Include="Reportes\frmResumenReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmResumenReporte.Designer.cs">
+    <Compile Include="Reportes\frmResumenReporte.Designer.cs">
       <DependentUpon>frmResumenReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemDetalleGrandeReporte.cs">
+    <Compile Include="Framework\UserControls\Items\itemDetalleGrandeReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemDetalleGrandeReporte.Designer.cs">
+    <Compile Include="Framework\UserControls\Items\itemDetalleGrandeReporte.Designer.cs">
       <DependentUpon>itemDetalleGrandeReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemDetalleReporte.cs">
+    <Compile Include="Framework\UserControls\Items\itemDetalleReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemDetalleReporte.Designer.cs">
+    <Compile Include="Framework\UserControls\Items\itemDetalleReporte.Designer.cs">
       <DependentUpon>itemDetalleReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemLista.cs">
+    <Compile Include="Framework\UserControls\Items\itemLista.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemLista.Designer.cs">
+    <Compile Include="Framework\UserControls\Items\itemLista.Designer.cs">
       <DependentUpon>itemLista.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemListaCuadrado.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaCuadrado.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemListaCuadrado.Designer.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaCuadrado.Designer.cs">
       <DependentUpon>itemListaCuadrado.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemListaReporte.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemListaReporte.Designer.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaReporte.Designer.cs">
       <DependentUpon>itemListaReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemListaResumen.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaResumen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemListaResumen.Designer.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaResumen.Designer.cs">
       <DependentUpon>itemListaResumen.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemListaResumenReporte.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaResumenReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemListaResumenReporte.Designer.cs">
+    <Compile Include="Framework\UserControls\Items\itemListaResumenReporte.Designer.cs">
       <DependentUpon>itemListaResumenReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaActualizarClientes.cs">
+    <Compile Include="Informacion\Clientes\pantallaActualizarClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaActualizarClientes.Designer.cs">
+    <Compile Include="Informacion\Clientes\pantallaActualizarClientes.Designer.cs">
       <DependentUpon>pantallaActualizarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaActualizarDrivers.cs">
+    <Compile Include="Informacion\Drivers\pantallaActualizarDrivers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaActualizarDrivers.Designer.cs">
+    <Compile Include="Informacion\Drivers\pantallaActualizarDrivers.Designer.cs">
       <DependentUpon>pantallaActualizarDrivers.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaActualizarSedes.cs">
+    <Compile Include="Configuracion\Sedes\pantallaActualizarSedes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaActualizarSedes.Designer.cs">
+    <Compile Include="Configuracion\Sedes\pantallaActualizarSedes.Designer.cs">
       <DependentUpon>pantallaActualizarSedes.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaActualizarServicios.cs">
+    <Compile Include="Configuracion\Servicios\pantallaActualizarServicios.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaActualizarServicios.Designer.cs">
+    <Compile Include="Configuracion\Servicios\pantallaActualizarServicios.Designer.cs">
       <DependentUpon>pantallaActualizarServicios.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaActualizarUsuarios.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaActualizarUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaActualizarUsuarios.Designer.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaActualizarUsuarios.Designer.cs">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAgregarAreaTrabajo.cs">
+    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAgregarAreaTrabajo.Designer.cs">
+    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.Designer.cs">
       <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAgregarCliente.cs">
+    <Compile Include="Informacion\Clientes\pantallaAgregarCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAgregarCliente.Designer.cs">
+    <Compile Include="Informacion\Clientes\pantallaAgregarCliente.Designer.cs">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAgregarDriver.cs">
+    <Compile Include="Informacion\Drivers\pantallaAgregarDriver.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAgregarDriver.Designer.cs">
+    <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAgregarSede.cs">
+    <Compile Include="Configuracion\Sedes\pantallaAgregarSede.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAgregarSede.Designer.cs">
+    <Compile Include="Configuracion\Sedes\pantallaAgregarSede.Designer.cs">
       <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAgregarServicio.cs">
+    <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAgregarServicio.Designer.cs">
+    <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.Designer.cs">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAgregarUsuario.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAgregarUsuario.Designer.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.Designer.cs">
       <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAjustesGerente.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAjustesGerente.Designer.cs">
-      <DependentUpon>pantallaAjustesGerente.cs</DependentUpon>
+    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.Designer.cs">
+      <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAjustesUsuario.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAjustesUsuario.Designer.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuario.Designer.cs">
       <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaAreaTrabajoxCC.cs">
+    <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAreaTrabajoxCC.Designer.cs">
+    <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.Designer.cs">
       <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarAreaTrabajo.cs">
+    <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarAreaTrabajo.Designer.cs">
+    <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.Designer.cs">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarCliente.cs">
+    <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarCliente.Designer.cs">
+    <Compile Include="Informacion\Clientes\pantallaEditarCliente.Designer.cs">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarDriver.cs">
+    <Compile Include="Informacion\Drivers\pantallaEditarDriver.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarDriver.Designer.cs">
+    <Compile Include="Informacion\Drivers\pantallaEditarDriver.Designer.cs">
       <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarInformacionPropia.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarInformacionPropia.Designer.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarSede.cs">
+    <Compile Include="Configuracion\Sedes\pantallaEditarSede.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarSede.Designer.cs">
+    <Compile Include="Configuracion\Sedes\pantallaEditarSede.Designer.cs">
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarServicio.cs">
+    <Compile Include="Configuracion\Servicios\pantallaEditarServicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarServicio.Designer.cs">
+    <Compile Include="Configuracion\Servicios\pantallaEditarServicio.Designer.cs">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaEditarUsuario.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaEditarUsuario.Designer.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.Designer.cs">
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaGenerarReporte.cs">
+    <Compile Include="Reportes\pantallaGenerarReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaGenerarReporte.Designer.cs">
+    <Compile Include="Reportes\pantallaGenerarReporte.Designer.cs">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaInformacionEmpresa.cs">
+    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresa.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaInformacionEmpresa.Designer.cs">
+    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresa.Designer.cs">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaInformacionEmpresaGerente.cs">
+    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaInformacionEmpresaGerente.Designer.cs">
+    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.Designer.cs">
       <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaInicioGerente.cs">
+    <Compile Include="Inicio\pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaInicioGerente.Designer.cs">
+    <Compile Include="Inicio\pantallaInicioGerente.Designer.cs">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaInicioUsuarioGeneral.cs">
+    <Compile Include="Inicio\pantallaInicioUsuarioGeneral.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaInicioUsuarioGeneral.Designer.cs">
+    <Compile Include="Inicio\pantallaInicioUsuarioGeneral.Designer.cs">
       <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaInicioUsuarioNivel2.cs">
+    <Compile Include="Inicio\pantallaInicioUsuarioNivel2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaInicioUsuarioNivel2.Designer.cs">
+    <Compile Include="Inicio\pantallaInicioUsuarioNivel2.Designer.cs">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaDetalleReporte.cs">
+    <Compile Include="Reportes\pantallaDetalleReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaDetalleReporte.Designer.cs">
+    <Compile Include="Reportes\pantallaDetalleReporte.Designer.cs">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="pantallaListaReportes.cs">
+    <Compile Include="Reportes\pantallaListaReportes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaListaReportes.Designer.cs">
+    <Compile Include="Reportes\pantallaListaReportes.Designer.cs">
       <DependentUpon>pantallaListaReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoundedPanelExtender.cs">
+    <Compile Include="Framework\UserControls\MetaDesign\RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DarkMode.cs" />
-    <Compile Include="frmLoading.cs">
+    <Compile Include="Framework\DarkMode.cs" />
+    <Compile Include="VentanasPrincipales\EPermisos.cs" />
+    <Compile Include="VentanasPrincipales\frmLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoading.Designer.cs">
+    <Compile Include="VentanasPrincipales\frmLoading.Designer.cs">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="VentanasPrincipales\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="VentanasPrincipales\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="VentanasPrincipales\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
+    <Compile Include="VentanasPrincipales\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GraphicsExtension.cs" />
-    <Compile Include="pantallaAreaTrabajo.cs">
+    <Compile Include="Framework\GraphicsExtension.cs" />
+    <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="pantallaAreaTrabajo.Designer.cs">
+    <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.Designer.cs">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pantallaInicio.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="pantallaInicio.Designer.cs">
-      <DependentUpon>pantallaInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -353,150 +360,154 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ShadowPanel.cs">
+    <Compile Include="Framework\UserControls\MetaDesign\ShadowPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TagExtender.cs">
+    <Compile Include="Framework\UserControls\MetaDesign\TagExtender.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Tipografias.cs" />
-    <Compile Include="TitleBar.cs" />
-    <Compile Include="RoundedPanel.cs">
+    <Compile Include="Framework\Tipografias.cs" />
+    <Compile Include="Framework\TitleBar.cs" />
+    <Compile Include="Framework\UserControls\MetaDesign\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RoundedPanel.Designer.cs">
+    <Compile Include="Framework\UserControls\MetaDesign\RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmCuentaContable.resx">
+    <Compile Include="VentanasPrincipales\Usuario.cs" />
+    <EmbeddedResource Include="Framework\UserControls\Items\itemMenuStrip.resx">
+      <DependentUpon>itemMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\UserControls\PanelMenuStrip.resx">
+      <DependentUpon>PanelMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacion\AreasTrabajo\frmCuentaContable.resx">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFiltrarReportes.resx">
+    <EmbeddedResource Include="Reportes\frmFiltrarReportes.resx">
       <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoading.resx">
+    <EmbeddedResource Include="VentanasPrincipales\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="VentanasPrincipales\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="VentanasPrincipales\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmResumenReporte.resx">
+    <EmbeddedResource Include="Reportes\frmResumenReporte.resx">
       <DependentUpon>frmResumenReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemDetalleGrandeReporte.resx">
+    <EmbeddedResource Include="Framework\UserControls\Items\itemDetalleGrandeReporte.resx">
       <DependentUpon>itemDetalleGrandeReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemDetalleReporte.resx">
+    <EmbeddedResource Include="Framework\UserControls\Items\itemDetalleReporte.resx">
       <DependentUpon>itemDetalleReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemLista.resx">
+    <EmbeddedResource Include="Framework\UserControls\Items\itemLista.resx">
       <DependentUpon>itemLista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemListaCuadrado.resx">
+    <EmbeddedResource Include="Framework\UserControls\Items\itemListaCuadrado.resx">
       <DependentUpon>itemListaCuadrado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemListaReporte.resx">
+    <EmbeddedResource Include="Framework\UserControls\Items\itemListaReporte.resx">
       <DependentUpon>itemListaReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemListaResumen.resx">
+    <EmbeddedResource Include="Framework\UserControls\Items\itemListaResumen.resx">
       <DependentUpon>itemListaResumen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemListaResumenReporte.resx">
+    <EmbeddedResource Include="Framework\UserControls\Items\itemListaResumenReporte.resx">
       <DependentUpon>itemListaResumenReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaActualizarClientes.resx">
+    <EmbeddedResource Include="Informacion\Clientes\pantallaActualizarClientes.resx">
       <DependentUpon>pantallaActualizarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaActualizarDrivers.resx">
+    <EmbeddedResource Include="Informacion\Drivers\pantallaActualizarDrivers.resx">
       <DependentUpon>pantallaActualizarDrivers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaActualizarSedes.resx">
+    <EmbeddedResource Include="Configuracion\Sedes\pantallaActualizarSedes.resx">
       <DependentUpon>pantallaActualizarSedes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaActualizarServicios.resx">
+    <EmbeddedResource Include="Configuracion\Servicios\pantallaActualizarServicios.resx">
       <DependentUpon>pantallaActualizarServicios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaActualizarUsuarios.resx">
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAgregarAreaTrabajo.resx">
+    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.resx">
       <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAgregarCliente.resx">
+    <EmbeddedResource Include="Informacion\Clientes\pantallaAgregarCliente.resx">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAgregarDriver.resx">
+    <EmbeddedResource Include="Informacion\Drivers\pantallaAgregarDriver.resx">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAgregarSede.resx">
+    <EmbeddedResource Include="Configuracion\Sedes\pantallaAgregarSede.resx">
       <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAgregarServicio.resx">
+    <EmbeddedResource Include="Configuracion\Servicios\pantallaAgregarServicio.resx">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAgregarUsuario.resx">
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAgregarUsuario.resx">
       <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAjustesGerente.resx">
-      <DependentUpon>pantallaAjustesGerente.cs</DependentUpon>
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.resx">
+      <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAjustesUsuario.resx">
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuario.resx">
       <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAreaTrabajo.resx">
+    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaAreaTrabajoxCC.resx">
+    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.resx">
       <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarAreaTrabajo.resx">
+    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.resx">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarCliente.resx">
+    <EmbeddedResource Include="Informacion\Clientes\pantallaEditarCliente.resx">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarDriver.resx">
+    <EmbeddedResource Include="Informacion\Drivers\pantallaEditarDriver.resx">
       <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarInformacionPropia.resx">
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.resx">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarSede.resx">
+    <EmbeddedResource Include="Configuracion\Sedes\pantallaEditarSede.resx">
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarServicio.resx">
+    <EmbeddedResource Include="Configuracion\Servicios\pantallaEditarServicio.resx">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaEditarUsuario.resx">
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaEditarUsuario.resx">
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaGenerarReporte.resx">
+    <EmbeddedResource Include="Reportes\pantallaGenerarReporte.resx">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaInformacionEmpresa.resx">
+    <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresa.resx">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaInformacionEmpresaGerente.resx">
+    <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.resx">
       <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaInicio.resx">
-      <DependentUpon>pantallaInicio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pantallaInicioGerente.resx">
+    <EmbeddedResource Include="Inicio\pantallaInicioGerente.resx">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaInicioUsuarioGeneral.resx">
+    <EmbeddedResource Include="Inicio\pantallaInicioUsuarioGeneral.resx">
       <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaInicioUsuarioNivel2.resx">
+    <EmbeddedResource Include="Inicio\pantallaInicioUsuarioNivel2.resx">
       <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaDetalleReporte.resx">
+    <EmbeddedResource Include="Reportes\pantallaDetalleReporte.resx">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pantallaListaReportes.resx">
+    <EmbeddedResource Include="Reportes\pantallaListaReportes.resx">
       <DependentUpon>pantallaListaReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -634,17 +645,29 @@
     <None Include="Resources\toggle_modo_nocturno_activado.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="creditos.txt" />
-    <Content Include="Resources\analysis.png" />
-    <Content Include="Resources\automotive.png" />
-    <Content Include="Resources\car.png" />
-    <Content Include="Resources\database.png" />
+    <Content Include="Informacion\creditos.txt" />
     <Content Include="Resources\editar.png" />
-    <Content Include="Resources\info.png" />
-    <Content Include="Resources\logout.png" />
-    <Content Include="Resources\magnifying-glass.png" />
-    <Content Include="Resources\map.png" />
-    <Content Include="Resources\reporte.png" />
+    <None Include="Resources\Menu\Usuarios.png" />
+    <None Include="Resources\Menu\Sort.png" />
+    <None Include="Resources\Menu\Servicio.png" />
+    <None Include="Resources\Menu\Sede.png" />
+    <None Include="Resources\Menu\ReporteResumen.png" />
+    <None Include="Resources\Menu\ReporteDetalle.png" />
+    <None Include="Resources\Menu\Reporte.png" />
+    <None Include="Resources\Menu\Informacion.png" />
+    <None Include="Resources\Menu\Estadisticas.png" />
+    <None Include="Resources\Menu\Empresa.png" />
+    <None Include="Resources\Menu\Driver.png" />
+    <None Include="Resources\Menu\Clientes.png" />
+    <None Include="Resources\Menu\BaseDatos.png" />
+    <None Include="Resources\Menu\AreaTrabajo.png" />
+    <None Include="Resources\Menu\Ajustes.png" />
+    <None Include="Resources\Menu\Usuario.png" />
+    <None Include="Resources\Menu\Logout.png" />
+    <None Include="Resources\Menu\Reloj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Informacion\Autos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

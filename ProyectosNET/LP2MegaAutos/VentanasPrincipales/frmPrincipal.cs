@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
+using MetroFramework.Forms;
 using MetroFramework;
 using Plasmoid.Extensions;
 
+
 namespace LP2MegaAutos
 {
-    public partial class frmPrincipal : Form
+    public partial class frmPrincipal : MetroForm
     {
 
         private Usuario _usuario;
@@ -491,5 +493,22 @@ namespace LP2MegaAutos
 
         #endregion panelMenu
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (!this.Controls.Contains(pantallaActualizarServicios.Instancia))
+            {
+                this.Controls.Add(pantallaActualizarServicios.Instancia);
+                pantallaActualizarServicios.Instancia.Dock = DockStyle.Fill;
+                pantallaActualizarServicios.Instancia.BringToFront();
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaActualizarServicios.Instancia.Parent);
+            }
+            else
+                pantallaActualizarServicios.Instancia.BringToFront();
+
+            // Cambiar los botones y rPanel excepto el enviado
+            cambiarColoresBotonesMenu((RoundedPanel)button1.Parent);
+        }
     }
 }

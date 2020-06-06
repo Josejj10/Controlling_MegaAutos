@@ -65,7 +65,6 @@ namespace LP2MegaAutos
             // title_bar_2
             // 
             this.title_bar_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.title_bar_2.Dock = System.Windows.Forms.DockStyle.Top;
             this.title_bar_2.Enabled = false;
             this.title_bar_2.Location = new System.Drawing.Point(0, 24);
             this.title_bar_2.Name = "title_bar_2";
@@ -84,7 +83,6 @@ namespace LP2MegaAutos
             this.title_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.title_bar.Controls.Add(this.boton_minimizar);
             this.title_bar.Controls.Add(this.boton_cerrar);
-            this.title_bar.Dock = System.Windows.Forms.DockStyle.Top;
             this.title_bar.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
             this.title_bar.Name = "title_bar";
@@ -157,9 +155,9 @@ namespace LP2MegaAutos
             // 
             this.pnlBackBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.pnlBackBackground.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBackBackground.Location = new System.Drawing.Point(81, 32);
+            this.pnlBackBackground.Location = new System.Drawing.Point(81, 30);
             this.pnlBackBackground.Name = "pnlBackBackground";
-            this.pnlBackBackground.Size = new System.Drawing.Size(751, 520);
+            this.pnlBackBackground.Size = new System.Drawing.Size(751, 522);
             this.pnlBackBackground.TabIndex = 4;
             this.pnlBackBackground.Tag = "background";
             this.tags.SetTag2(this.pnlBackBackground, null);
@@ -333,9 +331,9 @@ namespace LP2MegaAutos
             this.panelMenu.HorizontalScrollbarBarColor = true;
             this.panelMenu.HorizontalScrollbarHighlightOnWheel = false;
             this.panelMenu.HorizontalScrollbarSize = 10;
-            this.panelMenu.Location = new System.Drawing.Point(0, 32);
+            this.panelMenu.Location = new System.Drawing.Point(0, 30);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(81, 520);
+            this.panelMenu.Size = new System.Drawing.Size(81, 522);
             this.panelMenu.TabIndex = 3;
             this.panelMenu.Tag = "panelMenu";
             this.tags.SetTag2(this.panelMenu, null);
@@ -398,6 +396,7 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.button1, 12F);
             this.tags.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Bold);
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // rpBtnMenuReportes
             // 
@@ -497,22 +496,27 @@ namespace LP2MegaAutos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 552);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlBackBackground);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.DisplayHeader = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.Movable = false;
             this.Name = "frmPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.Style = MetroFramework.MetroColorStyle.Default;
             this.tags.SetTag2(this, null);
             this.tags.SetTag3(this, null);
             this.tags.SetTagFontName(this, fontsD.Ninguno);
             this.tags.SetTagFontSize(this, 10F);
             this.tags.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
-            this.Text = "frmPrincipal";
             this.title_bar.ResumeLayout(false);
             this.rpBtnMenuHome.ResumeLayout(false);
             this.rpBtnMenuCerrarSesion.ResumeLayout(false);

@@ -50,15 +50,19 @@ namespace LP2MegaAutos
 
         private void btnAgregarClick(Object sender, EventArgs e)
         {
+            pantallaAgregarServicio pas = new pantallaAgregarServicio();
+            
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("GAA");
             //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaAgregarServicio.Instancia))
-            {
-                this.Controls.Add(pantallaAgregarServicio.Instancia);
-                pantallaAgregarServicio.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaAgregarServicio.Instancia.Parent);
-            }
-            pantallaAgregarServicio.Instancia.BringToFront();
+            //if (!this.Controls.Contains(pantallaAgregarServicio.Instancia))
+            //{
+            //    this.Controls.Add(pantallaAgregarServicio.Instancia);
+            //    pantallaAgregarServicio.Instancia.Dock = DockStyle.Fill;
+            //    if (DarkMode.is_dark_mode_active())
+            //        DarkMode.iniciarSinTimer(pantallaAgregarServicio.Instancia.Parent);
+            //}
+            //pantallaAgregarServicio.Instancia.BringToFront();
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)

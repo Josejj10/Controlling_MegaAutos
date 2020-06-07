@@ -122,5 +122,10 @@ namespace LP2MegaAutos
             this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
         }
+
+        private void pantallaActualizarUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

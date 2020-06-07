@@ -310,7 +310,7 @@
             this.rpTopMain.ArcRadiusPanel = 15;
             this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
             this.rpTopMain.Location = new System.Drawing.Point(0, 0);
             this.rpTopMain.MenosHeightBorde = 1;
@@ -556,7 +556,7 @@
             this.roundedPanel5.ArcRadiusPanel = 5;
             this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.roundedPanel5.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(32)))), ((int)(((byte)(226)))));
+            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
             this.roundedPanel5.Location = new System.Drawing.Point(0, 454);
             this.roundedPanel5.MenosHeightBorde = 1;

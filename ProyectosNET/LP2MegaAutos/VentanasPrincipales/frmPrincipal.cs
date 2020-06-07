@@ -12,7 +12,10 @@ using LP2MegaAutos.VentanasPrincipales;
 using MetroFramework.Forms;
 using MetroFramework;
 using Plasmoid.Extensions;
-
+using System.Threading;
+using LP2MegaAutos.Framework.UserControls;
+using System.IO;
+using LP2MegaAutos.Properties;
 
 namespace LP2MegaAutos
 {
@@ -20,7 +23,6 @@ namespace LP2MegaAutos
     {
 
         private Usuario _usuario;
-
         public Usuario Usuario { get => _usuario; set => _usuario = value; }
 
         #region inicializacion
@@ -33,9 +35,10 @@ namespace LP2MegaAutos
             }
             _usuario = usuario;
             //_usuario.Permisos.Add(EPermisos.All);
-            _usuario.Permisos.Add(EPermisos.ActualizarBD);
+            //_usuario.Permisos.Add(EPermisos.ActualizarBD);
             //_usuario.Permisos.Add(EPermisos.Empresa);
-            //_usuario.Permisos.Add(EPermisos.AreasTrabajo);
+            _usuario.Permisos.Add(EPermisos.Drivers);
+            _usuario.Permisos.Add(EPermisos.Clientes);
             Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form
             cambiarColoresBotonesMenu(rpBtnMenuHome);
             suscribirEventos();
@@ -44,6 +47,11 @@ namespace LP2MegaAutos
 
         private void suscribirEventos()
         {
+            // Eventos de los paneles estaticos del Menu
+            rpBtnMenuReportes.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsReportes); };
+            btnMenuReportes.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsReportes); };
+            rpBtnMenuReportes.MouseLeave += (sender, e) => { rpBtnMenu_MouseLeave(sender, e, pmsReportes); };
+
             // Suscribir a eventos de la pantalla de inicio
             //public event ButtonClickEventHandler DriversGerente;
             //public event ButtonClickEventHandler EmpresaGerente;
@@ -69,7 +77,7 @@ namespace LP2MegaAutos
             //pntIniGen.CerrarSesionGerente += btnMenuCerrarSesion_Click;
         }
 
-        #region creacionBotones
+        #region Creacion Botones
         private void crearBotonesInicio()
         {
             // Trabajar con flags el menu
@@ -77,13 +85,17 @@ namespace LP2MegaAutos
             // Flag 001 es BD
             // Flag 010 es Config
             // Flag 100 es info
-            int menu = 0; 
+            int menu = 0;
+            int nItemsInfo = 0;
+            int nItemsConfig = 0;
 
             foreach (EPermisos permiso in _usuario.Permisos)
             {
                 switch (permiso)
                 {
                     case EPermisos.All:
+                        nItemsInfo = 4;
+                        nItemsConfig = 4;
                         menu |= 7;
                         break;
                     case EPermisos.ActualizarBD:
@@ -91,29 +103,39 @@ namespace LP2MegaAutos
                         break;
                     case EPermisos.AreasTrabajo:
                         menu |= 4;
+                        nItemsInfo++;
                         break;
                     case EPermisos.Clientes:
                         menu |= 4;
+                        nItemsInfo++;
                         break;
                     case EPermisos.Drivers:
                         menu |= 4;
+                        nItemsInfo++;
                         break;
                     case EPermisos.Empresa:
                         menu |= 2;
+                        nItemsConfig++;
                         break;
                     case EPermisos.Sedes:
                         menu |= 2;
+                        nItemsConfig++;
                         break;
                     case EPermisos.Servicios:
                         menu |= 2;
+                        nItemsConfig++;
                         break;
                     case EPermisos.Usuarios:
                         menu |= 2;
+                        nItemsConfig++;
                         break;
                     case EPermisos.Vehiculos:
                         menu |= 4;
+                        nItemsInfo++;
                         break;
                 }
+                // Si ya tiene todos los permisos (config, info, bd), entonces salir
+                if (nItemsConfig == 4 && nItemsInfo == 4 && (menu & 1) == 1) break;
             }
 
             // Crear los botones segun los flags de menu
@@ -124,14 +146,14 @@ namespace LP2MegaAutos
             if((menu & 4) == 4)
             {
                 // Crear boton de Información
-                crearBotonInformacion();
+                crearBotonInformacion(nItemsInfo);
                 estaBtnInformacion = true;
             }
 
             if((menu & 2) == 2)
             {
                 // Crear boton de Configuración
-                crearBotonAjustes(estaBtnInformacion);
+                crearBotonConfiguracion(estaBtnInformacion, nItemsConfig);
                 estaBtnConfiguracion = true;
             }
             if((menu & 1) == 1)
@@ -142,9 +164,10 @@ namespace LP2MegaAutos
 
         }
 
+        // Crear el boton del menu (info, config, BD)
         private void crearRPMenu(RoundedPanel rpBtn, string nombre, int yLocation)
         {
-            panelMenu.Controls.Add(rpBtn); //...
+            panelMenu.Controls.Add(rpBtn);
             rpBtn.ArcRadiusBorde = 15;
             rpBtn.ArcRadiusPanel = 15;
             rpBtn.ColorBorde = White_Mode.HighContrast;
@@ -161,7 +184,6 @@ namespace LP2MegaAutos
             rpBtn.Location = new Point(5,yLocation);
 
         }
-
         private void crearBtnMenu(RoundedPanel rpBtnMenu, Button btnMenu, string nombre, Image imagen)
         {
             rpBtnMenu.Controls.Add(btnMenu);
@@ -179,41 +201,36 @@ namespace LP2MegaAutos
             btnMenu.Size = new Size(36, 36);
         }
 
-        private void crearBotonInformacion()
+        private void crearBotonInformacion(int nItems)
         {
             RoundedPanel rpBtnMenuInformacion = new LP2MegaAutos.RoundedPanel();
             Button btnMenuInformacion = new System.Windows.Forms.Button();
             crearRPMenu(rpBtnMenuInformacion, "rpBtnMenuInformacion", 115);
             crearBtnMenu(rpBtnMenuInformacion, btnMenuInformacion, "rpBtnMenuInformacion", global::LP2MegaAutos.Properties.Resources.Informacion);
-            btnMenuInformacion.Click += btnMenuInformacion_Click;
-        }
 
-        private void btnMenuInformacion_Click(object sender, EventArgs e)
+            // Crear el strip de Informacion
+            PanelMenuStrip pms = crearStripInformacion(115, nItems);
+            // Suscribir eventos para abrir el strip de informacion
+            rpBtnMenuInformacion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender,e,pms); };
+            btnMenuInformacion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender,e,pms); };
+            rpBtnMenuInformacion.MouseLeave += (sender, e) => { rpBtnMenu_MouseLeave(sender, e, pms); };
+
+        }
+        private void crearBotonConfiguracion(bool estaBtnInfo, int nItems)
         {
-            Button btn = (Button)sender;
-            cambiarColoresBotonesMenu((RoundedPanel)btn.Parent);
-            // TODO Abrir Strip Menu Informacion
-        }
+            RoundedPanel rpBtnMenuConfiguracion = new LP2MegaAutos.RoundedPanel();
+            Button btnMenuConfiguracion = new System.Windows.Forms.Button();
+            int yLoc = estaBtnInfo ? 170 : 115;
+            crearRPMenu(rpBtnMenuConfiguracion, "rpBtnMenuConfiguracion", yLoc);
+            crearBtnMenu(rpBtnMenuConfiguracion, btnMenuConfiguracion, "rpBtnMenuConfiguracion", global::LP2MegaAutos.Properties.Resources.Configuracion);
 
-        private void crearBotonAjustes(bool estaBtnInfo)
-        {
-            RoundedPanel rpBtnMenuAjustes = new LP2MegaAutos.RoundedPanel();
-            Button btnMenuAjustes = new System.Windows.Forms.Button();
-            if(!estaBtnInfo)
-                crearRPMenu(rpBtnMenuAjustes, "rpBtnMenuAjustes", 115);
-            else
-            crearRPMenu(rpBtnMenuAjustes, "rpBtnMenuAjustes", 170);
-            crearBtnMenu(rpBtnMenuAjustes, btnMenuAjustes, "rpBtnMenuAjustes", global::LP2MegaAutos.Properties.Resources.Ajustes);
-            btnMenuAjustes.Click +=btnMenuAjustes_Click;
+            //Crear el strip de Configuracion
+            PanelMenuStrip pms = crearStripConfiguracion(yLoc, nItems);
+            // Suscribir MouseEnter para abrir el strip de Configuracion
+            rpBtnMenuConfiguracion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e,  pms); };
+            btnMenuConfiguracion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pms); };
+            rpBtnMenuConfiguracion.MouseLeave += (sender, e) => { rpBtnMenu_MouseLeave(sender, e, pms); };
         }
-
-        private void btnMenuAjustes_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            cambiarColoresBotonesMenu((RoundedPanel)btn.Parent);
-            // TODO Abrir Strip Menu Ajustes
-        }
-
         private void crearBotonBD(bool estaBtnInfo, bool estaBtnConfig)
         {
             int yLoc = estaBtnConfig ? estaBtnInfo ? 229 : 170 : 115;
@@ -223,25 +240,153 @@ namespace LP2MegaAutos
             crearBtnMenu(rpBtnMenuActualizarBD, btnMenuActualizarBD, "rpBtnMenuActualizarBD", global::LP2MegaAutos.Properties.Resources.BaseDatos);
             btnMenuActualizarBD.Click += btnMenuActualizarBD_Click;
         }
+        #endregion Creacion Botones
 
+        #region Creacion Strips
+
+        private void crearStrip(PanelMenuStrip pms, int nItems, BindingList<Image> ims,
+                                BindingList<EPermisos> per)
+        {
+            // Asignar imagenes segun los permisos del usuario
+            // En orden, son: Areas de Trabajo, Clientes, Vehiculos, Drivers
+            // Si no tiene el primero, entonces el segundo
+            if (_usuario.Permisos.Contains(EPermisos.All))
+            {
+                pms.Imagen1 = ims[0];
+                pms.Imagen2 = ims[1];
+                pms.Imagen3 = ims[2];
+                pms.Imagen4 = ims[3];
+            }
+            else
+            {
+                // Si tiene 4 items, pone la imagen al 4to item. Si no,
+                // Pone el del 3ero, y así
+                bool puesto4 = false;
+                bool puesto3 = false;
+                bool puesto2 = false;
+                if (nItems > 3)
+                {
+                    pms.Imagen4 = _usuario.Permisos.Contains(per[3]) ?
+                             ims[3] : Resources.Reloj;
+                    puesto4 = true;
+                }
+                if (nItems > 2)
+                {
+                    pms.Imagen3 = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                              ims[3] :
+                              _usuario.Permisos.Contains(per[2]) ?
+                              ims[2] : Resources.Reloj;
+                    if (puesto4) puesto3 = true;
+                    else puesto4 = true;
+                }
+                if (nItems > 1)
+                {
+                    pms.Imagen2 = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                              ims[3] :
+                              _usuario.Permisos.Contains(per[2]) && !puesto3 ?
+                              ims[2] :
+                              _usuario.Permisos.Contains(per[1]) ?
+                              ims[1] : Resources.Reloj;
+                    if (puesto4)
+                        if (puesto3)
+                            puesto2 = true;
+                        else puesto3 = true;
+                    else puesto4 = true;
+                }
+                if (nItems > 0)
+                    pms.Imagen1 = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                                  ims[3] :
+                                  _usuario.Permisos.Contains(per[2]) && !puesto3 ?
+                                  ims[2] :
+                                  _usuario.Permisos.Contains(per[1]) && !puesto2 ?
+                                  ims[1] :
+                                  _usuario.Permisos.Contains(per[0]) ?
+                                  ims[0] : Resources.Reloj;
+            }
+        }
+        private void validarItems(int nItems)
+        {
+            if (nItems > 4)
+                throw new System.ArgumentException("Informacion no puede tener mas de 4 items");
+            else if (nItems <= 0)
+                throw new System.ArgumentException("Informacion no puede tener 0 items");
+        }
+        
+        // Crear Strip Menu Informacion Dinamicamente
+        private PanelMenuStrip crearStripInformacion(int yLoc, int nItems)
+        {
+            // Validar que numero de Items esta entre 1 y 4
+            validarItems(nItems);
+
+            // Crear el objeto y agregarlo al panel Actual con yLoc
+            PanelMenuStrip pms = new PanelMenuStrip(nItems);
+            pnlBackBackground.Controls.Add(pms);
+            pms.Location = new Point(0,yLoc);
+
+            BindingList<EPermisos> per = new BindingList<EPermisos>();
+            per.Add(EPermisos.AreasTrabajo);
+            per.Add(EPermisos.Clientes);
+            per.Add(EPermisos.Vehiculos);
+            per.Add(EPermisos.Drivers);
+
+            BindingList<Image> ims = new BindingList<Image>();
+            ims.Add(Resources.AreaTrabajo);
+            ims.Add(Resources.Clientes);
+            ims.Add(Resources.car);
+            ims.Add(Resources.Driver);
+
+            crearStrip(pms, nItems, ims, per);
+
+            // Hacerlo No Visible
+            pms.Visible = false;
+            return pms;
+        }
+        // Crear Strip Menu Configuracion Dinamicamente
+        private PanelMenuStrip crearStripConfiguracion(int yLoc, int nItems)
+        {
+            // Validar que numero de Items esta entre 1 y 4
+            validarItems(nItems);
+
+            // Crear el objeto y agregarlo al panel Actual con yLoc
+            PanelMenuStrip pms = new PanelMenuStrip(nItems);
+            pnlBackBackground.Controls.Add(pms);
+            pms.Location = new Point(0, yLoc);
+
+            BindingList<EPermisos> per = new BindingList<EPermisos>();
+            per.Add(EPermisos.Usuarios);
+            per.Add(EPermisos.Servicios);
+            per.Add(EPermisos.Sedes);
+            per.Add(EPermisos.Empresa);
+
+            BindingList<Image> ims = new BindingList<Image>();
+            ims.Add(Resources.Usuarios);
+            ims.Add(Resources.Servicio);
+            ims.Add(Resources.Sede);
+            ims.Add(Resources.Empresa);
+
+            crearStrip(pms, nItems, ims, per);
+
+            // Hacerlo No Visible
+            pms.Visible = false;
+            return pms;
+        }
+
+        
         private void btnMenuActualizarBD_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            cambiarColoresBotonesMenu((RoundedPanel)btn.Parent);
-            if(MetroMessageBox.Show(this, "¿Desea Actualizar la BD?", "Actualizar Base de Datos", MessageBoxButtons.YesNo)==
-                DialogResult.Yes)
+            if (MetroMessageBox.Show(this, "Actualizar BD", "Actualizar Base de Datos", MessageBoxButtons.YesNo) ==
+                DialogResult.OK)
             {
-                // TODO LA FUNCION ACTUALIZAR DATOS DEVOLVERA UN STRING CON LO ACTUALIZADO
-                string str = "Se han actualizado 911 registros";
-                MetroMessageBox.Show(this, str, "Base de Datos Actualizada");
+                // Logica de actualizar bd
+                // TODO devolver un string que diga lo que ha actualizado
+                MessageBox.Show(this, "Se han actualizado 256 entradas");
             }
 
         }
 
-        #endregion creacionBotones
+        #endregion Creacion Strips
+
         #endregion inicializacion
-
-
 
         #region title_bar
 
@@ -279,7 +424,6 @@ namespace LP2MegaAutos
         #endregion movement
 
         #endregion title_bar
-
 
         #region Dark Mode
         // Usa la clase DarkMode para cambiar los colores iterando
@@ -332,156 +476,9 @@ namespace LP2MegaAutos
             // Cambiar los botones y rPanel
             cambiarColoresBotonesMenu(rpBtnMenuHome);
         }
-        //private void btnServicios_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaActualizarServicios.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaActualizarServicios.Instancia);
-        //        pantallaActualizarServicios.Instancia.Dock = DockStyle.Fill;
-        //        pantallaActualizarServicios.Instancia.BringToFront();
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaActualizarServicios.Instancia.Parent);
-        //    }
-        //    else
-        //        pantallaActualizarServicios.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuServicios);
-        //}
-
-
-        //private void btnGenerarReporte_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaGenerarReporte.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaGenerarReporte.Instancia);
-        //        pantallaGenerarReporte.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaGenerarReporte.Instancia.Parent);
-        //    }
-        //    pantallaGenerarReporte.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuGenerarReporte);
-        //}
-        //private void btnAreasTrabajo_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaAreaTrabajo.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaAreaTrabajo.Instancia);
-        //        pantallaAreaTrabajo.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaAreaTrabajo.Instancia.Parent);
-        //    }
-        //    pantallaAreaTrabajo.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuAreasTrabajo);
-        //}
-        //private void btnDrivers_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaActualizarDrivers.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaActualizarDrivers.Instancia);
-        //        pantallaActualizarDrivers.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaActualizarDrivers.Instancia.Parent);
-        //    }
-        //    pantallaActualizarDrivers.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuDrivers);
-        //}
-        //private void btnMenuEmpresa_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaInformacionEmpresaGerente.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaInformacionEmpresaGerente.Instancia);
-        //        pantallaInformacionEmpresaGerente.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaInformacionEmpresaGerente.Instancia.Parent);
-        //    }
-        //    pantallaInformacionEmpresaGerente.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuEmpresa);
-        //}
-        //private void btnClientes_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaActualizarClientes.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaActualizarClientes.Instancia);
-        //        pantallaActualizarClientes.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaActualizarClientes.Instancia.Parent);
-        //    }
-        //    pantallaActualizarClientes.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuClientes);
-        //}
-        //private void btnMenuUsuarios_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaActualizarUsuarios.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaActualizarUsuarios.Instancia);
-        //        pantallaActualizarUsuarios.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaActualizarUsuarios.Instancia.Parent);
-        //    }
-        //    pantallaActualizarUsuarios.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuUsuarios);
-        //}
-
-        //private void btnMenuSedes_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaActualizarSedes.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaActualizarSedes.Instancia);
-        //        pantallaActualizarSedes.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaActualizarSedes.Instancia.Parent);
-        //    }
-        //    pantallaActualizarSedes.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuSedes);
-        //}
-        //private void btnMenuAjustes_Click(object sender, EventArgs e)
-        //{
-        //    if (!rpMain.Controls.Contains(pantallaAjustesUsuarioGerente.Instancia))
-        //    {
-        //        rpMain.Controls.Add(pantallaAjustesUsuarioGerente.Instancia);
-        //        pantallaAjustesUsuarioGerente.Instancia.Dock = DockStyle.Fill;
-        //        if (DarkMode.is_dark_mode_active())
-        //            DarkMode.iniciarSinTimer(pantallaAjustesUsuarioGerente.Instancia.Parent);
-        //    }
-        //    pantallaAjustesUsuarioGerente.Instancia.BringToFront();
-
-        //    // Cambiar los botones y rPanel excepto el enviado
-        //    cambiarColoresBotonesMenu(rpBtnMenuAjustes);
-        //}
-
         private void btnMenuReportes_Click(object sender, EventArgs e)
         {
-            if (!this.Controls.Contains(pantallaListaReportes.Instancia))
-            {
-                this.Controls.Add(pantallaListaReportes.Instancia);
-                pantallaListaReportes.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaListaReportes.Instancia.Parent);
-            }
-            pantallaListaReportes.Instancia.BringToFront();
-
-            // Cambiar los botones y rPanel excepto el enviado
-            cambiarColoresBotonesMenu(rpBtnMenuReportes);
-        }
-
-        private void actualizarBD(object sender, EventArgs e)
-        {
-            MetroMessageBox.Show(this,"La base de datos de Virus ha sido actualizada.", "Actualizar Base de Datos");
+            pmsReportes_ListaReportesClick(sender, e);
         }
 
         private void btnMenuCerrarSesion_Click(object sender, EventArgs e)
@@ -489,11 +486,17 @@ namespace LP2MegaAutos
             this.DialogResult = DialogResult.OK;
         }
 
-        #endregion botonesClick
+        // Al hacer click 
+        //private void rpStripBtn2_Click<T>(object sender, EventArgs e)
+        //{
+            
+        //    if (Controls.Contains(T.Instancia))
+        //    {
+                
+        //    }
+        //}
 
-        #endregion panelMenu
-
-        private void button1_Click(object sender, EventArgs e)
+        private void rpStripBtn_Click(object sender, EventArgs e)
         {
 
             if (!this.Controls.Contains(pantallaActualizarServicios.Instancia))
@@ -510,5 +513,69 @@ namespace LP2MegaAutos
             // Cambiar los botones y rPanel excepto el enviado
             cambiarColoresBotonesMenu((RoundedPanel)button1.Parent);
         }
+        
+        private void pmsReportes_ListaReportesClick(object sender, EventArgs e)
+        {
+            if (!this.Controls.Contains(pantallaListaReportes.Instancia))
+            {
+                this.Controls.Add(pantallaListaReportes.Instancia);
+                pantallaListaReportes.Instancia.Dock = DockStyle.Fill;
+                pantallaListaReportes.Instancia.BringToFront();
+                if (DarkMode.is_dark_mode_active())
+                    DarkMode.iniciarSinTimer(pantallaListaReportes.Instancia.Parent);
+            }
+            else
+                pantallaListaReportes.Instancia.BringToFront();
+            // Cambiar los botones y rPanel excepto el enviado
+            cambiarColoresBotonesMenu((RoundedPanel)btnMenuReportes.Parent);
+
+            // Cambiar el icono del boton para que sea el de reportes
+            // Como reportes es lo unico que hay, entonces no se cambia el icono :D
+            // Pero si deberia cambiar el de los demas
+
+            pmsReportes.Visible = false;
+
+        }
+
+
+        private void pmsReportes_ReporteClienteClick(object sender, EventArgs e)
+        {
+            pmsReportes_ListaReportesClick(sender, e);
+            // TODO En la vista de lista reportes hacer en enum de los botones seleccionados y 
+            // desde esta funcion mandar el valor para que lo haga
+            //pantallaListaReportes.Instancia.BotonSeleccionado = Cliente;
+        }
+
+        private void pmsReportes_ReporteVehiculoClick(object sender, EventArgs e)
+        {
+            pmsReportes_ListaReportesClick(sender, e);
+            // TODO Hacer en enum de los botones seleccionados y poner esto
+            //pantallaListaReportes.Instancia.BotonSeleccionado = Cliente;
+        }
+
+        #endregion botonesClick
+
+        #region menuStrip
+
+        private void rpBtnMenu_MouseEnter(object sender, EventArgs e, PanelMenuStrip pms)
+        {
+            pms.Visible = true;
+            this.Controls[0].Controls.Add(pms);
+            pms.BringToFront();
+        }
+
+        private void rpBtnMenu_MouseLeave(object sender, EventArgs e, PanelMenuStrip pms)
+        {
+            if (pms.ClientRectangle.Contains
+                  (pms.PointToClient(Cursor.Position)))
+                return;
+            pms.Visible = false;
+        }
+
+        #endregion menuStrip
+
+        #endregion panelMenu
+
+
     }
 }

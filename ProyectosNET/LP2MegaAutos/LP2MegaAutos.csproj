@@ -204,7 +204,7 @@
       <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.Designer.cs">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
@@ -647,6 +647,7 @@
   <ItemGroup>
     <Content Include="Informacion\creditos.txt" />
     <Content Include="Resources\editar.png" />
+    <None Include="Resources\Menu\car.png" />
     <None Include="Resources\Menu\Usuarios.png" />
     <None Include="Resources\Menu\Sort.png" />
     <None Include="Resources\Menu\Servicio.png" />

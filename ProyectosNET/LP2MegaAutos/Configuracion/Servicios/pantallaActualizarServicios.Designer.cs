@@ -43,24 +43,24 @@
             this.pnlBuscar = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
-            this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
-            this.lbl_ListaServicios = new System.Windows.Forms.Label();
-            this.clickableText1 = new LP2MegaAutos.CustomControls.ClickableText();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.il_Servicios1 = new LP2MegaAutos.itemLista();
             this.il_Servicios3 = new LP2MegaAutos.itemLista();
             this.il_Servicios2 = new LP2MegaAutos.itemLista();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
+            this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
+            this.lbl_ListaServicios = new System.Windows.Forms.Label();
+            this.clickableText1 = new LP2MegaAutos.CustomControls.ClickableText();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
             this.rndZA.SuspendLayout();
             this.rndAZ.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.rpn_ListaServicios.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.rpn_ListaServicios.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_Buscar
@@ -100,6 +100,7 @@
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // rndReciente
             // 
@@ -338,99 +339,6 @@
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
             // 
-            // roundedPanel4
-            // 
-            this.roundedPanel4.ArcRadiusBorde = 5;
-            this.roundedPanel4.ArcRadiusPanel = 5;
-            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.roundedPanel4.Location = new System.Drawing.Point(0, 422);
-            this.roundedPanel4.MenosHeightBorde = 1;
-            this.roundedPanel4.MenosHeightPanel = 1;
-            this.roundedPanel4.MenosWidthBorde = 1;
-            this.roundedPanel4.MenosWidthPanel = 1;
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.PorcLuzColorBorde = 0;
-            this.roundedPanel4.Size = new System.Drawing.Size(566, 16);
-            this.roundedPanel4.TabIndex = 53;
-            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
-            this.roundedPanel4.XBorde = 0;
-            this.roundedPanel4.XPanel = 0;
-            this.roundedPanel4.YBorde = 0;
-            this.roundedPanel4.YPanel = 0;
-            // 
-            // rpn_ListaServicios
-            // 
-            this.rpn_ListaServicios.ArcRadiusBorde = 15;
-            this.rpn_ListaServicios.ArcRadiusPanel = 15;
-            this.rpn_ListaServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpn_ListaServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.rpn_ListaServicios.Controls.Add(this.lbl_ListaServicios);
-            this.rpn_ListaServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpn_ListaServicios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rpn_ListaServicios.Location = new System.Drawing.Point(0, 0);
-            this.rpn_ListaServicios.MenosHeightBorde = 1;
-            this.rpn_ListaServicios.MenosHeightPanel = 1;
-            this.rpn_ListaServicios.MenosWidthBorde = 1;
-            this.rpn_ListaServicios.MenosWidthPanel = 1;
-            this.rpn_ListaServicios.Name = "rpn_ListaServicios";
-            this.rpn_ListaServicios.PorcLuzColorBorde = 0;
-            this.rpn_ListaServicios.Size = new System.Drawing.Size(566, 27);
-            this.rpn_ListaServicios.TabIndex = 51;
-            this.tagsExtender1.SetTag2(this.rpn_ListaServicios, null);
-            this.tagsExtender1.SetTag3(this.rpn_ListaServicios, null);
-            this.tagsExtender1.SetTagFontName(this.rpn_ListaServicios, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpn_ListaServicios, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpn_ListaServicios, System.Drawing.FontStyle.Regular);
-            this.rpn_ListaServicios.XBorde = 0;
-            this.rpn_ListaServicios.XPanel = 0;
-            this.rpn_ListaServicios.YBorde = 0;
-            this.rpn_ListaServicios.YPanel = 0;
-            // 
-            // lbl_ListaServicios
-            // 
-            this.lbl_ListaServicios.AutoSize = true;
-            this.lbl_ListaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaServicios.Location = new System.Drawing.Point(229, 2);
-            this.lbl_ListaServicios.Name = "lbl_ListaServicios";
-            this.lbl_ListaServicios.Size = new System.Drawing.Size(84, 22);
-            this.lbl_ListaServicios.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
-            this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.lbl_ListaServicios, 12F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Bold);
-            this.lbl_ListaServicios.Text = "Servicios";
-            this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // clickableText1
-            // 
-            this.clickableText1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clickableText1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clickableText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
-            this.clickableText1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.clickableText1.Location = new System.Drawing.Point(26, 277);
-            this.clickableText1.Name = "clickableText1";
-            this.clickableText1.Size = new System.Drawing.Size(76, 13);
-            this.clickableText1.TabIndex = 51;
-            this.tagsExtender1.SetTag2(this.clickableText1, null);
-            this.tagsExtender1.SetTag3(this.clickableText1, null);
-            this.tagsExtender1.SetTagFontName(this.clickableText1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.clickableText1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.clickableText1, System.Drawing.FontStyle.Regular);
-            this.clickableText1.Text = "clickableText1";
-            this.clickableText1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -526,6 +434,99 @@
             this.il_Servicios2.Textosecundario = "Pintura";
             this.il_Servicios2.TextoTercero = "PIN-002";
             // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
+            this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.roundedPanel4.Location = new System.Drawing.Point(0, 422);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(566, 16);
+            this.roundedPanel4.TabIndex = 53;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
+            // 
+            // rpn_ListaServicios
+            // 
+            this.rpn_ListaServicios.ArcRadiusBorde = 15;
+            this.rpn_ListaServicios.ArcRadiusPanel = 15;
+            this.rpn_ListaServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpn_ListaServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.rpn_ListaServicios.Controls.Add(this.lbl_ListaServicios);
+            this.rpn_ListaServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
+            this.rpn_ListaServicios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.rpn_ListaServicios.Location = new System.Drawing.Point(0, 0);
+            this.rpn_ListaServicios.MenosHeightBorde = 1;
+            this.rpn_ListaServicios.MenosHeightPanel = 1;
+            this.rpn_ListaServicios.MenosWidthBorde = 1;
+            this.rpn_ListaServicios.MenosWidthPanel = 1;
+            this.rpn_ListaServicios.Name = "rpn_ListaServicios";
+            this.rpn_ListaServicios.PorcLuzColorBorde = 0;
+            this.rpn_ListaServicios.Size = new System.Drawing.Size(566, 27);
+            this.rpn_ListaServicios.TabIndex = 51;
+            this.tagsExtender1.SetTag2(this.rpn_ListaServicios, null);
+            this.tagsExtender1.SetTag3(this.rpn_ListaServicios, null);
+            this.tagsExtender1.SetTagFontName(this.rpn_ListaServicios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rpn_ListaServicios, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rpn_ListaServicios, System.Drawing.FontStyle.Regular);
+            this.rpn_ListaServicios.XBorde = 0;
+            this.rpn_ListaServicios.XPanel = 0;
+            this.rpn_ListaServicios.YBorde = 0;
+            this.rpn_ListaServicios.YPanel = 0;
+            // 
+            // lbl_ListaServicios
+            // 
+            this.lbl_ListaServicios.AutoSize = true;
+            this.lbl_ListaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
+            this.lbl_ListaServicios.Location = new System.Drawing.Point(229, 2);
+            this.lbl_ListaServicios.Name = "lbl_ListaServicios";
+            this.lbl_ListaServicios.Size = new System.Drawing.Size(84, 22);
+            this.lbl_ListaServicios.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
+            this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ListaServicios, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Bold);
+            this.lbl_ListaServicios.Text = "Servicios";
+            this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // clickableText1
+            // 
+            this.clickableText1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clickableText1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clickableText1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
+            this.clickableText1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clickableText1.Location = new System.Drawing.Point(26, 277);
+            this.clickableText1.Name = "clickableText1";
+            this.clickableText1.Size = new System.Drawing.Size(76, 13);
+            this.clickableText1.TabIndex = 51;
+            this.tagsExtender1.SetTag2(this.clickableText1, null);
+            this.tagsExtender1.SetTag3(this.clickableText1, null);
+            this.tagsExtender1.SetTagFontName(this.clickableText1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.clickableText1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.clickableText1, System.Drawing.FontStyle.Regular);
+            this.clickableText1.Text = "clickableText1";
+            this.clickableText1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // pantallaActualizarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,12 +554,11 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.rpn_ListaServicios.ResumeLayout(false);
-            this.rpn_ListaServicios.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.rpn_ListaServicios.ResumeLayout(false);
+            this.rpn_ListaServicios.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

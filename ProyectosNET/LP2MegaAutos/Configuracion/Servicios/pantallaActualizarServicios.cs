@@ -130,5 +130,9 @@ namespace LP2MegaAutos
             this.btnAntiguo.BackColor = Color.Transparent;
         }
 
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

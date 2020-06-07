@@ -63,16 +63,6 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ajustes {
-            get {
-                object obj = ResourceManager.GetObject("Ajustes", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap AreaTrabajo {
             get {
                 object obj = ResourceManager.GetObject("AreaTrabajo", resourceCulture);
@@ -153,6 +143,16 @@ namespace LP2MegaAutos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car {
+            get {
+                object obj = ResourceManager.GetObject("car", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carroLogin {
             get {
                 object obj = ResourceManager.GetObject("carroLogin", resourceCulture);
@@ -166,6 +166,16 @@ namespace LP2MegaAutos.Properties {
         internal static System.Drawing.Bitmap Clientes {
             get {
                 object obj = ResourceManager.GetObject("Clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Configuracion {
+            get {
+                object obj = ResourceManager.GetObject("Configuracion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -496,16 +506,6 @@ namespace LP2MegaAutos.Properties {
         internal static System.Drawing.Bitmap Logout {
             get {
                 object obj = ResourceManager.GetObject("Logout", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logout1 {
-            get {
-                object obj = ResourceManager.GetObject("Logout1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

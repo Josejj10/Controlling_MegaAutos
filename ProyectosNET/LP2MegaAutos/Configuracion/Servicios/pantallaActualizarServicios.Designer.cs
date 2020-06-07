@@ -545,6 +545,7 @@ namespace LP2MegaAutos
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.Load += new System.EventHandler(this.pantallaActualizarServicios_Load);
             this.rndReciente.ResumeLayout(false);
             this.rndAntiguo.ResumeLayout(false);
             this.rndZA.ResumeLayout(false);

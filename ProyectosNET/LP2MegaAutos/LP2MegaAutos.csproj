@@ -192,7 +192,7 @@
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
@@ -204,7 +204,7 @@
       <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.Designer.cs">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
@@ -246,7 +246,7 @@
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaEditarDriver.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaEditarDriver.Designer.cs">
       <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
@@ -264,7 +264,7 @@
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaEditarServicio.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaEditarServicio.Designer.cs">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>

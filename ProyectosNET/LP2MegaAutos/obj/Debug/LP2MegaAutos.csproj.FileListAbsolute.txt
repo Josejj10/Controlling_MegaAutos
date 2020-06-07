@@ -52,7 +52,6 @@ D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAgregarSede.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAgregarServicio.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAgregarUsuario.resources
-D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAjustesGerente.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAjustesUsuario.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAreaTrabajo.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAreaTrabajoxCC.resources
@@ -66,7 +65,6 @@ D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaGenerarReporte.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInformacionEmpresa.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInformacionEmpresaGerente.resources
-D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicio.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioGeneral.resources
 D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
@@ -199,3 +197,6 @@ D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csprojAssemblyReference.cache
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Framework.UserControls.Items.itemMenuStrip.resources
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Framework.UserControls.PanelMenuStrip.resources
+D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Framework.UserControls.Items.itemMenuStrip.resources
+D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Framework.UserControls.PanelMenuStrip.resources
+D:\PUCP\2020-1\LP2\Proyecto\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAjustesUsuarioGerente.resources

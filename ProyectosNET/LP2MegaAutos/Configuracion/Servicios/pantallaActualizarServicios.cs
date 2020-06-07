@@ -37,15 +37,18 @@ namespace LP2MegaAutos
 
         private void btnEditarClick(Object sender, EventArgs e)
         {
+            pantallaEditarServicio pes = new pantallaEditarServicio();
+            if (pes.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
             //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarServicio.Instancia))
-            {
-                this.Controls.Add(pantallaEditarServicio.Instancia);
-                pantallaEditarServicio.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaEditarServicio.Instancia.Parent);
-            }
-            pantallaEditarServicio.Instancia.BringToFront();
+            //if (!this.Controls.Contains(pantallaEditarServicio.Instancia))
+            //{
+            //    this.Controls.Add(pantallaEditarServicio.Instancia);
+            //    pantallaEditarServicio.Instancia.Dock = DockStyle.Fill;
+            //    if (DarkMode.is_dark_mode_active())
+            //        DarkMode.iniciarSinTimer(pantallaEditarServicio.Instancia.Parent);
+            //}
+            //pantallaEditarServicio.Instancia.BringToFront();
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)
@@ -53,7 +56,7 @@ namespace LP2MegaAutos
             pantallaAgregarServicio pas = new pantallaAgregarServicio();
             
             if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("GAA");
+                MessageBox.Show("OK");
             //MessageBox.Show("NO AUN");
             //if (!this.Controls.Contains(pantallaAgregarServicio.Instancia))
             //{
@@ -130,9 +133,53 @@ namespace LP2MegaAutos
             this.btnAntiguo.BackColor = Color.Transparent;
         }
 
-        private void btn_Agregar_Click(object sender, EventArgs e)
-        {
+        //private void rndAZ_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    this.rndAZ.ColorPanel = Colores.AmarilloHover;
+        //    this.btnAZ.BackColor = Colores.AmarilloHover;
+        //}
 
-        }
+        //private void rndZA_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    this.rndZA.ColorPanel = Colores.AmarilloHover;
+        //    this.btnZA.BackColor = Colores.AmarilloHover;
+        //}
+
+        //private void rndAntiguo_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    this.rndAntiguo.ColorPanel = Colores.AmarilloHover;
+        //    this.btnAntiguo.BackColor = Colores.AmarilloHover;
+        //}
+
+        //private void rndReciente_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    this.rndReciente.ColorPanel = Colores.AmarilloHover;
+        //    this.btnReciente.BackColor = Colores.AmarilloHover;
+        //}
+
+        //private void rndAZ_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    this.rndAZ.ColorPanel = Colores.AmarilloInteractivo;
+        //    this.btnAZ.BackColor = Colores.AmarilloInteractivo;
+        //}
+
+        //private void rndZA_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    this.rndZA.ColorPanel = Colores.AmarilloInteractivo;
+        //    this.btnZA.BackColor = Colores.AmarilloInteractivo;
+        //}
+
+        //private void rndAntiguo_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    this.rndAntiguo.ColorPanel = Colores.AmarilloInteractivo;
+        //    this.btnAntiguo.BackColor = Colores.AmarilloInteractivo;
+        //}
+
+        //private void rndReciente_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    this.rndReciente.ColorPanel = Colores.AmarilloInteractivo;
+        //    this.btnReciente.BackColor = Colores.AmarilloInteractivo;
+        //}
+
     }
 }

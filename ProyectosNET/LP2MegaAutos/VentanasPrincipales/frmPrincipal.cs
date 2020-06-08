@@ -34,7 +34,7 @@ namespace LP2MegaAutos
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
             }
             _usuario = usuario;
-            //_usuario.Permisos.Add(EPermisos.All);
+            _usuario.Permisos.Add(EPermisos.All);
             //_usuario.Permisos.Add(EPermisos.ActualizarBD);
             //_usuario.Permisos.Add(EPermisos.Empresa);
             _usuario.Permisos.Add(EPermisos.Drivers);
@@ -209,7 +209,7 @@ namespace LP2MegaAutos
             crearBtnMenu(rpBtnMenuInformacion, btnMenuInformacion, "rpBtnMenuInformacion", global::LP2MegaAutos.Properties.Resources.Informacion);
 
             // Crear el strip de Informacion
-            PanelMenuStrip pms = crearStripInformacion(115, nItems);
+            PanelMenuStrip pms = crearStripInformacion(115, nItems,btnMenuInformacion);
             // Suscribir eventos para abrir el strip de informacion
             rpBtnMenuInformacion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender,e,pms); };
             btnMenuInformacion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender,e,pms); };
@@ -225,7 +225,7 @@ namespace LP2MegaAutos
             crearBtnMenu(rpBtnMenuConfiguracion, btnMenuConfiguracion, "rpBtnMenuConfiguracion", global::LP2MegaAutos.Properties.Resources.Configuracion);
 
             //Crear el strip de Configuracion
-            PanelMenuStrip pms = crearStripConfiguracion(yLoc, nItems);
+            PanelMenuStrip pms = crearStripConfiguracion(yLoc, nItems,btnMenuConfiguracion);
             // Suscribir MouseEnter para abrir el strip de Configuracion
             rpBtnMenuConfiguracion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e,  pms); };
             btnMenuConfiguracion.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pms); };
@@ -243,9 +243,49 @@ namespace LP2MegaAutos
         #endregion Creacion Botones
 
         #region Creacion Strips
+        
+        // Devolvera el metodo generico con la clase de la pantalla que se creara segun el permiso que se le mande
+        private Action<object, EventArgs> asignarBoton(PanelMenuStrip pms, EPermisos per, Button btn, Image img)
+        {
+            // asignar el boton segun el permiso elegido
+            Action<object, EventArgs> a;
+            switch (per)
+            {
+                case EPermisos.AreasTrabajo:
+                    a = (sender, e) => { pmsBtn_Click<pantallaAreaTrabajo>(sender, e, btn, img); };
+                    break;
+                case EPermisos.Clientes:
+                    a = (sender, e) => { pmsBtn_Click<pantallaActualizarClientes>(sender, e, btn, img); };
+                    break;
+                case EPermisos.Drivers:
+                    a = (sender, e) => { pmsBtn_Click<pantallaActualizarDrivers>(sender, e, btn, img); };
+                    break;
+                case EPermisos.Empresa:
+                    a = (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresaGerente>(sender, e, btn, img); };
+                    break;
+                case EPermisos.Sedes:
+                    a = (sender, e) => { pmsBtn_Click<pantallaActualizarSedes>(sender, e, btn, img); };
+                    break;
+                case EPermisos.Servicios:
+                    a = (sender, e) => { pmsBtn_Click<pantallaActualizarServicios>(sender, e, btn, img); };
+                    break;
+                case EPermisos.Usuarios:
+                    a = (sender, e) => { pmsBtn_Click<pantallaActualizarUsuarios>(sender, e, btn, img); };
+                    break;
+                case EPermisos.Vehiculos:
+                    // TODO ACTUALIZAR CUANDO SE CREE VEHICULO
+                    a = (sender, e) => { pmsBtn_Click<pantallaActualizarDrivers>(sender, e, btn, img); };
+                    break;
+                default:
+                    a = (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img); };
+                    break;
+            }
+            return a;
+        }
 
+        // Crear Strip dinamicamente
         private void crearStrip(PanelMenuStrip pms, int nItems, BindingList<Image> ims,
-                                BindingList<EPermisos> per)
+                                BindingList<EPermisos> per, Button btnMenu)
         {
             // Asignar imagenes segun los permisos del usuario
             // En orden, son: Areas de Trabajo, Clientes, Vehiculos, Drivers
@@ -256,6 +296,10 @@ namespace LP2MegaAutos
                 pms.Imagen2 = ims[1];
                 pms.Imagen3 = ims[2];
                 pms.Imagen4 = ims[3];
+                pms.item1Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[0], btnMenu, ims[0]));
+                pms.item2Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[1], btnMenu, ims[1]));
+                pms.item3Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[2], btnMenu, ims[2]));
+                pms.item4Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[3], btnMenu, ims[3]));
             }
             else
             {
@@ -264,44 +308,72 @@ namespace LP2MegaAutos
                 bool puesto4 = false;
                 bool puesto3 = false;
                 bool puesto2 = false;
+                int iUtilizado;
                 if (nItems > 3)
                 {
-                    pms.Imagen4 = _usuario.Permisos.Contains(per[3]) ?
-                             ims[3] : Resources.Reloj;
-                    puesto4 = true;
+                    iUtilizado = _usuario.Permisos.Contains(per[3]) ?
+                             3 : -1;
+                    if (iUtilizado != -1)
+                    {
+                        pms.Imagen4 = ims[iUtilizado];
+                        puesto4 = true;
+                        pms.item4Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[iUtilizado], btnMenu, ims[iUtilizado]));
+                    }
+                    else pms.Imagen4 = Resources.Reloj;
                 }
                 if (nItems > 2)
                 {
-                    pms.Imagen3 = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
-                              ims[3] :
+                    iUtilizado = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                              3 :
                               _usuario.Permisos.Contains(per[2]) ?
-                              ims[2] : Resources.Reloj;
-                    if (puesto4) puesto3 = true;
-                    else puesto4 = true;
+                              2 : -1;
+                    if (iUtilizado != -1)
+                    {
+                        pms.Imagen3 = ims[iUtilizado];
+                        if (puesto4) puesto3 = true;
+                        else puesto4 = true;
+
+                        pms.item3Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[iUtilizado], btnMenu, ims[iUtilizado]));
+                    }
+                    else pms.Imagen3 = Resources.Reloj;
                 }
                 if (nItems > 1)
                 {
-                    pms.Imagen2 = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
-                              ims[3] :
+                    iUtilizado = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                              3 :
                               _usuario.Permisos.Contains(per[2]) && !puesto3 ?
-                              ims[2] :
+                              2 :
                               _usuario.Permisos.Contains(per[1]) ?
-                              ims[1] : Resources.Reloj;
-                    if (puesto4)
-                        if (puesto3)
-                            puesto2 = true;
-                        else puesto3 = true;
-                    else puesto4 = true;
+                              1 : -1;
+                    if (iUtilizado != -1)
+                    {
+                        pms.Imagen2 = ims[iUtilizado];
+                        if (puesto4)
+                            if (puesto3)
+                                puesto2 = true;
+                            else puesto3 = true;
+                        else puesto4 = true;
+                        pms.item2Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[iUtilizado], btnMenu, ims[iUtilizado]));
+                    }
+                    else pms.Imagen2 = Resources.Reloj;
                 }
                 if (nItems > 0)
-                    pms.Imagen1 = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
-                                  ims[3] :
+                {
+                    iUtilizado = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                                  3 :
                                   _usuario.Permisos.Contains(per[2]) && !puesto3 ?
-                                  ims[2] :
+                                  2 :
                                   _usuario.Permisos.Contains(per[1]) && !puesto2 ?
-                                  ims[1] :
+                                  1 :
                                   _usuario.Permisos.Contains(per[0]) ?
-                                  ims[0] : Resources.Reloj;
+                                  0 : -1;
+                    if (iUtilizado != -1)
+                    {
+                        pms.Imagen1 = ims[iUtilizado];
+                        pms.item1Click += new PanelMenuStrip.ButtonClickEventHandler(asignarBoton(pms, per[iUtilizado], btnMenu, ims[iUtilizado]));
+                    }
+                    else pms.Imagen1 = Resources.Reloj;
+                }
             }
         }
         private void validarItems(int nItems)
@@ -313,7 +385,7 @@ namespace LP2MegaAutos
         }
         
         // Crear Strip Menu Informacion Dinamicamente
-        private PanelMenuStrip crearStripInformacion(int yLoc, int nItems)
+        private PanelMenuStrip crearStripInformacion(int yLoc, int nItems, Button btnMenu)
         {
             // Validar que numero de Items esta entre 1 y 4
             validarItems(nItems);
@@ -335,14 +407,14 @@ namespace LP2MegaAutos
             ims.Add(Resources.car);
             ims.Add(Resources.Driver);
 
-            crearStrip(pms, nItems, ims, per);
+            crearStrip(pms, nItems, ims, per,btnMenu);
 
             // Hacerlo No Visible
             pms.Visible = false;
             return pms;
         }
         // Crear Strip Menu Configuracion Dinamicamente
-        private PanelMenuStrip crearStripConfiguracion(int yLoc, int nItems)
+        private PanelMenuStrip crearStripConfiguracion(int yLoc, int nItems, Button btnMenu)  
         {
             // Validar que numero de Items esta entre 1 y 4
             validarItems(nItems);
@@ -364,7 +436,7 @@ namespace LP2MegaAutos
             ims.Add(Resources.Sede);
             ims.Add(Resources.Empresa);
 
-            crearStrip(pms, nItems, ims, per);
+            crearStrip(pms, nItems, ims, per,btnMenu);
 
             // Hacerlo No Visible
             pms.Visible = false;
@@ -486,29 +558,10 @@ namespace LP2MegaAutos
             this.DialogResult = DialogResult.OK;
         }
 
-        // Al hacer click 
-        //private void rpStripBtn2_Click<T>(object sender, EventArgs e)
-        //{
-            
-        //    if (Controls.Contains(T.Instancia))
-        //    {
-                
-        //    }
-        //}
-
         private void rpStripBtn_Click(object sender, EventArgs e)
         {
 
-            if (!this.Controls.Contains(pantallaActualizarServicios.Instancia))
-            {
-                this.Controls.Add(pantallaActualizarServicios.Instancia);
-                pantallaActualizarServicios.Instancia.Dock = DockStyle.Fill;
-                pantallaActualizarServicios.Instancia.BringToFront();
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaActualizarServicios.Instancia.Parent);
-            }
-            else
-                pantallaActualizarServicios.Instancia.BringToFront();
+            this.contenedorPantalla1.PantallaActual = new pantallaActualizarServicios();
 
             // Cambiar los botones y rPanel excepto el enviado
             cambiarColoresBotonesMenu((RoundedPanel)button1.Parent);
@@ -516,27 +569,12 @@ namespace LP2MegaAutos
         
         private void pmsReportes_ListaReportesClick(object sender, EventArgs e)
         {
-            if (!this.Controls.Contains(pantallaListaReportes.Instancia))
-            {
-                this.Controls.Add(pantallaListaReportes.Instancia);
-                pantallaListaReportes.Instancia.Dock = DockStyle.Fill;
-                pantallaListaReportes.Instancia.BringToFront();
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaListaReportes.Instancia.Parent);
-            }
-            else
-                pantallaListaReportes.Instancia.BringToFront();
+                      
+            this.contenedorPantalla1.PantallaActual = new pantallaListaReportes();
             // Cambiar los botones y rPanel excepto el enviado
             cambiarColoresBotonesMenu((RoundedPanel)btnMenuReportes.Parent);
-
-            // Cambiar el icono del boton para que sea el de reportes
-            // Como reportes es lo unico que hay, entonces no se cambia el icono :D
-            // Pero si deberia cambiar el de los demas
-
             pmsReportes.Visible = false;
-
         }
-
 
         private void pmsReportes_ReporteClienteClick(object sender, EventArgs e)
         {
@@ -551,6 +589,20 @@ namespace LP2MegaAutos
             pmsReportes_ListaReportesClick(sender, e);
             // TODO Hacer en enum de los botones seleccionados y poner esto
             //pantallaListaReportes.Instancia.BotonSeleccionado = Cliente;
+        }
+
+        // Metodo Generico que cambiara las pantallas segun las clases
+        private void pmsBtn_Click<T>(object sender, EventArgs e, Button btnMenu, Image img)
+        {
+            cambiarColoresBotonesMenu((RoundedPanel)btnMenu.Parent);
+            this.contenedorPantalla1.PantallaActual = (Pantalla)Activator.CreateInstance(typeof(T));
+            if (DarkMode.is_dark_mode_active())
+                DarkMode.iniciarSinTimer(contenedorPantalla1);
+
+            // Cambiar el icono del boton para que sea el enviado
+            btnMenu.BackgroundImage = img;
+            PanelMenuStrip pms = (PanelMenuStrip) sender;
+            pms.Visible = false;
         }
 
         #endregion botonesClick
@@ -575,7 +627,5 @@ namespace LP2MegaAutos
         #endregion menuStrip
 
         #endregion panelMenu
-
-
     }
 }

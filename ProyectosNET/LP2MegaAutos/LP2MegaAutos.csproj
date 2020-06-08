@@ -264,7 +264,7 @@
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaEditarServicio.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaEditarServicio.Designer.cs">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
@@ -327,6 +327,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Framework\DarkMode.cs" />
+    <Compile Include="VentanasPrincipales\ContenedorPantalla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VentanasPrincipales\ContenedorPantalla.Designer.cs">
+      <DependentUpon>ContenedorPantalla.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\EPermisos.cs" />
     <Compile Include="VentanasPrincipales\frmLoading.cs">
       <SubType>Form</SubType>
@@ -374,6 +380,12 @@
     <Compile Include="Framework\UserControls\MetaDesign\RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasPrincipales\Pantalla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VentanasPrincipales\Pantalla.Designer.cs">
+      <DependentUpon>Pantalla.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\Usuario.cs" />
     <EmbeddedResource Include="Framework\UserControls\Items\itemMenuStrip.resx">
       <DependentUpon>itemMenuStrip.cs</DependentUpon>
@@ -386,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmFiltrarReportes.resx">
       <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPrincipales\ContenedorPantalla.resx">
+      <DependentUpon>ContenedorPantalla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasPrincipales\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
@@ -514,6 +529,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPrincipales\Pantalla.resx">
+      <DependentUpon>Pantalla.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />

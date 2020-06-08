@@ -186,7 +186,7 @@
       <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaAgregarCliente.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaAgregarCliente.Designer.cs">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
@@ -240,7 +240,7 @@
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.Designer.cs">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
@@ -686,7 +686,7 @@
     <None Include="Resources\Menu\Reloj.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Informacion\Autos\" />
+    <Folder Include="Informacion\Vehiculos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

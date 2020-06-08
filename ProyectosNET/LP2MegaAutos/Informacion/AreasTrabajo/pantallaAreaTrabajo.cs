@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.VentanasPrincipales;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaAreaTrabajo : UserControl
+    public partial class pantallaAreaTrabajo : Pantalla
     {
         // Singleton instance para poder crearlo en la pantalla menu
         #region instancia

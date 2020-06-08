@@ -47,34 +47,10 @@ namespace LP2MegaAutos
 
         private void suscribirEventos()
         {
-            // Eventos de los paneles estaticos del Menu
+            // Eventos de los paneles estaticos (no dinamicos) del Menu
             rpBtnMenuReportes.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsReportes); };
             btnMenuReportes.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsReportes); };
             rpBtnMenuReportes.MouseLeave += (sender, e) => { rpBtnMenu_MouseLeave(sender, e, pmsReportes); };
-
-            // Suscribir a eventos de la pantalla de inicio
-            //public event ButtonClickEventHandler DriversGerente;
-            //public event ButtonClickEventHandler EmpresaGerente;
-            //public event ButtonClickEventHandler ClientesGerente;
-            //public event ButtonClickEventHandler UsuariosGerente;
-            //public event ButtonClickEventHandler SedesGerente;
-            //public event ButtonClickEventHandler ActualizarBDGerente;
-            //public event ButtonClickEventHandler AjustesGerente;
-            //public event ButtonClickEventHandler CerrarSesionGerente;
-
-            //pntIniGen.BienvenidoClickGerente += btnMenuAjustes_Click;
-            //pntIniGen.GenerarReporte += btnGenerarReporte_Click;
-            //pntIniGen.AreaTrabajoGerente += btnAreasTrabajo_Click;
-            //pntIniGen.ReportesGerente += btnMenuReportes_Click;
-            //pntIniGen.ServiciosGerente += btnServicios_Click;
-            //pntIniGen.DriversGerente += btnDrivers_Click;
-            //pntIniGen.EmpresaGerente += btnMenuEmpresa_Click;
-            //pntIniGen.ClientesGerente += btnClientes_Click;
-            //pntIniGen.UsuariosGerente += btnMenuUsuarios_Click;
-            //pntIniGen.SedesGerente += btnMenuSedes_Click;
-            //pntIniGen.ActualizarBDGerente += actualizarBD;
-            //pntIniGen.AjustesGerente += btnMenuAjustes_Click;
-            //pntIniGen.CerrarSesionGerente += btnMenuCerrarSesion_Click;
         }
 
         #region Creacion Botones
@@ -261,7 +237,7 @@ namespace LP2MegaAutos
                     a = (sender, e) => { pmsBtn_Click<pantallaActualizarDrivers>(sender, e, btn, img); };
                     break;
                 case EPermisos.Empresa:
-                    a = (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresaGerente>(sender, e, btn, img); };
+                    a = (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img); };
                     break;
                 case EPermisos.Sedes:
                     a = (sender, e) => { pmsBtn_Click<pantallaActualizarSedes>(sender, e, btn, img); };

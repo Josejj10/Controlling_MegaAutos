@@ -134,6 +134,11 @@ namespace LP2MegaAutos
             this.btnAntiguo.BackColor = Color.Transparent;
         }
 
+        private void pantallaActualizarServicios_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //private void rndAZ_MouseDown(object sender, MouseEventArgs e)
         //{
         //    this.rndAZ.ColorPanel = Colores.AmarilloHover;

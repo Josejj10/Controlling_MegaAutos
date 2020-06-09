@@ -139,7 +139,7 @@
             this.pnl_codServ.Controls.Add(this.txt_Correo);
             this.pnl_codServ.Controls.Add(this.lbl_Correo);
             this.pnl_codServ.Location = new System.Drawing.Point(151, 105);
-            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_codServ.Name = "pnl_codServ";
             this.pnl_codServ.Size = new System.Drawing.Size(292, 41);
             this.pnl_codServ.TabIndex = 40;
@@ -215,7 +215,7 @@
             this.pnl_Direccion.Controls.Add(this.txt_Direccion);
             this.pnl_Direccion.Controls.Add(this.lbl_Direccion);
             this.pnl_Direccion.Location = new System.Drawing.Point(151, 154);
-            this.pnl_Direccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Direccion.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Direccion.Name = "pnl_Direccion";
             this.pnl_Direccion.Size = new System.Drawing.Size(292, 41);
             this.pnl_Direccion.TabIndex = 41;
@@ -292,7 +292,7 @@
             this.panel2.Controls.Add(this.txt_NuevaCont);
             this.panel2.Controls.Add(this.lbl_NuevaCont);
             this.panel2.Location = new System.Drawing.Point(151, 203);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 41);
             this.panel2.TabIndex = 41;
@@ -396,7 +396,7 @@
             this.panel3.Controls.Add(this.txt_RepNCont);
             this.panel3.Controls.Add(this.lbl_RepNCont);
             this.panel3.Location = new System.Drawing.Point(151, 252);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(292, 41);
             this.panel3.TabIndex = 41;
@@ -718,6 +718,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar);
@@ -730,13 +731,19 @@
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.lbl_ContraseñaActual);
             this.Controls.Add(this.rpn_Reportes);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaEditarInformacionPropia";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaEditarInformacionPropia_Load);
             this.rpn_Reportes.ResumeLayout(false);
             this.rpn_Reportes.PerformLayout();

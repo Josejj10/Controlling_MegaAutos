@@ -91,5 +91,17 @@ namespace LP2MegaAutos
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void txt_Nombre_Enter(object sender, EventArgs e)
+        {
+            if (txt_AgregarUsuario.Text == "Agregar nombre del usuario...")
+                txt_AgregarUsuario.Text = string.Empty;
+        }
+
+        private void txt_Nombre_Leave(object sender, EventArgs e)
+        {
+            if (txt_AgregarUsuario.Text == string.Empty)
+                txt_AgregarUsuario.Text = "Agregar nombre del usuario...";
+        }
     }
 }

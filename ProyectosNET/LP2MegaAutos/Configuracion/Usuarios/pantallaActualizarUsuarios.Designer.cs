@@ -107,6 +107,8 @@
             this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
+            this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // cTxt_MasFiltros
             // 
@@ -196,6 +198,7 @@
             this.btnReciente.Text = "Reciente";
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
             // rndAntiguo
             // 
@@ -246,6 +249,7 @@
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
             // rndZA
             // 
@@ -296,6 +300,7 @@
             this.btnZA.Text = "Z - A";
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
             // 
             // rndAZ
             // 

@@ -589,6 +589,8 @@
             this.tagsExtender1.SetTagFontSize(this.txt_AgregarUsuario, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_AgregarUsuario, System.Drawing.FontStyle.Bold);
             this.txt_AgregarUsuario.Text = "Agregar nombre del usuario...";
+            this.txt_AgregarUsuario.Enter += new System.EventHandler(this.txt_Nombre_Enter);
+            this.txt_AgregarUsuario.Leave += new System.EventHandler(this.txt_Nombre_Leave);
             // 
             // rnd_cancelar
             // 
@@ -708,12 +710,15 @@
             this.MinimizeBox = false;
             this.Name = "pantallaAgregarUsuario";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaAgregarUsuario_Load);
             this.pnl_Correo.ResumeLayout(false);
             this.pnl_Correo.PerformLayout();

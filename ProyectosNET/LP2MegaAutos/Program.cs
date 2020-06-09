@@ -30,6 +30,7 @@ namespace LP2MegaAutos
             {
                 Login_Screen login = new Login_Screen();
                 // Application.Run(login);
+
                 if (login.ShowDialog() == DialogResult.OK)
                 {
                     frmPrincipal frm = new frmPrincipal(login.Usuario);

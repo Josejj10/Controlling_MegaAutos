@@ -355,9 +355,9 @@ namespace LP2MegaAutos
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.flowLayoutPanel1.Controls.Add(this.il_Servicios2);
             this.flowLayoutPanel1.Controls.Add(this.il_Servicios1);
             this.flowLayoutPanel1.Controls.Add(this.il_Servicios3);
-            this.flowLayoutPanel1.Controls.Add(this.il_Servicios2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -376,7 +376,7 @@ namespace LP2MegaAutos
             this.il_Servicios1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Servicios1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Servicios1.ColorPanel = System.Drawing.Color.White;
-            this.il_Servicios1.Location = new System.Drawing.Point(34, 3);
+            this.il_Servicios1.Location = new System.Drawing.Point(34, 113);
             this.il_Servicios1.Name = "il_Servicios1";
             this.il_Servicios1.Size = new System.Drawing.Size(497, 104);
             this.il_Servicios1.TabIndex = 54;
@@ -396,7 +396,7 @@ namespace LP2MegaAutos
             this.il_Servicios3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Servicios3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Servicios3.ColorPanel = System.Drawing.Color.White;
-            this.il_Servicios3.Location = new System.Drawing.Point(34, 113);
+            this.il_Servicios3.Location = new System.Drawing.Point(34, 223);
             this.il_Servicios3.Name = "il_Servicios3";
             this.il_Servicios3.Size = new System.Drawing.Size(497, 104);
             this.il_Servicios3.TabIndex = 56;
@@ -416,7 +416,7 @@ namespace LP2MegaAutos
             this.il_Servicios2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Servicios2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Servicios2.ColorPanel = System.Drawing.Color.White;
-            this.il_Servicios2.Location = new System.Drawing.Point(34, 223);
+            this.il_Servicios2.Location = new System.Drawing.Point(34, 3);
             this.il_Servicios2.Name = "il_Servicios2";
             this.il_Servicios2.Size = new System.Drawing.Size(497, 104);
             this.il_Servicios2.TabIndex = 55;

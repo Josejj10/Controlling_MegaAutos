@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(itemLista));
             this.rpItem = new LP2MegaAutos.RoundedPanel();
+            this.tlpAgregado = new System.Windows.Forms.TableLayoutPanel();
+            this.lblAgregadoEl = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPor = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblAgregadoEl = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.lblTercerDato = new System.Windows.Forms.Label();
             this.lblSecundario = new System.Windows.Forms.Label();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.tlpAgregado = new System.Windows.Forms.TableLayoutPanel();
             this.rpItem.SuspendLayout();
             this.tlpAgregado.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +74,66 @@
             this.rpItem.XPanel = 0;
             this.rpItem.YBorde = 0;
             this.rpItem.YPanel = 0;
+            // 
+            // tlpAgregado
+            // 
+            this.tlpAgregado.BackColor = System.Drawing.Color.Transparent;
+            this.tlpAgregado.ColumnCount = 4;
+            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
+            this.tlpAgregado.Controls.Add(this.lblAgregadoEl, 0, 0);
+            this.tlpAgregado.Controls.Add(this.lblFecha, 1, 0);
+            this.tlpAgregado.Controls.Add(this.lblNombre, 3, 0);
+            this.tlpAgregado.Controls.Add(this.lblPor, 2, 0);
+            this.tlpAgregado.Location = new System.Drawing.Point(31, 78);
+            this.tlpAgregado.Name = "tlpAgregado";
+            this.tlpAgregado.RowCount = 1;
+            this.tlpAgregado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpAgregado.Size = new System.Drawing.Size(445, 21);
+            this.tlpAgregado.TabIndex = 8;
+            this.tagsExtender1.SetTag2(this.tlpAgregado, null);
+            this.tagsExtender1.SetTag3(this.tlpAgregado, null);
+            this.tagsExtender1.SetTagFontName(this.tlpAgregado, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.tlpAgregado, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.tlpAgregado, System.Drawing.FontStyle.Regular);
+            // 
+            // lblAgregadoEl
+            // 
+            this.lblAgregadoEl.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAgregadoEl.AutoSize = true;
+            this.lblAgregadoEl.BackColor = System.Drawing.Color.White;
+            this.lblAgregadoEl.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.lblAgregadoEl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblAgregadoEl.Location = new System.Drawing.Point(3, 2);
+            this.lblAgregadoEl.Name = "lblAgregadoEl";
+            this.lblAgregadoEl.Size = new System.Drawing.Size(81, 17);
+            this.lblAgregadoEl.TabIndex = 3;
+            this.tagsExtender1.SetTag2(this.lblAgregadoEl, null);
+            this.tagsExtender1.SetTag3(this.lblAgregadoEl, null);
+            this.tagsExtender1.SetTagFontName(this.lblAgregadoEl, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.lblAgregadoEl, 9F);
+            this.tagsExtender1.SetTagFontStyle(this.lblAgregadoEl, System.Drawing.FontStyle.Regular);
+            this.lblAgregadoEl.Text = "Agregado el ";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.White;
+            this.lblFecha.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblFecha.Location = new System.Drawing.Point(91, 2);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(77, 17);
+            this.lblFecha.TabIndex = 4;
+            this.tagsExtender1.SetTag2(this.lblFecha, null);
+            this.tagsExtender1.SetTag3(this.lblFecha, null);
+            this.tagsExtender1.SetTagFontName(this.lblFecha, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.lblFecha, 9F);
+            this.tagsExtender1.SetTagFontStyle(this.lblFecha, System.Drawing.FontStyle.Bold);
+            this.lblFecha.Text = "25/05/2020";
             // 
             // lblNombre
             // 
@@ -112,41 +171,32 @@
             this.tagsExtender1.SetTagFontStyle(this.lblPor, System.Drawing.FontStyle.Regular);
             this.lblPor.Text = "por";
             // 
-            // lblFecha
+            // btnEditar
             // 
-            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.BackColor = System.Drawing.Color.White;
-            this.lblFecha.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblFecha.Location = new System.Drawing.Point(91, 2);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(77, 17);
-            this.lblFecha.TabIndex = 4;
-            this.tagsExtender1.SetTag2(this.lblFecha, null);
-            this.tagsExtender1.SetTag3(this.lblFecha, null);
-            this.tagsExtender1.SetTagFontName(this.lblFecha, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.lblFecha, 9F);
-            this.tagsExtender1.SetTagFontStyle(this.lblFecha, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Text = "25/05/2020";
-            // 
-            // lblAgregadoEl
-            // 
-            this.lblAgregadoEl.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblAgregadoEl.AutoSize = true;
-            this.lblAgregadoEl.BackColor = System.Drawing.Color.White;
-            this.lblAgregadoEl.Font = new System.Drawing.Font("Montserrat", 9F);
-            this.lblAgregadoEl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblAgregadoEl.Location = new System.Drawing.Point(3, 2);
-            this.lblAgregadoEl.Name = "lblAgregadoEl";
-            this.lblAgregadoEl.Size = new System.Drawing.Size(81, 17);
-            this.lblAgregadoEl.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.lblAgregadoEl, null);
-            this.tagsExtender1.SetTag3(this.lblAgregadoEl, null);
-            this.tagsExtender1.SetTagFontName(this.lblAgregadoEl, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.lblAgregadoEl, 9F);
-            this.tagsExtender1.SetTagFontStyle(this.lblAgregadoEl, System.Drawing.FontStyle.Regular);
-            this.lblAgregadoEl.Text = "Agregado el ";
+            this.btnEditar.BackColor = System.Drawing.Color.White;
+            this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(444, 10);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(32, 32);
+            this.btnEditar.TabIndex = 7;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Tag = "botonImagen";
+            this.tagsExtender1.SetTag2(this.btnEditar, null);
+            this.tagsExtender1.SetTag3(this.btnEditar, null);
+            this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // lblTercerDato
             // 
@@ -198,57 +248,6 @@
             this.tagsExtender1.SetTagFontSize(this.lblPrincipal, 12F);
             this.tagsExtender1.SetTagFontStyle(this.lblPrincipal, System.Drawing.FontStyle.Bold);
             this.lblPrincipal.Text = "TextoPrincipal";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(444, 10);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(32, 32);
-            this.btnEditar.TabIndex = 7;
-            this.btnEditar.TabStop = false;
-            this.btnEditar.Tag = "botonImagen";
-            this.tagsExtender1.SetTag2(this.btnEditar, null);
-            this.tagsExtender1.SetTag3(this.btnEditar, null);
-            this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // tlpAgregado
-            // 
-            this.tlpAgregado.BackColor = System.Drawing.Color.Transparent;
-            this.tlpAgregado.ColumnCount = 4;
-            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
-            this.tlpAgregado.Controls.Add(this.lblAgregadoEl, 0, 0);
-            this.tlpAgregado.Controls.Add(this.lblFecha, 1, 0);
-            this.tlpAgregado.Controls.Add(this.lblNombre, 3, 0);
-            this.tlpAgregado.Controls.Add(this.lblPor, 2, 0);
-            this.tlpAgregado.Location = new System.Drawing.Point(31, 78);
-            this.tlpAgregado.Name = "tlpAgregado";
-            this.tlpAgregado.RowCount = 1;
-            this.tlpAgregado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpAgregado.Size = new System.Drawing.Size(445, 21);
-            this.tlpAgregado.TabIndex = 8;
-            this.tagsExtender1.SetTag2(this.tlpAgregado, null);
-            this.tagsExtender1.SetTag3(this.tlpAgregado, null);
-            this.tagsExtender1.SetTagFontName(this.tlpAgregado, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.tlpAgregado, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.tlpAgregado, System.Drawing.FontStyle.Regular);
             // 
             // itemLista
             // 

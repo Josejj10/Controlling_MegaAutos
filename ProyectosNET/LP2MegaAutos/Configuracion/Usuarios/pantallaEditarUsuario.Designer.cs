@@ -707,6 +707,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel2);
@@ -721,13 +722,19 @@
             this.Controls.Add(this.flpPermisos);
             this.Controls.Add(this.rpn_ListaPermisosUsuario);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaEditarUsuario";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaEditarUsuario_Load);
             this.rpn_ListaPermisosUsuario.ResumeLayout(false);
             this.rpn_ListaPermisosUsuario.PerformLayout();

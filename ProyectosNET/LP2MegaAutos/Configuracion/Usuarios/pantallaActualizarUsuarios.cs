@@ -125,5 +125,17 @@ namespace LP2MegaAutos
         {
 
         }
+
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == "Buscar")
+                txt_Buscar.Text = string.Empty;
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
+        }
     }
 }

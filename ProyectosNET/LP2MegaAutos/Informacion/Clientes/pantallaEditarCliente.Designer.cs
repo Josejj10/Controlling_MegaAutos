@@ -619,6 +619,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
@@ -629,13 +630,19 @@
             this.Controls.Add(this.pnl_TipoDocumento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_NumeroDocumento);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaEditarCliente";
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaEditarCliente_Load);
             this.pnl_Correo.ResumeLayout(false);
             this.pnl_Correo.PerformLayout();

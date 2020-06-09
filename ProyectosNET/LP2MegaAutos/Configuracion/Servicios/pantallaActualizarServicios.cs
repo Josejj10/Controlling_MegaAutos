@@ -13,20 +13,6 @@ namespace LP2MegaAutos
 {
     public partial class pantallaActualizarServicios : Pantalla
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaActualizarServicios _instancia;
-        public static pantallaActualizarServicios Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaActualizarServicios();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-
         public pantallaActualizarServicios()
         {
             InitializeComponent();

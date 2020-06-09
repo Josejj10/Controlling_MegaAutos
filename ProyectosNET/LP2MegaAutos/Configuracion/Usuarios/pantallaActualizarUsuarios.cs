@@ -36,28 +36,37 @@ namespace LP2MegaAutos
         }
         private void btnEditarClick(Object sender, EventArgs e)
         {
-            //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarUsuario.Instancia))
-            {
-                this.Controls.Add(pantallaEditarUsuario.Instancia);
-                pantallaEditarUsuario.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaEditarUsuario.Instancia.Parent);
-            }
-            pantallaEditarUsuario.Instancia.BringToFront();
+            pantallaEditarUsuario pes = new pantallaEditarUsuario();
+            if (pes.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+
+            ////MessageBox.Show("NO AUN");
+            //if (!this.Controls.Contains(pantallaEditarUsuario.Instancia))
+            //{
+            //    this.Controls.Add(pantallaEditarUsuario.Instancia);
+            //    pantallaEditarUsuario.Instancia.Dock = DockStyle.Fill;
+            //    if (DarkMode.is_dark_mode_active())
+            //        DarkMode.iniciarSinTimer(pantallaEditarUsuario.Instancia.Parent);
+            //}
+            //pantallaEditarUsuario.Instancia.BringToFront();
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)
         {
-            //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaAgregarUsuario.Instancia))
-            {
-                this.Controls.Add(pantallaAgregarUsuario.Instancia);
-                pantallaAgregarUsuario.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaAgregarUsuario.Instancia.Parent);
-            }
-            pantallaEditarUsuario.Instancia.BringToFront();
+            pantallaAgregarUsuario pas = new pantallaAgregarUsuario();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+
+            ////MessageBox.Show("NO AUN");
+            //if (!this.Controls.Contains(pantallaAgregarUsuario.Instancia))
+            //{
+            //    this.Controls.Add(pantallaAgregarUsuario.Instancia);
+            //    pantallaAgregarUsuario.Instancia.Dock = DockStyle.Fill;
+            //    if (DarkMode.is_dark_mode_active())
+            //        DarkMode.iniciarSinTimer(pantallaAgregarUsuario.Instancia.Parent);
+            //}
+            //pantallaEditarUsuario.Instancia.BringToFront();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

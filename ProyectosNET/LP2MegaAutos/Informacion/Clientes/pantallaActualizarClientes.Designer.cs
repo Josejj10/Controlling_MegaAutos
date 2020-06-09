@@ -196,6 +196,7 @@
             this.btnReciente.Text = "Reciente";
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
             // rndAntiguo
             // 
@@ -246,6 +247,7 @@
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
             // rndZA
             // 
@@ -296,6 +298,7 @@
             this.btnZA.Text = "Z - A";
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
             // 
             // rndAZ
             // 
@@ -346,6 +349,7 @@
             this.btnAZ.Text = "A - Z";
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // panel3
             // 

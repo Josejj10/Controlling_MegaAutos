@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.Informacion.AreasTrabajo;
 
 namespace LP2MegaAutos
 {
@@ -30,22 +31,18 @@ namespace LP2MegaAutos
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
-            il_AreaTrabajo2.EditarClick += btnEditarClick;
             il_AreaTrabajo1.EditarClick += btnEditarClick;
+            il_AreaTrabajo2.EditarClick += btnEditarClick;
             il_AreaTrabajo3.EditarClick += btnEditarClick;
+            this.btn_Agregar.Click += btnAgregarClick;
         }
 
         private void btnEditarClick(Object sender, EventArgs e)
         {
-            //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarAreaTrabajo.Instancia))
-            {
-                this.Controls.Add(pantallaEditarAreaTrabajo.Instancia);
-                pantallaEditarAreaTrabajo.Instancia.Dock = DockStyle.Fill;
-                pantallaEditarAreaTrabajo.Instancia.BringToFront();
-            }
-            else
-                pantallaEditarAreaTrabajo.Instancia.BringToFront();
+            pantallaEditarAreaTrabajo pas = new pantallaEditarAreaTrabajo();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
         }
 
         private void btnAZ_Click(object sender, EventArgs e)
@@ -113,17 +110,21 @@ namespace LP2MegaAutos
             txt_Buscar.Text = string.Empty;
         }
 
-        private void btn_Agregar_Click(object sender, EventArgs e)
+        private void btnAgregarClick(object sender, EventArgs e)
         {
+            pantallaAgregarAreaTrabajo pas = new pantallaAgregarAreaTrabajo();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
             //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaAgregarAreaTrabajo.Instancia))
-            {
-                this.Controls.Add(pantallaAgregarAreaTrabajo.Instancia);
-                pantallaAgregarAreaTrabajo.Instancia.Dock = DockStyle.Fill;
-                pantallaAgregarAreaTrabajo.Instancia.BringToFront();
-            }
-            else
-                pantallaAgregarAreaTrabajo.Instancia.BringToFront();
+            //if (!this.Controls.Contains(pantallaAgregarAreaTrabajo.Instancia))
+            //{
+            //    this.Controls.Add(pantallaAgregarAreaTrabajo.Instancia);
+            //    pantallaAgregarAreaTrabajo.Instancia.Dock = DockStyle.Fill;
+            //    pantallaAgregarAreaTrabajo.Instancia.BringToFront();
+            //}
+            //else
+            //    pantallaAgregarAreaTrabajo.Instancia.BringToFront();
         }
 
         private void il_AreaTrabajo1_Click(object sender, EventArgs e)

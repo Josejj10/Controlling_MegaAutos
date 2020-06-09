@@ -536,6 +536,7 @@
             this.tagsExtender1.SetTagFontSize(this.button3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
             // 
             // boton_minimizar
             // 

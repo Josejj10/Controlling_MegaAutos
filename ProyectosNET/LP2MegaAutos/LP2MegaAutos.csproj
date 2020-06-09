@@ -95,6 +95,18 @@
     <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.Designer.cs">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.Designer.cs">
+      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmFiltrarReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,12 +191,6 @@
     <Compile Include="Configuracion\Usuarios\pantallaActualizarUsuarios.Designer.cs">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.Designer.cs">
-      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\Clientes\pantallaAgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,7 +204,7 @@
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaAgregarSede.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaAgregarSede.Designer.cs">
       <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
@@ -210,7 +216,7 @@
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.Designer.cs">
       <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
@@ -233,12 +239,6 @@
     <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.Designer.cs">
       <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.Designer.cs">
-      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,13 +252,13 @@
       <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaEditarSede.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaEditarSede.Designer.cs">
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
@@ -270,13 +270,13 @@
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.Designer.cs">
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\pantallaGenerarReporte.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\pantallaGenerarReporte.Designer.cs">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
@@ -385,6 +385,12 @@
     <EmbeddedResource Include="Informacion\AreasTrabajo\frmCuentaContable.resx">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.resx">
+      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.resx">
+      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmFiltrarReportes.resx">
       <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,9 +445,6 @@
     <EmbeddedResource Include="Configuracion\Usuarios\pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.resx">
-      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Clientes\pantallaAgregarCliente.resx">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,9 +471,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.resx">
       <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.resx">
-      <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Clientes\pantallaEditarCliente.resx">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>

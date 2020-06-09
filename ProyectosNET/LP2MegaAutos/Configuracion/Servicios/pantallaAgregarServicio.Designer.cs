@@ -42,15 +42,15 @@
             this.txt_codServ = new System.Windows.Forms.TextBox();
             this.lbl_codServ = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.txt_AgregarServicio = new System.Windows.Forms.TextBox();
+            this.txt_NombreServicio = new System.Windows.Forms.TextBox();
             this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.rnd_cancelar = new LP2MegaAutos.RoundedPanel();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.boton_cerrar = new System.Windows.Forms.Button();
-            this.boton_minimizar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.title_bar = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.boton_minimizar = new System.Windows.Forms.Button();
+            this.boton_cerrar = new System.Windows.Forms.Button();
             this.title_bar_2 = new System.Windows.Forms.Panel();
             this.pnl_tipoServicio.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
@@ -300,21 +300,21 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_codServ, System.Drawing.FontStyle.Bold);
             this.lbl_codServ.Text = "Código de servicio";
             // 
-            // txt_AgregarServicio
+            // txt_NombreServicio
             // 
-            this.txt_AgregarServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_AgregarServicio.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_AgregarServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.txt_AgregarServicio.Location = new System.Drawing.Point(27, 42);
-            this.txt_AgregarServicio.Name = "txt_AgregarServicio";
-            this.txt_AgregarServicio.Size = new System.Drawing.Size(441, 35);
-            this.txt_AgregarServicio.TabIndex = 37;
-            this.tagsExtender1.SetTag2(this.txt_AgregarServicio, null);
-            this.tagsExtender1.SetTag3(this.txt_AgregarServicio, null);
-            this.tagsExtender1.SetTagFontName(this.txt_AgregarServicio, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_AgregarServicio, 21.75F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_AgregarServicio, System.Drawing.FontStyle.Bold);
-            this.txt_AgregarServicio.Text = "Agregar nombre del servicio...";
+            this.txt_NombreServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NombreServicio.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_NombreServicio.Location = new System.Drawing.Point(27, 42);
+            this.txt_NombreServicio.Name = "txt_NombreServicio";
+            this.txt_NombreServicio.Size = new System.Drawing.Size(441, 35);
+            this.txt_NombreServicio.TabIndex = 37;
+            this.tagsExtender1.SetTag2(this.txt_NombreServicio, null);
+            this.tagsExtender1.SetTag3(this.txt_NombreServicio, null);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_NombreServicio, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NombreServicio, System.Drawing.FontStyle.Bold);
+            this.txt_NombreServicio.Text = "Agregar nombre del servicio...";
             // 
             // rnd_guardar
             // 
@@ -351,7 +351,7 @@
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Location = new System.Drawing.Point(3, 1);
+            this.btn_guardar.Location = new System.Drawing.Point(1, 1);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(178, 33);
             this.btn_guardar.TabIndex = 0;
@@ -412,51 +412,26 @@
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
-            // boton_cerrar
+            // title_bar
             // 
-            this.boton_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.boton_cerrar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_cerrar;
-            this.boton_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.boton_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.boton_cerrar.FlatAppearance.BorderSize = 0;
-            this.boton_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
-            this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
-            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
-            this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
-            this.boton_cerrar.Name = "boton_cerrar";
-            this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
-            this.boton_cerrar.TabIndex = 0;
-            this.boton_cerrar.TabStop = false;
-            this.boton_cerrar.Tag = "titlebar";
-            this.tagsExtender1.SetTag2(this.boton_cerrar, null);
-            this.tagsExtender1.SetTag3(this.boton_cerrar, null);
-            this.tagsExtender1.SetTagFontName(this.boton_cerrar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.boton_cerrar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
-            this.boton_cerrar.UseVisualStyleBackColor = false;
-            // 
-            // boton_minimizar
-            // 
-            this.boton_minimizar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_minimizar;
-            this.boton_minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.boton_minimizar.FlatAppearance.BorderSize = 0;
-            this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
-            this.boton_minimizar.Name = "boton_minimizar";
-            this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
-            this.boton_minimizar.TabIndex = 0;
-            this.boton_minimizar.TabStop = false;
-            this.boton_minimizar.Tag = "titlebar";
-            this.tagsExtender1.SetTag2(this.boton_minimizar, null);
-            this.tagsExtender1.SetTag3(this.boton_minimizar, null);
-            this.tagsExtender1.SetTagFontName(this.boton_minimizar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.boton_minimizar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.boton_minimizar, System.Drawing.FontStyle.Regular);
-            this.boton_minimizar.UseVisualStyleBackColor = true;
+            this.title_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.title_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.title_bar.Controls.Add(this.button3);
+            this.title_bar.Controls.Add(this.boton_minimizar);
+            this.title_bar.Controls.Add(this.boton_cerrar);
+            this.title_bar.Location = new System.Drawing.Point(0, 0);
+            this.title_bar.Name = "title_bar";
+            this.title_bar.Size = new System.Drawing.Size(595, 24);
+            this.title_bar.TabIndex = 58;
+            this.title_bar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.title_bar, null);
+            this.tagsExtender1.SetTag3(this.title_bar, null);
+            this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -484,26 +459,51 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
             // 
-            // title_bar
+            // boton_minimizar
             // 
-            this.title_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.title_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.title_bar.Controls.Add(this.button3);
-            this.title_bar.Controls.Add(this.boton_minimizar);
-            this.title_bar.Controls.Add(this.boton_cerrar);
-            this.title_bar.Location = new System.Drawing.Point(0, 0);
-            this.title_bar.Name = "title_bar";
-            this.title_bar.Size = new System.Drawing.Size(595, 24);
-            this.title_bar.TabIndex = 58;
-            this.title_bar.Tag = "titlebar";
-            this.tagsExtender1.SetTag2(this.title_bar, null);
-            this.tagsExtender1.SetTag3(this.title_bar, null);
-            this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
-            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
-            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
-            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
+            this.boton_minimizar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_minimizar;
+            this.boton_minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_minimizar.FlatAppearance.BorderSize = 0;
+            this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
+            this.boton_minimizar.Name = "boton_minimizar";
+            this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
+            this.boton_minimizar.TabIndex = 0;
+            this.boton_minimizar.TabStop = false;
+            this.boton_minimizar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_minimizar, null);
+            this.tagsExtender1.SetTag3(this.boton_minimizar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_minimizar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_minimizar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_minimizar, System.Drawing.FontStyle.Regular);
+            this.boton_minimizar.UseVisualStyleBackColor = true;
+            // 
+            // boton_cerrar
+            // 
+            this.boton_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.boton_cerrar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_cerrar;
+            this.boton_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.boton_cerrar.FlatAppearance.BorderSize = 0;
+            this.boton_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
+            this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
+            this.boton_cerrar.Name = "boton_cerrar";
+            this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
+            this.boton_cerrar.TabIndex = 0;
+            this.boton_cerrar.TabStop = false;
+            this.boton_cerrar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_cerrar, null);
+            this.tagsExtender1.SetTag3(this.boton_cerrar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_cerrar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_cerrar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
+            this.boton_cerrar.UseVisualStyleBackColor = false;
             // 
             // title_bar_2
             // 
@@ -530,7 +530,7 @@
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rnd_guardar);
-            this.Controls.Add(this.txt_AgregarServicio);
+            this.Controls.Add(this.txt_NombreServicio);
             this.Controls.Add(this.pnl_tipoServicio);
             this.Controls.Add(this.pnl_descripcion);
             this.Controls.Add(this.panel1);
@@ -574,7 +574,7 @@
         private System.Windows.Forms.TextBox txt_codServ;
         private System.Windows.Forms.Label lbl_codServ;
         private TagsExtender tagsExtender1;
-        private System.Windows.Forms.TextBox txt_AgregarServicio;
+        private System.Windows.Forms.TextBox txt_NombreServicio;
         private RoundedPanel rnd_guardar;
         private RoundedPanel rnd_cancelar;
         private System.Windows.Forms.Button btn_cancelar;

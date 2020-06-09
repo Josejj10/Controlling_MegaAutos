@@ -33,16 +33,25 @@ namespace LP2MegaAutos.VentanasPrincipales
         {
             set
             {
+                value.AutoScroll = true;
+                value.AutoValidate = AutoValidate.EnableAllowFocusChange;
+                value.BackColor = System.Drawing.Color.White;
+                value.Location = new System.Drawing.Point(0, 0);
+                value.Margin = new Padding(0);
+                value.Size = this.Size;
+                value.TabIndex = 0;
+                value.Name = "p"+value.GetType().ToString();
+                
                 // Agregar a la lista de pantallas  
                 _pantallas.Add(value);
-                   
+                
                 // Quitar la ultima pantalla 
                 if (Controls.Count != 0) {
                     Controls.Remove(Controls[0]);
                 }
                 // Agregar pantalla a los controles del contenedor
                 Controls.Add(value);
-                value.BringToFront();      
+                value.BringToFront();
             }
         }
 

@@ -43,9 +43,9 @@ namespace LP2MegaAutos
             BotonesDinamicosHelper.cambiarColoresBotonesMenu(rpBtnMenuHome, panelMenu);
             suscribirEventos();
             crearBotonesInicio();
-
+            
             // Primera pantalla es pantallaInicioGerente
-            contenedorPantalla1.PantallaActual = new pantallaInicioGerente(_usuario);
+            //contenedorPantalla1.PantallaActual = new pantallaInicioGerente(_usuario);
         }
 
         private void suscribirEventos()

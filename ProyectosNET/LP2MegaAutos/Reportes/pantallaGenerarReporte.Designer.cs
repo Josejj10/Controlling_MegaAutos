@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaGenerarReporte));
-            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tags = new LP2MegaAutos.TagsExtender();
             this.rndOtro = new LP2MegaAutos.RoundedPanel();
@@ -40,8 +39,6 @@
             this.btnMensual = new System.Windows.Forms.Button();
             this.rpDiario = new LP2MegaAutos.RoundedPanel();
             this.btnDiario = new System.Windows.Forms.Button();
-            this.rpBtnGenerarReporte = new LP2MegaAutos.RoundedPanel();
-            this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.rpFechaIni = new LP2MegaAutos.RoundedPanel();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.pnlImgFechaIni = new System.Windows.Forms.Panel();
@@ -60,11 +57,17 @@
             this.pnlSede = new LP2MegaAutos.RoundedPanel();
             this.txtSede = new System.Windows.Forms.TextBox();
             this.pnlImgSede = new System.Windows.Forms.Panel();
+            this.title_bar_2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.title_bar = new System.Windows.Forms.Panel();
+            this.boton_minimizar = new System.Windows.Forms.Button();
+            this.boton_cerrar = new System.Windows.Forms.Button();
+            this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
+            this.btn_GenerarReporte = new System.Windows.Forms.Button();
             this.rndOtro.SuspendLayout();
             this.rndAnual.SuspendLayout();
             this.rndMensual.SuspendLayout();
             this.rpDiario.SuspendLayout();
-            this.rpBtnGenerarReporte.SuspendLayout();
             this.rpFechaIni.SuspendLayout();
             this.rpPorAreaTrabajo.SuspendLayout();
             this.rpPorVehiculo.SuspendLayout();
@@ -72,34 +75,9 @@
             this.rpInputBuscar.SuspendLayout();
             this.rpFechaFin.SuspendLayout();
             this.pnlSede.SuspendLayout();
+            this.title_bar.SuspendLayout();
+            this.rnd_guardar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rpTopMain
-            // 
-            this.rpTopMain.ArcRadiusBorde = 15;
-            this.rpTopMain.ArcRadiusPanel = 15;
-            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
-            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 0);
-            this.rpTopMain.MenosHeightBorde = 1;
-            this.rpTopMain.MenosHeightPanel = 1;
-            this.rpTopMain.MenosWidthBorde = 1;
-            this.rpTopMain.MenosWidthPanel = 1;
-            this.rpTopMain.Name = "rpTopMain";
-            this.rpTopMain.PorcLuzColorBorde = 0;
-            this.rpTopMain.Size = new System.Drawing.Size(611, 40);
-            this.rpTopMain.TabIndex = 29;
-            this.tags.SetTag2(this.rpTopMain, null);
-            this.tags.SetTag3(this.rpTopMain, null);
-            this.tags.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpTopMain, 10F);
-            this.tags.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
-            this.rpTopMain.XBorde = 0;
-            this.rpTopMain.XPanel = 0;
-            this.rpTopMain.YBorde = 0;
-            this.rpTopMain.YPanel = 0;
             // 
             // lblTitulo
             // 
@@ -309,55 +287,6 @@
             this.btnDiario.Text = "Diario";
             this.btnDiario.UseVisualStyleBackColor = false;
             this.btnDiario.Click += new System.EventHandler(this.btnDiario_Click);
-            // 
-            // rpBtnGenerarReporte
-            // 
-            this.rpBtnGenerarReporte.ArcRadiusBorde = 15;
-            this.rpBtnGenerarReporte.ArcRadiusPanel = 15;
-            this.rpBtnGenerarReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpBtnGenerarReporte.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpBtnGenerarReporte.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
-            this.rpBtnGenerarReporte.Controls.Add(this.btnGenerarReporte);
-            this.rpBtnGenerarReporte.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
-            this.rpBtnGenerarReporte.Location = new System.Drawing.Point(0, 403);
-            this.rpBtnGenerarReporte.MenosHeightBorde = 1;
-            this.rpBtnGenerarReporte.MenosHeightPanel = 1;
-            this.rpBtnGenerarReporte.MenosWidthBorde = 1;
-            this.rpBtnGenerarReporte.MenosWidthPanel = 1;
-            this.rpBtnGenerarReporte.Name = "rpBtnGenerarReporte";
-            this.rpBtnGenerarReporte.PorcLuzColorBorde = 0;
-            this.rpBtnGenerarReporte.Size = new System.Drawing.Size(611, 67);
-            this.rpBtnGenerarReporte.TabIndex = 30;
-            this.tags.SetTag2(this.rpBtnGenerarReporte, null);
-            this.tags.SetTag3(this.rpBtnGenerarReporte, null);
-            this.tags.SetTagFontName(this.rpBtnGenerarReporte, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpBtnGenerarReporte, 10F);
-            this.tags.SetTagFontStyle(this.rpBtnGenerarReporte, System.Drawing.FontStyle.Regular);
-            this.rpBtnGenerarReporte.XBorde = 0;
-            this.rpBtnGenerarReporte.XPanel = 0;
-            this.rpBtnGenerarReporte.YBorde = 0;
-            this.rpBtnGenerarReporte.YPanel = 0;
-            // 
-            // btnGenerarReporte
-            // 
-            this.btnGenerarReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btnGenerarReporte.FlatAppearance.BorderSize = 0;
-            this.btnGenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarReporte.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.btnGenerarReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnGenerarReporte.Location = new System.Drawing.Point(16, 3);
-            this.btnGenerarReporte.Name = "btnGenerarReporte";
-            this.btnGenerarReporte.Size = new System.Drawing.Size(578, 61);
-            this.btnGenerarReporte.TabIndex = 32;
-            this.tags.SetTag2(this.btnGenerarReporte, null);
-            this.tags.SetTag3(this.btnGenerarReporte, null);
-            this.tags.SetTagFontName(this.btnGenerarReporte, fontsD.Lato);
-            this.tags.SetTagFontSize(this.btnGenerarReporte, 21.75F);
-            this.tags.SetTagFontStyle(this.btnGenerarReporte, System.Drawing.FontStyle.Regular);
-            this.btnGenerarReporte.Text = "Generar";
-            this.btnGenerarReporte.UseVisualStyleBackColor = false;
-            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // rpFechaIni
             // 
@@ -710,7 +639,7 @@
             this.pnlSede.Controls.Add(this.txtSede);
             this.pnlSede.Controls.Add(this.pnlImgSede);
             this.pnlSede.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.pnlSede.Location = new System.Drawing.Point(308, 45);
+            this.pnlSede.Location = new System.Drawing.Point(308, 51);
             this.pnlSede.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSede.MenosHeightBorde = 1;
             this.pnlSede.MenosHeightPanel = 1;
@@ -769,11 +698,170 @@
             this.tags.SetTagFontSize(this.pnlImgSede, 10F);
             this.tags.SetTagFontStyle(this.pnlImgSede, System.Drawing.FontStyle.Regular);
             // 
+            // title_bar_2
+            // 
+            this.title_bar_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.title_bar_2.Enabled = false;
+            this.title_bar_2.Location = new System.Drawing.Point(0, 24);
+            this.title_bar_2.Name = "title_bar_2";
+            this.title_bar_2.Size = new System.Drawing.Size(595, 8);
+            this.title_bar_2.TabIndex = 59;
+            this.title_bar_2.Tag = "titlebar";
+            this.tags.SetTag2(this.title_bar_2, null);
+            this.tags.SetTag3(this.title_bar_2, null);
+            this.tags.SetTagFontName(this.title_bar_2, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.title_bar_2, 10F);
+            this.tags.SetTagFontStyle(this.title_bar_2, System.Drawing.FontStyle.Regular);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_cerrar;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(571, -1);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(24, 24);
+            this.button3.TabIndex = 2;
+            this.button3.TabStop = false;
+            this.button3.Tag = "titlebar";
+            this.tags.SetTag2(this.button3, null);
+            this.tags.SetTag3(this.button3, null);
+            this.tags.SetTagFontName(this.button3, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.button3, 10F);
+            this.tags.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
+            // 
+            // title_bar
+            // 
+            this.title_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.title_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.title_bar.Controls.Add(this.button3);
+            this.title_bar.Controls.Add(this.boton_minimizar);
+            this.title_bar.Controls.Add(this.boton_cerrar);
+            this.title_bar.Location = new System.Drawing.Point(0, 0);
+            this.title_bar.Name = "title_bar";
+            this.title_bar.Size = new System.Drawing.Size(595, 24);
+            this.title_bar.TabIndex = 60;
+            this.title_bar.Tag = "titlebar";
+            this.tags.SetTag2(this.title_bar, null);
+            this.tags.SetTag3(this.title_bar, null);
+            this.tags.SetTagFontName(this.title_bar, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.title_bar, 10F);
+            this.tags.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
+            // 
+            // boton_minimizar
+            // 
+            this.boton_minimizar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_minimizar;
+            this.boton_minimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_minimizar.FlatAppearance.BorderSize = 0;
+            this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
+            this.boton_minimizar.Name = "boton_minimizar";
+            this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
+            this.boton_minimizar.TabIndex = 0;
+            this.boton_minimizar.TabStop = false;
+            this.boton_minimizar.Tag = "titlebar";
+            this.tags.SetTag2(this.boton_minimizar, null);
+            this.tags.SetTag3(this.boton_minimizar, null);
+            this.tags.SetTagFontName(this.boton_minimizar, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.boton_minimizar, 10F);
+            this.tags.SetTagFontStyle(this.boton_minimizar, System.Drawing.FontStyle.Regular);
+            this.boton_minimizar.UseVisualStyleBackColor = true;
+            // 
+            // boton_cerrar
+            // 
+            this.boton_cerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.boton_cerrar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_cerrar;
+            this.boton_cerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boton_cerrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.boton_cerrar.FlatAppearance.BorderSize = 0;
+            this.boton_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
+            this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
+            this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
+            this.boton_cerrar.Name = "boton_cerrar";
+            this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
+            this.boton_cerrar.TabIndex = 0;
+            this.boton_cerrar.TabStop = false;
+            this.boton_cerrar.Tag = "titlebar";
+            this.tags.SetTag2(this.boton_cerrar, null);
+            this.tags.SetTag3(this.boton_cerrar, null);
+            this.tags.SetTagFontName(this.boton_cerrar, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.boton_cerrar, 10F);
+            this.tags.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
+            this.boton_cerrar.UseVisualStyleBackColor = false;
+            // 
+            // rnd_guardar
+            // 
+            this.rnd_guardar.ArcRadiusBorde = 5;
+            this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rnd_guardar.Controls.Add(this.btn_GenerarReporte);
+            this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rnd_guardar.Location = new System.Drawing.Point(207, 385);
+            this.rnd_guardar.MenosHeightBorde = 1;
+            this.rnd_guardar.MenosHeightPanel = 1;
+            this.rnd_guardar.MenosWidthBorde = 1;
+            this.rnd_guardar.MenosWidthPanel = 1;
+            this.rnd_guardar.Name = "rnd_guardar";
+            this.rnd_guardar.PorcLuzColorBorde = 0;
+            this.rnd_guardar.Size = new System.Drawing.Size(180, 35);
+            this.rnd_guardar.TabIndex = 61;
+            this.tags.SetTag2(this.rnd_guardar, null);
+            this.tags.SetTag3(this.rnd_guardar, null);
+            this.tags.SetTagFontName(this.rnd_guardar, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rnd_guardar, 10F);
+            this.tags.SetTagFontStyle(this.rnd_guardar, System.Drawing.FontStyle.Regular);
+            this.rnd_guardar.XBorde = 0;
+            this.rnd_guardar.XPanel = 0;
+            this.rnd_guardar.YBorde = 0;
+            this.rnd_guardar.YPanel = 0;
+            // 
+            // btn_GenerarReporte
+            // 
+            this.btn_GenerarReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btn_GenerarReporte.FlatAppearance.BorderSize = 0;
+            this.btn_GenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_GenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_GenerarReporte.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GenerarReporte.ForeColor = System.Drawing.Color.White;
+            this.btn_GenerarReporte.Location = new System.Drawing.Point(3, 1);
+            this.btn_GenerarReporte.Name = "btn_GenerarReporte";
+            this.btn_GenerarReporte.Size = new System.Drawing.Size(178, 33);
+            this.btn_GenerarReporte.TabIndex = 0;
+            this.tags.SetTag2(this.btn_GenerarReporte, null);
+            this.tags.SetTag3(this.btn_GenerarReporte, null);
+            this.tags.SetTagFontName(this.btn_GenerarReporte, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btn_GenerarReporte, 10F);
+            this.tags.SetTagFontStyle(this.btn_GenerarReporte, System.Drawing.FontStyle.Regular);
+            this.btn_GenerarReporte.Text = "Generar";
+            this.btn_GenerarReporte.UseVisualStyleBackColor = false;
+            this.btn_GenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
+            // 
             // pantallaGenerarReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(595, 431);
+            this.Controls.Add(this.rnd_guardar);
+            this.Controls.Add(this.title_bar_2);
+            this.Controls.Add(this.title_bar);
             this.Controls.Add(this.pnlSede);
             this.Controls.Add(this.rpFechaFin);
             this.Controls.Add(this.rpInputBuscar);
@@ -781,16 +869,14 @@
             this.Controls.Add(this.rpPorVehiculo);
             this.Controls.Add(this.rpPorAreaTrabajo);
             this.Controls.Add(this.rpFechaIni);
-            this.Controls.Add(this.rpBtnGenerarReporte);
             this.Controls.Add(this.rndOtro);
             this.Controls.Add(this.rndAnual);
             this.Controls.Add(this.rndMensual);
             this.Controls.Add(this.rpDiario);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.rpTopMain);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "pantallaGenerarReporte";
-            this.Size = new System.Drawing.Size(611, 470);
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.tags.SetTag2(this, null);
             this.tags.SetTag3(this, null);
             this.tags.SetTagFontName(this, fontsD.Ninguno);
@@ -800,7 +886,6 @@
             this.rndAnual.ResumeLayout(false);
             this.rndMensual.ResumeLayout(false);
             this.rpDiario.ResumeLayout(false);
-            this.rpBtnGenerarReporte.ResumeLayout(false);
             this.rpFechaIni.ResumeLayout(false);
             this.rpPorAreaTrabajo.ResumeLayout(false);
             this.rpPorVehiculo.ResumeLayout(false);
@@ -810,14 +895,14 @@
             this.rpFechaFin.ResumeLayout(false);
             this.pnlSede.ResumeLayout(false);
             this.pnlSede.PerformLayout();
+            this.title_bar.ResumeLayout(false);
+            this.rnd_guardar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private RoundedPanel rpTopMain;
         private TagsExtender tags;
         private System.Windows.Forms.Label lblTitulo;
         private RoundedPanel rndOtro;
@@ -828,7 +913,6 @@
         private System.Windows.Forms.Button btnMensual;
         private RoundedPanel rpDiario;
         private System.Windows.Forms.Button btnDiario;
-        private RoundedPanel rpBtnGenerarReporte;
         private RoundedPanel rpFechaIni;
         private System.Windows.Forms.Panel pnlImgFechaIni;
         private System.Windows.Forms.DateTimePicker dtpInicio;
@@ -847,6 +931,12 @@
         private RoundedPanel pnlSede;
         private System.Windows.Forms.TextBox txtSede;
         private System.Windows.Forms.Panel pnlImgSede;
-        private System.Windows.Forms.Button btnGenerarReporte;
+        private System.Windows.Forms.Panel title_bar_2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel title_bar;
+        private System.Windows.Forms.Button boton_minimizar;
+        private System.Windows.Forms.Button boton_cerrar;
+        private RoundedPanel rnd_guardar;
+        private System.Windows.Forms.Button btn_GenerarReporte;
     }
 }

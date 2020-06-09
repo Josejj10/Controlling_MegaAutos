@@ -13,20 +13,6 @@ namespace LP2MegaAutos
 {
     public partial class pantallaListaReportes : Pantalla
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaListaReportes _instancia;
-        public static pantallaListaReportes Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaListaReportes();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-
         public pantallaListaReportes()
         {
             InitializeComponent();
@@ -94,9 +80,12 @@ namespace LP2MegaAutos
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            if (!this.Parent.Controls.Contains(pantallaGenerarReporte.Instancia))
-                this.Parent.Controls.Add(pantallaGenerarReporte.Instancia);
-            pantallaGenerarReporte.Instancia.BringToFront();
+            pantallaGenerarReporte pgr = new pantallaGenerarReporte();
+            if (pgr.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+            //if (!this.Parent.Controls.Contains(pantallaGenerarReporte.Instancia))
+            //    this.Parent.Controls.Add(pantallaGenerarReporte.Instancia);
+            //pantallaGenerarReporte.Instancia.BringToFront();
         }
 
 
@@ -115,6 +104,65 @@ namespace LP2MegaAutos
         {
             this.rnd_todos.ColorPanel = Colores.AmarilloInteractivo;
             this.btn_todos.BackColor = Colores.AmarilloInteractivo;
+        }
+        private void btnAZ_Click(object sender, EventArgs e)
+        {
+            // Cambiar color rounded panels de atras
+            this.rndAZ.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndZA.ColorPanel = Color.Transparent;
+            this.rndAntiguo.ColorPanel = Color.Transparent;
+            this.rndReciente.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnZA.BackColor = Color.Transparent;
+            this.btnAZ.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnReciente.BackColor = Color.Transparent;
+            this.btnAntiguo.BackColor = Color.Transparent;
+        }
+
+        private void btnZA_Click(object sender, EventArgs e)
+        {
+            // Cambiar color rounded panels de atras
+            this.rndAZ.ColorPanel = Color.Transparent;
+            this.rndZA.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndAntiguo.ColorPanel = Color.Transparent;
+            this.rndReciente.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnAZ.BackColor = Color.Transparent;
+            this.btnZA.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnReciente.BackColor = Color.Transparent;
+            this.btnAntiguo.BackColor = Color.Transparent;
+        }
+
+        private void btnAntiguo_Click(object sender, EventArgs e)
+        {
+            // Cambiar color rounded panels de atras
+            this.rndAZ.ColorPanel = Color.Transparent;
+            this.rndZA.ColorPanel = Color.Transparent;
+            this.rndAntiguo.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndReciente.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnAZ.BackColor = Color.Transparent;
+            this.btnAntiguo.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnReciente.BackColor = Color.Transparent;
+            this.btnZA.BackColor = Color.Transparent;
+        }
+
+        private void btnReciente_Click(object sender, EventArgs e)
+        {
+            // Cambiar color rounded panels de atras
+            this.rndAZ.ColorPanel = Color.Transparent;
+            this.rndReciente.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndZA.ColorPanel = Color.Transparent;
+            this.rndAntiguo.ColorPanel = Color.Transparent;
+
+            // Cambiar color botones de al frente
+            this.btnAZ.BackColor = Color.Transparent;
+            this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnZA.BackColor = Color.Transparent;
+            this.btnAntiguo.BackColor = Color.Transparent;
         }
     }
 }

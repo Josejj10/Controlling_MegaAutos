@@ -13,21 +13,6 @@ namespace LP2MegaAutos
 {
     public partial class pantallaEditarServicio : MetroForm
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaEditarServicio _instancia;
-        public static pantallaEditarServicio Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaEditarServicio();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-
-
         public pantallaEditarServicio()
         {
             InitializeComponent();

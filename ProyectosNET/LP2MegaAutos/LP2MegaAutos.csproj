@@ -204,7 +204,7 @@
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaAgregarSede.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaAgregarSede.Designer.cs">
       <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
@@ -258,7 +258,7 @@
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaEditarSede.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaEditarSede.Designer.cs">
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
@@ -276,7 +276,7 @@
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\pantallaGenerarReporte.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\pantallaGenerarReporte.Designer.cs">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>

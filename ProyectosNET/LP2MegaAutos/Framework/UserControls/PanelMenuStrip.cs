@@ -16,39 +16,39 @@ namespace LP2MegaAutos.Framework.UserControls
         public PanelMenuStrip()
         {
             InitializeComponent();
+            suscribirEventos();
+        }
+
+        public PanelMenuStrip(int numItems)
+        {
+            InitializeComponent();
+            this.NumItems = numItems;
+            suscribirEventos();
+        }
+
+        private void suscribirEventos()
+        {
+            itemMenuStrip1.mouseLeave += itemMenuStrip_MouseLeave;
+            itemMenuStrip2.mouseLeave += itemMenuStrip_MouseLeave;
+            itemMenuStrip3.mouseLeave += itemMenuStrip_MouseLeave;
+            itemMenuStrip4.mouseLeave += itemMenuStrip_MouseLeave;
+            itemMenuStrip1.click += itemMenuStrip1_Click;
+            itemMenuStrip2.click += itemMenuStrip2_Click;
+            itemMenuStrip3.click += itemMenuStrip3_Click;
+            itemMenuStrip4.click += itemMenuStrip4_Click;
         }
 
         private void enableOrDisableButtons()
         {
-            this.itemMenuStrip1.Enabled = false;
-            this.itemMenuStrip2.Enabled = false;
-            this.itemMenuStrip3.Enabled = false;
-            this.itemMenuStrip4.Enabled = false;
             this.itemMenuStrip1.Visible= false;
             this.itemMenuStrip2.Visible = false;
-            this.itemMenuStrip3.Visible = false;
             this.itemMenuStrip4.Visible = false;
+            this.itemMenuStrip3.Visible = false;
 
-            if (_numItems > 3)
-            {
-                this.itemMenuStrip4.Visible = true;
-                this.itemMenuStrip4.Enabled= true;
-            }
-            if (_numItems > 2)
-            {
-                this.itemMenuStrip3.Visible = true;
-                this.itemMenuStrip3.Enabled= true;
-            }
-            if (_numItems > 1)
-            {
-                this.itemMenuStrip2.Visible = true;
-                this.itemMenuStrip2.Enabled= true;
-            }
-            if (_numItems > 0)
-            {
-                this.itemMenuStrip1.Visible = true;
-                this.itemMenuStrip1.Enabled = true;
-            }
+            if (_numItems > 3) this.itemMenuStrip3.Visible = true;
+            if (_numItems > 2) this.itemMenuStrip4.Visible = true;
+            if (_numItems > 1) this.itemMenuStrip2.Visible = true;
+            if (_numItems > 0) this.itemMenuStrip1.Visible = true;
         }
 
         #region Propiedades
@@ -70,31 +70,84 @@ namespace LP2MegaAutos.Framework.UserControls
         [Description("Imagen Item 1"), Category("PanelMenuStrip")]
         public Image Imagen1
         {
-            get { return this.itemMenuStrip1.BackgroundImage; }
-            set { this.itemMenuStrip1.BackgroundImage = value; }
+            get { return this.itemMenuStrip1.Imagen; }
+            set { this.itemMenuStrip1.Imagen = value; }
         }
 
         [Description("Imagen Item 2"), Category("PanelMenuStrip")]
         public Image Imagen2
         {
-            get { return this.itemMenuStrip2.BackgroundImage; }
-            set { this.itemMenuStrip2.BackgroundImage = value; }
+            get { return this.itemMenuStrip2.Imagen; }
+            set { this.itemMenuStrip2.Imagen = value; }
         }
 
         [Description("Imagen Item 3"), Category("PanelMenuStrip")]
         public Image Imagen3
         {
-            get { return this.itemMenuStrip3.BackgroundImage; }
-            set { this.itemMenuStrip3.BackgroundImage = value; }
+            get { return this.itemMenuStrip3.Imagen; }
+            set { this.itemMenuStrip3.Imagen = value; }
         }
 
         [Description("Imagen Item 4"), Category("PanelMenuStrip")]
         public Image Imagen4
         {
-            get { return this.itemMenuStrip4.BackgroundImage; }
-            set { this.itemMenuStrip4.BackgroundImage = value; }
+            get { return this.itemMenuStrip4.Imagen; }
+            set { this.itemMenuStrip4.Imagen = value; }
         }
+
+        #endregion Propiedades
+
+        #region Delegar Clicks
+        public delegate void ButtonClickEventHandler(object sender, EventArgs e);
+        public event ButtonClickEventHandler item1Click, item2Click, item3Click, item4Click;
+        private void itemMenuStrip1_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = item1Click;
+            if (h != null) h(this, e);
+        }
+
+        private void itemMenuStrip2_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = item2Click;
+            if (h != null) h(this, e);
+        }
+
+        private void itemMenuStrip3_Click(object sender, EventArgs e)
+        {
+
+            ButtonClickEventHandler h = item3Click;
+            if (h != null) h(this, e);
+        }
+
+        private void itemMenuStrip4_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = item4Click;
+            if (h != null) h(this, e);
+        }
+        #endregion Delegar Clicks
+        
+        // Desaparece al salir
+        private void itemMenuStrip_MouseLeave(object sender, EventArgs e)
+            {
+            if (itemMenuStrip1.ClientRectangle.Contains
+                (itemMenuStrip1.PointToClient(Cursor.Position))){
+                return;
+            }
+            if (_numItems > 1 && itemMenuStrip2.ClientRectangle.Contains
+                (itemMenuStrip2.PointToClient(Cursor.Position))){
+                return;
+            }
+            if (_numItems > 2 && itemMenuStrip3.ClientRectangle.Contains
+                (itemMenuStrip3.PointToClient(Cursor.Position))){
+                return;
+            }
+            if (_numItems > 3 && itemMenuStrip4.ClientRectangle.Contains
+                (itemMenuStrip4.PointToClient(Cursor.Position))){
+                return;
+            }
+            this.Visible = false;
+        }
+
     }
-    #endregion Propiedades
 }
 

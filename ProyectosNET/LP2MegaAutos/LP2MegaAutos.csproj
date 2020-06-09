@@ -186,13 +186,13 @@
       <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaAgregarCliente.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaAgregarCliente.Designer.cs">
       <DependentUpon>pantallaAgregarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
@@ -204,13 +204,13 @@
       <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.Designer.cs">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.Designer.cs">
       <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
@@ -240,19 +240,19 @@
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.Designer.cs">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaEditarDriver.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaEditarDriver.Designer.cs">
       <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.Designer.cs">
       <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
@@ -264,13 +264,13 @@
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaEditarServicio.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Servicios\pantallaEditarServicio.Designer.cs">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.Designer.cs">
       <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
@@ -327,6 +327,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Framework\DarkMode.cs" />
+    <Compile Include="VentanasPrincipales\ContenedorPantalla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VentanasPrincipales\ContenedorPantalla.Designer.cs">
+      <DependentUpon>ContenedorPantalla.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\EPermisos.cs" />
     <Compile Include="VentanasPrincipales\frmLoading.cs">
       <SubType>Form</SubType>
@@ -374,6 +380,12 @@
     <Compile Include="Framework\UserControls\MetaDesign\RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasPrincipales\Pantalla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VentanasPrincipales\Pantalla.Designer.cs">
+      <DependentUpon>Pantalla.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\Usuario.cs" />
     <EmbeddedResource Include="Framework\UserControls\Items\itemMenuStrip.resx">
       <DependentUpon>itemMenuStrip.cs</DependentUpon>
@@ -386,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmFiltrarReportes.resx">
       <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPrincipales\ContenedorPantalla.resx">
+      <DependentUpon>ContenedorPantalla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasPrincipales\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
@@ -514,6 +529,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPrincipales\Pantalla.resx">
+      <DependentUpon>Pantalla.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />
@@ -647,6 +665,7 @@
   <ItemGroup>
     <Content Include="Informacion\creditos.txt" />
     <Content Include="Resources\editar.png" />
+    <None Include="Resources\Menu\car.png" />
     <None Include="Resources\Menu\Usuarios.png" />
     <None Include="Resources\Menu\Sort.png" />
     <None Include="Resources\Menu\Servicio.png" />
@@ -667,7 +686,7 @@
     <None Include="Resources\Menu\Reloj.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Informacion\Autos\" />
+    <Folder Include="Informacion\Vehiculos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

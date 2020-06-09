@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.VentanasPrincipales;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaActualizarServicios : UserControl
+    public partial class pantallaActualizarServicios : Pantalla
     {
         // Singleton instance para poder crearlo en la pantalla menu
         #region instancia
@@ -131,6 +132,11 @@ namespace LP2MegaAutos
             this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
+        }
+
+        private void pantallaActualizarServicios_Load(object sender, EventArgs e)
+        {
+
         }
 
         //private void rndAZ_MouseDown(object sender, MouseEventArgs e)

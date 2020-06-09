@@ -38,15 +38,19 @@ namespace LP2MegaAutos
 
         private void btnEditarUsu_Click(Object sender, EventArgs e)
         {
-            //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
-            {
-                this.Controls.Add(pantallaEditarInformacionPropia.Instancia);
-                pantallaEditarInformacionPropia.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaEditarInformacionPropia.Instancia.Parent);
-            }
-            pantallaEditarInformacionPropia.Instancia.BringToFront();
+            pantallaEditarInformacionPropia pas = new pantallaEditarInformacionPropia();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+            ////MessageBox.Show("NO AUN");
+            //if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
+            //{
+            //    this.Controls.Add(pantallaEditarInformacionPropia.Instancia);
+            //    pantallaEditarInformacionPropia.Instancia.Dock = DockStyle.Fill;
+            //    if (DarkMode.is_dark_mode_active())
+            //        DarkMode.iniciarSinTimer(pantallaEditarInformacionPropia.Instancia.Parent);
+            //}
+            //pantallaEditarInformacionPropia.Instancia.BringToFront();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -59,5 +63,9 @@ namespace LP2MegaAutos
             MessageBox.Show("Agregar");
         }
 
+        private void pantallaAjustesUsuarioGerente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

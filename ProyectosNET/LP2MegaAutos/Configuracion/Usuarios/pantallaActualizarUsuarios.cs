@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.VentanasPrincipales;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaActualizarUsuarios : UserControl
+    public partial class pantallaActualizarUsuarios : Pantalla
     {
         // Singleton instance para poder crearlo en la pantalla menu
         #region instancia
@@ -35,28 +36,37 @@ namespace LP2MegaAutos
         }
         private void btnEditarClick(Object sender, EventArgs e)
         {
-            //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaEditarUsuario.Instancia))
-            {
-                this.Controls.Add(pantallaEditarUsuario.Instancia);
-                pantallaEditarUsuario.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaEditarUsuario.Instancia.Parent);
-            }
-            pantallaEditarUsuario.Instancia.BringToFront();
+            pantallaEditarUsuario pes = new pantallaEditarUsuario();
+            if (pes.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+
+            ////MessageBox.Show("NO AUN");
+            //if (!this.Controls.Contains(pantallaEditarUsuario.Instancia))
+            //{
+            //    this.Controls.Add(pantallaEditarUsuario.Instancia);
+            //    pantallaEditarUsuario.Instancia.Dock = DockStyle.Fill;
+            //    if (DarkMode.is_dark_mode_active())
+            //        DarkMode.iniciarSinTimer(pantallaEditarUsuario.Instancia.Parent);
+            //}
+            //pantallaEditarUsuario.Instancia.BringToFront();
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)
         {
-            //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaAgregarUsuario.Instancia))
-            {
-                this.Controls.Add(pantallaAgregarUsuario.Instancia);
-                pantallaAgregarUsuario.Instancia.Dock = DockStyle.Fill;
-                if (DarkMode.is_dark_mode_active())
-                    DarkMode.iniciarSinTimer(pantallaAgregarUsuario.Instancia.Parent);
-            }
-            pantallaEditarUsuario.Instancia.BringToFront();
+            pantallaAgregarUsuario pas = new pantallaAgregarUsuario();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+
+            ////MessageBox.Show("NO AUN");
+            //if (!this.Controls.Contains(pantallaAgregarUsuario.Instancia))
+            //{
+            //    this.Controls.Add(pantallaAgregarUsuario.Instancia);
+            //    pantallaAgregarUsuario.Instancia.Dock = DockStyle.Fill;
+            //    if (DarkMode.is_dark_mode_active())
+            //        DarkMode.iniciarSinTimer(pantallaAgregarUsuario.Instancia.Parent);
+            //}
+            //pantallaEditarUsuario.Instancia.BringToFront();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -121,6 +131,11 @@ namespace LP2MegaAutos
             this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
+        }
+
+        private void pantallaActualizarUsuarios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

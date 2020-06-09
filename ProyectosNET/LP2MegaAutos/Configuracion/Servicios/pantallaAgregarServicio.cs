@@ -86,5 +86,10 @@ namespace LP2MegaAutos
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void pantallaAgregarServicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

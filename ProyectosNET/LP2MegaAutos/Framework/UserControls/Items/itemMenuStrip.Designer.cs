@@ -46,6 +46,8 @@
             this.btnItem.Size = new System.Drawing.Size(52, 52);
             this.btnItem.TabIndex = 0;
             this.btnItem.UseVisualStyleBackColor = false;
+            this.btnItem.Click += new System.EventHandler(this.btnItem_Click);
+            this.btnItem.MouseLeave += new System.EventHandler(this.btnItem_Leave);
             // 
             // itemMenuStrip
             // 

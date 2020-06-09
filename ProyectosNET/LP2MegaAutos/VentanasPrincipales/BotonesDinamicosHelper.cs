@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LP2MegaAutos.VentanasPrincipales
 {
-    class BotonesDinamicosHelper
+    public class BotonesDinamicosHelper
     {
         // Devolvera el contenedor de flags menu que señala qué botones crear
         // Y también el numero de items de cada menu
@@ -100,7 +100,7 @@ namespace LP2MegaAutos.VentanasPrincipales
         public static void pmsBtn_Click<T>(object sender, EventArgs e, Button btnMenu, Image img, Panel panelMenu, ContenedorPantalla cont)
         {
             cambiarColoresBotonesMenu((RoundedPanel)btnMenu.Parent, panelMenu);
-            cont.PantallaActual = (Pantalla)Activator.CreateInstance(typeof(T));
+             cont.PantallaActual = (Pantalla)Activator.CreateInstance(typeof(T));
             if (DarkMode.is_dark_mode_active())
                 DarkMode.iniciarSinTimer(cont);
 
@@ -143,10 +143,10 @@ namespace LP2MegaAutos.VentanasPrincipales
                 switch (btn.Name)
                 {
                     case "btnMenuInformacion":
-                        btn.BackgroundImage = Resources.Informacion;
+                        btn.BackgroundImage = (Image) new Bitmap(Resources.Informacion, new Size(36,36));
                         break;
                     case "btnMenuConfiguracion":
-                        btn.BackgroundImage = Resources.Configuracion;
+                        btn.BackgroundImage = (Image)new Bitmap(Resources.Configuracion, new Size(36, 36));
                         break;
                 }
             }

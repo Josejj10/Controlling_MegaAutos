@@ -48,6 +48,7 @@
             this.flpReportes = new System.Windows.Forms.FlowLayoutPanel();
             this.itemListaReporte3 = new LP2MegaAutos.itemListaReporte();
             this.itemListaReporte2 = new LP2MegaAutos.itemListaReporte();
+            this.itemListaReporte4 = new LP2MegaAutos.itemListaReporte();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaReportes = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaReportes = new System.Windows.Forms.Label();
@@ -416,6 +417,7 @@
             this.flpReportes.Controls.Add(this.itemListaReporte3);
             this.flpReportes.Controls.Add(this.itemListaReporte1);
             this.flpReportes.Controls.Add(this.itemListaReporte2);
+            this.flpReportes.Controls.Add(this.itemListaReporte4);
             this.flpReportes.Location = new System.Drawing.Point(0, 33);
             this.flpReportes.Margin = new System.Windows.Forms.Padding(4);
             this.flpReportes.Name = "flpReportes";
@@ -474,6 +476,30 @@
             this.tagsExtender1.SetTagFontSize(this.itemListaReporte2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.itemListaReporte2, System.Drawing.FontStyle.Regular);
             this.itemListaReporte2.TextoPrincipal = "Texto Principal";
+            // 
+            // itemListaReporte4
+            // 
+            this.itemListaReporte4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte4.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemListaReporte4.ColorPanel = System.Drawing.Color.White;
+            this.itemListaReporte4.FechaGenerado = "24/05/2020";
+            this.itemListaReporte4.Location = new System.Drawing.Point(5, 638);
+            this.itemListaReporte4.Margin = new System.Windows.Forms.Padding(5);
+            this.itemListaReporte4.MontoEgresos = "10.00";
+            this.itemListaReporte4.MontoIngresos = "1,000,000.00";
+            this.itemListaReporte4.MontoTotal = "100,000.00";
+            this.itemListaReporte4.Name = "itemListaReporte4";
+            this.itemListaReporte4.QuienGenero = "Percy Jackson";
+            this.itemListaReporte4.Sede = "Sede";
+            this.itemListaReporte4.Size = new System.Drawing.Size(723, 201);
+            this.itemListaReporte4.TabIndex = 45;
+            this.tagsExtender1.SetTag2(this.itemListaReporte4, null);
+            this.tagsExtender1.SetTag3(this.itemListaReporte4, null);
+            this.tagsExtender1.SetTagFontName(this.itemListaReporte4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemListaReporte4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte4, System.Drawing.FontStyle.Regular);
+            this.itemListaReporte4.TextoPrincipal = "Texto Principal";
             // 
             // roundedPanel4
             // 
@@ -841,5 +867,6 @@
         private System.Windows.Forms.Button btnAZ;
         private itemListaReporte itemListaReporte3;
         private itemListaReporte itemListaReporte2;
+        private itemListaReporte itemListaReporte4;
     }
 }

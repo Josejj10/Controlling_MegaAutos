@@ -13,21 +13,7 @@ using LP2MegaAutos.Informacion.AreasTrabajo;
 namespace LP2MegaAutos
 {
     public partial class pantallaAreaTrabajo : Pantalla
-    {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaAreaTrabajo _instancia;
-        public static pantallaAreaTrabajo Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaAreaTrabajo();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-        
+    {        
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
@@ -35,6 +21,7 @@ namespace LP2MegaAutos
             il_AreaTrabajo2.EditarClick += btnEditarClick;
             il_AreaTrabajo3.EditarClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
+            flowLayoutPanel1.AutoScroll = true;
         }
 
         private void btnEditarClick(Object sender, EventArgs e)

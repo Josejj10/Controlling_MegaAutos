@@ -48,5 +48,22 @@ namespace LP2MegaAutos
         {
 
         }
+
+        private bool password_seen = false;
+        private void boton_ver_password_Click(object sender, EventArgs e)
+        {
+            // Cambiar variable 
+            password_seen = !password_seen;
+            if (password_seen)
+            {
+                txt_NuevaCont.PasswordChar = '\0';
+                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
+            }
+            else
+            {
+                txt_NuevaCont.PasswordChar = '•';
+                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            }
+        }
     }
 }

@@ -44,7 +44,7 @@
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpClientes = new System.Windows.Forms.FlowLayoutPanel();
             this.il_Clientes1 = new LP2MegaAutos.itemLista();
             this.il_Clientes3 = new LP2MegaAutos.itemLista();
             this.il_Clientes2 = new LP2MegaAutos.itemLista();
@@ -57,7 +57,7 @@
             this.rndZA.SuspendLayout();
             this.rndAZ.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flpClientes.SuspendLayout();
             this.rpn_ListaDrivers.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -353,7 +353,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.flpClientes);
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaDrivers);
             this.panel3.Location = new System.Drawing.Point(171, 46);
@@ -366,24 +366,24 @@
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
             // 
-            // flowLayoutPanel1
+            // flpClientes
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.flowLayoutPanel1.Controls.Add(this.il_Clientes1);
-            this.flowLayoutPanel1.Controls.Add(this.il_Clientes3);
-            this.flowLayoutPanel1.Controls.Add(this.il_Clientes2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(566, 395);
-            this.flowLayoutPanel1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
+            this.flpClientes.AutoScroll = true;
+            this.flpClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.flpClientes.Controls.Add(this.il_Clientes1);
+            this.flpClientes.Controls.Add(this.il_Clientes3);
+            this.flpClientes.Controls.Add(this.il_Clientes2);
+            this.flpClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpClientes.Location = new System.Drawing.Point(0, 27);
+            this.flpClientes.Name = "flpClientes";
+            this.flpClientes.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.flpClientes.Size = new System.Drawing.Size(566, 395);
+            this.flpClientes.TabIndex = 54;
+            this.tagsExtender1.SetTag2(this.flpClientes, null);
+            this.tagsExtender1.SetTag3(this.flpClientes, null);
+            this.tagsExtender1.SetTagFontName(this.flpClientes, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpClientes, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpClientes, System.Drawing.FontStyle.Regular);
             // 
             // il_Clientes1
             // 
@@ -549,7 +549,7 @@
             this.rndZA.ResumeLayout(false);
             this.rndAZ.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flpClientes.ResumeLayout(false);
             this.rpn_ListaDrivers.ResumeLayout(false);
             this.rpn_ListaDrivers.PerformLayout();
             this.ResumeLayout(false);
@@ -572,7 +572,7 @@
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpClientes;
         private itemLista il_Clientes1;
         private itemLista il_Clientes3;
         private itemLista il_Clientes2;

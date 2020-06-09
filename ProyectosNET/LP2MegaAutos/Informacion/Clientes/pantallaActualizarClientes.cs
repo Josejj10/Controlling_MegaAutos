@@ -139,6 +139,10 @@ namespace LP2MegaAutos
         {
 
         }
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            txt_Buscar.Text = string.Empty;
+        }
 
     }
 }

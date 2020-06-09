@@ -36,6 +36,8 @@ namespace LP2MegaAutos
             this.title_bar = new System.Windows.Forms.Panel();
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.reloj_dark = new System.Windows.Forms.Timer(this.components);
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlBackBackground = new System.Windows.Forms.Panel();
@@ -48,8 +50,6 @@ namespace LP2MegaAutos
             this.rpBtnMenuUltimoReporte = new LP2MegaAutos.RoundedPanel();
             this.btnMenuUltimoReporte = new System.Windows.Forms.Button();
             this.panelMenu = new MetroFramework.Controls.MetroPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.rpBtnMenuReportes = new LP2MegaAutos.RoundedPanel();
@@ -152,6 +152,38 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
             this.boton_cerrar.UseVisualStyleBackColor = false;
             this.boton_cerrar.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(46, 3);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 19);
+            this.button3.TabIndex = 40;
+            this.tags.SetTag2(this.button3, null);
+            this.tags.SetTag3(this.button3, null);
+            this.tags.SetTagFontName(this.button3, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.button3, 10F);
+            this.tags.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnAdelante_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(4, 3);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 19);
+            this.button2.TabIndex = 39;
+            this.tags.SetTag2(this.button2, null);
+            this.tags.SetTag3(this.button2, null);
+            this.tags.SetTagFontName(this.button2, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.button2, 10F);
+            this.tags.SetTagFontStyle(this.button2, System.Drawing.FontStyle.Regular);
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // reloj_dark
             // 
@@ -391,38 +423,6 @@ namespace LP2MegaAutos
             this.panelMenu.VerticalScrollbarBarColor = true;
             this.panelMenu.VerticalScrollbarHighlightOnWheel = false;
             this.panelMenu.VerticalScrollbarSize = 10;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(46, 3);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 19);
-            this.button3.TabIndex = 40;
-            this.tags.SetTag2(this.button3, null);
-            this.tags.SetTag3(this.button3, null);
-            this.tags.SetTagFontName(this.button3, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.button3, 10F);
-            this.tags.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btnAdelante_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(4, 3);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(38, 19);
-            this.button2.TabIndex = 39;
-            this.tags.SetTag2(this.button2, null);
-            this.tags.SetTag3(this.button2, null);
-            this.tags.SetTagFontName(this.button2, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.button2, 10F);
-            this.tags.SetTagFontStyle(this.button2, System.Drawing.FontStyle.Regular);
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // roundedPanel1
             // 

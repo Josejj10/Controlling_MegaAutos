@@ -107,6 +107,12 @@
     <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.Designer.cs">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informacion\Vehiculos\frmAgregarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion\Vehiculos\frmAgregarVehiculo.Designer.cs">
+      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmFiltrarReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -668,8 +674,6 @@
     <None Include="Resources\Menu\Logout.png" />
     <None Include="Resources\Menu\Reloj.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Informacion\Vehiculos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

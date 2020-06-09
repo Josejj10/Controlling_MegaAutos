@@ -38,16 +38,14 @@
             this.rnd_todos = new LP2MegaAutos.RoundedPanel();
             this.btn_todos = new System.Windows.Forms.Button();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.itemListaReporte3 = new LP2MegaAutos.itemListaReporte();
             this.itemListaReporte1 = new LP2MegaAutos.itemListaReporte();
-            this.itemListaReporte2 = new LP2MegaAutos.itemListaReporte();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlBuscar = new System.Windows.Forms.Panel();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.cTxt_MasFiltros = new LP2MegaAutos.CustomControls.ClickableText();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpReportes = new System.Windows.Forms.FlowLayoutPanel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaReportes = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaReportes = new System.Windows.Forms.Label();
@@ -59,13 +57,15 @@
             this.btnZA = new System.Windows.Forms.Button();
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
+            this.itemListaReporte2 = new LP2MegaAutos.itemListaReporte();
+            this.itemListaReporte3 = new LP2MegaAutos.itemListaReporte();
             this.rnd_cliente.SuspendLayout();
             this.rnd_AreaTrabajo.SuspendLayout();
             this.rnd_vehiculo.SuspendLayout();
             this.rnd_todos.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flpReportes.SuspendLayout();
             this.rpn_ListaReportes.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -268,29 +268,6 @@
             this.btn_todos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_todos_MouseDown);
             this.btn_todos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_todos_MouseUp);
             // 
-            // itemListaReporte3
-            // 
-            this.itemListaReporte3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemListaReporte3.ColorPanel = System.Drawing.Color.White;
-            this.itemListaReporte3.FechaGenerado = "24/05/2020";
-            this.itemListaReporte3.Location = new System.Drawing.Point(3, 341);
-            this.itemListaReporte3.MontoEgresos = "10.00";
-            this.itemListaReporte3.MontoIngresos = "1,000,000.00";
-            this.itemListaReporte3.MontoTotal = "100,000.00";
-            this.itemListaReporte3.Name = "itemListaReporte3";
-            this.itemListaReporte3.QuienGenero = "Percy Jackson";
-            this.itemListaReporte3.Sede = "Sede";
-            this.itemListaReporte3.Size = new System.Drawing.Size(542, 163);
-            this.itemListaReporte3.TabIndex = 44;
-            this.tagsExtender1.SetTag2(this.itemListaReporte3, null);
-            this.tagsExtender1.SetTag3(this.itemListaReporte3, null);
-            this.tagsExtender1.SetTagFontName(this.itemListaReporte3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemListaReporte3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte3, System.Drawing.FontStyle.Regular);
-            this.itemListaReporte3.TextoPrincipal = "Texto Principal";
-            // 
             // itemListaReporte1
             // 
             this.itemListaReporte1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
@@ -298,7 +275,7 @@
             this.itemListaReporte1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.itemListaReporte1.ColorPanel = System.Drawing.Color.White;
             this.itemListaReporte1.FechaGenerado = "24/05/2020";
-            this.itemListaReporte1.Location = new System.Drawing.Point(3, 3);
+            this.itemListaReporte1.Location = new System.Drawing.Point(3, 172);
             this.itemListaReporte1.MontoEgresos = "10.00";
             this.itemListaReporte1.MontoIngresos = "1,000,000.00";
             this.itemListaReporte1.MontoTotal = "100,000.00";
@@ -313,29 +290,6 @@
             this.tagsExtender1.SetTagFontSize(this.itemListaReporte1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.itemListaReporte1, System.Drawing.FontStyle.Regular);
             this.itemListaReporte1.TextoPrincipal = "Texto Principal";
-            // 
-            // itemListaReporte2
-            // 
-            this.itemListaReporte2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemListaReporte2.ColorPanel = System.Drawing.Color.White;
-            this.itemListaReporte2.FechaGenerado = "24/05/2020";
-            this.itemListaReporte2.Location = new System.Drawing.Point(3, 172);
-            this.itemListaReporte2.MontoEgresos = "10.00";
-            this.itemListaReporte2.MontoIngresos = "1,000,000.00";
-            this.itemListaReporte2.MontoTotal = "100,000.00";
-            this.itemListaReporte2.Name = "itemListaReporte2";
-            this.itemListaReporte2.QuienGenero = "Percy Jackson";
-            this.itemListaReporte2.Sede = "Sede";
-            this.itemListaReporte2.Size = new System.Drawing.Size(542, 163);
-            this.itemListaReporte2.TabIndex = 43;
-            this.tagsExtender1.SetTag2(this.itemListaReporte2, null);
-            this.tagsExtender1.SetTag3(this.itemListaReporte2, null);
-            this.tagsExtender1.SetTagFontName(this.itemListaReporte2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemListaReporte2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte2, System.Drawing.FontStyle.Regular);
-            this.itemListaReporte2.TextoPrincipal = "Texto Principal";
             // 
             // panel2
             // 
@@ -426,7 +380,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.flpReportes);
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaReportes);
             this.panel3.Location = new System.Drawing.Point(171, 89);
@@ -439,23 +393,23 @@
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
             // 
-            // flowLayoutPanel1
+            // flpReportes
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.flowLayoutPanel1.Controls.Add(this.itemListaReporte1);
-            this.flowLayoutPanel1.Controls.Add(this.itemListaReporte2);
-            this.flowLayoutPanel1.Controls.Add(this.itemListaReporte3);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(566, 352);
-            this.flowLayoutPanel1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
+            this.flpReportes.AutoScroll = true;
+            this.flpReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.flpReportes.Controls.Add(this.itemListaReporte3);
+            this.flpReportes.Controls.Add(this.itemListaReporte1);
+            this.flpReportes.Controls.Add(this.itemListaReporte2);
+            this.flpReportes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpReportes.Location = new System.Drawing.Point(0, 27);
+            this.flpReportes.Name = "flpReportes";
+            this.flpReportes.Size = new System.Drawing.Size(566, 352);
+            this.flpReportes.TabIndex = 54;
+            this.tagsExtender1.SetTag2(this.flpReportes, null);
+            this.tagsExtender1.SetTag3(this.flpReportes, null);
+            this.tagsExtender1.SetTagFontName(this.flpReportes, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpReportes, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpReportes, System.Drawing.FontStyle.Regular);
             // 
             // roundedPanel4
             // 
@@ -736,6 +690,52 @@
             this.btnAZ.UseVisualStyleBackColor = false;
             this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
+            // itemListaReporte2
+            // 
+            this.itemListaReporte2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemListaReporte2.ColorPanel = System.Drawing.Color.White;
+            this.itemListaReporte2.FechaGenerado = "24/05/2020";
+            this.itemListaReporte2.Location = new System.Drawing.Point(3, 341);
+            this.itemListaReporte2.MontoEgresos = "10.00";
+            this.itemListaReporte2.MontoIngresos = "1,000,000.00";
+            this.itemListaReporte2.MontoTotal = "100,000.00";
+            this.itemListaReporte2.Name = "itemListaReporte2";
+            this.itemListaReporte2.QuienGenero = "Percy Jackson";
+            this.itemListaReporte2.Sede = "Sede";
+            this.itemListaReporte2.Size = new System.Drawing.Size(542, 163);
+            this.itemListaReporte2.TabIndex = 43;
+            this.tagsExtender1.SetTag2(this.itemListaReporte2, null);
+            this.tagsExtender1.SetTag3(this.itemListaReporte2, null);
+            this.tagsExtender1.SetTagFontName(this.itemListaReporte2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemListaReporte2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte2, System.Drawing.FontStyle.Regular);
+            this.itemListaReporte2.TextoPrincipal = "Texto Principal";
+            // 
+            // itemListaReporte3
+            // 
+            this.itemListaReporte3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemListaReporte3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemListaReporte3.ColorPanel = System.Drawing.Color.White;
+            this.itemListaReporte3.FechaGenerado = "24/05/2020";
+            this.itemListaReporte3.Location = new System.Drawing.Point(3, 3);
+            this.itemListaReporte3.MontoEgresos = "10.00";
+            this.itemListaReporte3.MontoIngresos = "1,000,000.00";
+            this.itemListaReporte3.MontoTotal = "100,000.00";
+            this.itemListaReporte3.Name = "itemListaReporte3";
+            this.itemListaReporte3.QuienGenero = "Percy Jackson";
+            this.itemListaReporte3.Sede = "Sede";
+            this.itemListaReporte3.Size = new System.Drawing.Size(542, 163);
+            this.itemListaReporte3.TabIndex = 44;
+            this.tagsExtender1.SetTag2(this.itemListaReporte3, null);
+            this.tagsExtender1.SetTag3(this.itemListaReporte3, null);
+            this.tagsExtender1.SetTagFontName(this.itemListaReporte3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemListaReporte3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte3, System.Drawing.FontStyle.Regular);
+            this.itemListaReporte3.TextoPrincipal = "Texto Principal";
+            // 
             // pantallaListaReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,7 +767,7 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flpReportes.ResumeLayout(false);
             this.rpn_ListaReportes.ResumeLayout(false);
             this.rpn_ListaReportes.PerformLayout();
             this.rndReciente.ResumeLayout(false);
@@ -788,16 +788,14 @@
         private RoundedPanel rnd_todos;
         private System.Windows.Forms.Button btn_todos;
         private TagsExtender tagsExtender1;
-        private itemListaReporte itemListaReporte3;
         private itemListaReporte itemListaReporte1;
-        private itemListaReporte itemListaReporte2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlBuscar;
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Button btn_Agregar;
         private CustomControls.ClickableText cTxt_MasFiltros;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpReportes;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaReportes;
         private System.Windows.Forms.Label lbl_ListaReportes;
@@ -809,5 +807,7 @@
         private System.Windows.Forms.Button btnZA;
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
+        private itemListaReporte itemListaReporte3;
+        private itemListaReporte itemListaReporte2;
     }
 }

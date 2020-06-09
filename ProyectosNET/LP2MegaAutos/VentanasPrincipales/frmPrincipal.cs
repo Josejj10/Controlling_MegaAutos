@@ -34,7 +34,7 @@ namespace LP2MegaAutos
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
             }
             _usuario = usuario;
-            //_usuario.Permisos.Add(EPermisos.All);
+            _usuario.Permisos.Add(EPermisos.All);
             //_usuario.Permisos.Add(EPermisos.ActualizarBD);
             _usuario.Permisos.Add(EPermisos.Empresa);
             _usuario.Permisos.Add(EPermisos.Drivers);
@@ -458,7 +458,7 @@ namespace LP2MegaAutos
         private void btnMenuUsuario_Click(object sender, EventArgs e)
         {
             // TODO poner pantalla usuario
-            this.contenedorPantalla1.PantallaActual = new pantallaActualizarServicios();
+            this.contenedorPantalla1.PantallaActual = new pantallaAjustesUsuarioGerente();
 
             // Cambiar los botones y rPanel excepto el enviado
             BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)button1.Parent, panelMenu);

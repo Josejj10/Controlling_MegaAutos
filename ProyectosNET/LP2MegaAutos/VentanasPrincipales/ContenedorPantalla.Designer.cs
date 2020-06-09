@@ -32,10 +32,11 @@
             // 
             // ContenedorPantalla
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ContenedorPantalla";
-            this.Size = new System.Drawing.Size(751, 522);
+            this.Size = new System.Drawing.Size(1001, 642);
             this.ResumeLayout(false);
 
         }

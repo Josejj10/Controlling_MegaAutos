@@ -56,6 +56,7 @@
             this.Controls.Add(this.btnItem);
             this.Name = "itemMenuStrip";
             this.Size = new System.Drawing.Size(52, 52);
+            this.SizeChanged += new System.EventHandler(this.itemMenuStrip_SizeChanged);
             this.ResumeLayout(false);
 
         }

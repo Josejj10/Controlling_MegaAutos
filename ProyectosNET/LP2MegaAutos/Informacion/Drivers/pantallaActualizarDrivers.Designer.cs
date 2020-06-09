@@ -346,6 +346,7 @@
             this.btnAZ.Text = "A - Z";
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btn_AZ_Click);
             // 
             // panel3
             // 
@@ -387,7 +388,8 @@
             this.il_Drivers1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Drivers1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Drivers1.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers1.Location = new System.Drawing.Point(34, 3);
+            this.il_Drivers1.Location = new System.Drawing.Point(35, 4);
+            this.il_Drivers1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.il_Drivers1.Name = "il_Drivers1";
             this.il_Drivers1.Size = new System.Drawing.Size(497, 104);
             this.il_Drivers1.TabIndex = 54;
@@ -396,8 +398,8 @@
             this.tagsExtender1.SetTagFontName(this.il_Drivers1, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.il_Drivers1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.il_Drivers1, System.Drawing.FontStyle.Regular);
-            this.il_Drivers1.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers1.TextoFecha = "dd - mm - aaaa";
+            this.il_Drivers1.TextoAgregadoPor = "juanito";
+            this.il_Drivers1.TextoFecha = "24/05/2019";
             this.il_Drivers1.TextoPrincipal = "1/5";
             this.il_Drivers1.Textosecundario = "Mecánica";
             this.il_Drivers1.TextoTercero = "Luz";
@@ -407,7 +409,8 @@
             this.il_Drivers3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Drivers3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Drivers3.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers3.Location = new System.Drawing.Point(34, 113);
+            this.il_Drivers3.Location = new System.Drawing.Point(35, 116);
+            this.il_Drivers3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.il_Drivers3.Name = "il_Drivers3";
             this.il_Drivers3.Size = new System.Drawing.Size(497, 104);
             this.il_Drivers3.TabIndex = 56;
@@ -427,7 +430,8 @@
             this.il_Drivers2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Drivers2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Drivers2.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers2.Location = new System.Drawing.Point(34, 223);
+            this.il_Drivers2.Location = new System.Drawing.Point(35, 228);
+            this.il_Drivers2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.il_Drivers2.Name = "il_Drivers2";
             this.il_Drivers2.Size = new System.Drawing.Size(497, 104);
             this.il_Drivers2.TabIndex = 55;
@@ -530,6 +534,7 @@
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlBuscar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "pantallaActualizarDrivers";
             this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);

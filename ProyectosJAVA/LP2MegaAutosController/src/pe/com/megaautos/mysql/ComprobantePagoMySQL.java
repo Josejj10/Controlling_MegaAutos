@@ -45,9 +45,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
             cs.setDouble("_MONTO", comprobantePago.getMonto());
             cs.setString("_TIPO_COMPROBANTE", comprobantePago.getTipoComprobante().toUpperCase());
             cs.setInt("_ID_ORDEN_TRABAJO", comprobantePago.getOrdenTrabajo().getId());
-            java.sql.Date fechaSql = 
-                    new java.sql.Date(comprobantePago.getFecha().getTime());
-            cs.setDate("_FECHA",fechaSql);
+            cs.setDate("_FECHA",new java.sql.Date(comprobantePago.getFecha().getTime()));
             cs.executeUpdate();
             rpta = cs.getInt("_ID_COMPROBANTE");
             con.close();

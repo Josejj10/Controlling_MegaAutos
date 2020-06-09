@@ -410,6 +410,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -611,6 +614,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_NumeroDocumento);
             this.Name = "pantallaAgregarCliente";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);

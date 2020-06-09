@@ -44,7 +44,7 @@
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpDrivers = new System.Windows.Forms.FlowLayoutPanel();
             this.il_Drivers1 = new LP2MegaAutos.itemLista();
             this.il_Drivers3 = new LP2MegaAutos.itemLista();
             this.il_Drivers2 = new LP2MegaAutos.itemLista();
@@ -57,7 +57,7 @@
             this.rndZA.SuspendLayout();
             this.rndAZ.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flpDrivers.SuspendLayout();
             this.rpn_ListaDrivers.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -353,7 +353,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.flpDrivers);
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaDrivers);
             this.panel3.Location = new System.Drawing.Point(171, 46);
@@ -366,24 +366,24 @@
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
             // 
-            // flowLayoutPanel1
+            // flpDrivers
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.flowLayoutPanel1.Controls.Add(this.il_Drivers1);
-            this.flowLayoutPanel1.Controls.Add(this.il_Drivers3);
-            this.flowLayoutPanel1.Controls.Add(this.il_Drivers2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(566, 395);
-            this.flowLayoutPanel1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
+            this.flpDrivers.AutoScroll = true;
+            this.flpDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.flpDrivers.Controls.Add(this.il_Drivers1);
+            this.flpDrivers.Controls.Add(this.il_Drivers3);
+            this.flpDrivers.Controls.Add(this.il_Drivers2);
+            this.flpDrivers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpDrivers.Location = new System.Drawing.Point(0, 27);
+            this.flpDrivers.Name = "flpDrivers";
+            this.flpDrivers.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.flpDrivers.Size = new System.Drawing.Size(566, 395);
+            this.flpDrivers.TabIndex = 54;
+            this.tagsExtender1.SetTag2(this.flpDrivers, null);
+            this.tagsExtender1.SetTag3(this.flpDrivers, null);
+            this.tagsExtender1.SetTagFontName(this.flpDrivers, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpDrivers, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpDrivers, System.Drawing.FontStyle.Regular);
             // 
             // il_Drivers1
             // 
@@ -392,7 +392,7 @@
             this.il_Drivers1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Drivers1.ColorPanel = System.Drawing.Color.White;
             this.il_Drivers1.Location = new System.Drawing.Point(35, 4);
-            this.il_Drivers1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.il_Drivers1.Margin = new System.Windows.Forms.Padding(4);
             this.il_Drivers1.Name = "il_Drivers1";
             this.il_Drivers1.Size = new System.Drawing.Size(497, 104);
             this.il_Drivers1.TabIndex = 54;
@@ -413,7 +413,7 @@
             this.il_Drivers3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Drivers3.ColorPanel = System.Drawing.Color.White;
             this.il_Drivers3.Location = new System.Drawing.Point(35, 116);
-            this.il_Drivers3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.il_Drivers3.Margin = new System.Windows.Forms.Padding(4);
             this.il_Drivers3.Name = "il_Drivers3";
             this.il_Drivers3.Size = new System.Drawing.Size(497, 104);
             this.il_Drivers3.TabIndex = 56;
@@ -434,7 +434,7 @@
             this.il_Drivers2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Drivers2.ColorPanel = System.Drawing.Color.White;
             this.il_Drivers2.Location = new System.Drawing.Point(35, 228);
-            this.il_Drivers2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.il_Drivers2.Margin = new System.Windows.Forms.Padding(4);
             this.il_Drivers2.Name = "il_Drivers2";
             this.il_Drivers2.Size = new System.Drawing.Size(497, 104);
             this.il_Drivers2.TabIndex = 55;
@@ -537,7 +537,7 @@
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlBuscar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaActualizarDrivers";
             this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);
@@ -553,7 +553,7 @@
             this.rndZA.ResumeLayout(false);
             this.rndAZ.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flpDrivers.ResumeLayout(false);
             this.rpn_ListaDrivers.ResumeLayout(false);
             this.rpn_ListaDrivers.PerformLayout();
             this.ResumeLayout(false);
@@ -576,7 +576,7 @@
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpDrivers;
         private itemLista il_Drivers1;
         private itemLista il_Drivers3;
         private itemLista il_Drivers2;

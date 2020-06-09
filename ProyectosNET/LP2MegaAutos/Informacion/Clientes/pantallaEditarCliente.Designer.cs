@@ -40,7 +40,6 @@
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.txt_TIpoDocumento = new System.Windows.Forms.TextBox();
             this.lbl_TipoDocumento = new System.Windows.Forms.Label();
-            this.txt_EditarCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_NumeroDocumento = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
@@ -56,6 +55,7 @@
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.pnl_Correo.SuspendLayout();
             this.pnl_Telefono.SuspendLayout();
             this.pnl_TipoDocumento.SuspendLayout();
@@ -293,22 +293,6 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_TipoDocumento, System.Drawing.FontStyle.Regular);
             this.lbl_TipoDocumento.Text = "Tipo de Documento";
             // 
-            // txt_EditarCliente
-            // 
-            this.txt_EditarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_EditarCliente.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_EditarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.txt_EditarCliente.Location = new System.Drawing.Point(27, 42);
-            this.txt_EditarCliente.Name = "txt_EditarCliente";
-            this.txt_EditarCliente.Size = new System.Drawing.Size(441, 35);
-            this.txt_EditarCliente.TabIndex = 44;
-            this.tagsExtender1.SetTag2(this.txt_EditarCliente, null);
-            this.tagsExtender1.SetTag3(this.txt_EditarCliente, null);
-            this.tagsExtender1.SetTagFontName(this.txt_EditarCliente, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_EditarCliente, 21.75F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_EditarCliente, System.Drawing.FontStyle.Bold);
-            this.txt_EditarCliente.Text = "Melvin Javier";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
@@ -511,6 +495,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -611,11 +598,28 @@
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.lblNombre.Location = new System.Drawing.Point(27, 42);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(182, 35);
+            this.lblNombre.TabIndex = 68;
+            this.tagsExtender1.SetTag2(this.lblNombre, null);
+            this.tagsExtender1.SetTag3(this.lblNombre, null);
+            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblNombre, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.lblNombre, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Text = "Melvin Javier";
+            // 
             // pantallaEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.rnd_guardar);
@@ -623,10 +627,10 @@
             this.Controls.Add(this.pnl_Correo);
             this.Controls.Add(this.pnl_Telefono);
             this.Controls.Add(this.pnl_TipoDocumento);
-            this.Controls.Add(this.txt_EditarCliente);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_NumeroDocumento);
             this.Name = "pantallaEditarCliente";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
@@ -663,7 +667,6 @@
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.TextBox txt_TIpoDocumento;
         private System.Windows.Forms.Label lbl_TipoDocumento;
-        private System.Windows.Forms.TextBox txt_EditarCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_NumeroDocumento;
         private RoundedPanel rnd_color_1;
@@ -679,5 +682,6 @@
         private System.Windows.Forms.Button boton_minimizar;
         private System.Windows.Forms.Button boton_cerrar;
         private RoundedPanel rpTopMain;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

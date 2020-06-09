@@ -31,8 +31,6 @@
             this.rpn_ListaPermisosUsuario = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaPermisosUsuario = new System.Windows.Forms.Label();
             this.btn_AgregarPermiso = new System.Windows.Forms.Button();
-            this.txt_Telefono = new System.Windows.Forms.TextBox();
-            this.txt_EditarUsuario = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.flpPermisos = new System.Windows.Forms.FlowLayoutPanel();
@@ -59,6 +57,8 @@
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.txt_NuevaCont = new System.Windows.Forms.TextBox();
             this.lbl_NuevaCont = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
@@ -136,40 +136,6 @@
             this.btn_AgregarPermiso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_AgregarPermiso.UseVisualStyleBackColor = false;
             // 
-            // txt_Telefono
-            // 
-            this.txt_Telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Telefono.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_Telefono.Location = new System.Drawing.Point(300, 52);
-            this.txt_Telefono.Name = "txt_Telefono";
-            this.txt_Telefono.Size = new System.Drawing.Size(284, 23);
-            this.txt_Telefono.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_Telefono, null);
-            this.tagsExtender1.SetTag3(this.txt_Telefono, null);
-            this.tagsExtender1.SetTagFontName(this.txt_Telefono, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_Telefono, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_Telefono, System.Drawing.FontStyle.Regular);
-            this.txt_Telefono.Text = "Analista";
-            // 
-            // txt_EditarUsuario
-            // 
-            this.txt_EditarUsuario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txt_EditarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_EditarUsuario.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_EditarUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.txt_EditarUsuario.Location = new System.Drawing.Point(27, 42);
-            this.txt_EditarUsuario.Name = "txt_EditarUsuario";
-            this.txt_EditarUsuario.Size = new System.Drawing.Size(441, 35);
-            this.txt_EditarUsuario.TabIndex = 61;
-            this.tagsExtender1.SetTag2(this.txt_EditarUsuario, null);
-            this.tagsExtender1.SetTag3(this.txt_EditarUsuario, null);
-            this.tagsExtender1.SetTagFontName(this.txt_EditarUsuario, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_EditarUsuario, 21.75F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_EditarUsuario, System.Drawing.FontStyle.Bold);
-            this.txt_EditarUsuario.Text = "Juan Villegaz";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
@@ -213,6 +179,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -626,7 +595,7 @@
             this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(261, 12);
+            this.boton_ver_password.Location = new System.Drawing.Point(264, 16);
             this.boton_ver_password.Name = "boton_ver_password";
             this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
             this.boton_ver_password.TabIndex = 3;
@@ -638,6 +607,7 @@
             this.tagsExtender1.SetTagFontSize(this.boton_ver_password, 10F);
             this.tagsExtender1.SetTagFontStyle(this.boton_ver_password, System.Drawing.FontStyle.Regular);
             this.boton_ver_password.UseVisualStyleBackColor = false;
+            this.boton_ver_password.Click += new System.EventHandler(this.boton_ver_password_Click);
             // 
             // roundedPanel2
             // 
@@ -700,26 +670,59 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_NuevaCont, System.Drawing.FontStyle.Bold);
             this.lbl_NuevaCont.Text = "Contraseña";
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.lblNombre.Location = new System.Drawing.Point(27, 42);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(179, 35);
+            this.lblNombre.TabIndex = 75;
+            this.tagsExtender1.SetTag2(this.lblNombre, null);
+            this.tagsExtender1.SetTag3(this.lblNombre, null);
+            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblNombre, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.lblNombre, System.Drawing.FontStyle.Bold);
+            this.lblNombre.Text = "Juan Villegaz";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.label1.Location = new System.Drawing.Point(28, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 23);
+            this.label1.TabIndex = 76;
+            this.tagsExtender1.SetTag2(this.label1, null);
+            this.tagsExtender1.SetTag3(this.label1, null);
+            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.label1, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Bold);
+            this.label1.Text = "Analista";
+            // 
             // pantallaEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.lbl_Contraseña);
             this.Controls.Add(this.rpn_Reportes);
             this.Controls.Add(this.rnd_cancelar);
-            this.Controls.Add(this.txt_Telefono);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.flpPermisos);
             this.Controls.Add(this.rpn_ListaPermisosUsuario);
-            this.Controls.Add(this.txt_EditarUsuario);
             this.Controls.Add(this.panel1);
             this.Name = "pantallaEditarUsuario";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
@@ -747,8 +750,6 @@
         private RoundedPanel rpn_ListaPermisosUsuario;
         private System.Windows.Forms.Label lbl_ListaPermisosUsuario;
         private System.Windows.Forms.Button btn_AgregarPermiso;
-        private System.Windows.Forms.TextBox txt_Telefono;
-        private System.Windows.Forms.TextBox txt_EditarUsuario;
         private System.Windows.Forms.Panel panel1;
         private TagsExtender tagsExtender1;
         private System.Windows.Forms.FlowLayoutPanel flpPermisos;
@@ -775,5 +776,7 @@
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.TextBox txt_NuevaCont;
         private System.Windows.Forms.Label lbl_NuevaCont;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label label1;
     }
 }

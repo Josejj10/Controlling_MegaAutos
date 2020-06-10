@@ -43,6 +43,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
+            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
             this.pnl_placaVehiculo.SuspendLayout();
@@ -60,6 +61,11 @@
             this.lbl_AgregarVehiculo.Name = "lbl_AgregarVehiculo";
             this.lbl_AgregarVehiculo.Size = new System.Drawing.Size(232, 35);
             this.lbl_AgregarVehiculo.TabIndex = 75;
+            this.tagsExtender1.SetTag2(this.lbl_AgregarVehiculo, null);
+            this.tagsExtender1.SetTag3(this.lbl_AgregarVehiculo, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_AgregarVehiculo, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_AgregarVehiculo, 22F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_AgregarVehiculo, System.Drawing.FontStyle.Bold);
             this.lbl_AgregarVehiculo.Text = "Agregar Vehículo";
             this.lbl_AgregarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -80,6 +86,11 @@
             this.rnd_cancelar.PorcLuzColorBorde = 0;
             this.rnd_cancelar.Size = new System.Drawing.Size(180, 35);
             this.rnd_cancelar.TabIndex = 74;
+            this.tagsExtender1.SetTag2(this.rnd_cancelar, null);
+            this.tagsExtender1.SetTag3(this.rnd_cancelar, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_cancelar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_cancelar, System.Drawing.FontStyle.Regular);
             this.rnd_cancelar.XBorde = 0;
             this.rnd_cancelar.XPanel = 0;
             this.rnd_cancelar.YBorde = 0;
@@ -97,6 +108,11 @@
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(178, 33);
             this.btn_cancelar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_cancelar, null);
+            this.tagsExtender1.SetTag3(this.btn_cancelar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -118,6 +134,11 @@
             this.rnd_guardar.PorcLuzColorBorde = 0;
             this.rnd_guardar.Size = new System.Drawing.Size(180, 35);
             this.rnd_guardar.TabIndex = 73;
+            this.tagsExtender1.SetTag2(this.rnd_guardar, null);
+            this.tagsExtender1.SetTag3(this.rnd_guardar, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_guardar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_guardar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_guardar, System.Drawing.FontStyle.Regular);
             this.rnd_guardar.XBorde = 0;
             this.rnd_guardar.XPanel = 0;
             this.rnd_guardar.YBorde = 0;
@@ -135,6 +156,11 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(178, 33);
             this.btn_guardar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_guardar, null);
+            this.tagsExtender1.SetTag3(this.btn_guardar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
@@ -146,6 +172,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(589, 2);
             this.panel1.TabIndex = 72;
+            this.tagsExtender1.SetTag2(this.panel1, null);
+            this.tagsExtender1.SetTag3(this.panel1, null);
+            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
             // pnl_placaVehiculo
             // 
@@ -157,6 +188,11 @@
             this.pnl_placaVehiculo.Name = "pnl_placaVehiculo";
             this.pnl_placaVehiculo.Size = new System.Drawing.Size(292, 41);
             this.pnl_placaVehiculo.TabIndex = 71;
+            this.tagsExtender1.SetTag2(this.pnl_placaVehiculo, null);
+            this.tagsExtender1.SetTag3(this.pnl_placaVehiculo, null);
+            this.tagsExtender1.SetTagFontName(this.pnl_placaVehiculo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnl_placaVehiculo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnl_placaVehiculo, System.Drawing.FontStyle.Regular);
             // 
             // rnd_color_1
             // 
@@ -174,6 +210,11 @@
             this.rnd_color_1.PorcLuzColorBorde = 0;
             this.rnd_color_1.Size = new System.Drawing.Size(3, 36);
             this.rnd_color_1.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rnd_color_1, null);
+            this.tagsExtender1.SetTag3(this.rnd_color_1, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_color_1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_color_1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_color_1, System.Drawing.FontStyle.Regular);
             this.rnd_color_1.XBorde = 0;
             this.rnd_color_1.XPanel = 0;
             this.rnd_color_1.YBorde = 0;
@@ -189,6 +230,11 @@
             this.txt_placaVehiculo.Name = "txt_placaVehiculo";
             this.txt_placaVehiculo.Size = new System.Drawing.Size(284, 23);
             this.txt_placaVehiculo.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_placaVehiculo, null);
+            this.tagsExtender1.SetTag3(this.txt_placaVehiculo, null);
+            this.tagsExtender1.SetTagFontName(this.txt_placaVehiculo, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_placaVehiculo, 14F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_placaVehiculo, System.Drawing.FontStyle.Bold);
             // 
             // lbl_placaVehiculo
             // 
@@ -201,6 +247,11 @@
             this.lbl_placaVehiculo.Name = "lbl_placaVehiculo";
             this.lbl_placaVehiculo.Size = new System.Drawing.Size(90, 16);
             this.lbl_placaVehiculo.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_placaVehiculo, null);
+            this.tagsExtender1.SetTag3(this.lbl_placaVehiculo, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_placaVehiculo, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_placaVehiculo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_placaVehiculo, System.Drawing.FontStyle.Bold);
             this.lbl_placaVehiculo.Text = "Placa Vehículo";
             // 
             // title_bar_2
@@ -212,6 +263,11 @@
             this.title_bar_2.Size = new System.Drawing.Size(595, 8);
             this.title_bar_2.TabIndex = 69;
             this.title_bar_2.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.title_bar_2, null);
+            this.tagsExtender1.SetTag3(this.title_bar_2, null);
+            this.tagsExtender1.SetTagFontName(this.title_bar_2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.title_bar_2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.title_bar_2, System.Drawing.FontStyle.Regular);
             // 
             // title_bar
             // 
@@ -225,7 +281,12 @@
             this.title_bar.Size = new System.Drawing.Size(595, 24);
             this.title_bar.TabIndex = 70;
             this.title_bar.Tag = "titlebar";
-            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
+            this.tagsExtender1.SetTag2(this.title_bar, null);
+            this.tagsExtender1.SetTag3(this.title_bar, null);
+            this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
             this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
             this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
@@ -247,6 +308,11 @@
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
             this.button3.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.button3, null);
+            this.tagsExtender1.SetTag3(this.button3, null);
+            this.tagsExtender1.SetTagFontName(this.button3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.button3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
@@ -264,6 +330,11 @@
             this.boton_minimizar.TabIndex = 0;
             this.boton_minimizar.TabStop = false;
             this.boton_minimizar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_minimizar, null);
+            this.tagsExtender1.SetTag3(this.boton_minimizar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_minimizar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_minimizar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_minimizar, System.Drawing.FontStyle.Regular);
             this.boton_minimizar.UseVisualStyleBackColor = true;
             // 
             // boton_cerrar
@@ -284,6 +355,11 @@
             this.boton_cerrar.TabIndex = 0;
             this.boton_cerrar.TabStop = false;
             this.boton_cerrar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_cerrar, null);
+            this.tagsExtender1.SetTag3(this.boton_cerrar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_cerrar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_cerrar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
             this.boton_cerrar.UseVisualStyleBackColor = false;
             // 
             // frmAgregarVehiculo
@@ -303,6 +379,11 @@
             this.Name = "frmAgregarVehiculo";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.tagsExtender1.SetTag2(this, null);
+            this.tagsExtender1.SetTag3(this, null);
+            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this, 10F);
+            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.rnd_cancelar.ResumeLayout(false);
             this.rnd_guardar.ResumeLayout(false);
             this.pnl_placaVehiculo.ResumeLayout(false);
@@ -330,5 +411,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button boton_minimizar;
         private System.Windows.Forms.Button boton_cerrar;
+        private TagsExtender tagsExtender1;
     }
 }

@@ -40,6 +40,7 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.btn_eliminar = new System.Windows.Forms.Button();
+            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
@@ -63,6 +64,11 @@
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
             this.button3.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.button3, null);
+            this.tagsExtender1.SetTag3(this.button3, null);
+            this.tagsExtender1.SetTagFontName(this.button3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.button3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
             this.button3.UseVisualStyleBackColor = false;
             // 
             // title_bar
@@ -77,6 +83,11 @@
             this.title_bar.Size = new System.Drawing.Size(421, 24);
             this.title_bar.TabIndex = 61;
             this.title_bar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.title_bar, null);
+            this.tagsExtender1.SetTag3(this.title_bar, null);
+            this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
             // 
             // boton_minimizar
             // 
@@ -92,6 +103,11 @@
             this.boton_minimizar.TabIndex = 0;
             this.boton_minimizar.TabStop = false;
             this.boton_minimizar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_minimizar, null);
+            this.tagsExtender1.SetTag3(this.boton_minimizar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_minimizar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_minimizar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_minimizar, System.Drawing.FontStyle.Regular);
             this.boton_minimizar.UseVisualStyleBackColor = true;
             // 
             // boton_cerrar
@@ -112,6 +128,11 @@
             this.boton_cerrar.TabIndex = 0;
             this.boton_cerrar.TabStop = false;
             this.boton_cerrar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_cerrar, null);
+            this.tagsExtender1.SetTag3(this.boton_cerrar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_cerrar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_cerrar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
             this.boton_cerrar.UseVisualStyleBackColor = false;
             // 
             // title_bar_2
@@ -123,6 +144,11 @@
             this.title_bar_2.Size = new System.Drawing.Size(421, 8);
             this.title_bar_2.TabIndex = 62;
             this.title_bar_2.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.title_bar_2, null);
+            this.tagsExtender1.SetTag3(this.title_bar_2, null);
+            this.tagsExtender1.SetTagFontName(this.title_bar_2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.title_bar_2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.title_bar_2, System.Drawing.FontStyle.Regular);
             // 
             // lbl_Eliminar
             // 
@@ -135,6 +161,11 @@
             this.lbl_Eliminar.Name = "lbl_Eliminar";
             this.lbl_Eliminar.Size = new System.Drawing.Size(119, 35);
             this.lbl_Eliminar.TabIndex = 69;
+            this.tagsExtender1.SetTag2(this.lbl_Eliminar, null);
+            this.tagsExtender1.SetTag3(this.lbl_Eliminar, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_Eliminar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_Eliminar, 22F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_Eliminar, System.Drawing.FontStyle.Bold);
             this.lbl_Eliminar.Text = "Eliminar";
             this.lbl_Eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -145,6 +176,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 2);
             this.panel1.TabIndex = 70;
+            this.tagsExtender1.SetTag2(this.panel1, null);
+            this.tagsExtender1.SetTag3(this.panel1, null);
+            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
             // lbl_MensajeEliminar
             // 
@@ -156,6 +192,11 @@
             this.lbl_MensajeEliminar.Name = "lbl_MensajeEliminar";
             this.lbl_MensajeEliminar.Size = new System.Drawing.Size(334, 78);
             this.lbl_MensajeEliminar.TabIndex = 71;
+            this.tagsExtender1.SetTag2(this.lbl_MensajeEliminar, null);
+            this.tagsExtender1.SetTag3(this.lbl_MensajeEliminar, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_MensajeEliminar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_MensajeEliminar, 2F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_MensajeEliminar, System.Drawing.FontStyle.Regular);
             this.lbl_MensajeEliminar.Text = "¿Está seguro que desea eliminar?";
             this.lbl_MensajeEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -176,6 +217,11 @@
             this.rnd_cancelar.PorcLuzColorBorde = 0;
             this.rnd_cancelar.Size = new System.Drawing.Size(119, 35);
             this.rnd_cancelar.TabIndex = 73;
+            this.tagsExtender1.SetTag2(this.rnd_cancelar, null);
+            this.tagsExtender1.SetTag3(this.rnd_cancelar, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_cancelar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_cancelar, System.Drawing.FontStyle.Regular);
             this.rnd_cancelar.XBorde = 0;
             this.rnd_cancelar.XPanel = 0;
             this.rnd_cancelar.YBorde = 0;
@@ -193,6 +239,11 @@
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(119, 35);
             this.btn_cancelar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_cancelar, null);
+            this.tagsExtender1.SetTag3(this.btn_cancelar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             // 
@@ -213,6 +264,11 @@
             this.roundedPanel1.PorcLuzColorBorde = 0;
             this.roundedPanel1.Size = new System.Drawing.Size(119, 35);
             this.roundedPanel1.TabIndex = 74;
+            this.tagsExtender1.SetTag2(this.roundedPanel1, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
             this.roundedPanel1.XBorde = 0;
             this.roundedPanel1.XPanel = 0;
             this.roundedPanel1.YBorde = 0;
@@ -230,6 +286,11 @@
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(119, 35);
             this.btn_eliminar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_eliminar, null);
+            this.tagsExtender1.SetTag3(this.btn_eliminar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_eliminar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_eliminar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_eliminar, System.Drawing.FontStyle.Bold);
             this.btn_eliminar.Text = "Si, eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = false;
             // 
@@ -246,6 +307,11 @@
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
             this.Name = "pantallaEliminar";
+            this.tagsExtender1.SetTag2(this, null);
+            this.tagsExtender1.SetTag3(this, null);
+            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this, 10F);
+            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.title_bar.ResumeLayout(false);
             this.rnd_cancelar.ResumeLayout(false);
             this.roundedPanel1.ResumeLayout(false);
@@ -268,5 +334,6 @@
         private System.Windows.Forms.Button btn_cancelar;
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.Button btn_eliminar;
+        private TagsExtender tagsExtender1;
     }
 }

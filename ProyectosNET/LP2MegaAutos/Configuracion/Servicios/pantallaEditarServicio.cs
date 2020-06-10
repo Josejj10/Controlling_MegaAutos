@@ -13,11 +13,9 @@ namespace LP2MegaAutos
 {
     public partial class pantallaEditarServicio : MetroForm
     {
-        private string _nombreAntiguo;
         public pantallaEditarServicio()
         {
             InitializeComponent();
-            this._nombreAntiguo = txt_NombreServicio.Text;
         }
 
         private void pantallaEditarServicios_Load(object sender, EventArgs e)
@@ -69,17 +67,6 @@ namespace LP2MegaAutos
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void txt_NombreServicio_Enter(object sender, EventArgs e)
-        {
-            txt_NombreServicio.Text = string.Empty;
-        }
-
-        private void txt_NombreServicio_Leave(object sender, EventArgs e)
-        {
-            if(txt_NombreServicio.Text==string.Empty)
-                txt_NombreServicio.Text = this._nombreAntiguo;
         }
     }
 }

@@ -47,9 +47,10 @@ namespace LP2MegaAutos
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.il_Servicios2 = new LP2MegaAutos.itemLista();
             this.il_Servicios1 = new LP2MegaAutos.itemLista();
             this.il_Servicios3 = new LP2MegaAutos.itemLista();
-            this.il_Servicios2 = new LP2MegaAutos.itemLista();
+            this.itemLista1 = new LP2MegaAutos.itemLista();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@ namespace LP2MegaAutos
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // btn_Agregar
             // 
@@ -358,6 +360,7 @@ namespace LP2MegaAutos
             this.flowLayoutPanel1.Controls.Add(this.il_Servicios2);
             this.flowLayoutPanel1.Controls.Add(this.il_Servicios1);
             this.flowLayoutPanel1.Controls.Add(this.il_Servicios3);
+            this.flowLayoutPanel1.Controls.Add(this.itemLista1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -370,13 +373,35 @@ namespace LP2MegaAutos
             this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
             // 
+            // il_Servicios2
+            // 
+            this.il_Servicios2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Servicios2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.il_Servicios2.ColorPanel = System.Drawing.Color.White;
+            this.il_Servicios2.Location = new System.Drawing.Point(35, 4);
+            this.il_Servicios2.Margin = new System.Windows.Forms.Padding(4);
+            this.il_Servicios2.Name = "il_Servicios2";
+            this.il_Servicios2.Size = new System.Drawing.Size(497, 104);
+            this.il_Servicios2.TabIndex = 55;
+            this.tagsExtender1.SetTag2(this.il_Servicios2, null);
+            this.tagsExtender1.SetTag3(this.il_Servicios2, null);
+            this.tagsExtender1.SetTagFontName(this.il_Servicios2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.il_Servicios2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.il_Servicios2, System.Drawing.FontStyle.Regular);
+            this.il_Servicios2.TextoAgregadoPor = "Percy Jackson";
+            this.il_Servicios2.TextoFecha = "dd - mm - aaaa";
+            this.il_Servicios2.TextoPrincipal = "Pintura en horno";
+            this.il_Servicios2.Textosecundario = "Pintura";
+            this.il_Servicios2.TextoTercero = "PIN-002";
+            // 
             // il_Servicios1
             // 
             this.il_Servicios1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.il_Servicios1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Servicios1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Servicios1.ColorPanel = System.Drawing.Color.White;
-            this.il_Servicios1.Location = new System.Drawing.Point(34, 113);
+            this.il_Servicios1.Location = new System.Drawing.Point(35, 116);
+            this.il_Servicios1.Margin = new System.Windows.Forms.Padding(4);
             this.il_Servicios1.Name = "il_Servicios1";
             this.il_Servicios1.Size = new System.Drawing.Size(497, 104);
             this.il_Servicios1.TabIndex = 54;
@@ -396,7 +421,8 @@ namespace LP2MegaAutos
             this.il_Servicios3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.il_Servicios3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Servicios3.ColorPanel = System.Drawing.Color.White;
-            this.il_Servicios3.Location = new System.Drawing.Point(34, 223);
+            this.il_Servicios3.Location = new System.Drawing.Point(35, 228);
+            this.il_Servicios3.Margin = new System.Windows.Forms.Padding(4);
             this.il_Servicios3.Name = "il_Servicios3";
             this.il_Servicios3.Size = new System.Drawing.Size(497, 104);
             this.il_Servicios3.TabIndex = 56;
@@ -411,25 +437,27 @@ namespace LP2MegaAutos
             this.il_Servicios3.Textosecundario = "Mecánica";
             this.il_Servicios3.TextoTercero = "MEC-002";
             // 
-            // il_Servicios2
+            // itemLista1
             // 
-            this.il_Servicios2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Servicios2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Servicios2.ColorPanel = System.Drawing.Color.White;
-            this.il_Servicios2.Location = new System.Drawing.Point(34, 3);
-            this.il_Servicios2.Name = "il_Servicios2";
-            this.il_Servicios2.Size = new System.Drawing.Size(497, 104);
-            this.il_Servicios2.TabIndex = 55;
-            this.tagsExtender1.SetTag2(this.il_Servicios2, null);
-            this.tagsExtender1.SetTag3(this.il_Servicios2, null);
-            this.tagsExtender1.SetTagFontName(this.il_Servicios2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Servicios2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Servicios2, System.Drawing.FontStyle.Regular);
-            this.il_Servicios2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Servicios2.TextoFecha = "dd - mm - aaaa";
-            this.il_Servicios2.TextoPrincipal = "Pintura en horno";
-            this.il_Servicios2.Textosecundario = "Pintura";
-            this.il_Servicios2.TextoTercero = "PIN-002";
+            this.itemLista1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.itemLista1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.itemLista1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
+            this.itemLista1.ColorPanel = System.Drawing.Color.White;
+            this.itemLista1.Location = new System.Drawing.Point(35, 340);
+            this.itemLista1.Margin = new System.Windows.Forms.Padding(4);
+            this.itemLista1.Name = "itemLista1";
+            this.itemLista1.Size = new System.Drawing.Size(497, 104);
+            this.itemLista1.TabIndex = 57;
+            this.tagsExtender1.SetTag2(this.itemLista1, null);
+            this.tagsExtender1.SetTag3(this.itemLista1, null);
+            this.tagsExtender1.SetTagFontName(this.itemLista1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.itemLista1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.itemLista1, System.Drawing.FontStyle.Regular);
+            this.itemLista1.TextoAgregadoPor = "Percy Jackson";
+            this.itemLista1.TextoFecha = "dd - mm - aaaa";
+            this.itemLista1.TextoPrincipal = "Mantenimiento Preventivo";
+            this.itemLista1.Textosecundario = "Mecánica";
+            this.itemLista1.TextoTercero = "MEC-001";
             // 
             // roundedPanel4
             // 
@@ -538,6 +566,7 @@ namespace LP2MegaAutos
             this.Controls.Add(this.rndZA);
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaActualizarServicios";
             this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);
@@ -583,5 +612,6 @@ namespace LP2MegaAutos
         private itemLista il_Servicios1;
         private itemLista il_Servicios3;
         private itemLista il_Servicios2;
+        private itemLista itemLista1;
     }
 }

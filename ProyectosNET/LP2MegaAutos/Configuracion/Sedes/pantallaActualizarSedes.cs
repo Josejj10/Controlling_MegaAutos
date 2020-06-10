@@ -19,6 +19,7 @@ namespace LP2MegaAutos
             il_Sedes1.EditarClick += btnEditarClick;
             il_Sedes2.EditarClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
+            flowLayoutPanel1.AutoScroll = true;
         }
 
         private void btnEditarClick(Object sender, EventArgs e)
@@ -111,6 +112,17 @@ namespace LP2MegaAutos
             this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btnAZ.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
+        }
+
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            txt_Buscar.Text = string.Empty;
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
         }
     }
 }

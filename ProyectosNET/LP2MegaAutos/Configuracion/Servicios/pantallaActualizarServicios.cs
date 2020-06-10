@@ -20,6 +20,7 @@ namespace LP2MegaAutos
             il_Servicios2.EditarClick += btnEditarClick;
             il_Servicios3.EditarClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
+            this.flowLayoutPanel1.AutoScroll = true;
         }
 
         private void btnEditarClick(Object sender, EventArgs e)
@@ -27,15 +28,6 @@ namespace LP2MegaAutos
             pantallaEditarServicio pes = new pantallaEditarServicio();
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-            //MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaEditarServicio.Instancia))
-            //{
-            //    this.Controls.Add(pantallaEditarServicio.Instancia);
-            //    pantallaEditarServicio.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaEditarServicio.Instancia.Parent);
-            //}
-            //pantallaEditarServicio.Instancia.BringToFront();
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)
@@ -44,15 +36,6 @@ namespace LP2MegaAutos
             
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-            //MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaAgregarServicio.Instancia))
-            //{
-            //    this.Controls.Add(pantallaAgregarServicio.Instancia);
-            //    pantallaAgregarServicio.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaAgregarServicio.Instancia.Parent);
-            //}
-            //pantallaAgregarServicio.Instancia.BringToFront();
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)
@@ -123,6 +106,12 @@ namespace LP2MegaAutos
         private void pantallaActualizarServicios_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
         }
 
         //private void rndAZ_MouseDown(object sender, MouseEventArgs e)

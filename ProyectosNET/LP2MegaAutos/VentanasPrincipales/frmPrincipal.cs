@@ -25,6 +25,63 @@ namespace LP2MegaAutos
         private Usuario _usuario;
         public Usuario Usuario { get => _usuario; set => _usuario = value; }
 
+        private pantallaInicioGerente pInicio;
+
+        #region title_bar
+
+        #region botones
+        private void boton_cerrar_MouseClick(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.No;
+        }
+
+        private void boton_minimizar_MouseClick(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Minimized;
+        }
+        #endregion botones
+
+        #region movement
+        // Llama a la clase estatica TitleBar
+        private void title_bar_MouseUp(object sender, MouseEventArgs e)
+        {
+            TitleBar.mouse_Up();
+        }
+
+        private void title_bar_MouseDown(object sender, MouseEventArgs e)
+        {
+            TitleBar.mouse_Down(MousePosition, Bounds);
+        }
+
+        private void title_bar_MouseMove(object sender, MouseEventArgs e)
+        {
+            TitleBar.mouse_Move(MousePosition, this);
+        }
+
+
+        #endregion movement
+
+        #endregion title_bar
+
+        #region Dark Mode
+        // Usa la clase DarkMode para cambiar los colores iterando
+        // Y mover el toggle mediante ticks del timer reloj_dark
+        private void boton_toggle_nocturno_Click(object sender, EventArgs e)
+        {
+            DarkMode.cambiarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
+        }
+
+        private void reloj_dark_Tick(object sender, EventArgs e)
+        {
+            DarkMode.reloj_dark_Tick(reloj_dark, boton_toggle_nocturno);
+        }
+
+
+
+
+        #endregion Dark Mode
+
         #region inicializacion
         public frmPrincipal(Usuario usuario)
         {
@@ -45,7 +102,7 @@ namespace LP2MegaAutos
             crearBotonesInicio();
 
             // Primera pantalla es pantallaInicioGerente
-            contenedorPantalla1.PantallaActual = new pantallaInicioGerente(_usuario);
+            pInicio = new pantallaInicioGerente(_usuario);
         }
 
         private void suscribirEventos()
@@ -186,7 +243,14 @@ namespace LP2MegaAutos
         #endregion Creacion Botones
 
         #region Creacion Strips
-        
+        private void validarItems(int nItems)
+        {
+            if (nItems > 4)
+                throw new System.ArgumentException("Informacion no puede tener mas de 4 items");
+            else if (nItems <= 0)
+                throw new System.ArgumentException("Informacion no puede tener 0 items");
+        }
+
         // Crear Strip dinamicamente
         private void crearStrip(PanelMenuStrip pms, int nItems, BindingList<Image> ims,
                                 BindingList<EPermisos> per, Button btnMenu)
@@ -297,14 +361,7 @@ namespace LP2MegaAutos
                 }
             }
         }
-        private void validarItems(int nItems)
-        {
-            if (nItems > 4)
-                throw new System.ArgumentException("Informacion no puede tener mas de 4 items");
-            else if (nItems <= 0)
-                throw new System.ArgumentException("Informacion no puede tener 0 items");
-        }
-        
+       
         // Crear Strip Menu Informacion Dinamicamente
         private PanelMenuStrip crearStripInformacion(int yLoc, int nItems, Button btnMenu)
         {
@@ -315,6 +372,7 @@ namespace LP2MegaAutos
             PanelMenuStrip pms = new PanelMenuStrip(nItems);
             pnlBackBackground.Controls.Add(pms);
             pms.Location = new Point(0,yLoc);
+            pms.LayoutImagenes = ImageLayout.Center;
 
             BindingList<EPermisos> per = new BindingList<EPermisos>();
             per.Add(EPermisos.AreasTrabajo);
@@ -323,10 +381,10 @@ namespace LP2MegaAutos
             per.Add(EPermisos.Drivers);
 
             BindingList<Image> ims = new BindingList<Image>();
-            ims.Add(Resources.AreaTrabajo);
-            ims.Add(Resources.Clientes);
-            ims.Add(Resources.car);
-            ims.Add(Resources.Driver);
+            ims.Add((Image)new Bitmap(Resources.AreaTrabajo, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.Clientes, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.car, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.Driver, new Size(36, 36)));
 
             crearStrip(pms, nItems, ims, per,btnMenu);
 
@@ -344,6 +402,7 @@ namespace LP2MegaAutos
             PanelMenuStrip pms = new PanelMenuStrip(nItems);
             pnlBackBackground.Controls.Add(pms);
             pms.Location = new Point(0, yLoc);
+            pms.LayoutImagenes = ImageLayout.Center;
 
             BindingList<EPermisos> per = new BindingList<EPermisos>();
             per.Add(EPermisos.Usuarios);
@@ -352,10 +411,10 @@ namespace LP2MegaAutos
             per.Add(EPermisos.Empresa);
 
             BindingList<Image> ims = new BindingList<Image>();
-            ims.Add(Resources.Usuarios);
-            ims.Add(Resources.Servicio);
-            ims.Add(Resources.Sede);
-            ims.Add(Resources.Empresa);
+            ims.Add((Image)new Bitmap(Resources.Usuarios, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.Servicio, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.Sede, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.Empresa, new Size(36, 36)));
 
             crearStrip(pms, nItems, ims, per,btnMenu);
 
@@ -381,69 +440,29 @@ namespace LP2MegaAutos
 
         #endregion inicializacion
 
-        #region title_bar
 
-        #region botones
-        private void boton_cerrar_MouseClick(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.No;
+            contenedorPantalla1.volverUltimaPantalla();
+            // TODO volver al estado del boton anterior
+
         }
 
-        private void boton_minimizar_MouseClick(object sender, EventArgs e)
+        private void btnAdelante_Click(object sender, EventArgs e)
         {
-            if (this.WindowState != FormWindowState.Minimized)
-                this.WindowState = FormWindowState.Minimized;
-        }
-        #endregion botones
-
-        #region movement
-        // Llama a la clase estatica TitleBar
-        private void title_bar_MouseUp(object sender, MouseEventArgs e)
-        {
-            TitleBar.mouse_Up();
+            contenedorPantalla1.adelantarPantalla();
+            // TODO volver al estado del boton siguiente
         }
 
-        private void title_bar_MouseDown(object sender, MouseEventArgs e)
-        {
-            TitleBar.mouse_Down(MousePosition, Bounds);
-        }
-
-        private void title_bar_MouseMove(object sender, MouseEventArgs e)
-        {
-            TitleBar.mouse_Move(MousePosition, this);
-        }
-
-
-        #endregion movement
-
-        #endregion title_bar
-
-        #region Dark Mode
-        // Usa la clase DarkMode para cambiar los colores iterando
-        // Y mover el toggle mediante ticks del timer reloj_dark
-        private void boton_toggle_nocturno_Click(object sender, EventArgs e)
-        {
-            DarkMode.cambiarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
-        }
-
-        private void reloj_dark_Tick(object sender, EventArgs e)
-        {
-            DarkMode.reloj_dark_Tick(reloj_dark, boton_toggle_nocturno);
-        }
-
-
-
-
-        #endregion Dark Mode
 
         #region panelMenu
-        
+
         #region botonesClick
         private void btnHome_Click(object sender, EventArgs e)
         {
-            //pntIniGen.BringToFront();
             // Cambiar los botones y rPanel
             BotonesDinamicosHelper.cambiarColoresBotonesMenu(rpBtnMenuHome, panelMenu);
+            contenedorPantalla1.PantallaActual = pInicio;
         }
         private void btnMenuReportes_Click(object sender, EventArgs e)
         {
@@ -467,7 +486,8 @@ namespace LP2MegaAutos
         private void pmsReportes_ListaReportesClick(object sender, EventArgs e)
         {
                       
-            this.contenedorPantalla1.PantallaActual = new pantallaListaReportes();
+            contenedorPantalla1.PantallaActual = new pantallaListaReportes();
+            
             // Cambiar los botones y rPanel excepto el enviado
             BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)btnMenuReportes.Parent, panelMenu);
             pmsReportes.Visible = false;
@@ -511,16 +531,6 @@ namespace LP2MegaAutos
         #endregion menuStrip
 
         #endregion panelMenu
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-           contenedorPantalla1.volverUltimaPantalla();
-        }
-
-        private void btnAdelante_Click(object sender, EventArgs e)
-        {
-            contenedorPantalla1.adelantarPantalla();
-        }
 
 
     }

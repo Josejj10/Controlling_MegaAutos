@@ -41,7 +41,6 @@
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
             this.txt_distrito = new System.Windows.Forms.TextBox();
             this.lbl_distrito = new System.Windows.Forms.Label();
-            this.txt_NombreSede = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rnd_cancelar = new LP2MegaAutos.RoundedPanel();
             this.btn_cancelar = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.title_bar_2 = new System.Windows.Forms.Panel();
+            this.txt_NombreSede = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
@@ -285,22 +285,6 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_distrito, System.Drawing.FontStyle.Bold);
             this.lbl_distrito.Text = "Distrito";
             // 
-            // txt_NombreSede
-            // 
-            this.txt_NombreSede.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_NombreSede.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_NombreSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.txt_NombreSede.Location = new System.Drawing.Point(27, 42);
-            this.txt_NombreSede.Name = "txt_NombreSede";
-            this.txt_NombreSede.Size = new System.Drawing.Size(441, 35);
-            this.txt_NombreSede.TabIndex = 50;
-            this.tagsExtender1.SetTag2(this.txt_NombreSede, null);
-            this.tagsExtender1.SetTag3(this.txt_NombreSede, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NombreSede, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_NombreSede, 22F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_NombreSede, System.Drawing.FontStyle.Bold);
-            this.txt_NombreSede.Text = "Agregar nombre de sede...";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
@@ -518,11 +502,31 @@
             this.tagsExtender1.SetTagFontSize(this.title_bar_2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar_2, System.Drawing.FontStyle.Regular);
             // 
+            // txt_NombreSede
+            // 
+            this.txt_NombreSede.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NombreSede.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_NombreSede.Location = new System.Drawing.Point(27, 42);
+            this.txt_NombreSede.Name = "txt_NombreSede";
+            this.txt_NombreSede.Size = new System.Drawing.Size(441, 35);
+            this.txt_NombreSede.TabIndex = 62;
+            this.tagsExtender1.SetTag2(this.txt_NombreSede, null);
+            this.tagsExtender1.SetTag3(this.txt_NombreSede, null);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreSede, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_NombreSede, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NombreSede, System.Drawing.FontStyle.Regular);
+            this.txt_NombreSede.Text = "Agregar nombre de sede...";
+            this.txt_NombreSede.Enter += new System.EventHandler(this.txt_NombreSede_Enter);
+            this.txt_NombreSede.Leave += new System.EventHandler(this.txt_NombreSede_Leave);
+            // 
             // pantallaAgregarSede
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
+            this.Controls.Add(this.txt_NombreSede);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rnd_cancelar);
@@ -530,15 +534,21 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_tipoServicio);
             this.Controls.Add(this.pnl_codServ);
-            this.Controls.Add(this.txt_NombreSede);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaAgregarSede";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnl_tipoServicio.ResumeLayout(false);
@@ -568,7 +578,6 @@
         private RoundedPanel rnd_color_1;
         private System.Windows.Forms.TextBox txt_distrito;
         private System.Windows.Forms.Label lbl_distrito;
-        private System.Windows.Forms.TextBox txt_NombreSede;
         private System.Windows.Forms.Panel panel1;
         private RoundedPanel rnd_cancelar;
         private System.Windows.Forms.Button btn_cancelar;
@@ -579,5 +588,6 @@
         private System.Windows.Forms.Button boton_minimizar;
         private System.Windows.Forms.Button boton_cerrar;
         private System.Windows.Forms.Panel title_bar_2;
+        private System.Windows.Forms.TextBox txt_NombreSede;
     }
 }

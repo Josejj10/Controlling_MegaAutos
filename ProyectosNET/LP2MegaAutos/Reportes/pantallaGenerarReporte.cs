@@ -13,7 +13,7 @@ namespace LP2MegaAutos
 {
     public partial class pantallaGenerarReporte : MetroForm
     {
-        private string _btnSeleccionado = "AreaTrabajo";
+        private string _btnSeleccionado;
 
         #region title_bar
 
@@ -51,9 +51,11 @@ namespace LP2MegaAutos
 
         #endregion title_bar
 
-        public pantallaGenerarReporte()
+        public pantallaGenerarReporte(string _seleccion)
         {
-            InitializeComponent();            
+            this._btnSeleccionado = _seleccion;
+            InitializeComponent();
+            inicialTxtInputBuscar();
             btnPorAreaTrabajo.Click += cambiarTxtInputBuscar;
             btnPorVehiculo.Click += cambiarTxtInputBuscar;
             btnPorCliente.Click += cambiarTxtInputBuscar;
@@ -181,7 +183,8 @@ namespace LP2MegaAutos
         {
             if (txt_InputBuscar.Text == "Placa"
                 || txt_InputBuscar.Text == "Area"
-                || txt_InputBuscar.Text == "Dni o Nombre")
+                || txt_InputBuscar.Text == "Dni o Nombre"
+                || txt_InputBuscar.Text == "Filtro  tipo de reporte")
                 txt_InputBuscar.Text = string.Empty;
         }
 
@@ -189,6 +192,37 @@ namespace LP2MegaAutos
         {
             if (txt_InputBuscar.Text == string.Empty)
                 cambiarTxtInputBuscar(sender, e);
+        }
+
+        private void inicialTxtInputBuscar()
+        {
+            switch (_btnSeleccionado)
+            {
+                case "AreaTrabajo":
+                    txt_InputBuscar.Text = "Area";
+                    this.txt_InputBuscar.AutoCompleteCustomSource.AddRange(new string[] {
+                    "Planchado",
+                    "Pintura",
+                    "Administración"});
+                    break;
+                case "Vehiculo":
+                    txt_InputBuscar.Text = "Placa";
+                    this.txt_InputBuscar.AutoCompleteCustomSource.AddRange(new string[] {
+                    "ABC-123",
+                    "AAA-222",
+                    "LWYRUP"});
+                    break;
+                case "Cliente":
+                    txt_InputBuscar.Text = "Dni o Nombre";
+                    this.txt_InputBuscar.AutoCompleteCustomSource.AddRange(new string[] {
+                    "70359516",
+                    "DR. PROF. FREDDY PAZ",
+                    "CARLOMAGNO VESPUCIO IV"});
+                    break;
+                case "Todos":
+                    txt_InputBuscar.Text = "Filtro  tipo de reporte";
+                    break;
+            }
         }
 
         private void cambiarTxtInputBuscar(object sender, EventArgs e)
@@ -216,6 +250,9 @@ namespace LP2MegaAutos
                     "DR. PROF. FREDDY PAZ",
                     "CARLOMAGNO VESPUCIO IV"});
                     break;
+                case "Todos":
+                    txt_InputBuscar.Text = "Filtro  tipo de reporte";
+                    break;
             }
 
         }
@@ -235,6 +272,17 @@ namespace LP2MegaAutos
 
             // Cambiar los botones y rPanel excepto el enviado
             // TODO
+        }
+
+        private void txtSede_Enter(object sender, EventArgs e)
+        {
+            txtSede.Text = string.Empty;
+        }
+
+        private void txtSede_Leave(object sender, EventArgs e)
+        {
+            if (txtSede.Text == string.Empty)
+                txtSede.Text = "Sede";
         }
     }
 }

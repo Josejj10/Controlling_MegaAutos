@@ -15,17 +15,22 @@ namespace LP2MegaAutos.VentanasPrincipales
         
         // Lista de pantallas
         private BindingList<Pantalla> _pantallas;
-
+        private Pantalla pInicio = new pantallaInicioGerente();
 
         public ContenedorPantalla()
         {
             InitializeComponent();
-            _pantallas = new BindingList<Pantalla>();            
+            _pantallas = new BindingList<Pantalla>();
+            
+            // Problema Scroll: Si funciona cuando se añade estaticamente tanto
+            // mediante PantallaActual como directamente a controles
+            // PantallaActual = new pantallaListaReportes();
+            // Controls.Add(new pantallaListaReportes());
         }
 
         public Pantalla getPantallaActual()
         {
-            return Controls.Count > 0 ? (Pantalla)Controls[0] : new pantallaInicioGerente();
+            return Controls.Count > 0 ? (Pantalla)Controls[0] : pInicio;
 
         }
 
@@ -35,14 +40,15 @@ namespace LP2MegaAutos.VentanasPrincipales
             {
                 // Agregar a la lista de pantallas  
                 _pantallas.Add(value);
-                   
+
                 // Quitar la ultima pantalla 
-                if (Controls.Count != 0) {
+                if (Controls.Count != 0)
+                {
                     Controls.Remove(Controls[0]);
                 }
+
                 // Agregar pantalla a los controles del contenedor
                 Controls.Add(value);
-                value.BringToFront();      
             }
         }
 
@@ -88,9 +94,6 @@ namespace LP2MegaAutos.VentanasPrincipales
             if (ultima == null) return;
             Controls.Remove(getPantallaActual());
             Controls.Add(ultima);
-
-            // TODO CAMBIAR LOS COLORES DEL PANEL MENU 
-
         }
 
         public void adelantarPantalla()
@@ -101,8 +104,6 @@ namespace LP2MegaAutos.VentanasPrincipales
             if (adelante == null) return;
             Controls.Remove(getPantallaActual());
             Controls.Add(adelante);
-
-            // TODO CAMBIAR LOS COLORES DEL PANEL MENU
         }
 
     }

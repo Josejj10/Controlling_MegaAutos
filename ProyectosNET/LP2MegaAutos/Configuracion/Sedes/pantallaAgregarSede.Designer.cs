@@ -267,7 +267,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_distrito, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_distrito, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_distrito, System.Drawing.FontStyle.Bold);
-            this.txt_distrito.Enter += new System.EventHandler(this.txt_distrito_Enter);
             // 
             // lbl_distrito
             // 

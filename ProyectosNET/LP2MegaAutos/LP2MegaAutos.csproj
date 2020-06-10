@@ -246,12 +246,6 @@
     <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.Designer.cs">
       <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuario.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuario.Designer.cs">
-      <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -496,9 +490,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.resx">
       <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuario.resx">
-      <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>

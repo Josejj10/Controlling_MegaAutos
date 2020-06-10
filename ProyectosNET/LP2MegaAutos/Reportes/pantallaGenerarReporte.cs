@@ -51,14 +51,13 @@ namespace LP2MegaAutos
 
         #endregion title_bar
 
-        public pantallaGenerarReporte(string _seleccion)
+        public pantallaGenerarReporte(string seleccion)
         {
-            this._btnSeleccionado = _seleccion;
             InitializeComponent();
+            
+            this._btnSeleccionado = seleccion;
             inicialTxtInputBuscar();
-            btnPorAreaTrabajo.Click += cambiarTxtInputBuscar;
-            btnPorVehiculo.Click += cambiarTxtInputBuscar;
-            btnPorCliente.Click += cambiarTxtInputBuscar;
+            
             txt_InputBuscar.AutoSize = false;
             txtSede.AutoSize = false;
             txt_InputBuscar.Size = new Size(315,30);
@@ -67,7 +66,15 @@ namespace LP2MegaAutos
             DarkMode.agregarExcepcion("btnGenerarReporte");
         }
 
+        private void suscribirEventos()
+        {
+            btnPorAreaTrabajo.Click += cambiarTxtInputBuscar;
+            btnPorVehiculo.Click += cambiarTxtInputBuscar;
+            btnPorCliente.Click += cambiarTxtInputBuscar;
 
+        }
+
+        #region Botones Click
         private void btnDiario_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
@@ -133,7 +140,7 @@ namespace LP2MegaAutos
             this.btnAnual.BackColor = Color.Transparent;
 
         }
-
+        #endregion Botones Click
         #region Tipo Reporte
         private void btnPorVehiculo_Click(object sender, EventArgs e)
         {
@@ -193,6 +200,7 @@ namespace LP2MegaAutos
             if (txt_InputBuscar.Text == string.Empty)
                 cambiarTxtInputBuscar(sender, e);
         }
+        #endregion Tipo Reporte
 
         private void inicialTxtInputBuscar()
         {
@@ -204,6 +212,7 @@ namespace LP2MegaAutos
                     "Planchado",
                     "Pintura",
                     "Administración"});
+                    btnPorAreaTrabajo_Click(this, new EventArgs());
                     break;
                 case "Vehiculo":
                     txt_InputBuscar.Text = "Placa";
@@ -211,6 +220,7 @@ namespace LP2MegaAutos
                     "ABC-123",
                     "AAA-222",
                     "LWYRUP"});
+                    btnPorVehiculo_Click(this, new EventArgs());
                     break;
                 case "Cliente":
                     txt_InputBuscar.Text = "Dni o Nombre";
@@ -218,6 +228,7 @@ namespace LP2MegaAutos
                     "70359516",
                     "DR. PROF. FREDDY PAZ",
                     "CARLOMAGNO VESPUCIO IV"});
+                    btnPorCliente_Click(this, new EventArgs());
                     break;
                 case "Todos":
                     txt_InputBuscar.Text = "Filtro  tipo de reporte";
@@ -256,22 +267,11 @@ namespace LP2MegaAutos
             }
 
         }
-        #endregion Tipo Reporte
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            //if (!this.Parent.Controls.Contains(pantallaDetalleReporte.Instancia))
-            //{
-            //    this.Parent.Controls.Add(pantallaDetalleReporte.Instancia);
-            //    pantallaDetalleReporte.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaDetalleReporte.Instancia.Parent);
-            //}
-            //pantallaDetalleReporte.Instancia.BringToFront();
-
-            // Cambiar los botones y rPanel excepto el enviado
-            // TODO
+            // TODO Abrir Reporte Creado 
         }
 
         private void txtSede_Enter(object sender, EventArgs e)

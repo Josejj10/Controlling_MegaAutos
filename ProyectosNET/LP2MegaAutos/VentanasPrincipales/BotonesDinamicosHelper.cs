@@ -1,4 +1,5 @@
 ﻿using LP2MegaAutos.Framework.UserControls;
+using LP2MegaAutos.Informacion.Vehiculos;
 using LP2MegaAutos.Properties;
 using System;
 using System.Collections.Generic;
@@ -89,8 +90,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 case EPermisos.Usuarios:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarUsuarios>(sender, e, btn, img, panelMenu, cont); };
                 case EPermisos.Vehiculos:
-                    // TODO ACTUALIZAR CUANDO SE CREE VEHICULO
-                    return (sender, e) => { pmsBtn_Click<pantallaActualizarDrivers>(sender, e, btn, img, panelMenu, cont); };
+                    return (sender, e) => { pmsBtn_Click<pantallaActualizarVehiculos>(sender, e, btn, img, panelMenu, cont); };
                 default:
                     return (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img, panelMenu, cont); };
             }

@@ -843,7 +843,7 @@
             this.btn_GenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GenerarReporte.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GenerarReporte.ForeColor = System.Drawing.Color.White;
-            this.btn_GenerarReporte.Location = new System.Drawing.Point(3, 1);
+            this.btn_GenerarReporte.Location = new System.Drawing.Point(1, 1);
             this.btn_GenerarReporte.Name = "btn_GenerarReporte";
             this.btn_GenerarReporte.Size = new System.Drawing.Size(178, 33);
             this.btn_GenerarReporte.TabIndex = 0;

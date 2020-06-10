@@ -38,7 +38,7 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.txt_CuentaContable = new System.Windows.Forms.TextBox();
+            this.lbl_CuentaContable = new System.Windows.Forms.Label();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
@@ -61,6 +61,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -257,21 +260,24 @@
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // txt_CuentaContable
+            // lbl_CuentaContable
             // 
-            this.txt_CuentaContable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_CuentaContable.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_CuentaContable.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_CuentaContable.Location = new System.Drawing.Point(27, 42);
-            this.txt_CuentaContable.Name = "txt_CuentaContable";
-            this.txt_CuentaContable.Size = new System.Drawing.Size(441, 35);
-            this.txt_CuentaContable.TabIndex = 75;
-            this.tagsExtender1.SetTag2(this.txt_CuentaContable, null);
-            this.tagsExtender1.SetTag3(this.txt_CuentaContable, null);
-            this.tagsExtender1.SetTagFontName(this.txt_CuentaContable, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_CuentaContable, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_CuentaContable, System.Drawing.FontStyle.Regular);
-            this.txt_CuentaContable.Text = "Cuenta Contable";
+            this.lbl_CuentaContable.AutoSize = true;
+            this.lbl_CuentaContable.BackColor = System.Drawing.Color.White;
+            this.lbl_CuentaContable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_CuentaContable.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CuentaContable.ForeColor = System.Drawing.Color.Black;
+            this.lbl_CuentaContable.Location = new System.Drawing.Point(27, 42);
+            this.lbl_CuentaContable.Name = "lbl_CuentaContable";
+            this.lbl_CuentaContable.Size = new System.Drawing.Size(230, 35);
+            this.lbl_CuentaContable.TabIndex = 75;
+            this.tagsExtender1.SetTag2(this.lbl_CuentaContable, null);
+            this.tagsExtender1.SetTag3(this.lbl_CuentaContable, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_CuentaContable, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_CuentaContable, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_CuentaContable, System.Drawing.FontStyle.Bold);
+            this.lbl_CuentaContable.Text = "Cuenta Contable";
+            this.lbl_CuentaContable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCuentaContable
             // 
@@ -279,12 +285,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;
-            this.Controls.Add(this.txt_CuentaContable);
+            this.Controls.Add(this.lbl_CuentaContable);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCuentaContable";
+            this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
@@ -309,6 +319,6 @@
         private System.Windows.Forms.Button btn_cancelar;
         private RoundedPanel rnd_guardar;
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.TextBox txt_CuentaContable;
+        private System.Windows.Forms.Label lbl_CuentaContable;
     }
 }

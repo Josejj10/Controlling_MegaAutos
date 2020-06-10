@@ -43,6 +43,7 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
+            this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.title_bar.SuspendLayout();
             this.pnl_nombEmpresa.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
@@ -67,6 +68,11 @@
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
             this.button3.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.button3, null);
+            this.tagsExtender1.SetTag3(this.button3, null);
+            this.tagsExtender1.SetTagFontName(this.button3, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.button3, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
             // 
@@ -82,6 +88,11 @@
             this.title_bar.Size = new System.Drawing.Size(421, 24);
             this.title_bar.TabIndex = 75;
             this.title_bar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.title_bar, null);
+            this.tagsExtender1.SetTag3(this.title_bar, null);
+            this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
             this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
             this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
             this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
@@ -100,6 +111,11 @@
             this.boton_minimizar.TabIndex = 0;
             this.boton_minimizar.TabStop = false;
             this.boton_minimizar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_minimizar, null);
+            this.tagsExtender1.SetTag3(this.boton_minimizar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_minimizar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_minimizar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_minimizar, System.Drawing.FontStyle.Regular);
             this.boton_minimizar.UseVisualStyleBackColor = true;
             // 
             // boton_cerrar
@@ -120,6 +136,11 @@
             this.boton_cerrar.TabIndex = 0;
             this.boton_cerrar.TabStop = false;
             this.boton_cerrar.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.boton_cerrar, null);
+            this.tagsExtender1.SetTag3(this.boton_cerrar, null);
+            this.tagsExtender1.SetTagFontName(this.boton_cerrar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.boton_cerrar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.boton_cerrar, System.Drawing.FontStyle.Regular);
             this.boton_cerrar.UseVisualStyleBackColor = false;
             // 
             // panel1
@@ -129,6 +150,11 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 2);
             this.panel1.TabIndex = 78;
+            this.tagsExtender1.SetTag2(this.panel1, null);
+            this.tagsExtender1.SetTag3(this.panel1, null);
+            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
             // lbl_EditarNombEmpresa
             // 
@@ -141,6 +167,11 @@
             this.lbl_EditarNombEmpresa.Name = "lbl_EditarNombEmpresa";
             this.lbl_EditarNombEmpresa.Size = new System.Drawing.Size(320, 35);
             this.lbl_EditarNombEmpresa.TabIndex = 77;
+            this.tagsExtender1.SetTag2(this.lbl_EditarNombEmpresa, null);
+            this.tagsExtender1.SetTag3(this.lbl_EditarNombEmpresa, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_EditarNombEmpresa, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_EditarNombEmpresa, 22F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_EditarNombEmpresa, System.Drawing.FontStyle.Bold);
             this.lbl_EditarNombEmpresa.Text = "Editar Nombre Empresa";
             this.lbl_EditarNombEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -153,6 +184,11 @@
             this.title_bar_2.Size = new System.Drawing.Size(421, 8);
             this.title_bar_2.TabIndex = 76;
             this.title_bar_2.Tag = "titlebar";
+            this.tagsExtender1.SetTag2(this.title_bar_2, null);
+            this.tagsExtender1.SetTag3(this.title_bar_2, null);
+            this.tagsExtender1.SetTagFontName(this.title_bar_2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.title_bar_2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.title_bar_2, System.Drawing.FontStyle.Regular);
             // 
             // pnl_nombEmpresa
             // 
@@ -164,6 +200,11 @@
             this.pnl_nombEmpresa.Name = "pnl_nombEmpresa";
             this.pnl_nombEmpresa.Size = new System.Drawing.Size(292, 41);
             this.pnl_nombEmpresa.TabIndex = 82;
+            this.tagsExtender1.SetTag2(this.pnl_nombEmpresa, null);
+            this.tagsExtender1.SetTag3(this.pnl_nombEmpresa, null);
+            this.tagsExtender1.SetTagFontName(this.pnl_nombEmpresa, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnl_nombEmpresa, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnl_nombEmpresa, System.Drawing.FontStyle.Regular);
             // 
             // rnd_color_1
             // 
@@ -181,6 +222,11 @@
             this.rnd_color_1.PorcLuzColorBorde = 0;
             this.rnd_color_1.Size = new System.Drawing.Size(3, 36);
             this.rnd_color_1.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.rnd_color_1, null);
+            this.tagsExtender1.SetTag3(this.rnd_color_1, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_color_1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_color_1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_color_1, System.Drawing.FontStyle.Regular);
             this.rnd_color_1.XBorde = 0;
             this.rnd_color_1.XPanel = 0;
             this.rnd_color_1.YBorde = 0;
@@ -196,6 +242,11 @@
             this.txt_nombEmpresa.Name = "txt_nombEmpresa";
             this.txt_nombEmpresa.Size = new System.Drawing.Size(284, 23);
             this.txt_nombEmpresa.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_nombEmpresa, null);
+            this.tagsExtender1.SetTag3(this.txt_nombEmpresa, null);
+            this.tagsExtender1.SetTagFontName(this.txt_nombEmpresa, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_nombEmpresa, 14F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_nombEmpresa, System.Drawing.FontStyle.Bold);
             this.txt_nombEmpresa.Text = "MegaAutos";
             // 
             // lbl_nombEmpresa
@@ -209,6 +260,11 @@
             this.lbl_nombEmpresa.Name = "lbl_nombEmpresa";
             this.lbl_nombEmpresa.Size = new System.Drawing.Size(108, 16);
             this.lbl_nombEmpresa.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_nombEmpresa, null);
+            this.tagsExtender1.SetTag3(this.lbl_nombEmpresa, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_nombEmpresa, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_nombEmpresa, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_nombEmpresa, System.Drawing.FontStyle.Bold);
             this.lbl_nombEmpresa.Text = "Nombre Empresa";
             // 
             // rnd_cancelar
@@ -228,6 +284,11 @@
             this.rnd_cancelar.PorcLuzColorBorde = 0;
             this.rnd_cancelar.Size = new System.Drawing.Size(119, 35);
             this.rnd_cancelar.TabIndex = 80;
+            this.tagsExtender1.SetTag2(this.rnd_cancelar, null);
+            this.tagsExtender1.SetTag3(this.rnd_cancelar, null);
+            this.tagsExtender1.SetTagFontName(this.rnd_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rnd_cancelar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rnd_cancelar, System.Drawing.FontStyle.Regular);
             this.rnd_cancelar.XBorde = 0;
             this.rnd_cancelar.XPanel = 0;
             this.rnd_cancelar.YBorde = 0;
@@ -245,6 +306,11 @@
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(119, 35);
             this.btn_cancelar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_cancelar, null);
+            this.tagsExtender1.SetTag3(this.btn_cancelar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -266,6 +332,11 @@
             this.roundedPanel1.PorcLuzColorBorde = 0;
             this.roundedPanel1.Size = new System.Drawing.Size(119, 35);
             this.roundedPanel1.TabIndex = 81;
+            this.tagsExtender1.SetTag2(this.roundedPanel1, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
             this.roundedPanel1.XBorde = 0;
             this.roundedPanel1.XPanel = 0;
             this.roundedPanel1.YBorde = 0;
@@ -283,6 +354,11 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(119, 35);
             this.btn_guardar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_guardar, null);
+            this.tagsExtender1.SetTag3(this.btn_guardar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
@@ -304,6 +380,11 @@
             this.Name = "frmEditarNombEmpresa";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.tagsExtender1.SetTag2(this, null);
+            this.tagsExtender1.SetTag3(this, null);
+            this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this, 10F);
+            this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.title_bar.ResumeLayout(false);
             this.pnl_nombEmpresa.ResumeLayout(false);
             this.pnl_nombEmpresa.PerformLayout();
@@ -330,5 +411,6 @@
         private RoundedPanel rnd_color_1;
         private System.Windows.Forms.TextBox txt_nombEmpresa;
         private System.Windows.Forms.Label lbl_nombEmpresa;
+        private TagsExtender tagsExtender1;
     }
 }

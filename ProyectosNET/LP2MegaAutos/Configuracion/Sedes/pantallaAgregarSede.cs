@@ -63,6 +63,15 @@ namespace LP2MegaAutos
         {
             this.DialogResult = DialogResult.Cancel;
         }
+        private void txt_NombreSede_Enter(object sender, EventArgs e)
+        {
+            txt_NombreSede.Text = string.Empty;
+        }
 
+        private void txt_NombreSede_Leave(object sender, EventArgs e)
+        {
+            if (txt_NombreSede.Text == string.Empty)
+                txt_NombreSede.Text = "Agregar nombre de sede...";
+        }
     }
 }

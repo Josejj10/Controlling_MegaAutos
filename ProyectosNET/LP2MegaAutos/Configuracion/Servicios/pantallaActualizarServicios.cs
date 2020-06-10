@@ -108,6 +108,12 @@ namespace LP2MegaAutos
 
         }
 
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
+        }
+
         //private void rndAZ_MouseDown(object sender, MouseEventArgs e)
         //{
         //    this.rndAZ.ColorPanel = Colores.AmarilloHover;

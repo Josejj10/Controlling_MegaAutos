@@ -315,6 +315,8 @@
             this.tagsExtender1.SetTagFontSize(this.txt_NombreServicio, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreServicio, System.Drawing.FontStyle.Bold);
             this.txt_NombreServicio.Text = "Agregar nombre del servicio...";
+            this.txt_NombreServicio.Enter += new System.EventHandler(this.txt_NombreServicio_Enter);
+            this.txt_NombreServicio.Leave += new System.EventHandler(this.txt_NombreServicio_Leave);
             // 
             // rnd_guardar
             // 
@@ -538,12 +540,17 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "pantallaAgregarServicio";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaAgregarServicio_Load);
             this.pnl_tipoServicio.ResumeLayout(false);
             this.pnl_tipoServicio.PerformLayout();

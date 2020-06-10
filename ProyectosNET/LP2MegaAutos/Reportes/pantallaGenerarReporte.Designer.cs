@@ -547,7 +547,7 @@
             this.tags.SetTagFontName(this.txt_InputBuscar, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.txt_InputBuscar, 15F);
             this.tags.SetTagFontStyle(this.txt_InputBuscar, System.Drawing.FontStyle.Regular);
-            this.txt_InputBuscar.Text = "Placa";
+            this.txt_InputBuscar.Text = "Filtro tipo de reporte";
             this.txt_InputBuscar.Enter += new System.EventHandler(this.txt_InputBuscar_Enter);
             this.txt_InputBuscar.Leave += new System.EventHandler(this.txt_InputBuscar_Leave);
             // 
@@ -682,6 +682,8 @@
             this.tags.SetTagFontSize(this.txtSede, 15F);
             this.tags.SetTagFontStyle(this.txtSede, System.Drawing.FontStyle.Regular);
             this.txtSede.Text = "Sede";
+            this.txtSede.Enter += new System.EventHandler(this.txtSede_Enter);
+            this.txtSede.Leave += new System.EventHandler(this.txtSede_Leave);
             // 
             // pnlImgSede
             // 
@@ -841,7 +843,7 @@
             this.btn_GenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GenerarReporte.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_GenerarReporte.ForeColor = System.Drawing.Color.White;
-            this.btn_GenerarReporte.Location = new System.Drawing.Point(3, 1);
+            this.btn_GenerarReporte.Location = new System.Drawing.Point(1, 1);
             this.btn_GenerarReporte.Name = "btn_GenerarReporte";
             this.btn_GenerarReporte.Size = new System.Drawing.Size(178, 33);
             this.btn_GenerarReporte.TabIndex = 0;
@@ -859,6 +861,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
@@ -875,13 +878,20 @@
             this.Controls.Add(this.rpDiario);
             this.Controls.Add(this.lblTitulo);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaGenerarReporte";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tags.SetTag2(this, null);
             this.tags.SetTag3(this, null);
             this.tags.SetTagFontName(this, fontsD.Ninguno);
             this.tags.SetTagFontSize(this, 10F);
             this.tags.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.rndOtro.ResumeLayout(false);
             this.rndAnual.ResumeLayout(false);
             this.rndMensual.ResumeLayout(false);

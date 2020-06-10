@@ -120,9 +120,10 @@ namespace LP2MegaAutos
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
             }
             _usuario = usuario;
-            _usuario.Permisos.Add(EPermisos.All);
+            //_usuario.Permisos.Add(EPermisos.All);
             //_usuario.Permisos.Add(EPermisos.ActualizarBD);
             _usuario.Permisos.Add(EPermisos.Empresa);
+            _usuario.Permisos.Add(EPermisos.Sedes);
             _usuario.Permisos.Add(EPermisos.Drivers);
             _usuario.Permisos.Add(EPermisos.Clientes);
             Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form

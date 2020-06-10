@@ -36,9 +36,12 @@ namespace LP2MegaAutos
             this.title_bar = new System.Windows.Forms.Panel();
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
+            this.btnAdelante = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.reloj_dark = new System.Windows.Forms.Timer(this.components);
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlBackBackground = new System.Windows.Forms.Panel();
+            this.contenedorPantalla1 = new LP2MegaAutos.VentanasPrincipales.ContenedorPantalla();
             this.pmsReportes = new LP2MegaAutos.Framework.UserControls.PanelMenuStrip();
             this.rpBtnMenuHome = new LP2MegaAutos.RoundedPanel();
             this.btnHome = new System.Windows.Forms.Button();
@@ -53,7 +56,6 @@ namespace LP2MegaAutos
             this.btnMenuReportes = new System.Windows.Forms.Button();
             this.panel_toggle_nocturno = new System.Windows.Forms.Panel();
             this.boton_toggle_nocturno = new System.Windows.Forms.Button();
-            this.contenedorPantalla1 = new LP2MegaAutos.VentanasPrincipales.ContenedorPantalla();
             this.title_bar.SuspendLayout();
             this.pnlBackBackground.SuspendLayout();
             this.rpBtnMenuHome.SuspendLayout();
@@ -86,6 +88,8 @@ namespace LP2MegaAutos
             this.title_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.title_bar.Controls.Add(this.boton_minimizar);
             this.title_bar.Controls.Add(this.boton_cerrar);
+            this.title_bar.Controls.Add(this.btnAdelante);
+            this.title_bar.Controls.Add(this.btnAtras);
             this.title_bar.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
             this.title_bar.Name = "title_bar";
@@ -149,6 +153,40 @@ namespace LP2MegaAutos
             this.boton_cerrar.UseVisualStyleBackColor = false;
             this.boton_cerrar.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
             // 
+            // btnAdelante
+            // 
+            this.btnAdelante.Font = new System.Drawing.Font("Lato", 8F, System.Drawing.FontStyle.Bold);
+            this.btnAdelante.Location = new System.Drawing.Point(46, 3);
+            this.btnAdelante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdelante.Name = "btnAdelante";
+            this.btnAdelante.Size = new System.Drawing.Size(35, 19);
+            this.btnAdelante.TabIndex = 40;
+            this.tags.SetTag2(this.btnAdelante, null);
+            this.tags.SetTag3(this.btnAdelante, null);
+            this.tags.SetTagFontName(this.btnAdelante, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnAdelante, 10F);
+            this.tags.SetTagFontStyle(this.btnAdelante, System.Drawing.FontStyle.Regular);
+            this.btnAdelante.Text = "->";
+            this.btnAdelante.UseVisualStyleBackColor = true;
+            this.btnAdelante.Click += new System.EventHandler(this.btnAdelante_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Font = new System.Drawing.Font("Lato", 8F, System.Drawing.FontStyle.Bold);
+            this.btnAtras.Location = new System.Drawing.Point(4, 3);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(38, 19);
+            this.btnAtras.TabIndex = 39;
+            this.tags.SetTag2(this.btnAtras, null);
+            this.tags.SetTag3(this.btnAtras, null);
+            this.tags.SetTagFontName(this.btnAtras, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnAtras, 10F);
+            this.tags.SetTagFontStyle(this.btnAtras, System.Drawing.FontStyle.Regular);
+            this.btnAtras.Text = "<-";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // reloj_dark
             // 
             this.reloj_dark.Interval = 25;
@@ -171,6 +209,22 @@ namespace LP2MegaAutos
             this.tags.SetTagFontName(this.pnlBackBackground, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.pnlBackBackground, 10F);
             this.tags.SetTagFontStyle(this.pnlBackBackground, System.Drawing.FontStyle.Regular);
+            // 
+            // contenedorPantalla1
+            // 
+            this.contenedorPantalla1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.contenedorPantalla1.AutoScroll = true;
+            this.contenedorPantalla1.Location = new System.Drawing.Point(0, 0);
+            this.contenedorPantalla1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contenedorPantalla1.Name = "contenedorPantalla1";
+            this.contenedorPantalla1.Size = new System.Drawing.Size(751, 522);
+            this.contenedorPantalla1.TabIndex = 1;
+            this.tags.SetTag2(this.contenedorPantalla1, null);
+            this.tags.SetTag3(this.contenedorPantalla1, null);
+            this.tags.SetTagFontName(this.contenedorPantalla1, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.contenedorPantalla1, 10F);
+            this.tags.SetTagFontStyle(this.contenedorPantalla1, System.Drawing.FontStyle.Regular);
             // 
             // pmsReportes
             // 
@@ -425,7 +479,7 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.button1, 12F);
             this.tags.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Bold);
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.rpStripBtn_Click);
+            this.button1.Click += new System.EventHandler(this.btnMenuUsuario_Click);
             // 
             // rpBtnMenuReportes
             // 
@@ -521,19 +575,6 @@ namespace LP2MegaAutos
             this.boton_toggle_nocturno.UseVisualStyleBackColor = false;
             this.boton_toggle_nocturno.Click += new System.EventHandler(this.boton_toggle_nocturno_Click);
             // 
-            // contenedorPantalla1
-            // 
-            this.contenedorPantalla1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedorPantalla1.Location = new System.Drawing.Point(0, 0);
-            this.contenedorPantalla1.Name = "contenedorPantalla1";
-            this.contenedorPantalla1.Size = new System.Drawing.Size(751, 522);
-            this.contenedorPantalla1.TabIndex = 5;
-            this.tags.SetTag2(this.contenedorPantalla1, null);
-            this.tags.SetTag3(this.contenedorPantalla1, null);
-            this.tags.SetTagFontName(this.contenedorPantalla1, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.contenedorPantalla1, 10F);
-            this.tags.SetTagFontStyle(this.contenedorPantalla1, System.Drawing.FontStyle.Regular);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,6 +637,8 @@ namespace LP2MegaAutos
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.Button button1;
         private Framework.UserControls.PanelMenuStrip pmsReportes;
+        private System.Windows.Forms.Button btnAdelante;
+        private System.Windows.Forms.Button btnAtras;
         private VentanasPrincipales.ContenedorPantalla contenedorPantalla1;
     }
 }

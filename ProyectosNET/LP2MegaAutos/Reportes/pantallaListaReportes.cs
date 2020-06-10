@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
+using System.Data.SqlTypes;
+using System.Runtime.CompilerServices;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaListaReportes : Pantalla
     {
+
         public pantallaListaReportes()
         {
             InitializeComponent();
+            flpReportes.AutoScroll = true;
         }
+
 
         private void btn_todos_Click(object sender, EventArgs e)
         {

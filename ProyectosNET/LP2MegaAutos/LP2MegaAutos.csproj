@@ -57,6 +57,7 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -106,6 +107,12 @@
     </Compile>
     <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.Designer.cs">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion\Vehiculos\frmAgregarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion\Vehiculos\frmAgregarVehiculo.Designer.cs">
+      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmFiltrarReportes.cs">
       <SubType>Form</SubType>
@@ -299,18 +306,6 @@
     <Compile Include="Inicio\pantallaInicioGerente.Designer.cs">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\pantallaInicioUsuarioGeneral.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Inicio\pantallaInicioUsuarioGeneral.Designer.cs">
-      <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio\pantallaInicioUsuarioNivel2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Inicio\pantallaInicioUsuarioNivel2.Designer.cs">
-      <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reportes\pantallaDetalleReporte.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -327,6 +322,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Framework\DarkMode.cs" />
+    <Compile Include="VentanasPrincipales\BotonesDinamicosHelper.cs" />
     <Compile Include="VentanasPrincipales\ContenedorPantalla.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -513,12 +509,6 @@
     <EmbeddedResource Include="Inicio\pantallaInicioGerente.resx">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\pantallaInicioUsuarioGeneral.resx">
-      <DependentUpon>pantallaInicioUsuarioGeneral.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\pantallaInicioUsuarioNivel2.resx">
-      <DependentUpon>pantallaInicioUsuarioNivel2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\pantallaDetalleReporte.resx">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -685,8 +675,6 @@
     <None Include="Resources\Menu\Logout.png" />
     <None Include="Resources\Menu\Reloj.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Informacion\Vehiculos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

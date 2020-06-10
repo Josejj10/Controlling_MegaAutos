@@ -7,29 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.VentanasPrincipales;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaAjustesUsuarioGerente : UserControl
+    public partial class pantallaAjustesUsuarioGerente : Pantalla
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaAjustesUsuarioGerente _instancia;
-        public static pantallaAjustesUsuarioGerente Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaAjustesUsuarioGerente();
-                return _instancia;
-            }
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            pantallaEditarInformacionPropia pnt = new pantallaEditarInformacionPropia();
+            if (pnt.ShowDialog() == DialogResult.OK)
+            {
+                // Actualizar info
+            }
+            // Sino, nada
         }
-        #endregion instancia
         public pantallaAjustesUsuarioGerente()
         {
             InitializeComponent();
@@ -38,19 +31,7 @@ namespace LP2MegaAutos
 
         private void btnEditarUsu_Click(Object sender, EventArgs e)
         {
-            pantallaEditarInformacionPropia pas = new pantallaEditarInformacionPropia();
 
-            if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
-            ////MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaEditarInformacionPropia.Instancia))
-            //{
-            //    this.Controls.Add(pantallaEditarInformacionPropia.Instancia);
-            //    pantallaEditarInformacionPropia.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaEditarInformacionPropia.Instancia.Parent);
-            //}
-            //pantallaEditarInformacionPropia.Instancia.BringToFront();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -66,6 +47,23 @@ namespace LP2MegaAutos
         private void pantallaAjustesUsuarioGerente_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private bool password_seen = false;
+        private void boton_ver_password_Click(object sender, EventArgs e)
+        {
+            // Cambiar variable 
+            password_seen = !password_seen;
+            if (password_seen)
+            {
+                txt_NuevaCont.PasswordChar = '\0';
+                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
+            }
+            else
+            {
+                txt_NuevaCont.PasswordChar = '•';
+                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            }
         }
     }
 }

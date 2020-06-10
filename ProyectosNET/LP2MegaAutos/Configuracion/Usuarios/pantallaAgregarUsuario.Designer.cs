@@ -498,6 +498,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -586,6 +589,8 @@
             this.tagsExtender1.SetTagFontSize(this.txt_AgregarUsuario, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_AgregarUsuario, System.Drawing.FontStyle.Bold);
             this.txt_AgregarUsuario.Text = "Agregar nombre del usuario...";
+            this.txt_AgregarUsuario.Enter += new System.EventHandler(this.txt_Nombre_Enter);
+            this.txt_AgregarUsuario.Leave += new System.EventHandler(this.txt_Nombre_Leave);
             // 
             // rnd_cancelar
             // 
@@ -688,6 +693,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.txt_AgregarUsuario);
@@ -700,12 +706,19 @@
             this.Controls.Add(this.pnl_TipoDocumento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_NumeroDocumento);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaAgregarUsuario";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaAgregarUsuario_Load);
             this.pnl_Correo.ResumeLayout(false);
             this.pnl_Correo.PerformLayout();

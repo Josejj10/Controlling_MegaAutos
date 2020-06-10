@@ -18,6 +18,5 @@ namespace LP2MegaAutos.VentanasPrincipales
             InitializeComponent();
         }
 
-
     }
 }

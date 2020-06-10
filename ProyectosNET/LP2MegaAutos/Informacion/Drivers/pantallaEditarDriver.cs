@@ -80,5 +80,10 @@ namespace LP2MegaAutos
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

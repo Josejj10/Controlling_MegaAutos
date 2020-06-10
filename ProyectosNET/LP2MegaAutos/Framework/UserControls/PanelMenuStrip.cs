@@ -95,6 +95,16 @@ namespace LP2MegaAutos.Framework.UserControls
             set { this.itemMenuStrip4.Imagen = value; }
         }
 
+        public ImageLayout LayoutImagenes
+        {
+            set {
+                itemMenuStrip1.BackgroundLayout = 
+                    itemMenuStrip2.BackgroundLayout = 
+                    itemMenuStrip3.BackgroundLayout =
+                    itemMenuStrip4.BackgroundLayout = value;
+            }
+        }
+
         #endregion Propiedades
 
         #region Delegar Clicks

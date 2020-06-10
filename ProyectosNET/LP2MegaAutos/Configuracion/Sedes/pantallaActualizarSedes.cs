@@ -19,6 +19,7 @@ namespace LP2MegaAutos
             il_Sedes1.EditarClick += btnEditarClick;
             il_Sedes2.EditarClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
+            flowLayoutPanel1.AutoScroll = true;
         }
 
         private void btnEditarClick(Object sender, EventArgs e)

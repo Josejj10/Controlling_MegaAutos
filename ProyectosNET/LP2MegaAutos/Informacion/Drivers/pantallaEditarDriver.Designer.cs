@@ -37,7 +37,6 @@
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.txt_CuentaContable = new System.Windows.Forms.TextBox();
             this.lbl_CuentaContable = new System.Windows.Forms.Label();
-            this.txt_AgregarCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_NumeroDocumento = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
@@ -52,6 +51,7 @@
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
+            this.lblDriver = new System.Windows.Forms.Label();
             this.pnl_AreaTrabajo.SuspendLayout();
             this.pnl_CuentaContable.SuspendLayout();
             this.pnl_NumeroDocumento.SuspendLayout();
@@ -212,22 +212,6 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_CuentaContable, System.Drawing.FontStyle.Bold);
             this.lbl_CuentaContable.Text = "Cuenta Contable";
             // 
-            // txt_AgregarCliente
-            // 
-            this.txt_AgregarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_AgregarCliente.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_AgregarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.txt_AgregarCliente.Location = new System.Drawing.Point(27, 42);
-            this.txt_AgregarCliente.Name = "txt_AgregarCliente";
-            this.txt_AgregarCliente.Size = new System.Drawing.Size(441, 35);
-            this.txt_AgregarCliente.TabIndex = 51;
-            this.tagsExtender1.SetTag2(this.txt_AgregarCliente, null);
-            this.tagsExtender1.SetTag3(this.txt_AgregarCliente, null);
-            this.tagsExtender1.SetTagFontName(this.txt_AgregarCliente, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_AgregarCliente, 21.75F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_AgregarCliente, System.Drawing.FontStyle.Bold);
-            this.txt_AgregarCliente.Text = "Driver";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
@@ -363,6 +347,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = false;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click_1);
             // 
             // rnd_cancelar
             // 
@@ -429,6 +414,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -529,26 +517,50 @@
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
             // 
+            // lblDriver
+            // 
+            this.lblDriver.AutoSize = true;
+            this.lblDriver.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDriver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.lblDriver.Location = new System.Drawing.Point(27, 42);
+            this.lblDriver.Name = "lblDriver";
+            this.lblDriver.Size = new System.Drawing.Size(96, 35);
+            this.lblDriver.TabIndex = 69;
+            this.tagsExtender1.SetTag2(this.lblDriver, null);
+            this.tagsExtender1.SetTag3(this.lblDriver, null);
+            this.tagsExtender1.SetTagFontName(this.lblDriver, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblDriver, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.lblDriver, System.Drawing.FontStyle.Bold);
+            this.lblDriver.Text = "Driver";
+            // 
             // pantallaEditarDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
+            this.Controls.Add(this.lblDriver);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.pnl_AreaTrabajo);
             this.Controls.Add(this.pnl_CuentaContable);
-            this.Controls.Add(this.txt_AgregarCliente);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_NumeroDocumento);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaEditarDriver";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaEditarDriver_Load);
             this.pnl_AreaTrabajo.ResumeLayout(false);
             this.pnl_AreaTrabajo.PerformLayout();
@@ -575,7 +587,6 @@
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.TextBox txt_CuentaContable;
         private System.Windows.Forms.Label lbl_CuentaContable;
-        private System.Windows.Forms.TextBox txt_AgregarCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_NumeroDocumento;
         private RoundedPanel rnd_color_1;
@@ -590,5 +601,6 @@
         private System.Windows.Forms.Button boton_minimizar;
         private System.Windows.Forms.Button boton_cerrar;
         private RoundedPanel rpTopMain;
+        private System.Windows.Forms.Label lblDriver;
     }
 }

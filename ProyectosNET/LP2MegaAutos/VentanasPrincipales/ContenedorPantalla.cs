@@ -15,32 +15,40 @@ namespace LP2MegaAutos.VentanasPrincipales
         
         // Lista de pantallas
         private BindingList<Pantalla> _pantallas;
-
+        private Pantalla pInicio = new pantallaInicioGerente();
 
         public ContenedorPantalla()
         {
             InitializeComponent();
-            _pantallas = new BindingList<Pantalla>();            
+            _pantallas = new BindingList<Pantalla>();
+            
+            // Problema Scroll: Si funciona cuando se añade estaticamente tanto
+            // mediante PantallaActual como directamente a controles
+            // PantallaActual = new pantallaListaReportes();
+            // Controls.Add(new pantallaListaReportes());
+        }
+
+        public Pantalla getPantallaActual()
+        {
+            return Controls.Count > 0 ? (Pantalla)Controls[0] : pInicio;
+
         }
 
         public Pantalla PantallaActual
         {
-            get
-            {
-                return (Pantalla) Controls[0];
-            }
             set
             {
-                // Agregar a la lista de pantallas
+                // Agregar a la lista de pantallas  
                 _pantallas.Add(value);
-                   
+
                 // Quitar la ultima pantalla 
-                if (Controls.Count != 0) {
+                if (Controls.Count != 0)
+                {
                     Controls.Remove(Controls[0]);
                 }
+
                 // Agregar pantalla a los controles del contenedor
                 Controls.Add(value);
-                value.BringToFront();      
             }
         }
 
@@ -48,10 +56,12 @@ namespace LP2MegaAutos.VentanasPrincipales
         {
             get
             {
+                // TODO agregar limite
+
                 if (!puedeVolver())
                     return null;
 
-                return _pantallas.ElementAt(_pantallas.IndexOf(PantallaActual) - 1);
+                return _pantallas.ElementAt(_pantallas.IndexOf(getPantallaActual()) - 1);
             }
         }
         
@@ -61,18 +71,18 @@ namespace LP2MegaAutos.VentanasPrincipales
             {
                 if(!puedeAdelante())
                     return null;
-                return _pantallas.ElementAt(_pantallas.IndexOf(PantallaActual) + 1);
+                return _pantallas.ElementAt(_pantallas.IndexOf(getPantallaActual()) + 1);
             }
         }
 
         public bool puedeVolver()
         {
-            return Controls.Count != 0 ? _pantallas.IndexOf(PantallaActual) != 0 : false;
+            return Controls.Count != 0 ? _pantallas.IndexOf(getPantallaActual()) != 0 : false;
         }
 
         public bool puedeAdelante()
         {
-            return Controls.Count !=0 ? ! (_pantallas.IndexOf(PantallaActual) + 1 == _pantallas.Count) : false;
+            return Controls.Count !=0 ? ! (_pantallas.IndexOf(getPantallaActual()) + 1 == _pantallas.Count) : false;
         }
 
         public void volverUltimaPantalla()
@@ -82,7 +92,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 return;
             Pantalla ultima = UltimaPantalla;
             if (ultima == null) return;
-            Controls.Remove(PantallaActual);
+            Controls.Remove(getPantallaActual());
             Controls.Add(ultima);
         }
 
@@ -92,7 +102,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 return;
             Pantalla adelante = PantallaAdelante;
             if (adelante == null) return;
-            Controls.Remove(PantallaActual);
+            Controls.Remove(getPantallaActual());
             Controls.Add(adelante);
         }
 

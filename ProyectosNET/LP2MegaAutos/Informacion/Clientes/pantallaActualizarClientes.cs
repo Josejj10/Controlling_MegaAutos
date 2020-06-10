@@ -13,27 +13,14 @@ namespace LP2MegaAutos
 {
     public partial class pantallaActualizarClientes : Pantalla
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaActualizarClientes _instancia;
-        public static pantallaActualizarClientes Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaActualizarClientes();
-                return _instancia;
-            }
-        }
-        #endregion instancia
         public pantallaActualizarClientes()
         {
             InitializeComponent();
             il_Clientes1.EditarClick += btnEditarClick;
             il_Clientes2.EditarClick += btnEditarClick;
             il_Clientes3.EditarClick += btnEditarClick;
-
             this.btn_Agregar.Click += btnAgregarClick;
+            flpClientes.AutoScroll = true;
         }
         private void btnEditarClick(Object sender, EventArgs e)
         {
@@ -138,6 +125,17 @@ namespace LP2MegaAutos
         private void il_Clientes1_Load(object sender, EventArgs e)
         {
 
+        }
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == "Buscar")
+                txt_Buscar.Text = string.Empty;
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
         }
 
     }

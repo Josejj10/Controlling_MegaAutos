@@ -44,7 +44,7 @@
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpUsuarios = new System.Windows.Forms.FlowLayoutPanel();
             this.il_Usuarios1 = new LP2MegaAutos.itemLista();
             this.il_Usuarios3 = new LP2MegaAutos.itemLista();
             this.il_Usuarios2 = new LP2MegaAutos.itemLista();
@@ -57,7 +57,7 @@
             this.rndZA.SuspendLayout();
             this.rndAZ.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flpUsuarios.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +107,8 @@
             this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
+            this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // cTxt_MasFiltros
             // 
@@ -196,6 +198,7 @@
             this.btnReciente.Text = "Reciente";
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
             // rndAntiguo
             // 
@@ -246,6 +249,7 @@
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
             // rndZA
             // 
@@ -296,6 +300,7 @@
             this.btnZA.Text = "Z - A";
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
             // 
             // rndAZ
             // 
@@ -349,7 +354,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.flpUsuarios);
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaServicios);
             this.panel3.Location = new System.Drawing.Point(171, 46);
@@ -362,24 +367,24 @@
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
             // 
-            // flowLayoutPanel1
+            // flpUsuarios
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.flowLayoutPanel1.Controls.Add(this.il_Usuarios1);
-            this.flowLayoutPanel1.Controls.Add(this.il_Usuarios3);
-            this.flowLayoutPanel1.Controls.Add(this.il_Usuarios2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(566, 395);
-            this.flowLayoutPanel1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
+            this.flpUsuarios.AutoScroll = true;
+            this.flpUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.flpUsuarios.Controls.Add(this.il_Usuarios1);
+            this.flpUsuarios.Controls.Add(this.il_Usuarios3);
+            this.flpUsuarios.Controls.Add(this.il_Usuarios2);
+            this.flpUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpUsuarios.Location = new System.Drawing.Point(0, 27);
+            this.flpUsuarios.Name = "flpUsuarios";
+            this.flpUsuarios.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.flpUsuarios.Size = new System.Drawing.Size(566, 395);
+            this.flpUsuarios.TabIndex = 54;
+            this.tagsExtender1.SetTag2(this.flpUsuarios, null);
+            this.tagsExtender1.SetTag3(this.flpUsuarios, null);
+            this.tagsExtender1.SetTagFontName(this.flpUsuarios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpUsuarios, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpUsuarios, System.Drawing.FontStyle.Regular);
             // 
             // il_Usuarios1
             // 
@@ -546,7 +551,7 @@
             this.rndZA.ResumeLayout(false);
             this.rndAZ.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flpUsuarios.ResumeLayout(false);
             this.rpn_ListaServicios.ResumeLayout(false);
             this.rpn_ListaServicios.PerformLayout();
             this.ResumeLayout(false);
@@ -569,7 +574,7 @@
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpUsuarios;
         private itemLista il_Usuarios1;
         private itemLista il_Usuarios3;
         private itemLista il_Usuarios2;

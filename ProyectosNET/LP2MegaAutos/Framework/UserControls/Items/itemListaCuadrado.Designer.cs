@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(itemListaCuadrado));
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
-            this.lblTexto = new System.Windows.Forms.Label();
             this.pnlImg = new System.Windows.Forms.Panel();
+            this.lblTexto = new System.Windows.Forms.Label();
             this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +63,21 @@
             this.roundedPanel1.YBorde = 0;
             this.roundedPanel1.YPanel = 0;
             // 
+            // pnlImg
+            // 
+            this.pnlImg.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImg.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
+            this.pnlImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlImg.Location = new System.Drawing.Point(36, 14);
+            this.pnlImg.Name = "pnlImg";
+            this.pnlImg.Size = new System.Drawing.Size(35, 35);
+            this.pnlImg.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.pnlImg, null);
+            this.tagsExtender1.SetTag3(this.pnlImg, null);
+            this.tagsExtender1.SetTagFontName(this.pnlImg, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlImg, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlImg, System.Drawing.FontStyle.Regular);
+            // 
             // lblTexto
             // 
             this.lblTexto.AutoSize = true;
@@ -80,21 +94,6 @@
             this.tagsExtender1.SetTagFontSize(this.lblTexto, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lblTexto, System.Drawing.FontStyle.Bold);
             this.lblTexto.Text = "Texto principal";
-            // 
-            // pnlImg
-            // 
-            this.pnlImg.BackColor = System.Drawing.Color.Transparent;
-            this.pnlImg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImg.BackgroundImage")));
-            this.pnlImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlImg.Location = new System.Drawing.Point(36, 14);
-            this.pnlImg.Name = "pnlImg";
-            this.pnlImg.Size = new System.Drawing.Size(35, 35);
-            this.pnlImg.TabIndex = 1;
-            this.tagsExtender1.SetTag2(this.pnlImg, null);
-            this.tagsExtender1.SetTag3(this.pnlImg, null);
-            this.tagsExtender1.SetTagFontName(this.pnlImg, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.pnlImg, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.pnlImg, System.Drawing.FontStyle.Regular);
             // 
             // itemListaCuadrado
             // 

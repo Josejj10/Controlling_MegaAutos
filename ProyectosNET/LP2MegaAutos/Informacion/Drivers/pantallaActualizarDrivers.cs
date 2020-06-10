@@ -13,20 +13,6 @@ namespace LP2MegaAutos
 {
     public partial class pantallaActualizarDrivers : Pantalla
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaActualizarDrivers _instancia;
-        public static pantallaActualizarDrivers Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaActualizarDrivers();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-
         public pantallaActualizarDrivers()
         {
 
@@ -35,6 +21,7 @@ namespace LP2MegaAutos
             il_Drivers2.EditarClick += btnEditarClick;
             il_Drivers3.EditarClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
+            flpDrivers.AutoScroll = true;
         }
 
         private void btnEditarClick(Object sender, EventArgs e)
@@ -135,6 +122,19 @@ namespace LP2MegaAutos
         private void pantallaActualizarDrivers_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == "Buscar")
+                txt_Buscar.Text = string.Empty;
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
         }
     }
 }

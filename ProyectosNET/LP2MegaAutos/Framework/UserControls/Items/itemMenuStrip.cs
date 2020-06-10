@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace LP2MegaAutos.Framework.UserControls.Items
 {
@@ -24,6 +25,12 @@ namespace LP2MegaAutos.Framework.UserControls.Items
             get { return btnItem.BackgroundImage;  }
             set { btnItem.BackgroundImage = value; }
         }
+
+        public ImageLayout BackgroundLayout
+        {
+            set { btnItem.BackgroundImageLayout = value; }
+        }
+
         #endregion Propiedades
 
         public delegate void MouseLeaveEventHandler(object sender, EventArgs e);
@@ -42,6 +49,11 @@ namespace LP2MegaAutos.Framework.UserControls.Items
         {
             ButtonClickEventHandler h = click;
             if (h != null) h(this, e);
+        }
+
+        private void itemMenuStrip_SizeChanged(object sender, EventArgs e)
+        {
+            btnItem.Size = this.Size;
         }
     }
 }

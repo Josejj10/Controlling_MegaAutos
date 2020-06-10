@@ -596,7 +596,7 @@
             this.boton_ver_password.ForeColor = System.Drawing.Color.White;
             this.boton_ver_password.Location = new System.Drawing.Point(264, 18);
             this.boton_ver_password.Name = "boton_ver_password";
-            this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
+            this.boton_ver_password.Size = new System.Drawing.Size(25, 20);
             this.boton_ver_password.TabIndex = 3;
             this.boton_ver_password.TabStop = false;
             this.boton_ver_password.Tag = "botonImagen";

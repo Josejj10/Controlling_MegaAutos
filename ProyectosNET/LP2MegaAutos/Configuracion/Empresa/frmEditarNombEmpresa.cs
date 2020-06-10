@@ -1,23 +1,23 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
-namespace LP2MegaAutos
+namespace LP2MegaAutos.Configuracion.Empresa
 {
-    public partial class pantallaEditarSede : MetroForm
+    public partial class frmEditarNombEmpresa : MetroForm
     {
-        public pantallaEditarSede()
+        public frmEditarNombEmpresa()
         {
             InitializeComponent();
         }
-
+        
         #region title_bar
 
         #region botones
@@ -53,15 +53,15 @@ namespace LP2MegaAutos
         #endregion movement
 
         #endregion title_bar
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-        }
     }
 }

@@ -38,12 +38,12 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.txt_AgregarAreaTrabajo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_nombAreaTrabajo = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
             this.txt_nombAreaTrabajo = new System.Windows.Forms.TextBox();
             this.lbl_nombAreaTrabajo = new System.Windows.Forms.Label();
+            this.lbl_AgregarAreaTrabajo = new System.Windows.Forms.Label();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
@@ -82,6 +82,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -251,22 +254,6 @@
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // txt_AgregarAreaTrabajo
-            // 
-            this.txt_AgregarAreaTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_AgregarAreaTrabajo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_AgregarAreaTrabajo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_AgregarAreaTrabajo.Location = new System.Drawing.Point(27, 42);
-            this.txt_AgregarAreaTrabajo.Name = "txt_AgregarAreaTrabajo";
-            this.txt_AgregarAreaTrabajo.Size = new System.Drawing.Size(441, 35);
-            this.txt_AgregarAreaTrabajo.TabIndex = 65;
-            this.tagsExtender1.SetTag2(this.txt_AgregarAreaTrabajo, null);
-            this.tagsExtender1.SetTag3(this.txt_AgregarAreaTrabajo, null);
-            this.tagsExtender1.SetTagFontName(this.txt_AgregarAreaTrabajo, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_AgregarAreaTrabajo, 21.75F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_AgregarAreaTrabajo, System.Drawing.FontStyle.Bold);
-            this.txt_AgregarAreaTrabajo.Text = "Agregar Área de Trabajo";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
@@ -356,19 +343,41 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_nombAreaTrabajo, System.Drawing.FontStyle.Bold);
             this.lbl_nombAreaTrabajo.Text = "Nombre Área Trabajo";
             // 
+            // lbl_AgregarAreaTrabajo
+            // 
+            this.lbl_AgregarAreaTrabajo.AutoSize = true;
+            this.lbl_AgregarAreaTrabajo.BackColor = System.Drawing.Color.White;
+            this.lbl_AgregarAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_AgregarAreaTrabajo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AgregarAreaTrabajo.ForeColor = System.Drawing.Color.Black;
+            this.lbl_AgregarAreaTrabajo.Location = new System.Drawing.Point(27, 42);
+            this.lbl_AgregarAreaTrabajo.Name = "lbl_AgregarAreaTrabajo";
+            this.lbl_AgregarAreaTrabajo.Size = new System.Drawing.Size(322, 35);
+            this.lbl_AgregarAreaTrabajo.TabIndex = 68;
+            this.tagsExtender1.SetTag2(this.lbl_AgregarAreaTrabajo, null);
+            this.tagsExtender1.SetTag3(this.lbl_AgregarAreaTrabajo, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_AgregarAreaTrabajo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_AgregarAreaTrabajo, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_AgregarAreaTrabajo, System.Drawing.FontStyle.Bold);
+            this.lbl_AgregarAreaTrabajo.Text = "Agregar Área de Trabajo";
+            this.lbl_AgregarAreaTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pantallaAgregarAreaTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.Controls.Add(this.lbl_AgregarAreaTrabajo);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
-            this.Controls.Add(this.txt_AgregarAreaTrabajo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_nombAreaTrabajo);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaAgregarAreaTrabajo";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
@@ -396,11 +405,11 @@
         private System.Windows.Forms.Button btn_cancelar;
         private RoundedPanel rnd_guardar;
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.TextBox txt_AgregarAreaTrabajo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_nombAreaTrabajo;
         private RoundedPanel rnd_color_1;
         private System.Windows.Forms.TextBox txt_nombAreaTrabajo;
         private System.Windows.Forms.Label lbl_nombAreaTrabajo;
+        private System.Windows.Forms.Label lbl_AgregarAreaTrabajo;
     }
 }

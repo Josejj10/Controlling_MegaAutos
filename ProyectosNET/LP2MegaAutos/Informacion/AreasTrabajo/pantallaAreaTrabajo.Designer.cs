@@ -107,6 +107,8 @@
             this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
+            this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // cTxt_MasFiltros
             // 
@@ -115,7 +117,7 @@
             this.cTxt_MasFiltros.Font = new System.Drawing.Font("Montserrat", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTxt_MasFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
+            this.cTxt_MasFiltros.Location = new System.Drawing.Point(22, 272);
             this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
             this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 38);
             this.cTxt_MasFiltros.TabIndex = 57;
@@ -134,7 +136,7 @@
             this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Agregar.ForeColor = System.Drawing.Color.White;
-            this.btn_Agregar.Location = new System.Drawing.Point(27, 49);
+            this.btn_Agregar.Location = new System.Drawing.Point(26, 48);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(78, 22);
             this.btn_Agregar.TabIndex = 52;
@@ -155,7 +157,7 @@
             this.rndReciente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndReciente.Controls.Add(this.btnReciente);
             this.rndReciente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndReciente.Location = new System.Drawing.Point(25, 227);
+            this.rndReciente.Location = new System.Drawing.Point(24, 227);
             this.rndReciente.MenosHeightBorde = 1;
             this.rndReciente.MenosHeightPanel = 1;
             this.rndReciente.MenosWidthBorde = 1;
@@ -206,7 +208,7 @@
             this.rndAntiguo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndAntiguo.Controls.Add(this.btnAntiguo);
             this.rndAntiguo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndAntiguo.Location = new System.Drawing.Point(26, 181);
+            this.rndAntiguo.Location = new System.Drawing.Point(25, 181);
             this.rndAntiguo.MenosHeightBorde = 1;
             this.rndAntiguo.MenosHeightPanel = 1;
             this.rndAntiguo.MenosWidthBorde = 1;
@@ -257,7 +259,7 @@
             this.rndZA.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndZA.Controls.Add(this.btnZA);
             this.rndZA.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndZA.Location = new System.Drawing.Point(26, 135);
+            this.rndZA.Location = new System.Drawing.Point(25, 135);
             this.rndZA.MenosHeightBorde = 1;
             this.rndZA.MenosHeightPanel = 1;
             this.rndZA.MenosWidthBorde = 1;
@@ -308,7 +310,7 @@
             this.rndAZ.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rndAZ.Controls.Add(this.btnAZ);
             this.rndAZ.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndAZ.Location = new System.Drawing.Point(26, 89);
+            this.rndAZ.Location = new System.Drawing.Point(25, 89);
             this.rndAZ.MenosHeightBorde = 1;
             this.rndAZ.MenosHeightPanel = 1;
             this.rndAZ.MenosWidthBorde = 1;

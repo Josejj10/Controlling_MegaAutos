@@ -17,7 +17,6 @@ C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\L
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaAreaTrabajo.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaEditarInformacionPropia.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioGerente.resources
-C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioNivel2.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Properties.Resources.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csproj.GenerateResource.cache
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csproj.CoreCompileInputs.cache
@@ -167,7 +166,6 @@ C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\L
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaGenerarReporte.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInformacionEmpresa.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInformacionEmpresaGerente.resources
-C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaInicioUsuarioGeneral.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaDetalleReporte.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pantallaListaReportes.resources
 C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.VentanasPrincipales.Pantalla.resources
@@ -231,3 +229,7 @@ D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.pdb
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\bin\Debug\LP2MegaAutos.pdb
 D:\Documents\NetBeansProjects\TA\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.csprojAssemblyReference.cache
+C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.VentanasPrincipales.pantallaEliminar.resources
+C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Informacion.Vehiculos.pantallaActualizarVehiculos.resources
+C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Informacion.Vehiculos.frmAgregarVehiculo.resources
+C:\Users\Nicolas\Documents\NetBeansProjects\Controlling_MegaAutos\ProyectosNET\LP2MegaAutos\obj\Debug\LP2MegaAutos.Informacion.Vehiculos.frmEditarVehiculo.resources

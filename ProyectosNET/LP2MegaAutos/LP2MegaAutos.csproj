@@ -252,12 +252,6 @@
     <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.Designer.cs">
       <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuario.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuario.Designer.cs">
-      <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,11 +306,11 @@
     <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresa.Designer.cs">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\pantallaInicioGerente.cs">
+    <Compile Include="Inicio\pantallaInicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Inicio\pantallaInicioGerente.Designer.cs">
-      <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    <Compile Include="Inicio\pantallaInicio.Designer.cs">
+      <DependentUpon>pantallaInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\pantallaDetalleReporte.cs">
       <SubType>UserControl</SubType>
@@ -500,9 +494,6 @@
     <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.resx">
       <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuario.resx">
-      <DependentUpon>pantallaAjustesUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,8 +524,8 @@
     <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresa.resx">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\pantallaInicioGerente.resx">
-      <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio\pantallaInicio.resx">
+      <DependentUpon>pantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\pantallaDetalleReporte.resx">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>

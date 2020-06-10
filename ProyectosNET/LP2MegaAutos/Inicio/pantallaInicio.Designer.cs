@@ -154,7 +154,6 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnImgVehiculo, 10F);
             this.tags.SetTagFontStyle(this.btnImgVehiculo, System.Drawing.FontStyle.Regular);
             this.btnImgVehiculo.UseVisualStyleBackColor = false;
-            this.btnImgVehiculo.Click += new System.EventHandler(this.btnImgVehiculo_Click);
             // 
             // btnImgCliente
             // 
@@ -193,7 +192,6 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnImgAreaTrabajo, 10F);
             this.tags.SetTagFontStyle(this.btnImgAreaTrabajo, System.Drawing.FontStyle.Regular);
             this.btnImgAreaTrabajo.UseVisualStyleBackColor = false;
-            this.btnImgAreaTrabajo.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnGenerarVehiculo
             // 

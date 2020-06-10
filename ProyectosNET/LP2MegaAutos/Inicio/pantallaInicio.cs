@@ -25,10 +25,10 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             _usuario = u;
-            crearBotonesSegunPermisos();
         }
 
-        private void crearBotonesSegunPermisos()
+
+        public void crearBotonesSegunPermisos()
         {
             // Ver los permisos que tiene el usuario
             // Trabajandolo con flags
@@ -84,8 +84,10 @@ namespace LP2MegaAutos
             return ims;
         }
 
-        private void crearBotones(int xLoc, BindingList<string> nombres, BindingList<EPermisos> per, BindingList<Image> imgs)
+        private void crearBotones(int xLoc, BindingList<string> nombres, BindingList<EPermisos> per, BindingList<Image> imgs, Button btnMenu)
         {
+            ContenedorPantalla cnt = ((frmPrincipal)this.Parent.Parent.Parent).ContenedorPantallas;
+            Panel panelMenu = ((frmPrincipal)this.Parent.Parent.Parent).PanelMenu;
             // Crear segun permisos 
             // Si tiene el permiso todos
             if (_usuario.Permisos.Contains(EPermisos.All))
@@ -98,7 +100,23 @@ namespace LP2MegaAutos
 
                 // TODO Suscribir todos
                 // ims1.click += itemStrip_Click;
+                // pms.item1Click += 
+                // new PanelMenuStrip.ButtonClickEventHandler
+                // (BotonesDinamicosHelper.asignarBoton(per[0],
+                //     btnMenu, ims[0], panelMenu, contenedorPantalla1));
 
+                ims1.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[0],btnMenu, imgs[1],
+                    panelMenu, cnt));
+                ims2.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[1],btnMenu, imgs[2],
+                    panelMenu, cnt));
+                ims3.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[2],btnMenu, imgs[2],
+                    panelMenu, cnt));
+                ims4.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[3],btnMenu, imgs[3],
+                    panelMenu, cnt));
                 return;
             }
 
@@ -122,6 +140,9 @@ namespace LP2MegaAutos
 
                 // TODO Suscribir el itemMenuStrip al click delegandolo al frmPrincipal
                 // ims.click += itemStrip_Click;
+                ims.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[0], btnMenu, imgs[0],
+                    panelMenu, cnt));
 
                 // Ya se esta utilizado el item 1
                 menu |= 8;
@@ -137,7 +158,9 @@ namespace LP2MegaAutos
                 itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[1], imgs[1]);
 
                 // Suscribir el itemMenuStrip al click
-
+                ims.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[1], btnMenu, imgs[1],
+                    panelMenu, cnt));
 
                 // Ya se esta utilizando este item
                 menu |= yLoc == 176 ? 8 : 4;
@@ -152,6 +175,9 @@ namespace LP2MegaAutos
                 itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[2], imgs[2]);
 
                 // Suscribir el itemMenuStrip al click
+                ims.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[2], btnMenu, imgs[2],
+                    panelMenu, cnt));
 
                 // Ya se esta usando este item 
                 menu |= yLoc == 176 ? 8 : yLoc == 255 ? 4 : 2;  
@@ -167,7 +193,9 @@ namespace LP2MegaAutos
                 itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[3], imgs[3]);
 
                 // Suscribir el itemMenuStrip al click
-
+                ims.click += new itemMenuStrip.ButtonClickEventHandler(
+                    BotonesDinamicosHelper.asignarBoton(per[3], btnMenu, imgs[3],
+                    panelMenu, cnt));
                 // No se llena menu porque ya no se usara mas 
             }
 
@@ -193,9 +221,11 @@ namespace LP2MegaAutos
             imgs.Add(Resources.AreaTrabajo);            
             imgs.Add(Resources.Clientes);            
             imgs.Add(Resources.Driver);            
-            imgs.Add(Resources.car);            
+            imgs.Add(Resources.car);
 
-            crearBotones(540, nombres, per, imgs);
+            Button btnInfo = ((frmPrincipal)this.Parent.Parent.Parent).getBotonPanelMenuString("btnMenuInformacion");
+
+            crearBotones(540, nombres, per, imgs, btnInfo);
         }
 
         private void crearBotonesConfiguracion()
@@ -220,7 +250,10 @@ namespace LP2MegaAutos
             imgs.Add(Resources.Sede);
             imgs.Add(Resources.Empresa);
 
-            crearBotones(626, nombres, per, imgs);
+            Button btnConfig = ((frmPrincipal)this.Parent.Parent.Parent).
+                getBotonPanelMenuString("btnMenuConfiguracion");
+            
+            crearBotones(626, nombres, per, imgs,btnConfig);
 
 
         }
@@ -229,30 +262,44 @@ namespace LP2MegaAutos
         // Crear Event Handlers para que la pantalla Principal 
         // Abra del Menu
         public delegate void ButtonClickEventHandler(object sender, EventArgs e);
-        public event ButtonClickEventHandler itemStripClick;
-
-        private void itemStrip_Click(object sender, EventArgs e)
-        {
-            ButtonClickEventHandler h = itemStripClick;
-            if (h != null) h(this, e);
-        }
+        public event ButtonClickEventHandler perfilUsuarioClick;
+        public event ButtonClickEventHandler ListaReportesClick;
+        public event ButtonClickEventHandler ReporteAreaTrabajoClick;
+        public event ButtonClickEventHandler ReporteClienteClick;
+        public event ButtonClickEventHandler ReporteVehiculoClick;
 
         #endregion Event Handlers
 
+
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            // Delegar al padre para 
+            ButtonClickEventHandler h = perfilUsuarioClick;
+            if (h != null) h(this, e);
         }
 
 
-        private void btnImgVehiculo_Click(object sender, EventArgs e)
+        private void btnGenerarVehiculo_Click(object sender, EventArgs e)
         {
-
+            ButtonClickEventHandler h = ReporteAreaTrabajoClick;
+            if (h != null) h(this, e);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnGenerarAreaTrabajo_Click(object sender, EventArgs e)
         {
+            ButtonClickEventHandler h = ReporteAreaTrabajoClick;
+            if (h != null) h(this, e);
+        }
 
+        private void btnGenerarCliente_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = ReporteAreaTrabajoClick;
+            if (h != null) h(this, e);
+        }
+
+        private void btnListaReportes_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = ListaReportesClick;
+            if (h != null) h(this, e);
         }
     }
 }

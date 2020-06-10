@@ -15,7 +15,7 @@ namespace LP2MegaAutos
 {
     public partial class pantallaListaReportes : Pantalla
     {
-
+        private string _btnSeleccionado="Todos";
         public pantallaListaReportes()
         {
             InitializeComponent();
@@ -36,6 +36,8 @@ namespace LP2MegaAutos
             this.btn_vehiculo.BackColor = Color.Transparent;
             this.btn_AreaTrabajo.BackColor = Color.Transparent;
             this.btn_cliente.BackColor = Color.Transparent;
+
+            this._btnSeleccionado = "Todos";
         }
 
         private void btn_vehiculo_Click(object sender, EventArgs e)
@@ -51,6 +53,8 @@ namespace LP2MegaAutos
             this.btn_vehiculo.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btn_AreaTrabajo.BackColor = Color.Transparent;
             this.btn_cliente.BackColor = Color.Transparent;
+
+            this._btnSeleccionado = "Vehiculo";
         }
 
         private void btn_AreaTrabajo_Click(object sender, EventArgs e)
@@ -66,6 +70,8 @@ namespace LP2MegaAutos
             this.btn_vehiculo.BackColor = Color.Transparent;
             this.btn_AreaTrabajo.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btn_cliente.BackColor = Color.Transparent;
+
+            this._btnSeleccionado = "AreaTrabajo";
         }
 
         private void btn_cliente_Click(object sender, EventArgs e)
@@ -81,11 +87,13 @@ namespace LP2MegaAutos
             this.btn_vehiculo.BackColor = Color.Transparent;
             this.btn_AreaTrabajo.BackColor = Color.Transparent;
             this.btn_cliente.BackColor = Colores.AmarilloInteractivoMenos1;
+
+            this._btnSeleccionado = "Cliente";
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            pantallaGenerarReporte pgr = new pantallaGenerarReporte();
+            pantallaGenerarReporte pgr = new pantallaGenerarReporte(this._btnSeleccionado);
             if (pgr.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
             //if (!this.Parent.Controls.Contains(pantallaGenerarReporte.Instancia))

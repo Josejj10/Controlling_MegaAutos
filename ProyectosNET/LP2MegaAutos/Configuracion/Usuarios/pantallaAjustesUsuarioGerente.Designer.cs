@@ -51,10 +51,9 @@
             this.lbl_NombreAjustes = new System.Windows.Forms.Label();
             this.rpn_ListaPermisosUsuario = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaPermisosUsuario = new System.Windows.Forms.Label();
-            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.flpPermisos = new System.Windows.Forms.FlowLayoutPanel();
-            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
+            this.roundedPanel5 = new LP2MegaAutos.RoundedPanel();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -270,9 +269,9 @@
             this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(230, 3);
+            this.boton_ver_password.Location = new System.Drawing.Point(230, 4);
             this.boton_ver_password.Name = "boton_ver_password";
-            this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
+            this.boton_ver_password.Size = new System.Drawing.Size(25, 20);
             this.boton_ver_password.TabIndex = 0;
             this.boton_ver_password.TabStop = false;
             this.boton_ver_password.Tag = "botonImagen";
@@ -398,7 +397,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.panel4.Location = new System.Drawing.Point(19, 87);
+            this.panel4.Location = new System.Drawing.Point(19, 76);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(719, 2);
             this.panel4.TabIndex = 47;
@@ -413,7 +412,7 @@
             this.lbl_NombreAjustes.AutoSize = true;
             this.lbl_NombreAjustes.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NombreAjustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lbl_NombreAjustes.Location = new System.Drawing.Point(27, 42);
+            this.lbl_NombreAjustes.Location = new System.Drawing.Point(21, 19);
             this.lbl_NombreAjustes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NombreAjustes.Name = "lbl_NombreAjustes";
             this.lbl_NombreAjustes.Size = new System.Drawing.Size(151, 35);
@@ -471,34 +470,6 @@
             this.lbl_ListaPermisosUsuario.Text = "Permisos";
             this.lbl_ListaPermisosUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rpTopMain
-            // 
-            this.rpTopMain.ArcRadiusBorde = 15;
-            this.rpTopMain.ArcRadiusPanel = 15;
-            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpTopMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 0);
-            this.rpTopMain.MenosHeightBorde = 1;
-            this.rpTopMain.MenosHeightPanel = 1;
-            this.rpTopMain.MenosWidthBorde = 1;
-            this.rpTopMain.MenosWidthPanel = 1;
-            this.rpTopMain.Name = "rpTopMain";
-            this.rpTopMain.PorcLuzColorBorde = 0;
-            this.rpTopMain.Size = new System.Drawing.Size(751, 40);
-            this.rpTopMain.TabIndex = 53;
-            this.tagsExtender1.SetTag2(this.rpTopMain, null);
-            this.tagsExtender1.SetTag3(this.rpTopMain, null);
-            this.tagsExtender1.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rpTopMain, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
-            this.rpTopMain.XBorde = 0;
-            this.rpTopMain.XPanel = 0;
-            this.rpTopMain.YBorde = 0;
-            this.rpTopMain.YPanel = 0;
-            // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.White;
@@ -512,7 +483,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(689, 49);
+            this.btnEditar.Location = new System.Drawing.Point(706, 26);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(32, 32);
             this.btnEditar.TabIndex = 54;
@@ -539,43 +510,41 @@
             this.tagsExtender1.SetTagFontSize(this.flpPermisos, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flpPermisos, System.Drawing.FontStyle.Regular);
             // 
-            // roundedPanel4
+            // roundedPanel5
             // 
-            this.roundedPanel4.ArcRadiusBorde = 5;
-            this.roundedPanel4.ArcRadiusPanel = 5;
-            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Bottom;
-            this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.roundedPanel4.Location = new System.Drawing.Point(0, 504);
-            this.roundedPanel4.MenosHeightBorde = 1;
-            this.roundedPanel4.MenosHeightPanel = 1;
-            this.roundedPanel4.MenosWidthBorde = 1;
-            this.roundedPanel4.MenosWidthPanel = 1;
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.PorcLuzColorBorde = 0;
-            this.roundedPanel4.Size = new System.Drawing.Size(751, 16);
-            this.roundedPanel4.TabIndex = 56;
-            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
-            this.roundedPanel4.XBorde = 0;
-            this.roundedPanel4.XPanel = 0;
-            this.roundedPanel4.YBorde = 0;
-            this.roundedPanel4.YPanel = 0;
+            this.roundedPanel5.ArcRadiusBorde = 5;
+            this.roundedPanel5.ArcRadiusPanel = 5;
+            this.roundedPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.roundedPanel5.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel5.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
+            this.roundedPanel5.Location = new System.Drawing.Point(106, 481);
+            this.roundedPanel5.MenosHeightBorde = 1;
+            this.roundedPanel5.MenosHeightPanel = 1;
+            this.roundedPanel5.MenosWidthBorde = 1;
+            this.roundedPanel5.MenosWidthPanel = 1;
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.PorcLuzColorBorde = 0;
+            this.roundedPanel5.Size = new System.Drawing.Size(538, 18);
+            this.roundedPanel5.TabIndex = 57;
+            this.tagsExtender1.SetTag2(this.roundedPanel5, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel5, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel5, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel5, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel5, System.Drawing.FontStyle.Regular);
+            this.roundedPanel5.XBorde = 0;
+            this.roundedPanel5.XPanel = 0;
+            this.roundedPanel5.YBorde = 0;
+            this.roundedPanel5.YPanel = 0;
             // 
             // pantallaAjustesUsuarioGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.roundedPanel4);
+            this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.flpPermisos);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -630,9 +599,8 @@
         private System.Windows.Forms.Label lbl_NombreAjustes;
         private RoundedPanel rpn_ListaPermisosUsuario;
         private System.Windows.Forms.Label lbl_ListaPermisosUsuario;
-        private RoundedPanel rpTopMain;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.FlowLayoutPanel flpPermisos;
-        private RoundedPanel roundedPanel4;
+        private RoundedPanel roundedPanel5;
     }
 }

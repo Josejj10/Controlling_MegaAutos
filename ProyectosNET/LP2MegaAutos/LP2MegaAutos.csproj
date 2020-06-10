@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.Designer.cs">
+      <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Framework\UserControls\Items\itemMenuStrip.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +119,18 @@
     </Compile>
     <Compile Include="Informacion\Vehiculos\frmAgregarVehiculo.Designer.cs">
       <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion\Vehiculos\frmEditarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion\Vehiculos\frmEditarVehiculo.Designer.cs">
+      <DependentUpon>frmEditarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion\Vehiculos\pantallaActualizarVehiculos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Informacion\Vehiculos\pantallaActualizarVehiculos.Designer.cs">
+      <DependentUpon>pantallaActualizarVehiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmFiltrarReportes.cs">
       <SubType>Form</SubType>
@@ -294,12 +312,6 @@
     <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresa.Designer.cs">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.Designer.cs">
-      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inicio\pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -382,7 +394,16 @@
     <Compile Include="VentanasPrincipales\Pantalla.Designer.cs">
       <DependentUpon>Pantalla.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasPrincipales\pantallaEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPrincipales\pantallaEliminar.Designer.cs">
+      <DependentUpon>pantallaEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\Usuario.cs" />
+    <EmbeddedResource Include="Configuracion\Empresa\frmEditarNombEmpresa.resx">
+      <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Framework\UserControls\Items\itemMenuStrip.resx">
       <DependentUpon>itemMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,6 +418,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.resx">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacion\Vehiculos\frmAgregarVehiculo.resx">
+      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacion\Vehiculos\frmEditarVehiculo.resx">
+      <DependentUpon>frmEditarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informacion\Vehiculos\pantallaActualizarVehiculos.resx">
+      <DependentUpon>pantallaActualizarVehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmFiltrarReportes.resx">
       <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
@@ -503,9 +533,6 @@
     <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresa.resx">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.resx">
-      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio\pantallaInicioGerente.resx">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
     </EmbeddedResource>
@@ -522,6 +549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasPrincipales\Pantalla.resx">
       <DependentUpon>Pantalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPrincipales\pantallaEliminar.resx">
+      <DependentUpon>pantallaEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />

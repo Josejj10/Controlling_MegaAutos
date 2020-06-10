@@ -1,4 +1,7 @@
-﻿namespace LP2MegaAutos
+﻿using System.Drawing;
+using System.Linq.Expressions;
+
+namespace LP2MegaAutos
 {
     partial class pantallaInicioGerente
     {
@@ -28,6 +31,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaInicioGerente));
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlLineaTitulo = new System.Windows.Forms.Panel();
             this.lblBienvenido = new System.Windows.Forms.Label();
@@ -40,7 +44,6 @@
             this.btnGenerarVehiculo = new System.Windows.Forms.Button();
             this.btnGenerarCliente = new System.Windows.Forms.Button();
             this.btnGenerarAreaTrabajo = new System.Windows.Forms.Button();
-            this.btnImgListaReportes = new System.Windows.Forms.Button();
             this.lblCreditos = new LP2MegaAutos.CustomControls.ClickableText();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.pnlAbajoInformacion = new System.Windows.Forms.Panel();
@@ -97,12 +100,14 @@
             // btnListaReportes
             // 
             this.btnListaReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.btnListaReportes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnListaReportes.BackgroundImage")));
+            this.btnListaReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnListaReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListaReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnListaReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListaReportes.Location = new System.Drawing.Point(36, 87);
             this.btnListaReportes.Name = "btnListaReportes";
-            this.btnListaReportes.Size = new System.Drawing.Size(179, 118);
+            this.btnListaReportes.Size = new System.Drawing.Size(179, 80);
             this.btnListaReportes.TabIndex = 43;
             this.tags.SetTag2(this.btnListaReportes, null);
             this.tags.SetTag3(this.btnListaReportes, null);
@@ -134,8 +139,8 @@
             // btnImgVehiculo
             // 
             this.btnImgVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnImgVehiculo.BackgroundImage = global::LP2MegaAutos.Properties.Resources.car;
-            this.btnImgVehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImgVehiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImgVehiculo.BackgroundImage")));
+            this.btnImgVehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImgVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnImgVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -154,8 +159,8 @@
             // btnImgCliente
             // 
             this.btnImgCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnImgCliente.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Clientes;
-            this.btnImgCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImgCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImgCliente.BackgroundImage")));
+            this.btnImgCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImgCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnImgCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -173,8 +178,8 @@
             // btnImgAreaTrabajo
             // 
             this.btnImgAreaTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
-            this.btnImgAreaTrabajo.BackgroundImage = global::LP2MegaAutos.Properties.Resources.AreaTrabajo;
-            this.btnImgAreaTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImgAreaTrabajo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImgAreaTrabajo.BackgroundImage")));
+            this.btnImgAreaTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImgAreaTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgAreaTrabajo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.btnImgAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -250,25 +255,6 @@
             this.btnGenerarAreaTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarAreaTrabajo.UseVisualStyleBackColor = false;
             // 
-            // btnImgListaReportes
-            // 
-            this.btnImgListaReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.btnImgListaReportes.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Reporte;
-            this.btnImgListaReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnImgListaReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImgListaReportes.FlatAppearance.BorderSize = 0;
-            this.btnImgListaReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgListaReportes.Location = new System.Drawing.Point(104, 95);
-            this.btnImgListaReportes.Name = "btnImgListaReportes";
-            this.btnImgListaReportes.Size = new System.Drawing.Size(64, 64);
-            this.btnImgListaReportes.TabIndex = 51;
-            this.tags.SetTag2(this.btnImgListaReportes, null);
-            this.tags.SetTag3(this.btnImgListaReportes, null);
-            this.tags.SetTagFontName(this.btnImgListaReportes, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnImgListaReportes, 10F);
-            this.tags.SetTagFontStyle(this.btnImgListaReportes, System.Drawing.FontStyle.Regular);
-            this.btnImgListaReportes.UseVisualStyleBackColor = false;
-            // 
             // lblCreditos
             // 
             this.lblCreditos.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -291,8 +277,8 @@
             // pnlInformacion
             // 
             this.pnlInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.pnlInformacion.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Informacion;
-            this.pnlInformacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlInformacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlInformacion.BackgroundImage")));
+            this.pnlInformacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInformacion.Location = new System.Drawing.Point(540, 87);
             this.pnlInformacion.Name = "pnlInformacion";
@@ -337,8 +323,8 @@
             // pnlConfiguracion
             // 
             this.pnlConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.pnlConfiguracion.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Configuracion;
-            this.pnlConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlConfiguracion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlConfiguracion.BackgroundImage")));
+            this.pnlConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlConfiguracion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlConfiguracion.Location = new System.Drawing.Point(626, 87);
             this.pnlConfiguracion.Name = "pnlConfiguracion";
@@ -360,7 +346,6 @@
             this.Controls.Add(this.pnlConfiguracion);
             this.Controls.Add(this.pnlInformacion);
             this.Controls.Add(this.lblCreditos);
-            this.Controls.Add(this.btnImgListaReportes);
             this.Controls.Add(this.btnGenerarAreaTrabajo);
             this.Controls.Add(this.btnGenerarCliente);
             this.Controls.Add(this.btnGenerarVehiculo);
@@ -373,7 +358,7 @@
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.pnlLineaTitulo);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaInicioGerente";
             this.Size = new System.Drawing.Size(751, 520);
             this.tags.SetTag2(this, null);
@@ -399,7 +384,6 @@
         private System.Windows.Forms.Button btnGenerarVehiculo;
         private System.Windows.Forms.Button btnGenerarCliente;
         private System.Windows.Forms.Button btnGenerarAreaTrabajo;
-        private System.Windows.Forms.Button btnImgListaReportes;
         private CustomControls.ClickableText lblCreditos;
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.Panel pnlAbajoInformacion;

@@ -341,8 +341,6 @@
             this.tagsExtender1.SetTagFontSize(this.txt_NombreServicio, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreServicio, System.Drawing.FontStyle.Bold);
             this.txt_NombreServicio.Text = "Mantenimiento preventivo\r\n";
-            this.txt_NombreServicio.Enter += new System.EventHandler(this.txt_NombreServicio_Enter);
-            this.txt_NombreServicio.Leave += new System.EventHandler(this.txt_NombreServicio_Leave);
             // 
             // title_bar
             // 

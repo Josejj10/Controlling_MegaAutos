@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_NombreSede = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.pnl_tipoServicio = new System.Windows.Forms.Panel();
@@ -52,6 +51,7 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
+            this.txt_NombreSede = new System.Windows.Forms.TextBox();
             this.pnl_tipoServicio.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,22 +59,6 @@
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txt_NombreSede
-            // 
-            this.txt_NombreSede.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_NombreSede.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.txt_NombreSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.txt_NombreSede.Location = new System.Drawing.Point(27, 42);
-            this.txt_NombreSede.Name = "txt_NombreSede";
-            this.txt_NombreSede.Size = new System.Drawing.Size(441, 35);
-            this.txt_NombreSede.TabIndex = 43;
-            this.tagsExtender1.SetTag2(this.txt_NombreSede, null);
-            this.tagsExtender1.SetTag3(this.txt_NombreSede, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NombreSede, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_NombreSede, 22F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_NombreSede, System.Drawing.FontStyle.Bold);
-            this.txt_NombreSede.Text = "Taller principal";
             // 
             // panel1
             // 
@@ -533,11 +517,29 @@
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
+            // txt_NombreSede
+            // 
+            this.txt_NombreSede.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NombreSede.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.txt_NombreSede.Location = new System.Drawing.Point(27, 42);
+            this.txt_NombreSede.Name = "txt_NombreSede";
+            this.txt_NombreSede.Size = new System.Drawing.Size(441, 35);
+            this.txt_NombreSede.TabIndex = 64;
+            this.tagsExtender1.SetTag2(this.txt_NombreSede, null);
+            this.tagsExtender1.SetTag3(this.txt_NombreSede, null);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreSede, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_NombreSede, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NombreSede, System.Drawing.FontStyle.Regular);
+            this.txt_NombreSede.Text = "Taller Principal";
+            // 
             // pantallaEditarSede
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ControlBox = false;
+            this.Controls.Add(this.txt_NombreSede);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar);
@@ -545,15 +547,21 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_tipoServicio);
             this.Controls.Add(this.pnl_codServ);
-            this.Controls.Add(this.txt_NombreSede);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "pantallaEditarSede";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.TopMost = true;
             this.pnl_tipoServicio.ResumeLayout(false);
             this.pnl_tipoServicio.PerformLayout();
             this.pnl_codServ.ResumeLayout(false);
@@ -569,7 +577,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txt_NombreSede;
         private System.Windows.Forms.Panel panel1;
         private TagsExtender tagsExtender1;
         private System.Windows.Forms.Panel pnl_tipoServicio;
@@ -593,5 +600,6 @@
         private System.Windows.Forms.Button btn_cancelar;
         private RoundedPanel rnd_guardar;
         private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.TextBox txt_NombreSede;
     }
 }

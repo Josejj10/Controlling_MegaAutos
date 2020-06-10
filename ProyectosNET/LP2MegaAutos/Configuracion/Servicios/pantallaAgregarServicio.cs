@@ -77,5 +77,16 @@ namespace LP2MegaAutos
         {
 
         }
+
+        private void txt_NombreServicio_Enter(object sender, EventArgs e)
+        {
+            txt_NombreServicio.Text = string.Empty;
+        }
+
+        private void txt_NombreServicio_Leave(object sender, EventArgs e)
+        {
+            if (txt_NombreServicio.Text == string.Empty)
+                txt_NombreServicio.Text = "Agregar nombre del servicio...";
+        }
     }
 }

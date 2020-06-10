@@ -113,5 +113,16 @@ namespace LP2MegaAutos
             this.btnAZ.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
         }
+
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            txt_Buscar.Text = string.Empty;
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
+        }
     }
 }

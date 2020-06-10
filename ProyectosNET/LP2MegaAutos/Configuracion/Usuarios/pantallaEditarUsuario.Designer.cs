@@ -725,7 +725,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "pantallaEditarUsuario";
-            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

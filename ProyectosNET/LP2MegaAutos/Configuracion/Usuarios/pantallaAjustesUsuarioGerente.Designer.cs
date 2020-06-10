@@ -68,7 +68,7 @@
             this.panel7.Controls.Add(this.txt_TipoUsuario);
             this.panel7.Controls.Add(this.lbl_TipoUsuario);
             this.panel7.Location = new System.Drawing.Point(384, 182);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(259, 41);
             this.panel7.TabIndex = 51;
@@ -144,7 +144,7 @@
             this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.lbl_Direccion);
             this.panel6.Location = new System.Drawing.Point(108, 182);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(266, 41);
             this.panel6.TabIndex = 49;
@@ -221,7 +221,7 @@
             this.panel5.Controls.Add(this.txt_NuevaCont);
             this.panel5.Controls.Add(this.lbl_Contraseña);
             this.panel5.Location = new System.Drawing.Point(382, 117);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(261, 41);
             this.panel5.TabIndex = 50;
@@ -259,7 +259,7 @@
             // 
             // boton_ver_password
             // 
-            this.boton_ver_password.BackColor = System.Drawing.Color.White;
+            this.boton_ver_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
             this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.boton_ver_password.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -270,7 +270,7 @@
             this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(230, 4);
+            this.boton_ver_password.Location = new System.Drawing.Point(230, 3);
             this.boton_ver_password.Name = "boton_ver_password";
             this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
             this.boton_ver_password.TabIndex = 0;
@@ -325,7 +325,7 @@
             this.pnl_codServ.Controls.Add(this.txt_Correo);
             this.pnl_codServ.Controls.Add(this.lbl_Correo);
             this.pnl_codServ.Location = new System.Drawing.Point(108, 117);
-            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_codServ.Name = "pnl_codServ";
             this.pnl_codServ.Size = new System.Drawing.Size(266, 41);
             this.pnl_codServ.TabIndex = 48;
@@ -583,7 +583,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.lbl_NombreAjustes);
             this.Controls.Add(this.rpn_ListaPermisosUsuario);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaAjustesUsuarioGerente";
             this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);

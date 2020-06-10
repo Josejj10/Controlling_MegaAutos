@@ -304,7 +304,7 @@
             // 
             // boton_ver_password
             // 
-            this.boton_ver_password.BackColor = System.Drawing.Color.Transparent;
+            this.boton_ver_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
             this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.boton_ver_password.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -315,9 +315,9 @@
             this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(264, 16);
+            this.boton_ver_password.Location = new System.Drawing.Point(264, 20);
             this.boton_ver_password.Name = "boton_ver_password";
-            this.boton_ver_password.Size = new System.Drawing.Size(28, 25);
+            this.boton_ver_password.Size = new System.Drawing.Size(28, 23);
             this.boton_ver_password.TabIndex = 3;
             this.boton_ver_password.TabStop = false;
             this.boton_ver_password.Tag = "botonImagen";

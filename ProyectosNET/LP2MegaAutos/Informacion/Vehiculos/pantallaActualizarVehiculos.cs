@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.VentanasPrincipales;
 
 namespace LP2MegaAutos.Informacion.Vehiculos
 {
-    public partial class pantallaActualizarVehiculos : UserControl
+    public partial class pantallaActualizarVehiculos : Pantalla
     {
         public pantallaActualizarVehiculos()
         {

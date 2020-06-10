@@ -106,8 +106,11 @@ namespace LP2MegaAutos.VentanasPrincipales
 
             // Cambiar el icono del boton para que sea el enviado
             btnMenu.BackgroundImage = img;
-            PanelMenuStrip pms = (PanelMenuStrip)sender;
-            pms.Visible = false;
+            if (sender.GetType() == typeof(PanelMenuStrip))
+            {
+                PanelMenuStrip pms = (PanelMenuStrip)sender;
+                pms.Visible = false;
+            }
         }
 
         // Cambia los colores del PanelMenu excepto del seleccionado

@@ -300,11 +300,11 @@
     <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.Designer.cs">
       <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio\pantallaInicioGerente.cs">
+    <Compile Include="Inicio\pantallaInicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Inicio\pantallaInicioGerente.Designer.cs">
-      <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    <Compile Include="Inicio\pantallaInicio.Designer.cs">
+      <DependentUpon>pantallaInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\pantallaDetalleReporte.cs">
       <SubType>UserControl</SubType>
@@ -506,8 +506,8 @@
     <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.resx">
       <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio\pantallaInicioGerente.resx">
-      <DependentUpon>pantallaInicioGerente.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio\pantallaInicio.resx">
+      <DependentUpon>pantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\pantallaDetalleReporte.resx">
       <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>

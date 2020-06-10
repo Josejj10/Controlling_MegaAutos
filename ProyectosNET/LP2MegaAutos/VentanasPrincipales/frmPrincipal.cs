@@ -25,7 +25,36 @@ namespace LP2MegaAutos
         private Usuario _usuario;
         public Usuario Usuario { get => _usuario; set => _usuario = value; }
 
-        private pantallaInicioGerente pInicio;
+        private Button getBotonPanel(string nom, Control cont)
+        {
+            foreach (Control c in cont.Controls)
+            {
+                if (c.Controls != null)
+                    if (getBotonPanel(nom, c) != null)
+                        return getBotonPanel(nom, c);
+                if (c.Name == nom)
+                {
+                    Console.WriteLine("Si");
+                    return (Button)c;
+                }
+            }
+            return null;
+        }
+
+        public Button getBotonPanelMenuString(string nom)
+        {  
+            return getBotonPanel(nom,panelMenu);
+        }
+        public ContenedorPantalla ContenedorPantallas
+        {
+            get { return contenedorPantalla1; }
+        }
+
+        public Panel PanelMenu
+        {
+            get { return panelMenu; }
+        }
+
 
         #region title_bar
 
@@ -98,11 +127,11 @@ namespace LP2MegaAutos
             _usuario.Permisos.Add(EPermisos.Clientes);
             Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form
             BotonesDinamicosHelper.cambiarColoresBotonesMenu(rpBtnMenuHome, panelMenu);
-            suscribirEventos();
             crearBotonesInicio();
 
             // Primera pantalla es pantallaInicioGerente
-            pInicio = new pantallaInicioGerente(_usuario);
+            contenedorPantalla1.PInicial = new pantallaInicioGerente(_usuario);
+            suscribirEventos();
         }
 
         private void suscribirEventos()
@@ -111,20 +140,15 @@ namespace LP2MegaAutos
             rpBtnMenuReportes.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsReportes); };
             btnMenuReportes.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsReportes); };
             rpBtnMenuReportes.MouseLeave += (sender, e) => { rpBtnMenu_MouseLeave(sender, e, pmsReportes); };
+            ((pantallaInicioGerente)contenedorPantalla1.PInicial).ListaReportesClick += pmsReportes_ListaReportesClick;
+            ((pantallaInicioGerente)contenedorPantalla1.PInicial).perfilUsuarioClick += btnMenuUsuario_Click;
+            ((pantallaInicioGerente)contenedorPantalla1.PInicial).ReporteAreaTrabajoClick += pmsReportes_ListaReportesClick;
+
         }
 
         #region Creacion Botones
 
-        public ContenedorPantalla ContenedorPantallas
-        {
-            get { return contenedorPantalla1; }
-        }
         
-        public Panel PanelMenu
-        {
-            get { return panelMenu; }
-        }
-
         private void crearBotonesInicio()
         {
             // Trabajar con flags el menu
@@ -462,7 +486,7 @@ namespace LP2MegaAutos
         {
             // Cambiar los botones y rPanel
             BotonesDinamicosHelper.cambiarColoresBotonesMenu(rpBtnMenuHome, panelMenu);
-            contenedorPantalla1.PantallaActual = pInicio;
+            contenedorPantalla1.volverInicio();
         }
         private void btnMenuReportes_Click(object sender, EventArgs e)
         {
@@ -480,7 +504,7 @@ namespace LP2MegaAutos
             this.contenedorPantalla1.PantallaActual = new pantallaAjustesUsuarioGerente();
 
             // Cambiar los botones y rPanel excepto el enviado
-            BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)button1.Parent, panelMenu);
+            BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)btnPanelMenuProfile.Parent, panelMenu);
         }
         
         private void pmsReportes_ListaReportesClick(object sender, EventArgs e)

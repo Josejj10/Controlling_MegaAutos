@@ -15,17 +15,26 @@ namespace LP2MegaAutos.VentanasPrincipales
         
         // Lista de pantallas
         private BindingList<Pantalla> _pantallas;
-        private Pantalla pInicio = new pantallaInicioGerente();
+        private Pantalla pInicio;
 
         public ContenedorPantalla()
         {
             InitializeComponent();
             _pantallas = new BindingList<Pantalla>();
-            
-            // Problema Scroll: Si funciona cuando se añade estaticamente tanto
-            // mediante PantallaActual como directamente a controles
-            // PantallaActual = new pantallaListaReportes();
-            // Controls.Add(new pantallaListaReportes());
+        }
+
+        public Pantalla PInicial
+        {
+            set
+            {
+                pInicio = value;
+                PantallaActual = pInicio;
+                ((pantallaInicioGerente)pInicio).crearBotonesSegunPermisos();
+            }
+            get
+            {
+                return (pantallaInicioGerente)pInicio;
+            }
         }
 
         public Pantalla getPantallaActual()
@@ -83,6 +92,17 @@ namespace LP2MegaAutos.VentanasPrincipales
         public bool puedeAdelante()
         {
             return Controls.Count !=0 ? ! (_pantallas.IndexOf(getPantallaActual()) + 1 == _pantallas.Count) : false;
+        }
+
+
+        public void volverInicio()
+        {
+            // Si se usa cuando no se ha agregado nada aun
+            if (Controls.Count == 0)
+                return;
+            _pantallas.Add(pInicio);
+            Controls.Remove(getPantallaActual());
+            Controls.Add(pInicio);
         }
 
         public void volverUltimaPantalla()

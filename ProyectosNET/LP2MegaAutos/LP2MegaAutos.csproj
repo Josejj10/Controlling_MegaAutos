@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.Designer.cs">
+      <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Framework\UserControls\Items\itemMenuStrip.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,12 +312,6 @@
     <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresa.Designer.cs">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.Designer.cs">
-      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inicio\pantallaInicioGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -401,6 +401,9 @@
       <DependentUpon>pantallaEliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasPrincipales\Usuario.cs" />
+    <EmbeddedResource Include="Configuracion\Empresa\frmEditarNombEmpresa.resx">
+      <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Framework\UserControls\Items\itemMenuStrip.resx">
       <DependentUpon>itemMenuStrip.cs</DependentUpon>
     </EmbeddedResource>
@@ -529,9 +532,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresa.resx">
       <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresaGerente.resx">
-      <DependentUpon>pantallaInformacionEmpresaGerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\pantallaInicioGerente.resx">
       <DependentUpon>pantallaInicioGerente.cs</DependentUpon>

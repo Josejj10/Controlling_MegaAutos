@@ -315,6 +315,7 @@
             this.MinimizeBox = false;
             this.Name = "frmEditarVehiculo";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.title_bar.ResumeLayout(false);
             this.pnl_placaVehiculo.ResumeLayout(false);
             this.pnl_placaVehiculo.PerformLayout();

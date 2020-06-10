@@ -302,6 +302,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAgregarVehiculo";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.rnd_cancelar.ResumeLayout(false);
             this.rnd_guardar.ResumeLayout(false);
             this.pnl_placaVehiculo.ResumeLayout(false);

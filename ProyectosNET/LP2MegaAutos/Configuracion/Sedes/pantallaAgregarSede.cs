@@ -73,5 +73,11 @@ namespace LP2MegaAutos
             if (txt_NombreSede.Text == string.Empty)
                 txt_NombreSede.Text = "Agregar nombre de sede...";
         }
+
+        private void txt_distrito_Enter(object sender, EventArgs e)
+        {
+            txt_direccion.Enabled = false;
+            txt_tipoServicio.Enabled = false;
+        }
     }
 }

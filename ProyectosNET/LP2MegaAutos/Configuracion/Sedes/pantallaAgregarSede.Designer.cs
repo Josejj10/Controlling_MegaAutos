@@ -31,12 +31,12 @@
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.panel2 = new System.Windows.Forms.Panel();
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_direccion = new System.Windows.Forms.TextBox();
             this.lbl_direccion = new System.Windows.Forms.Label();
             this.pnl_tipoServicio = new System.Windows.Forms.Panel();
             this.rnd_color_3 = new LP2MegaAutos.RoundedPanel();
             this.txt_tipoServicio = new System.Windows.Forms.TextBox();
-            this.lbl_teléfono = new System.Windows.Forms.Label();
+            this.lbl_telefono = new System.Windows.Forms.Label();
             this.pnl_codServ = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
             this.txt_distrito = new System.Windows.Forms.TextBox();
@@ -63,7 +63,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.roundedPanel2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txt_direccion);
             this.panel2.Controls.Add(this.lbl_direccion);
             this.panel2.Location = new System.Drawing.Point(161, 170);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -102,21 +102,21 @@
             this.roundedPanel2.YBorde = 0;
             this.roundedPanel2.YPanel = 0;
             // 
-            // textBox1
+            // txt_direccion
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.textBox1.Location = new System.Drawing.Point(7, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 23);
-            this.textBox1.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.textBox1, null);
-            this.tagsExtender1.SetTag3(this.textBox1, null);
-            this.tagsExtender1.SetTagFontName(this.textBox1, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.textBox1, 14F);
-            this.tagsExtender1.SetTagFontStyle(this.textBox1, System.Drawing.FontStyle.Bold);
+            this.txt_direccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_direccion.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_direccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_direccion.Location = new System.Drawing.Point(7, 18);
+            this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.Size = new System.Drawing.Size(284, 23);
+            this.txt_direccion.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_direccion, null);
+            this.tagsExtender1.SetTag3(this.txt_direccion, null);
+            this.tagsExtender1.SetTagFontName(this.txt_direccion, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_direccion, 14F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_direccion, System.Drawing.FontStyle.Bold);
             // 
             // lbl_direccion
             // 
@@ -139,7 +139,7 @@
             // 
             this.pnl_tipoServicio.Controls.Add(this.rnd_color_3);
             this.pnl_tipoServicio.Controls.Add(this.txt_tipoServicio);
-            this.pnl_tipoServicio.Controls.Add(this.lbl_teléfono);
+            this.pnl_tipoServicio.Controls.Add(this.lbl_telefono);
             this.pnl_tipoServicio.Location = new System.Drawing.Point(161, 231);
             this.pnl_tipoServicio.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_tipoServicio.Name = "pnl_tipoServicio";
@@ -193,22 +193,22 @@
             this.tagsExtender1.SetTagFontSize(this.txt_tipoServicio, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_tipoServicio, System.Drawing.FontStyle.Bold);
             // 
-            // lbl_teléfono
+            // lbl_telefono
             // 
-            this.lbl_teléfono.AutoSize = true;
-            this.lbl_teléfono.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_teléfono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_teléfono.Location = new System.Drawing.Point(4, 2);
-            this.lbl_teléfono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_teléfono.Name = "lbl_teléfono";
-            this.lbl_teléfono.Size = new System.Drawing.Size(57, 16);
-            this.lbl_teléfono.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.lbl_teléfono, null);
-            this.tagsExtender1.SetTag3(this.lbl_teléfono, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_teléfono, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_teléfono, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_teléfono, System.Drawing.FontStyle.Bold);
-            this.lbl_teléfono.Text = "Teléfono";
+            this.lbl_telefono.AutoSize = true;
+            this.lbl_telefono.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbl_telefono.Location = new System.Drawing.Point(4, 2);
+            this.lbl_telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_telefono.Name = "lbl_telefono";
+            this.lbl_telefono.Size = new System.Drawing.Size(57, 16);
+            this.lbl_telefono.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_telefono, null);
+            this.tagsExtender1.SetTag3(this.lbl_telefono, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_telefono, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_telefono, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_telefono, System.Drawing.FontStyle.Bold);
+            this.lbl_telefono.Text = "Teléfono";
             // 
             // pnl_codServ
             // 
@@ -267,6 +267,7 @@
             this.tagsExtender1.SetTagFontName(this.txt_distrito, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_distrito, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_distrito, System.Drawing.FontStyle.Bold);
+            this.txt_distrito.Enter += new System.EventHandler(this.txt_distrito_Enter);
             // 
             // lbl_distrito
             // 
@@ -568,12 +569,12 @@
         private TagsExtender tagsExtender1;
         private System.Windows.Forms.Panel panel2;
         private RoundedPanel roundedPanel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label lbl_direccion;
         private System.Windows.Forms.Panel pnl_tipoServicio;
         private RoundedPanel rnd_color_3;
         private System.Windows.Forms.TextBox txt_tipoServicio;
-        private System.Windows.Forms.Label lbl_teléfono;
+        private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.Panel pnl_codServ;
         private RoundedPanel rnd_color_1;
         private System.Windows.Forms.TextBox txt_distrito;

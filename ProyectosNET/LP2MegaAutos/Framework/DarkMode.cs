@@ -60,6 +60,9 @@ namespace LP2MegaAutos
         #region Cambiar DM
         public static void cambiarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent, Label label_Modo_Oscuro)
         {
+            // TODO idea: Cambiar los valores estaticos de Colores.BackBackground, etc
+            // al BackBackground del otro modo.
+            // Implementar en cambiarDM y en IniciarDM
             if (dark_mode)
             {
                 // Desactivar Modo Nocturno

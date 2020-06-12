@@ -16,6 +16,8 @@ namespace LP2MegaAutos.Framework.UserControls.Items
         public itemMenuStrip()
         {
             InitializeComponent();
+            tags.SetTagFontSize(btnTexto,12);
+            Tipografias.crearFonts(btnTexto,tags);
         }
         
         #region Propiedades
@@ -30,9 +32,35 @@ namespace LP2MegaAutos.Framework.UserControls.Items
         {
             set { btnItem.BackgroundImageLayout = value; }
         }
+        
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public float FontSize
+        {
+            get
+            {
+                return btnTexto.Font.Size;
+            }
+            set
+            {
+                tags.SetTagFontSize(btnTexto, value);
+            }
+        }
+
+        public string Texto
+        {
+            get
+            {
+                return btnTexto.Text;
+            }
+            set
+            {
+                btnTexto.Text = value;
+            }
+        }
 
         #endregion Propiedades
 
+        #region Eventos Delegados
         public delegate void MouseLeaveEventHandler(object sender, EventArgs e);
         public event MouseLeaveEventHandler mouseLeave;
 
@@ -41,6 +69,7 @@ namespace LP2MegaAutos.Framework.UserControls.Items
 
         private void btnItem_Leave(object sender, EventArgs e)
         {
+            btnTexto.Visible = false;
             MouseLeaveEventHandler h = mouseLeave;
             if (h != null) h(this, e);
         }
@@ -50,10 +79,21 @@ namespace LP2MegaAutos.Framework.UserControls.Items
             ButtonClickEventHandler h = click;
             if (h != null) h(this, e);
         }
-
+        #endregion Eventos Delegados
         private void itemMenuStrip_SizeChanged(object sender, EventArgs e)
         {
             btnItem.Size = this.Size;
+            btnTexto.Size = this.Size;
+        }
+
+        private void btnItem_MouseEnter(object sender, EventArgs e)
+        {
+            btnTexto.Visible = true;
+        }
+
+        private void btnTexto_Paint(object sender, PaintEventArgs e)
+        {
+            Tipografias.crearFonts(btnTexto.Parent, tags);
         }
     }
 }

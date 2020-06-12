@@ -103,9 +103,9 @@
             this.txt_Buscar.TabIndex = 17;
             this.tagsExtender1.SetTag2(this.txt_Buscar, null);
             this.tagsExtender1.SetTag3(this.txt_Buscar, null);
-            this.tagsExtender1.SetTagFontName(this.txt_Buscar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.txt_Buscar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
             this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
@@ -123,9 +123,9 @@
             this.cTxt_MasFiltros.TabIndex = 63;
             this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
             this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
-            this.tagsExtender1.SetTagFontName(this.cTxt_MasFiltros, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.cTxt_MasFiltros, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.cTxt_MasFiltros, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.cTxt_MasFiltros, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.cTxt_MasFiltros, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.cTxt_MasFiltros, System.Drawing.FontStyle.Bold);
             this.cTxt_MasFiltros.Text = "Más Filtros";
             this.cTxt_MasFiltros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -142,9 +142,9 @@
             this.btn_Agregar.TabIndex = 58;
             this.tagsExtender1.SetTag2(this.btn_Agregar, null);
             this.tagsExtender1.SetTag3(this.btn_Agregar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_Agregar, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 8F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Agregar, System.Drawing.FontStyle.Bold);
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Agregar.UseVisualStyleBackColor = false;
@@ -192,12 +192,13 @@
             this.btnReciente.TabIndex = 8;
             this.tagsExtender1.SetTag2(this.btnReciente, null);
             this.tagsExtender1.SetTag3(this.btnReciente, null);
-            this.tagsExtender1.SetTagFontName(this.btnReciente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnReciente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnReciente, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.btnReciente, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnReciente, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnReciente, System.Drawing.FontStyle.Bold);
             this.btnReciente.Text = "Reciente";
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
             // rndAntiguo
             // 
@@ -242,12 +243,13 @@
             this.btnAntiguo.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btnAntiguo, null);
             this.tagsExtender1.SetTag3(this.btnAntiguo, null);
-            this.tagsExtender1.SetTagFontName(this.btnAntiguo, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnAntiguo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnAntiguo, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.btnAntiguo, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnAntiguo, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnAntiguo, System.Drawing.FontStyle.Bold);
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
             // rndZA
             // 
@@ -292,12 +294,13 @@
             this.btnZA.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.btnZA, null);
             this.tagsExtender1.SetTag3(this.btnZA, null);
-            this.tagsExtender1.SetTagFontName(this.btnZA, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnZA, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnZA, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.btnZA, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnZA, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnZA, System.Drawing.FontStyle.Bold);
             this.btnZA.Text = "Z - A";
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
             // 
             // rndAZ
             // 
@@ -342,12 +345,13 @@
             this.btnAZ.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.btnAZ, null);
             this.tagsExtender1.SetTag3(this.btnAZ, null);
-            this.tagsExtender1.SetTagFontName(this.btnAZ, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnAZ, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnAZ, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.btnAZ, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnAZ, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnAZ, System.Drawing.FontStyle.Bold);
             this.btnAZ.Text = "A - Z";
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // panel3
             // 
@@ -379,7 +383,7 @@
             this.flowLayoutPanel1.TabIndex = 54;
             this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
             this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
             // 
@@ -513,9 +517,9 @@
             this.lbl_ListaVehiculos.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaVehiculos, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaVehiculos, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaVehiculos, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_ListaVehiculos, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaVehiculos, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaVehiculos, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ListaVehiculos, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaVehiculos, System.Drawing.FontStyle.Bold);
             this.lbl_ListaVehiculos.Text = "Vehículos";
             this.lbl_ListaVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

@@ -118,14 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fontLato_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-BoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="boton_cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton_cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fontLato_HeavyItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-HeavyItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="logo_megaautos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_megaautos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,12 +139,6 @@
   <data name="Estadisticas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Estadisticas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fontLato_SemiboldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-SemiboldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fontMontserrat_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Montserrat-BlackItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="toggle_modo_nocturno_activado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle_modo_nocturno_activado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,9 +151,6 @@
   <data name="fontMontserrat_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Black.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="fontMontserrat_ExtraBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Montserrat-ExtraBoldItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +159,6 @@
   </data>
   <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Ajustes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fontLato_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-LightItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fontLato_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Medium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -187,17 +169,11 @@
   <data name="tshadowtopright" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tshadowtopright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fontLato_Italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato_Italic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="AreaTrabajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\AreaTrabajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fontLato_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fontLato_Heavy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-Heavy.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fontMontserrat_SemiBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-SemiBold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -208,23 +184,11 @@
   <data name="fontMontserrat_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Bold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="fontMontserrat_MediumItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Montserrat-MediumItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ReporteResumen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\ReporteResumen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fontMontserrat_SemiBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Montserrat-SemiBoldItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fontMontserrat_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Montserrat_BoldItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fontLato_Thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-Thin.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tshadowdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tshadowdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,12 +198,6 @@
   </data>
   <data name="Sort" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Sort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fontLato_MediumItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-MediumItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fontLato_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-Light.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Servicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Servicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -255,9 +213,6 @@
   </data>
   <data name="BaseDatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\BaseDatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fontLato_ThinItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-ThinItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toggle_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -291,9 +246,6 @@
   </data>
   <data name="fontMontserrat_ExtraBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-ExtraBold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fontLato_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-BlackItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Driver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Driver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

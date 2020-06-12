@@ -61,6 +61,9 @@ namespace LP2MegaAutos.VentanasPrincipales
 
                 // Agregar pantalla a los controles del contenedor
                 Controls.Add(value);
+                if(value != pInicio  || indexActual == -1)
+                    if(DarkMode.is_dark_mode_active())
+                        DarkMode.iniciarSinTimer(this);
 
                 if (_pantallas.Count >= maximo) // Limite de pantallas
                     _pantallas.RemoveAt(0);

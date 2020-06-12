@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Threading;
 
 namespace LP2MegaAutos.Framework.UserControls.Items
 {
@@ -16,47 +17,50 @@ namespace LP2MegaAutos.Framework.UserControls.Items
         public itemMenuStrip()
         {
             InitializeComponent();
-            tags.SetTagFontSize(btnTexto,12);
-            Tipografias.crearFonts(btnTexto,tags);
         }
-        
+
         #region Propiedades
         [Description("Icono que aparece"), Category("Item Menu")]
         public Image Imagen
         {
             get { return btnItem.BackgroundImage;  }
-            set { btnItem.BackgroundImage = value; }
+            set { _imagen = value; btnItem.BackgroundImage = _imagen; }
         }
-
         public ImageLayout BackgroundLayout
         {
             set { btnItem.BackgroundImageLayout = value; }
         }
         
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public float FontSize
-        {
-            get
-            {
-                return btnTexto.Font.Size;
-            }
-            set
-            {
-                tags.SetTagFontSize(btnTexto, value);
-            }
-        }
-
         public string Texto
         {
             get
             {
-                return btnTexto.Text;
+                return _texto;
             }
             set
             {
-                btnTexto.Text = value;
+                _texto = value;
+                FontSize = nuevoFontSize(this.CreateGraphics());
             }
         }
+        public Image _imagen;
+        public string _texto = "";
+        
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public float FontSize
+        {
+            get
+            {
+                return btnItem.Font.Size;
+            }
+            set
+            {
+                tags.SetTagFontSize(btnItem, value);
+                Tipografias.crearFonts(btnItem.Parent, tags);
+            }
+        }
+
 
         #endregion Propiedades
 
@@ -66,10 +70,12 @@ namespace LP2MegaAutos.Framework.UserControls.Items
 
         public delegate void ButtonClickEventHandler(object sender, EventArgs e);
         public event ButtonClickEventHandler click;
-
+        public int i = 0;
         private void btnItem_Leave(object sender, EventArgs e)
         {
-            btnTexto.Visible = false;
+            // Cambiar Texto por Imagen
+            btnItem.BackgroundImage = _imagen;
+            btnItem.Text = "";
             MouseLeaveEventHandler h = mouseLeave;
             if (h != null) h(this, e);
         }
@@ -79,21 +85,28 @@ namespace LP2MegaAutos.Framework.UserControls.Items
             ButtonClickEventHandler h = click;
             if (h != null) h(this, e);
         }
+
         #endregion Eventos Delegados
         private void itemMenuStrip_SizeChanged(object sender, EventArgs e)
         {
             btnItem.Size = this.Size;
-            btnTexto.Size = this.Size;
         }
 
         private void btnItem_MouseEnter(object sender, EventArgs e)
         {
-            btnTexto.Visible = true;
+            // Cambiar Imagen por Texto
+            btnItem.BackgroundImage = null;
+            btnItem.Text = Texto;
+        }
+        
+        private float nuevoFontSize(Graphics graphics)
+        {
+            SizeF stringSize = graphics.MeasureString(_texto, btnItem.Font);
+            float wRatio = btnItem.Width / stringSize.Width;
+            float hRatio = btnItem.Height / stringSize.Height;
+            float ratio = Math.Min(hRatio, wRatio);
+            return btnItem.Font.Size * ratio;
         }
 
-        private void btnTexto_Paint(object sender, PaintEventArgs e)
-        {
-            Tipografias.crearFonts(btnTexto.Parent, tags);
-        }
     }
 }

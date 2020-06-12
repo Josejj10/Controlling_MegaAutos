@@ -52,7 +52,7 @@ namespace LP2MegaAutos
             this.rpBtnMenuUltimoReporte = new LP2MegaAutos.RoundedPanel();
             this.btnMenuUltimoReporte = new System.Windows.Forms.Button();
             this.panelMenu = new MetroFramework.Controls.MetroPanel();
-            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
+            this.rpBtnMenuUsuario = new LP2MegaAutos.RoundedPanel();
             this.btnPanelMenuProfile = new System.Windows.Forms.Button();
             this.rpBtnMenuReportes = new LP2MegaAutos.RoundedPanel();
             this.btnMenuReportes = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@ namespace LP2MegaAutos
             this.rpBtnMenuCerrarSesion.SuspendLayout();
             this.rpBtnMenuUltimoReporte.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            this.roundedPanel1.SuspendLayout();
+            this.rpBtnMenuUsuario.SuspendLayout();
             this.rpBtnMenuReportes.SuspendLayout();
             this.panel_toggle_nocturno.SuspendLayout();
             this.SuspendLayout();
@@ -456,8 +456,8 @@ namespace LP2MegaAutos
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.panelMenu.Controls.Add(this.roundedPanel1);
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(50)))));
+            this.panelMenu.Controls.Add(this.rpBtnMenuUsuario);
             this.panelMenu.Controls.Add(this.rpBtnMenuUltimoReporte);
             this.panelMenu.Controls.Add(this.rpBtnMenuCerrarSesion);
             this.panelMenu.Controls.Add(this.rpBtnMenuReportes);
@@ -483,33 +483,33 @@ namespace LP2MegaAutos
             this.panelMenu.VerticalScrollbarHighlightOnWheel = false;
             this.panelMenu.VerticalScrollbarSize = 10;
             // 
-            // roundedPanel1
+            // rpBtnMenuUsuario
             // 
-            this.roundedPanel1.ArcRadiusBorde = 15;
-            this.roundedPanel1.ArcRadiusPanel = 15;
-            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.roundedPanel1.Controls.Add(this.btnPanelMenuProfile);
-            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.roundedPanel1.Location = new System.Drawing.Point(5, 288);
-            this.roundedPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.roundedPanel1.MenosHeightBorde = 1;
-            this.roundedPanel1.MenosHeightPanel = 1;
-            this.roundedPanel1.MenosWidthBorde = 1;
-            this.roundedPanel1.MenosWidthPanel = 1;
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.PorcLuzColorBorde = 0;
-            this.roundedPanel1.Size = new System.Drawing.Size(77, 52);
-            this.roundedPanel1.TabIndex = 38;
-            this.tags.SetTag2(this.roundedPanel1, null);
-            this.tags.SetTag3(this.roundedPanel1, null);
-            this.tags.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.roundedPanel1, 10F);
-            this.tags.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
-            this.roundedPanel1.XBorde = 0;
-            this.roundedPanel1.XPanel = 0;
-            this.roundedPanel1.YBorde = 0;
-            this.roundedPanel1.YPanel = 0;
+            this.rpBtnMenuUsuario.ArcRadiusBorde = 15;
+            this.rpBtnMenuUsuario.ArcRadiusPanel = 15;
+            this.rpBtnMenuUsuario.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuUsuario.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuUsuario.Controls.Add(this.btnPanelMenuProfile);
+            this.rpBtnMenuUsuario.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.rpBtnMenuUsuario.Location = new System.Drawing.Point(5, 288);
+            this.rpBtnMenuUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.rpBtnMenuUsuario.MenosHeightBorde = 1;
+            this.rpBtnMenuUsuario.MenosHeightPanel = 1;
+            this.rpBtnMenuUsuario.MenosWidthBorde = 1;
+            this.rpBtnMenuUsuario.MenosWidthPanel = 1;
+            this.rpBtnMenuUsuario.Name = "rpBtnMenuUsuario";
+            this.rpBtnMenuUsuario.PorcLuzColorBorde = 0;
+            this.rpBtnMenuUsuario.Size = new System.Drawing.Size(77, 52);
+            this.rpBtnMenuUsuario.TabIndex = 38;
+            this.tags.SetTag2(this.rpBtnMenuUsuario, null);
+            this.tags.SetTag3(this.rpBtnMenuUsuario, null);
+            this.tags.SetTagFontName(this.rpBtnMenuUsuario, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpBtnMenuUsuario, 10F);
+            this.tags.SetTagFontStyle(this.rpBtnMenuUsuario, System.Drawing.FontStyle.Regular);
+            this.rpBtnMenuUsuario.XBorde = 0;
+            this.rpBtnMenuUsuario.XPanel = 0;
+            this.rpBtnMenuUsuario.YBorde = 0;
+            this.rpBtnMenuUsuario.YPanel = 0;
             // 
             // btnPanelMenuProfile
             // 
@@ -666,7 +666,7 @@ namespace LP2MegaAutos
             this.rpBtnMenuCerrarSesion.ResumeLayout(false);
             this.rpBtnMenuUltimoReporte.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.roundedPanel1.ResumeLayout(false);
+            this.rpBtnMenuUsuario.ResumeLayout(false);
             this.rpBtnMenuReportes.ResumeLayout(false);
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -693,7 +693,7 @@ namespace LP2MegaAutos
         private MetroFramework.Controls.MetroPanel panelMenu;
         private RoundedPanel rpBtnMenuReportes;
         private System.Windows.Forms.Button btnMenuReportes;
-        private RoundedPanel roundedPanel1;
+        private RoundedPanel rpBtnMenuUsuario;
         private System.Windows.Forms.Button btnPanelMenuProfile;
         private Framework.UserControls.PanelMenuStrip pmsReportes;
         private System.Windows.Forms.Button btnAdelante;

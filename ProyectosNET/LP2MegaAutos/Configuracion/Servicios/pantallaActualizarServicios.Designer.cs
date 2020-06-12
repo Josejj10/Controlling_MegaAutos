@@ -55,6 +55,7 @@ namespace LP2MegaAutos
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
             this.cTxt_MasFiltros = new LP2MegaAutos.CustomControls.ClickableText();
+            this.cmbFiltrarTipoServicio = new System.Windows.Forms.ComboBox();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
             this.rndZA.SuspendLayout();
@@ -413,7 +414,7 @@ namespace LP2MegaAutos
             this.il_Servicios1.TextoAgregadoPor = "Percy Jackson";
             this.il_Servicios1.TextoFecha = "dd - mm - aaaa";
             this.il_Servicios1.TextoPrincipal = "Mantenimiento Preventivo";
-            this.il_Servicios1.Textosecundario = "Mecánica";
+            this.il_Servicios1.Textosecundario = "Mecánica a Domicilio";
             this.il_Servicios1.TextoTercero = "MEC-001";
             // 
             // il_Servicios3
@@ -434,7 +435,7 @@ namespace LP2MegaAutos
             this.il_Servicios3.TextoAgregadoPor = "Percy Jackson";
             this.il_Servicios3.TextoFecha = "dd - mm - aaaa";
             this.il_Servicios3.TextoPrincipal = "Mecánica a domicilio";
-            this.il_Servicios3.Textosecundario = "Mecánica";
+            this.il_Servicios3.Textosecundario = "Mecánica en Taller";
             this.il_Servicios3.TextoTercero = "MEC-002";
             // 
             // itemLista1
@@ -553,11 +554,25 @@ namespace LP2MegaAutos
             this.cTxt_MasFiltros.Text = "Más Filtros";
             this.cTxt_MasFiltros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // cmbFiltrarTipoServicio
+            // 
+            this.cmbFiltrarTipoServicio.FormattingEnabled = true;
+            this.cmbFiltrarTipoServicio.Location = new System.Drawing.Point(26, 315);
+            this.cmbFiltrarTipoServicio.Name = "cmbFiltrarTipoServicio";
+            this.cmbFiltrarTipoServicio.Size = new System.Drawing.Size(121, 21);
+            this.cmbFiltrarTipoServicio.TabIndex = 52;
+            this.tagsExtender1.SetTag2(this.cmbFiltrarTipoServicio, null);
+            this.tagsExtender1.SetTag3(this.cmbFiltrarTipoServicio, null);
+            this.tagsExtender1.SetTagFontName(this.cmbFiltrarTipoServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cmbFiltrarTipoServicio, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cmbFiltrarTipoServicio, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaActualizarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cmbFiltrarTipoServicio);
             this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.pnlBuscar);
@@ -613,5 +628,6 @@ namespace LP2MegaAutos
         private itemLista il_Servicios3;
         private itemLista il_Servicios2;
         private itemLista itemLista1;
+        private System.Windows.Forms.ComboBox cmbFiltrarTipoServicio;
     }
 }

@@ -20,6 +20,8 @@ namespace LP2MegaAutos
         public pantallaInicioGerente()
         {
             InitializeComponent();
+            DarkMode.agregarExcepcion("");
+            
         }
         public pantallaInicioGerente(Usuario u)
         {
@@ -65,7 +67,7 @@ namespace LP2MegaAutos
 
         }
 
-        private itemMenuStrip crearItemMenuStrip(int xLoc, int yLoc, string nombre, Image img)
+        private itemMenuStrip crearItemMenuStrip(int xLoc, int yLoc, string nombre, Image img, string texto)
         {
             // Crear el ims y agregarlo a 
             itemMenuStrip ims = new itemMenuStrip();
@@ -73,19 +75,16 @@ namespace LP2MegaAutos
             ims.Name = nombre;
             ims.BackgroundLayout = ImageLayout.Center;
             ims.Imagen = (Image) new Bitmap(img, new Size(54,54));
-            ims.Texto = nombre;
-            ims.FontSize = 15;
+            ims.Texto = texto;
+            //ims.FontSize = 12.25f;
             ims.Location = new Point(xLoc, yLoc);
             ims.Size = new Size(80, 80);
-
-            //tags.SetTagFontName(ims, fontsD.Lato);
-            //tags.SetTagFontSize(ims, 10F);
-            //tags.SetTagFontStyle(ims, FontStyle.Regular);
 
             return ims;
         }
 
-        private void crearBotones(int xLoc, BindingList<string> nombres, BindingList<EPermisos> per, BindingList<Image> imgs, Button btnMenu)
+        private void crearBotones(int xLoc, BindingList<string> nombres, BindingList<EPermisos> per, 
+            BindingList<Image> imgs, Button btnMenu, BindingList<string> txts)
         {
             ContenedorPantalla cnt = ((frmPrincipal)this.Parent.Parent.Parent).ContenedorPantallas;
             Panel panelMenu = ((frmPrincipal)this.Parent.Parent.Parent).PanelMenu;
@@ -94,10 +93,10 @@ namespace LP2MegaAutos
             if (_usuario.Permisos.Contains(EPermisos.All))
             {
                 // Crear todos
-                itemMenuStrip ims1 = crearItemMenuStrip(xLoc, 176, nombres[0], imgs[0]);
-                itemMenuStrip ims2 = crearItemMenuStrip(xLoc, 255, nombres[1], imgs[1]);
-                itemMenuStrip ims3 = crearItemMenuStrip(xLoc, 334, nombres[2], imgs[2]);
-                itemMenuStrip ims4 = crearItemMenuStrip(xLoc, 413, nombres[3], imgs[3]);
+                itemMenuStrip ims1 = crearItemMenuStrip(xLoc, 176, nombres[0], imgs[0],txts[0]);
+                itemMenuStrip ims2 = crearItemMenuStrip(xLoc, 255, nombres[1], imgs[1], txts[1]);
+                itemMenuStrip ims3 = crearItemMenuStrip(xLoc, 334, nombres[2], imgs[2], txts[2]);
+                itemMenuStrip ims4 = crearItemMenuStrip(xLoc, 413, nombres[3], imgs[3], txts[3]);
 
                 // Suscribir todos
                 ims1.click += new itemMenuStrip.ButtonClickEventHandler(
@@ -131,7 +130,7 @@ namespace LP2MegaAutos
                 yLoc = 176;
 
                 // Crear el itemMenuStrip correspondiente con xLoc, yLoc, nombre e Imagen
-                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[0], imgs[0]);
+                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[0], imgs[0], txts[0]);
 
                 // TODO Suscribir el itemMenuStrip al click delegandolo al frmPrincipal
                 // ims.click += itemStrip_Click;
@@ -150,7 +149,7 @@ namespace LP2MegaAutos
                 yLoc = (menu & 8) == 8 ? 255 : 176;
 
                 // Crear el itemMenuStrip correspondiente con xLoc, yLoc, nombre e Imagen
-                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[1], imgs[1]);
+                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[1], imgs[1], txts[1]);
 
                 // Suscribir el itemMenuStrip al click
                 ims.click += new itemMenuStrip.ButtonClickEventHandler(
@@ -167,7 +166,7 @@ namespace LP2MegaAutos
                 yLoc = (menu & 8) == 8 ? (menu & 4) == 4 ? 334 : 255 : 176;
 
                 // Crear el itemMenuStrip correspondiente con xLoc, yLoc, nombre e Imagen
-                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[2], imgs[2]);
+                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[2], imgs[2], txts[2]);
 
                 // Suscribir el itemMenuStrip al click
                 ims.click += new itemMenuStrip.ButtonClickEventHandler(
@@ -185,7 +184,7 @@ namespace LP2MegaAutos
                     413 : 334 : 255 : 176;
 
                 // Crear el itemMenuStrip correspondiente con xLoc, yLoc, nombre e Imagen
-                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[3], imgs[3]);
+                itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[3], imgs[3], txts[3]);
 
                 // Suscribir el itemMenuStrip al click
                 ims.click += new itemMenuStrip.ButtonClickEventHandler(
@@ -200,6 +199,7 @@ namespace LP2MegaAutos
         {
             // Crear listas necesarias
             BindingList<string> nombres = new BindingList<string>();
+            BindingList<string> textos = new BindingList<string>();
             BindingList<EPermisos> per = new BindingList<EPermisos>();
             BindingList<Image> imgs = new BindingList<Image>();
 
@@ -207,6 +207,11 @@ namespace LP2MegaAutos
             nombres.Add("btnClientes");
             nombres.Add("btnDrivers");
             nombres.Add("btnVehiculos");
+
+            textos.Add("Areas de" + Environment.NewLine+ "Trabajo");
+            textos.Add("Clientes");
+            textos.Add("Drivers");
+            textos.Add("Carros");
 
             per.Add(EPermisos.AreasTrabajo);
             per.Add(EPermisos.Clientes);
@@ -220,13 +225,14 @@ namespace LP2MegaAutos
 
             Button btnInfo = ((frmPrincipal)this.Parent.Parent.Parent).getBotonPanelMenuString("btnMenuInformacion");
 
-            crearBotones(540, nombres, per, imgs, btnInfo);
+            crearBotones(540, nombres, per, imgs, btnInfo, textos);
         }
 
         private void crearBotonesConfiguracion()
         {
             // Crear listas necesarias
             BindingList<string> nombres = new BindingList<string>();
+            BindingList<string> textos = new BindingList<string>();
             BindingList<EPermisos> per = new BindingList<EPermisos>();
             BindingList<Image> imgs = new BindingList<Image>();
 
@@ -234,6 +240,11 @@ namespace LP2MegaAutos
             nombres.Add("btnServicios");
             nombres.Add("btnSedes");
             nombres.Add("btnEmpresa");
+
+            textos.Add("Usuarios");
+            textos.Add("Servicios");
+            textos.Add("Sedes");
+            textos.Add("Empresa");
 
             per.Add(EPermisos.Usuarios);
             per.Add(EPermisos.Servicios);
@@ -248,7 +259,7 @@ namespace LP2MegaAutos
             Button btnConfig = ((frmPrincipal)this.Parent.Parent.Parent).
                 getBotonPanelMenuString("btnMenuConfiguracion");
             
-            crearBotones(626, nombres, per, imgs,btnConfig);
+            crearBotones(626, nombres, per, imgs,btnConfig,textos);
 
 
         }

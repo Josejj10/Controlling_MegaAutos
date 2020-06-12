@@ -85,7 +85,7 @@ namespace LP2MegaAutos.Framework.UserControls
             // 
             // pnlBackground
             // 
-            this.pnlBackground.BackColor = System.Drawing.Color.White;
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.pnlBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlBackground.Controls.Add(this.rpEgresos);
             this.pnlBackground.Controls.Add(this.rpIngresos);
@@ -111,7 +111,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.rpEgresos.ArcRadiusPanel = 15;
             this.rpEgresos.BackColor = System.Drawing.Color.Transparent;
             this.rpEgresos.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
-            this.rpEgresos.ColorPanel = System.Drawing.Color.White;
+            this.rpEgresos.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rpEgresos.Controls.Add(this.lblStringEgresos);
             this.rpEgresos.Controls.Add(this.tlpEgresos);
             this.rpEgresos.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
@@ -194,7 +194,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.rpIngresos.ArcRadiusPanel = 15;
             this.rpIngresos.BackColor = System.Drawing.Color.Transparent;
             this.rpIngresos.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
-            this.rpIngresos.ColorPanel = System.Drawing.Color.White;
+            this.rpIngresos.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rpIngresos.Controls.Add(this.lbStringIngresos);
             this.rpIngresos.Controls.Add(this.tlpIngresos);
             this.rpIngresos.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
@@ -466,7 +466,7 @@ namespace LP2MegaAutos.Framework.UserControls
             // 
             // pnlTipoReporte
             // 
-            this.pnlTipoReporte.BackColor = System.Drawing.Color.White;
+            this.pnlTipoReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.pnlTipoReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlTipoReporte.Controls.Add(this.lblTipoReporte);
             this.pnlTipoReporte.Location = new System.Drawing.Point(229, 54);
@@ -500,7 +500,7 @@ namespace LP2MegaAutos.Framework.UserControls
             // 
             // pnlPeriodoReporte
             // 
-            this.pnlPeriodoReporte.BackColor = System.Drawing.Color.White;
+            this.pnlPeriodoReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.pnlPeriodoReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlPeriodoReporte.Controls.Add(this.lblPeriodoReporte);
             this.pnlPeriodoReporte.Location = new System.Drawing.Point(229, 93);
@@ -534,7 +534,7 @@ namespace LP2MegaAutos.Framework.UserControls
             // 
             // pnlSede
             // 
-            this.pnlSede.BackColor = System.Drawing.Color.White;
+            this.pnlSede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.pnlSede.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSede.Controls.Add(this.lblSede);
             this.pnlSede.Location = new System.Drawing.Point(229, 132);
@@ -568,7 +568,7 @@ namespace LP2MegaAutos.Framework.UserControls
             // 
             // pnlFechasReporte
             // 
-            this.pnlFechasReporte.BackColor = System.Drawing.Color.White;
+            this.pnlFechasReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.pnlFechasReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlFechasReporte.Controls.Add(this.lblFechasReporte);
             this.pnlFechasReporte.Location = new System.Drawing.Point(229, 151);
@@ -618,6 +618,7 @@ namespace LP2MegaAutos.Framework.UserControls
             // 
             // tlpGeneradoPor
             // 
+            this.tlpGeneradoPor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.tlpGeneradoPor.ColumnCount = 3;
             this.tlpGeneradoPor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpGeneradoPor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));

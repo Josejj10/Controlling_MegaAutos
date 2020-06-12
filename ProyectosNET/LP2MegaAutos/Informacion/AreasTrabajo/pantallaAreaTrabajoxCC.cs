@@ -7,25 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaAreaTrabajoxCC : UserControl
+    public partial class pantallaAreaTrabajoxCC : MetroForm
     {
-
-        #region instancia
-        private static pantallaAreaTrabajoxCC _instancia;
-        public static pantallaAreaTrabajoxCC Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaAreaTrabajoxCC();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-
         public pantallaAreaTrabajoxCC()
         {
             InitializeComponent();

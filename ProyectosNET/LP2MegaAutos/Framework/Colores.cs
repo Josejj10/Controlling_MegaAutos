@@ -32,14 +32,16 @@ namespace LP2MegaAutos
         public static Color FormText = Color.FromArgb(81, 81, 81);
         public static Color FormBackground = Color.FromArgb(244, 244, 245);
         public static Color FormShape = Color.FromArgb(112, 112, 112);
-        public static Color ChooseAmarillo = Color.FromArgb(247,199,44);
+        public static Color ChooseAmarillo = Color.FromArgb(250, 220, 124);
+        public static Color ColorPanel = Color.FromArgb(26, 36, 50);
+        public static Color CasiPuro = Color.FromArgb(255, 255, 254);
     }
 
     public class Dark_Mode
     {
         // Contrast
         public static Color HighContrast = Color.FromArgb(245, 245, 246);
-        public static Color MediumContrast = Color.FromArgb(180, 180, 180);
+        public static Color MediumContrast = Color.FromArgb(250, 250, 250);
         public static Color LowContrast = Color.FromArgb(130, 130, 130);
 
         // Background
@@ -55,12 +57,13 @@ namespace LP2MegaAutos
         public static Color FormText = Color.FromArgb(181, 181, 181);
         public static Color FormBackground = Color.FromArgb(64, 64, 69);
         public static Color FormShape = Color.FromArgb(99, 99, 102);
-        public static Color ChooseAmarillo = Color.FromArgb(250,220,123);
-
+        public static Color ChooseAmarillo = Color.FromArgb(247, 199, 45);
+        public static Color ColorPanel = Color.FromArgb(55, 55, 55);
+        public static Color CasiPuro = Color.FromArgb(0, 0, 1);
     }
 
 
-    public class Colores : White_Mode
+    public class Colores
     {
         #region Denotive Colors
         public static Color Rosa = Color.FromArgb(227, 64, 94);
@@ -77,9 +80,32 @@ namespace LP2MegaAutos
         public static Color ClickableTextDefault = Rosa;
         public static Color ClickableTextEnter = Color.FromArgb(191, 90, 108);
         public static Color ClickableTextDown = Color.FromArgb(181, 51, 74);
-       
-
         #endregion Denotive Colors
+
+        #region iniciales
+        // Contrast
+        public static Color HighContrast = Color.FromArgb(26, 37, 50);
+        public static Color MediumContrast = Color.FromArgb(80, 80, 80);
+        public static Color LowContrast = Color.FromArgb(142, 142, 147);
+
+        // Background
+        public static Color BackBackground = Color.FromArgb(245, 245, 246);
+        public static Color FrontBackground = Color.FromArgb(255, 255, 255);
+
+        // Coloridos
+        public static Color Disabled = Color.FromArgb(189, 189, 189);
+        public static Color PrincipalRojo = Color.FromArgb(229, 65, 33);
+        public static Color PrincipalAzulMetalico = Color.FromArgb(54, 140, 161);
+
+        // Forms
+        public static Color FormText = Color.FromArgb(81, 81, 81);
+        public static Color FormBackground = Color.FromArgb(244, 244, 245);
+        public static Color FormShape = Color.FromArgb(112, 112, 112);
+        public static Color ChooseAmarillo = Color.FromArgb(250, 220, 124);
+        public static Color ColorPanel = Color.FromArgb(26, 36, 50);
+        public static Color CasiPuro = Color.FromArgb(255, 255, 254);
+
+        #endregion iniciales
 
         public static Color opuesto(Color color)
         {
@@ -101,6 +127,8 @@ namespace LP2MegaAutos
                 if (c == Dark_Mode.FormBackground.ToArgb()) color = White_Mode.FormBackground;
                 if (c == Dark_Mode.FormShape.ToArgb()) color = White_Mode.FormShape;
                 if (c == Dark_Mode.ChooseAmarillo.ToArgb()) color = White_Mode.ChooseAmarillo;
+                if (c == Dark_Mode.ColorPanel.ToArgb()) color = White_Mode.ColorPanel;
+                if (c == Dark_Mode.CasiPuro.ToArgb()) color = White_Mode.CasiPuro;
 
                 return color;
             }
@@ -122,8 +150,32 @@ namespace LP2MegaAutos
             if (c == White_Mode.FormBackground.ToArgb()) color = Dark_Mode.FormBackground;
             if (c == White_Mode.FormShape.ToArgb()) color = Dark_Mode.FormShape;
             if (c == White_Mode.ChooseAmarillo.ToArgb()) color = Dark_Mode.ChooseAmarillo;
+            if (c == White_Mode.ColorPanel.ToArgb()) color = Dark_Mode.ColorPanel;
+            if (c == White_Mode.CasiPuro.ToArgb()) color = Dark_Mode.CasiPuro;
 
             return color;
+        }
+
+        public static void invertirColores()
+        {
+            HighContrast = opuesto(HighContrast);
+            MediumContrast = opuesto(MediumContrast);
+            LowContrast = opuesto(LowContrast);
+
+            // Background
+            BackBackground = opuesto(BackBackground);
+            FrontBackground = opuesto(FrontBackground);
+
+            // Coloridos
+            Disabled = opuesto(Disabled);
+            PrincipalRojo = opuesto(PrincipalRojo);
+            PrincipalAzulMetalico = opuesto(PrincipalAzulMetalico);
+
+            // Forms
+            FormText = opuesto(FormText);
+            FormBackground = opuesto(FormBackground);
+            FormShape = opuesto(FormShape);
+            ChooseAmarillo = opuesto(ChooseAmarillo);
         }
 
         public static void cambiarToggle(Button c)
@@ -191,7 +243,10 @@ namespace LP2MegaAutos
         public static void cambiarRoundedPanelColor(RoundedPanel c)
         {
             c.cambiarColorPanel(opuesto(c.getColorPanel()));
-            c.cambiarColorBorde(opuesto(c.getColorBorde()));
+            if (!c.Name.Contains("Menu")) 
+                c.cambiarColorBorde(opuesto(c.getColorBorde()));
+            else
+                c.cambiarColorBorde(opuesto(ColorPanel));
         }
     }
     public enum ColoresSistema

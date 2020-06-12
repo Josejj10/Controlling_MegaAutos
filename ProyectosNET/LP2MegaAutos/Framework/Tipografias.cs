@@ -112,12 +112,10 @@ namespace LP2MegaAutos
                 if (nombre.StartsWith("font")) {
                     // Inicializar el font
                     fontData = (byte[])entry.Value;
-                    if (nombre == "fontLato_Semibold") 
-                        Console.WriteLine();
+                   
                     //fontData = LP2MegaAutos.Properties.Resources.fontLato_Bold;
                     // Apuntar fontPtr al inicio
                     fontPtr = Marshal.AllocCoTaskMem(fontData.Length);
-                    Console.WriteLine($"{fontPtr}: {nombre}");
                     // Copiar los datos a fontData
                     Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
                     
@@ -125,8 +123,7 @@ namespace LP2MegaAutos
                     fonts.AddMemoryFont(fontPtr, fontData.Length);
                     foreach(FontFamily i in fonts.Families)
                         Console.WriteLine(i);
-                    if (nombre == "fontLato_Semibold")
-                        Console.WriteLine();
+                    
 
                     // Unmanaged font 
                     // Porque GDI+ creara un objeto font para controles como RichTextBox

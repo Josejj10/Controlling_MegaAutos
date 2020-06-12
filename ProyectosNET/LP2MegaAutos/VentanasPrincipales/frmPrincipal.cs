@@ -134,7 +134,7 @@ namespace LP2MegaAutos
 
         private void inicializarUsuario()
         {
-            //_usuario.Permisos.Add(EPermisos.All);
+            _usuario.Permisos.Add(EPermisos.All);
             _usuario.Permisos.Add(EPermisos.ActualizarBD);
             _usuario.Permisos.Add(EPermisos.Empresa);
             _usuario.Permisos.Add(EPermisos.Sedes);
@@ -146,17 +146,22 @@ namespace LP2MegaAutos
         private void inicializarPms()
         {
             crearBotonesInicio();
-            this.pmsReportes.Imagen1 = (Image)new Bitmap(Resources.Reporte, 36, 36);
-            this.pmsReportes.Imagen2 = (Image)new Bitmap(Resources.AreaTrabajo, 36, 36);
-            this.pmsReportes.Imagen3 = (Image)new Bitmap(Resources.Clientes, 36, 36);
-            this.pmsReportes.Imagen4 = (Image)new Bitmap(Resources.car, 36, 36);
+            pmsReportes.Imagen1 = (Image)new Bitmap(Resources.Reporte, 36, 36);
+            pmsReportes.Imagen2 = (Image)new Bitmap(Resources.AreaTrabajo, 36, 36);
+            pmsReportes.Imagen3 = (Image)new Bitmap(Resources.Clientes, 36, 36);
+            pmsReportes.Imagen4 = (Image)new Bitmap(Resources.car, 36, 36);
 
-            this.pmsUltimoReporte.NumItems = 3;
-            this.pmsUltimoReporte.Imagen1 = (Image)new Bitmap(Resources.Estadisticas, 36, 36);
-            this.pmsUltimoReporte.Imagen2 = (Image)new Bitmap(Resources.ReporteDetalle, 36, 36);
-            this.pmsUltimoReporte.Imagen3 = (Image)new Bitmap(Resources.ReporteResumen, 36, 36);
+            pmsReportes.Texto1 = "Todos";
+            pmsReportes.Texto2 = "Por Area" ;
+            pmsReportes.Texto3 = "Por Cliente";
+            pmsReportes.Texto4 = "Por Vehiculo";
 
-            this.pmsReportes.LayoutImagenes = this.pmsUltimoReporte.LayoutImagenes = ImageLayout.Center;
+            pmsUltimoReporte.NumItems = 3;
+            pmsUltimoReporte.Imagen1 = (Image)new Bitmap(Resources.Estadisticas, 36, 36);
+            pmsUltimoReporte.Imagen2 = (Image)new Bitmap(Resources.ReporteDetalle, 36, 36);
+            pmsUltimoReporte.Imagen3 = (Image)new Bitmap(Resources.ReporteResumen, 36, 36);
+
+            pmsReportes.LayoutImagenes = pmsUltimoReporte.LayoutImagenes = ImageLayout.Center;
 
             btnMenuUltimoReporte.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 
@@ -505,9 +510,6 @@ namespace LP2MegaAutos
 
         #endregion inicializacion
 
-
-      
-
         #region panelMenu
 
         #region botonesClick
@@ -524,6 +526,7 @@ namespace LP2MegaAutos
         private void btnMenuCerrarSesion_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            // TODO Cambiar valor dark mode pq login no sale bien
         }
         private void btnMenuUsuario_Click(object sender, EventArgs e)
         {
@@ -661,7 +664,8 @@ namespace LP2MegaAutos
                 rp = (RoundedPanel)sender;
             else
                 rp = ((RoundedPanel)((Control)sender).Parent);
-            if (rp.ColorPanel == Colores.BackBackground) return;
+            if (rp.ColorPanel == Colores.BackBackground) 
+                return;
             rp.ColorPanel = colorAnterior;
         }
         #endregion MouseEnterMenu

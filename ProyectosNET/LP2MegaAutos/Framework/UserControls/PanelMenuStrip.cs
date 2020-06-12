@@ -42,11 +42,11 @@ namespace LP2MegaAutos.Framework.UserControls
         {
             this.itemMenuStrip1.Visible= false;
             this.itemMenuStrip2.Visible = false;
-            this.itemMenuStrip4.Visible = false;
             this.itemMenuStrip3.Visible = false;
+            this.itemMenuStrip4.Visible = false;
 
-            if (_numItems > 3) this.itemMenuStrip3.Visible = true;
-            if (_numItems > 2) this.itemMenuStrip4.Visible = true;
+            if (_numItems > 3) this.itemMenuStrip4.Visible = true;
+            if (_numItems > 2) this.itemMenuStrip3.Visible = true;
             if (_numItems > 1) this.itemMenuStrip2.Visible = true;
             if (_numItems > 0) this.itemMenuStrip1.Visible = true;
         }
@@ -61,7 +61,10 @@ namespace LP2MegaAutos.Framework.UserControls
                 this._numItems = value;
                 // Modificar el tamaño para que muestre solo x items
                 // Cada item mide 52 x 52
-                this.Size = new Size(52 * _numItems, 52);
+                // 205 max
+                // 52 > 52+51
+                // 51 en vez de 52 por el borde
+                this.Size = new Size(52 + 51 *(_numItems-1), 52);
                 enableOrDisableButtons();
             }
 

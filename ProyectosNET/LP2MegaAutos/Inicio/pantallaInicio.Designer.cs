@@ -49,6 +49,8 @@ namespace LP2MegaAutos
             this.pnlAbajoInformacion = new System.Windows.Forms.Panel();
             this.pnlAbajoConfiguracion = new System.Windows.Forms.Panel();
             this.pnlConfiguracion = new System.Windows.Forms.Panel();
+            this.ultimoReporteDashboard1 = new LP2MegaAutos.Framework.UserControls.UltimoReporteDashboard();
+            this.lblActualizarBD = new LP2MegaAutos.CustomControls.ClickableText();
             this.SuspendLayout();
             // 
             // pnlLineaTitulo
@@ -68,6 +70,7 @@ namespace LP2MegaAutos
             // 
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblBienvenido.Location = new System.Drawing.Point(36, 24);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(252, 39);
@@ -83,7 +86,10 @@ namespace LP2MegaAutos
             // 
             this.btnPerfil.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Usuario;
             this.btnPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfil.Location = new System.Drawing.Point(659, 29);
             this.btnPerfil.Name = "btnPerfil";
@@ -104,8 +110,10 @@ namespace LP2MegaAutos
             this.btnListaReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnListaReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListaReportes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.btnListaReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.btnListaReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.btnListaReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaReportes.Location = new System.Drawing.Point(36, 87);
+            this.btnListaReportes.Location = new System.Drawing.Point(36, 88);
             this.btnListaReportes.Name = "btnListaReportes";
             this.btnListaReportes.Size = new System.Drawing.Size(179, 80);
             this.btnListaReportes.TabIndex = 43;
@@ -115,16 +123,19 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnListaReportes, 10F);
             this.tags.SetTagFontStyle(this.btnListaReportes, System.Drawing.FontStyle.Regular);
             this.btnListaReportes.UseVisualStyleBackColor = false;
+            this.btnListaReportes.Click += new System.EventHandler(this.btnListaReportes_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(64)))), ((int)(((byte)(93)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(64)))), ((int)(((byte)(93)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(64)))), ((int)(((byte)(93)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lato", 15F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(36, 165);
+            this.button1.Location = new System.Drawing.Point(36, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 40);
             this.button1.TabIndex = 44;
@@ -135,16 +146,19 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Regular);
             this.button1.Text = "Reportes";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnListaReportes_Click);
             // 
             // btnImgVehiculo
             // 
-            this.btnImgVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnImgVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgVehiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImgVehiculo.BackgroundImage")));
             this.btnImgVehiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImgVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.btnImgVehiculo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnImgVehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgVehiculo.Location = new System.Drawing.Point(214, 87);
+            this.btnImgVehiculo.Location = new System.Drawing.Point(214, 88);
             this.btnImgVehiculo.Name = "btnImgVehiculo";
             this.btnImgVehiculo.Size = new System.Drawing.Size(41, 40);
             this.btnImgVehiculo.TabIndex = 45;
@@ -154,16 +168,19 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnImgVehiculo, 10F);
             this.tags.SetTagFontStyle(this.btnImgVehiculo, System.Drawing.FontStyle.Regular);
             this.btnImgVehiculo.UseVisualStyleBackColor = false;
+            this.btnImgVehiculo.Click += new System.EventHandler(this.btnGenerarVehiculo_Click);
             // 
             // btnImgCliente
             // 
-            this.btnImgCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnImgCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImgCliente.BackgroundImage")));
             this.btnImgCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImgCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.btnImgCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnImgCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgCliente.Location = new System.Drawing.Point(214, 165);
+            this.btnImgCliente.Location = new System.Drawing.Point(214, 166);
             this.btnImgCliente.Name = "btnImgCliente";
             this.btnImgCliente.Size = new System.Drawing.Size(41, 40);
             this.btnImgCliente.TabIndex = 46;
@@ -173,16 +190,19 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnImgCliente, 10F);
             this.tags.SetTagFontStyle(this.btnImgCliente, System.Drawing.FontStyle.Regular);
             this.btnImgCliente.UseVisualStyleBackColor = false;
+            this.btnImgCliente.Click += new System.EventHandler(this.btnGenerarCliente_Click);
             // 
             // btnImgAreaTrabajo
             // 
-            this.btnImgAreaTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(44)))));
+            this.btnImgAreaTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgAreaTrabajo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImgAreaTrabajo.BackgroundImage")));
             this.btnImgAreaTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnImgAreaTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImgAreaTrabajo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.btnImgAreaTrabajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnImgAreaTrabajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgAreaTrabajo.Location = new System.Drawing.Point(214, 126);
+            this.btnImgAreaTrabajo.Location = new System.Drawing.Point(214, 127);
             this.btnImgAreaTrabajo.Name = "btnImgAreaTrabajo";
             this.btnImgAreaTrabajo.Size = new System.Drawing.Size(41, 40);
             this.btnImgAreaTrabajo.TabIndex = 47;
@@ -192,15 +212,19 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnImgAreaTrabajo, 10F);
             this.tags.SetTagFontStyle(this.btnImgAreaTrabajo, System.Drawing.FontStyle.Regular);
             this.btnImgAreaTrabajo.UseVisualStyleBackColor = false;
+            this.btnImgAreaTrabajo.Click += new System.EventHandler(this.btnGenerarAreaTrabajo_Click);
             // 
             // btnGenerarVehiculo
             // 
-            this.btnGenerarVehiculo.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarVehiculo.BackColor = System.Drawing.Color.White;
             this.btnGenerarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerarVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.btnGenerarVehiculo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnGenerarVehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGenerarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarVehiculo.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarVehiculo.Location = new System.Drawing.Point(255, 87);
+            this.btnGenerarVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.btnGenerarVehiculo.Location = new System.Drawing.Point(254, 88);
             this.btnGenerarVehiculo.Name = "btnGenerarVehiculo";
             this.btnGenerarVehiculo.Size = new System.Drawing.Size(249, 40);
             this.btnGenerarVehiculo.TabIndex = 48;
@@ -212,15 +236,19 @@ namespace LP2MegaAutos
             this.btnGenerarVehiculo.Text = "Generar por Vehículo";
             this.btnGenerarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarVehiculo.UseVisualStyleBackColor = false;
+            this.btnGenerarVehiculo.Click += new System.EventHandler(this.btnGenerarVehiculo_Click);
             // 
             // btnGenerarCliente
             // 
-            this.btnGenerarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarCliente.BackColor = System.Drawing.Color.White;
             this.btnGenerarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerarCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.btnGenerarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnGenerarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGenerarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarCliente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarCliente.Location = new System.Drawing.Point(255, 165);
+            this.btnGenerarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.btnGenerarCliente.Location = new System.Drawing.Point(254, 166);
             this.btnGenerarCliente.Name = "btnGenerarCliente";
             this.btnGenerarCliente.Size = new System.Drawing.Size(249, 40);
             this.btnGenerarCliente.TabIndex = 49;
@@ -232,15 +260,19 @@ namespace LP2MegaAutos
             this.btnGenerarCliente.Text = "Generar por Cliente";
             this.btnGenerarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarCliente.UseVisualStyleBackColor = false;
+            this.btnGenerarCliente.Click += new System.EventHandler(this.btnGenerarCliente_Click);
             // 
             // btnGenerarAreaTrabajo
             // 
-            this.btnGenerarAreaTrabajo.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerarAreaTrabajo.BackColor = System.Drawing.Color.White;
             this.btnGenerarAreaTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerarAreaTrabajo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.btnGenerarAreaTrabajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnGenerarAreaTrabajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnGenerarAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarAreaTrabajo.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarAreaTrabajo.Location = new System.Drawing.Point(255, 126);
+            this.btnGenerarAreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.btnGenerarAreaTrabajo.Location = new System.Drawing.Point(254, 127);
             this.btnGenerarAreaTrabajo.Name = "btnGenerarAreaTrabajo";
             this.btnGenerarAreaTrabajo.Size = new System.Drawing.Size(249, 40);
             this.btnGenerarAreaTrabajo.TabIndex = 50;
@@ -252,6 +284,7 @@ namespace LP2MegaAutos
             this.btnGenerarAreaTrabajo.Text = "Generar por Área Trabajo";
             this.btnGenerarAreaTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarAreaTrabajo.UseVisualStyleBackColor = false;
+            this.btnGenerarAreaTrabajo.Click += new System.EventHandler(this.btnGenerarAreaTrabajo_Click);
             // 
             // lblCreditos
             // 
@@ -271,6 +304,7 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.lblCreditos, System.Drawing.FontStyle.Bold);
             this.lblCreditos.Text = "Créditos";
             this.lblCreditos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblCreditos.Click += new System.EventHandler(this.lblCreditos_Click);
             // 
             // pnlInformacion
             // 
@@ -278,7 +312,7 @@ namespace LP2MegaAutos
             this.pnlInformacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlInformacion.BackgroundImage")));
             this.pnlInformacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInformacion.Location = new System.Drawing.Point(540, 87);
+            this.pnlInformacion.Location = new System.Drawing.Point(540, 88);
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(80, 80);
             this.pnlInformacion.TabIndex = 53;
@@ -324,7 +358,7 @@ namespace LP2MegaAutos
             this.pnlConfiguracion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlConfiguracion.BackgroundImage")));
             this.pnlConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlConfiguracion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlConfiguracion.Location = new System.Drawing.Point(626, 87);
+            this.pnlConfiguracion.Location = new System.Drawing.Point(626, 88);
             this.pnlConfiguracion.Name = "pnlConfiguracion";
             this.pnlConfiguracion.Size = new System.Drawing.Size(80, 80);
             this.pnlConfiguracion.TabIndex = 55;
@@ -334,11 +368,57 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.pnlConfiguracion, 10F);
             this.tags.SetTagFontStyle(this.pnlConfiguracion, System.Drawing.FontStyle.Regular);
             // 
+            // ultimoReporteDashboard1
+            // 
+            this.ultimoReporteDashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.ultimoReporteDashboard1.Location = new System.Drawing.Point(36, 228);
+            this.ultimoReporteDashboard1.MontoEgresos = "9,999,999.00";
+            this.ultimoReporteDashboard1.MontoIngresos = "9,999,999.00";
+            this.ultimoReporteDashboard1.MontoTotal = "9,999,999.00";
+            this.ultimoReporteDashboard1.Name = "ultimoReporteDashboard1";
+            this.ultimoReporteDashboard1.PeriodoReporte = "Mensual";
+            this.ultimoReporteDashboard1.RangoFechasReporte = "24/03/2020 - 24/04/2020";
+            this.ultimoReporteDashboard1.SedeReporte = "Surquillo";
+            this.ultimoReporteDashboard1.Size = new System.Drawing.Size(430, 255);
+            this.ultimoReporteDashboard1.TabIndex = 57;
+            this.tags.SetTag2(this.ultimoReporteDashboard1, null);
+            this.tags.SetTag3(this.ultimoReporteDashboard1, null);
+            this.tags.SetTagFontName(this.ultimoReporteDashboard1, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.ultimoReporteDashboard1, 10F);
+            this.tags.SetTagFontStyle(this.ultimoReporteDashboard1, System.Drawing.FontStyle.Regular);
+            this.ultimoReporteDashboard1.TextoPrincipal = "MegaAutos";
+            this.ultimoReporteDashboard1.TipoReporte = "Áreas de Trabajo";
+            this.ultimoReporteDashboard1.UsuarioGenerador = "Perseus Jackson";
+            this.ultimoReporteDashboard1.VerReporteClick += new LP2MegaAutos.Framework.UserControls.UltimoReporteDashboard.ButtonClickEventHandler(this.ultimoReporteDashboard1_VerReporteClick);
+            // 
+            // lblActualizarBD
+            // 
+            this.lblActualizarBD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblActualizarBD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblActualizarBD.Font = new System.Drawing.Font("Montserrat", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActualizarBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
+            this.lblActualizarBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblActualizarBD.Location = new System.Drawing.Point(32, 493);
+            this.lblActualizarBD.Name = "lblActualizarBD";
+            this.lblActualizarBD.Size = new System.Drawing.Size(249, 22);
+            this.lblActualizarBD.TabIndex = 58;
+            this.tags.SetTag2(this.lblActualizarBD, null);
+            this.tags.SetTag3(this.lblActualizarBD, null);
+            this.tags.SetTagFontName(this.lblActualizarBD, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.lblActualizarBD, 12F);
+            this.tags.SetTagFontStyle(this.lblActualizarBD, System.Drawing.FontStyle.Bold);
+            this.lblActualizarBD.Text = "Actualizar Base de Datos";
+            this.lblActualizarBD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblActualizarBD.Visible = false;
+            this.lblActualizarBD.Click += new System.EventHandler(this.lblActualizarBD_Click);
+            // 
             // pantallaInicioGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.Controls.Add(this.lblActualizarBD);
+            this.Controls.Add(this.ultimoReporteDashboard1);
             this.Controls.Add(this.pnlAbajoConfiguracion);
             this.Controls.Add(this.pnlAbajoInformacion);
             this.Controls.Add(this.pnlConfiguracion);
@@ -387,5 +467,7 @@ namespace LP2MegaAutos
         private System.Windows.Forms.Panel pnlAbajoInformacion;
         private System.Windows.Forms.Panel pnlAbajoConfiguracion;
         private System.Windows.Forms.Panel pnlConfiguracion;
+        private Framework.UserControls.UltimoReporteDashboard ultimoReporteDashboard1;
+        private CustomControls.ClickableText lblActualizarBD;
     }
 }

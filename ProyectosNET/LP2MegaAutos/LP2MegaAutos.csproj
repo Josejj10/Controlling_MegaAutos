@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -77,16 +78,17 @@
     <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.Designer.cs">
       <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Framework\ResizeImageHelper.cs" />
     <Compile Include="Framework\UserControls\Items\itemMenuStrip.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Framework\UserControls\Items\itemMenuStrip.Designer.cs">
       <DependentUpon>itemMenuStrip.cs</DependentUpon>
     </Compile>
-    <Compile Include="Framework\UserControls\MetaDesign\ClickableText.cs">
+    <Compile Include="Framework\MetaDesign\ClickableText.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Framework\UserControls\MetaDesign\ClickableText.Designer.cs">
+    <Compile Include="Framework\MetaDesign\ClickableText.Designer.cs">
       <DependentUpon>ClickableText.cs</DependentUpon>
     </Compile>
     <Compile Include="Framework\Colores.cs" />
@@ -95,6 +97,12 @@
     </Compile>
     <Compile Include="Framework\UserControls\PanelMenuStrip.Designer.cs">
       <DependentUpon>PanelMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\UserControls\UltimoReporteDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Framework\UserControls\UltimoReporteDashboard.Designer.cs">
+      <DependentUpon>UltimoReporteDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.cs">
       <SubType>Form</SubType>
@@ -324,7 +332,7 @@
     <Compile Include="Reportes\pantallaListaReportes.Designer.cs">
       <DependentUpon>pantallaListaReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Framework\UserControls\MetaDesign\RoundedPanelExtender.cs">
+    <Compile Include="Framework\MetaDesign\RoundedPanelExtender.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Framework\DarkMode.cs" />
@@ -368,18 +376,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Framework\UserControls\MetaDesign\ShadowPanel.cs">
+    <Compile Include="Framework\MetaDesign\ShadowPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Framework\UserControls\MetaDesign\TagExtender.cs">
+    <Compile Include="Framework\MetaDesign\TagExtender.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Framework\Tipografias.cs" />
     <Compile Include="Framework\TitleBar.cs" />
-    <Compile Include="Framework\UserControls\MetaDesign\RoundedPanel.cs">
+    <Compile Include="Framework\MetaDesign\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Framework\UserControls\MetaDesign\RoundedPanel.Designer.cs">
+    <Compile Include="Framework\MetaDesign\RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasPrincipales\Pantalla.cs">
@@ -403,6 +411,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Framework\UserControls\PanelMenuStrip.resx">
       <DependentUpon>PanelMenuStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\UserControls\UltimoReporteDashboard.resx">
+      <DependentUpon>UltimoReporteDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\frmCuentaContable.resx">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>

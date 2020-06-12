@@ -27,7 +27,7 @@ namespace LP2MegaAutos
             _usuario = u;
         }
 
-
+        #region Dynamic
         public void crearBotonesSegunPermisos()
         {
             // Ver los permisos que tiene el usuario
@@ -59,8 +59,8 @@ namespace LP2MegaAutos
 
             if ((botones & 1) == 1)
             {
-                // Crear label de Actualizar BD
-
+                // Hacer Visible el Label de Actualizar BD
+                this.lblActualizarBD.Visible = true;
             }
 
         }
@@ -73,7 +73,8 @@ namespace LP2MegaAutos
             ims.Name = nombre;
             ims.BackgroundLayout = ImageLayout.Center;
             ims.Imagen = (Image) new Bitmap(img, new Size(54,54));
-            
+            ims.Texto = nombre;
+            ims.FontSize = 15;
             ims.Location = new Point(xLoc, yLoc);
             ims.Size = new Size(80, 80);
 
@@ -98,13 +99,7 @@ namespace LP2MegaAutos
                 itemMenuStrip ims3 = crearItemMenuStrip(xLoc, 334, nombres[2], imgs[2]);
                 itemMenuStrip ims4 = crearItemMenuStrip(xLoc, 413, nombres[3], imgs[3]);
 
-                // TODO Suscribir todos
-                // ims1.click += itemStrip_Click;
-                // pms.item1Click += 
-                // new PanelMenuStrip.ButtonClickEventHandler
-                // (BotonesDinamicosHelper.asignarBoton(per[0],
-                //     btnMenu, ims[0], panelMenu, contenedorPantalla1));
-
+                // Suscribir todos
                 ims1.click += new itemMenuStrip.ButtonClickEventHandler(
                     BotonesDinamicosHelper.asignarBoton(per[0],btnMenu, imgs[1],
                     panelMenu, cnt));
@@ -257,6 +252,7 @@ namespace LP2MegaAutos
 
 
         }
+        #endregion Dynamic
 
         #region Event Handlers
         // Crear Event Handlers para que la pantalla Principal 
@@ -267,20 +263,21 @@ namespace LP2MegaAutos
         public event ButtonClickEventHandler ReporteAreaTrabajoClick;
         public event ButtonClickEventHandler ReporteClienteClick;
         public event ButtonClickEventHandler ReporteVehiculoClick;
-
+        public event ButtonClickEventHandler CreditosClick;
+        public event ButtonClickEventHandler ActualizarBDClick;
+        public event ButtonClickEventHandler VerUltimoReporteClick;
         #endregion Event Handlers
 
-
+        #region BotonesClick
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             ButtonClickEventHandler h = perfilUsuarioClick;
             if (h != null) h(this, e);
         }
 
-
         private void btnGenerarVehiculo_Click(object sender, EventArgs e)
         {
-            ButtonClickEventHandler h = ReporteAreaTrabajoClick;
+            ButtonClickEventHandler h = ReporteVehiculoClick;
             if (h != null) h(this, e);
         }
 
@@ -292,7 +289,7 @@ namespace LP2MegaAutos
 
         private void btnGenerarCliente_Click(object sender, EventArgs e)
         {
-            ButtonClickEventHandler h = ReporteAreaTrabajoClick;
+            ButtonClickEventHandler h = ReporteClienteClick;
             if (h != null) h(this, e);
         }
 
@@ -301,5 +298,22 @@ namespace LP2MegaAutos
             ButtonClickEventHandler h = ListaReportesClick;
             if (h != null) h(this, e);
         }
+
+        private void lblCreditos_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = CreditosClick;
+            if (h != null) h(this, e);
+        }
+        private void lblActualizarBD_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = ActualizarBDClick;
+            if (h != null) h(this, e);
+        }
+        private void ultimoReporteDashboard1_VerReporteClick(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = VerUltimoReporteClick;
+            if (h != null) h(this, e);
+        }
+        #endregion Botones Click
     }
 }

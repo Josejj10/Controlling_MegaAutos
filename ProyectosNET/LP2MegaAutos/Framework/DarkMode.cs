@@ -60,8 +60,6 @@ namespace LP2MegaAutos
         #region Cambiar DM
         public static void cambiarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent, Label label_Modo_Oscuro)
         {
-            // TODO idea: Cambiar los valores estaticos de Colores.BackBackground, etc
-            // al BackBackground del otro modo.
             // Implementar en cambiarDM y en IniciarDM
             if (dark_mode)
             {
@@ -105,6 +103,7 @@ namespace LP2MegaAutos
                 panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
             }
             // Si esta en dark mode, pasar a white mode y viceversa
+            Colores.invertirColores();
             dark_mode = !dark_mode;
         }
         #endregion Cambiar DM
@@ -138,7 +137,6 @@ namespace LP2MegaAutos
                 global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_activado;
             // Cambiar el panel
             panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
-
         }
 
         #endregion Iniciar DM
@@ -209,7 +207,7 @@ namespace LP2MegaAutos
             if (c.GetType() == typeof(RoundedPanel))
             {
                 Colores.cambiarRoundedPanelColor((RoundedPanel)c);
-                if (nom.Contains("Menu"))
+                if (nom.Contains("Menu")) // No cambia BackColor
                     return;
             }
             

@@ -19,6 +19,8 @@ namespace LP2MegaAutos.Framework.UserControls
         {
             InitializeComponent();
             pnlReloj.BackgroundImage = ResizeImageHelper.ResizeImage(Resources.Reloj, 28, 28);
+            DarkMode.agregarExcepcion("btnVerReporte");
+            DarkMode.agregarExcepcion("lblUltimoReporte");
         }
 
 

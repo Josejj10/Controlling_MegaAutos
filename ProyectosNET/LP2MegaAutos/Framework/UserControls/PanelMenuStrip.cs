@@ -98,6 +98,38 @@ namespace LP2MegaAutos.Framework.UserControls
             set { this.itemMenuStrip4.Imagen = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 1"), Category("PanelMenuStrip")]
+        public string Texto1
+        {
+            get { return itemMenuStrip1.Texto; }
+            set { itemMenuStrip1.Texto= value; }
+        }
+        
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 2"), Category("PanelMenuStrip")]
+        public string Texto2
+        {
+            get { return itemMenuStrip2.Texto; }
+            set { itemMenuStrip2.Texto= value; }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 3"), Category("PanelMenuStrip")]
+        public string Texto3
+        {
+            get { return itemMenuStrip3.Texto; }
+            set { itemMenuStrip3.Texto= value; }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 4"), Category("PanelMenuStrip")]
+        public string Texto4
+        {
+            get { return itemMenuStrip4.Texto; }
+            set { itemMenuStrip4.Texto= value; }
+        }
+
         public ImageLayout LayoutImagenes
         {
             set {

@@ -261,7 +261,7 @@
       <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.Designer.cs">
       <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
@@ -587,32 +587,17 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Fonts\Lato-Black.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-BlackItalic.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Lato-Bold.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-BoldItalic.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Lato-Heavy.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-HeavyItalic.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato_Italic.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-Light.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-LightItalic.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Lato-Medium.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-MediumItalic.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Lato-Regular.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Lato-Semibold.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-SemiboldItalic.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-Thin.ttf" />
-    <EmbeddedResource Include="Resources\Fonts\Lato-ThinItalic.ttf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Black.otf" />
-    <EmbeddedResource Include="Resources\Fonts\Montserrat-BlackItalic.otf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Bold.otf" />
-    <EmbeddedResource Include="Resources\Fonts\Montserrat_BoldItalic.otf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraBold.otf" />
-    <EmbeddedResource Include="Resources\Fonts\Montserrat-ExtraBoldItalic.otf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.otf" />
-    <EmbeddedResource Include="Resources\Fonts\Montserrat-MediumItalic.otf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.otf" />
     <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBold.otf" />
-    <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBoldItalic.otf" />
     <EmbeddedResource Include="Resources\logo_megaautos.png" />
   </ItemGroup>
   <ItemGroup>

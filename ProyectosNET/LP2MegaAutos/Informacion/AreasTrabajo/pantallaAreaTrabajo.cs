@@ -121,17 +121,13 @@ namespace LP2MegaAutos
             //    pantallaAgregarAreaTrabajo.Instancia.BringToFront();
         }
 
-        private void il_AreaTrabajo1_Click(object sender, EventArgs e)
+        private void il_AreaTrabajo1_Click_1(object sender, EventArgs e)
         {
-            //MessageBox.Show("NO AUN");
-            if (!this.Controls.Contains(pantallaAreaTrabajoxCC.Instancia))
+            pantallaAreaTrabajoxCC pnt = new pantallaAreaTrabajoxCC();
+            if(pnt.ShowDialog() == DialogResult.OK)
             {
-                this.Controls.Add(pantallaAreaTrabajoxCC.Instancia);
-                pantallaAreaTrabajoxCC.Instancia.Dock = DockStyle.Fill;
-                pantallaAreaTrabajoxCC.Instancia.BringToFront();
+                // TODO Hacer algo
             }
-            else
-                pantallaAreaTrabajoxCC.Instancia.BringToFront();
         }
     }
 }

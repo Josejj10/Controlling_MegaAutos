@@ -219,8 +219,8 @@ namespace LP2MegaAutos
             this.btnGenerarVehiculo.BackColor = System.Drawing.Color.White;
             this.btnGenerarVehiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerarVehiculo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.btnGenerarVehiculo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnGenerarVehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGenerarVehiculo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
+            this.btnGenerarVehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnGenerarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarVehiculo.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
@@ -243,8 +243,8 @@ namespace LP2MegaAutos
             this.btnGenerarCliente.BackColor = System.Drawing.Color.White;
             this.btnGenerarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerarCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.btnGenerarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnGenerarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGenerarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
+            this.btnGenerarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnGenerarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarCliente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
@@ -267,8 +267,8 @@ namespace LP2MegaAutos
             this.btnGenerarAreaTrabajo.BackColor = System.Drawing.Color.White;
             this.btnGenerarAreaTrabajo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerarAreaTrabajo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.btnGenerarAreaTrabajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnGenerarAreaTrabajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGenerarAreaTrabajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
+            this.btnGenerarAreaTrabajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnGenerarAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarAreaTrabajo.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarAreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));

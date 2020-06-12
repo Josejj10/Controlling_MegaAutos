@@ -51,6 +51,7 @@
             this.rpn_ListaVehiculos = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaVehiculos = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.cmbFiltroTipoVehiculo = new System.Windows.Forms.ComboBox();
             this.pnlBuscar.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -119,7 +120,7 @@
             this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cTxt_MasFiltros.Location = new System.Drawing.Point(22, 272);
             this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 38);
+            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 21);
             this.cTxt_MasFiltros.TabIndex = 63;
             this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
             this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
@@ -405,8 +406,8 @@
             this.il_Vehiculo1.TextoAgregadoPor = "Percy Jackson";
             this.il_Vehiculo1.TextoFecha = "dd - mm - aaaa";
             this.il_Vehiculo1.TextoPrincipal = "ABC-123";
-            this.il_Vehiculo1.Textosecundario = "";
-            this.il_Vehiculo1.TextoTercero = "";
+            this.il_Vehiculo1.Textosecundario = "Sir Shackleton III";
+            this.il_Vehiculo1.TextoTercero = "Camioneta";
             // 
             // il_Vehiculo2
             // 
@@ -425,8 +426,8 @@
             this.il_Vehiculo2.TextoAgregadoPor = "Percy Jackson";
             this.il_Vehiculo2.TextoFecha = "dd - mm - aaaa";
             this.il_Vehiculo2.TextoPrincipal = "DEF-987";
-            this.il_Vehiculo2.Textosecundario = "";
-            this.il_Vehiculo2.TextoTercero = "";
+            this.il_Vehiculo2.Textosecundario = "Carter Kane";
+            this.il_Vehiculo2.TextoTercero = "Auto";
             // 
             // il_Vehiculo3
             // 
@@ -445,8 +446,8 @@
             this.il_Vehiculo3.TextoAgregadoPor = "Percy Jackson";
             this.il_Vehiculo3.TextoFecha = "dd - mm - aaaa";
             this.il_Vehiculo3.TextoPrincipal = "XYZ-666";
-            this.il_Vehiculo3.Textosecundario = "";
-            this.il_Vehiculo3.TextoTercero = "";
+            this.il_Vehiculo3.Textosecundario = "Lucia Fernandez";
+            this.il_Vehiculo3.TextoTercero = "Deportivo";
             // 
             // roundedPanel4
             // 
@@ -513,7 +514,7 @@
             this.lbl_ListaVehiculos.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaVehiculos.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaVehiculos.Name = "lbl_ListaVehiculos";
-            this.lbl_ListaVehiculos.Size = new System.Drawing.Size(94, 19);
+            this.lbl_ListaVehiculos.Size = new System.Drawing.Size(90, 22);
             this.lbl_ListaVehiculos.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaVehiculos, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaVehiculos, null);
@@ -523,11 +524,25 @@
             this.lbl_ListaVehiculos.Text = "Vehículos";
             this.lbl_ListaVehiculos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmbFiltroTipoVehiculo
+            // 
+            this.cmbFiltroTipoVehiculo.FormattingEnabled = true;
+            this.cmbFiltroTipoVehiculo.Location = new System.Drawing.Point(24, 311);
+            this.cmbFiltroTipoVehiculo.Name = "cmbFiltroTipoVehiculo";
+            this.cmbFiltroTipoVehiculo.Size = new System.Drawing.Size(121, 21);
+            this.cmbFiltroTipoVehiculo.TabIndex = 65;
+            this.tagsExtender1.SetTag2(this.cmbFiltroTipoVehiculo, null);
+            this.tagsExtender1.SetTag3(this.cmbFiltroTipoVehiculo, null);
+            this.tagsExtender1.SetTagFontName(this.cmbFiltroTipoVehiculo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cmbFiltroTipoVehiculo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cmbFiltroTipoVehiculo, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaActualizarVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cmbFiltroTipoVehiculo);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.btn_Agregar);
@@ -581,5 +596,6 @@
         private RoundedPanel rpn_ListaVehiculos;
         private System.Windows.Forms.Label lbl_ListaVehiculos;
         private TagsExtender tagsExtender1;
+        private System.Windows.Forms.ComboBox cmbFiltroTipoVehiculo;
     }
 }

@@ -62,6 +62,7 @@
             // 
             // pnl_AreaTrabajo
             // 
+            this.pnl_AreaTrabajo.BackColor = System.Drawing.Color.White;
             this.pnl_AreaTrabajo.Controls.Add(this.roundedPanel3);
             this.pnl_AreaTrabajo.Controls.Add(this.txt_AreaTrabajo);
             this.pnl_AreaTrabajo.Controls.Add(this.lbl_AreaTrabajo);
@@ -138,6 +139,7 @@
             // 
             // pnl_CuentaContable
             // 
+            this.pnl_CuentaContable.BackColor = System.Drawing.Color.White;
             this.pnl_CuentaContable.Controls.Add(this.roundedPanel2);
             this.pnl_CuentaContable.Controls.Add(this.txt_CuentaContable);
             this.pnl_CuentaContable.Controls.Add(this.lbl_CuentaContable);
@@ -227,6 +229,7 @@
             // 
             // pnl_NumeroDocumento
             // 
+            this.pnl_NumeroDocumento.BackColor = System.Drawing.Color.White;
             this.pnl_NumeroDocumento.Controls.Add(this.rnd_color_1);
             this.pnl_NumeroDocumento.Controls.Add(this.txt_NumeroDocumento);
             this.pnl_NumeroDocumento.Controls.Add(this.lbl_Formula);
@@ -520,6 +523,7 @@
             // lblDriver
             // 
             this.lblDriver.AutoSize = true;
+            this.lblDriver.BackColor = System.Drawing.Color.White;
             this.lblDriver.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDriver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblDriver.Location = new System.Drawing.Point(27, 42);
@@ -562,6 +566,7 @@
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Load += new System.EventHandler(this.pantallaEditarDriver_Load);
             this.pnl_AreaTrabajo.ResumeLayout(false);
             this.pnl_AreaTrabajo.PerformLayout();

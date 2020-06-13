@@ -57,8 +57,8 @@
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.txt_NuevaCont = new System.Windows.Forms.TextBox();
             this.lbl_NuevaCont = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_NombreUsuario = new System.Windows.Forms.TextBox();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
@@ -110,9 +110,9 @@
             this.lbl_ListaPermisosUsuario.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaPermisosUsuario, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaPermisosUsuario, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaPermisosUsuario, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.lbl_ListaPermisosUsuario, 15.75F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaPermisosUsuario, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaPermisosUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ListaPermisosUsuario, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ListaPermisosUsuario, System.Drawing.FontStyle.Regular);
             this.lbl_ListaPermisosUsuario.Text = "Permisos";
             this.lbl_ListaPermisosUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -129,7 +129,7 @@
             this.btn_AgregarPermiso.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btn_AgregarPermiso, null);
             this.tagsExtender1.SetTag3(this.btn_AgregarPermiso, null);
-            this.tagsExtender1.SetTagFontName(this.btn_AgregarPermiso, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontName(this.btn_AgregarPermiso, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.btn_AgregarPermiso, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btn_AgregarPermiso, System.Drawing.FontStyle.Regular);
             this.btn_AgregarPermiso.Text = "+ Agregar";
@@ -151,7 +151,7 @@
             // 
             // flpPermisos
             // 
-            this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.flpPermisos.Location = new System.Drawing.Point(28, 246);
             this.flpPermisos.Name = "flpPermisos";
             this.flpPermisos.Size = new System.Drawing.Size(538, 118);
@@ -324,8 +324,8 @@
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
             this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Regular);
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -371,9 +371,9 @@
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 15F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click_1);
@@ -388,7 +388,7 @@
             this.lbl_Contraseña.TabIndex = 72;
             this.tagsExtender1.SetTag2(this.lbl_Contraseña, null);
             this.tagsExtender1.SetTag3(this.lbl_Contraseña, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Contraseña, fontsD.Lato);
+            this.tagsExtender1.SetTagFontName(this.lbl_Contraseña, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.lbl_Contraseña, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Contraseña, System.Drawing.FontStyle.Regular);
             this.lbl_Contraseña.Text = "Contraseña";
@@ -435,8 +435,8 @@
             this.txt_ContraseñaActual.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.txt_ContraseñaActual, null);
             this.tagsExtender1.SetTag3(this.txt_ContraseñaActual, null);
-            this.tagsExtender1.SetTagFontName(this.txt_ContraseñaActual, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_ContraseñaActual, 12F);
+            this.tagsExtender1.SetTagFontName(this.txt_ContraseñaActual, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_ContraseñaActual, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txt_ContraseñaActual, System.Drawing.FontStyle.Regular);
             this.txt_ContraseñaActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_ContraseñaActual.UseSystemPasswordChar = true;
@@ -483,13 +483,14 @@
             this.tagsExtender1.SetTag2(this.btnDarDeBaja, null);
             this.tagsExtender1.SetTag3(this.btnDarDeBaja, null);
             this.tagsExtender1.SetTagFontName(this.btnDarDeBaja, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnDarDeBaja, 15F);
-            this.tagsExtender1.SetTagFontStyle(this.btnDarDeBaja, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontSize(this.btnDarDeBaja, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnDarDeBaja, System.Drawing.FontStyle.Regular);
             this.btnDarDeBaja.Text = "Dar de baja";
             this.btnDarDeBaja.UseVisualStyleBackColor = false;
             // 
             // pnl_codServ
             // 
+            this.pnl_codServ.BackColor = System.Drawing.Color.White;
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.txt_Correo);
             this.pnl_codServ.Controls.Add(this.lbl_Correo);
@@ -542,9 +543,9 @@
             this.txt_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_Correo, null);
             this.tagsExtender1.SetTag3(this.txt_Correo, null);
-            this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_Correo, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_Correo, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_Correo, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_Correo, System.Drawing.FontStyle.Regular);
             this.txt_Correo.Text = "jmcberro@gmail.com";
             // 
             // lbl_Correo
@@ -559,13 +560,14 @@
             this.lbl_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Correo, null);
             this.tagsExtender1.SetTag3(this.lbl_Correo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Correo, fontsD.Lato);
+            this.tagsExtender1.SetTagFontName(this.lbl_Correo, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.lbl_Correo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_Correo, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_Correo, System.Drawing.FontStyle.Regular);
             this.lbl_Correo.Text = "Correo";
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.boton_ver_password);
             this.panel2.Controls.Add(this.roundedPanel2);
             this.panel2.Controls.Add(this.txt_NuevaCont);
@@ -647,9 +649,9 @@
             this.txt_NuevaCont.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_NuevaCont, null);
             this.tagsExtender1.SetTag3(this.txt_NuevaCont, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NuevaCont, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_NuevaCont, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_NuevaCont, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontName(this.txt_NuevaCont, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_NuevaCont, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NuevaCont, System.Drawing.FontStyle.Regular);
             this.txt_NuevaCont.Text = "jmcberro@gmail.com";
             // 
             // lbl_NuevaCont
@@ -664,26 +666,10 @@
             this.lbl_NuevaCont.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_NuevaCont, null);
             this.tagsExtender1.SetTag3(this.lbl_NuevaCont, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_NuevaCont, fontsD.Lato);
+            this.tagsExtender1.SetTagFontName(this.lbl_NuevaCont, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.lbl_NuevaCont, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_NuevaCont, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_NuevaCont, System.Drawing.FontStyle.Regular);
             this.lbl_NuevaCont.Text = "Contraseña";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblNombre.Location = new System.Drawing.Point(27, 42);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(179, 35);
-            this.lblNombre.TabIndex = 75;
-            this.tagsExtender1.SetTag2(this.lblNombre, null);
-            this.tagsExtender1.SetTag3(this.lblNombre, null);
-            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblNombre, 21.75F);
-            this.tagsExtender1.SetTagFontStyle(this.lblNombre, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Text = "Juan Villegaz";
             // 
             // label1
             // 
@@ -696,10 +682,26 @@
             this.label1.TabIndex = 76;
             this.tagsExtender1.SetTag2(this.label1, null);
             this.tagsExtender1.SetTag3(this.label1, null);
-            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.label1, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Bold);
+            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.label1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Regular);
             this.label1.Text = "Analista";
+            // 
+            // txt_NombreUsuario
+            // 
+            this.txt_NombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NombreUsuario.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.txt_NombreUsuario.Location = new System.Drawing.Point(27, 42);
+            this.txt_NombreUsuario.Name = "txt_NombreUsuario";
+            this.txt_NombreUsuario.Size = new System.Drawing.Size(441, 35);
+            this.txt_NombreUsuario.TabIndex = 77;
+            this.tagsExtender1.SetTag2(this.txt_NombreUsuario, null);
+            this.tagsExtender1.SetTag3(this.txt_NombreUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_NombreUsuario, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NombreUsuario, System.Drawing.FontStyle.Bold);
+            this.txt_NombreUsuario.Text = "Juan Villegaz";
             // 
             // pantallaEditarUsuario
             // 
@@ -707,8 +709,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;
+            this.Controls.Add(this.txt_NombreUsuario);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.roundedPanel1);
@@ -735,6 +737,7 @@
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Load += new System.EventHandler(this.pantallaEditarUsuario_Load);
             this.rpn_ListaPermisosUsuario.ResumeLayout(false);
             this.rpn_ListaPermisosUsuario.PerformLayout();
@@ -783,7 +786,7 @@
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.TextBox txt_NuevaCont;
         private System.Windows.Forms.Label lbl_NuevaCont;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_NombreUsuario;
     }
 }

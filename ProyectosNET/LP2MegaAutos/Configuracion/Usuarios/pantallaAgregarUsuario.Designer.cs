@@ -72,6 +72,7 @@
             // 
             // pnl_Correo
             // 
+            this.pnl_Correo.BackColor = System.Drawing.Color.White;
             this.pnl_Correo.Controls.Add(this.roundedPanel4);
             this.pnl_Correo.Controls.Add(this.txt_Correo);
             this.pnl_Correo.Controls.Add(this.lbl_Correo);
@@ -131,6 +132,7 @@
             // lbl_Correo
             // 
             this.lbl_Correo.AutoSize = true;
+            this.lbl_Correo.BackColor = System.Drawing.Color.White;
             this.lbl_Correo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lbl_Correo.Location = new System.Drawing.Point(4, 2);
@@ -147,6 +149,7 @@
             // 
             // pnl_Telefono
             // 
+            this.pnl_Telefono.BackColor = System.Drawing.Color.White;
             this.pnl_Telefono.Controls.Add(this.roundedPanel3);
             this.pnl_Telefono.Controls.Add(this.txt_Telefono);
             this.pnl_Telefono.Controls.Add(this.lbl_TipoUsuario);
@@ -222,6 +225,7 @@
             // 
             // pnl_TipoDocumento
             // 
+            this.pnl_TipoDocumento.BackColor = System.Drawing.Color.White;
             this.pnl_TipoDocumento.Controls.Add(this.roundedPanel2);
             this.pnl_TipoDocumento.Controls.Add(this.txt_Direccion);
             this.pnl_TipoDocumento.Controls.Add(this.lbl_Direccion);
@@ -310,6 +314,7 @@
             // 
             // pnl_NumeroDocumento
             // 
+            this.pnl_NumeroDocumento.BackColor = System.Drawing.Color.White;
             this.pnl_NumeroDocumento.Controls.Add(this.rnd_color_1);
             this.pnl_NumeroDocumento.Controls.Add(this.txt_Contraseña);
             this.pnl_NumeroDocumento.Controls.Add(this.lbl_Contraseña);
@@ -387,7 +392,7 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.panel2.Location = new System.Drawing.Point(28, 246);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(538, 118);
@@ -720,6 +725,7 @@
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Load += new System.EventHandler(this.pantallaAgregarUsuario_Load);
             this.pnl_Correo.ResumeLayout(false);
             this.pnl_Correo.PerformLayout();

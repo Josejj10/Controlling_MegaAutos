@@ -1,4 +1,5 @@
-﻿using ShadowPanel;
+﻿using LP2MegaAutos.VentanasPrincipales;
+using ShadowPanel;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -33,6 +34,8 @@ namespace LP2MegaAutos
         #region De Apoyo
         public static void agregarExcepcion(string e)
         {
+            if (excepciones.Contains(e))
+                return; 
             excepciones.Add(e);
         }
 
@@ -122,6 +125,8 @@ namespace LP2MegaAutos
         // Para inicializar los otros paneles
         public static void iniciarDarkMode(Panel panel_toggle_nocturno, Button boton_toggle_nocturno, Timer reloj_dark, Control parent)
         {
+
+            dark_mode = !dark_mode;
             // Cambiar graficos a nocturnos
             cambiar_color_mode(parent);
 
@@ -137,6 +142,7 @@ namespace LP2MegaAutos
                 global::LP2MegaAutos.Properties.Resources.toggle_modo_nocturno_activado;
             // Cambiar el panel
             panel_toggle_nocturno.BackgroundImage = global::LP2MegaAutos.Properties.Resources.toggle_black;
+            dark_mode = !dark_mode;
         }
 
         #endregion Iniciar DM
@@ -148,10 +154,11 @@ namespace LP2MegaAutos
         // Para inicializar los otros paneles
         public static void iniciarSinTimer(Control parent)
         {
+            Console.WriteLine("Iniciando DM en " + parent);
             // Cambiar graficos a nocturnos
-            dark_mode = false;
+            dark_mode = !dark_mode;
             cambiar_color_mode(parent);
-            dark_mode = true;
+            dark_mode = !dark_mode;
         }
 
         #endregion Iniciar Sin Timer
@@ -191,7 +198,7 @@ namespace LP2MegaAutos
             {
                 if (c.Controls.Count != 0) cambiar_color_mode(c);
                 // Llamar a funcion cambiarModoControl
-                cambiar_modo_control(c);
+                    cambiar_modo_control(c);
             }
         }
 
@@ -201,8 +208,8 @@ namespace LP2MegaAutos
             string nom = c.Name.ToString();
            
             if (excepciones.Contains(nom)) return;
-
-
+            if (c is Pantalla) // Se usa is porque Pantalla es clase base
+                ((Pantalla)c).DarkModeActive = is_white_mode_active();
             // Si es un roundedPanel
             if (c.GetType() == typeof(RoundedPanel))
             {

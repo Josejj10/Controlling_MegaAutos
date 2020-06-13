@@ -116,9 +116,6 @@ namespace LP2MegaAutos
         public frmPrincipal(Usuario usuario)
         {
             InitializeComponent();
-            if (DarkMode.is_dark_mode_active())
-                DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
-
             _usuario = usuario;
             inicializarUsuario();
 
@@ -126,8 +123,10 @@ namespace LP2MegaAutos
 
 
             // Primera pantalla es pantallaInicioGerente
-            inicializarPms();
             contenedorPantalla1.PInicial = new pantallaInicioGerente(_usuario);
+            inicializarPms();
+            if (DarkMode.is_dark_mode_active())
+                DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
             suscribirEventos();
         }
 
@@ -527,12 +526,11 @@ namespace LP2MegaAutos
         {
             this.DialogResult = DialogResult.OK;
             // TODO Cambiar valor dark mode pq login no sale bien
+
         }
         private void btnMenuUsuario_Click(object sender, EventArgs e)
         {
-            // TODO poner pantalla usuario
             this.contenedorPantalla1.PantallaActual = new pantallaAjustesUsuarioGerente();
-
             // Cambiar los botones y rPanel excepto el enviado
             BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)btnPanelMenuProfile.Parent, panelMenu);
         }

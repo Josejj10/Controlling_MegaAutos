@@ -31,7 +31,17 @@ namespace LP2MegaAutos.VentanasPrincipales
             {
                 if (value == null) return;
                 pInicio = value;
-                PantallaActual = pInicio;
+                // Agregar a la lista de pantallas  
+                _pantallas.Add(value);
+
+                // Agregar pantalla a los controles del contenedor
+                Controls.Add(value);
+                if (DarkMode.is_dark_mode_active())
+                {
+                    // DarkMode.iniciarSinTimer(this); no se pone pues frmPrincipal llama a DM
+                    value.DarkModeActive = true;
+                }
+                indexActual++; 
                 ((pantallaInicioGerente)pInicio).crearBotonesSegunPermisos();
             }
             get
@@ -61,9 +71,11 @@ namespace LP2MegaAutos.VentanasPrincipales
 
                 // Agregar pantalla a los controles del contenedor
                 Controls.Add(value);
-                if(value != pInicio  || indexActual == -1)
-                    if(DarkMode.is_dark_mode_active())
-                        DarkMode.iniciarSinTimer(this);
+                if (DarkMode.is_dark_mode_active() && !value.DarkModeActive)
+                {
+                    DarkMode.iniciarSinTimer(this);
+                    value.DarkModeActive = true;
+                }
 
                 if (_pantallas.Count >= maximo) // Limite de pantallas
                     _pantallas.RemoveAt(0);
@@ -126,6 +138,16 @@ namespace LP2MegaAutos.VentanasPrincipales
             if (ultima == null) return;    
             Controls.Remove(getPantallaActual());
             Controls.Add(ultima);
+            if (DarkMode.is_dark_mode_active() && !ultima.DarkModeActive)
+            {
+                DarkMode.iniciarSinTimer(this);
+                ultima.DarkModeActive = true;
+            }
+            else if(DarkMode.is_white_mode_active() && ultima.DarkModeActive)
+            {
+                DarkMode.iniciarSinTimer(this);
+                ultima.DarkModeActive = false;
+            }
         }
 
         public void adelantarPantalla()
@@ -136,6 +158,16 @@ namespace LP2MegaAutos.VentanasPrincipales
             if (adelante == null) return;
             Controls.Remove(getPantallaActual());
             Controls.Add(adelante);
+            if (DarkMode.is_dark_mode_active() && !adelante.DarkModeActive)
+            {
+                DarkMode.iniciarSinTimer(this);
+                adelante.DarkModeActive = true;
+            }
+            else if (DarkMode.is_white_mode_active() && adelante.DarkModeActive)
+            {
+                DarkMode.iniciarSinTimer(this);
+                adelante.DarkModeActive = false;
+            }
         }
 
     }

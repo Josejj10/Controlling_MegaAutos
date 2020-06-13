@@ -55,11 +55,11 @@
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.pnl_TipoCliente = new System.Windows.Forms.Panel();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.txtTipoCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_NombreCliente = new System.Windows.Forms.TextBox();
             this.pnl_Correo.SuspendLayout();
             this.pnl_Telefono.SuspendLayout();
             this.pnl_TipoDocumento.SuspendLayout();
@@ -603,22 +603,6 @@
             this.rpTopMain.YBorde = 0;
             this.rpTopMain.YPanel = 0;
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblNombre.Location = new System.Drawing.Point(27, 42);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(182, 35);
-            this.lblNombre.TabIndex = 68;
-            this.tagsExtender1.SetTag2(this.lblNombre, null);
-            this.tagsExtender1.SetTag3(this.lblNombre, null);
-            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lblNombre, 21.75F);
-            this.tagsExtender1.SetTagFontStyle(this.lblNombre, System.Drawing.FontStyle.Bold);
-            this.lblNombre.Text = "Melvin Javier";
-            // 
             // pnl_TipoCliente
             // 
             this.pnl_TipoCliente.Controls.Add(this.roundedPanel1);
@@ -695,14 +679,30 @@
             this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Regular);
             this.label1.Text = "Tipo de Cliente";
             // 
+            // txt_NombreCliente
+            // 
+            this.txt_NombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NombreCliente.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.txt_NombreCliente.Location = new System.Drawing.Point(27, 42);
+            this.txt_NombreCliente.Name = "txt_NombreCliente";
+            this.txt_NombreCliente.Size = new System.Drawing.Size(441, 35);
+            this.txt_NombreCliente.TabIndex = 78;
+            this.tagsExtender1.SetTag2(this.txt_NombreCliente, null);
+            this.tagsExtender1.SetTag3(this.txt_NombreCliente, null);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_NombreCliente, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NombreCliente, System.Drawing.FontStyle.Bold);
+            this.txt_NombreCliente.Text = "Javier Berrospi";
+            // 
             // pantallaEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;
+            this.Controls.Add(this.txt_NombreCliente);
             this.Controls.Add(this.pnl_TipoCliente);
-            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.rnd_guardar);
@@ -774,10 +774,10 @@
         private System.Windows.Forms.Button boton_minimizar;
         private System.Windows.Forms.Button boton_cerrar;
         private RoundedPanel rpTopMain;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel pnl_TipoCliente;
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.TextBox txtTipoCliente;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_NombreCliente;
     }
 }

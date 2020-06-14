@@ -168,7 +168,7 @@
             this.il_Clientes1.TextoFecha = "dd - mm - aaaa";
             this.il_Clientes1.TextoPrincipal = "Melvin Javier";
             this.il_Clientes1.Textosecundario = "DNI: 702511648";
-            this.il_Clientes1.TextoTercero = "mjavier@pucp.edu.pe";
+            this.il_Clientes1.TextoTercero = "Empresa";
             // 
             // il_Clientes3
             // 
@@ -189,7 +189,7 @@
             this.il_Clientes3.TextoFecha = "dd - mm - aaaa";
             this.il_Clientes3.TextoPrincipal = "Rodrigo Cossio";
             this.il_Clientes3.Textosecundario = "Pasaporte : 121323454";
-            this.il_Clientes3.TextoTercero = "rcossio@pucp.edu.pe";
+            this.il_Clientes3.TextoTercero = "Persona Natural";
             // 
             // il_Clientes2
             // 

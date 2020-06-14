@@ -12,11 +12,13 @@ namespace LP2MegaAutos.VentanasPrincipales
 {
     public partial class Pantalla : UserControl
     {
-
+        public bool DarkModeActive { get; set; }
         public Pantalla()
         {
             InitializeComponent();
+            DarkModeActive = false;
         }
+
 
     }
 }

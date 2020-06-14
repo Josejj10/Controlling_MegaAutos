@@ -57,8 +57,8 @@
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.txt_NuevaCont = new System.Windows.Forms.TextBox();
             this.lbl_NuevaCont = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_NombreUsuario = new System.Windows.Forms.TextBox();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
@@ -671,23 +671,6 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_NuevaCont, System.Drawing.FontStyle.Regular);
             this.lbl_NuevaCont.Text = "Contraseña";
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.White;
-            this.lblNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblNombre.Location = new System.Drawing.Point(27, 42);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(179, 35);
-            this.lblNombre.TabIndex = 75;
-            this.tagsExtender1.SetTag2(this.lblNombre, null);
-            this.tagsExtender1.SetTag3(this.lblNombre, null);
-            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lblNombre, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lblNombre, System.Drawing.FontStyle.Regular);
-            this.lblNombre.Text = "Juan Villegaz";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -704,14 +687,30 @@
             this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Regular);
             this.label1.Text = "Analista";
             // 
+            // txt_NombreUsuario
+            // 
+            this.txt_NombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NombreUsuario.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.txt_NombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.txt_NombreUsuario.Location = new System.Drawing.Point(27, 42);
+            this.txt_NombreUsuario.Name = "txt_NombreUsuario";
+            this.txt_NombreUsuario.Size = new System.Drawing.Size(441, 35);
+            this.txt_NombreUsuario.TabIndex = 77;
+            this.tagsExtender1.SetTag2(this.txt_NombreUsuario, null);
+            this.tagsExtender1.SetTag3(this.txt_NombreUsuario, null);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_NombreUsuario, 21.75F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NombreUsuario, System.Drawing.FontStyle.Bold);
+            this.txt_NombreUsuario.Text = "Juan Villegaz";
+            // 
             // pantallaEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;
+            this.Controls.Add(this.txt_NombreUsuario);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.roundedPanel1);
@@ -787,7 +786,7 @@
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.TextBox txt_NuevaCont;
         private System.Windows.Forms.Label lbl_NuevaCont;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_NombreUsuario;
     }
 }

@@ -100,9 +100,7 @@ namespace LP2MegaAutos.VentanasPrincipales
         public static void pmsBtn_Click<T>(object sender, EventArgs e, Button btnMenu, Image img, Panel panelMenu, ContenedorPantalla cont)
         {
             cambiarColoresBotonesMenu((RoundedPanel)btnMenu.Parent, panelMenu);
-             cont.PantallaActual = (Pantalla)Activator.CreateInstance(typeof(T));
-            if (DarkMode.is_dark_mode_active())
-                DarkMode.iniciarSinTimer(cont);
+            cont.PantallaActual = (Pantalla)Activator.CreateInstance(typeof(T));
 
             // Cambiar el icono del boton para que sea el enviado
             btnMenu.BackgroundImage = img;

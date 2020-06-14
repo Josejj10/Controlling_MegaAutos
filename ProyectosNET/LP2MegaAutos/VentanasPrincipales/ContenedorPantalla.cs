@@ -31,7 +31,12 @@ namespace LP2MegaAutos.VentanasPrincipales
             {
                 if (value == null) return;
                 pInicio = value;
-                PantallaActual = pInicio;
+                // Agregar a la lista de pantallas  
+                _pantallas.Add(value);
+
+                // Agregar pantalla a los controles del contenedor
+                Controls.Add(value);
+                indexActual++; 
                 ((pantallaInicioGerente)pInicio).crearBotonesSegunPermisos();
             }
             get
@@ -39,7 +44,6 @@ namespace LP2MegaAutos.VentanasPrincipales
                 return (pantallaInicioGerente)pInicio;
             }
         }
-
         public Pantalla getPantallaActual()
         {
             return Controls.Count > 0 ? (Pantalla)Controls[0] : pInicio;
@@ -61,9 +65,9 @@ namespace LP2MegaAutos.VentanasPrincipales
 
                 // Agregar pantalla a los controles del contenedor
                 Controls.Add(value);
-                if(value != pInicio  || indexActual == -1)
-                    if(DarkMode.is_dark_mode_active())
-                        DarkMode.iniciarSinTimer(this);
+                if (DarkMode.is_dark_mode_active() && !value.DarkModeActive)
+                    DarkMode.iniciarSinTimer(this);
+                
 
                 if (_pantallas.Count >= maximo) // Limite de pantallas
                     _pantallas.RemoveAt(0);
@@ -81,7 +85,6 @@ namespace LP2MegaAutos.VentanasPrincipales
                 
                 indexActual--;
                 return _pantallas.ElementAt(indexActual);
-                //return _pantallas.ElementAt(_pantallas.IndexOf(getPantallaActual()) - 1);
             }
         }
         
@@ -99,13 +102,11 @@ namespace LP2MegaAutos.VentanasPrincipales
         public bool puedeVolver()
         {
             return Controls.Count != 0 ? indexActual != 0 : false;
-            //return Controls.Count != 0 ? _pantallas.IndexOf(getPantallaActual()) != 0 : false;
         }
 
         public bool puedeAdelante()
         {
             return Controls.Count !=0 ? !(indexActual + 1 == _pantallas.Count) : false;
-            //return Controls.Count !=0 ? ! (_pantallas.IndexOf(getPantallaActual()) + 1 == _pantallas.Count) : false;
         }
 
 
@@ -115,6 +116,8 @@ namespace LP2MegaAutos.VentanasPrincipales
             if (Controls.Count == 0)
                 return;
             PantallaActual = pInicio;
+            if (DarkMode.is_white_mode_active() && pInicio.DarkModeActive)
+                DarkMode.iniciarSinTimer(this);
         }
 
         public void volverUltimaPantalla()
@@ -123,9 +126,13 @@ namespace LP2MegaAutos.VentanasPrincipales
             if (Controls.Count == 0)
                 return;
             Pantalla ultima = UltimaPantalla;
-            if (ultima == null) return;    
+            if (ultima == null) return;
             Controls.Remove(getPantallaActual());
             Controls.Add(ultima);
+            if (DarkMode.is_dark_mode_active() && !ultima.DarkModeActive)
+                DarkMode.iniciarSinTimer(this);
+            else if (DarkMode.is_white_mode_active() && ultima.DarkModeActive)
+                DarkMode.iniciarSinTimer(this);
         }
 
         public void adelantarPantalla()
@@ -136,6 +143,10 @@ namespace LP2MegaAutos.VentanasPrincipales
             if (adelante == null) return;
             Controls.Remove(getPantallaActual());
             Controls.Add(adelante);
+            if (DarkMode.is_dark_mode_active() && !adelante.DarkModeActive)
+                DarkMode.iniciarSinTimer(this);
+            else if (DarkMode.is_white_mode_active() && adelante.DarkModeActive)
+                DarkMode.iniciarSinTimer(this);
         }
 
     }

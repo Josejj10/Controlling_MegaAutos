@@ -20,8 +20,6 @@ namespace LP2MegaAutos
         public pantallaInicioGerente()
         {
             InitializeComponent();
-            DarkMode.agregarExcepcion("");
-            
         }
         public pantallaInicioGerente(Usuario u)
         {

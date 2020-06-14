@@ -105,22 +105,10 @@ namespace LP2MegaAutos
             if (sender is Button)
                 pantallaListasHelper.btn_MouseMove((Button)sender);
         }
-
-        private void txt_Buscar_MouseEnter(object sender, EventArgs e)
-        {
-            pantallaListasHelper.buscarEnter(txt_Buscar);
-        }
-
-        private void txt_Buscar_MouseLeave(object sender, EventArgs e)
-        {
-            pantallaListasHelper.buscarLeave(txt_Buscar);
-        }
-
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
             pantallaListasHelper.buscarEnter(txt_Buscar);
         }
-
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
             pantallaListasHelper.buscarLeave(txt_Buscar);

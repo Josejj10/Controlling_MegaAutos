@@ -81,6 +81,8 @@ namespace LP2MegaAutos
         }
         #endregion Propiedades
 
-
+        // TODO Al hacer dinamica la creacion de Cuentas Contables quitar el flp
+        // Se ve feo el scroll, asi que ir aumentando el tamaño del control
+        // a medida que se van aumentando los paneles de Cuentas Contables
     }
 }

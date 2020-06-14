@@ -79,6 +79,7 @@
     <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.Designer.cs">
       <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Framework\pantallaListasHelper.cs" />
     <Compile Include="Framework\ResizeImageHelper.cs" />
     <Compile Include="Framework\UserControls\Items\itemListaHelper.cs" />
     <Compile Include="Framework\UserControls\Items\itemMenuStrip.cs">

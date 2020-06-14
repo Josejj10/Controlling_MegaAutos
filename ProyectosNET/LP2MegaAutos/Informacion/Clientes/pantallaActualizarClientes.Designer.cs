@@ -42,7 +42,7 @@
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaDrivers = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaClientes = new System.Windows.Forms.Label();
-            this.cmbFiltrarPermisos = new System.Windows.Forms.ComboBox();
+            this.cmbFiltrarTipoCliente = new System.Windows.Forms.ComboBox();
             this.cTxt_MasFiltros = new LP2MegaAutos.CustomControls.ClickableText();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.rndReciente = new LP2MegaAutos.RoundedPanel();
@@ -308,18 +308,18 @@
             this.lbl_ListaClientes.Text = "Clientes";
             this.lbl_ListaClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cmbFiltrarPermisos
+            // cmbFiltrarTipoCliente
             // 
-            this.cmbFiltrarPermisos.FormattingEnabled = true;
-            this.cmbFiltrarPermisos.Location = new System.Drawing.Point(26, 309);
-            this.cmbFiltrarPermisos.Name = "cmbFiltrarPermisos";
-            this.cmbFiltrarPermisos.Size = new System.Drawing.Size(121, 21);
-            this.cmbFiltrarPermisos.TabIndex = 72;
-            this.tagsExtender1.SetTag2(this.cmbFiltrarPermisos, null);
-            this.tagsExtender1.SetTag3(this.cmbFiltrarPermisos, null);
-            this.tagsExtender1.SetTagFontName(this.cmbFiltrarPermisos, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.cmbFiltrarPermisos, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.cmbFiltrarPermisos, System.Drawing.FontStyle.Regular);
+            this.cmbFiltrarTipoCliente.FormattingEnabled = true;
+            this.cmbFiltrarTipoCliente.Location = new System.Drawing.Point(26, 309);
+            this.cmbFiltrarTipoCliente.Name = "cmbFiltrarTipoCliente";
+            this.cmbFiltrarTipoCliente.Size = new System.Drawing.Size(121, 21);
+            this.cmbFiltrarTipoCliente.TabIndex = 72;
+            this.tagsExtender1.SetTag2(this.cmbFiltrarTipoCliente, null);
+            this.tagsExtender1.SetTag3(this.cmbFiltrarTipoCliente, null);
+            this.tagsExtender1.SetTagFontName(this.cmbFiltrarTipoCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cmbFiltrarTipoCliente, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cmbFiltrarTipoCliente, System.Drawing.FontStyle.Regular);
             // 
             // cTxt_MasFiltros
             // 
@@ -574,7 +574,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.Controls.Add(this.cmbFiltrarPermisos);
+            this.Controls.Add(this.cmbFiltrarTipoCliente);
             this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.rndReciente);
@@ -621,7 +621,7 @@
         private RoundedPanel rpn_ListaDrivers;
         private System.Windows.Forms.Label lbl_ListaClientes;
         private itemLista itemLista1;
-        private System.Windows.Forms.ComboBox cmbFiltrarPermisos;
+        private System.Windows.Forms.ComboBox cmbFiltrarTipoCliente;
         private CustomControls.ClickableText cTxt_MasFiltros;
         private System.Windows.Forms.Button btn_Agregar;
         private RoundedPanel rndReciente;

@@ -95,9 +95,9 @@
             this.tags.SetTagFontName(this.itemListaResumen1, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen1, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen1, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen1.TextoFecha = "99.00";
+            this.itemListaResumen1.MontoEgresos= "99.00";
             this.itemListaResumen1.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen1.TextoTercero = "9,999,999.00";
+            this.itemListaResumen1.MontoIngresos = "9,999,999.00";
             // 
             // itemListaResumen2
             // 
@@ -114,9 +114,9 @@
             this.tags.SetTagFontName(this.itemListaResumen2, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen2, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen2, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen2.TextoFecha = "99.00";
+            this.itemListaResumen2.MontoEgresos = "99.00";
             this.itemListaResumen2.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen2.TextoTercero = "9,999,999.00";
+            this.itemListaResumen2.MontoIngresos = "9,999,999.00";
             // 
             // itemListaResumen3
             // 
@@ -133,9 +133,9 @@
             this.tags.SetTagFontName(this.itemListaResumen3, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen3, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen3, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen3.TextoFecha = "99.00";
+            this.itemListaResumen3.MontoEgresos = "99.00";
             this.itemListaResumen3.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen3.TextoTercero = "9,999,999.00";
+            this.itemListaResumen3.MontoIngresos = "9,999,999.00";
             // 
             // itemListaResumen4
             // 
@@ -152,9 +152,9 @@
             this.tags.SetTagFontName(this.itemListaResumen4, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen4, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen4, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen4.TextoFecha = "99.00";
+            this.itemListaResumen4.MontoEgresos = "99.00";
             this.itemListaResumen4.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen4.TextoTercero = "9,999,999.00";
+            this.itemListaResumen4.MontoIngresos = "9,999,999.00";
             // 
             // tlpGeneradoEl
             // 

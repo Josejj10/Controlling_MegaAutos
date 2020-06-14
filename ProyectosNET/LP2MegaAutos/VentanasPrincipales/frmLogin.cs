@@ -31,6 +31,10 @@ namespace LP2MegaAutos
             Tipografias.crearFonts(this,tags);// Inicializa los fonts de este form
             textBox_correo.Select();// Para que le panel lateral aparezca
             DarkMode.agregarExcepcion("boton_acceder");
+            if (DarkMode.is_dark_mode_active())
+            {
+                DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
+            }
         }
 
 

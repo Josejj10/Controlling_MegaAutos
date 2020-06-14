@@ -42,14 +42,14 @@ namespace LP2MegaAutos
         }
 
         [Description("Monto Ingresos"), Category("Lista Resumen")]
-        public string TextoTercero
+        public string MontoIngresos
         {
             get { return lblIngresos.Text; }
             set { lblIngresos.Text = value; }
         }
 
         [Description("Monto Egresos"), Category("Lista Resumen")]
-        public string TextoFecha
+        public string MontoEgresos
         {
             get { return lblEgresos.Text; }
             set { lblEgresos.Text = value; }

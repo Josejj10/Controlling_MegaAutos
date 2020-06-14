@@ -17,7 +17,6 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             il_Usuarios1.EditarClick += btnEditarClick;
-            il_Usuarios2.EditarClick += btnEditarClick;
             il_Usuarios3.EditarClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flpUsuarios.AutoScroll = true;
@@ -64,14 +63,14 @@ namespace LP2MegaAutos
         private void btnAZ_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndAZ.ColorPanel = Colores.ChooseAmarillo;
             this.rndZA.ColorPanel = Color.Transparent;
             this.rndAntiguo.ColorPanel = Color.Transparent;
             this.rndReciente.ColorPanel = Color.Transparent;
 
             // Cambiar color botones de al frente
             this.btnZA.BackColor = Color.Transparent;
-            this.btnAZ.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnAZ.BackColor = Colores.ChooseAmarillo;
             this.btnReciente.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
         }
@@ -80,13 +79,13 @@ namespace LP2MegaAutos
         {
             // Cambiar color rounded panels de atras
             this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndZA.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndZA.ColorPanel = Colores.ChooseAmarillo;
             this.rndAntiguo.ColorPanel = Color.Transparent;
             this.rndReciente.ColorPanel = Color.Transparent;
 
             // Cambiar color botones de al frente
             this.btnAZ.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnZA.BackColor = Colores.ChooseAmarillo;
             this.btnReciente.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
         }
@@ -96,12 +95,12 @@ namespace LP2MegaAutos
             // Cambiar color rounded panels de atras
             this.rndAZ.ColorPanel = Color.Transparent;
             this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndAntiguo.ColorPanel = Colores.ChooseAmarillo;
             this.rndReciente.ColorPanel = Color.Transparent;
 
             // Cambiar color botones de al frente
             this.btnAZ.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnAntiguo.BackColor = Colores.ChooseAmarillo;
             this.btnReciente.BackColor = Color.Transparent;
             this.btnZA.BackColor = Color.Transparent;
         }
@@ -110,13 +109,13 @@ namespace LP2MegaAutos
         {
             // Cambiar color rounded panels de atras
             this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Colores.AmarilloInteractivoMenos1;
+            this.rndReciente.ColorPanel = Colores.ChooseAmarillo;
             this.rndZA.ColorPanel = Color.Transparent;
             this.rndAntiguo.ColorPanel = Color.Transparent;
 
             // Cambiar color botones de al frente
             this.btnAZ.BackColor = Color.Transparent;
-            this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
+            this.btnReciente.BackColor = Colores.ChooseAmarillo;
             this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
         }

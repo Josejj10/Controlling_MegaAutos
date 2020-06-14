@@ -93,8 +93,10 @@ namespace LP2MegaAutos
 
         // Agregar todos los Fonts a una tabla hash que los guardara
         // Segun nombre
+        [MethodImpl(MethodImplOptions.Synchronized)]
         public static void inicializarFonts()
         {
+            
             byte[] fontData;
             string nombre;
             uint dummy = 0;
@@ -110,26 +112,26 @@ namespace LP2MegaAutos
                 if (nombre.StartsWith("font")) {
                     // Inicializar el font
                     fontData = (byte[])entry.Value;
+                   
                     //fontData = LP2MegaAutos.Properties.Resources.fontLato_Bold;
                     // Apuntar fontPtr al inicio
                     fontPtr = Marshal.AllocCoTaskMem(fontData.Length);
-
                     // Copiar los datos a fontData
                     Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
                     
                     // Agregar font a lista de fonts
                     fonts.AddMemoryFont(fontPtr, fontData.Length);
+                    foreach(FontFamily i in fonts.Families)
+                        Console.WriteLine(i);
                     
+
                     // Unmanaged font 
                     // Porque GDI+ creara un objeto font para controles como RichTextBox
                     // Y este unmanaged font asegurara que GDI reconozca el nombre del font
                     AddFontMemResourceEx(fontPtr, (uint)fontData.Length, IntPtr.Zero, ref dummy);
-
-                    // Libera el IntPtr, en ambos casos
-                    Marshal.FreeCoTaskMem(fontPtr);
                 }
             }
-
+            Console.WriteLine();
             // Agregar a tabla hash
             for (int i = 0; i < fonts.Families.Length;i++)
             {
@@ -137,6 +139,7 @@ namespace LP2MegaAutos
                 fontsHash.Add(nombre, i);
                 Console.WriteLine("Agregado font: " + nombre);
             }
+            Console.WriteLine($"Agregados {fonts.Families.Length} fonts");
 
         }
 
@@ -156,7 +159,7 @@ namespace LP2MegaAutos
         // Itera por el control (usualmente se le pasa el form entero y el TagsExtender del form) 
         // y sus hijos mediante recursion para agregar los fonts correspondientes a cada control
         public static void crearFonts(Control parent, TagsExtender tags)
-        {;
+        {
             String nombre;
             float size;
             FontStyle fs;
@@ -165,7 +168,6 @@ namespace LP2MegaAutos
             // Usar recursion para recorrer todos los controles
             foreach (Control c in parent.Controls)
             {
-                Console.WriteLine("Agregando el font a " + c.Name);
                 if (parent.Controls != null) 
                     crearFonts(c, tags);
                 //if (tags.GetTagFontName(c) == null) continue;
@@ -176,7 +178,7 @@ namespace LP2MegaAutos
                 
                 if (!fontsHash.ContainsKey(nombre))
                 {
-                    Console.WriteLine(nombre +" no esta en Tabla Hash. Devolviendo font sin incrustar");
+                    Console.WriteLine(nombre +" no esta en Tabla Hash. Devolviendo font sin incrustar en" +c.Name);
                     return;
                 }
                 size = tags.GetTagFontSize(c);

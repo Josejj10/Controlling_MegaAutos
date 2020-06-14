@@ -42,11 +42,11 @@ namespace LP2MegaAutos.Framework.UserControls
         {
             this.itemMenuStrip1.Visible= false;
             this.itemMenuStrip2.Visible = false;
-            this.itemMenuStrip4.Visible = false;
             this.itemMenuStrip3.Visible = false;
+            this.itemMenuStrip4.Visible = false;
 
-            if (_numItems > 3) this.itemMenuStrip3.Visible = true;
-            if (_numItems > 2) this.itemMenuStrip4.Visible = true;
+            if (_numItems > 3) this.itemMenuStrip4.Visible = true;
+            if (_numItems > 2) this.itemMenuStrip3.Visible = true;
             if (_numItems > 1) this.itemMenuStrip2.Visible = true;
             if (_numItems > 0) this.itemMenuStrip1.Visible = true;
         }
@@ -61,7 +61,10 @@ namespace LP2MegaAutos.Framework.UserControls
                 this._numItems = value;
                 // Modificar el tamaño para que muestre solo x items
                 // Cada item mide 52 x 52
-                this.Size = new Size(52 * _numItems, 52);
+                // 205 max
+                // 52 > 52+51
+                // 51 en vez de 52 por el borde
+                this.Size = new Size(52 + 51 *(_numItems-1), 52);
                 enableOrDisableButtons();
             }
 
@@ -93,6 +96,38 @@ namespace LP2MegaAutos.Framework.UserControls
         {
             get { return this.itemMenuStrip4.Imagen; }
             set { this.itemMenuStrip4.Imagen = value; }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 1"), Category("PanelMenuStrip")]
+        public string Texto1
+        {
+            get { return itemMenuStrip1.Texto; }
+            set { itemMenuStrip1.Texto= value; }
+        }
+        
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 2"), Category("PanelMenuStrip")]
+        public string Texto2
+        {
+            get { return itemMenuStrip2.Texto; }
+            set { itemMenuStrip2.Texto= value; }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 3"), Category("PanelMenuStrip")]
+        public string Texto3
+        {
+            get { return itemMenuStrip3.Texto; }
+            set { itemMenuStrip3.Texto= value; }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        [Description("Texto Item 4"), Category("PanelMenuStrip")]
+        public string Texto4
+        {
+            get { return itemMenuStrip4.Texto; }
+            set { itemMenuStrip4.Texto= value; }
         }
 
         public ImageLayout LayoutImagenes

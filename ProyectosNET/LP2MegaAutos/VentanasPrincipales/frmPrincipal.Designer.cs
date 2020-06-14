@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace LP2MegaAutos
 {
@@ -43,6 +44,7 @@ namespace LP2MegaAutos
             this.pnlBackBackground = new System.Windows.Forms.Panel();
             this.contenedorPantalla1 = new LP2MegaAutos.VentanasPrincipales.ContenedorPantalla();
             this.pmsReportes = new LP2MegaAutos.Framework.UserControls.PanelMenuStrip();
+            this.pmsUltimoReporte = new LP2MegaAutos.Framework.UserControls.PanelMenuStrip();
             this.rpBtnMenuHome = new LP2MegaAutos.RoundedPanel();
             this.btnHome = new System.Windows.Forms.Button();
             this.rpBtnMenuCerrarSesion = new LP2MegaAutos.RoundedPanel();
@@ -50,7 +52,7 @@ namespace LP2MegaAutos
             this.rpBtnMenuUltimoReporte = new LP2MegaAutos.RoundedPanel();
             this.btnMenuUltimoReporte = new System.Windows.Forms.Button();
             this.panelMenu = new MetroFramework.Controls.MetroPanel();
-            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
+            this.rpBtnMenuUsuario = new LP2MegaAutos.RoundedPanel();
             this.btnPanelMenuProfile = new System.Windows.Forms.Button();
             this.rpBtnMenuReportes = new LP2MegaAutos.RoundedPanel();
             this.btnMenuReportes = new System.Windows.Forms.Button();
@@ -62,7 +64,7 @@ namespace LP2MegaAutos
             this.rpBtnMenuCerrarSesion.SuspendLayout();
             this.rpBtnMenuUltimoReporte.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            this.roundedPanel1.SuspendLayout();
+            this.rpBtnMenuUsuario.SuspendLayout();
             this.rpBtnMenuReportes.SuspendLayout();
             this.panel_toggle_nocturno.SuspendLayout();
             this.SuspendLayout();
@@ -71,10 +73,9 @@ namespace LP2MegaAutos
             // 
             this.title_bar_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.title_bar_2.Enabled = false;
-            this.title_bar_2.Location = new System.Drawing.Point(0, 30);
-            this.title_bar_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.title_bar_2.Location = new System.Drawing.Point(0, 24);
             this.title_bar_2.Name = "title_bar_2";
-            this.title_bar_2.Size = new System.Drawing.Size(1109, 10);
+            this.title_bar_2.Size = new System.Drawing.Size(832, 8);
             this.title_bar_2.TabIndex = 1;
             this.title_bar_2.Tag = "titlebar";
             this.tags.SetTag2(this.title_bar_2, null);
@@ -93,9 +94,8 @@ namespace LP2MegaAutos
             this.title_bar.Controls.Add(this.btnAtras);
             this.title_bar.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
-            this.title_bar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.title_bar.Name = "title_bar";
-            this.title_bar.Size = new System.Drawing.Size(1109, 29);
+            this.title_bar.Size = new System.Drawing.Size(832, 24);
             this.title_bar.TabIndex = 2;
             this.title_bar.Tag = "titlebar";
             this.tags.SetTag2(this.title_bar, null);
@@ -115,10 +115,9 @@ namespace LP2MegaAutos
             this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_minimizar.Location = new System.Drawing.Point(1045, 0);
-            this.boton_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
             this.boton_minimizar.Name = "boton_minimizar";
-            this.boton_minimizar.Size = new System.Drawing.Size(32, 30);
+            this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
             this.boton_minimizar.TabIndex = 0;
             this.boton_minimizar.TabStop = false;
             this.boton_minimizar.Tag = "titlebar";
@@ -141,10 +140,10 @@ namespace LP2MegaAutos
             this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
-            this.boton_cerrar.Location = new System.Drawing.Point(1077, 0);
+            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
             this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
             this.boton_cerrar.Name = "boton_cerrar";
-            this.boton_cerrar.Size = new System.Drawing.Size(32, 30);
+            this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
             this.boton_cerrar.TabIndex = 0;
             this.boton_cerrar.TabStop = false;
             this.boton_cerrar.Tag = "titlebar";
@@ -158,37 +157,56 @@ namespace LP2MegaAutos
             // 
             // btnAdelante
             // 
-            this.btnAdelante.Font = new System.Drawing.Font("Lato", 8F, System.Drawing.FontStyle.Bold);
-            this.btnAdelante.Location = new System.Drawing.Point(61, 4);
-            this.btnAdelante.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdelante.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAdelante.AutoSize = true;
+            this.btnAdelante.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdelante.FlatAppearance.BorderSize = 0;
+            this.btnAdelante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnAdelante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnAdelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdelante.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btnAdelante.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnAdelante.Location = new System.Drawing.Point(42, -5);
+            this.btnAdelante.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdelante.Name = "btnAdelante";
-            this.btnAdelante.Size = new System.Drawing.Size(47, 23);
+            this.btnAdelante.Size = new System.Drawing.Size(35, 34);
             this.btnAdelante.TabIndex = 40;
             this.tags.SetTag2(this.btnAdelante, null);
             this.tags.SetTag3(this.btnAdelante, null);
-            this.tags.SetTagFontName(this.btnAdelante, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnAdelante, 10F);
+            this.tags.SetTagFontName(this.btnAdelante, fontsD.Lato);
+            this.tags.SetTagFontSize(this.btnAdelante, 15F);
             this.tags.SetTagFontStyle(this.btnAdelante, System.Drawing.FontStyle.Regular);
-            this.btnAdelante.Text = "->";
+            this.btnAdelante.Text = ">";
             this.btnAdelante.UseVisualStyleBackColor = true;
             this.btnAdelante.Click += new System.EventHandler(this.btnAdelante_Click);
+            this.btnAdelante.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdelante_MouseDown);
+            this.btnAdelante.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnAdelante_MouseUp);
             // 
             // btnAtras
             // 
-            this.btnAtras.Font = new System.Drawing.Font("Lato", 8F, System.Drawing.FontStyle.Bold);
-            this.btnAtras.Location = new System.Drawing.Point(5, 4);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtras.AutoSize = true;
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
+            this.btnAtras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnAtras.Location = new System.Drawing.Point(0, -5);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(51, 23);
+            this.btnAtras.Size = new System.Drawing.Size(38, 34);
             this.btnAtras.TabIndex = 39;
             this.tags.SetTag2(this.btnAtras, null);
             this.tags.SetTag3(this.btnAtras, null);
-            this.tags.SetTagFontName(this.btnAtras, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnAtras, 10F);
+            this.tags.SetTagFontName(this.btnAtras, fontsD.Lato);
+            this.tags.SetTagFontSize(this.btnAtras, 15F);
             this.tags.SetTagFontStyle(this.btnAtras, System.Drawing.FontStyle.Regular);
-            this.btnAtras.Text = "<-";
+            this.btnAtras.Text = "<";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            this.btnAtras.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdelante_MouseDown);
+            this.btnAtras.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnAdelante_MouseUp);
             // 
             // reloj_dark
             // 
@@ -200,12 +218,12 @@ namespace LP2MegaAutos
             this.pnlBackBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.pnlBackBackground.Controls.Add(this.contenedorPantalla1);
             this.pnlBackBackground.Controls.Add(this.pmsReportes);
+            this.pnlBackBackground.Controls.Add(this.pmsUltimoReporte);
             this.pnlBackBackground.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pnlBackBackground.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBackBackground.Location = new System.Drawing.Point(108, 37);
-            this.pnlBackBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBackBackground.Location = new System.Drawing.Point(81, 30);
             this.pnlBackBackground.Name = "pnlBackBackground";
-            this.pnlBackBackground.Size = new System.Drawing.Size(1001, 642);
+            this.pnlBackBackground.Size = new System.Drawing.Size(751, 522);
             this.pnlBackBackground.TabIndex = 4;
             this.pnlBackBackground.Tag = "background";
             this.tags.SetTag2(this.pnlBackBackground, null);
@@ -220,9 +238,9 @@ namespace LP2MegaAutos
             | System.Windows.Forms.AnchorStyles.Left)));
             this.contenedorPantalla1.AutoScroll = true;
             this.contenedorPantalla1.Location = new System.Drawing.Point(0, 0);
-            this.contenedorPantalla1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.contenedorPantalla1.Margin = new System.Windows.Forms.Padding(4);
             this.contenedorPantalla1.Name = "contenedorPantalla1";
-            this.contenedorPantalla1.Size = new System.Drawing.Size(1001, 642);
+            this.contenedorPantalla1.Size = new System.Drawing.Size(751, 522);
             this.contenedorPantalla1.TabIndex = 1;
             this.tags.SetTag2(this.contenedorPantalla1, null);
             this.tags.SetTag3(this.contenedorPantalla1, null);
@@ -232,15 +250,15 @@ namespace LP2MegaAutos
             // 
             // pmsReportes
             // 
-            this.pmsReportes.Imagen1 = global::LP2MegaAutos.Properties.Resources.Reporte;
+            this.pmsReportes.Imagen1 = ((System.Drawing.Image)(resources.GetObject("pmsReportes.Imagen1")));
             this.pmsReportes.Imagen2 = ((System.Drawing.Image)(resources.GetObject("pmsReportes.Imagen2")));
-            this.pmsReportes.Imagen3 = global::LP2MegaAutos.Properties.Resources.Clientes;
-            this.pmsReportes.Imagen4 = global::LP2MegaAutos.Properties.Resources.car;
-            this.pmsReportes.Location = new System.Drawing.Point(0, 75);
-            this.pmsReportes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pmsReportes.Imagen3 = ((System.Drawing.Image)(resources.GetObject("pmsReportes.Imagen3")));
+            this.pmsReportes.Imagen4 = ((System.Drawing.Image)(resources.GetObject("pmsReportes.Imagen4")));
+            this.pmsReportes.Location = new System.Drawing.Point(0, 61);
+            this.pmsReportes.Margin = new System.Windows.Forms.Padding(4);
             this.pmsReportes.Name = "pmsReportes";
             this.pmsReportes.NumItems = 4;
-            this.pmsReportes.Size = new System.Drawing.Size(273, 64);
+            this.pmsReportes.Size = new System.Drawing.Size(205, 52);
             this.pmsReportes.TabIndex = 0;
             this.tags.SetTag2(this.pmsReportes, null);
             this.tags.SetTag3(this.pmsReportes, null);
@@ -249,9 +267,29 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.pmsReportes, System.Drawing.FontStyle.Regular);
             this.pmsReportes.Visible = false;
             this.pmsReportes.item1Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ListaReportesClick);
-            this.pmsReportes.item2Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ListaReportesClick);
+            this.pmsReportes.item2Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ReporteAreaTrabajoClick);
             this.pmsReportes.item3Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ReporteClienteClick);
             this.pmsReportes.item4Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ReporteVehiculoClick);
+            // 
+            // pmsUltimoReporte
+            // 
+            this.pmsUltimoReporte.Imagen1 = ((System.Drawing.Image)(resources.GetObject("pmsUltimoReporte.Imagen1")));
+            this.pmsUltimoReporte.Imagen2 = ((System.Drawing.Image)(resources.GetObject("pmsUltimoReporte.Imagen2")));
+            this.pmsUltimoReporte.Imagen3 = ((System.Drawing.Image)(resources.GetObject("pmsUltimoReporte.Imagen3")));
+            this.pmsUltimoReporte.Imagen4 = ((System.Drawing.Image)(resources.GetObject("pmsUltimoReporte.Imagen4")));
+            this.pmsUltimoReporte.Location = new System.Drawing.Point(0, 347);
+            this.pmsUltimoReporte.Name = "pmsUltimoReporte";
+            this.pmsUltimoReporte.NumItems = 3;
+            this.pmsUltimoReporte.Size = new System.Drawing.Size(156, 52);
+            this.pmsUltimoReporte.TabIndex = 2;
+            this.tags.SetTag2(this.pmsUltimoReporte, null);
+            this.tags.SetTag3(this.pmsUltimoReporte, null);
+            this.tags.SetTagFontName(this.pmsUltimoReporte, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.pmsUltimoReporte, 10F);
+            this.tags.SetTagFontStyle(this.pmsUltimoReporte, System.Drawing.FontStyle.Regular);
+            this.pmsUltimoReporte.item1Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsUltimoReporte_EstadisticasClick);
+            this.pmsUltimoReporte.item2Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsUltimoReporte_DetalleClick);
+            this.pmsUltimoReporte.item3Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsUltimoReporte_ResumenClick);
             // 
             // rpBtnMenuHome
             // 
@@ -261,15 +299,15 @@ namespace LP2MegaAutos
             this.rpBtnMenuHome.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpBtnMenuHome.Controls.Add(this.btnHome);
             this.rpBtnMenuHome.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.rpBtnMenuHome.Location = new System.Drawing.Point(7, 6);
-            this.rpBtnMenuHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rpBtnMenuHome.Location = new System.Drawing.Point(5, 5);
+            this.rpBtnMenuHome.Margin = new System.Windows.Forms.Padding(2);
             this.rpBtnMenuHome.MenosHeightBorde = 1;
             this.rpBtnMenuHome.MenosHeightPanel = 1;
             this.rpBtnMenuHome.MenosWidthBorde = 1;
             this.rpBtnMenuHome.MenosWidthPanel = 1;
             this.rpBtnMenuHome.Name = "rpBtnMenuHome";
             this.rpBtnMenuHome.PorcLuzColorBorde = 0;
-            this.rpBtnMenuHome.Size = new System.Drawing.Size(103, 64);
+            this.rpBtnMenuHome.Size = new System.Drawing.Size(77, 52);
             this.rpBtnMenuHome.TabIndex = 26;
             this.tags.SetTag2(this.rpBtnMenuHome, null);
             this.tags.SetTag3(this.rpBtnMenuHome, null);
@@ -286,16 +324,16 @@ namespace LP2MegaAutos
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
             this.btnHome.BackgroundImage = global::LP2MegaAutos.Properties.Resources.logo_megaautos;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnHome.Location = new System.Drawing.Point(27, 14);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Location = new System.Drawing.Point(20, 11);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(48, 37);
+            this.btnHome.Size = new System.Drawing.Size(36, 30);
             this.btnHome.TabIndex = 20;
             this.tags.SetTag2(this.btnHome, null);
             this.tags.SetTag3(this.btnHome, null);
@@ -304,6 +342,8 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.btnHome, System.Drawing.FontStyle.Bold);
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.MouseEnter += new System.EventHandler(this.btnMenu_MouseEnter);
+            this.btnHome.MouseLeave += new System.EventHandler(this.btnMenu_MouseLeave);
             // 
             // rpBtnMenuCerrarSesion
             // 
@@ -313,15 +353,15 @@ namespace LP2MegaAutos
             this.rpBtnMenuCerrarSesion.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.rpBtnMenuCerrarSesion.Controls.Add(this.btnMenuCerrarSesion);
             this.rpBtnMenuCerrarSesion.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.rpBtnMenuCerrarSesion.Location = new System.Drawing.Point(7, 496);
-            this.rpBtnMenuCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rpBtnMenuCerrarSesion.Location = new System.Drawing.Point(5, 403);
+            this.rpBtnMenuCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.rpBtnMenuCerrarSesion.MenosHeightBorde = 1;
             this.rpBtnMenuCerrarSesion.MenosHeightPanel = 1;
             this.rpBtnMenuCerrarSesion.MenosWidthBorde = 1;
             this.rpBtnMenuCerrarSesion.MenosWidthPanel = 1;
             this.rpBtnMenuCerrarSesion.Name = "rpBtnMenuCerrarSesion";
             this.rpBtnMenuCerrarSesion.PorcLuzColorBorde = 0;
-            this.rpBtnMenuCerrarSesion.Size = new System.Drawing.Size(103, 64);
+            this.rpBtnMenuCerrarSesion.Size = new System.Drawing.Size(77, 52);
             this.rpBtnMenuCerrarSesion.TabIndex = 37;
             this.tags.SetTag2(this.rpBtnMenuCerrarSesion, null);
             this.tags.SetTag3(this.rpBtnMenuCerrarSesion, null);
@@ -338,16 +378,16 @@ namespace LP2MegaAutos
             this.btnMenuCerrarSesion.BackColor = System.Drawing.Color.Transparent;
             this.btnMenuCerrarSesion.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Logout;
             this.btnMenuCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMenuCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenuCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnMenuCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMenuCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMenuCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuCerrarSesion.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.btnMenuCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnMenuCerrarSesion.Location = new System.Drawing.Point(27, 10);
-            this.btnMenuCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuCerrarSesion.Location = new System.Drawing.Point(20, 8);
             this.btnMenuCerrarSesion.Name = "btnMenuCerrarSesion";
-            this.btnMenuCerrarSesion.Size = new System.Drawing.Size(48, 44);
+            this.btnMenuCerrarSesion.Size = new System.Drawing.Size(36, 36);
             this.btnMenuCerrarSesion.TabIndex = 20;
             this.tags.SetTag2(this.btnMenuCerrarSesion, null);
             this.tags.SetTag3(this.btnMenuCerrarSesion, null);
@@ -356,6 +396,8 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.btnMenuCerrarSesion, System.Drawing.FontStyle.Bold);
             this.btnMenuCerrarSesion.UseVisualStyleBackColor = false;
             this.btnMenuCerrarSesion.Click += new System.EventHandler(this.btnMenuCerrarSesion_Click);
+            this.btnMenuCerrarSesion.MouseEnter += new System.EventHandler(this.btnMenu_MouseEnter);
+            this.btnMenuCerrarSesion.MouseLeave += new System.EventHandler(this.btnMenu_MouseLeave);
             // 
             // rpBtnMenuUltimoReporte
             // 
@@ -365,15 +407,15 @@ namespace LP2MegaAutos
             this.rpBtnMenuUltimoReporte.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.rpBtnMenuUltimoReporte.Controls.Add(this.btnMenuUltimoReporte);
             this.rpBtnMenuUltimoReporte.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.rpBtnMenuUltimoReporte.Location = new System.Drawing.Point(7, 427);
-            this.rpBtnMenuUltimoReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rpBtnMenuUltimoReporte.Location = new System.Drawing.Point(5, 347);
+            this.rpBtnMenuUltimoReporte.Margin = new System.Windows.Forms.Padding(2);
             this.rpBtnMenuUltimoReporte.MenosHeightBorde = 1;
             this.rpBtnMenuUltimoReporte.MenosHeightPanel = 1;
             this.rpBtnMenuUltimoReporte.MenosWidthBorde = 1;
             this.rpBtnMenuUltimoReporte.MenosWidthPanel = 1;
             this.rpBtnMenuUltimoReporte.Name = "rpBtnMenuUltimoReporte";
             this.rpBtnMenuUltimoReporte.PorcLuzColorBorde = 0;
-            this.rpBtnMenuUltimoReporte.Size = new System.Drawing.Size(103, 64);
+            this.rpBtnMenuUltimoReporte.Size = new System.Drawing.Size(77, 52);
             this.rpBtnMenuUltimoReporte.TabIndex = 37;
             this.tags.SetTag2(this.rpBtnMenuUltimoReporte, null);
             this.tags.SetTag3(this.rpBtnMenuUltimoReporte, null);
@@ -390,16 +432,17 @@ namespace LP2MegaAutos
             this.btnMenuUltimoReporte.BackColor = System.Drawing.Color.Transparent;
             this.btnMenuUltimoReporte.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Reloj;
             this.btnMenuUltimoReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMenuUltimoReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenuUltimoReporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.btnMenuUltimoReporte.FlatAppearance.BorderSize = 0;
             this.btnMenuUltimoReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMenuUltimoReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMenuUltimoReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuUltimoReporte.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.btnMenuUltimoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnMenuUltimoReporte.Location = new System.Drawing.Point(27, 10);
-            this.btnMenuUltimoReporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuUltimoReporte.Location = new System.Drawing.Point(20, 8);
             this.btnMenuUltimoReporte.Name = "btnMenuUltimoReporte";
-            this.btnMenuUltimoReporte.Size = new System.Drawing.Size(48, 44);
+            this.btnMenuUltimoReporte.Size = new System.Drawing.Size(36, 36);
             this.btnMenuUltimoReporte.TabIndex = 20;
             this.tags.SetTag2(this.btnMenuUltimoReporte, null);
             this.tags.SetTag3(this.btnMenuUltimoReporte, null);
@@ -407,11 +450,14 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this.btnMenuUltimoReporte, 12F);
             this.tags.SetTagFontStyle(this.btnMenuUltimoReporte, System.Drawing.FontStyle.Bold);
             this.btnMenuUltimoReporte.UseVisualStyleBackColor = false;
+            this.btnMenuUltimoReporte.Click += new System.EventHandler(this.btnMenuUltimoReporte_Click);
+            this.btnMenuUltimoReporte.MouseEnter += new System.EventHandler(this.btnMenu_MouseEnter);
+            this.btnMenuUltimoReporte.MouseLeave += new System.EventHandler(this.btnMenu_MouseLeave);
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.panelMenu.Controls.Add(this.roundedPanel1);
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(50)))));
+            this.panelMenu.Controls.Add(this.rpBtnMenuUsuario);
             this.panelMenu.Controls.Add(this.rpBtnMenuUltimoReporte);
             this.panelMenu.Controls.Add(this.rpBtnMenuCerrarSesion);
             this.panelMenu.Controls.Add(this.rpBtnMenuReportes);
@@ -420,11 +466,10 @@ namespace LP2MegaAutos
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.HorizontalScrollbarBarColor = true;
             this.panelMenu.HorizontalScrollbarHighlightOnWheel = false;
-            this.panelMenu.HorizontalScrollbarSize = 12;
-            this.panelMenu.Location = new System.Drawing.Point(0, 37);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenu.HorizontalScrollbarSize = 10;
+            this.panelMenu.Location = new System.Drawing.Point(0, 30);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(108, 642);
+            this.panelMenu.Size = new System.Drawing.Size(81, 522);
             this.panelMenu.TabIndex = 3;
             this.panelMenu.Tag = "panelMenu";
             this.tags.SetTag2(this.panelMenu, null);
@@ -436,51 +481,51 @@ namespace LP2MegaAutos
             this.panelMenu.UseCustomForeColor = true;
             this.panelMenu.VerticalScrollbarBarColor = true;
             this.panelMenu.VerticalScrollbarHighlightOnWheel = false;
-            this.panelMenu.VerticalScrollbarSize = 13;
+            this.panelMenu.VerticalScrollbarSize = 10;
             // 
-            // roundedPanel1
+            // rpBtnMenuUsuario
             // 
-            this.roundedPanel1.ArcRadiusBorde = 15;
-            this.roundedPanel1.ArcRadiusPanel = 15;
-            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.roundedPanel1.Controls.Add(this.btnPanelMenuProfile);
-            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.roundedPanel1.Location = new System.Drawing.Point(7, 354);
-            this.roundedPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.roundedPanel1.MenosHeightBorde = 1;
-            this.roundedPanel1.MenosHeightPanel = 1;
-            this.roundedPanel1.MenosWidthBorde = 1;
-            this.roundedPanel1.MenosWidthPanel = 1;
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.PorcLuzColorBorde = 0;
-            this.roundedPanel1.Size = new System.Drawing.Size(103, 64);
-            this.roundedPanel1.TabIndex = 38;
-            this.tags.SetTag2(this.roundedPanel1, null);
-            this.tags.SetTag3(this.roundedPanel1, null);
-            this.tags.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.roundedPanel1, 10F);
-            this.tags.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
-            this.roundedPanel1.XBorde = 0;
-            this.roundedPanel1.XPanel = 0;
-            this.roundedPanel1.YBorde = 0;
-            this.roundedPanel1.YPanel = 0;
+            this.rpBtnMenuUsuario.ArcRadiusBorde = 15;
+            this.rpBtnMenuUsuario.ArcRadiusPanel = 15;
+            this.rpBtnMenuUsuario.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuUsuario.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.rpBtnMenuUsuario.Controls.Add(this.btnPanelMenuProfile);
+            this.rpBtnMenuUsuario.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
+            this.rpBtnMenuUsuario.Location = new System.Drawing.Point(5, 288);
+            this.rpBtnMenuUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.rpBtnMenuUsuario.MenosHeightBorde = 1;
+            this.rpBtnMenuUsuario.MenosHeightPanel = 1;
+            this.rpBtnMenuUsuario.MenosWidthBorde = 1;
+            this.rpBtnMenuUsuario.MenosWidthPanel = 1;
+            this.rpBtnMenuUsuario.Name = "rpBtnMenuUsuario";
+            this.rpBtnMenuUsuario.PorcLuzColorBorde = 0;
+            this.rpBtnMenuUsuario.Size = new System.Drawing.Size(77, 52);
+            this.rpBtnMenuUsuario.TabIndex = 38;
+            this.tags.SetTag2(this.rpBtnMenuUsuario, null);
+            this.tags.SetTag3(this.rpBtnMenuUsuario, null);
+            this.tags.SetTagFontName(this.rpBtnMenuUsuario, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpBtnMenuUsuario, 10F);
+            this.tags.SetTagFontStyle(this.rpBtnMenuUsuario, System.Drawing.FontStyle.Regular);
+            this.rpBtnMenuUsuario.XBorde = 0;
+            this.rpBtnMenuUsuario.XPanel = 0;
+            this.rpBtnMenuUsuario.YBorde = 0;
+            this.rpBtnMenuUsuario.YPanel = 0;
             // 
             // btnPanelMenuProfile
             // 
             this.btnPanelMenuProfile.BackColor = System.Drawing.Color.Transparent;
             this.btnPanelMenuProfile.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Usuario;
             this.btnPanelMenuProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPanelMenuProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPanelMenuProfile.FlatAppearance.BorderSize = 0;
             this.btnPanelMenuProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPanelMenuProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPanelMenuProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPanelMenuProfile.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.btnPanelMenuProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnPanelMenuProfile.Location = new System.Drawing.Point(27, 10);
-            this.btnPanelMenuProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPanelMenuProfile.Location = new System.Drawing.Point(20, 8);
             this.btnPanelMenuProfile.Name = "btnPanelMenuProfile";
-            this.btnPanelMenuProfile.Size = new System.Drawing.Size(48, 44);
+            this.btnPanelMenuProfile.Size = new System.Drawing.Size(36, 36);
             this.btnPanelMenuProfile.TabIndex = 20;
             this.tags.SetTag2(this.btnPanelMenuProfile, null);
             this.tags.SetTag3(this.btnPanelMenuProfile, null);
@@ -489,6 +534,8 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.btnPanelMenuProfile, System.Drawing.FontStyle.Bold);
             this.btnPanelMenuProfile.UseVisualStyleBackColor = false;
             this.btnPanelMenuProfile.Click += new System.EventHandler(this.btnMenuUsuario_Click);
+            this.btnPanelMenuProfile.MouseEnter += new System.EventHandler(this.btnMenu_MouseEnter);
+            this.btnPanelMenuProfile.MouseLeave += new System.EventHandler(this.btnMenu_MouseLeave);
             // 
             // rpBtnMenuReportes
             // 
@@ -498,15 +545,15 @@ namespace LP2MegaAutos
             this.rpBtnMenuReportes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.rpBtnMenuReportes.Controls.Add(this.btnMenuReportes);
             this.rpBtnMenuReportes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Left;
-            this.rpBtnMenuReportes.Location = new System.Drawing.Point(7, 75);
-            this.rpBtnMenuReportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rpBtnMenuReportes.Location = new System.Drawing.Point(5, 61);
+            this.rpBtnMenuReportes.Margin = new System.Windows.Forms.Padding(2);
             this.rpBtnMenuReportes.MenosHeightBorde = 1;
             this.rpBtnMenuReportes.MenosHeightPanel = 1;
             this.rpBtnMenuReportes.MenosWidthBorde = 1;
             this.rpBtnMenuReportes.MenosWidthPanel = 1;
             this.rpBtnMenuReportes.Name = "rpBtnMenuReportes";
             this.rpBtnMenuReportes.PorcLuzColorBorde = 0;
-            this.rpBtnMenuReportes.Size = new System.Drawing.Size(103, 64);
+            this.rpBtnMenuReportes.Size = new System.Drawing.Size(77, 52);
             this.rpBtnMenuReportes.TabIndex = 36;
             this.tags.SetTag2(this.rpBtnMenuReportes, null);
             this.tags.SetTag3(this.rpBtnMenuReportes, null);
@@ -530,10 +577,9 @@ namespace LP2MegaAutos
             this.btnMenuReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuReportes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.btnMenuReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnMenuReportes.Location = new System.Drawing.Point(27, 10);
-            this.btnMenuReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenuReportes.Location = new System.Drawing.Point(20, 8);
             this.btnMenuReportes.Name = "btnMenuReportes";
-            this.btnMenuReportes.Size = new System.Drawing.Size(48, 44);
+            this.btnMenuReportes.Size = new System.Drawing.Size(36, 36);
             this.btnMenuReportes.TabIndex = 20;
             this.tags.SetTag2(this.btnMenuReportes, null);
             this.tags.SetTag3(this.btnMenuReportes, null);
@@ -542,6 +588,8 @@ namespace LP2MegaAutos
             this.tags.SetTagFontStyle(this.btnMenuReportes, System.Drawing.FontStyle.Bold);
             this.btnMenuReportes.UseVisualStyleBackColor = false;
             this.btnMenuReportes.Click += new System.EventHandler(this.btnMenuReportes_Click);
+            this.btnMenuReportes.MouseEnter += new System.EventHandler(this.btnMenu_MouseEnter);
+            this.btnMenuReportes.MouseLeave += new System.EventHandler(this.btnMenu_MouseLeave);
             // 
             // panel_toggle_nocturno
             // 
@@ -549,10 +597,9 @@ namespace LP2MegaAutos
             this.panel_toggle_nocturno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_toggle_nocturno.BackgroundImage")));
             this.panel_toggle_nocturno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_toggle_nocturno.Controls.Add(this.boton_toggle_nocturno);
-            this.panel_toggle_nocturno.Location = new System.Drawing.Point(-8, 562);
-            this.panel_toggle_nocturno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_toggle_nocturno.Location = new System.Drawing.Point(-6, 457);
             this.panel_toggle_nocturno.Name = "panel_toggle_nocturno";
-            this.panel_toggle_nocturno.Size = new System.Drawing.Size(127, 74);
+            this.panel_toggle_nocturno.Size = new System.Drawing.Size(95, 60);
             this.panel_toggle_nocturno.TabIndex = 25;
             this.panel_toggle_nocturno.Tag = "button";
             this.tags.SetTag2(this.panel_toggle_nocturno, null);
@@ -572,10 +619,9 @@ namespace LP2MegaAutos
             this.boton_toggle_nocturno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.boton_toggle_nocturno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.boton_toggle_nocturno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_toggle_nocturno.Location = new System.Drawing.Point(64, 11);
-            this.boton_toggle_nocturno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.boton_toggle_nocturno.Location = new System.Drawing.Point(48, 9);
             this.boton_toggle_nocturno.Name = "boton_toggle_nocturno";
-            this.boton_toggle_nocturno.Size = new System.Drawing.Size(47, 43);
+            this.boton_toggle_nocturno.Size = new System.Drawing.Size(35, 35);
             this.boton_toggle_nocturno.TabIndex = 5;
             this.boton_toggle_nocturno.Tag = "toggle_oscuro";
             this.tags.SetTag2(this.boton_toggle_nocturno, null);
@@ -589,9 +635,9 @@ namespace LP2MegaAutos
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 679);
+            this.ClientSize = new System.Drawing.Size(832, 552);
             this.ControlBox = false;
             this.Controls.Add(this.pnlBackBackground);
             this.Controls.Add(this.panelMenu);
@@ -599,12 +645,11 @@ namespace LP2MegaAutos
             this.Controls.Add(this.title_bar);
             this.DisplayHeader = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
             this.Name = "frmPrincipal";
-            this.Padding = new System.Windows.Forms.Padding(0, 37, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowIcon = false;
@@ -615,12 +660,13 @@ namespace LP2MegaAutos
             this.tags.SetTagFontSize(this, 10F);
             this.tags.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.title_bar.ResumeLayout(false);
+            this.title_bar.PerformLayout();
             this.pnlBackBackground.ResumeLayout(false);
             this.rpBtnMenuHome.ResumeLayout(false);
             this.rpBtnMenuCerrarSesion.ResumeLayout(false);
             this.rpBtnMenuUltimoReporte.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.roundedPanel1.ResumeLayout(false);
+            this.rpBtnMenuUsuario.ResumeLayout(false);
             this.rpBtnMenuReportes.ResumeLayout(false);
             this.panel_toggle_nocturno.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -647,11 +693,12 @@ namespace LP2MegaAutos
         private MetroFramework.Controls.MetroPanel panelMenu;
         private RoundedPanel rpBtnMenuReportes;
         private System.Windows.Forms.Button btnMenuReportes;
-        private RoundedPanel roundedPanel1;
+        private RoundedPanel rpBtnMenuUsuario;
         private System.Windows.Forms.Button btnPanelMenuProfile;
         private Framework.UserControls.PanelMenuStrip pmsReportes;
         private System.Windows.Forms.Button btnAdelante;
         private System.Windows.Forms.Button btnAtras;
         private VentanasPrincipales.ContenedorPantalla contenedorPantalla1;
+        private Framework.UserControls.PanelMenuStrip pmsUltimoReporte;
     }
 }

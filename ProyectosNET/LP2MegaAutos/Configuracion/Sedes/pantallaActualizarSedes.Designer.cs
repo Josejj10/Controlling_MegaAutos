@@ -33,7 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.pnlBuscar = new System.Windows.Forms.Panel();
-            this.cTxt_MasFiltros = new LP2MegaAutos.CustomControls.ClickableText();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.rndReciente = new LP2MegaAutos.RoundedPanel();
             this.btnReciente = new System.Windows.Forms.Button();
@@ -108,25 +107,6 @@
             this.tagsExtender1.SetTagFontName(this.pnlBuscar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnlBuscar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnlBuscar, System.Drawing.FontStyle.Regular);
-            // 
-            // cTxt_MasFiltros
-            // 
-            this.cTxt_MasFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cTxt_MasFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cTxt_MasFiltros.Font = new System.Drawing.Font("Montserrat", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTxt_MasFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
-            this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
-            this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 21);
-            this.cTxt_MasFiltros.TabIndex = 58;
-            this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
-            this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
-            this.tagsExtender1.SetTagFontName(this.cTxt_MasFiltros, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.cTxt_MasFiltros, 11F);
-            this.tagsExtender1.SetTagFontStyle(this.cTxt_MasFiltros, System.Drawing.FontStyle.Bold);
-            this.cTxt_MasFiltros.Text = "Más Filtros";
-            this.cTxt_MasFiltros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btn_Agregar
             // 
@@ -506,7 +486,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.rndReciente);
             this.Controls.Add(this.rndAntiguo);
@@ -540,7 +519,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Panel pnlBuscar;
-        private CustomControls.ClickableText cTxt_MasFiltros;
         private System.Windows.Forms.Button btn_Agregar;
         private RoundedPanel rndReciente;
         private System.Windows.Forms.Button btnReciente;

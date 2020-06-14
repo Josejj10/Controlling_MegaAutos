@@ -24,7 +24,7 @@ namespace LP2MegaAutos
             // Agregar excpciones del Modo Oscuro
             DarkMode.agregarExcepcion("title_bar");
             DarkMode.agregarExcepcion("title_bar_2");
-            DarkMode.agregarExcepcion("panelMenu");
+            //DarkMode.agregarExcepcion("panelMenu");
 
             while (true)
             {

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaAjustesUsuarioGerente));
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.panel7 = new System.Windows.Forms.Panel();
             this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
@@ -63,6 +62,7 @@
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.roundedPanel3);
             this.panel7.Controls.Add(this.txt_TipoUsuario);
             this.panel7.Controls.Add(this.lbl_TipoUsuario);
@@ -139,6 +139,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.roundedPanel1);
             this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.lbl_Direccion);
@@ -215,6 +216,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.roundedPanel2);
             this.panel5.Controls.Add(this.boton_ver_password);
             this.panel5.Controls.Add(this.txt_NuevaCont);
@@ -320,6 +322,7 @@
             // 
             // pnl_codServ
             // 
+            this.pnl_codServ.BackColor = System.Drawing.Color.White;
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.txt_Correo);
             this.pnl_codServ.Controls.Add(this.lbl_Correo);
@@ -410,6 +413,7 @@
             // lbl_NombreAjustes
             // 
             this.lbl_NombreAjustes.AutoSize = true;
+            this.lbl_NombreAjustes.BackColor = System.Drawing.Color.White;
             this.lbl_NombreAjustes.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NombreAjustes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lbl_NombreAjustes.Location = new System.Drawing.Point(21, 19);
@@ -473,7 +477,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
+            this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -482,7 +486,7 @@
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
             this.btnEditar.Location = new System.Drawing.Point(706, 26);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(32, 32);
@@ -499,7 +503,7 @@
             // 
             // flpPermisos
             // 
-            this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.flpPermisos.Location = new System.Drawing.Point(106, 277);
             this.flpPermisos.Name = "flpPermisos";
             this.flpPermisos.Size = new System.Drawing.Size(538, 207);
@@ -541,7 +545,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.flpPermisos);
             this.Controls.Add(this.btnEditar);

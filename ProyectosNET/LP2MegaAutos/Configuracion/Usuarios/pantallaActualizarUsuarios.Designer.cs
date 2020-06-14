@@ -47,10 +47,10 @@
             this.flpUsuarios = new System.Windows.Forms.FlowLayoutPanel();
             this.il_Usuarios1 = new LP2MegaAutos.itemLista();
             this.il_Usuarios3 = new LP2MegaAutos.itemLista();
-            this.il_Usuarios2 = new LP2MegaAutos.itemLista();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
+            this.cmbFiltrarPermisos = new System.Windows.Forms.ComboBox();
             this.pnlBuscar.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -131,19 +131,20 @@
             // 
             // btn_Agregar
             // 
+            this.btn_Agregar.AutoSize = true;
             this.btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btn_Agregar.FlatAppearance.BorderSize = 0;
             this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Agregar.ForeColor = System.Drawing.Color.White;
-            this.btn_Agregar.Location = new System.Drawing.Point(27, 49);
+            this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
+            this.btn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
+            this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(78, 22);
+            this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
             this.btn_Agregar.TabIndex = 52;
             this.tagsExtender1.SetTag2(this.btn_Agregar, null);
             this.tagsExtender1.SetTag3(this.btn_Agregar, null);
             this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 8F);
+            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 11F);
             this.tagsExtender1.SetTagFontStyle(this.btn_Agregar, System.Drawing.FontStyle.Bold);
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -153,8 +154,9 @@
             // 
             this.rndReciente.ArcRadiusBorde = 8;
             this.rndReciente.ArcRadiusPanel = 8;
+            this.rndReciente.BackColor = System.Drawing.Color.Transparent;
             this.rndReciente.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rndReciente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndReciente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rndReciente.Controls.Add(this.btnReciente);
             this.rndReciente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndReciente.Location = new System.Drawing.Point(26, 227);
@@ -178,7 +180,7 @@
             // 
             // btnReciente
             // 
-            this.btnReciente.BackColor = System.Drawing.Color.White;
+            this.btnReciente.BackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatAppearance.BorderSize = 0;
             this.btnReciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -204,8 +206,9 @@
             // 
             this.rndAntiguo.ArcRadiusBorde = 8;
             this.rndAntiguo.ArcRadiusPanel = 8;
+            this.rndAntiguo.BackColor = System.Drawing.Color.Transparent;
             this.rndAntiguo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rndAntiguo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndAntiguo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rndAntiguo.Controls.Add(this.btnAntiguo);
             this.rndAntiguo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndAntiguo.Location = new System.Drawing.Point(26, 181);
@@ -229,7 +232,7 @@
             // 
             // btnAntiguo
             // 
-            this.btnAntiguo.BackColor = System.Drawing.Color.White;
+            this.btnAntiguo.BackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatAppearance.BorderSize = 0;
             this.btnAntiguo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -255,8 +258,9 @@
             // 
             this.rndZA.ArcRadiusBorde = 8;
             this.rndZA.ArcRadiusPanel = 8;
+            this.rndZA.BackColor = System.Drawing.Color.Transparent;
             this.rndZA.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rndZA.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndZA.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rndZA.Controls.Add(this.btnZA);
             this.rndZA.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndZA.Location = new System.Drawing.Point(26, 135);
@@ -280,7 +284,7 @@
             // 
             // btnZA
             // 
-            this.btnZA.BackColor = System.Drawing.Color.White;
+            this.btnZA.BackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatAppearance.BorderSize = 0;
             this.btnZA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -306,6 +310,7 @@
             // 
             this.rndAZ.ArcRadiusBorde = 8;
             this.rndAZ.ArcRadiusPanel = 8;
+            this.rndAZ.BackColor = System.Drawing.Color.Transparent;
             this.rndAZ.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rndAZ.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rndAZ.Controls.Add(this.btnAZ);
@@ -351,6 +356,7 @@
             this.btnAZ.Text = "A - Z";
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // panel3
             // 
@@ -370,10 +376,9 @@
             // flpUsuarios
             // 
             this.flpUsuarios.AutoScroll = true;
-            this.flpUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.flpUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.flpUsuarios.Controls.Add(this.il_Usuarios1);
             this.flpUsuarios.Controls.Add(this.il_Usuarios3);
-            this.flpUsuarios.Controls.Add(this.il_Usuarios2);
             this.flpUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpUsuarios.Location = new System.Drawing.Point(0, 27);
             this.flpUsuarios.Name = "flpUsuarios";
@@ -389,7 +394,8 @@
             // il_Usuarios1
             // 
             this.il_Usuarios1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.il_Usuarios1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Usuarios1.BackColor = System.Drawing.Color.Transparent;
+            this.il_Usuarios1.ColorBack = System.Drawing.Color.Transparent;
             this.il_Usuarios1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Usuarios1.ColorPanel = System.Drawing.Color.White;
             this.il_Usuarios1.Location = new System.Drawing.Point(34, 3);
@@ -409,7 +415,7 @@
             // 
             // il_Usuarios3
             // 
-            this.il_Usuarios3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.il_Usuarios3.ColorBack = System.Drawing.Color.Transparent;
             this.il_Usuarios3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.il_Usuarios3.ColorPanel = System.Drawing.Color.White;
             this.il_Usuarios3.Location = new System.Drawing.Point(34, 113);
@@ -426,26 +432,6 @@
             this.il_Usuarios3.TextoPrincipal = "Juan Villegaz";
             this.il_Usuarios3.Textosecundario = "Analista";
             this.il_Usuarios3.TextoTercero = "jvillegaz@pucp.edu.pe";
-            // 
-            // il_Usuarios2
-            // 
-            this.il_Usuarios2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Usuarios2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Usuarios2.ColorPanel = System.Drawing.Color.White;
-            this.il_Usuarios2.Location = new System.Drawing.Point(34, 223);
-            this.il_Usuarios2.Name = "il_Usuarios2";
-            this.il_Usuarios2.Size = new System.Drawing.Size(497, 104);
-            this.il_Usuarios2.TabIndex = 55;
-            this.tagsExtender1.SetTag2(this.il_Usuarios2, null);
-            this.tagsExtender1.SetTag3(this.il_Usuarios2, null);
-            this.tagsExtender1.SetTagFontName(this.il_Usuarios2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Usuarios2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Usuarios2, System.Drawing.FontStyle.Regular);
-            this.il_Usuarios2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Usuarios2.TextoFecha = "dd - mm - aaaa";
-            this.il_Usuarios2.TextoPrincipal = "Pintura en horno";
-            this.il_Usuarios2.Textosecundario = "Pintura";
-            this.il_Usuarios2.TextoTercero = "PIN-002";
             // 
             // roundedPanel4
             // 
@@ -509,7 +495,7 @@
             this.lbl_ListaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
+            this.lbl_ListaServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.lbl_ListaServicios.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaServicios.Name = "lbl_ListaServicios";
             this.lbl_ListaServicios.Size = new System.Drawing.Size(82, 22);
@@ -522,11 +508,25 @@
             this.lbl_ListaServicios.Text = "Usuarios";
             this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmbFiltrarPermisos
+            // 
+            this.cmbFiltrarPermisos.FormattingEnabled = true;
+            this.cmbFiltrarPermisos.Location = new System.Drawing.Point(26, 309);
+            this.cmbFiltrarPermisos.Name = "cmbFiltrarPermisos";
+            this.cmbFiltrarPermisos.Size = new System.Drawing.Size(121, 21);
+            this.cmbFiltrarPermisos.TabIndex = 59;
+            this.tagsExtender1.SetTag2(this.cmbFiltrarPermisos, null);
+            this.tagsExtender1.SetTag3(this.cmbFiltrarPermisos, null);
+            this.tagsExtender1.SetTagFontName(this.cmbFiltrarPermisos, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cmbFiltrarPermisos, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cmbFiltrarPermisos, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaActualizarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.Controls.Add(this.cmbFiltrarPermisos);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.btn_Agregar);
@@ -555,6 +555,7 @@
             this.rpn_ListaServicios.ResumeLayout(false);
             this.rpn_ListaServicios.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -577,9 +578,9 @@
         private System.Windows.Forms.FlowLayoutPanel flpUsuarios;
         private itemLista il_Usuarios1;
         private itemLista il_Usuarios3;
-        private itemLista il_Usuarios2;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaServicios;
         private System.Windows.Forms.Label lbl_ListaServicios;
+        private System.Windows.Forms.ComboBox cmbFiltrarPermisos;
     }
 }

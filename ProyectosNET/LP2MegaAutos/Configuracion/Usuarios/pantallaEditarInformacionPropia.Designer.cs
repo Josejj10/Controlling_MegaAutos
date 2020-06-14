@@ -121,6 +121,7 @@
             // lbl_ContraseñaActual
             // 
             this.lbl_ContraseñaActual.AutoSize = true;
+            this.lbl_ContraseñaActual.BackColor = System.Drawing.Color.White;
             this.lbl_ContraseñaActual.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ContraseñaActual.Location = new System.Drawing.Point(233, 310);
             this.lbl_ContraseñaActual.Name = "lbl_ContraseñaActual";
@@ -135,6 +136,7 @@
             // 
             // pnl_codServ
             // 
+            this.pnl_codServ.BackColor = System.Drawing.Color.White;
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.txt_Correo);
             this.pnl_codServ.Controls.Add(this.lbl_Correo);
@@ -211,6 +213,7 @@
             // 
             // pnl_Direccion
             // 
+            this.pnl_Direccion.BackColor = System.Drawing.Color.White;
             this.pnl_Direccion.Controls.Add(this.roundedPanel1);
             this.pnl_Direccion.Controls.Add(this.txt_Direccion);
             this.pnl_Direccion.Controls.Add(this.lbl_Direccion);
@@ -287,6 +290,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.boton_ver_password);
             this.panel2.Controls.Add(this.roundedPanel2);
             this.panel2.Controls.Add(this.txt_NuevaCont);
@@ -392,6 +396,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.roundedPanel3);
             this.panel3.Controls.Add(this.txt_RepNCont);
             this.panel3.Controls.Add(this.lbl_RepNCont);
@@ -470,6 +475,7 @@
             // lbl_EditarNombre
             // 
             this.lbl_EditarNombre.AutoSize = true;
+            this.lbl_EditarNombre.BackColor = System.Drawing.Color.White;
             this.lbl_EditarNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_EditarNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lbl_EditarNombre.Location = new System.Drawing.Point(27, 42);
@@ -745,6 +751,7 @@
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Load += new System.EventHandler(this.pantallaEditarInformacionPropia_Load);
             this.rpn_Reportes.ResumeLayout(false);
             this.rpn_Reportes.PerformLayout();

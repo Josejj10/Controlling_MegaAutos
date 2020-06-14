@@ -39,53 +39,54 @@
             this.lblFechaGenerado = new System.Windows.Forms.Label();
             this.lblQuienGenero = new System.Windows.Forms.Label();
             this.lblPor = new System.Windows.Forms.Label();
-            this.pnlRojo = new System.Windows.Forms.Panel();
-            this.tlpDetalles = new System.Windows.Forms.TableLayoutPanel();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblSede = new System.Windows.Forms.Label();
-            this.lblTipoReporte = new System.Windows.Forms.Label();
-            this.rpTopMain = new LP2MegaAutos.RoundedPanel();
-            this.btnFiltrar = new LP2MegaAutos.CustomControls.ClickableText();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.rndDetalle = new LP2MegaAutos.RoundedPanel();
-            this.btnDetalle = new System.Windows.Forms.Button();
             this.title_bar_2 = new System.Windows.Forms.Panel();
             this.title_bar = new System.Windows.Forms.Panel();
             this.boton_minimizar = new System.Windows.Forms.Button();
             this.boton_cerrar = new System.Windows.Forms.Button();
+            this.btnFiltrar = new LP2MegaAutos.CustomControls.ClickableText();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblSede = new System.Windows.Forms.Label();
+            this.pnlColorArriba = new System.Windows.Forms.Panel();
+            this.pnlColorAbajo = new System.Windows.Forms.Panel();
+            this.btnEstadisticas = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.flpReporteResumen.SuspendLayout();
             this.tlpGeneradoEl.SuspendLayout();
-            this.pnlRojo.SuspendLayout();
-            this.tlpDetalles.SuspendLayout();
-            this.rpTopMain.SuspendLayout();
-            this.rndDetalle.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpReporteResumen
             // 
             this.flpReporteResumen.AutoScroll = true;
+            this.flpReporteResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.flpReporteResumen.Controls.Add(this.itemListaResumen1);
             this.flpReporteResumen.Controls.Add(this.itemListaResumen2);
             this.flpReporteResumen.Controls.Add(this.itemListaResumen3);
             this.flpReporteResumen.Controls.Add(this.itemListaResumen4);
             this.flpReporteResumen.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpReporteResumen.Location = new System.Drawing.Point(0, 147);
+            this.flpReporteResumen.Location = new System.Drawing.Point(32, 142);
             this.flpReporteResumen.Name = "flpReporteResumen";
-            this.flpReporteResumen.Size = new System.Drawing.Size(833, 366);
+            this.flpReporteResumen.Padding = new System.Windows.Forms.Padding(10);
+            this.flpReporteResumen.Size = new System.Drawing.Size(971, 418);
             this.flpReporteResumen.TabIndex = 0;
             this.tags.SetTag2(this.flpReporteResumen, null);
             this.tags.SetTag3(this.flpReporteResumen, null);
             this.tags.SetTagFontName(this.flpReporteResumen, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.flpReporteResumen, 10F);
             this.tags.SetTagFontStyle(this.flpReporteResumen, System.Drawing.FontStyle.Regular);
+            this.flpReporteResumen.Paint += new System.Windows.Forms.PaintEventHandler(this.flpReporteResumen_Paint);
             // 
             // itemListaResumen1
             // 
             this.itemListaResumen1.ColorBordeSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen1.ColorPanelSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen1.CuentasContables = "Cuentas Contables";
-            this.itemListaResumen1.Location = new System.Drawing.Point(3, 3);
+            this.itemListaResumen1.Location = new System.Drawing.Point(13, 13);
+            this.itemListaResumen1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.itemListaResumen1.MontoEgresos = "99.00";
+            this.itemListaResumen1.MontoIngresos = "9,999,999.00";
             this.itemListaResumen1.MontoTotal = "9,999,999.00";
             this.itemListaResumen1.Name = "itemListaResumen1";
             this.itemListaResumen1.Size = new System.Drawing.Size(210, 717);
@@ -95,16 +96,17 @@
             this.tags.SetTagFontName(this.itemListaResumen1, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen1, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen1, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen1.MontoEgresos= "99.00";
             this.itemListaResumen1.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen1.MontoIngresos = "9,999,999.00";
             // 
             // itemListaResumen2
             // 
             this.itemListaResumen2.ColorBordeSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen2.ColorPanelSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen2.CuentasContables = "Cuentas Contables";
-            this.itemListaResumen2.Location = new System.Drawing.Point(219, 3);
+            this.itemListaResumen2.Location = new System.Drawing.Point(246, 13);
+            this.itemListaResumen2.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.itemListaResumen2.MontoEgresos = "99.00";
+            this.itemListaResumen2.MontoIngresos = "9,999,999.00";
             this.itemListaResumen2.MontoTotal = "9,999,999.00";
             this.itemListaResumen2.Name = "itemListaResumen2";
             this.itemListaResumen2.Size = new System.Drawing.Size(210, 717);
@@ -114,16 +116,17 @@
             this.tags.SetTagFontName(this.itemListaResumen2, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen2, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen2, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen2.MontoEgresos = "99.00";
             this.itemListaResumen2.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen2.MontoIngresos = "9,999,999.00";
             // 
             // itemListaResumen3
             // 
             this.itemListaResumen3.ColorBordeSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen3.ColorPanelSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen3.CuentasContables = "Cuentas Contables";
-            this.itemListaResumen3.Location = new System.Drawing.Point(435, 3);
+            this.itemListaResumen3.Location = new System.Drawing.Point(479, 13);
+            this.itemListaResumen3.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.itemListaResumen3.MontoEgresos = "99.00";
+            this.itemListaResumen3.MontoIngresos = "9,999,999.00";
             this.itemListaResumen3.MontoTotal = "9,999,999.00";
             this.itemListaResumen3.Name = "itemListaResumen3";
             this.itemListaResumen3.Size = new System.Drawing.Size(210, 717);
@@ -133,16 +136,17 @@
             this.tags.SetTagFontName(this.itemListaResumen3, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen3, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen3, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen3.MontoEgresos = "99.00";
             this.itemListaResumen3.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen3.MontoIngresos = "9,999,999.00";
             // 
             // itemListaResumen4
             // 
             this.itemListaResumen4.ColorBordeSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen4.ColorPanelSubrayado = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.itemListaResumen4.CuentasContables = "Cuentas Contables";
-            this.itemListaResumen4.Location = new System.Drawing.Point(651, 3);
+            this.itemListaResumen4.Location = new System.Drawing.Point(712, 13);
+            this.itemListaResumen4.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.itemListaResumen4.MontoEgresos = "99.00";
+            this.itemListaResumen4.MontoIngresos = "9,999,999.00";
             this.itemListaResumen4.MontoTotal = "9,999,999.00";
             this.itemListaResumen4.Name = "itemListaResumen4";
             this.itemListaResumen4.Size = new System.Drawing.Size(210, 717);
@@ -152,9 +156,7 @@
             this.tags.SetTagFontName(this.itemListaResumen4, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.itemListaResumen4, 10F);
             this.tags.SetTagFontStyle(this.itemListaResumen4, System.Drawing.FontStyle.Regular);
-            this.itemListaResumen4.MontoEgresos = "99.00";
             this.itemListaResumen4.TextoPrincipal = "Cuenta Grande";
-            this.itemListaResumen4.MontoIngresos = "9,999,999.00";
             // 
             // tlpGeneradoEl
             // 
@@ -165,10 +167,10 @@
             this.tlpGeneradoEl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tlpGeneradoEl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 351F));
             this.tlpGeneradoEl.Controls.Add(this.lblGeneradoEl, 0, 0);
-            this.tlpGeneradoEl.Controls.Add(this.lblFechaGenerado, 1, 0);
             this.tlpGeneradoEl.Controls.Add(this.lblQuienGenero, 3, 0);
             this.tlpGeneradoEl.Controls.Add(this.lblPor, 2, 0);
-            this.tlpGeneradoEl.Location = new System.Drawing.Point(0, 113);
+            this.tlpGeneradoEl.Controls.Add(this.lblFechaGenerado, 1, 0);
+            this.tlpGeneradoEl.Location = new System.Drawing.Point(29, 75);
             this.tlpGeneradoEl.Name = "tlpGeneradoEl";
             this.tlpGeneradoEl.RowCount = 1;
             this.tlpGeneradoEl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -245,217 +247,13 @@
             this.tags.SetTagFontStyle(this.lblPor, System.Drawing.FontStyle.Regular);
             this.lblPor.Text = "por";
             // 
-            // pnlRojo
-            // 
-            this.pnlRojo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(64)))), ((int)(((byte)(32)))));
-            this.pnlRojo.Controls.Add(this.tlpDetalles);
-            this.pnlRojo.Location = new System.Drawing.Point(0, 83);
-            this.pnlRojo.Name = "pnlRojo";
-            this.pnlRojo.Size = new System.Drawing.Size(832, 30);
-            this.pnlRojo.TabIndex = 49;
-            this.tags.SetTag2(this.pnlRojo, null);
-            this.tags.SetTag3(this.pnlRojo, null);
-            this.tags.SetTagFontName(this.pnlRojo, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.pnlRojo, 10F);
-            this.tags.SetTagFontStyle(this.pnlRojo, System.Drawing.FontStyle.Regular);
-            // 
-            // tlpDetalles
-            // 
-            this.tlpDetalles.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tlpDetalles.ColumnCount = 3;
-            this.tlpDetalles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24223F));
-            this.tlpDetalles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.1885F));
-            this.tlpDetalles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.62056F));
-            this.tlpDetalles.Controls.Add(this.lblFecha, 0, 0);
-            this.tlpDetalles.Controls.Add(this.lblSede, 0, 0);
-            this.tlpDetalles.Controls.Add(this.lblTipoReporte, 0, 0);
-            this.tlpDetalles.Location = new System.Drawing.Point(0, 0);
-            this.tlpDetalles.Name = "tlpDetalles";
-            this.tlpDetalles.RowCount = 1;
-            this.tlpDetalles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpDetalles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpDetalles.Size = new System.Drawing.Size(833, 30);
-            this.tlpDetalles.TabIndex = 35;
-            this.tags.SetTag2(this.tlpDetalles, null);
-            this.tags.SetTag3(this.tlpDetalles, null);
-            this.tags.SetTagFontName(this.tlpDetalles, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.tlpDetalles, 10F);
-            this.tags.SetTagFontStyle(this.tlpDetalles, System.Drawing.FontStyle.Regular);
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.lblFecha.Location = new System.Drawing.Point(635, 5);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(195, 19);
-            this.lblFecha.TabIndex = 35;
-            this.tags.SetTag2(this.lblFecha, null);
-            this.tags.SetTag3(this.lblFecha, null);
-            this.tags.SetTagFontName(this.lblFecha, fontsD.Lato);
-            this.tags.SetTagFontSize(this.lblFecha, 12F);
-            this.tags.SetTagFontStyle(this.lblFecha, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Text = "24/03/2020 - 24/04/2020";
-            // 
-            // lblSede
-            // 
-            this.lblSede.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSede.AutoSize = true;
-            this.lblSede.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.lblSede.Location = new System.Drawing.Point(390, 5);
-            this.lblSede.Name = "lblSede";
-            this.lblSede.Size = new System.Drawing.Size(72, 19);
-            this.lblSede.TabIndex = 2;
-            this.tags.SetTag2(this.lblSede, null);
-            this.tags.SetTag3(this.lblSede, null);
-            this.tags.SetTagFontName(this.lblSede, fontsD.Lato);
-            this.tags.SetTagFontSize(this.lblSede, 12F);
-            this.tags.SetTagFontStyle(this.lblSede, System.Drawing.FontStyle.Bold);
-            this.lblSede.Text = "Surquillo";
-            // 
-            // lblTipoReporte
-            // 
-            this.lblTipoReporte.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTipoReporte.AutoSize = true;
-            this.lblTipoReporte.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.lblTipoReporte.Location = new System.Drawing.Point(3, 5);
-            this.lblTipoReporte.Name = "lblTipoReporte";
-            this.lblTipoReporte.Size = new System.Drawing.Size(121, 19);
-            this.lblTipoReporte.TabIndex = 1;
-            this.tags.SetTag2(this.lblTipoReporte, null);
-            this.tags.SetTag3(this.lblTipoReporte, null);
-            this.tags.SetTagFontName(this.lblTipoReporte, fontsD.Lato);
-            this.tags.SetTagFontSize(this.lblTipoReporte, 12F);
-            this.tags.SetTagFontStyle(this.lblTipoReporte, System.Drawing.FontStyle.Bold);
-            this.lblTipoReporte.Text = "Área de Trabajo";
-            // 
-            // rpTopMain
-            // 
-            this.rpTopMain.ArcRadiusBorde = 15;
-            this.rpTopMain.ArcRadiusPanel = 15;
-            this.rpTopMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.rpTopMain.Controls.Add(this.btnFiltrar);
-            this.rpTopMain.Controls.Add(this.lblTitulo);
-            this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 31);
-            this.rpTopMain.MenosHeightBorde = 1;
-            this.rpTopMain.MenosHeightPanel = 1;
-            this.rpTopMain.MenosWidthBorde = 1;
-            this.rpTopMain.MenosWidthPanel = 1;
-            this.rpTopMain.Name = "rpTopMain";
-            this.rpTopMain.PorcLuzColorBorde = 0;
-            this.rpTopMain.Size = new System.Drawing.Size(832, 52);
-            this.rpTopMain.TabIndex = 48;
-            this.tags.SetTag2(this.rpTopMain, null);
-            this.tags.SetTag3(this.rpTopMain, null);
-            this.tags.SetTagFontName(this.rpTopMain, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpTopMain, 10F);
-            this.tags.SetTagFontStyle(this.rpTopMain, System.Drawing.FontStyle.Regular);
-            this.rpTopMain.XBorde = 0;
-            this.rpTopMain.XPanel = 0;
-            this.rpTopMain.YBorde = 0;
-            this.rpTopMain.YPanel = 0;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltrar.Font = new System.Drawing.Font("Montserrat SemiBold", 9.749999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.Location = new System.Drawing.Point(760, 20);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(48, 18);
-            this.btnFiltrar.TabIndex = 34;
-            this.tags.SetTag2(this.btnFiltrar, null);
-            this.tags.SetTag3(this.btnFiltrar, null);
-            this.tags.SetTagFontName(this.btnFiltrar, fontsD.Montserrat_SemiBold);
-            this.tags.SetTagFontSize(this.btnFiltrar, 9.75F);
-            this.tags.SetTagFontStyle(this.btnFiltrar, System.Drawing.FontStyle.Bold);
-            this.btnFiltrar.Text = "Filtrar";
-            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.lblTitulo.Location = new System.Drawing.Point(299, 9);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(234, 35);
-            this.lblTitulo.TabIndex = 33;
-            this.tags.SetTag2(this.lblTitulo, null);
-            this.tags.SetTag3(this.lblTitulo, null);
-            this.tags.SetTagFontName(this.lblTitulo, fontsD.Lato);
-            this.tags.SetTagFontSize(this.lblTitulo, 21.75F);
-            this.tags.SetTagFontStyle(this.lblTitulo, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.Text = "Reporte Mensual";
-            // 
-            // rndDetalle
-            // 
-            this.rndDetalle.ArcRadiusBorde = 8;
-            this.rndDetalle.ArcRadiusPanel = 8;
-            this.rndDetalle.BackColor = System.Drawing.Color.Transparent;
-            this.rndDetalle.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.rndDetalle.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.rndDetalle.Controls.Add(this.btnDetalle);
-            this.rndDetalle.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndDetalle.Location = new System.Drawing.Point(691, 116);
-            this.rndDetalle.MenosHeightBorde = 1;
-            this.rndDetalle.MenosHeightPanel = 1;
-            this.rndDetalle.MenosWidthBorde = 1;
-            this.rndDetalle.MenosWidthPanel = 1;
-            this.rndDetalle.Name = "rndDetalle";
-            this.rndDetalle.PorcLuzColorBorde = 0;
-            this.rndDetalle.Size = new System.Drawing.Size(139, 28);
-            this.rndDetalle.TabIndex = 51;
-            this.tags.SetTag2(this.rndDetalle, null);
-            this.tags.SetTag3(this.rndDetalle, null);
-            this.tags.SetTagFontName(this.rndDetalle, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rndDetalle, 10F);
-            this.tags.SetTagFontStyle(this.rndDetalle, System.Drawing.FontStyle.Regular);
-            this.rndDetalle.XBorde = 0;
-            this.rndDetalle.XPanel = 0;
-            this.rndDetalle.YBorde = 0;
-            this.rndDetalle.YPanel = 0;
-            // 
-            // btnDetalle
-            // 
-            this.btnDetalle.BackColor = System.Drawing.Color.Transparent;
-            this.btnDetalle.FlatAppearance.BorderSize = 0;
-            this.btnDetalle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetalle.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDetalle.ForeColor = System.Drawing.Color.White;
-            this.btnDetalle.Location = new System.Drawing.Point(3, 3);
-            this.btnDetalle.Name = "btnDetalle";
-            this.btnDetalle.Size = new System.Drawing.Size(132, 22);
-            this.btnDetalle.TabIndex = 6;
-            this.tags.SetTag2(this.btnDetalle, null);
-            this.tags.SetTag3(this.btnDetalle, null);
-            this.tags.SetTagFontName(this.btnDetalle, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnDetalle, 9F);
-            this.tags.SetTagFontStyle(this.btnDetalle, System.Drawing.FontStyle.Regular);
-            this.btnDetalle.Text = "Volver al Detalle";
-            this.btnDetalle.UseVisualStyleBackColor = false;
-            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
-            // 
             // title_bar_2
             // 
             this.title_bar_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.title_bar_2.Enabled = false;
             this.title_bar_2.Location = new System.Drawing.Point(0, 24);
             this.title_bar_2.Name = "title_bar_2";
-            this.title_bar_2.Size = new System.Drawing.Size(832, 8);
+            this.title_bar_2.Size = new System.Drawing.Size(1040, 8);
             this.title_bar_2.TabIndex = 52;
             this.title_bar_2.Tag = "titlebar";
             this.tags.SetTag2(this.title_bar_2, null);
@@ -473,7 +271,7 @@
             this.title_bar.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
             this.title_bar.Name = "title_bar";
-            this.title_bar.Size = new System.Drawing.Size(832, 24);
+            this.title_bar.Size = new System.Drawing.Size(1040, 24);
             this.title_bar.TabIndex = 53;
             this.title_bar.Tag = "titlebar";
             this.tags.SetTag2(this.title_bar, null);
@@ -493,7 +291,7 @@
             this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
+            this.boton_minimizar.Location = new System.Drawing.Point(991, -1);
             this.boton_minimizar.Name = "boton_minimizar";
             this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
             this.boton_minimizar.TabIndex = 0;
@@ -518,7 +316,7 @@
             this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
-            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
+            this.boton_cerrar.Location = new System.Drawing.Point(1015, -1);
             this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
             this.boton_cerrar.Name = "boton_cerrar";
             this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
@@ -533,18 +331,179 @@
             this.boton_cerrar.UseVisualStyleBackColor = false;
             this.boton_cerrar.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
             // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltrar.Font = new System.Drawing.Font("Montserrat", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltrar.Location = new System.Drawing.Point(31, 601);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(173, 26);
+            this.btnFiltrar.TabIndex = 55;
+            this.tags.SetTag2(this.btnFiltrar, null);
+            this.tags.SetTag3(this.btnFiltrar, null);
+            this.tags.SetTagFontName(this.btnFiltrar, fontsD.Montserrat);
+            this.tags.SetTagFontSize(this.btnFiltrar, 14F);
+            this.tags.SetTagFontStyle(this.btnFiltrar, System.Drawing.FontStyle.Bold);
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.lblTitulo.Location = new System.Drawing.Point(29, 35);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(458, 35);
+            this.lblTitulo.TabIndex = 54;
+            this.tags.SetTag2(this.lblTitulo, null);
+            this.tags.SetTag3(this.lblTitulo, null);
+            this.tags.SetTagFontName(this.lblTitulo, fontsD.Lato);
+            this.tags.SetTagFontSize(this.lblTitulo, 21.75F);
+            this.tags.SetTagFontStyle(this.lblTitulo, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.Text = "Reporte Mensual - Área de Trabajo";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblFecha.Location = new System.Drawing.Point(817, 70);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(195, 19);
+            this.lblFecha.TabIndex = 35;
+            this.tags.SetTag2(this.lblFecha, null);
+            this.tags.SetTag3(this.lblFecha, null);
+            this.tags.SetTagFontName(this.lblFecha, fontsD.Lato);
+            this.tags.SetTagFontSize(this.lblFecha, 12F);
+            this.tags.SetTagFontStyle(this.lblFecha, System.Drawing.FontStyle.Bold);
+            this.lblFecha.Text = "24/03/2020 - 24/04/2020";
+            // 
+            // lblSede
+            // 
+            this.lblSede.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSede.AutoSize = true;
+            this.lblSede.Font = new System.Drawing.Font("Lato", 18F, System.Drawing.FontStyle.Bold);
+            this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblSede.Location = new System.Drawing.Point(908, 41);
+            this.lblSede.Name = "lblSede";
+            this.lblSede.Size = new System.Drawing.Size(109, 29);
+            this.lblSede.TabIndex = 57;
+            this.tags.SetTag2(this.lblSede, null);
+            this.tags.SetTag3(this.lblSede, null);
+            this.tags.SetTagFontName(this.lblSede, fontsD.Lato);
+            this.tags.SetTagFontSize(this.lblSede, 18F);
+            this.tags.SetTagFontStyle(this.lblSede, System.Drawing.FontStyle.Bold);
+            this.lblSede.Text = "Surquillo";
+            // 
+            // pnlColorArriba
+            // 
+            this.pnlColorArriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.pnlColorArriba.Location = new System.Drawing.Point(32, 128);
+            this.pnlColorArriba.Name = "pnlColorArriba";
+            this.pnlColorArriba.Size = new System.Drawing.Size(971, 15);
+            this.pnlColorArriba.TabIndex = 58;
+            this.tags.SetTag2(this.pnlColorArriba, null);
+            this.tags.SetTag3(this.pnlColorArriba, null);
+            this.tags.SetTagFontName(this.pnlColorArriba, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.pnlColorArriba, 10F);
+            this.tags.SetTagFontStyle(this.pnlColorArriba, System.Drawing.FontStyle.Regular);
+            // 
+            // pnlColorAbajo
+            // 
+            this.pnlColorAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.pnlColorAbajo.Location = new System.Drawing.Point(32, 557);
+            this.pnlColorAbajo.Name = "pnlColorAbajo";
+            this.pnlColorAbajo.Size = new System.Drawing.Size(971, 15);
+            this.pnlColorAbajo.TabIndex = 59;
+            this.tags.SetTag2(this.pnlColorAbajo, null);
+            this.tags.SetTag3(this.pnlColorAbajo, null);
+            this.tags.SetTagFontName(this.pnlColorAbajo, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.pnlColorAbajo, 10F);
+            this.tags.SetTagFontStyle(this.pnlColorAbajo, System.Drawing.FontStyle.Regular);
+            // 
+            // btnEstadisticas
+            // 
+            this.btnEstadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnEstadisticas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
+            this.btnEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadisticas.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
+            this.btnEstadisticas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEstadisticas.Location = new System.Drawing.Point(391, 582);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(200, 45);
+            this.btnEstadisticas.TabIndex = 60;
+            this.tags.SetTag2(this.btnEstadisticas, null);
+            this.tags.SetTag3(this.btnEstadisticas, null);
+            this.tags.SetTagFontName(this.btnEstadisticas, fontsD.Montserrat);
+            this.tags.SetTagFontSize(this.btnEstadisticas, 15F);
+            this.tags.SetTagFontStyle(this.btnEstadisticas, System.Drawing.FontStyle.Bold);
+            this.btnEstadisticas.Text = "Estadisticas";
+            this.btnEstadisticas.UseVisualStyleBackColor = false;
+            // 
+            // btnDetalle
+            // 
+            this.btnDetalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnDetalle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
+            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalle.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
+            this.btnDetalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnDetalle.Location = new System.Drawing.Point(597, 582);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(200, 45);
+            this.btnDetalle.TabIndex = 61;
+            this.tags.SetTag2(this.btnDetalle, null);
+            this.tags.SetTag3(this.btnDetalle, null);
+            this.tags.SetTagFontName(this.btnDetalle, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnDetalle, 15F);
+            this.tags.SetTagFontStyle(this.btnDetalle, System.Drawing.FontStyle.Bold);
+            this.btnDetalle.Text = "Ver Detalle";
+            this.btnDetalle.UseVisualStyleBackColor = false;
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnExportar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(159)))), ((int)(((byte)(40)))));
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold);
+            this.btnExportar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnExportar.Location = new System.Drawing.Point(803, 582);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(200, 45);
+            this.btnExportar.TabIndex = 62;
+            this.tags.SetTag2(this.btnExportar, null);
+            this.tags.SetTag3(this.btnExportar, null);
+            this.tags.SetTagFontName(this.btnExportar, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnExportar, 15F);
+            this.tags.SetTagFontStyle(this.btnExportar, System.Drawing.FontStyle.Bold);
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = false;
+            // 
             // frmResumenReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 554);
+            this.ClientSize = new System.Drawing.Size(1040, 650);
             this.ControlBox = false;
+            this.Controls.Add(this.btnExportar);
+            this.Controls.Add(this.btnDetalle);
+            this.Controls.Add(this.btnEstadisticas);
+            this.Controls.Add(this.pnlColorAbajo);
+            this.Controls.Add(this.pnlColorArriba);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblSede);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
-            this.Controls.Add(this.rndDetalle);
             this.Controls.Add(this.tlpGeneradoEl);
-            this.Controls.Add(this.pnlRojo);
-            this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.flpReporteResumen);
             this.DisplayHeader = false;
             this.Name = "frmResumenReporte";
@@ -559,14 +518,9 @@
             this.flpReporteResumen.ResumeLayout(false);
             this.tlpGeneradoEl.ResumeLayout(false);
             this.tlpGeneradoEl.PerformLayout();
-            this.pnlRojo.ResumeLayout(false);
-            this.tlpDetalles.ResumeLayout(false);
-            this.tlpDetalles.PerformLayout();
-            this.rpTopMain.ResumeLayout(false);
-            this.rpTopMain.PerformLayout();
-            this.rndDetalle.ResumeLayout(false);
             this.title_bar.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -583,19 +537,18 @@
         private System.Windows.Forms.Label lblFechaGenerado;
         private System.Windows.Forms.Label lblQuienGenero;
         private System.Windows.Forms.Label lblPor;
-        private System.Windows.Forms.Panel pnlRojo;
-        private System.Windows.Forms.TableLayoutPanel tlpDetalles;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblSede;
-        private System.Windows.Forms.Label lblTipoReporte;
-        private RoundedPanel rpTopMain;
-        private CustomControls.ClickableText btnFiltrar;
-        private System.Windows.Forms.Label lblTitulo;
-        private RoundedPanel rndDetalle;
-        private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.Panel title_bar_2;
         private System.Windows.Forms.Panel title_bar;
         private System.Windows.Forms.Button boton_minimizar;
         private System.Windows.Forms.Button boton_cerrar;
+        private CustomControls.ClickableText btnFiltrar;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblSede;
+        private System.Windows.Forms.Panel pnlColorArriba;
+        private System.Windows.Forms.Panel pnlColorAbajo;
+        private System.Windows.Forms.Button btnEstadisticas;
+        private System.Windows.Forms.Button btnDetalle;
+        private System.Windows.Forms.Button btnExportar;
     }
 }

@@ -130,6 +130,5 @@ namespace LP2MegaAutos
 
         //TODO CAMBIAR BOTONES
         // TODO COLORES 250,220,123
-
     }
 }

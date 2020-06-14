@@ -103,11 +103,6 @@ namespace LP2MegaAutos
             this.btnAntiguo.BackColor = Color.Transparent;
         }
 
-        private void pantallaActualizarServicios_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
             if (txt_Buscar.Text == string.Empty)

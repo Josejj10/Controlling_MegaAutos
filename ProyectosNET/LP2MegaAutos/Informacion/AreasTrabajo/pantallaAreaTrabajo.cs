@@ -17,9 +17,9 @@ namespace LP2MegaAutos
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
-            il_AreaTrabajo1.EditarClick += btnEditarClick;
-            il_AreaTrabajo2.EditarClick += btnEditarClick;
-            il_AreaTrabajo3.EditarClick += btnEditarClick;
+            il_AreaTrabajo1.ItemListaClick += btnEditarClick;
+            il_AreaTrabajo2.ItemListaClick += btnEditarClick;
+            il_AreaTrabajo3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flowLayoutPanel1.AutoScroll = true;
         }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.Framework.UserControls.Items;
 
 public enum tipoItem
 {
@@ -93,22 +94,47 @@ namespace LP2MegaAutos
         #endregion Propiedades
 
 
+        #region Event Handlers
         // Para delegar el evento de Click al form que lo llamó,
         // Se tiene que suscribir de manera: itemLista2.EditarClick+= btnEditarClick;
         // Cuando se inserte  el itemLista (en el constructor si no se inserta de manera dinámica)
         // https://stackoverflow.com/questions/4430523/how-do-i-subscribe-to-an-event-of-a-usercontrol
         // Agradecido con el de arriba
-
         public delegate void ButtonClickEventHandler(object sender, EventArgs e);
+        public event ButtonClickEventHandler ItemListaClick;
         public event ButtonClickEventHandler EditarClick;
+
+        private void itemLista_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = ItemListaClick;
+            if (h != null) h(this, e);
+        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             ButtonClickEventHandler h = EditarClick;
             if (h != null) h(this, e);
         }
+        #endregion Event Handlers
+        
+        private void rpItem_MouseEnter(object sender, EventArgs e)
+        {
+            itemListaHelper.rpItem_MouseEnter(rpItem);
+        }
 
-       
+        private void rpItem_MouseLeave(object sender, EventArgs e)
+        {
+            itemListaHelper.rpItem_MouseLeave(rpItem);
+        }
+
+        private void cambiarColores(Control parent, Color color)
+        {
+            foreach (Control c in parent.Controls)
+            {   
+                if (c.Controls != null) cambiarColores(c,color);
+                c.BackColor = color;
+            }
+        }
     }
 }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.Framework.UserControls.Items;
 
 namespace LP2MegaAutos
 {
@@ -16,7 +17,7 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
         }
-
+        #region Propiedades
         [Description("Texto Principal"), Category("Item Lista Cuadrado")]
         public string TextoPrincipal
         {
@@ -29,6 +30,17 @@ namespace LP2MegaAutos
         {
             get { return pnlImg.BackgroundImage; }
             set { pnlImg.BackgroundImage = value; }
+        }
+        #endregion Propiedades
+        
+        private void rpItem_MouseEnter(object sender, EventArgs e)
+        {
+            itemListaHelper.rpItem_MouseEnter(rpItem);
+        }
+
+        private void roundedPanel1_MouseLeave(object sender, EventArgs e)
+        {
+            itemListaHelper.rpItem_MouseLeave(rpItem);
         }
     }
 }

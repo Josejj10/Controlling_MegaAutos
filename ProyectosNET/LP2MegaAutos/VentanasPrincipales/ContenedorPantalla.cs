@@ -34,10 +34,14 @@ namespace LP2MegaAutos.VentanasPrincipales
                 // Agregar a la lista de pantallas  
                 _pantallas.Add(value);
 
+                
+
                 // Agregar pantalla a los controles del contenedor
                 Controls.Add(value);
                 indexActual++; 
                 ((pantallaInicioGerente)pInicio).crearBotonesSegunPermisos();
+                if (DarkMode.is_dark_mode_active()) // Si esta activo
+                    DarkMode.iniciarSinTimer(this);
             }
             get
             {

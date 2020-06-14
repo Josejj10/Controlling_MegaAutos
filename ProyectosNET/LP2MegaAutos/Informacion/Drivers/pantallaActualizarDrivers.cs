@@ -17,9 +17,9 @@ namespace LP2MegaAutos
         {
 
             InitializeComponent();
-            il_Drivers1.EditarClick += btnEditarClick;
-            il_Drivers2.EditarClick += btnEditarClick;
-            il_Drivers3.EditarClick += btnEditarClick;
+            il_Drivers1.ItemListaClick += btnEditarClick;
+            il_Drivers2.ItemListaClick += btnEditarClick;
+            il_Drivers3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flpDrivers.AutoScroll = true;
         }

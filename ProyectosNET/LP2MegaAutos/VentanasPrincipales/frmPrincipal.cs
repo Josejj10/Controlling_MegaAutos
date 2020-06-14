@@ -123,10 +123,10 @@ namespace LP2MegaAutos
 
 
             // Primera pantalla es pantallaInicioGerente
-            contenedorPantalla1.PInicial = new pantallaInicioGerente(_usuario);
             inicializarPms();
             if (DarkMode.is_dark_mode_active())
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
+            contenedorPantalla1.PInicial = new pantallaInicioGerente(_usuario);
             suscribirEventos();
         }
 
@@ -151,9 +151,9 @@ namespace LP2MegaAutos
             pmsReportes.Imagen4 = (Image)new Bitmap(Resources.car, 36, 36);
 
             pmsReportes.Texto1 = "Todos";
-            pmsReportes.Texto2 = "Por Area" ;
-            pmsReportes.Texto3 = "Por Cliente";
-            pmsReportes.Texto4 = "Por Vehiculo";
+            pmsReportes.Texto2 = "Por" + Environment.NewLine +"Area" ;
+            pmsReportes.Texto3 = "Por" + Environment.NewLine +"Cliente";
+            pmsReportes.Texto4 = "Por"+Environment.NewLine+ "Vehiculo";
 
             pmsUltimoReporte.NumItems = 3;
             pmsUltimoReporte.Imagen1 = (Image)new Bitmap(Resources.Estadisticas, 36, 36);
@@ -321,7 +321,7 @@ namespace LP2MegaAutos
 
         // Crear Strip dinamicamente
         private void crearStrip(PanelMenuStrip pms, int nItems, BindingList<Image> ims,
-                                BindingList<EPermisos> per, Button btnMenu)
+                                BindingList<EPermisos> per, Button btnMenu, BindingList<string>txts)
         {
             // Asignar imagenes segun los permisos del usuario
             // En orden, son: Areas de Trabajo, Clientes, Vehiculos, Drivers
@@ -332,6 +332,10 @@ namespace LP2MegaAutos
                 pms.Imagen2 = ims[1];
                 pms.Imagen3 = ims[2];
                 pms.Imagen4 = ims[3];
+                pms.Texto1 = txts[0];
+                pms.Texto2 = txts[1];
+                pms.Texto3 = txts[2];
+                pms.Texto4 = txts[3];
                 pms.item1Click +=
                     new PanelMenuStrip.ButtonClickEventHandler
                     (BotonesDinamicosHelper.asignarBoton(per[0], btnMenu, ims[0], panelMenu, contenedorPantalla1));
@@ -448,13 +452,19 @@ namespace LP2MegaAutos
             per.Add(EPermisos.Vehiculos);
             per.Add(EPermisos.Drivers);
 
+            BindingList<string> txts= new BindingList<string>();
+            txts.Add("Areas");
+            txts.Add("Clientes");
+            txts.Add("Vehiculos");
+            txts.Add("Drivers");
+
             BindingList<Image> ims = new BindingList<Image>();
             ims.Add((Image)new Bitmap(Resources.AreaTrabajo, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Clientes, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.car, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Driver, new Size(36, 36)));
 
-            crearStrip(pms, nItems, ims, per, btnMenu);
+            crearStrip(pms, nItems, ims, per, btnMenu,txts);
 
             // Hacerlo No Visible
             pms.Visible = false;
@@ -478,13 +488,19 @@ namespace LP2MegaAutos
             per.Add(EPermisos.Sedes);
             per.Add(EPermisos.Empresa);
 
+            BindingList<string> txts = new BindingList<string>();
+            txts.Add("Usuarios");
+            txts.Add("Servicios");
+            txts.Add("Sedes");
+            txts.Add("Empresa");
+
             BindingList<Image> ims = new BindingList<Image>();
             ims.Add((Image)new Bitmap(Resources.Usuarios, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Servicio, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Sede, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Empresa, new Size(36, 36)));
 
-            crearStrip(pms, nItems, ims, per, btnMenu);
+            crearStrip(pms, nItems, ims, per, btnMenu,txts);
 
             // Hacerlo No Visible
             pms.Visible = false;

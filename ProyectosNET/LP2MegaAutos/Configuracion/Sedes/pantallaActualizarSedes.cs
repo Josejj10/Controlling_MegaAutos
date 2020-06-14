@@ -16,8 +16,8 @@ namespace LP2MegaAutos
         public pantallaActualizarSedes()
         {
             InitializeComponent();
-            il_Sedes1.EditarClick += btnEditarClick;
-            il_Sedes2.EditarClick += btnEditarClick;
+            il_Sedes1.ItemListaClick += btnEditarClick;
+            il_Sedes2.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flowLayoutPanel1.AutoScroll = true;
         }

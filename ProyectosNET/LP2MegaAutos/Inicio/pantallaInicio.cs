@@ -73,10 +73,10 @@ namespace LP2MegaAutos
             ims.Name = nombre;
             ims.BackgroundLayout = ImageLayout.Center;
             ims.Imagen = (Image) new Bitmap(img, new Size(54,54));
+            ims.Size = new Size(80, 80);
             ims.Texto = texto;
             //ims.FontSize = 12.25f;
             ims.Location = new Point(xLoc, yLoc);
-            ims.Size = new Size(80, 80);
 
             return ims;
         }

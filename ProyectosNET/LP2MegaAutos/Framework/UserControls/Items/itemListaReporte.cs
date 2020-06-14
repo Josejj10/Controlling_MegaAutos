@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.Framework.UserControls.Items;
 
 namespace LP2MegaAutos
 {
@@ -16,7 +17,6 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
         }
-
 
         #region Propiedades
         [Description("Texto Principal"), Category("Item Reporte")]
@@ -97,5 +97,24 @@ namespace LP2MegaAutos
 
         #endregion Propiedades
 
+        #region Event Handlers
+        public delegate void ButtonClickEventHandler(object sender, EventArgs e);
+        public event ButtonClickEventHandler ItemListaClick;
+        private void itemLista_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = ItemListaClick;
+            if (h != null) h(this, e);
+        }
+        #endregion
+
+        private void itemLista_MouseEnter(object sender, EventArgs e)
+        {
+            itemListaHelper.rpItem_MouseEnter(rpItem);
+        }
+
+        private void itemLista_MouseLeave(object sender, EventArgs e)
+        {
+            itemListaHelper.rpItem_MouseLeave(rpItem);
+        }
     }
 }

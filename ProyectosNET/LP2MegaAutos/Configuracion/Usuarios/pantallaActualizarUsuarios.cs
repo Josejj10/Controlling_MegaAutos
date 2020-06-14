@@ -16,8 +16,8 @@ namespace LP2MegaAutos
         public pantallaActualizarUsuarios()
         {
             InitializeComponent();
-            il_Usuarios1.EditarClick += btnEditarClick;
-            il_Usuarios3.EditarClick += btnEditarClick;
+            il_Usuarios1.ItemListaClick += btnEditarClick;
+            il_Usuarios3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flpUsuarios.AutoScroll = true;
         }

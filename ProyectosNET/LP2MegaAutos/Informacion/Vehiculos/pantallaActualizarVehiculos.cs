@@ -16,9 +16,9 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         public pantallaActualizarVehiculos()
         {
             InitializeComponent();
-            il_Vehiculo1.EditarClick += btnEditarClick;
-            il_Vehiculo2.EditarClick += btnEditarClick;
-            il_Vehiculo3.EditarClick += btnEditarClick;
+            il_Vehiculo1.ItemListaClick += btnEditarClick;
+            il_Vehiculo2.ItemListaClick += btnEditarClick;
+            il_Vehiculo3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flowLayoutPanel1.AutoScroll = true;
         }

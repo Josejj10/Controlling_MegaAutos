@@ -124,10 +124,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 if (c == rp) continue;
                 if (c is RoundedPanel) cambiarRPMenu((RoundedPanel)c);
             }
-            if (DarkMode.is_dark_mode_active())
-                rp.ColorPanel = Dark_Mode.BackBackground;
-            else
-                rp.ColorPanel = White_Mode.BackBackground;
+            rp.ColorPanel = Colores.BackBackground;
         }
 
         // Cambia el color de un RoundPanel del Menu Lateral, y devuelve la imagen de los botones no seleccionados

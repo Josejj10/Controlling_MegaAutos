@@ -102,9 +102,14 @@ namespace LP2MegaAutos.Framework.UserControls.Items
         private float nuevoFontSize(Graphics graphics)
         {
             SizeF stringSize = graphics.MeasureString(_texto, btnItem.Font);
-            float wRatio = btnItem.Width / stringSize.Width;
+            float wRatio = (btnItem.Width-17) / stringSize.Width;
             float hRatio = btnItem.Height / stringSize.Height;
             float ratio = Math.Min(hRatio, wRatio);
+            //Console.WriteLine(_texto + "\nRatio:" + ratio +
+            //    "\nbtnItem:" + btnItem.Width + "\t" + btnItem.Height +
+            //    "\nstringSize:" + stringSize.Width + "\t" + stringSize.Height +
+            //    "\nRatios:" + wRatio + "\t" + hRatio);
+           // return btnItem.Font.Size;
             return btnItem.Font.Size * ratio;
         }
 

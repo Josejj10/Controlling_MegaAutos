@@ -58,6 +58,7 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,6 +80,7 @@
       <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Framework\ResizeImageHelper.cs" />
+    <Compile Include="Framework\UserControls\Items\itemListaHelper.cs" />
     <Compile Include="Framework\UserControls\Items\itemMenuStrip.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -91,7 +91,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioComprobantePago\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioCuentaContable\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioDriver\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioEmpresa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioOrdenTrabajo\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -618,6 +638,44 @@
     <None Include="Connected Services\ServicioCliente\LP2MegaAutos.ServicioCliente.listarClientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioComprobantePago\ComprobantePagoWS.wsdl" />
+    <None Include="Connected Services\ServicioComprobantePago\ComprobantePagoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioComprobantePago\LP2MegaAutos.ServicioComprobantePago.actualizarComprobantePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioComprobantePago\LP2MegaAutos.ServicioComprobantePago.comprobantePago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioComprobantePago\LP2MegaAutos.ServicioComprobantePago.eliminarComprobantePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioComprobantePago\LP2MegaAutos.ServicioComprobantePago.insertarComprobantePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioComprobantePago\LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioCuentaContable\CuentaContableWS.wsdl" />
+    <None Include="Connected Services\ServicioCuentaContable\CuentaContableWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioCuentaContable\LP2MegaAutos.ServicioCuentaContable.actualizarCuentaContableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioCuentaContable\LP2MegaAutos.ServicioCuentaContable.cuentaContable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioCuentaContable\LP2MegaAutos.ServicioCuentaContable.eliminarCuentaContableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioCuentaContable\LP2MegaAutos.ServicioCuentaContable.insertarCuentaContableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioCuentaContable\LP2MegaAutos.ServicioCuentaContable.listarCuentaContableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioDriver\DriverWS.wsdl" />
     <None Include="Connected Services\ServicioDriver\DriverWS.xsd">
       <SubType>Designer</SubType>
@@ -636,6 +694,44 @@
     </None>
     <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.listarDriversResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioEmpresa\EmpresaWS.wsdl" />
+    <None Include="Connected Services\ServicioEmpresa\EmpresaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioEmpresa\LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioEmpresa\LP2MegaAutos.ServicioEmpresa.eliminarEmpresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioEmpresa\LP2MegaAutos.ServicioEmpresa.empresa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioEmpresa\LP2MegaAutos.ServicioEmpresa.insertarEmpresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioEmpresa\LP2MegaAutos.ServicioEmpresa.listarEmpresaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.actualizarOrdenTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.eliminarOrdenTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioOrdenTrabajo\OrdenTrabajoWS.wsdl" />
+    <None Include="Connected Services\ServicioOrdenTrabajo\OrdenTrabajoWS.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.actualizarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -795,6 +891,30 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServicioEmpresa\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioEmpresa\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioEmpresa\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioCuentaContable\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioCuentaContable\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioCuentaContable\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioOrdenTrabajo\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioOrdenTrabajo\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioOrdenTrabajo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioComprobantePago\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioComprobantePago\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioComprobantePago\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Informacion\creditos.txt" />
     <Content Include="Resources\editar.png" />
     <None Include="Resources\Menu\car.png" />
@@ -823,7 +943,11 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServicioAreaTrabajo\" />
     <WCFMetadataStorage Include="Connected Services\ServicioCliente\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioComprobantePago\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioCuentaContable\" />
     <WCFMetadataStorage Include="Connected Services\ServicioDriver\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioEmpresa\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioOrdenTrabajo\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

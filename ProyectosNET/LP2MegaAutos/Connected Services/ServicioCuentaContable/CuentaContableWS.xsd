@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarCuentaContable" type="tns:actualizarCuentaContable" />
+  <xs:element name="actualizarCuentaContableResponse" type="tns:actualizarCuentaContableResponse" />
+  <xs:element name="eliminarCuentaContable" type="tns:eliminarCuentaContable" />
+  <xs:element name="eliminarCuentaContableResponse" type="tns:eliminarCuentaContableResponse" />
+  <xs:element name="insertarCuentaContable" type="tns:insertarCuentaContable" />
+  <xs:element name="insertarCuentaContableResponse" type="tns:insertarCuentaContableResponse" />
+  <xs:element name="listarCuentaContable" type="tns:listarCuentaContable" />
+  <xs:element name="listarCuentaContableResponse" type="tns:listarCuentaContableResponse" />
+  <xs:complexType name="eliminarCuentaContable">
+    <xs:sequence>
+      <xs:element name="idCC" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCuentaContableResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCuentaContable">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCuentaContableResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cuentaContable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuentaContable">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="montoEgresos" type="xs:double" />
+      <xs:element name="montoIngresos" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ordenesTrabajo" nillable="true" type="tns:ordenTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ordenTrabajo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="comprobantePago" type="tns:comprobantePago" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="numeroOrden" type="xs:string" />
+      <xs:element minOccurs="0" name="sede" type="tns:sede" />
+      <xs:element name="totalEgresos" type="xs:double" />
+      <xs:element name="totalIngresos" type="xs:double" />
+      <xs:element minOccurs="0" name="vehiculo" type="tns:vehiculo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobantePago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="numeroComprobante" type="xs:string" />
+      <xs:element minOccurs="0" name="ordenTrabajo" type="tns:ordenTrabajo" />
+      <xs:element minOccurs="0" name="tipoComprobante" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vehiculo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="placa" type="xs:string" />
+      <xs:element minOccurs="0" name="propietario" type="tns:cliente" />
+      <xs:element minOccurs="0" name="tipoVehiculo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCuentaContable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objCC" type="tns:cuentaContable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCuentaContableResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCuentaContable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objCC" type="tns:cuentaContable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCuentaContableResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

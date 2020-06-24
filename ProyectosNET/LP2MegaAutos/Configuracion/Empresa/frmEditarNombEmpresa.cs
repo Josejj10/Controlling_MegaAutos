@@ -17,6 +17,12 @@ namespace LP2MegaAutos.Configuracion.Empresa
         {
             InitializeComponent();
         }
+
+        public frmEditarNombEmpresa(ServicioEmpresa.empresa empresa)
+        {
+            InitializeComponent();
+            this.txt_nombEmpresa.Text = empresa.nombre;
+        }
         
         #region title_bar
 

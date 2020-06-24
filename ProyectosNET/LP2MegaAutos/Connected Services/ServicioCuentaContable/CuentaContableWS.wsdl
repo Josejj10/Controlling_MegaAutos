@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.megaautos.com.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CuentaContableWS" targetNamespace="http://services.megaautos.com.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/CuentaContableWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarCuentaContable">
+    <part name="parameters" element="tns:actualizarCuentaContable" />
+  </message>
+  <message name="actualizarCuentaContableResponse">
+    <part name="parameters" element="tns:actualizarCuentaContableResponse" />
+  </message>
+  <message name="insertarCuentaContable">
+    <part name="parameters" element="tns:insertarCuentaContable" />
+  </message>
+  <message name="insertarCuentaContableResponse">
+    <part name="parameters" element="tns:insertarCuentaContableResponse" />
+  </message>
+  <message name="listarCuentaContable">
+    <part name="parameters" element="tns:listarCuentaContable" />
+  </message>
+  <message name="listarCuentaContableResponse">
+    <part name="parameters" element="tns:listarCuentaContableResponse" />
+  </message>
+  <message name="eliminarCuentaContable">
+    <part name="parameters" element="tns:eliminarCuentaContable" />
+  </message>
+  <message name="eliminarCuentaContableResponse">
+    <part name="parameters" element="tns:eliminarCuentaContableResponse" />
+  </message>
+  <portType name="CuentaContableWS">
+    <operation name="actualizarCuentaContable">
+      <input wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/actualizarCuentaContableRequest" message="tns:actualizarCuentaContable" />
+      <output wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/actualizarCuentaContableResponse" message="tns:actualizarCuentaContableResponse" />
+    </operation>
+    <operation name="insertarCuentaContable">
+      <input wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/insertarCuentaContableRequest" message="tns:insertarCuentaContable" />
+      <output wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/insertarCuentaContableResponse" message="tns:insertarCuentaContableResponse" />
+    </operation>
+    <operation name="listarCuentaContable">
+      <input wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/listarCuentaContableRequest" message="tns:listarCuentaContable" />
+      <output wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/listarCuentaContableResponse" message="tns:listarCuentaContableResponse" />
+    </operation>
+    <operation name="eliminarCuentaContable">
+      <input wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/eliminarCuentaContableRequest" message="tns:eliminarCuentaContable" />
+      <output wsam:Action="http://services.megaautos.com.pe/CuentaContableWS/eliminarCuentaContableResponse" message="tns:eliminarCuentaContableResponse" />
+    </operation>
+  </portType>
+  <binding name="CuentaContableWSPortBinding" type="tns:CuentaContableWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarCuentaContable">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCuentaContable">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCuentaContable">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCuentaContable">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CuentaContableWS">
+    <port name="CuentaContableWSPort" binding="tns:CuentaContableWSPortBinding">
+      <soap:address location="http://72.44.47.118:8080/LP2MegaAutosServices/CuentaContableWS" />
+    </port>
+  </service>
+</definitions>

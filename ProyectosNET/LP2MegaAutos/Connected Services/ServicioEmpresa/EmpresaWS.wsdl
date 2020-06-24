@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.megaautos.com.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EmpresaWS" targetNamespace="http://services.megaautos.com.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarEmpresa">
+    <part name="parameters" element="tns:listarEmpresa" />
+  </message>
+  <message name="listarEmpresaResponse">
+    <part name="parameters" element="tns:listarEmpresaResponse" />
+  </message>
+  <message name="insertarEmpresa">
+    <part name="parameters" element="tns:insertarEmpresa" />
+  </message>
+  <message name="insertarEmpresaResponse">
+    <part name="parameters" element="tns:insertarEmpresaResponse" />
+  </message>
+  <message name="eliminarEmpresa">
+    <part name="parameters" element="tns:eliminarEmpresa" />
+  </message>
+  <message name="eliminarEmpresaResponse">
+    <part name="parameters" element="tns:eliminarEmpresaResponse" />
+  </message>
+  <message name="actualizarEmpresa">
+    <part name="parameters" element="tns:actualizarEmpresa" />
+  </message>
+  <message name="actualizarEmpresaResponse">
+    <part name="parameters" element="tns:actualizarEmpresaResponse" />
+  </message>
+  <portType name="EmpresaWS">
+    <operation name="listarEmpresa">
+      <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/listarEmpresaRequest" message="tns:listarEmpresa" />
+      <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/listarEmpresaResponse" message="tns:listarEmpresaResponse" />
+    </operation>
+    <operation name="insertarEmpresa">
+      <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/insertarEmpresaRequest" message="tns:insertarEmpresa" />
+      <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/insertarEmpresaResponse" message="tns:insertarEmpresaResponse" />
+    </operation>
+    <operation name="eliminarEmpresa">
+      <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/eliminarEmpresaRequest" message="tns:eliminarEmpresa" />
+      <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/eliminarEmpresaResponse" message="tns:eliminarEmpresaResponse" />
+    </operation>
+    <operation name="actualizarEmpresa">
+      <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaRequest" message="tns:actualizarEmpresa" />
+      <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaResponse" message="tns:actualizarEmpresaResponse" />
+    </operation>
+  </portType>
+  <binding name="EmpresaWSPortBinding" type="tns:EmpresaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarEmpresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEmpresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEmpresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEmpresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EmpresaWS">
+    <port name="EmpresaWSPort" binding="tns:EmpresaWSPortBinding">
+      <soap:address location="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS" />
+    </port>
+  </service>
+</definitions>

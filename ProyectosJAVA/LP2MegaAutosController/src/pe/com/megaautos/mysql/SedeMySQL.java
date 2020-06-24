@@ -114,6 +114,8 @@ public class SedeMySQL implements SedeDAO {
                 Sede sede = new Sede();
                 sede.setId(rs.getInt("ID_SEDE"));
                 sede.setDistrito(rs.getString("NOMBRE"));
+                sede.setDireccion(rs.getString("DIRECCION"));
+                sede.setNombre(rs.getString("NOMBRE"));
                 sedes.add(sede);
             }
             //cerrar conexion

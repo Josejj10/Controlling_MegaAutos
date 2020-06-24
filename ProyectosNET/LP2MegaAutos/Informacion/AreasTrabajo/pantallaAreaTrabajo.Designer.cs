@@ -164,7 +164,7 @@
             this.il_AreaTrabajo1.TextoPrincipal = "Mecánica";
             this.il_AreaTrabajo1.Textosecundario = "";
             this.il_AreaTrabajo1.TextoTercero = "";
-            this.il_AreaTrabajo1.Click += new System.EventHandler(this.il_AreaTrabajo1_Click_1);
+            this.il_AreaTrabajo1.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
             // 
             // il_AreaTrabajo2
             // 
@@ -186,6 +186,7 @@
             this.il_AreaTrabajo2.TextoPrincipal = "Planchado";
             this.il_AreaTrabajo2.Textosecundario = "";
             this.il_AreaTrabajo2.TextoTercero = "";
+            this.il_AreaTrabajo2.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
             // 
             // il_AreaTrabajo3
             // 
@@ -207,6 +208,7 @@
             this.il_AreaTrabajo3.TextoPrincipal = "Pintura";
             this.il_AreaTrabajo3.Textosecundario = "";
             this.il_AreaTrabajo3.TextoTercero = "";
+            this.il_AreaTrabajo3.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
             // 
             // roundedPanel4
             // 
@@ -273,7 +275,7 @@
             this.lbl_ListaAreasTrabajo.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaAreasTrabajo.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaAreasTrabajo.Name = "lbl_ListaAreasTrabajo";
-            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(158, 19);
+            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(151, 22);
             this.lbl_ListaAreasTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaAreasTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaAreasTrabajo, null);

@@ -387,7 +387,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Lato", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblTitulo.Location = new System.Drawing.Point(51, 30);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(126, 27);
@@ -485,7 +485,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblTipoReporte.AutoSize = true;
             this.lblTipoReporte.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoReporte.Font = new System.Drawing.Font("Lato", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTipoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblTipoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblTipoReporte.Location = new System.Drawing.Point(3, 6);
             this.lblTipoReporte.Name = "lblTipoReporte";
             this.lblTipoReporte.Size = new System.Drawing.Size(173, 27);
@@ -519,7 +519,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblPeriodoReporte.AutoSize = true;
             this.lblPeriodoReporte.BackColor = System.Drawing.Color.Transparent;
             this.lblPeriodoReporte.Font = new System.Drawing.Font("Lato", 16F, System.Drawing.FontStyle.Bold);
-            this.lblPeriodoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblPeriodoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblPeriodoReporte.Location = new System.Drawing.Point(3, 6);
             this.lblPeriodoReporte.Name = "lblPeriodoReporte";
             this.lblPeriodoReporte.Size = new System.Drawing.Size(95, 27);
@@ -553,7 +553,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblSede.AutoSize = true;
             this.lblSede.BackColor = System.Drawing.Color.Transparent;
             this.lblSede.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblSede.Location = new System.Drawing.Point(5, -1);
             this.lblSede.Name = "lblSede";
             this.lblSede.Size = new System.Drawing.Size(72, 19);
@@ -587,7 +587,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblFechasReporte.AutoSize = true;
             this.lblFechasReporte.BackColor = System.Drawing.Color.Transparent;
             this.lblFechasReporte.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
-            this.lblFechasReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblFechasReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblFechasReporte.Location = new System.Drawing.Point(6, 1);
             this.lblFechasReporte.Name = "lblFechasReporte";
             this.lblFechasReporte.Size = new System.Drawing.Size(175, 17);
@@ -649,7 +649,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblStringGeneradoPor.BackColor = System.Drawing.Color.Transparent;
             this.tlpGeneradoPor.SetColumnSpan(this.lblStringGeneradoPor, 2);
             this.lblStringGeneradoPor.Font = new System.Drawing.Font("Lato", 7F);
-            this.lblStringGeneradoPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblStringGeneradoPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblStringGeneradoPor.Location = new System.Drawing.Point(3, 3);
             this.lblStringGeneradoPor.Name = "lblStringGeneradoPor";
             this.lblStringGeneradoPor.Size = new System.Drawing.Size(71, 12);
@@ -668,7 +668,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblGeneradoPor.AutoSize = true;
             this.lblGeneradoPor.BackColor = System.Drawing.Color.Transparent;
             this.lblGeneradoPor.Font = new System.Drawing.Font("Lato", 7F, System.Drawing.FontStyle.Bold);
-            this.lblGeneradoPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblGeneradoPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblGeneradoPor.Location = new System.Drawing.Point(119, 3);
             this.lblGeneradoPor.Name = "lblGeneradoPor";
             this.lblGeneradoPor.Size = new System.Drawing.Size(76, 12);
@@ -688,7 +688,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.tlpGeneradoPor.SetColumnSpan(this.label1, 2);
             this.label1.Font = new System.Drawing.Font("Lato", 7F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.label1.Location = new System.Drawing.Point(85, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 12);
@@ -707,7 +707,7 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblStringEl.AutoSize = true;
             this.lblStringEl.BackColor = System.Drawing.Color.Transparent;
             this.lblStringEl.Font = new System.Drawing.Font("Lato", 7F);
-            this.lblStringEl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblStringEl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblStringEl.Location = new System.Drawing.Point(3, 22);
             this.lblStringEl.Name = "lblStringEl";
             this.lblStringEl.Size = new System.Drawing.Size(31, 12);

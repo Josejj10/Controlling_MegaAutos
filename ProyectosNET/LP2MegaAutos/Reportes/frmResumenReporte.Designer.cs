@@ -76,7 +76,6 @@
             this.tags.SetTagFontName(this.flpReporteResumen, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.flpReporteResumen, 10F);
             this.tags.SetTagFontStyle(this.flpReporteResumen, System.Drawing.FontStyle.Regular);
-            this.flpReporteResumen.Paint += new System.Windows.Forms.PaintEventHandler(this.flpReporteResumen_Paint);
             // 
             // itemListaResumen1
             // 

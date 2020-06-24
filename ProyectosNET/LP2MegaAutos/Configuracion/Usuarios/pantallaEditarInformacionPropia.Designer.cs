@@ -752,7 +752,6 @@
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.Load += new System.EventHandler(this.pantallaEditarInformacionPropia_Load);
             this.rpn_Reportes.ResumeLayout(false);
             this.rpn_Reportes.PerformLayout();
             this.pnl_codServ.ResumeLayout(false);

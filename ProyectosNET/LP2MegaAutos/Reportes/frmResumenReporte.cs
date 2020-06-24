@@ -61,9 +61,5 @@ namespace LP2MegaAutos
             this.Close();
         }
 
-        private void flpReporteResumen_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

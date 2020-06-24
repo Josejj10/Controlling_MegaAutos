@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace LP2MegaAutos
 {
-    partial class pantallaInicioGerente
+    partial class pantallaInicio
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -31,7 +31,7 @@ namespace LP2MegaAutos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaInicioGerente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaInicio));
             this.tags = new LP2MegaAutos.TagsExtender();
             this.pnlLineaTitulo = new System.Windows.Forms.Panel();
             this.lblBienvenido = new System.Windows.Forms.Label();

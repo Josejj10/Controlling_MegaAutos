@@ -126,7 +126,7 @@ namespace LP2MegaAutos
             inicializarPms();
             if (DarkMode.is_dark_mode_active())
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
-            contenedorPantalla1.PInicial = new pantallaInicioGerente(_usuario);
+            contenedorPantalla1.PInicial = new pantallaInicio(_usuario);
             suscribirEventos();
         }
 
@@ -176,14 +176,14 @@ namespace LP2MegaAutos
             rpBtnMenuUltimoReporte.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsUltimoReporte); };
             btnMenuUltimoReporte.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsUltimoReporte); };
             rpBtnMenuUltimoReporte.MouseLeave += (sender, e) => { rpBtnMenu_MouseLeave(sender, e, pmsUltimoReporte); };
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).ListaReportesClick += pmsReportes_ListaReportesClick;
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).perfilUsuarioClick += btnMenuUsuario_Click;
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).ReporteAreaTrabajoClick += pmsReportes_ReporteAreaTrabajoClick;
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).ReporteClienteClick += pmsReportes_ReporteClienteClick;
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).ReporteVehiculoClick += pmsReportes_ReporteVehiculoClick;
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).CreditosClick += verCreditos;
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).ActualizarBDClick += btnMenuActualizarBD_Click;
-            ((pantallaInicioGerente)contenedorPantalla1.PInicial).VerUltimoReporteClick+= btnMenuUltimoReporte_Click;
+            ((pantallaInicio)contenedorPantalla1.PInicial).ListaReportesClick += pmsReportes_ListaReportesClick;
+            ((pantallaInicio)contenedorPantalla1.PInicial).perfilUsuarioClick += btnMenuUsuario_Click;
+            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteAreaTrabajoClick += pmsReportes_ReporteAreaTrabajoClick;
+            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteClienteClick += pmsReportes_ReporteClienteClick;
+            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteVehiculoClick += pmsReportes_ReporteVehiculoClick;
+            ((pantallaInicio)contenedorPantalla1.PInicial).CreditosClick += verCreditos;
+            ((pantallaInicio)contenedorPantalla1.PInicial).ActualizarBDClick += btnMenuActualizarBD_Click;
+            ((pantallaInicio)contenedorPantalla1.PInicial).VerUltimoReporteClick+= btnMenuUltimoReporte_Click;
         }
         #endregion constructor
         #region Creacion Botones

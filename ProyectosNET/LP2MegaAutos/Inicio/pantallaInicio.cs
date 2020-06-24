@@ -13,15 +13,15 @@ using LP2MegaAutos.Properties;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaInicioGerente : Pantalla
+    public partial class pantallaInicio : Pantalla
     {
         private Usuario _usuario;
-
-        public pantallaInicioGerente()
+        public Usuario Usuario { get { return _usuario; } set { _usuario = value; } }
+        public pantallaInicio()
         {
             InitializeComponent();
         }
-        public pantallaInicioGerente(Usuario u)
+        public pantallaInicio(Usuario u)
         {
             InitializeComponent();
             _usuario = u;

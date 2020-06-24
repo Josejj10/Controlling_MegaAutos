@@ -18,7 +18,6 @@ namespace LP2MegaAutos
             InitializeComponent();
             il_Sedes1.ItemListaClick += btnEditarClick;
             il_Sedes2.ItemListaClick += btnEditarClick;
-            this.btn_Agregar.Click += btnAgregarClick;
             flowLayoutPanel1.AutoScroll = true;
         }
 
@@ -27,15 +26,6 @@ namespace LP2MegaAutos
             pantallaEditarSede pes = new pantallaEditarSede();
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-            //MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaEditarSede.Instancia))
-            //{
-            //    this.Controls.Add(pantallaEditarSede.Instancia);
-            //    pantallaEditarSede.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaEditarSede.Instancia.Parent);
-            //}
-            //pantallaEditarSede.Instancia.BringToFront();
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)
@@ -43,15 +33,6 @@ namespace LP2MegaAutos
             pantallaAgregarSede pes = new pantallaAgregarSede();
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-            //MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaAgregarSede.Instancia))
-            //{
-            //    this.Controls.Add(pantallaAgregarSede.Instancia);
-            //    pantallaAgregarSede.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaAgregarSede.Instancia.Parent);
-            //}
-            //pantallaAgregarSede.Instancia.BringToFront();
         }
 
         private void btn_AZ_Click(object sender, EventArgs e)

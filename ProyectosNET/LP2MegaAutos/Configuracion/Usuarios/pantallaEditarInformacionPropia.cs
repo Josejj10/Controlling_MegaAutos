@@ -13,19 +13,6 @@ namespace LP2MegaAutos
 {
     public partial class pantallaEditarInformacionPropia : MetroForm
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaEditarInformacionPropia _instancia;
-        public static pantallaEditarInformacionPropia Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaEditarInformacionPropia();
-                return _instancia;
-            }
-        }
-        #endregion instancia
         public pantallaEditarInformacionPropia()
         {
             InitializeComponent();
@@ -88,11 +75,6 @@ namespace LP2MegaAutos
         private void btn_GuardarCambios_Click(object sender, EventArgs e)
         {
             this.SendToBack();
-        }
-
-        private void pantallaEditarInformacionPropia_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

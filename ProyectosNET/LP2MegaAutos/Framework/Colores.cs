@@ -249,11 +249,4 @@ namespace LP2MegaAutos
                 c.cambiarColorBorde(opuesto(ColorPanel));
         }
     }
-    public enum ColoresSistema
-    {
-        Rosa, Morado, VerdeSuccess, AmarilloInteractivo, AmarilloInteractivoMas1, AmarilloInteractivoMas2,
-        AmarilloInteractivoMenos1, AmarilloInteractivoMenos2, PrincipalIndigo,
-        HighContrast, MediumContrast, LowContrast, BackBackground, FrontBackground, Disabled, PrincipalRojo,
-        PrincipalAzulMetalico, FormText, FormBackground, FormShape,Transparent, DMFrontBackground, NegroPuro
-    }
 }

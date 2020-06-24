@@ -74,5 +74,14 @@ namespace LP2MegaAutos
             pantallaListasHelper.buscarLeave(txt_Buscar);
         }
         #endregion Txt Buscar
+
+        private void ItemLista_Click(object sender, EventArgs e)
+        {
+            pantallaEditarInformacionPropia pas = new pantallaEditarInformacionPropia();
+            if (pas.ShowDialog() == DialogResult.OK)
+            {
+                // Hacer algo
+            }
+        }
     }
 }

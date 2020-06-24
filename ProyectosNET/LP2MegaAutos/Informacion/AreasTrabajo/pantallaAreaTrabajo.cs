@@ -81,16 +81,17 @@ namespace LP2MegaAutos
         #endregion Botones Filtro
         private void btnAgregarClick(object sender, EventArgs e)
         {
+            pantallaAgregarAreaTrabajo pas = new pantallaAgregarAreaTrabajo();
 
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
         }
-
-        private void il_AreaTrabajo1_Click_1(object sender, EventArgs e)
+        private void ItemLista_Click(object sender, EventArgs e)
         {
-            pantallaAreaTrabajoxCC pnt = new pantallaAreaTrabajoxCC();
-            if(pnt.ShowDialog() == DialogResult.OK)
-            {
-                // TODO Hacer algo
-            }
+            pantallaAreaTrabajoxCC pas = new pantallaAreaTrabajoxCC();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
         }
     }
 }

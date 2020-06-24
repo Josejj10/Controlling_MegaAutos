@@ -9,19 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Framework;
+using LP2MegaAutos.ServicioVehiculo;
 
 namespace LP2MegaAutos.Informacion.Vehiculos
 {
     public partial class pantallaActualizarVehiculos : Pantalla
     {
+        ServicioVehiculo.VehiculoWSClient daoVehiculo;
         public pantallaActualizarVehiculos()
         {
             InitializeComponent();
-            il_Vehiculo1.ItemListaClick += btnEditarClick;
-            il_Vehiculo2.ItemListaClick += btnEditarClick;
-            il_Vehiculo3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
-            flowLayoutPanel1.AutoScroll = true;
+            flpVehiculos.AutoScroll = true;
+            daoVehiculo = new ServicioVehiculo.VehiculoWSClient();
+            inicializarItemsLista();
         }
         #region Botones Filtro
         private void btnAZ_Click(object sender, EventArgs e)
@@ -71,6 +72,37 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         }
         #endregion Botones Filtro
 
+        private void inicializarItemsLista()
+        {
+            List<vehiculo> vehiculos = daoVehiculo.listarVehiculos().ToList();
+            if (vehiculos == null) return;
+            foreach (vehiculo v in vehiculos)
+            {
+                createItemListaVehiculo(v, "Carter Kane", DateTime.Now);
+            }
+        }
+
+        private itemLista createItemListaVehiculo(ServicioVehiculo.vehiculo vehiculo, string agregadoPor, DateTime fechaAgregado)
+        {
+            itemLista il = new itemLista();
+            BotonesDinamicosHelper.personalizarItemLista(il);
+            il.Name = "il" + vehiculo.id;
+            il.TextoAgregadoPor = agregadoPor;
+            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
+            il.TextoPrincipal = vehiculo.placa;
+            il.Textosecundario = vehiculo.propietario.nombre;
+            il.TextoTercero = vehiculo.tipoVehiculo;
+            il.ItemListaClick += (sender, e) => { verDatosVehiculo(sender, e, vehiculo); };
+            il.EditarClick += (sender, e) => { btnEditarClick(sender, e, vehiculo); };
+            flpVehiculos.Controls.Add(il);
+            return il;
+        }
+        private void verDatosVehiculo(object sender, EventArgs e, ServicioVehiculo.vehiculo vehiculo)
+        {
+            frmEditarVehiculo pes = new frmEditarVehiculo(vehiculo);
+            if (pes.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+        }
         private void btnAgregarClick(object sender, EventArgs e)
         {
             frmAgregarVehiculo pas = new frmAgregarVehiculo();
@@ -78,9 +110,9 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }
-        private void btnEditarClick(Object sender, EventArgs e)
+        private void btnEditarClick(Object sender, EventArgs e, ServicioVehiculo.vehiculo vehiculo)
         {
-            frmEditarVehiculo pas = new frmEditarVehiculo();
+            frmEditarVehiculo pas = new frmEditarVehiculo(vehiculo);
 
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");

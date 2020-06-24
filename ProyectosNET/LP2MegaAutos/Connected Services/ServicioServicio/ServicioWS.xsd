@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarServicio" type="tns:actualizarServicio" />
+  <xs:element name="actualizarServicioResponse" type="tns:actualizarServicioResponse" />
+  <xs:element name="eliminarServicio" type="tns:eliminarServicio" />
+  <xs:element name="eliminarServicioResponse" type="tns:eliminarServicioResponse" />
+  <xs:element name="insertarServicio" type="tns:insertarServicio" />
+  <xs:element name="insertarServicioResponse" type="tns:insertarServicioResponse" />
+  <xs:element name="listarServicios" type="tns:listarServicios" />
+  <xs:element name="listarServiciosResponse" type="tns:listarServiciosResponse" />
+  <xs:complexType name="eliminarServicio">
+    <xs:sequence>
+      <xs:element name="idServicio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarServicioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarServicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objServicio" type="tns:servicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="servicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoServicio" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoServicio" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarServicioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarServicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objServicio" type="tns:servicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarServicioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarServicios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarServiciosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:servicio" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

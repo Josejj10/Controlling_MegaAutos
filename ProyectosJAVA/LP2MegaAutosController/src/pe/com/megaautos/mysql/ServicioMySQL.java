@@ -38,14 +38,16 @@ public class ServicioMySQL implements ServicioDAO{
             // En el procedure de MySQL, cambiara el nombre del tipo servicio
             // Por su id, para poder insertarlo en la tabla
             cs.registerOutParameter("_ID_SERVICIO", java.sql.Types.INTEGER);
-            // TODO A DESCRIPCION AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
+            // TODO A DESCRIPCION AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS            
+            cs.setString("_NOMBRE", servicio.getNombre().toUpperCase());
             cs.setString("_DESCRIPCION", servicio.getDescripcion().toUpperCase());
             cs.setString("_TIPO_SERVICIO", servicio.getTipoServicio().toUpperCase());
+            cs.setString("_CODIGO_SERVICIO", servicio.getCodigoServicio().toUpperCase());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_SERVICIO");
             con.close();
             // Actualiza el ID del Servicio insertado para tenerlo en Java
-            servicio.setCodigoServicio(rpta);
+            servicio.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
         }
@@ -64,7 +66,9 @@ public class ServicioMySQL implements ServicioDAO{
                     DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_SERVICIO(?,?,?)}");
-            cs.setInt("_ID_SERVICIO", servicio.getCodigoServicio());
+            cs.setInt("_ID_SERVICIO", servicio.getId());
+            cs.setString("_NOMBRE", servicio.getNombre().toUpperCase());
+            cs.setString("_CODIGO_SERVICIO", servicio.getCodigoServicio().toUpperCase());
             cs.setString("_DESCRIPCION", servicio.getDescripcion().toUpperCase());
             cs.setString("_TIPO_SERVICIO", servicio.getTipoServicio().toUpperCase());
             cs.executeUpdate();
@@ -116,7 +120,9 @@ public class ServicioMySQL implements ServicioDAO{
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){
                 Servicio servicio = new Servicio();
-                servicio.setCodigoServicio(rs.getInt("ID_SERVICIO"));
+                servicio.setId(rs.getInt("ID_SERVICIO"));
+                servicio.setNombre(rs.getString("NOMBRE"));
+                servicio.setCodigoServicio(rs.getString("CODIGO_SERVICIO"));
                 servicio.setDescripcion(rs.getString("DESCRIPCION"));
                 servicio.setTipoServicio(rs.getString("TIPO_SERVICIO"));
                 servicios.add(servicio);

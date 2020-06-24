@@ -34,9 +34,7 @@
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.pnlBuscar = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.il_Sedes1 = new LP2MegaAutos.itemLista();
-            this.il_Sedes2 = new LP2MegaAutos.itemLista();
+            this.flpSedes = new System.Windows.Forms.FlowLayoutPanel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
@@ -51,7 +49,6 @@
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -110,7 +107,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.flpSedes);
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaServicios);
             this.panel3.Location = new System.Drawing.Point(171, 46);
@@ -123,64 +120,21 @@
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
             // 
-            // flowLayoutPanel1
+            // flpSedes
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.flowLayoutPanel1.Controls.Add(this.il_Sedes1);
-            this.flowLayoutPanel1.Controls.Add(this.il_Sedes2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(566, 395);
-            this.flowLayoutPanel1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
-            // 
-            // il_Sedes1
-            // 
-            this.il_Sedes1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.il_Sedes1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Sedes1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Sedes1.ColorPanel = System.Drawing.Color.White;
-            this.il_Sedes1.Location = new System.Drawing.Point(34, 3);
-            this.il_Sedes1.Name = "il_Sedes1";
-            this.il_Sedes1.Size = new System.Drawing.Size(497, 104);
-            this.il_Sedes1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.il_Sedes1, null);
-            this.tagsExtender1.SetTag3(this.il_Sedes1, null);
-            this.tagsExtender1.SetTagFontName(this.il_Sedes1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Sedes1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Sedes1, System.Drawing.FontStyle.Regular);
-            this.il_Sedes1.TextoAgregadoPor = "Percy Jackson";
-            this.il_Sedes1.TextoFecha = "dd - mm - aaaa";
-            this.il_Sedes1.TextoPrincipal = "Taller Principal";
-            this.il_Sedes1.Textosecundario = "Independencia";
-            this.il_Sedes1.TextoTercero = "Av. Lorem Ipsum 312";
-            // 
-            // il_Sedes2
-            // 
-            this.il_Sedes2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Sedes2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Sedes2.ColorPanel = System.Drawing.Color.White;
-            this.il_Sedes2.Location = new System.Drawing.Point(34, 113);
-            this.il_Sedes2.Name = "il_Sedes2";
-            this.il_Sedes2.Size = new System.Drawing.Size(497, 104);
-            this.il_Sedes2.TabIndex = 56;
-            this.tagsExtender1.SetTag2(this.il_Sedes2, null);
-            this.tagsExtender1.SetTag3(this.il_Sedes2, null);
-            this.tagsExtender1.SetTagFontName(this.il_Sedes2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Sedes2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Sedes2, System.Drawing.FontStyle.Regular);
-            this.il_Sedes2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Sedes2.TextoFecha = "dd - mm - aaaa";
-            this.il_Sedes2.TextoPrincipal = "Taller Sur";
-            this.il_Sedes2.Textosecundario = "Surquillo";
-            this.il_Sedes2.TextoTercero = "Av. Ipsum Lorem 463";
+            this.flpSedes.AutoScroll = true;
+            this.flpSedes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
+            this.flpSedes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpSedes.Location = new System.Drawing.Point(0, 27);
+            this.flpSedes.Name = "flpSedes";
+            this.flpSedes.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.flpSedes.Size = new System.Drawing.Size(566, 395);
+            this.flpSedes.TabIndex = 54;
+            this.tagsExtender1.SetTag2(this.flpSedes, null);
+            this.tagsExtender1.SetTag3(this.flpSedes, null);
+            this.tagsExtender1.SetTagFontName(this.flpSedes, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpSedes, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpSedes, System.Drawing.FontStyle.Regular);
             // 
             // roundedPanel4
             // 
@@ -509,7 +463,6 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.rpn_ListaServicios.ResumeLayout(false);
             this.rpn_ListaServicios.PerformLayout();
             this.rndReciente.ResumeLayout(false);
@@ -527,9 +480,7 @@
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Panel pnlBuscar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private itemLista il_Sedes1;
-        private itemLista il_Sedes2;
+        private System.Windows.Forms.FlowLayoutPanel flpSedes;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaServicios;
         private System.Windows.Forms.Label lbl_ListaServicios;

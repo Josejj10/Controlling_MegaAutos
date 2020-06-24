@@ -18,7 +18,6 @@ namespace LP2MegaAutos
             InitializeComponent();
 
         }
-
         public pantallaEditarUsuario(ServicioUsuario.usuario usuario)
         {
             InitializeComponent();

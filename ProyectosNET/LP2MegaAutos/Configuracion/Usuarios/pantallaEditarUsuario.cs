@@ -13,24 +13,18 @@ namespace LP2MegaAutos
 {
     public partial class pantallaEditarUsuario : MetroForm
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaEditarUsuario _instancia;
-        public static pantallaEditarUsuario Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaEditarUsuario();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-
         public pantallaEditarUsuario()
         {
             InitializeComponent();
 
+        }
+
+        public pantallaEditarUsuario(ServicioUsuario.usuario usuario)
+        {
+            InitializeComponent();
+            this.txt_NombreUsuario.Text = usuario.nombre;
+            this.txt_Correo.Text = usuario.correo;
+            this.lblRol.Text = usuario.tipoUsuario;
         }
 
         #region title_bar

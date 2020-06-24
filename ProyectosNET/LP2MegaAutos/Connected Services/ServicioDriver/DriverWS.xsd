@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarDriver" type="tns:actualizarDriver" />
+  <xs:element name="actualizarDriverResponse" type="tns:actualizarDriverResponse" />
+  <xs:element name="eliminarDriver" type="tns:eliminarDriver" />
+  <xs:element name="eliminarDriverResponse" type="tns:eliminarDriverResponse" />
+  <xs:element name="insertarDriver2" type="tns:insertarDriver2" />
+  <xs:element name="insertarDriver2Response" type="tns:insertarDriver2Response" />
+  <xs:element name="listarClientes" type="tns:listarClientes" />
+  <xs:element name="listarClientesResponse" type="tns:listarClientesResponse" />
+  <xs:element name="listarDrivers" nillable="true" type="tns:listarClientes" />
+  <xs:element name="listarDrivers2" type="tns:listarDrivers2" />
+  <xs:element name="listarDrivers2Response" type="tns:listarDrivers2Response" />
+  <xs:element name="listarDriversResponse" nillable="true" type="tns:listarClientesResponse" />
+  <xs:complexType name="listarClientes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarClientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDriver2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objDriver" type="tns:driver" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="driver">
+    <xs:sequence>
+      <xs:element name="formula" type="xs:double" />
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDriver2Response">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarDrivers2">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarDrivers2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:driver" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarDriver">
+    <xs:sequence>
+      <xs:element name="idDriver" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarDriverResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarDriver">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objDriver" type="tns:driver" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarDriverResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

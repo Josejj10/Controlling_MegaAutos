@@ -9,24 +9,74 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Framework;
+using LP2MegaAutos.ServicioUsuario;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarUsuarios : Pantalla
     {
+        ServicioUsuario.UsuarioWSClient daoUsuario;
+
         public pantallaActualizarUsuarios()
         {
             InitializeComponent();
-            il_Usuarios1.ItemListaClick += btnItemLista_Click;
-            il_Usuarios3.ItemListaClick += btnItemLista_Click;
             btn_Agregar.Click += btnAgregarClick;
             flpUsuarios.AutoScroll = true;
+            daoUsuario =
+                new ServicioUsuario.UsuarioWSClient();
+            inicializarItemsLista();
         }
-        private void btnItemLista_Click(Object sender, EventArgs e)
+
+        private void inicializarItemsLista()
         {
-            pantallaEditarUsuario pes = new pantallaEditarUsuario();
+            List<usuario> usuarios = daoUsuario.listarUsuarios().ToList();
+            if (usuarios == null) return;
+            foreach (usuario u in usuarios)
+            {
+                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+            }
+
+        }
+
+        private itemLista createItemListaUsuario(ServicioUsuario.usuario usuario, string agregadoPor, DateTime fechaAgregado)
+        {
+            itemLista il = new itemLista();
+            il.Anchor = AnchorStyles.Top;
+            il.BackColor = Color.Transparent;
+            il.ColorBack = Color.Transparent;
+            il.ColorBorde = Colores.PrincipalAzulMetalico;
+            il.ColorPanel = Colores.BackBackground;
+            //il.Location = new Point(35, 4);
+            il.Margin = new Padding(4);
+            il.Name = "il" + usuario.id;
+            il.Size = new Size(497, 104);
+            il.TextoAgregadoPor = agregadoPor;
+            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
+            il.TextoPrincipal = usuario.nombre;
+            il.Textosecundario = usuario.tipoUsuario;
+            il.TextoTercero = usuario.correo;
+            il.ItemListaClick += (sender, e) => { verDatosUsuario(sender, e, usuario); };
+            il.EditarClick += (sender, e) => { btnEditarClick(sender, e, usuario); };
+            flpUsuarios.Controls.Add(il);
+            return il;
+        }
+
+
+
+        private void verDatosUsuario(object sender, EventArgs e, ServicioUsuario.usuario usuario)
+        {
+            pantallaEditarUsuario pes = new pantallaEditarUsuario(usuario);
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
+        }
+
+        private void btnEditarClick(object sender, EventArgs e, usuario usuario)
+        {
+            pantallaEditarInformacionPropia pas = new pantallaEditarInformacionPropia();
+            if (pas.ShowDialog() == DialogResult.OK)
+            {
+                // Hacer algo
+            }
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)
@@ -75,13 +125,5 @@ namespace LP2MegaAutos
         }
         #endregion Txt Buscar
 
-        private void ItemLista_Click(object sender, EventArgs e)
-        {
-            pantallaEditarInformacionPropia pas = new pantallaEditarInformacionPropia();
-            if (pas.ShowDialog() == DialogResult.OK)
-            {
-                // Hacer algo
-            }
-        }
     }
 }

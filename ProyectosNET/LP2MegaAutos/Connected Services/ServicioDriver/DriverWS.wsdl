@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.megaautos.com.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="DriverWS" targetNamespace="http://services.megaautos.com.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/DriverWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarDriver">
+    <part name="parameters" element="tns:eliminarDriver" />
+  </message>
+  <message name="eliminarDriverResponse">
+    <part name="parameters" element="tns:eliminarDriverResponse" />
+  </message>
+  <message name="insertarDriver2">
+    <part name="parameters" element="tns:insertarDriver2" />
+  </message>
+  <message name="insertarDriver2Response">
+    <part name="parameters" element="tns:insertarDriver2Response" />
+  </message>
+  <message name="listarDrivers2">
+    <part name="parameters" element="tns:listarDrivers2" />
+  </message>
+  <message name="listarDrivers2Response">
+    <part name="parameters" element="tns:listarDrivers2Response" />
+  </message>
+  <message name="actualizarDriver">
+    <part name="parameters" element="tns:actualizarDriver" />
+  </message>
+  <message name="actualizarDriverResponse">
+    <part name="parameters" element="tns:actualizarDriverResponse" />
+  </message>
+  <message name="listarDrivers">
+    <part name="parameters" element="tns:listarDrivers" />
+  </message>
+  <message name="listarDriversResponse">
+    <part name="parameters" element="tns:listarDriversResponse" />
+  </message>
+  <portType name="DriverWS">
+    <operation name="eliminarDriver">
+      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverRequest" message="tns:eliminarDriver" />
+      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverResponse" message="tns:eliminarDriverResponse" />
+    </operation>
+    <operation name="insertarDriver2">
+      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/insertarDriver2Request" message="tns:insertarDriver2" />
+      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/insertarDriver2Response" message="tns:insertarDriver2Response" />
+    </operation>
+    <operation name="listarDrivers2">
+      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/listarDrivers2Request" message="tns:listarDrivers2" />
+      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/listarDrivers2Response" message="tns:listarDrivers2Response" />
+    </operation>
+    <operation name="actualizarDriver">
+      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverRequest" message="tns:actualizarDriver" />
+      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverResponse" message="tns:actualizarDriverResponse" />
+    </operation>
+    <operation name="listarDrivers">
+      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/listarDriversRequest" message="tns:listarDrivers" />
+      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/listarDriversResponse" message="tns:listarDriversResponse" />
+    </operation>
+  </portType>
+  <binding name="DriverWSPortBinding" type="tns:DriverWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarDriver">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDriver2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDrivers2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarDriver">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDrivers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DriverWS">
+    <port name="DriverWSPort" binding="tns:DriverWSPortBinding">
+      <soap:address location="http://72.44.47.118:8080/LP2MegaAutosServices/DriverWS" />
+    </port>
+  </service>
+</definitions>

@@ -57,7 +57,7 @@
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.txt_NuevaCont = new System.Windows.Forms.TextBox();
             this.lbl_NuevaCont = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
             this.txt_NombreUsuario = new System.Windows.Forms.TextBox();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.title_bar.SuspendLayout();
@@ -671,21 +671,21 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_NuevaCont, System.Drawing.FontStyle.Regular);
             this.lbl_NuevaCont.Text = "Contraseña";
             // 
-            // label1
+            // lblRol
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(28, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 23);
-            this.label1.TabIndex = 76;
-            this.tagsExtender1.SetTag2(this.label1, null);
-            this.tagsExtender1.SetTag3(this.label1, null);
-            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.label1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Regular);
-            this.label1.Text = "Analista";
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.lblRol.Location = new System.Drawing.Point(28, 92);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(79, 23);
+            this.lblRol.TabIndex = 76;
+            this.tagsExtender1.SetTag2(this.lblRol, null);
+            this.tagsExtender1.SetTag3(this.lblRol, null);
+            this.tagsExtender1.SetTagFontName(this.lblRol, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lblRol, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.lblRol, System.Drawing.FontStyle.Bold);
+            this.lblRol.Text = "Analista";
             // 
             // txt_NombreUsuario
             // 
@@ -710,7 +710,7 @@
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;
             this.Controls.Add(this.txt_NombreUsuario);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRol);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.roundedPanel1);
@@ -786,7 +786,7 @@
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.TextBox txt_NuevaCont;
         private System.Windows.Forms.Label lbl_NuevaCont;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.TextBox txt_NombreUsuario;
     }
 }

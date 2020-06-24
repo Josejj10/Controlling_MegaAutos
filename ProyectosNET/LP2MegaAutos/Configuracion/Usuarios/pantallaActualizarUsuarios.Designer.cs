@@ -45,8 +45,6 @@
             this.btnAZ = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpUsuarios = new System.Windows.Forms.FlowLayoutPanel();
-            this.il_Usuarios1 = new LP2MegaAutos.itemLista();
-            this.il_Usuarios3 = new LP2MegaAutos.itemLista();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
@@ -57,7 +55,6 @@
             this.rndZA.SuspendLayout();
             this.rndAZ.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flpUsuarios.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -377,8 +374,6 @@
             // 
             this.flpUsuarios.AutoScroll = true;
             this.flpUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.flpUsuarios.Controls.Add(this.il_Usuarios1);
-            this.flpUsuarios.Controls.Add(this.il_Usuarios3);
             this.flpUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpUsuarios.Location = new System.Drawing.Point(0, 27);
             this.flpUsuarios.Name = "flpUsuarios";
@@ -390,52 +385,6 @@
             this.tagsExtender1.SetTagFontName(this.flpUsuarios, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.flpUsuarios, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flpUsuarios, System.Drawing.FontStyle.Regular);
-            // 
-            // il_Usuarios1
-            // 
-            this.il_Usuarios1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.il_Usuarios1.BackColor = System.Drawing.Color.Transparent;
-            this.il_Usuarios1.ColorBack = System.Drawing.Color.Transparent;
-            this.il_Usuarios1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Usuarios1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Usuarios1.Location = new System.Drawing.Point(35, 4);
-            this.il_Usuarios1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.il_Usuarios1.Name = "il_Usuarios1";
-            this.il_Usuarios1.Size = new System.Drawing.Size(497, 104);
-            this.il_Usuarios1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.il_Usuarios1, null);
-            this.tagsExtender1.SetTag3(this.il_Usuarios1, null);
-            this.tagsExtender1.SetTagFontName(this.il_Usuarios1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Usuarios1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Usuarios1, System.Drawing.FontStyle.Regular);
-            this.il_Usuarios1.TextoAgregadoPor = "Percy Jackson";
-            this.il_Usuarios1.TextoFecha = "dd - mm - aaaa";
-            this.il_Usuarios1.TextoPrincipal = "Jonathan Berrospi";
-            this.il_Usuarios1.Textosecundario = "Jefe de Logistica";
-            this.il_Usuarios1.TextoTercero = "jberrospi@pucp.edu.pe";
-            this.il_Usuarios1.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
-            // 
-            // il_Usuarios3
-            // 
-            this.il_Usuarios3.ColorBack = System.Drawing.Color.Transparent;
-            this.il_Usuarios3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Usuarios3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Usuarios3.Location = new System.Drawing.Point(35, 116);
-            this.il_Usuarios3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.il_Usuarios3.Name = "il_Usuarios3";
-            this.il_Usuarios3.Size = new System.Drawing.Size(497, 104);
-            this.il_Usuarios3.TabIndex = 56;
-            this.tagsExtender1.SetTag2(this.il_Usuarios3, null);
-            this.tagsExtender1.SetTag3(this.il_Usuarios3, null);
-            this.tagsExtender1.SetTagFontName(this.il_Usuarios3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Usuarios3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Usuarios3, System.Drawing.FontStyle.Regular);
-            this.il_Usuarios3.TextoAgregadoPor = "Percy Jackson";
-            this.il_Usuarios3.TextoFecha = "dd - mm - aaaa";
-            this.il_Usuarios3.TextoPrincipal = "Juan Villegaz";
-            this.il_Usuarios3.Textosecundario = "Analista";
-            this.il_Usuarios3.TextoTercero = "jvillegaz@pucp.edu.pe";
-            this.il_Usuarios3.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
             // 
             // roundedPanel4
             // 
@@ -540,7 +489,7 @@
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.pnlBuscar);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaActualizarUsuarios";
             this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);
@@ -555,7 +504,6 @@
             this.rndZA.ResumeLayout(false);
             this.rndAZ.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.flpUsuarios.ResumeLayout(false);
             this.rpn_ListaServicios.ResumeLayout(false);
             this.rpn_ListaServicios.PerformLayout();
             this.ResumeLayout(false);
@@ -580,8 +528,6 @@
         private System.Windows.Forms.Button btnAZ;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flpUsuarios;
-        private itemLista il_Usuarios1;
-        private itemLista il_Usuarios3;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaServicios;
         private System.Windows.Forms.Label lbl_ListaServicios;

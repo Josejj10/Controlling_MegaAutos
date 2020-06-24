@@ -13,17 +13,15 @@ namespace LP2MegaAutos.VentanasPrincipales
 {
     public partial class frmEliminar : MetroForm
     {
-        private int _idUsuario;
         public frmEliminar()
         {
             InitializeComponent();
         }
         
-        public frmEliminar(string nombreAccion, int idUsuario)
+        public frmEliminar(string nombreAccion)
         {
             InitializeComponent();
             lblTexto.Text += nombreAccion + "?";
-            _idUsuario = idUsuario;
         }
 
         #region title_bar
@@ -65,8 +63,6 @@ namespace LP2MegaAutos.VentanasPrincipales
 
         private void btnDarDeBaja_Click(object sender, EventArgs e)
         {
-            // TODO Verificar contraseña del usuario
-            // ServicioUsuario.verificarcontraseña(idUsuario,txt_ContraseñaActual.Text)
             this.DialogResult = DialogResult.OK;
         }
 

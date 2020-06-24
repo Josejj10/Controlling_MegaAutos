@@ -104,28 +104,28 @@ namespace LP2MegaAutos
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
-                if (f.DialogResult != DialogResult.OK) ;
+                f.ShowDialog();
                 return false;
             }
 
             if (string.IsNullOrEmpty(txt_RolUsuario.Text))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese el rol.", MessageBoxButtons.OK);
-                f.Show();
+                f.ShowDialog();
                 return false;
             }
 
             if (txt_NuevaCont.Text != txt_RepNCont.Text)
             {
                 frmMessageBox f = new frmMessageBox("Por favor repita correctamente la nueva contraseña.", MessageBoxButtons.OK);
-                f.Show();
+                f.ShowDialog();
                 return false;
             }
 
             if (string.IsNullOrEmpty(txt_ContraseñaActual.Text))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese su contraseña para guardar los cambios.", MessageBoxButtons.OK);
-                f.Show();
+                f.ShowDialog();
                 return false;
             }
 
@@ -139,7 +139,7 @@ namespace LP2MegaAutos
                 return;
             // Validar
             frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel,"Guardar Cambios");
-            if (f.DialogResult != DialogResult.OK)
+            if (f.ShowDialog() != DialogResult.OK)
                 return;
             // Actualizar usuario
             _usuario.nombre = txtNombre.Text;

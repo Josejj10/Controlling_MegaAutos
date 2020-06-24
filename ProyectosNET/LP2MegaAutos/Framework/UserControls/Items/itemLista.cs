@@ -29,7 +29,11 @@ namespace LP2MegaAutos
             
         }
 
-        
+        public void esconderBotonEditar()
+        {
+            this.btnEditar.Visible = false;
+        }
+
         #region Propiedades
         [Description("Texto Principal"), Category("Item Lista")]
         public string TextoPrincipal
@@ -126,6 +130,7 @@ namespace LP2MegaAutos
         {
             itemListaHelper.rpItem_MouseLeave(rpItem);
         }
+
 
         private void cambiarColores(Control parent, Color color)
         {

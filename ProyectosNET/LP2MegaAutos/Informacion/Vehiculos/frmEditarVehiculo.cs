@@ -17,6 +17,13 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         {
             InitializeComponent();
         }
+        public frmEditarVehiculo(ServicioVehiculo.vehiculo vehiculo)
+        {
+            InitializeComponent();
+            this.txt_placaVehiculo.Text = vehiculo.placa;
+            this.txt_nombVehiculo.Text = vehiculo.propietario.nombre;
+            this.txt_TipoVehiculo.Text = vehiculo.tipoVehiculo;
+        }
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;

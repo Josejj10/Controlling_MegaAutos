@@ -108,7 +108,7 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
     }
 
     @Override
-    public ArrayList<AreaTrabajoCuentaContable> listar() {
+    public ArrayList<AreaTrabajoCuentaContable> listar(int idAreaTrabajo) {
         ArrayList<AreaTrabajoCuentaContable> atCcs = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
@@ -121,11 +121,13 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
             // con ID_AreaTrabajoCuentaContable, nombre, tipo_atCc, tipo_doc
             // numero_doc, correo y telefono*/
             CallableStatement cs = con.prepareCall(
-                    "{call LISTAR_AREA_TRABAJO_X_CUENTA_CONTABLE()}");
+                    "{call LISTAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?)}");
+            cs.setInt("_ID_AREA_TRABAJO", idAreaTrabajo);
             ResultSet rs = cs.executeQuery();
             //Recorrer todas las filas que devuelve la ejecucion sentencia
             while(rs.next()){
                 AreaTrabajoCuentaContable atCc = new AreaTrabajoCuentaContable();
+          
                 atCc.setDistribucionEgresos(rs.getInt("DISTRIBUCION_EGRESOS"));
                 atCc.setDistribucionIngresos(rs.getInt("DISTRIBUCION_INGRESOS"));
                 // Insertar AreaTrabajo

@@ -17,6 +17,14 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
         }
+        public pantallaEditarSede(ServicioSede.sede sede)
+        {
+            InitializeComponent();
+            this.txt_distrito.Text = sede.distrito;
+            this.txt_NombreSede.Text = sede.nombre;
+            this.txt_direccion.Text = sede.direccion;
+            this.txt_telefono.Text = sede.telefono;
+        }
 
         #region title_bar
 

@@ -10,22 +10,44 @@ using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Informacion.AreasTrabajo;
 using LP2MegaAutos.Framework;
+using LP2MegaAutos.ServicioAreaTrabajo;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaAreaTrabajo : Pantalla
-    {        
+    {
+        ServicioAreaTrabajo.AreaTrabajoWSClient daoAreaTrabajo;
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
-            il_AreaTrabajo1.ItemListaClick += btnEditarClick;
-            il_AreaTrabajo2.ItemListaClick += btnEditarClick;
-            il_AreaTrabajo3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flowLayoutPanel1.AutoScroll = true;
+            daoAreaTrabajo = new ServicioAreaTrabajo.AreaTrabajoWSClient();
+            inicializarItemsLista();
         }
-
-        private void btnEditarClick(Object sender, EventArgs e)
+        private void inicializarItemsLista()
+        {
+            List<areaTrabajo> areasTrabajo = daoAreaTrabajo.listarAreaTrabajo().ToList();
+            if (areasTrabajo == null) return;
+            foreach (areaTrabajo u in areasTrabajo)
+            {
+                createItemListaAreaTrabajo(u, "Carter Kane", DateTime.Now);
+            }
+        }
+        private itemLista createItemListaAreaTrabajo(ServicioAreaTrabajo.areaTrabajo areaTrabajo, string agregadoPor, DateTime fechaAgregado)
+        {
+            itemLista il = new itemLista();
+            BotonesDinamicosHelper.personalizarItemLista(il);
+            il.Name = "il" + areaTrabajo.id;
+            il.TextoAgregadoPor = agregadoPor;
+            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
+            il.TextoPrincipal = areaTrabajo.nombre;
+            il.ItemListaClick += (sender, e) => { ItemLista_Click(sender, e, areaTrabajo); };
+            il.EditarClick += (sender, e) => { EditarClick(sender, e, areaTrabajo); };
+            flowLayoutPanel1.Controls.Add(il);
+            return il;
+        }
+        private void EditarClick(Object sender, EventArgs e, areaTrabajo areaTrabajo)
         {
             pantallaEditarAreaTrabajo pas = new pantallaEditarAreaTrabajo();
 
@@ -86,9 +108,9 @@ namespace LP2MegaAutos
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }
-        private void ItemLista_Click(object sender, EventArgs e)
+        private void ItemLista_Click(object sender, EventArgs e, areaTrabajo areaTrabajo)
         {
-            pantallaAreaTrabajoxCC pas = new pantallaAreaTrabajoxCC();
+            pantallaAreaTrabajoxCC pas = new pantallaAreaTrabajoxCC(areaTrabajo);
 
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");

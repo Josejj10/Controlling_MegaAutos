@@ -56,8 +56,8 @@ public class AreaTrabajoWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "eliminarDriver")
-    public int eliminarDriver(@WebParam(name = "idAreaTrabajo") int idAreaTrabajo) {
+    @WebMethod(operationName = "eliminarAreaTrabajo")
+    public int eliminarAreaTrabajo(@WebParam(name = "idAreaTrabajo") int idAreaTrabajo) {
         int resultado = 0;
         try{
             resultado = daoAreaTrabajo.eliminar(idAreaTrabajo);

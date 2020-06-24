@@ -37,7 +37,10 @@ public class SedeMySQL implements SedeDAO {
             // a MySQL como Nombre
             cs.registerOutParameter("_ID_SEDE", java.sql.Types.INTEGER);
             // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
-            cs.setString("_NOMBRE", sede.getDistrito().toUpperCase());
+            cs.setString("_NOMBRE", sede.getNombre().toUpperCase());
+            cs.setString("_TELEFONO", sede.getTelefono().toUpperCase());
+            cs.setString("_DISTRITO", sede.getDistrito().toUpperCase());
+            cs.setString("_DIRECCION", sede.getDireccion().toUpperCase());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_SEDE");
             con.close();
@@ -62,7 +65,10 @@ public class SedeMySQL implements SedeDAO {
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_SEDE(?,?)}");   
             cs.setInt("_ID_SEDE", sede.getId());
-            cs.setString("_NOMBRE", sede.getDistrito());
+            cs.setString("_NOMBRE", sede.getDistrito().toUpperCase());
+            cs.setString("_TELEFONO", sede.getTelefono().toUpperCase());
+            cs.setString("_DISTRITO", sede.getDistrito().toUpperCase());
+            cs.setString("_DIRECCION", sede.getDireccion().toUpperCase());
             cs.executeUpdate();
             con.close();
         }catch(Exception ex){
@@ -113,7 +119,10 @@ public class SedeMySQL implements SedeDAO {
             while(rs.next()){
                 Sede sede = new Sede();
                 sede.setId(rs.getInt("ID_SEDE"));
-                sede.setDistrito(rs.getString("NOMBRE"));
+                sede.setDistrito(rs.getString("DISTRITO"));
+                sede.setDireccion(rs.getString("DIRECCION"));
+                sede.setNombre(rs.getString("NOMBRE"));
+                sede.setTelefono(rs.getString("TELEFONO"));
                 sedes.add(sede);
             }
             //cerrar conexion

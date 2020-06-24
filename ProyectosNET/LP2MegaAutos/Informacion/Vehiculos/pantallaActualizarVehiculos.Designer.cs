@@ -33,10 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.il_Vehiculo1 = new LP2MegaAutos.itemLista();
-            this.il_Vehiculo2 = new LP2MegaAutos.itemLista();
-            this.il_Vehiculo3 = new LP2MegaAutos.itemLista();
+            this.flpVehiculos = new System.Windows.Forms.FlowLayoutPanel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaVehiculos = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaVehiculos = new System.Windows.Forms.Label();
@@ -54,7 +51,6 @@
             this.btnAZ = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.rpn_ListaVehiculos.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -113,7 +109,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
+            this.panel3.Controls.Add(this.flpVehiculos);
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaVehiculos);
             this.panel3.Location = new System.Drawing.Point(171, 46);
@@ -126,88 +122,21 @@
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
             // 
-            // flowLayoutPanel1
+            // flpVehiculos
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.flowLayoutPanel1.Controls.Add(this.il_Vehiculo1);
-            this.flowLayoutPanel1.Controls.Add(this.il_Vehiculo2);
-            this.flowLayoutPanel1.Controls.Add(this.il_Vehiculo3);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(566, 395);
-            this.flowLayoutPanel1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTag3(this.flowLayoutPanel1, null);
-            this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
-            // 
-            // il_Vehiculo1
-            // 
-            this.il_Vehiculo1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.il_Vehiculo1.BackColor = System.Drawing.Color.Transparent;
-            this.il_Vehiculo1.ColorBack = System.Drawing.Color.Transparent;
-            this.il_Vehiculo1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Vehiculo1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Vehiculo1.Location = new System.Drawing.Point(34, 3);
-            this.il_Vehiculo1.Name = "il_Vehiculo1";
-            this.il_Vehiculo1.Size = new System.Drawing.Size(497, 104);
-            this.il_Vehiculo1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.il_Vehiculo1, null);
-            this.tagsExtender1.SetTag3(this.il_Vehiculo1, null);
-            this.tagsExtender1.SetTagFontName(this.il_Vehiculo1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Vehiculo1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Vehiculo1, System.Drawing.FontStyle.Regular);
-            this.il_Vehiculo1.TextoAgregadoPor = "Percy Jackson";
-            this.il_Vehiculo1.TextoFecha = "dd - mm - aaaa";
-            this.il_Vehiculo1.TextoPrincipal = "ABC-123";
-            this.il_Vehiculo1.Textosecundario = "Sir Shackleton III";
-            this.il_Vehiculo1.TextoTercero = "Camioneta";
-            // 
-            // il_Vehiculo2
-            // 
-            this.il_Vehiculo2.BackColor = System.Drawing.Color.Transparent;
-            this.il_Vehiculo2.ColorBack = System.Drawing.Color.Transparent;
-            this.il_Vehiculo2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Vehiculo2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Vehiculo2.Location = new System.Drawing.Point(34, 113);
-            this.il_Vehiculo2.Name = "il_Vehiculo2";
-            this.il_Vehiculo2.Size = new System.Drawing.Size(497, 104);
-            this.il_Vehiculo2.TabIndex = 56;
-            this.tagsExtender1.SetTag2(this.il_Vehiculo2, null);
-            this.tagsExtender1.SetTag3(this.il_Vehiculo2, null);
-            this.tagsExtender1.SetTagFontName(this.il_Vehiculo2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Vehiculo2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Vehiculo2, System.Drawing.FontStyle.Regular);
-            this.il_Vehiculo2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Vehiculo2.TextoFecha = "dd - mm - aaaa";
-            this.il_Vehiculo2.TextoPrincipal = "DEF-987";
-            this.il_Vehiculo2.Textosecundario = "Carter Kane";
-            this.il_Vehiculo2.TextoTercero = "Auto";
-            // 
-            // il_Vehiculo3
-            // 
-            this.il_Vehiculo3.BackColor = System.Drawing.Color.Transparent;
-            this.il_Vehiculo3.ColorBack = System.Drawing.Color.Transparent;
-            this.il_Vehiculo3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Vehiculo3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Vehiculo3.Location = new System.Drawing.Point(34, 223);
-            this.il_Vehiculo3.Name = "il_Vehiculo3";
-            this.il_Vehiculo3.Size = new System.Drawing.Size(497, 104);
-            this.il_Vehiculo3.TabIndex = 55;
-            this.tagsExtender1.SetTag2(this.il_Vehiculo3, null);
-            this.tagsExtender1.SetTag3(this.il_Vehiculo3, null);
-            this.tagsExtender1.SetTagFontName(this.il_Vehiculo3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Vehiculo3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Vehiculo3, System.Drawing.FontStyle.Regular);
-            this.il_Vehiculo3.TextoAgregadoPor = "Percy Jackson";
-            this.il_Vehiculo3.TextoFecha = "dd - mm - aaaa";
-            this.il_Vehiculo3.TextoPrincipal = "XYZ-666";
-            this.il_Vehiculo3.Textosecundario = "Lucia Fernandez";
-            this.il_Vehiculo3.TextoTercero = "Deportivo";
+            this.flpVehiculos.AutoScroll = true;
+            this.flpVehiculos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
+            this.flpVehiculos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpVehiculos.Location = new System.Drawing.Point(0, 27);
+            this.flpVehiculos.Name = "flpVehiculos";
+            this.flpVehiculos.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.flpVehiculos.Size = new System.Drawing.Size(566, 395);
+            this.flpVehiculos.TabIndex = 54;
+            this.tagsExtender1.SetTag2(this.flpVehiculos, null);
+            this.tagsExtender1.SetTag3(this.flpVehiculos, null);
+            this.tagsExtender1.SetTagFontName(this.flpVehiculos, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.flpVehiculos, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.flpVehiculos, System.Drawing.FontStyle.Regular);
             // 
             // roundedPanel4
             // 
@@ -274,7 +203,7 @@
             this.lbl_ListaVehiculos.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaVehiculos.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaVehiculos.Name = "lbl_ListaVehiculos";
-            this.lbl_ListaVehiculos.Size = new System.Drawing.Size(94, 19);
+            this.lbl_ListaVehiculos.Size = new System.Drawing.Size(90, 22);
             this.lbl_ListaVehiculos.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaVehiculos, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaVehiculos, null);
@@ -306,7 +235,7 @@
             this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
             this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 38);
+            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 21);
             this.cTxt_MasFiltros.TabIndex = 70;
             this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
             this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
@@ -586,7 +515,6 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.rpn_ListaVehiculos.ResumeLayout(false);
             this.rpn_ListaVehiculos.PerformLayout();
             this.rndReciente.ResumeLayout(false);
@@ -604,10 +532,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private itemLista il_Vehiculo1;
-        private itemLista il_Vehiculo2;
-        private itemLista il_Vehiculo3;
+        private System.Windows.Forms.FlowLayoutPanel flpVehiculos;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaVehiculos;
         private System.Windows.Forms.Label lbl_ListaVehiculos;

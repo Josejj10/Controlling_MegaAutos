@@ -8,35 +8,51 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.ServicioCliente;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarClientes : Pantalla
     {
+        ServicioCliente.ClienteWSClient daoCliente;
         public pantallaActualizarClientes()
         {
             InitializeComponent();
-            il_Clientes1.ItemListaClick += btnEditarClick;
-            il_Clientes2.ItemListaClick += btnEditarClick;
-            il_Clientes3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flpClientes.AutoScroll = true;
+            daoCliente = new ServicioCliente.ClienteWSClient();
+            inicializarItemsLista();
         }
-        private void btnEditarClick(Object sender, EventArgs e)
+        private void inicializarItemsLista()
+        {
+            cliente[] clientes = daoCliente.listarClientes();
+            if (clientes == null) return;
+            foreach (cliente u in clientes)
+            {
+                createItemListaCliente(u, "Carter Kane", DateTime.Now);
+            }
+        }
+        private itemLista createItemListaCliente(ServicioCliente.cliente cliente, string agregadoPor, DateTime fechaAgregado)
+        {
+            itemLista il = new itemLista();
+            BotonesDinamicosHelper.personalizarItemLista(il);
+            il.Name = "il" + cliente.id;
+            il.TextoAgregadoPor = agregadoPor;
+            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
+            il.TextoPrincipal = cliente.nombre;
+            if (cliente.numDocumento.Length == 8) il.Textosecundario = "DNI: ";
+            else if (cliente.numDocumento.Length == 10) il.Textosecundario = "RUC: ";
+            il.Textosecundario += cliente.numDocumento;
+            il.TextoTercero = cliente.tipoCliente;
+            il.ItemListaClick += (sender, e) => { btnEditarClick(sender, e, cliente); };
+            flpClientes.Controls.Add(il);
+            return il;
+        }
+        private void btnEditarClick(Object sender, EventArgs e, cliente cliente)
         {
             pantallaEditarCliente pes = new pantallaEditarCliente();
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-
-            ////MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaEditarCliente.Instancia))
-            //{
-            //    this.Controls.Add(pantallaEditarCliente.Instancia);
-            //    pantallaEditarCliente.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaEditarCliente.Instancia.Parent);
-            //}
-            //pantallaEditarCliente.Instancia.BringToFront();
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)
@@ -45,16 +61,6 @@ namespace LP2MegaAutos
 
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-
-            ////MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaAgregarCliente.Instancia))
-            //{
-            //    this.Controls.Add(pantallaAgregarCliente.Instancia);
-            //    pantallaAgregarCliente.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaAgregarCliente.Instancia.Parent);
-            //}
-            //pantallaAgregarCliente.Instancia.BringToFront();
         }
 
         private void btnAZ_Click(object sender, EventArgs e)

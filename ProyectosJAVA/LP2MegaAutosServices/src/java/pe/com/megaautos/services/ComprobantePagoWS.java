@@ -35,7 +35,7 @@ public class ComprobantePagoWS {
     }
     
     @WebMethod(operationName = "insertarComprobantePago")
-    public int insertarDriver(@WebParam(name = "objComprobantePago") ComprobantePago cp) {
+    public int insertarComprobantePago(@WebParam(name = "objComprobantePago") ComprobantePago cp) {
         int resultado = 0;
         try{
             resultado = daoComprobantePago.insertar(cp);
@@ -46,7 +46,7 @@ public class ComprobantePagoWS {
     }
     
     @WebMethod(operationName = "actualizarComprobantePago")
-    public int actualizarDriver(@WebParam(name = "objComprobantePago") ComprobantePago cp) {
+    public int actualizarComprobantePago(@WebParam(name = "objComprobantePago") ComprobantePago cp) {
         int resultado = 0;
         try{
             resultado = daoComprobantePago.actualizar(cp);

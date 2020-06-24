@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarAreaTrabajo" type="tns:actualizarAreaTrabajo" />
+  <xs:element name="actualizarAreaTrabajoResponse" type="tns:actualizarAreaTrabajoResponse" />
+  <xs:element name="eliminarAreaTrabajo" type="tns:eliminarAreaTrabajo" />
+  <xs:element name="eliminarAreaTrabajoResponse" type="tns:eliminarAreaTrabajoResponse" />
+  <xs:element name="insertarAreaTrabajo" type="tns:insertarAreaTrabajo" />
+  <xs:element name="insertarAreaTrabajoResponse" type="tns:insertarAreaTrabajoResponse" />
+  <xs:element name="listarAreaTrabajo" type="tns:listarAreaTrabajo" />
+  <xs:element name="listarAreaTrabajoResponse" type="tns:listarAreaTrabajoResponse" />
+  <xs:complexType name="insertarAreaTrabajo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objAreaTrabajo" type="tns:areaTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="areaTrabajo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="totalEgresos" type="xs:double" />
+      <xs:element minOccurs="0" name="totalIngresos" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAreaTrabajoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAreaTrabajo">
+    <xs:sequence>
+      <xs:element name="idAreaTrabajo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAreaTrabajoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAreaTrabajo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarAreaTrabajoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:areaTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAreaTrabajo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objAreaTrabajo" type="tns:areaTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAreaTrabajoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

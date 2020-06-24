@@ -8,22 +8,55 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.ServicioSede;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarSedes : Pantalla
     {
+        ServicioSede.SedeWSClient daoSede;
         public pantallaActualizarSedes()
         {
             InitializeComponent();
-            il_Sedes1.ItemListaClick += btnEditarClick;
-            il_Sedes2.ItemListaClick += btnEditarClick;
-            flowLayoutPanel1.AutoScroll = true;
+            flpSedes.AutoScroll = true;
+            daoSede = new ServicioSede.SedeWSClient();
+            inicializarItemsLista();
+        }
+        private void inicializarItemsLista()
+        {
+            List<sede> sedes = daoSede.listarSedes().ToList();
+            if (sedes == null) return;
+            foreach (sede s in sedes)
+            {
+                createItemListaSede(s, "Carter Kane", DateTime.Now);
+            }
         }
 
-        private void btnEditarClick(Object sender, EventArgs e)
+        private itemLista createItemListaSede(ServicioSede.sede sede, string agregadoPor, DateTime fechaAgregado)
         {
-            pantallaEditarSede pes = new pantallaEditarSede();
+            itemLista il = new itemLista();
+            BotonesDinamicosHelper.personalizarItemLista(il);
+            il.Name = "il" + sede.id;
+            il.TextoAgregadoPor = agregadoPor;
+            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
+            il.TextoPrincipal = sede.nombre;
+            il.Textosecundario = sede.distrito;
+            il.TextoTercero = sede.direccion;
+            il.ItemListaClick += (sender, e) => { verDatosSede(sender, e, sede); };
+            il.EditarClick += (sender, e) => { btnEditarClick(sender, e, sede); };
+            flpSedes.Controls.Add(il);
+            return il;
+        }
+
+        private void verDatosSede(object sender, EventArgs e, ServicioSede.sede sede)
+        {
+            pantallaEditarSede pes = new pantallaEditarSede(sede);
+            if (pes.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+        }
+        private void btnEditarClick(Object sender, EventArgs e, ServicioSede.sede sede)
+        {
+            pantallaEditarSede pes = new pantallaEditarSede(sede);
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }

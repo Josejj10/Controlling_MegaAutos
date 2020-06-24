@@ -16,5 +16,5 @@ public interface AreaTrabajoCuentaContableDAO {
     void insertar(AreaTrabajoCuentaContable atCc);
     int actualizar(AreaTrabajoCuentaContable atCc);
     int eliminar(int idAtCc, int idCuentaContable);
-    ArrayList<AreaTrabajoCuentaContable> listar();
+    ArrayList<AreaTrabajoCuentaContable> listar(int id);
 }

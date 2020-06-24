@@ -19,10 +19,10 @@ public class AreaTrabajoCuentaContableWS {
     }
     
     @WebMethod(operationName = "listarAreaTrabajoCuentaContable")
-    public ArrayList<AreaTrabajoCuentaContable> listarAreaTrabajoCuentaContable(){
+    public ArrayList<AreaTrabajoCuentaContable> listarAreaTrabajoCuentaContable(@WebParam(name = "idAreaT") int id){
         ArrayList<AreaTrabajoCuentaContable> atcc = new ArrayList<>();
         try{
-            atcc = daoAreaTrabajoCuentaContable.listar();
+            atcc = daoAreaTrabajoCuentaContable.listar(id);
         }catch(Exception ex){
             System.out.println(ex.getCause());
             System.out.println(ex.getMessage());

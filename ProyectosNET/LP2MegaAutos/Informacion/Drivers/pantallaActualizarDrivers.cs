@@ -8,37 +8,52 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.ServicioDriver;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarDrivers : Pantalla
     {
+        ServicioDriver.DriverWSClient daoDriver;
         public pantallaActualizarDrivers()
         {
-
             InitializeComponent();
-            il_Drivers1.ItemListaClick += btnEditarClick;
-            il_Drivers2.ItemListaClick += btnEditarClick;
-            il_Drivers3.ItemListaClick += btnEditarClick;
             this.btn_Agregar.Click += btnAgregarClick;
             flpDrivers.AutoScroll = true;
+            daoDriver = new ServicioDriver.DriverWSClient();
+            inicializarItemsLista();
         }
+        private void inicializarItemsLista()
+        {
+            List<driver> drivers = daoDriver.listarDrivers().ToList();
+            if (drivers == null) return;
+            foreach (driver u in drivers)
+            {
+                createItemListaDriver(u, "Carter Kane", DateTime.Now);
+            }
 
-        private void btnEditarClick(Object sender, EventArgs e)
+        }
+        private itemLista createItemListaDriver(ServicioDriver.driver driver, string agregadoPor, DateTime fechaAgregado)
+        {
+            itemLista il = new itemLista();
+            BotonesDinamicosHelper.personalizarItemLista(il);
+            il.Name = "il" + driver.id;
+            il.TextoAgregadoPor = agregadoPor;
+            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
+            il.TextoPrincipal = driver.formula.ToString();
+            il.Textosecundario = "Mecánica TBD";
+            il.TextoTercero = "Luz TBD";
+            il.ItemListaClick += (sender, e) => { btnEditarClick(sender, e, driver); };
+            flpDrivers.Controls.Add(il);
+            return il;
+        }
+        
+
+        private void btnEditarClick(Object sender, EventArgs e, driver driver)
         {
             pantallaEditarDriver pes = new pantallaEditarDriver();
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-
-            ////MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaEditarDriver.Instancia))
-            //{
-            //    this.Controls.Add(pantallaEditarDriver.Instancia);
-            //    pantallaEditarDriver.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaEditarDriver.Instancia.Parent);
-            //}
-            //pantallaEditarDriver.Instancia.BringToFront();
         }
 
         private void btnAgregarClick(Object sender, EventArgs e)

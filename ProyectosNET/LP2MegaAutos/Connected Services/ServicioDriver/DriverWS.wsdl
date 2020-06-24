@@ -11,17 +11,11 @@
   <message name="eliminarDriverResponse">
     <part name="parameters" element="tns:eliminarDriverResponse" />
   </message>
-  <message name="insertarDriver2">
-    <part name="parameters" element="tns:insertarDriver2" />
+  <message name="insertarDriver">
+    <part name="parameters" element="tns:insertarDriver" />
   </message>
-  <message name="insertarDriver2Response">
-    <part name="parameters" element="tns:insertarDriver2Response" />
-  </message>
-  <message name="listarDrivers2">
-    <part name="parameters" element="tns:listarDrivers2" />
-  </message>
-  <message name="listarDrivers2Response">
-    <part name="parameters" element="tns:listarDrivers2Response" />
+  <message name="insertarDriverResponse">
+    <part name="parameters" element="tns:insertarDriverResponse" />
   </message>
   <message name="actualizarDriver">
     <part name="parameters" element="tns:actualizarDriver" />
@@ -40,13 +34,9 @@
       <input wsam:Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverRequest" message="tns:eliminarDriver" />
       <output wsam:Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverResponse" message="tns:eliminarDriverResponse" />
     </operation>
-    <operation name="insertarDriver2">
-      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/insertarDriver2Request" message="tns:insertarDriver2" />
-      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/insertarDriver2Response" message="tns:insertarDriver2Response" />
-    </operation>
-    <operation name="listarDrivers2">
-      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/listarDrivers2Request" message="tns:listarDrivers2" />
-      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/listarDrivers2Response" message="tns:listarDrivers2Response" />
+    <operation name="insertarDriver">
+      <input wsam:Action="http://services.megaautos.com.pe/DriverWS/insertarDriverRequest" message="tns:insertarDriver" />
+      <output wsam:Action="http://services.megaautos.com.pe/DriverWS/insertarDriverResponse" message="tns:insertarDriverResponse" />
     </operation>
     <operation name="actualizarDriver">
       <input wsam:Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverRequest" message="tns:actualizarDriver" />
@@ -68,16 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarDriver2">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarDrivers2">
+    <operation name="insertarDriver">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

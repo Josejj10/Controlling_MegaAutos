@@ -8,24 +8,58 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.ServicioServicio;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarServicios : Pantalla
     {
+        ServicioServicio.ServicioWSClient daoServicio;
         public pantallaActualizarServicios()
         {
             InitializeComponent();
-            il_Servicios1.ItemListaClick += btnEditarClick;
-            il_Servicios2.ItemListaClick += btnEditarClick;
-            il_Servicios3.ItemListaClick += btnEditarClick;
-            this.btn_Agregar.Click += btnAgregarClick;
-            this.flowLayoutPanel1.AutoScroll = true;
+            btn_Agregar.Click += btnAgregarClick;
+            flpServicios.AutoScroll = true;
+            daoServicio = new ServicioServicio.ServicioWSClient();
+            inicializarItemsLista();
         }
 
-        private void btnEditarClick(Object sender, EventArgs e)
+        private void inicializarItemsLista()
         {
-            pantallaEditarServicio pes = new pantallaEditarServicio();
+            List<servicio> servicios = daoServicio.listarServicios().ToList();
+            if (servicios == null) return;
+            foreach (servicio s in servicios)
+            {
+                createItemListaServicio(s, "Carter Kane", DateTime.Now);
+            }
+
+        }
+
+        private itemLista createItemListaServicio(ServicioServicio.servicio servicio, string agregadoPor, DateTime fechaAgregado)
+        {
+            itemLista il = new itemLista();
+            BotonesDinamicosHelper.personalizarItemLista(il);
+            il.Name = "il" + servicio.id;
+            il.TextoAgregadoPor = agregadoPor;
+            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
+            il.TextoPrincipal = servicio.nombre;
+            il.Textosecundario = servicio.tipoServicio;
+            il.TextoTercero = servicio.codigoServicio;
+            il.ItemListaClick += (sender, e) => { verDatosServicio(sender, e, servicio); };
+            il.EditarClick += (sender, e) => { btnEditarClick(sender, e, servicio); };
+            flpServicios.Controls.Add(il);
+            return il;
+        }
+
+        private void verDatosServicio(object sender, EventArgs e, ServicioServicio.servicio servicio)
+        {
+            pantallaEditarServicio pes = new pantallaEditarServicio(servicio);
+            if (pes.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+        }
+        private void btnEditarClick(Object sender, EventArgs e, ServicioServicio.servicio servicio)
+        {
+            pantallaEditarServicio pes = new pantallaEditarServicio(servicio);
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }

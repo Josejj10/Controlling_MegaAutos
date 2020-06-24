@@ -17,6 +17,14 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
         }
+        public pantallaEditarServicio(ServicioServicio.servicio servicio)
+        {
+            InitializeComponent();
+            this.txt_NombreServicio.Text = servicio.nombre;
+            this.txt_codServ.Text = servicio.codigoServicio;
+            this.txt_descripcion.Text = servicio.descripcion;
+            this.txt_tipoServicio.Text = servicio.tipoServicio;
+        }
 
         private void pantallaEditarServicios_Load(object sender, EventArgs e)
         {

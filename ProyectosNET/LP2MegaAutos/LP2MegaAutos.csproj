@@ -96,7 +96,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioSede\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioServicio\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioUsuario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioVehiculo\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -637,6 +652,44 @@
     <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.listarDriversResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioSede\LP2MegaAutos.ServicioSede.actualizarSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioSede\LP2MegaAutos.ServicioSede.eliminarSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioSede\LP2MegaAutos.ServicioSede.insertarSedeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioSede\LP2MegaAutos.ServicioSede.listarSedesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioSede\LP2MegaAutos.ServicioSede.sede.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioSede\SedeWS.wsdl" />
+    <None Include="Connected Services\ServicioSede\SedeWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioServicio\LP2MegaAutos.ServicioServicio.actualizarServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioServicio\LP2MegaAutos.ServicioServicio.eliminarServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioServicio\LP2MegaAutos.ServicioServicio.insertarServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioServicio\LP2MegaAutos.ServicioServicio.listarServiciosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioServicio\LP2MegaAutos.ServicioServicio.servicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioServicio\ServicioWS.wsdl" />
+    <None Include="Connected Services\ServicioServicio\ServicioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.actualizarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -654,6 +707,25 @@
     </None>
     <None Include="Connected Services\ServicioUsuario\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioUsuario\UsuarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioVehiculo\LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioVehiculo\LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioVehiculo\LP2MegaAutos.ServicioVehiculo.insertarVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioVehiculo\LP2MegaAutos.ServicioVehiculo.listarVehiculosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioVehiculo\LP2MegaAutos.ServicioVehiculo.vehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioVehiculo\VehiculoWS.wsdl" />
+    <None Include="Connected Services\ServicioVehiculo\VehiculoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -795,6 +867,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServicioSede\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioSede\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioSede\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioServicio\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioServicio\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioServicio\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ServicioVehiculo\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioVehiculo\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioVehiculo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Informacion\creditos.txt" />
     <Content Include="Resources\editar.png" />
     <None Include="Resources\Menu\car.png" />
@@ -824,7 +914,10 @@
     <WCFMetadataStorage Include="Connected Services\ServicioAreaTrabajo\" />
     <WCFMetadataStorage Include="Connected Services\ServicioCliente\" />
     <WCFMetadataStorage Include="Connected Services\ServicioDriver\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioSede\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioServicio\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioVehiculo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

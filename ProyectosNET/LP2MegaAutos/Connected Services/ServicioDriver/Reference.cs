@@ -25,22 +25,13 @@ namespace LP2MegaAutos.ServicioDriver {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.eliminarDriverResponse> eliminarDriverAsync(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/insertarDriver2Request", ReplyAction="http://services.megaautos.com.pe/DriverWS/insertarDriver2Response")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/insertarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/insertarDriverResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioDriver.insertarDriver2Response insertarDriver2(LP2MegaAutos.ServicioDriver.insertarDriver2Request request);
+        LP2MegaAutos.ServicioDriver.insertarDriverResponse insertarDriver(LP2MegaAutos.ServicioDriver.insertarDriverRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/insertarDriver2Request", ReplyAction="http://services.megaautos.com.pe/DriverWS/insertarDriver2Response")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.insertarDriver2Response> insertarDriver2Async(LP2MegaAutos.ServicioDriver.insertarDriver2Request request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/listarDrivers2Request", ReplyAction="http://services.megaautos.com.pe/DriverWS/listarDrivers2Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioDriver.listarDrivers2Response listarDrivers2(LP2MegaAutos.ServicioDriver.listarDrivers2Request request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/listarDrivers2Request", ReplyAction="http://services.megaautos.com.pe/DriverWS/listarDrivers2Response")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.listarDrivers2Response> listarDrivers2Async(LP2MegaAutos.ServicioDriver.listarDrivers2Request request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/insertarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/insertarDriverResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.insertarDriverResponse> insertarDriverAsync(LP2MegaAutos.ServicioDriver.insertarDriverRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/actualizarDriverResponse")]
@@ -98,7 +89,7 @@ namespace LP2MegaAutos.ServicioDriver {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -143,136 +134,20 @@ namespace LP2MegaAutos.ServicioDriver {
         }
     }
     
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
-    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string correoField;
-        
-        private int idField;
-        
-        private string nombreField;
-        
-        private string numDocumentoField;
-        
-        private string telefonoField;
-        
-        private string tipoClienteField;
-        
-        private string tipoDocumentoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string correo {
-            get {
-                return this.correoField;
-            }
-            set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string numDocumento {
-            get {
-                return this.numDocumentoField;
-            }
-            set {
-                this.numDocumentoField = value;
-                this.RaisePropertyChanged("numDocumento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string telefono {
-            get {
-                return this.telefonoField;
-            }
-            set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string tipoCliente {
-            get {
-                return this.tipoClienteField;
-            }
-            set {
-                this.tipoClienteField = value;
-                this.RaisePropertyChanged("tipoCliente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string tipoDocumento {
-            get {
-                return this.tipoDocumentoField;
-            }
-            set {
-                this.tipoDocumentoField = value;
-                this.RaisePropertyChanged("tipoDocumento");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriver2", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarDriver2Request {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriver", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarDriverRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2MegaAutos.ServicioDriver.driver objDriver;
         
-        public insertarDriver2Request() {
+        public insertarDriverRequest() {
         }
         
-        public insertarDriver2Request(LP2MegaAutos.ServicioDriver.driver objDriver) {
+        public insertarDriverRequest(LP2MegaAutos.ServicioDriver.driver objDriver) {
             this.objDriver = objDriver;
         }
     }
@@ -280,45 +155,17 @@ namespace LP2MegaAutos.ServicioDriver {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriver2Response", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarDriver2Response {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriverResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarDriverResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarDriver2Response() {
+        public insertarDriverResponse() {
         }
         
-        public insertarDriver2Response(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDrivers2", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarDrivers2Request {
-        
-        public listarDrivers2Request() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDrivers2Response", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarDrivers2Response {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioDriver.driver[] @return;
-        
-        public listarDrivers2Response() {
-        }
-        
-        public listarDrivers2Response(LP2MegaAutos.ServicioDriver.driver[] @return) {
+        public insertarDriverResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -377,12 +224,12 @@ namespace LP2MegaAutos.ServicioDriver {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioDriver.cliente[] @return;
+        public LP2MegaAutos.ServicioDriver.driver[] @return;
         
         public listarDriversResponse() {
         }
         
-        public listarDriversResponse(LP2MegaAutos.ServicioDriver.cliente[] @return) {
+        public listarDriversResponse(LP2MegaAutos.ServicioDriver.driver[] @return) {
             this.@return = @return;
         }
     }
@@ -438,47 +285,26 @@ namespace LP2MegaAutos.ServicioDriver {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioDriver.insertarDriver2Response LP2MegaAutos.ServicioDriver.DriverWS.insertarDriver2(LP2MegaAutos.ServicioDriver.insertarDriver2Request request) {
-            return base.Channel.insertarDriver2(request);
+        LP2MegaAutos.ServicioDriver.insertarDriverResponse LP2MegaAutos.ServicioDriver.DriverWS.insertarDriver(LP2MegaAutos.ServicioDriver.insertarDriverRequest request) {
+            return base.Channel.insertarDriver(request);
         }
         
-        public int insertarDriver2(LP2MegaAutos.ServicioDriver.driver objDriver) {
-            LP2MegaAutos.ServicioDriver.insertarDriver2Request inValue = new LP2MegaAutos.ServicioDriver.insertarDriver2Request();
+        public int insertarDriver(LP2MegaAutos.ServicioDriver.driver objDriver) {
+            LP2MegaAutos.ServicioDriver.insertarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.insertarDriverRequest();
             inValue.objDriver = objDriver;
-            LP2MegaAutos.ServicioDriver.insertarDriver2Response retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).insertarDriver2(inValue);
+            LP2MegaAutos.ServicioDriver.insertarDriverResponse retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).insertarDriver(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.insertarDriver2Response> LP2MegaAutos.ServicioDriver.DriverWS.insertarDriver2Async(LP2MegaAutos.ServicioDriver.insertarDriver2Request request) {
-            return base.Channel.insertarDriver2Async(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.insertarDriverResponse> LP2MegaAutos.ServicioDriver.DriverWS.insertarDriverAsync(LP2MegaAutos.ServicioDriver.insertarDriverRequest request) {
+            return base.Channel.insertarDriverAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.insertarDriver2Response> insertarDriver2Async(LP2MegaAutos.ServicioDriver.driver objDriver) {
-            LP2MegaAutos.ServicioDriver.insertarDriver2Request inValue = new LP2MegaAutos.ServicioDriver.insertarDriver2Request();
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.insertarDriverResponse> insertarDriverAsync(LP2MegaAutos.ServicioDriver.driver objDriver) {
+            LP2MegaAutos.ServicioDriver.insertarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.insertarDriverRequest();
             inValue.objDriver = objDriver;
-            return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).insertarDriver2Async(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioDriver.listarDrivers2Response LP2MegaAutos.ServicioDriver.DriverWS.listarDrivers2(LP2MegaAutos.ServicioDriver.listarDrivers2Request request) {
-            return base.Channel.listarDrivers2(request);
-        }
-        
-        public LP2MegaAutos.ServicioDriver.driver[] listarDrivers2() {
-            LP2MegaAutos.ServicioDriver.listarDrivers2Request inValue = new LP2MegaAutos.ServicioDriver.listarDrivers2Request();
-            LP2MegaAutos.ServicioDriver.listarDrivers2Response retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).listarDrivers2(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.listarDrivers2Response> LP2MegaAutos.ServicioDriver.DriverWS.listarDrivers2Async(LP2MegaAutos.ServicioDriver.listarDrivers2Request request) {
-            return base.Channel.listarDrivers2Async(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.listarDrivers2Response> listarDrivers2Async() {
-            LP2MegaAutos.ServicioDriver.listarDrivers2Request inValue = new LP2MegaAutos.ServicioDriver.listarDrivers2Request();
-            return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).listarDrivers2Async(inValue);
+            return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).insertarDriverAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -509,7 +335,7 @@ namespace LP2MegaAutos.ServicioDriver {
             return base.Channel.listarDrivers(request);
         }
         
-        public LP2MegaAutos.ServicioDriver.cliente[] listarDrivers() {
+        public LP2MegaAutos.ServicioDriver.driver[] listarDrivers() {
             LP2MegaAutos.ServicioDriver.listarDriversRequest inValue = new LP2MegaAutos.ServicioDriver.listarDriversRequest();
             LP2MegaAutos.ServicioDriver.listarDriversResponse retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).listarDrivers(inValue);
             return retVal.@return;

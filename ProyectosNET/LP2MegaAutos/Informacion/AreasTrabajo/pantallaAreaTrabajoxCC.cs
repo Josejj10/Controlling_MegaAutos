@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using LP2MegaAutos.ServicioAreaTrabajo;
 
 namespace LP2MegaAutos
 {
@@ -16,6 +17,11 @@ namespace LP2MegaAutos
         public pantallaAreaTrabajoxCC()
         {
             InitializeComponent();
+        }
+        public pantallaAreaTrabajoxCC(areaTrabajo areaTrabajo)
+        {
+            InitializeComponent();
+            lbl_NombreAreaTrabajoxCC.Text = areaTrabajo.nombre;
         }
 
         private void btn_AgregarCuentaContable_Click(object sender, EventArgs e)

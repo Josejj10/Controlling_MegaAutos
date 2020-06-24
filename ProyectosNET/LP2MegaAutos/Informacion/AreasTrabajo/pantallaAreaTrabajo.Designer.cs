@@ -35,9 +35,6 @@
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.il_AreaTrabajo1 = new LP2MegaAutos.itemLista();
-            this.il_AreaTrabajo2 = new LP2MegaAutos.itemLista();
-            this.il_AreaTrabajo3 = new LP2MegaAutos.itemLista();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaAreasTrabajo = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaAreasTrabajo = new System.Windows.Forms.Label();
@@ -52,7 +49,6 @@
             this.btnAZ = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.rpn_ListaAreasTrabajo.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -128,9 +124,6 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.flowLayoutPanel1.Controls.Add(this.il_AreaTrabajo1);
-            this.flowLayoutPanel1.Controls.Add(this.il_AreaTrabajo2);
-            this.flowLayoutPanel1.Controls.Add(this.il_AreaTrabajo3);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -142,73 +135,6 @@
             this.tagsExtender1.SetTagFontName(this.flowLayoutPanel1, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.flowLayoutPanel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flowLayoutPanel1, System.Drawing.FontStyle.Regular);
-            // 
-            // il_AreaTrabajo1
-            // 
-            this.il_AreaTrabajo1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.il_AreaTrabajo1.BackColor = System.Drawing.Color.Transparent;
-            this.il_AreaTrabajo1.ColorBack = System.Drawing.Color.Transparent;
-            this.il_AreaTrabajo1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_AreaTrabajo1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_AreaTrabajo1.Location = new System.Drawing.Point(34, 3);
-            this.il_AreaTrabajo1.Name = "il_AreaTrabajo1";
-            this.il_AreaTrabajo1.Size = new System.Drawing.Size(497, 104);
-            this.il_AreaTrabajo1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.il_AreaTrabajo1, null);
-            this.tagsExtender1.SetTag3(this.il_AreaTrabajo1, null);
-            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo1, System.Drawing.FontStyle.Regular);
-            this.il_AreaTrabajo1.TextoAgregadoPor = "Percy Jackson";
-            this.il_AreaTrabajo1.TextoFecha = "dd - mm - aaaa";
-            this.il_AreaTrabajo1.TextoPrincipal = "Mecánica";
-            this.il_AreaTrabajo1.Textosecundario = "";
-            this.il_AreaTrabajo1.TextoTercero = "";
-            this.il_AreaTrabajo1.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
-            // 
-            // il_AreaTrabajo2
-            // 
-            this.il_AreaTrabajo2.BackColor = System.Drawing.Color.Transparent;
-            this.il_AreaTrabajo2.ColorBack = System.Drawing.Color.Transparent;
-            this.il_AreaTrabajo2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_AreaTrabajo2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_AreaTrabajo2.Location = new System.Drawing.Point(34, 113);
-            this.il_AreaTrabajo2.Name = "il_AreaTrabajo2";
-            this.il_AreaTrabajo2.Size = new System.Drawing.Size(497, 104);
-            this.il_AreaTrabajo2.TabIndex = 56;
-            this.tagsExtender1.SetTag2(this.il_AreaTrabajo2, null);
-            this.tagsExtender1.SetTag3(this.il_AreaTrabajo2, null);
-            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo2, System.Drawing.FontStyle.Regular);
-            this.il_AreaTrabajo2.TextoAgregadoPor = "Percy Jackson";
-            this.il_AreaTrabajo2.TextoFecha = "dd - mm - aaaa";
-            this.il_AreaTrabajo2.TextoPrincipal = "Planchado";
-            this.il_AreaTrabajo2.Textosecundario = "";
-            this.il_AreaTrabajo2.TextoTercero = "";
-            this.il_AreaTrabajo2.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
-            // 
-            // il_AreaTrabajo3
-            // 
-            this.il_AreaTrabajo3.BackColor = System.Drawing.Color.Transparent;
-            this.il_AreaTrabajo3.ColorBack = System.Drawing.Color.Transparent;
-            this.il_AreaTrabajo3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_AreaTrabajo3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_AreaTrabajo3.Location = new System.Drawing.Point(34, 223);
-            this.il_AreaTrabajo3.Name = "il_AreaTrabajo3";
-            this.il_AreaTrabajo3.Size = new System.Drawing.Size(497, 104);
-            this.il_AreaTrabajo3.TabIndex = 55;
-            this.tagsExtender1.SetTag2(this.il_AreaTrabajo3, null);
-            this.tagsExtender1.SetTag3(this.il_AreaTrabajo3, null);
-            this.tagsExtender1.SetTagFontName(this.il_AreaTrabajo3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_AreaTrabajo3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_AreaTrabajo3, System.Drawing.FontStyle.Regular);
-            this.il_AreaTrabajo3.TextoAgregadoPor = "Percy Jackson";
-            this.il_AreaTrabajo3.TextoFecha = "dd - mm - aaaa";
-            this.il_AreaTrabajo3.TextoPrincipal = "Pintura";
-            this.il_AreaTrabajo3.Textosecundario = "";
-            this.il_AreaTrabajo3.TextoTercero = "";
-            this.il_AreaTrabajo3.ItemListaClick += new LP2MegaAutos.itemLista.ButtonClickEventHandler(this.ItemLista_Click);
             // 
             // roundedPanel4
             // 
@@ -275,7 +201,7 @@
             this.lbl_ListaAreasTrabajo.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaAreasTrabajo.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaAreasTrabajo.Name = "lbl_ListaAreasTrabajo";
-            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(151, 22);
+            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(158, 19);
             this.lbl_ListaAreasTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaAreasTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaAreasTrabajo, null);
@@ -541,7 +467,6 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.rpn_ListaAreasTrabajo.ResumeLayout(false);
             this.rpn_ListaAreasTrabajo.PerformLayout();
             this.rndReciente.ResumeLayout(false);
@@ -560,9 +485,6 @@
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private itemLista il_AreaTrabajo1;
-        private itemLista il_AreaTrabajo2;
-        private itemLista il_AreaTrabajo3;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaAreasTrabajo;
         private System.Windows.Forms.Label lbl_ListaAreasTrabajo;

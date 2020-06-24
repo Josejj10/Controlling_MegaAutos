@@ -35,10 +35,6 @@
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpClientes = new System.Windows.Forms.FlowLayoutPanel();
-            this.il_Clientes1 = new LP2MegaAutos.itemLista();
-            this.il_Clientes3 = new LP2MegaAutos.itemLista();
-            this.il_Clientes2 = new LP2MegaAutos.itemLista();
-            this.itemLista1 = new LP2MegaAutos.itemLista();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaDrivers = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaClientes = new System.Windows.Forms.Label();
@@ -55,7 +51,6 @@
             this.btnAZ = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flpClientes.SuspendLayout();
             this.rpn_ListaDrivers.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -131,10 +126,6 @@
             // 
             this.flpClientes.AutoScroll = true;
             this.flpClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.flpClientes.Controls.Add(this.il_Clientes1);
-            this.flpClientes.Controls.Add(this.il_Clientes3);
-            this.flpClientes.Controls.Add(this.il_Clientes2);
-            this.flpClientes.Controls.Add(this.itemLista1);
             this.flpClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpClientes.Location = new System.Drawing.Point(0, 27);
             this.flpClientes.Name = "flpClientes";
@@ -146,92 +137,6 @@
             this.tagsExtender1.SetTagFontName(this.flpClientes, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.flpClientes, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flpClientes, System.Drawing.FontStyle.Regular);
-            // 
-            // il_Clientes1
-            // 
-            this.il_Clientes1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.il_Clientes1.BackColor = System.Drawing.Color.Transparent;
-            this.il_Clientes1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Clientes1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Clientes1.ColorPanel = System.Drawing.Color.White;
-            this.il_Clientes1.Location = new System.Drawing.Point(35, 4);
-            this.il_Clientes1.Margin = new System.Windows.Forms.Padding(4);
-            this.il_Clientes1.Name = "il_Clientes1";
-            this.il_Clientes1.Size = new System.Drawing.Size(497, 104);
-            this.il_Clientes1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.il_Clientes1, null);
-            this.tagsExtender1.SetTag3(this.il_Clientes1, null);
-            this.tagsExtender1.SetTagFontName(this.il_Clientes1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Clientes1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Clientes1, System.Drawing.FontStyle.Regular);
-            this.il_Clientes1.TextoAgregadoPor = "Percy Jackson";
-            this.il_Clientes1.TextoFecha = "dd - mm - aaaa";
-            this.il_Clientes1.TextoPrincipal = "Melvin Javier";
-            this.il_Clientes1.Textosecundario = "DNI: 702511648";
-            this.il_Clientes1.TextoTercero = "Empresa";
-            // 
-            // il_Clientes3
-            // 
-            this.il_Clientes3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Clientes3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Clientes3.ColorPanel = System.Drawing.Color.White;
-            this.il_Clientes3.Location = new System.Drawing.Point(35, 116);
-            this.il_Clientes3.Margin = new System.Windows.Forms.Padding(4);
-            this.il_Clientes3.Name = "il_Clientes3";
-            this.il_Clientes3.Size = new System.Drawing.Size(497, 104);
-            this.il_Clientes3.TabIndex = 56;
-            this.tagsExtender1.SetTag2(this.il_Clientes3, null);
-            this.tagsExtender1.SetTag3(this.il_Clientes3, null);
-            this.tagsExtender1.SetTagFontName(this.il_Clientes3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Clientes3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Clientes3, System.Drawing.FontStyle.Regular);
-            this.il_Clientes3.TextoAgregadoPor = "Percy Jackson";
-            this.il_Clientes3.TextoFecha = "dd - mm - aaaa";
-            this.il_Clientes3.TextoPrincipal = "Rodrigo Cossio";
-            this.il_Clientes3.Textosecundario = "Pasaporte : 121323454";
-            this.il_Clientes3.TextoTercero = "Persona Natural";
-            // 
-            // il_Clientes2
-            // 
-            this.il_Clientes2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Clientes2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Clientes2.ColorPanel = System.Drawing.Color.White;
-            this.il_Clientes2.Location = new System.Drawing.Point(35, 228);
-            this.il_Clientes2.Margin = new System.Windows.Forms.Padding(4);
-            this.il_Clientes2.Name = "il_Clientes2";
-            this.il_Clientes2.Size = new System.Drawing.Size(497, 104);
-            this.il_Clientes2.TabIndex = 55;
-            this.tagsExtender1.SetTag2(this.il_Clientes2, null);
-            this.tagsExtender1.SetTag3(this.il_Clientes2, null);
-            this.tagsExtender1.SetTagFontName(this.il_Clientes2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Clientes2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Clientes2, System.Drawing.FontStyle.Regular);
-            this.il_Clientes2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Clientes2.TextoFecha = "dd - mm - aaaa";
-            this.il_Clientes2.TextoPrincipal = "Principal";
-            this.il_Clientes2.Textosecundario = "Secundario";
-            this.il_Clientes2.TextoTercero = "Terceario";
-            // 
-            // itemLista1
-            // 
-            this.itemLista1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemLista1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemLista1.ColorPanel = System.Drawing.Color.White;
-            this.itemLista1.Location = new System.Drawing.Point(35, 340);
-            this.itemLista1.Margin = new System.Windows.Forms.Padding(4);
-            this.itemLista1.Name = "itemLista1";
-            this.itemLista1.Size = new System.Drawing.Size(497, 104);
-            this.itemLista1.TabIndex = 57;
-            this.tagsExtender1.SetTag2(this.itemLista1, null);
-            this.tagsExtender1.SetTag3(this.itemLista1, null);
-            this.tagsExtender1.SetTagFontName(this.itemLista1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemLista1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemLista1, System.Drawing.FontStyle.Regular);
-            this.itemLista1.TextoAgregadoPor = "Percy Jackson";
-            this.itemLista1.TextoFecha = "dd - mm - aaaa";
-            this.itemLista1.TextoPrincipal = "Principal";
-            this.itemLista1.Textosecundario = "Secundario";
-            this.itemLista1.TextoTercero = "Terceario";
             // 
             // roundedPanel4
             // 
@@ -298,7 +203,7 @@
             this.lbl_ListaClientes.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaClientes.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaClientes.Name = "lbl_ListaClientes";
-            this.lbl_ListaClientes.Size = new System.Drawing.Size(78, 22);
+            this.lbl_ListaClientes.Size = new System.Drawing.Size(82, 19);
             this.lbl_ListaClientes.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaClientes, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaClientes, null);
@@ -330,7 +235,7 @@
             this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
             this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 21);
+            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 38);
             this.cTxt_MasFiltros.TabIndex = 71;
             this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
             this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
@@ -350,7 +255,7 @@
             this.btn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
+            this.btn_Agregar.Size = new System.Drawing.Size(102, 31);
             this.btn_Agregar.TabIndex = 66;
             this.tagsExtender1.SetTag2(this.btn_Agregar, null);
             this.tagsExtender1.SetTag3(this.btn_Agregar, null);
@@ -595,7 +500,6 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flpClientes.ResumeLayout(false);
             this.rpn_ListaDrivers.ResumeLayout(false);
             this.rpn_ListaDrivers.PerformLayout();
             this.rndReciente.ResumeLayout(false);
@@ -614,13 +518,9 @@
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flpClientes;
-        private itemLista il_Clientes1;
-        private itemLista il_Clientes3;
-        private itemLista il_Clientes2;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaDrivers;
         private System.Windows.Forms.Label lbl_ListaClientes;
-        private itemLista itemLista1;
         private System.Windows.Forms.ComboBox cmbFiltrarTipoCliente;
         private CustomControls.ClickableText cTxt_MasFiltros;
         private System.Windows.Forms.Button btn_Agregar;

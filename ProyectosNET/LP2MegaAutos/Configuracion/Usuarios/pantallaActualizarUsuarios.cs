@@ -41,15 +41,8 @@ namespace LP2MegaAutos
         private itemLista createItemListaUsuario(ServicioUsuario.usuario usuario, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
-            il.Anchor = AnchorStyles.Top;
-            il.BackColor = Color.Transparent;
-            il.ColorBack = Color.Transparent;
-            il.ColorBorde = Colores.PrincipalAzulMetalico;
-            il.ColorPanel = Colores.BackBackground;
-            //il.Location = new Point(35, 4);
-            il.Margin = new Padding(4);
+            BotonesDinamicosHelper.personalizarItemLista(il);
             il.Name = "il" + usuario.id;
-            il.Size = new Size(497, 104);
             il.TextoAgregadoPor = agregadoPor;
             il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = usuario.nombre;

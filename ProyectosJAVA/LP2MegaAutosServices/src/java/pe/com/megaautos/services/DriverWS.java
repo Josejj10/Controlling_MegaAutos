@@ -36,21 +36,7 @@ public class DriverWS {
         return drivers;
     }
     
-    @WebMethod(operationName = "listarDrivers2")
-    public ArrayList<Driver> listarDrivers2(){
-        ArrayList<Driver> drivers = new ArrayList<>();
-//        try{
-//            drivers = daoDriver.listar();
-//        }catch(Exception ex){
-//            System.out.println(ex.getCause());
-//            System.out.println(ex.getMessage());
-//        }
-        Driver driver = new Driver();
-        drivers.add(driver);
-        return drivers;
-    }
-    
-    @WebMethod(operationName = "insertarDriver2")
+    @WebMethod(operationName = "insertarDriver")
     public int insertarDriver(@WebParam(name = "objDriver") Driver driver) {
         int resultado = 0;
         try{

@@ -10,6 +10,24 @@
     <service name="UsuarioWS">
       <implementation-class>pe.com.megaautos.services.UsuarioWS</implementation-class>
     </service>
+    <service name="AreaTrabajoCuentaContableWS">
+      <implementation-class>pe.com.megaautos.services.AreaTrabajoCuentaContableWS</implementation-class>
+    </service>
+    <service name="AreaTrabajoWS">
+      <implementation-class>pe.com.megaautos.services.AreaTrabajoWS</implementation-class>
+    </service>
+    <service name="ComprobantePagoWS">
+      <implementation-class>pe.com.megaautos.services.ComprobantePagoWS</implementation-class>
+    </service>
+    <service name="CuentaContableWS">
+      <implementation-class>pe.com.megaautos.services.CuentaContableWS</implementation-class>
+    </service>
+    <service name="EmpresaWS">
+      <implementation-class>pe.com.megaautos.services.EmpresaWS</implementation-class>
+    </service>
+    <service name="OrdenTrabajoWS">
+      <implementation-class>pe.com.megaautos.services.OrdenTrabajoWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

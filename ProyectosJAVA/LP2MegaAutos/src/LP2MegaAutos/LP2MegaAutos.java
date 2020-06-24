@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.HashSet;
+import pe.com.megaautos.config.DBController;
 import pe.com.megaautos.dao.AreaTrabajoDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.model.Vehiculo;
@@ -83,50 +84,50 @@ public class LP2MegaAutos {
 //        for(Usuario u : usuarios)
 //            System.out.println(u.getId() + " " + u.getNombre() + " " + u.getCorreo() + " " + u.getTipoUsuario());
 
-        ClienteDAO daoCliente = new ClienteMySQL();
-        Cliente cl1 = new Cliente();
-        cl1 = daoCliente.buscar(13);
-        SedeDAO daoSede = new SedeMySQL();
-        Sede s1 = new Sede();
-        s1 = daoSede.buscar(2);
-        VehiculoDAO daoVehiculo = new VehiculoMySQL();
-        Vehiculo veh1 = new Vehiculo();
-        veh1 = daoVehiculo.buscar(1);
-        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-        Date date = formato.parse("24-12-2020");
-        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0, s1);
-        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
-        ot1.setCliente(cl1);
-        ot1.setVehiculo(veh1);
-        daoOrdenTrabajo.insertar(ot1);
-        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
-        ots = daoOrdenTrabajo.listar();
-        for(OrdenTrabajo ot : ots)
-            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre() + " " + ot.getSede().getDistrito() + " " + ot.getVehiculo().getPlaca());
-
-        
-        /* PRUEBAS SQL
+//        ClienteDAO daoCliente = new ClienteMySQL();
+//        Cliente cl1 = new Cliente();
+//        cl1 = daoCliente.buscar(13);
+//        SedeDAO daoSede = new SedeMySQL();
+//        Sede s1 = new Sede();
+//        s1 = daoSede.buscar(2);
+//        VehiculoDAO daoVehiculo = new VehiculoMySQL();
+//        Vehiculo veh1 = new Vehiculo();
+//        veh1 = daoVehiculo.buscar(1);
+//        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+//        Date date = formato.parse("24-12-2020");
+//        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0, s1);
+//        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
+//        ot1.setCliente(cl1);
+//        ot1.setVehiculo(veh1);
+//        daoOrdenTrabajo.insertar(ot1);
+//        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
+//        ots = daoOrdenTrabajo.listar();
+//        for(OrdenTrabajo ot : ots)
+//            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre() + " " + ot.getSede().getDistrito() + " " + ot.getVehiculo().getPlaca());
+//
+//        
+        //PRUEBAS SQL
         //Prueba Driver
-//        Driver dr = new Driver(1/10);
-//        Driver dr2 = new Driver(2/5);
- //       DriverDAO daoDriver = new DriverMySQL();
-//        daoDriver.insertar(dr);
-//        daoDriver.insertar(dr2);
-//        ArrayList<Driver> drivers = new ArrayList<>();
-//        drivers = daoDriver.listar();
-//        for(Driver d : drivers){
-//            System.out.println(d.getFormula());
-//        }
-//        Driver dr3 = new Driver();
-//        dr3 = daoDriver.buscar(3);
-//        dr3.setFormula(0.65);
-//        daoDriver.actualizar(dr3);
-//        daoDriver.eliminar(6);
-//        ArrayList<Driver> drivers = new ArrayList<>();
-//        drivers = daoDriver.listar();
-//        for(Driver d : drivers){
-//            System.out.println(d.getFormula());
-//        }
+        Driver dr = new Driver(1/10);
+        Driver dr2 = new Driver(2/5);
+        DriverDAO daoDriver = DBController.controller.getDriverDAO();
+        daoDriver.insertar(dr);
+        daoDriver.insertar(dr2);
+        ArrayList<Driver> drivers = new ArrayList<>();
+        drivers = daoDriver.listar();
+        for(Driver d : drivers){
+            System.out.println(d.getFormula());
+        }
+        Driver dr3 = new Driver();
+        dr3 = daoDriver.buscar(3);
+        dr3.setFormula(0.65);
+        daoDriver.actualizar(dr3);
+        daoDriver.eliminar(6);
+        //ArrayList<Driver> drivers = new ArrayList<>();
+        drivers = daoDriver.listar();
+        for(Driver d : drivers){
+            System.out.println(d.getFormula());
+        }
 
         // Prueba Sede
         //Sede s1 = new Sede("Pueblo Libre");
@@ -262,6 +263,5 @@ public class LP2MegaAutos {
 //        cps = daoComprobantePago.listar();
 //        for(ComprobantePago cp : cps)
 //            System.out.println(cp.getNumeroComprobante() + " " + cp.getTipoComprobante() + " " + cp.getOrdenTrabajo().getNumeroOrden());        
-*/
     }
 }

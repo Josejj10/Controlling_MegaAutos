@@ -28,12 +28,28 @@ public class DriverWS {
         try{
             drivers = daoDriver.listar();
         }catch(Exception ex){
+            System.out.println(ex.getCause());
             System.out.println(ex.getMessage());
         }
+        if(drivers == null) return new ArrayList<>();
         return drivers;
     }
     
-    @WebMethod(operationName = "insertarDriver")
+    @WebMethod(operationName = "listarDrivers2")
+    public ArrayList<Driver> listarDrivers2(){
+        ArrayList<Driver> drivers = new ArrayList<>();
+//        try{
+//            drivers = daoDriver.listar();
+//        }catch(Exception ex){
+//            System.out.println(ex.getCause());
+//            System.out.println(ex.getMessage());
+//        }
+        Driver driver = new Driver();
+        drivers.add(driver);
+        return drivers;
+    }
+    
+    @WebMethod(operationName = "insertarDriver2")
     public int insertarDriver(@WebParam(name = "objDriver") Driver driver) {
         int resultado = 0;
         try{

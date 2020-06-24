@@ -81,6 +81,11 @@
     <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.Designer.cs">
       <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioAreaTrabajo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioCliente\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -575,6 +580,25 @@
     <EmbeddedResource Include="VentanasPrincipales\pantallaEliminar.resx">
       <DependentUpon>pantallaEliminar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\ServicioAreaTrabajo\AreaTrabajoWS.wsdl" />
+    <None Include="Connected Services\ServicioAreaTrabajo\AreaTrabajoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioAreaTrabajo\LP2MegaAutos.ServicioAreaTrabajo.actualizarAreaTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAreaTrabajo\LP2MegaAutos.ServicioAreaTrabajo.areaTrabajo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAreaTrabajo\LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAreaTrabajo\LP2MegaAutos.ServicioAreaTrabajo.insertarAreaTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAreaTrabajo\LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioCliente\ClienteWS.wsdl" />
     <None Include="Connected Services\ServicioCliente\ClienteWS.xsd">
       <SubType>Designer</SubType>
@@ -601,19 +625,13 @@
     <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.actualizarDriverResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.cliente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.driver.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.eliminarDriverResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.insertarDriver2Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.listarDrivers2Response.datasource">
+    <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.insertarDriverResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioDriver\LP2MegaAutos.ServicioDriver.listarDriversResponse.datasource">
@@ -771,6 +789,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServicioAreaTrabajo\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioAreaTrabajo\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioAreaTrabajo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Informacion\creditos.txt" />
     <Content Include="Resources\editar.png" />
     <None Include="Resources\Menu\car.png" />
@@ -797,6 +821,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServicioAreaTrabajo\" />
     <WCFMetadataStorage Include="Connected Services\ServicioCliente\" />
     <WCFMetadataStorage Include="Connected Services\ServicioDriver\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />

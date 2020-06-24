@@ -35,9 +35,6 @@
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpDrivers = new System.Windows.Forms.FlowLayoutPanel();
-            this.il_Drivers1 = new LP2MegaAutos.itemLista();
-            this.il_Drivers3 = new LP2MegaAutos.itemLista();
-            this.il_Drivers2 = new LP2MegaAutos.itemLista();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaDrivers = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaDrivers = new System.Windows.Forms.Label();
@@ -54,7 +51,6 @@
             this.btnAZ = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flpDrivers.SuspendLayout();
             this.rpn_ListaDrivers.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -130,9 +126,6 @@
             // 
             this.flpDrivers.AutoScroll = true;
             this.flpDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.flpDrivers.Controls.Add(this.il_Drivers1);
-            this.flpDrivers.Controls.Add(this.il_Drivers3);
-            this.flpDrivers.Controls.Add(this.il_Drivers2);
             this.flpDrivers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpDrivers.Location = new System.Drawing.Point(0, 27);
             this.flpDrivers.Name = "flpDrivers";
@@ -144,70 +137,6 @@
             this.tagsExtender1.SetTagFontName(this.flpDrivers, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.flpDrivers, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flpDrivers, System.Drawing.FontStyle.Regular);
-            // 
-            // il_Drivers1
-            // 
-            this.il_Drivers1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.il_Drivers1.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers1.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers1.Location = new System.Drawing.Point(35, 4);
-            this.il_Drivers1.Margin = new System.Windows.Forms.Padding(4);
-            this.il_Drivers1.Name = "il_Drivers1";
-            this.il_Drivers1.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers1.TabIndex = 54;
-            this.tagsExtender1.SetTag2(this.il_Drivers1, null);
-            this.tagsExtender1.SetTag3(this.il_Drivers1, null);
-            this.tagsExtender1.SetTagFontName(this.il_Drivers1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Drivers1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Drivers1, System.Drawing.FontStyle.Regular);
-            this.il_Drivers1.TextoAgregadoPor = "juanito";
-            this.il_Drivers1.TextoFecha = "24/05/2019";
-            this.il_Drivers1.TextoPrincipal = "1/5";
-            this.il_Drivers1.Textosecundario = "Mecánica";
-            this.il_Drivers1.TextoTercero = "Luz";
-            // 
-            // il_Drivers3
-            // 
-            this.il_Drivers3.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers3.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers3.Location = new System.Drawing.Point(35, 116);
-            this.il_Drivers3.Margin = new System.Windows.Forms.Padding(4);
-            this.il_Drivers3.Name = "il_Drivers3";
-            this.il_Drivers3.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers3.TabIndex = 56;
-            this.tagsExtender1.SetTag2(this.il_Drivers3, null);
-            this.tagsExtender1.SetTag3(this.il_Drivers3, null);
-            this.tagsExtender1.SetTagFontName(this.il_Drivers3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Drivers3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Drivers3, System.Drawing.FontStyle.Regular);
-            this.il_Drivers3.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers3.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers3.TextoPrincipal = "3/8";
-            this.il_Drivers3.Textosecundario = "Planchado";
-            this.il_Drivers3.TextoTercero = "Agua";
-            // 
-            // il_Drivers2
-            // 
-            this.il_Drivers2.ColorBack = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.il_Drivers2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.il_Drivers2.ColorPanel = System.Drawing.Color.White;
-            this.il_Drivers2.Location = new System.Drawing.Point(35, 228);
-            this.il_Drivers2.Margin = new System.Windows.Forms.Padding(4);
-            this.il_Drivers2.Name = "il_Drivers2";
-            this.il_Drivers2.Size = new System.Drawing.Size(497, 104);
-            this.il_Drivers2.TabIndex = 55;
-            this.tagsExtender1.SetTag2(this.il_Drivers2, null);
-            this.tagsExtender1.SetTag3(this.il_Drivers2, null);
-            this.tagsExtender1.SetTagFontName(this.il_Drivers2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.il_Drivers2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.il_Drivers2, System.Drawing.FontStyle.Regular);
-            this.il_Drivers2.TextoAgregadoPor = "Percy Jackson";
-            this.il_Drivers2.TextoFecha = "dd - mm - aaaa";
-            this.il_Drivers2.TextoPrincipal = "4/9";
-            this.il_Drivers2.Textosecundario = "Pintura";
-            this.il_Drivers2.TextoTercero = "Luz";
             // 
             // roundedPanel4
             // 
@@ -274,7 +203,7 @@
             this.lbl_ListaDrivers.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaDrivers.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaDrivers.Name = "lbl_ListaDrivers";
-            this.lbl_ListaDrivers.Size = new System.Drawing.Size(70, 22);
+            this.lbl_ListaDrivers.Size = new System.Drawing.Size(72, 19);
             this.lbl_ListaDrivers.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaDrivers, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaDrivers, null);
@@ -306,7 +235,7 @@
             this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
             this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 21);
+            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 38);
             this.cTxt_MasFiltros.TabIndex = 65;
             this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
             this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
@@ -326,7 +255,7 @@
             this.btn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
+            this.btn_Agregar.Size = new System.Drawing.Size(102, 31);
             this.btn_Agregar.TabIndex = 60;
             this.tagsExtender1.SetTag2(this.btn_Agregar, null);
             this.tagsExtender1.SetTag3(this.btn_Agregar, null);
@@ -571,7 +500,6 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flpDrivers.ResumeLayout(false);
             this.rpn_ListaDrivers.ResumeLayout(false);
             this.rpn_ListaDrivers.PerformLayout();
             this.rndReciente.ResumeLayout(false);
@@ -590,9 +518,6 @@
         private System.Windows.Forms.TextBox txt_Buscar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flpDrivers;
-        private itemLista il_Drivers1;
-        private itemLista il_Drivers3;
-        private itemLista il_Drivers2;
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaDrivers;
         private System.Windows.Forms.Label lbl_ListaDrivers;

@@ -15,6 +15,7 @@ namespace LP2MegaAutos
     public partial class pantallaActualizarSedes : Pantalla
     {
         ServicioSede.SedeWSClient daoSede;
+        List<sede> sedes;
         public pantallaActualizarSedes()
         {
             InitializeComponent();
@@ -22,14 +23,40 @@ namespace LP2MegaAutos
             daoSede = new ServicioSede.SedeWSClient();
             inicializarItemsLista();
         }
+
         private void inicializarItemsLista()
         {
-            List<sede> sedes = daoSede.listarSedes().ToList();
+            sedes = daoSede.listarSedes().ToList();
+            crearItemsLista();
+        }
+
+        private void crearItemsLista()
+        {
             if (sedes == null) return;
             foreach (sede s in sedes)
             {
                 createItemListaSede(s, "Carter Kane", DateTime.Now);
             }
+        }
+
+        private void quitarItemsLista()
+        {
+            foreach (Control c in flpSedes.Controls)
+                c.Parent.Controls.Remove(c);
+        }
+
+        private void organizarAZ()
+        {
+            sedes.OrderBy(g => g.distrito);
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarZA()
+        {
+            sedes.OrderByDescending(g => g.distrito);
+            quitarItemsLista();
+            crearItemsLista();
         }
 
         private itemLista createItemListaSede(ServicioSede.sede sede, string agregadoPor, DateTime fechaAgregado)
@@ -43,7 +70,7 @@ namespace LP2MegaAutos
             il.Textosecundario = sede.distrito;
             il.TextoTercero = sede.direccion;
             il.ItemListaClick += (sender, e) => { verDatosSede(sender, e, sede); };
-            il.EditarClick += (sender, e) => { btnEditarClick(sender, e, sede); };
+            il.esconderBotonEditar();
             flpSedes.Controls.Add(il);
             return il;
         }
@@ -51,19 +78,22 @@ namespace LP2MegaAutos
         private void verDatosSede(object sender, EventArgs e, ServicioSede.sede sede)
         {
             pantallaEditarSede pes = new pantallaEditarSede(sede);
-            if (pes.ShowDialog() == DialogResult.OK)
+            DialogResult d = pes.ShowDialog();
+            if (d == DialogResult.OK)
                 MessageBox.Show("OK");
-        }
-        private void btnEditarClick(Object sender, EventArgs e, ServicioSede.sede sede)
-        {
-            pantallaEditarSede pes = new pantallaEditarSede(sede);
-            if (pes.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
+            else if (d == DialogResult.Retry)
+            { 
+                // Eliminar
+                daoSede.eliminarSede(sede.id);
+                flpSedes.Controls.RemoveByKey("il" + sede.id);
+                //ordenarItemsLista();
+                inicializarItemsLista();
+            }
         }
 
-        private void btnAgregarClick(Object sender, EventArgs e)
+        private void btnAgregarClick(Object sender, EventArgs e, sede sede)
         {
-            pantallaAgregarSede pes = new pantallaAgregarSede();
+            pantallaEditarSede pes = new pantallaEditarSede(sede);
             if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }
@@ -81,6 +111,7 @@ namespace LP2MegaAutos
             this.btnAZ.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btnReciente.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
+            organizarAZ();
         }
 
         private void btn_ZA_Click(object sender, EventArgs e)
@@ -96,6 +127,7 @@ namespace LP2MegaAutos
             this.btnZA.BackColor = Colores.AmarilloInteractivoMenos1;
             this.btnReciente.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
+            organizarZA();
         }
 
         private void btn_Antiguo_Click(object sender, EventArgs e)

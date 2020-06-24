@@ -16,7 +16,7 @@ namespace LP2MegaAutos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            pantallaEditarInformacionPropia pnt = new pantallaEditarInformacionPropia();
+            pantallaEditarUsuario pnt = new pantallaEditarUsuario();
             if (pnt.ShowDialog() == DialogResult.OK)
             {
                 // Actualizar info

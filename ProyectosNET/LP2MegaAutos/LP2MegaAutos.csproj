@@ -131,6 +131,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Framework\OtrosHelper.cs" />
     <Compile Include="Framework\pantallaListasHelper.cs" />
     <Compile Include="Framework\ResizeImageHelper.cs" />
     <Compile Include="Framework\UserControls\Items\itemListaHelper.cs" />
@@ -291,12 +292,6 @@
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Sedes\pantallaAgregarSede.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Sedes\pantallaAgregarSede.Designer.cs">
-      <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
-    </Compile>
     <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,11 +328,11 @@
     <Compile Include="Informacion\Drivers\pantallaEditarDriver.Designer.cs">
       <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.Designer.cs">
-      <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
+    <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.Designer.cs">
+      <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Sedes\pantallaEditarSede.cs">
       <SubType>Form</SubType>
@@ -351,11 +346,11 @@
     <Compile Include="Configuracion\Servicios\pantallaEditarServicio.Designer.cs">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.cs">
+    <Compile Include="Configuracion\Usuarios\pantallaAgregarPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaEditarUsuario.Designer.cs">
-      <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
+    <Compile Include="Configuracion\Usuarios\pantallaAgregarPermisos.Designer.cs">
+      <DependentUpon>pantallaAgregarPermisos.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\pantallaGenerarReporte.cs">
       <SubType>Form</SubType>
@@ -399,6 +394,18 @@
       <DependentUpon>ContenedorPantalla.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasPrincipales\EPermisos.cs" />
+    <Compile Include="VentanasPrincipales\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPrincipales\frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasPrincipales\frmEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanasPrincipales\frmEliminar.Designer.cs">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\frmLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -494,6 +501,12 @@
     <EmbeddedResource Include="VentanasPrincipales\ContenedorPantalla.resx">
       <DependentUpon>ContenedorPantalla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPrincipales\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanasPrincipales\frmEliminar.resx">
+      <DependentUpon>frmEliminar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanasPrincipales\frmLoading.resx">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -548,9 +561,6 @@
     <EmbeddedResource Include="Informacion\Drivers\pantallaAgregarDriver.resx">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Sedes\pantallaAgregarSede.resx">
-      <DependentUpon>pantallaAgregarSede.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\Servicios\pantallaAgregarServicio.resx">
       <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -572,8 +582,8 @@
     <EmbeddedResource Include="Informacion\Drivers\pantallaEditarDriver.resx">
       <DependentUpon>pantallaEditarDriver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaEditarInformacionPropia.resx">
-      <DependentUpon>pantallaEditarInformacionPropia.cs</DependentUpon>
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaEditarUsuario.resx">
+      <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\Sedes\pantallaEditarSede.resx">
       <DependentUpon>pantallaEditarSede.cs</DependentUpon>
@@ -581,8 +591,8 @@
     <EmbeddedResource Include="Configuracion\Servicios\pantallaEditarServicio.resx">
       <DependentUpon>pantallaEditarServicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaEditarUsuario.resx">
-      <DependentUpon>pantallaEditarUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAgregarPermisos.resx">
+      <DependentUpon>pantallaAgregarPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\pantallaGenerarReporte.resx">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>

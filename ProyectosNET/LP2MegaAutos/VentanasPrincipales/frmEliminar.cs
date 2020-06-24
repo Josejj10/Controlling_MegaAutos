@@ -1,21 +1,29 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
-namespace LP2MegaAutos
+namespace LP2MegaAutos.VentanasPrincipales
 {
-    public partial class pantallaEditarInformacionPropia : MetroForm
+    public partial class frmEliminar : MetroForm
     {
-        public pantallaEditarInformacionPropia()
+        private int _idUsuario;
+        public frmEliminar()
         {
             InitializeComponent();
+        }
+        
+        public frmEliminar(string nombreAccion, int idUsuario)
+        {
+            InitializeComponent();
+            lblTexto.Text += nombreAccion + "?";
+            _idUsuario = idUsuario;
         }
 
         #region title_bar
@@ -50,42 +58,21 @@ namespace LP2MegaAutos
             TitleBar.mouse_Move(MousePosition, this);
         }
 
+
         #endregion movement
 
         #endregion title_bar
-        #region Ver Password
-        private bool password_seen = false;
-        private void boton_ver_password_Click(object sender, EventArgs e)
-        {
-                // Cambiar variable 
-                password_seen = !password_seen;
-                if (password_seen)
-                {
-                    txt_NuevaCont.PasswordChar = '\0';
-                    boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
-                }
-                else
-                {
-                    txt_NuevaCont.PasswordChar = '•';
-                    boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
-                }
-        }
-        #endregion Ver Password
 
-        private void btn_GuardarCambios_Click(object sender, EventArgs e)
+        private void btnDarDeBaja_Click(object sender, EventArgs e)
         {
-            this.SendToBack();
+            // TODO Verificar contraseña del usuario
+            // ServicioUsuario.verificarcontraseña(idUsuario,txt_ContraseñaActual.Text)
+            this.DialogResult = DialogResult.OK;
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-
     }
 }

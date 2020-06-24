@@ -40,7 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_NumeroDocumento = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
-            this.txt_NumeroDocumento = new System.Windows.Forms.TextBox();
+            this.txt_Formula = new System.Windows.Forms.TextBox();
             this.lbl_Formula = new System.Windows.Forms.Label();
             this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -231,7 +231,7 @@
             // 
             this.pnl_NumeroDocumento.BackColor = System.Drawing.Color.White;
             this.pnl_NumeroDocumento.Controls.Add(this.rnd_color_1);
-            this.pnl_NumeroDocumento.Controls.Add(this.txt_NumeroDocumento);
+            this.pnl_NumeroDocumento.Controls.Add(this.txt_Formula);
             this.pnl_NumeroDocumento.Controls.Add(this.lbl_Formula);
             this.pnl_NumeroDocumento.Location = new System.Drawing.Point(152, 131);
             this.pnl_NumeroDocumento.Margin = new System.Windows.Forms.Padding(4);
@@ -270,22 +270,22 @@
             this.rnd_color_1.YBorde = 0;
             this.rnd_color_1.YPanel = 0;
             // 
-            // txt_NumeroDocumento
+            // txt_Formula
             // 
-            this.txt_NumeroDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_NumeroDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_NumeroDocumento.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NumeroDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_NumeroDocumento.Location = new System.Drawing.Point(7, 18);
-            this.txt_NumeroDocumento.Name = "txt_NumeroDocumento";
-            this.txt_NumeroDocumento.Size = new System.Drawing.Size(284, 23);
-            this.txt_NumeroDocumento.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_NumeroDocumento, null);
-            this.tagsExtender1.SetTag3(this.txt_NumeroDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NumeroDocumento, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_NumeroDocumento, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_NumeroDocumento, System.Drawing.FontStyle.Bold);
-            this.txt_NumeroDocumento.Text = "1/5";
+            this.txt_Formula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_Formula.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Formula.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Formula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_Formula.Location = new System.Drawing.Point(7, 18);
+            this.txt_Formula.Name = "txt_Formula";
+            this.txt_Formula.Size = new System.Drawing.Size(284, 23);
+            this.txt_Formula.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_Formula, null);
+            this.tagsExtender1.SetTag3(this.txt_Formula, null);
+            this.tagsExtender1.SetTagFontName(this.txt_Formula, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_Formula, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_Formula, System.Drawing.FontStyle.Bold);
+            this.txt_Formula.Text = "1/5";
             // 
             // lbl_Formula
             // 
@@ -596,7 +596,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_NumeroDocumento;
         private RoundedPanel rnd_color_1;
-        private System.Windows.Forms.TextBox txt_NumeroDocumento;
+        private System.Windows.Forms.TextBox txt_Formula;
         private System.Windows.Forms.Label lbl_Formula;
         private RoundedPanel rnd_guardar;
         private System.Windows.Forms.Button btn_guardar;

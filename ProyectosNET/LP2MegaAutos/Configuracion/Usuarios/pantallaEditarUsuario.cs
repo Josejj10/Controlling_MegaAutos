@@ -8,24 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using LP2MegaAutos.ServicioUsuario;
+using LP2MegaAutos.VentanasPrincipales;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaEditarUsuario : MetroForm
     {
+        private usuario _usuario;
         public pantallaEditarUsuario()
         {
             InitializeComponent();
-
         }
-
-        public pantallaEditarUsuario(ServicioUsuario.usuario usuario)
+        public pantallaEditarUsuario(usuario usuario)
         {
             InitializeComponent();
-            this.txt_NombreUsuario.Text = usuario.nombre;
-            this.txt_Correo.Text = usuario.correo;
-            this.lblRol.Text = usuario.tipoUsuario;
+            txtNombre.Text = usuario.nombre;    
+            txt_Correo.Text = usuario.correo;
+            txt_RolUsuario.Text = usuario.tipoUsuario;
+            txt_ContraseñaActual.Text = txt_NuevaCont.Text = txt_RepNCont.Text = "";
+            _usuario = usuario;
         }
+
+
 
         #region title_bar
 
@@ -62,8 +67,26 @@ namespace LP2MegaAutos
         #endregion movement
 
         #endregion title_bar
+        #region Ver Password
+        private bool password_seen = false;
+        private void boton_ver_password_Click(object sender, EventArgs e)
+        {
+                // Cambiar variable 
+                password_seen = !password_seen;
+                if (password_seen)
+                {
+                    txt_NuevaCont.PasswordChar = '\0';
+                    boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
+                }
+                else
+                {
+                    txt_NuevaCont.PasswordChar = '•';
+                    boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+                }
+        }
+        #endregion Ver Password
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void btn_GuardarCambios_Click(object sender, EventArgs e)
         {
             this.SendToBack();
         }
@@ -73,31 +96,104 @@ namespace LP2MegaAutos
             this.DialogResult = DialogResult.Cancel;
         }
 
-        private void btn_guardar_Click_1(object sender, EventArgs e)
+        public usuario Usuario { get {return _usuario; } }
+
+        private bool usuarioValido()
         {
+            // Sacapalabras al txt
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
+                if (f.DialogResult != DialogResult.OK) ;
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_RolUsuario.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese el rol.", MessageBoxButtons.OK);
+                f.Show();
+                return false;
+            }
+
+            if (txt_NuevaCont.Text != txt_RepNCont.Text)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor repita correctamente la nueva contraseña.", MessageBoxButtons.OK);
+                f.Show();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_ContraseñaActual.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese su contraseña para guardar los cambios.", MessageBoxButtons.OK);
+                f.Show();
+                return false;
+            }
+
+
+            return true;
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            if (!usuarioValido())
+                return;
+            // Validar
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel,"Guardar Cambios");
+            if (f.DialogResult != DialogResult.OK)
+                return;
+            // Actualizar usuario
+            _usuario.nombre = txtNombre.Text;
+            _usuario.correo = txt_Correo.Text;
+            _usuario.tipoUsuario = txt_RolUsuario.Text;
+            // TODO 
+            _usuario.password = txt_NuevaCont.Text;
+            //_usuario.nombre = txt_NombreUsuario.Text
             this.DialogResult = DialogResult.OK;
         }
 
-        private void pantallaEditarUsuario_Load(object sender, EventArgs e)
+        private void btnAgregarPermisosClick(object sender, EventArgs e)
+        {
+            if (_usuario == null) return;
+            pantallaAgregarPermisos pes = new pantallaAgregarPermisos(_usuario);
+            if (pes.ShowDialog() != DialogResult.OK)
+                return;
+
+            // Si devolvio OK, actualizar los permisos del Usuario
+            //daoUsuario.actualizarUsuario(pes.Usuario);
+            // Aun no estoy seguro si ver Datos
+        }
+
+        private void crearItemsListaPermisos()
         {
 
         }
 
-        private bool password_seen = false;
-        private void boton_ver_password_Click(object sender, EventArgs e)
+        private void crearitemListaPermiso()
         {
-            // Cambiar variable 
-            password_seen = !password_seen;
-            if (password_seen)
-            {
-                txt_NuevaCont.PasswordChar = '\0';
-                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
-            }
-            else
-            {
-                txt_NuevaCont.PasswordChar = '•';
-                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
-            }
+
+        }
+
+        private void clickItemListaPermiso()
+        {
+
+        }
+
+        private void btnReestablecer_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = _usuario.nombre;
+            txt_Correo.Text = _usuario.correo;
+            txt_RolUsuario.Text = _usuario.tipoUsuario;
+            txt_NuevaCont.Text = txt_ContraseñaActual.Text = txt_RepNCont.Text = "";
+        }
+
+        private void btnCambiarPassword_Click(object sender, EventArgs e)
+        {
+            txt_NuevaCont.Enabled = txt_RepNCont.Enabled = !txt_RepNCont.Enabled;
+        }
+
+        private void txt_ContraseñaActual_Enter(object sender, EventArgs e)
+        {
+            txt_ContraseñaActual.Text = "";
         }
     }
 }

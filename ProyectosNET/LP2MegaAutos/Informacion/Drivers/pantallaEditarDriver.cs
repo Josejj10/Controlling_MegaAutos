@@ -8,27 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using LP2MegaAutos.ServicioDriver;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaEditarDriver : MetroForm
     {
-        // Singleton instance para poder crearlo en la pantalla menu
-        #region instancia
-        private static pantallaEditarDriver _instancia;
-        public static pantallaEditarDriver Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaEditarDriver();
-                return _instancia;
-            }
-        }
-        #endregion instancia
         public pantallaEditarDriver()
         {
             InitializeComponent();
+        }
+
+        public pantallaEditarDriver(driver driver)
+        {
+            txt_AreaTrabajo.Text = "Area Trabajo TBD";
+            txt_CuentaContable.Text = "Cuenta Contable TBD";
+            txt_Formula.Text = driver.formula.ToString();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)

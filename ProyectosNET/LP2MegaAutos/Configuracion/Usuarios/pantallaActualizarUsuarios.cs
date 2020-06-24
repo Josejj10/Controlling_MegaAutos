@@ -29,6 +29,7 @@ namespace LP2MegaAutos
 
         private void inicializarItemsLista()
         {
+            daoUsuario.listarUsuarios();
             List<usuario> usuarios = daoUsuario.listarUsuarios().ToList();
             if (usuarios == null) return;
             foreach (usuario u in usuarios)
@@ -46,7 +47,6 @@ namespace LP2MegaAutos
             il.ColorBack = Color.Transparent;
             il.ColorBorde = Colores.PrincipalAzulMetalico;
             il.ColorPanel = Colores.BackBackground;
-            //il.Location = new Point(35, 4);
             il.Margin = new Padding(4);
             il.Name = "il" + usuario.id;
             il.Size = new Size(497, 104);
@@ -56,26 +56,29 @@ namespace LP2MegaAutos
             il.Textosecundario = usuario.tipoUsuario;
             il.TextoTercero = usuario.correo;
             il.ItemListaClick += (sender, e) => { verDatosUsuario(sender, e, usuario); };
-            il.EditarClick += (sender, e) => { btnEditarClick(sender, e, usuario); };
+            il.esconderBotonEditar();
             flpUsuarios.Controls.Add(il);
             return il;
         }
 
+        private void ordenarLista()
+        {
+            // TODO probablemente esto pueda estar en botonesdinamicoshelper
+        }
 
 
         private void verDatosUsuario(object sender, EventArgs e, ServicioUsuario.usuario usuario)
         {
-            pantallaEditarUsuario pes = new pantallaEditarUsuario(usuario);
-            if (pes.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
-        }
-
-        private void btnEditarClick(object sender, EventArgs e, usuario usuario)
-        {
-            pantallaEditarInformacionPropia pas = new pantallaEditarInformacionPropia();
+            pantallaEditarUsuario pas = new pantallaEditarUsuario(usuario);
             if (pas.ShowDialog() == DialogResult.OK)
             {
-                // Hacer algo
+                // Actualizar el Usuario
+                usuario u = pas.Usuario;
+                daoUsuario.actualizarUsuario(u);
+                flpUsuarios.Controls.RemoveByKey("il" + usuario.id);
+                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+                // todo actualizar FechaUltimaModificacion en BD
+                // ordenarItemsLista();
             }
         }
 

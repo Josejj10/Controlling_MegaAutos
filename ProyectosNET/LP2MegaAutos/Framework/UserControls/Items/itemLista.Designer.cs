@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.rpItem = new LP2MegaAutos.RoundedPanel();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.tlpAgregado = new System.Windows.Forms.TableLayoutPanel();
             this.lblAgregadoEl = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.lblSecundario = new System.Windows.Forms.Label();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.rpItem.SuspendLayout();
             this.tlpAgregado.SuspendLayout();
             this.SuspendLayout();
@@ -56,16 +56,15 @@
             this.rpItem.Controls.Add(this.lblSecundario);
             this.rpItem.Controls.Add(this.lblPrincipal);
             this.rpItem.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpItem.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.rpItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rpItem.Location = new System.Drawing.Point(0, 0);
-            this.rpItem.Margin = new System.Windows.Forms.Padding(4);
             this.rpItem.MenosHeightBorde = 1;
             this.rpItem.MenosHeightPanel = 1;
             this.rpItem.MenosWidthBorde = 1;
             this.rpItem.MenosWidthPanel = 1;
             this.rpItem.Name = "rpItem";
             this.rpItem.PorcLuzColorBorde = 0;
-            this.rpItem.Size = new System.Drawing.Size(663, 128);
+            this.rpItem.Size = new System.Drawing.Size(497, 104);
             this.rpItem.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rpItem, null);
             this.tagsExtender1.SetTag3(this.rpItem, null);
@@ -80,24 +79,47 @@
             this.rpItem.MouseEnter += new System.EventHandler(this.rpItem_MouseEnter);
             this.rpItem.MouseLeave += new System.EventHandler(this.rpItem_MouseLeave);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(440, 11);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(28, 28);
+            this.btnEditar.TabIndex = 9;
+            this.tagsExtender1.SetTag2(this.btnEditar, null);
+            this.tagsExtender1.SetTag3(this.btnEditar, null);
+            this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // tlpAgregado
             // 
             this.tlpAgregado.BackColor = System.Drawing.Color.Transparent;
             this.tlpAgregado.ColumnCount = 4;
             this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 313F));
+            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tlpAgregado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
             this.tlpAgregado.Controls.Add(this.lblAgregadoEl, 0, 0);
             this.tlpAgregado.Controls.Add(this.lblFecha, 1, 0);
             this.tlpAgregado.Controls.Add(this.lblNombre, 3, 0);
             this.tlpAgregado.Controls.Add(this.lblPor, 2, 0);
-            this.tlpAgregado.Location = new System.Drawing.Point(41, 96);
-            this.tlpAgregado.Margin = new System.Windows.Forms.Padding(4);
+            this.tlpAgregado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tlpAgregado.Location = new System.Drawing.Point(31, 78);
             this.tlpAgregado.Name = "tlpAgregado";
             this.tlpAgregado.RowCount = 1;
             this.tlpAgregado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpAgregado.Size = new System.Drawing.Size(593, 26);
+            this.tlpAgregado.Size = new System.Drawing.Size(445, 21);
             this.tlpAgregado.TabIndex = 8;
             this.tagsExtender1.SetTag2(this.tlpAgregado, null);
             this.tagsExtender1.SetTag3(this.tlpAgregado, null);
@@ -115,10 +137,9 @@
             this.lblAgregadoEl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.lblAgregadoEl.Font = new System.Drawing.Font("Montserrat", 9F);
             this.lblAgregadoEl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblAgregadoEl.Location = new System.Drawing.Point(4, 2);
-            this.lblAgregadoEl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAgregadoEl.Location = new System.Drawing.Point(3, 2);
             this.lblAgregadoEl.Name = "lblAgregadoEl";
-            this.lblAgregadoEl.Size = new System.Drawing.Size(105, 21);
+            this.lblAgregadoEl.Size = new System.Drawing.Size(81, 17);
             this.lblAgregadoEl.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.lblAgregadoEl, null);
             this.tagsExtender1.SetTag3(this.lblAgregadoEl, null);
@@ -136,10 +157,9 @@
             this.lblFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.lblFecha.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblFecha.Location = new System.Drawing.Point(121, 2);
-            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Location = new System.Drawing.Point(91, 2);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(97, 21);
+            this.lblFecha.Size = new System.Drawing.Size(77, 17);
             this.lblFecha.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.lblFecha, null);
             this.tagsExtender1.SetTag3(this.lblFecha, null);
@@ -157,10 +177,9 @@
             this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.lblNombre.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblNombre.Location = new System.Drawing.Point(284, 2);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(213, 2);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(122, 21);
+            this.lblNombre.Size = new System.Drawing.Size(97, 17);
             this.lblNombre.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.lblNombre, null);
             this.tagsExtender1.SetTag3(this.lblNombre, null);
@@ -178,10 +197,9 @@
             this.lblPor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.lblPor.Font = new System.Drawing.Font("Montserrat", 9F);
             this.lblPor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblPor.Location = new System.Drawing.Point(233, 2);
-            this.lblPor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPor.Location = new System.Drawing.Point(175, 2);
             this.lblPor.Name = "lblPor";
-            this.lblPor.Size = new System.Drawing.Size(35, 21);
+            this.lblPor.Size = new System.Drawing.Size(29, 17);
             this.lblPor.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.lblPor, null);
             this.tagsExtender1.SetTag3(this.lblPor, null);
@@ -196,12 +214,12 @@
             // 
             this.lblTercerDato.AutoSize = true;
             this.lblTercerDato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.lblTercerDato.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTercerDato.Font = new System.Drawing.Font("Montserrat", 11F);
             this.lblTercerDato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblTercerDato.Location = new System.Drawing.Point(36, 66);
-            this.lblTercerDato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTercerDato.Location = new System.Drawing.Point(27, 54);
             this.lblTercerDato.Name = "lblTercerDato";
-            this.lblTercerDato.Size = new System.Drawing.Size(167, 26);
+            this.lblTercerDato.Size = new System.Drawing.Size(131, 21);
             this.lblTercerDato.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lblTercerDato, null);
             this.tagsExtender1.SetTag3(this.lblTercerDato, null);
@@ -217,12 +235,12 @@
             // 
             this.lblSecundario.AutoSize = true;
             this.lblSecundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.lblSecundario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSecundario.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
             this.lblSecundario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblSecundario.Location = new System.Drawing.Point(36, 41);
-            this.lblSecundario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSecundario.Location = new System.Drawing.Point(27, 33);
             this.lblSecundario.Name = "lblSecundario";
-            this.lblSecundario.Size = new System.Drawing.Size(178, 26);
+            this.lblSecundario.Size = new System.Drawing.Size(141, 21);
             this.lblSecundario.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.lblSecundario, null);
             this.tagsExtender1.SetTag3(this.lblSecundario, null);
@@ -238,12 +256,12 @@
             // 
             this.lblPrincipal.AutoSize = true;
             this.lblPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.lblPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPrincipal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.lblPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblPrincipal.Location = new System.Drawing.Point(36, 14);
-            this.lblPrincipal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrincipal.Location = new System.Drawing.Point(27, 11);
             this.lblPrincipal.Name = "lblPrincipal";
-            this.lblPrincipal.Size = new System.Drawing.Size(164, 28);
+            this.lblPrincipal.Size = new System.Drawing.Size(131, 22);
             this.lblPrincipal.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lblPrincipal, null);
             this.tagsExtender1.SetTag3(this.lblPrincipal, null);
@@ -255,36 +273,13 @@
             this.lblPrincipal.MouseEnter += new System.EventHandler(this.rpItem_MouseEnter);
             this.lblPrincipal.MouseLeave += new System.EventHandler(this.rpItem_MouseLeave);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
-            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(586, 14);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(37, 34);
-            this.btnEditar.TabIndex = 9;
-            this.tagsExtender1.SetTag2(this.btnEditar, null);
-            this.tagsExtender1.SetTag3(this.btnEditar, null);
-            this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // itemLista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.rpItem);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "itemLista";
-            this.Size = new System.Drawing.Size(663, 128);
+            this.Size = new System.Drawing.Size(497, 104);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);

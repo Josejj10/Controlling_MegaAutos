@@ -23,7 +23,7 @@ public class EmpresaWS {
     }
     
     @WebMethod(operationName = "listarEmpresa")
-    public ArrayList<Empresa> listarDrivers(){
+    public ArrayList<Empresa> listarEmpresa(){
         ArrayList<Empresa> empresas = new ArrayList<>();
         try{
             empresas = daoEmpresa.listar();

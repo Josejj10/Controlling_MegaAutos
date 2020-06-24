@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pe.com.megaautos.services;
 
 import java.util.ArrayList;
@@ -60,7 +56,7 @@ public class VehiculoWS {
     }
     
     @WebMethod(operationName = "eliminarVehiculo")
-    public int eliminarCliente(@WebParam(name = "idVehiculo") int idVehiculo) {
+    public int eliminarVehiculo(@WebParam(name = "idVehiculo") int idVehiculo) {
         int resultado = 0;
         try{
             resultado = daoVehiculo.eliminar(idVehiculo);

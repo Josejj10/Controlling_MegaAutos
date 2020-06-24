@@ -23,7 +23,7 @@ public class ClienteWS {
     }
     
     @WebMethod(operationName = "listarClientes")
-    public ArrayList<Cliente> listarDrivers(){
+    public ArrayList<Cliente> listarClientes(){
         ArrayList<Cliente> clientes = new ArrayList<>();
         try{
             clientes = daoCliente.listar();

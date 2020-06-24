@@ -4,9 +4,6 @@
     <service name="DriverWS">
       <implementation-class>pe.com.megaautos.services.DriverWS</implementation-class>
     </service>
-    <service name="ClienteWS">
-      <implementation-class>pe.com.megaautos.services.ClienteWS</implementation-class>
-    </service>
     <service name="UsuarioWS">
       <implementation-class>pe.com.megaautos.services.UsuarioWS</implementation-class>
     </service>
@@ -27,6 +24,15 @@
     </service>
     <service name="OrdenTrabajoWS">
       <implementation-class>pe.com.megaautos.services.OrdenTrabajoWS</implementation-class>
+    </service>
+    <service name="ServicioWS">
+      <implementation-class>pe.com.megaautos.services.ServicioWS</implementation-class>
+    </service>
+    <service name="SedeWS">
+      <implementation-class>pe.com.megaautos.services.SedeWS</implementation-class>
+    </service>
+    <service name="VehiculoWS">
+      <implementation-class>pe.com.megaautos.services.VehiculoWS</implementation-class>
     </service>
   </services>
   <clients/>

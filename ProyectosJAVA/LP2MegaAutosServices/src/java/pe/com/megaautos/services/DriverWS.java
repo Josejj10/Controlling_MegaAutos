@@ -2,6 +2,7 @@
 package pe.com.megaautos.services;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -31,7 +32,7 @@ public class DriverWS {
             System.out.println(ex.getCause());
             System.out.println(ex.getMessage());
         }
-        if(drivers == null) return new ArrayList<>();
+        if(drivers == null) return new ArrayList<Driver>(Arrays.asList(new Driver()));
         return drivers;
     }
     

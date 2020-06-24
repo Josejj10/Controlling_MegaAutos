@@ -340,5 +340,15 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ProyectosJAVA/LP2MegaAutosModel/nbproject/private/
 /ProyectosJAVA/LP2MegaAutosServices/nbproject/private/
+/ProyectosJAVA/LP2MegaAutosModel/build/
+/ProyectosJAVA/LP2MegaAutosModel/dist/
+/ProyectosJAVA/LP2MegaAutos/nbproject/private/
+/ProyectosJAVA/LP2MegaAutos/build/
+/ProyectosJAVA/LP2MegaAutosController/nbproject/private/
+/ProyectosJAVA/LP2MegaAutosController/dist/
+/ProyectosJAVA/LP2MegaAutosController/build/
 /ProyectosJAVA/LP2MegaAutosServices/build/
+/ProyectosJAVA/LP2MegaAutosServices/dist/
+/ProyectosJAVA/LP2MegaAutos/dist/

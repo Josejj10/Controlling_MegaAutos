@@ -10,6 +10,15 @@
     <service name="UsuarioWS">
       <implementation-class>pe.com.megaautos.services.UsuarioWS</implementation-class>
     </service>
+    <service name="SedeWS">
+      <implementation-class>pe.com.megaautos.services.SedeWS</implementation-class>
+    </service>
+    <service name="VehiculoWS">
+      <implementation-class>pe.com.megaautos.services.VehiculoWS</implementation-class>
+    </service>
+    <service name="ServicioWS">
+      <implementation-class>pe.com.megaautos.services.ServicioWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

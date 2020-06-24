@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Configuracion.Empresa;
-
+using LP2MegaAutos.ServicioEmpresa;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaInformacionEmpresa : Pantalla
     {
-        //ServicioEmpresa.EmpresaWSClient daoEmpresa;
+        ServicioEmpresa.EmpresaWSClient daoEmpresa;
         public pantallaInformacionEmpresa()
         {
             InitializeComponent();
-            //daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
+            daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
             inicializarEmpresas();
         }
 
         private void inicializarEmpresas()
         {
-            //List<empresa> empresas = daoEmpresa.listarEmpresa().ToList();
-            //if (empresas == null) return;
+            List<empresa> empresas = daoEmpresa.listarEmpresa().ToList();
+            if (empresas == null) return;
             
         }
 

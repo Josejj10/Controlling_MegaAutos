@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="88be71cb-8f04-429e-8bae-053fc30a5150" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="362c9c0d-1d59-450a-a2a9-fb29aaf624e6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://72.44.47.118:8080/LP2MegaAutosServices/OrdenTrabajoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="OrdenTrabajoWS.wsdl" MetadataType="Wsdl" ID="bf2fbd21-ce19-4ff4-89fc-e363c14208a7" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/OrdenTrabajoWS?WSDL" />
-    <MetadataFile FileName="OrdenTrabajoWS.xsd" MetadataType="Schema" ID="2b3a17ab-7e16-41e5-a6c5-2d3fa37f9c7e" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/OrdenTrabajoWS?xsd=1" />
+    <MetadataFile FileName="OrdenTrabajoWS.wsdl" MetadataType="Wsdl" ID="6b5daa2e-c7fb-4971-bab9-76de8b3d8f31" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/OrdenTrabajoWS?WSDL" />
+    <MetadataFile FileName="OrdenTrabajoWS.xsd" MetadataType="Schema" ID="ba6e6d0e-c319-4c96-96dd-a74df1d26136" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/OrdenTrabajoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

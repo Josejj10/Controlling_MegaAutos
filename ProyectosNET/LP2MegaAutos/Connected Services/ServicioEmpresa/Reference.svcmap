@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="86b819ab-f339-4e25-8f00-3602efa46519" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d2e8c5f7-6c6e-4f10-a7c8-048bd8622097" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EmpresaWS.wsdl" MetadataType="Wsdl" ID="3919e4bd-ad63-4d29-879f-cc3668578c8d" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS?WSDL" />
-    <MetadataFile FileName="EmpresaWS.xsd" MetadataType="Schema" ID="7ce9916b-c9d8-4784-98a0-7346f74f1f14" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS?xsd=1" />
+    <MetadataFile FileName="EmpresaWS.wsdl" MetadataType="Wsdl" ID="db0acfdb-3969-4304-a435-2c1cf38e12ae" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS?WSDL" />
+    <MetadataFile FileName="EmpresaWS.xsd" MetadataType="Schema" ID="8c64dd20-3f38-4f8b-b145-9ed74205f328" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

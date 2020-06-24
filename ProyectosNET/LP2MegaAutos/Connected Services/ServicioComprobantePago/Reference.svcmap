@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5318f7df-cb17-4682-abda-16bc448d2575" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f286339c-1de1-42a3-8f5d-23074f8bfb5c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://72.44.47.118:8080/LP2MegaAutosServices/ComprobantePagoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ComprobantePagoWS.xsd" MetadataType="Schema" ID="b629f14a-cfa5-464b-b21c-a85d61328e0a" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/ComprobantePagoWS?xsd=1" />
-    <MetadataFile FileName="ComprobantePagoWS.wsdl" MetadataType="Wsdl" ID="1e80eabc-3ce8-4928-b470-454832b1e001" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/ComprobantePagoWS?WSDL" />
+    <MetadataFile FileName="ComprobantePagoWS.xsd" MetadataType="Schema" ID="0b9b64ad-e2cf-44d6-8106-1b49e6e1e77f" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/ComprobantePagoWS?xsd=1" />
+    <MetadataFile FileName="ComprobantePagoWS.wsdl" MetadataType="Wsdl" ID="0a6ab740-ab72-479c-a9fa-abb78f80db8f" SourceId="1" SourceUrl="http://72.44.47.118:8080/LP2MegaAutosServices/ComprobantePagoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

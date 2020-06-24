@@ -34,6 +34,9 @@
     <service name="VehiculoWS">
       <implementation-class>pe.com.megaautos.services.VehiculoWS</implementation-class>
     </service>
+    <service name="ClienteWS">
+      <implementation-class>pe.com.megaautos.services.ClienteWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

@@ -27,6 +27,8 @@ namespace LP2MegaAutos
         {
             List<empresa> empresas = daoEmpresa.listarEmpresa().ToList();
             if (empresas == null) return;
+
+            this.lbl_nombreEmpresa.Text = empresas[0].nombre;
             
         }
 

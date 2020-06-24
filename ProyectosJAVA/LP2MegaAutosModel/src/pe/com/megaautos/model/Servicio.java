@@ -3,8 +3,9 @@ package pe.com.megaautos.model;
 import java.util.ArrayList;
 
 public class Servicio implements IConsultable{
-    //private int id;
-    private int codigoServicio;
+    private int id;
+    private String nombre;
+    private String codigoServicio;
     private String descripcion;
     private String tipoServicio;
 
@@ -17,12 +18,28 @@ public class Servicio implements IConsultable{
         this.descripcion = descripcion;
         this.tipoServicio = tipoServicio;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
     
-    public int getCodigoServicio() {
+    public String getCodigoServicio() {
         return codigoServicio;
     }
 
-    public void setCodigoServicio(int codigoServicio) {
+    public void setCodigoServicio(String codigoServicio) {
         this.codigoServicio = codigoServicio;
     }
 

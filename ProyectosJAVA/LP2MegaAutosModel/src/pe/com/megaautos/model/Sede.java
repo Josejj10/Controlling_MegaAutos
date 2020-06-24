@@ -5,6 +5,7 @@ public class Sede implements IConsultable{
     private String distrito;
     private String nombre;
     private String direccion;
+    private String telefono;
     
     public Sede(){
     }
@@ -19,6 +20,14 @@ public class Sede implements IConsultable{
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
     
     public String getDistrito() {

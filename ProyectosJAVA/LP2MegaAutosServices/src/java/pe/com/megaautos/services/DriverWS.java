@@ -1,0 +1,69 @@
+
+package pe.com.megaautos.services;
+
+import java.util.ArrayList;
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import pe.com.megaautos.config.DBController;
+import pe.com.megaautos.dao.DriverDAO;
+import pe.com.megaautos.model.Driver;
+
+/**
+ *
+ * @author JOSE
+ */
+@WebService(serviceName = "DriverWS")
+public class DriverWS {
+
+    private DriverDAO daoDriver;
+    
+    public DriverWS(){
+        daoDriver = DBController.controller.getDriverDAO();
+    }
+    
+    @WebMethod(operationName = "listarDrivers")
+    public ArrayList<Driver> listarDrivers(){
+        ArrayList<Driver> drivers = new ArrayList<>();
+        try{
+            drivers = daoDriver.listar();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return drivers;
+    }
+    
+    @WebMethod(operationName = "insertarDriver")
+    public int insertarDriver(@WebParam(name = "objDriver") Driver driver) {
+        int resultado = 0;
+        try{
+            resultado = daoDriver.insertar(driver);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "actualizarDriver")
+    public int actualizarDriver(@WebParam(name = "objDriver") Driver driver) {
+        int resultado = 0;
+        try{
+            resultado = daoDriver.actualizar(driver);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "eliminarDriver")
+    public int eliminarDriver(@WebParam(name = "idDriver") int idDriver) {
+        int resultado = 0;
+        try{
+            resultado = daoDriver.eliminar(idDriver);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+
+}

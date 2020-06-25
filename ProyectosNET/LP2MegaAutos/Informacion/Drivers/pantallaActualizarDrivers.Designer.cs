@@ -203,7 +203,7 @@
             this.lbl_ListaDrivers.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaDrivers.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaDrivers.Name = "lbl_ListaDrivers";
-            this.lbl_ListaDrivers.Size = new System.Drawing.Size(72, 19);
+            this.lbl_ListaDrivers.Size = new System.Drawing.Size(70, 22);
             this.lbl_ListaDrivers.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaDrivers, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaDrivers, null);
@@ -235,7 +235,7 @@
             this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
             this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 38);
+            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 21);
             this.cTxt_MasFiltros.TabIndex = 65;
             this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
             this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
@@ -265,6 +265,7 @@
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // rndReciente
             // 

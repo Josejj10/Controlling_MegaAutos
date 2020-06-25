@@ -20,7 +20,10 @@ namespace LP2MegaAutos
         public pantallaEditarCliente()
         {
             InitializeComponent();
+            _cliente = new ServicioCliente.cliente();
             txt_NombreCliente.Text = "Agregar nombre del cliente...";
+            this.btnEditar.Visible = false;
+            this.btnEliminar.Visible = false;
         }
 
         public pantallaEditarCliente(ServicioCliente.cliente cliente)
@@ -103,6 +106,17 @@ namespace LP2MegaAutos
 
         private void btn_guardar_Click_1(object sender, EventArgs e)
         {
+            if (!clienteValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
+            _cliente.nombre = txt_NombreCliente.Text;
+            _cliente.numDocumento= txt_NumeroDocumento.Text;
+            _cliente.tipoDocumento = txt_TIpoDocumento.Text;
+            _cliente.telefono = txt_Telefono.Text;
+            _cliente.correo = txt_Correo.Text;
+            _cliente.tipoCliente = txtTipoCliente.Text;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -181,5 +195,59 @@ namespace LP2MegaAutos
                 this.DialogResult = DialogResult.Retry;
             }
         }
+
+        private bool clienteValido()
+        {
+            double resultado = 0;
+            bool isDouble = false;
+            isDouble = Double.TryParse(txt_NumeroDocumento.Text, out resultado);
+
+            // Sacapalabras al txt
+            if (string.IsNullOrEmpty(txt_NombreCliente.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_NumeroDocumento.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (isDouble == false)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_TIpoDocumento.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un tipo documento correcto.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_Correo.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un correo correcto.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txtTipoCliente.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un tipo de cliente correcto.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            return true;
+        }
+
+
     }
 }

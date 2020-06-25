@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -81,14 +81,15 @@ namespace LP2MegaAutos
             pantallaEditarSede pes = new pantallaEditarSede(sede);
             DialogResult d = pes.ShowDialog();
             if (d == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                sede = pes.Sede;
+                daoSede.actualizarSede(sede);
+            }
             else if (d == DialogResult.Retry)
-            { 
+            {
                 // Eliminar
                 daoSede.eliminarSede(sede.id);
                 flpSedes.Controls.RemoveByKey("il" + sede.id);
-                //ordenarItemsLista();
-                inicializarItemsLista();
             }
         }
 

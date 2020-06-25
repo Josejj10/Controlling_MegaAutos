@@ -36,7 +36,6 @@
             this.lbl_NombreAreaTrabajoxCC = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpn_ListaCCAreaTrabajo = new LP2MegaAutos.RoundedPanel();
-            this.btnAgregarPermisos = new System.Windows.Forms.Button();
             this.lbl_ListaCCAreaTrabajo = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rnd_cancelar = new LP2MegaAutos.RoundedPanel();
@@ -190,7 +189,6 @@
             this.rpn_ListaCCAreaTrabajo.ArcRadiusPanel = 15;
             this.rpn_ListaCCAreaTrabajo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpn_ListaCCAreaTrabajo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.rpn_ListaCCAreaTrabajo.Controls.Add(this.btnAgregarPermisos);
             this.rpn_ListaCCAreaTrabajo.Controls.Add(this.lbl_ListaCCAreaTrabajo);
             this.rpn_ListaCCAreaTrabajo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.rpn_ListaCCAreaTrabajo.Location = new System.Drawing.Point(23, 113);
@@ -211,29 +209,6 @@
             this.rpn_ListaCCAreaTrabajo.XPanel = 0;
             this.rpn_ListaCCAreaTrabajo.YBorde = 0;
             this.rpn_ListaCCAreaTrabajo.YPanel = 0;
-            // 
-            // btnAgregarPermisos
-            // 
-            this.btnAgregarPermisos.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarPermisos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarPermisos.FlatAppearance.BorderSize = 0;
-            this.btnAgregarPermisos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.btnAgregarPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarPermisos.Font = new System.Drawing.Font("Lato", 13F, System.Drawing.FontStyle.Bold);
-            this.btnAgregarPermisos.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPermisos.Location = new System.Drawing.Point(506, 3);
-            this.btnAgregarPermisos.Name = "btnAgregarPermisos";
-            this.btnAgregarPermisos.Size = new System.Drawing.Size(29, 29);
-            this.btnAgregarPermisos.TabIndex = 3;
-            this.tagsExtender1.SetTag2(this.btnAgregarPermisos, null);
-            this.tagsExtender1.SetTag3(this.btnAgregarPermisos, null);
-            this.tagsExtender1.SetTagFontName(this.btnAgregarPermisos, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.btnAgregarPermisos, 13F);
-            this.tagsExtender1.SetTagFontStyle(this.btnAgregarPermisos, System.Drawing.FontStyle.Regular);
-            this.btnAgregarPermisos.Text = "+";
-            this.btnAgregarPermisos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarPermisos.UseVisualStyleBackColor = false;
-            this.btnAgregarPermisos.Click += new System.EventHandler(this.btnAgregarClick);
             // 
             // lbl_ListaCCAreaTrabajo
             // 
@@ -416,7 +391,6 @@
         private System.Windows.Forms.Label lbl_NombreAreaTrabajoxCC;
         private TagsExtender tagsExtender1;
         private RoundedPanel rpn_ListaCCAreaTrabajo;
-        private System.Windows.Forms.Button btnAgregarPermisos;
         private System.Windows.Forms.Label lbl_ListaCCAreaTrabajo;
         private System.Windows.Forms.Panel panel4;
         private RoundedPanel rnd_cancelar;

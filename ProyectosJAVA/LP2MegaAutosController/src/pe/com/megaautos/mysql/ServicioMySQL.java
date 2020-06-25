@@ -32,7 +32,7 @@ public class ServicioMySQL implements ServicioDAO{
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_SERVICIO(?,?,?)}");
+                    "{call INSERTAR_SERVICIO(?,?,?,?,?)}");
             // Insertar Servicio devuelve idServicio, 
             // Y recibirá la descripcion y el Tipo Servicio
             // En el procedure de MySQL, cambiara el nombre del tipo servicio
@@ -65,7 +65,7 @@ public class ServicioMySQL implements ServicioDAO{
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
-                    "{call ACTUALIZAR_SERVICIO(?,?,?)}");
+                    "{call ACTUALIZAR_SERVICIO(?,?,?,?,?)}");
             cs.setInt("_ID_SERVICIO", servicio.getId());
             cs.setString("_NOMBRE", servicio.getNombre().toUpperCase());
             cs.setString("_CODIGO_SERVICIO", servicio.getCodigoServicio().toUpperCase());

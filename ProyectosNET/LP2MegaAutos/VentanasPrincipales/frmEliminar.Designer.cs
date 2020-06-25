@@ -335,9 +335,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEliminar";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.title_bar.ResumeLayout(false);
             this.rnd_cancelar.ResumeLayout(false);

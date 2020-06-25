@@ -16,6 +16,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
     public partial class pantallaActualizarVehiculos : Pantalla
     {
         ServicioVehiculo.VehiculoWSClient daoVehiculo;
+        List<vehiculo> vehiculos;
         public pantallaActualizarVehiculos()
         {
             InitializeComponent();
@@ -74,14 +75,35 @@ namespace LP2MegaAutos.Informacion.Vehiculos
 
         private void inicializarItemsLista()
         {
-            List<vehiculo> vehiculos = daoVehiculo.listarVehiculos().ToList();
+            vehiculos = daoVehiculo.listarVehiculos().ToList();
+            crearItemsLista();
+        }
+
+        private void crearItemsLista()
+        {
             if (vehiculos == null) return;
             foreach (vehiculo v in vehiculos)
             {
                 createItemListaVehiculo(v, "Carter Kane", DateTime.Now);
             }
         }
-
+        private void quitarItemsLista()
+        {
+            foreach (Control c in flpVehiculos.Controls)
+                c.Parent.Controls.Remove(c);
+        }
+        private void organizarAZ()
+        {
+            vehiculos.OrderBy(g => g.placa);
+            quitarItemsLista();
+            crearItemsLista();
+        }
+        private void organizarZA()
+        {
+            vehiculos.OrderByDescending(g => g.placa);
+            quitarItemsLista();
+            crearItemsLista();
+        }
         private itemLista createItemListaVehiculo(ServicioVehiculo.vehiculo vehiculo, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
@@ -90,8 +112,8 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             il.TextoAgregadoPor = agregadoPor;
             il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = vehiculo.placa;
-            il.Textosecundario = vehiculo.propietario.nombre;
-            il.TextoTercero = vehiculo.tipoVehiculo;
+            il.Textosecundario = OtrosHelper.tipoOracion(vehiculo.propietario.nombre);
+            il.TextoTercero = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
             il.ItemListaClick += (sender, e) => { verDatosVehiculo(sender, e, vehiculo); };
             il.EditarClick += (sender, e) => { btnEditarClick(sender, e, vehiculo); };
             flpVehiculos.Controls.Add(il);
@@ -100,12 +122,21 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         private void verDatosVehiculo(object sender, EventArgs e, ServicioVehiculo.vehiculo vehiculo)
         {
             frmEditarVehiculo pes = new frmEditarVehiculo(vehiculo);
-            if (pes.ShowDialog() == DialogResult.OK)
+            DialogResult d = pes.ShowDialog();
+            if (d == DialogResult.OK)
                 MessageBox.Show("OK");
+            else if(d== DialogResult.Retry)
+            {
+                //Eliminar
+                daoVehiculo.eliminarVehiculo(vehiculo.id);
+                flpVehiculos.Controls.RemoveByKey("il" + vehiculo.id);
+                //Ordenar
+                inicializarItemsLista();
+            }
         }
         private void btnAgregarClick(object sender, EventArgs e)
         {
-            frmAgregarVehiculo pas = new frmAgregarVehiculo();
+            frmEditarVehiculo pas = new frmEditarVehiculo();
 
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");

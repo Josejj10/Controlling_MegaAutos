@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.ServicioServicio;
+using LP2MegaAutos.Framework;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarServicios : Pantalla
     {
         ServicioServicio.ServicioWSClient daoServicio;
+        List<servicio> servicios;
         public pantallaActualizarServicios()
         {
             InitializeComponent();
@@ -26,13 +28,37 @@ namespace LP2MegaAutos
 
         private void inicializarItemsLista()
         {
-            List<servicio> servicios = daoServicio.listarServicios().ToList();
+            servicios = daoServicio.listarServicios().ToList();
+            crearItemsLista();
+        }
+
+        private void crearItemsLista()
+        {
             if (servicios == null) return;
             foreach (servicio s in servicios)
             {
                 createItemListaServicio(s, "Carter Kane", DateTime.Now);
             }
+        }
 
+        private void quitarItemsLista()
+        {
+            foreach (Control c in flpServicios.Controls)
+                c.Parent.Controls.Remove(c);
+        }
+
+        private void organizarAZ()
+        {
+            servicios.OrderBy(g => g.nombre);
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarZA()
+        {
+            servicios.OrderByDescending(g => g.nombre);
+            quitarItemsLista();
+            crearItemsLista();
         }
 
         private itemLista createItemListaServicio(ServicioServicio.servicio servicio, string agregadoPor, DateTime fechaAgregado)
@@ -42,9 +68,9 @@ namespace LP2MegaAutos
             il.Name = "il" + servicio.id;
             il.TextoAgregadoPor = agregadoPor;
             il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
-            il.TextoPrincipal = servicio.nombre;
-            il.Textosecundario = servicio.tipoServicio;
-            il.TextoTercero = servicio.codigoServicio;
+            il.TextoPrincipal = OtrosHelper.tipoOracion(servicio.nombre);
+            il.Textosecundario = OtrosHelper.tipoOracion(servicio.tipoServicio);
+            il.TextoTercero = OtrosHelper.tipoOracion(servicio.codigoServicio);
             il.ItemListaClick += (sender, e) => { verDatosServicio(sender, e, servicio); };
             il.EditarClick += (sender, e) => { btnEditarClick(sender, e, servicio); };
             flpServicios.Controls.Add(il);
@@ -54,8 +80,17 @@ namespace LP2MegaAutos
         private void verDatosServicio(object sender, EventArgs e, ServicioServicio.servicio servicio)
         {
             pantallaEditarServicio pes = new pantallaEditarServicio(servicio);
-            if (pes.ShowDialog() == DialogResult.OK)
+            DialogResult d = pes.ShowDialog();
+            if (d == DialogResult.OK)
                 MessageBox.Show("OK");
+            else if (d == DialogResult.Retry)
+            {
+                //Eliminar
+                daoServicio.eliminarServicio(servicio.id);
+                flpServicios.Controls.RemoveByKey("il" + servicio.id);
+                //ordenarItemsLista();
+                inicializarItemsLista();
+            }
         }
         private void btnEditarClick(Object sender, EventArgs e, ServicioServicio.servicio servicio)
         {
@@ -66,9 +101,9 @@ namespace LP2MegaAutos
 
         private void btnAgregarClick(Object sender, EventArgs e)
         {
-            pantallaAgregarServicio pas = new pantallaAgregarServicio();
+            pantallaEditarServicio pes = new pantallaEditarServicio();
             
-            if (pas.ShowDialog() == DialogResult.OK)
+            if (pes.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }
 

@@ -134,7 +134,7 @@ namespace LP2MegaAutos
         private void inicializarUsuario()
         {
             _usuario.Permisos.Add(EPermisos.All);
-            //_usuario.Permisos.Add(EPermisos.ActualizarBD);
+            _usuario.Permisos.Add(EPermisos.ActualizarBD);
             //_usuario.Permisos.Add(EPermisos.Empresa);
             _usuario.Permisos.Add(EPermisos.Sedes);
             _usuario.Permisos.Add(EPermisos.Drivers);

@@ -16,27 +16,22 @@ namespace LP2MegaAutos
     public partial class pantallaActualizarUsuarios : Pantalla
     {
         ServicioUsuario.UsuarioWSClient daoUsuario;
+        List<usuario> _usuarios;
 
         public pantallaActualizarUsuarios()
         {
             InitializeComponent();
-            btn_Agregar.Click += btnAgregarClick;
             flpUsuarios.AutoScroll = true;
             daoUsuario =
                 new ServicioUsuario.UsuarioWSClient();
             inicializarItemsLista();
         }
 
+        #region lista
         private void inicializarItemsLista()
         {
-            daoUsuario.listarUsuarios();
-            List<usuario> usuarios = daoUsuario.listarUsuarios().ToList();
-            if (usuarios == null) return;
-            foreach (usuario u in usuarios)
-            {
-                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
-            }
-
+            _usuarios = daoUsuario.listarUsuarios().ToList();
+            btnAZ_Click(btnAZ,new EventArgs());
         }
 
         private itemLista createItemListaUsuario(ServicioUsuario.usuario usuario, string agregadoPor, DateTime fechaAgregado)
@@ -61,58 +56,105 @@ namespace LP2MegaAutos
             return il;
         }
 
-        private void ordenarLista()
+        #region Organizar
+        private void crearItemsLista()
         {
-            // TODO probablemente esto pueda estar en botonesdinamicoshelper
+            if (_usuarios == null) return;
+            foreach (usuario u in _usuarios)
+            {
+                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+            }
         }
 
-
-        private void verDatosUsuario(object sender, EventArgs e, ServicioUsuario.usuario usuario)
+        private void quitarItemsLista()
         {
-            pantallaEditarUsuario pas = new pantallaEditarUsuario(usuario);
-            if (pas.ShowDialog() == DialogResult.OK)
+            for (int i = 0; i < flpUsuarios.Controls.Count;)
+                flpUsuarios.Controls.RemoveAt(i);
+        }
+
+        private void organizarAZ()
+        {
+            _usuarios = _usuarios.OrderBy(g => g.nombre).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarZA()
+        {
+            _usuarios = _usuarios.OrderByDescending(g => g.nombre).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        } 
+        
+        private void organizarAntiguo()
+        {
+            _usuarios = _usuarios.OrderBy(g => g.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+        
+        private void organizarReciente()
+        {
+            _usuarios = _usuarios.OrderByDescending(g => g.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+        #endregion Organizar
+
+        private void verDatosUsuario(object sender, EventArgs e, ServicioUsuario.usuario usu)
+        {
+            pantallaEditarUsuario pas = new pantallaEditarUsuario(usu);
+            DialogResult d = pas.ShowDialog();
+            if (d== DialogResult.OK)
             {
                 // Actualizar el Usuario
                 usuario u = pas.Usuario;
                 daoUsuario.actualizarUsuario(u);
-                flpUsuarios.Controls.RemoveByKey("il" + usuario.id);
+                flpUsuarios.Controls.RemoveByKey("il" + usu.id);
                 createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+                _usuarios.Add(u);
+                btnAZ_Click(btnAZ, new EventArgs());
                 // todo actualizar FechaUltimaModificacion en BD
-                // ordenarItemsLista();
+            }
+            else if(d == DialogResult.Retry)
+            {
+                // Eliminar
+                daoUsuario.eliminarUsuario(usu.id);
+                flpUsuarios.Controls.RemoveByKey("il" + usu.id);
+                _usuarios.Remove(usu);
+                // TODO seleccionar organizar segun el boton seleccionado
+                btnAZ_Click(btnAZ, e);
             }
         }
+        #endregion lista
 
-        private void btnAgregarClick(Object sender, EventArgs e)
-        {
-            pantallaAgregarUsuario pas = new pantallaAgregarUsuario();
-
-            if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
-        }
-        
         #region Botones Filtros
         private void btnAZ_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndAZ, rndZA, rndAntiguo, rndReciente);
+            organizarAZ();
         }
         private void btnZA_Click(object sender, EventArgs e)
         {
 
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndZA, rndAZ, rndAntiguo, rndReciente);
+            organizarZA();
         }
 
         private void btnAntiguo_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndAntiguo, rndZA, rndAZ, rndReciente);
+            organizarAntiguo();
         }
 
         private void btnReciente_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndReciente, rndAntiguo, rndZA, rndAZ);
+            organizarReciente();
         }
         #endregion Botones Filtros
 
@@ -128,5 +170,21 @@ namespace LP2MegaAutos
         }
         #endregion Txt Buscar
 
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarUsuario pas = new pantallaEditarUsuario();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+            {
+                // Agregar sede
+                usuario _usuario= pas.Usuario;
+                frmMessageBox frm;
+                if (daoUsuario.insertarUsuario(_usuario) == 0) // Ta mal
+                    frm = new frmMessageBox("No se pudo insertar.");
+                else // Inserto bien
+                    frm = new frmMessageBox("Se inserto correctamente el usuario " + _usuario.nombre);
+                frm.ShowDialog();
+            }
+        }
     }
 }

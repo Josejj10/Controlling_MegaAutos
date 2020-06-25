@@ -133,6 +133,7 @@ namespace LP2MegaAutos
                 else // Inserto bien
                     frm = new frmMessageBox("Se inserto correctamente la sede en " + _sede.distrito);
                 frm.ShowDialog();
+                btnAZ_Click(btnAZ, new EventArgs());
             }
         }
 

@@ -43,10 +43,17 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.lbl_EditarAreaTrabajo = new System.Windows.Forms.Label();
+            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.title_bar.SuspendLayout();
             this.pnl_nombAreaTrabajo.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
+            this.roundedPanel1.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // title_bar
@@ -58,7 +65,7 @@
             this.title_bar.Controls.Add(this.boton_cerrar);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
             this.title_bar.Name = "title_bar";
-            this.title_bar.Size = new System.Drawing.Size(595, 24);
+            this.title_bar.Size = new System.Drawing.Size(480, 24);
             this.title_bar.TabIndex = 61;
             this.title_bar.Tag = "titlebar";
             this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
@@ -76,7 +83,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(571, -1);
+            this.button3.Location = new System.Drawing.Point(455, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(24, 24);
@@ -94,7 +101,7 @@
             this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
+            this.boton_minimizar.Location = new System.Drawing.Point(668, 1);
             this.boton_minimizar.Name = "boton_minimizar";
             this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
             this.boton_minimizar.TabIndex = 0;
@@ -113,7 +120,7 @@
             this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
-            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
+            this.boton_cerrar.Location = new System.Drawing.Point(692, 1);
             this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
             this.boton_cerrar.Name = "boton_cerrar";
             this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
@@ -135,7 +142,7 @@
             this.pnl_nombAreaTrabajo.Controls.Add(this.rnd_color_1);
             this.pnl_nombAreaTrabajo.Controls.Add(this.txt_nombAreaTrabajo);
             this.pnl_nombAreaTrabajo.Controls.Add(this.lbl_nombAreaTrabajo);
-            this.pnl_nombAreaTrabajo.Location = new System.Drawing.Point(161, 100);
+            this.pnl_nombAreaTrabajo.Location = new System.Drawing.Point(94, 100);
             this.pnl_nombAreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_nombAreaTrabajo.Name = "pnl_nombAreaTrabajo";
             this.pnl_nombAreaTrabajo.Size = new System.Drawing.Size(292, 41);
@@ -172,7 +179,6 @@
             this.txt_nombAreaTrabajo.Name = "txt_nombAreaTrabajo";
             this.txt_nombAreaTrabajo.Size = new System.Drawing.Size(284, 23);
             this.txt_nombAreaTrabajo.TabIndex = 2;
-            this.txt_nombAreaTrabajo.Text = "Mecanica";
             // 
             // lbl_nombAreaTrabajo
             // 
@@ -278,7 +284,7 @@
             this.rpTopMain.MenosWidthPanel = 1;
             this.rpTopMain.Name = "rpTopMain";
             this.rpTopMain.PorcLuzColorBorde = 0;
-            this.rpTopMain.Size = new System.Drawing.Size(595, 8);
+            this.rpTopMain.Size = new System.Drawing.Size(480, 8);
             this.rpTopMain.TabIndex = 60;
             this.rpTopMain.XBorde = 0;
             this.rpTopMain.XPanel = 0;
@@ -299,11 +305,108 @@
             this.lbl_EditarAreaTrabajo.Text = "Editar Área de Trabajo";
             this.lbl_EditarAreaTrabajo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.ArcRadiusBorde = 5;
+            this.roundedPanel1.ArcRadiusPanel = 5;
+            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel1.Controls.Add(this.button1);
+            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel1.Location = new System.Drawing.Point(49, 257);
+            this.roundedPanel1.MenosHeightBorde = 1;
+            this.roundedPanel1.MenosHeightPanel = 1;
+            this.roundedPanel1.MenosWidthBorde = 1;
+            this.roundedPanel1.MenosWidthPanel = 1;
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.PorcLuzColorBorde = 0;
+            this.roundedPanel1.Size = new System.Drawing.Size(180, 35);
+            this.roundedPanel1.TabIndex = 75;
+            this.roundedPanel1.XBorde = 0;
+            this.roundedPanel1.XPanel = 0;
+            this.roundedPanel1.YBorde = 0;
+            this.roundedPanel1.YPanel = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 33);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.ArcRadiusBorde = 5;
+            this.roundedPanel2.ArcRadiusPanel = 5;
+            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel2.Controls.Add(this.button2);
+            this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel2.Location = new System.Drawing.Point(252, 256);
+            this.roundedPanel2.MenosHeightBorde = 1;
+            this.roundedPanel2.MenosHeightPanel = 1;
+            this.roundedPanel2.MenosWidthBorde = 1;
+            this.roundedPanel2.MenosWidthPanel = 1;
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.PorcLuzColorBorde = 0;
+            this.roundedPanel2.Size = new System.Drawing.Size(180, 35);
+            this.roundedPanel2.TabIndex = 74;
+            this.roundedPanel2.XBorde = 0;
+            this.roundedPanel2.XPanel = 0;
+            this.roundedPanel2.YBorde = 0;
+            this.roundedPanel2.YPanel = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1, 1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(178, 33);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.btn_guardar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Driver;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(440, 47);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(28, 28);
+            this.btnEliminar.TabIndex = 77;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // pantallaEditarAreaTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ClientSize = new System.Drawing.Size(480, 350);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.roundedPanel1);
+            this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.lbl_EditarAreaTrabajo);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
@@ -321,6 +424,8 @@
             this.pnl_nombAreaTrabajo.PerformLayout();
             this.rnd_cancelar.ResumeLayout(false);
             this.rnd_guardar.ResumeLayout(false);
+            this.roundedPanel1.ResumeLayout(false);
+            this.roundedPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,5 +448,10 @@
         private System.Windows.Forms.TextBox txt_nombAreaTrabajo;
         private System.Windows.Forms.Label lbl_nombAreaTrabajo;
         private System.Windows.Forms.Label lbl_EditarAreaTrabajo;
+        private RoundedPanel roundedPanel1;
+        private System.Windows.Forms.Button button1;
+        private RoundedPanel roundedPanel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

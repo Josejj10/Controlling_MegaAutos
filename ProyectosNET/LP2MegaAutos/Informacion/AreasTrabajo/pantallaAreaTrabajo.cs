@@ -17,6 +17,9 @@ namespace LP2MegaAutos
     public partial class pantallaAreaTrabajo : Pantalla
     {
         ServicioAreaTrabajo.AreaTrabajoWSClient daoAreaTrabajo;
+        List<areaTrabajo> _areasTrabajo;
+        public string textoBuscar;
+
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
@@ -26,13 +29,24 @@ namespace LP2MegaAutos
         }
         private void inicializarItemsLista()
         {
-            List<areaTrabajo> areasTrabajo = daoAreaTrabajo.listarAreaTrabajo().ToList();
-            if (areasTrabajo == null) return;
-            foreach (areaTrabajo u in areasTrabajo)
+            _areasTrabajo = daoAreaTrabajo.listarAreaTrabajo().ToList();
+            organizarAZ();
+        }
+
+        private void crearItemsLista()
+        {
+            if (_areasTrabajo == null) return;
+            foreach (areaTrabajo a in _areasTrabajo)
             {
-                createItemListaAreaTrabajo(u, "Carter Kane", DateTime.Now);
+                createItemListaAreaTrabajo(a, "Carter Kane", DateTime.Now);
             }
         }
+        private void quitarItemsLista()
+        {
+            for (int i = 0; i < flowLayoutPanel1.Controls.Count;)
+                flowLayoutPanel1.Controls.RemoveAt(i);
+        }
+
         private itemLista createItemListaAreaTrabajo(ServicioAreaTrabajo.areaTrabajo areaTrabajo, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
@@ -51,69 +65,106 @@ namespace LP2MegaAutos
             pantallaEditarAreaTrabajo pas = new pantallaEditarAreaTrabajo(areaTrabajo);
             DialogResult d = pas.ShowDialog();
             if (d == DialogResult.OK) { 
-                areaTrabajo = pas.AreaTrabajo;
-                daoAreaTrabajo.actualizarAreaTrabajo(areaTrabajo);
+                areaTrabajo _areaTrabajo = pas.AreaTrabajo;
+                daoAreaTrabajo.actualizarAreaTrabajo(_areaTrabajo);
+                createItemListaAreaTrabajo(_areaTrabajo, "Carter Kane", DateTime.Now);
+                _areasTrabajo.Remove(areaTrabajo);
+                _areasTrabajo.Add(_areaTrabajo);
+                btnAZ_Click(btnAZ, new EventArgs());
             }
             else if (d == DialogResult.Retry)
             {
                 daoAreaTrabajo.eliminarAreaTrabajo(areaTrabajo.id);
-                flowLayoutPanel1.Controls.RemoveByKey("il" + areaTrabajo.id);
+                organizarAZ();
+                _areasTrabajo.Remove(areaTrabajo);
+                btnAZ_Click(btnAZ, e);
             }
         }
-        #region Botones Filtro
+        #region Botones Filtros
         private void btnAZ_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndAZ, rndZA, rndAntiguo, rndReciente);
+            organizarAZ();
         }
         private void btnZA_Click(object sender, EventArgs e)
         {
 
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndZA, rndAZ, rndAntiguo, rndReciente);
+            organizarZA();
         }
+
         private void btnAntiguo_Click(object sender, EventArgs e)
         {
-
             pantallaListasHelper.cambiarCuatroPaneles(
-                rndAntiguo, rndAZ, rndZA, rndReciente);
+                rndAntiguo, rndZA, rndAZ, rndReciente);
+            organizarAntiguo();
         }
+
         private void btnReciente_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
-                rndReciente, rndAZ, rndZA, rndAntiguo);
+                rndReciente, rndAntiguo, rndZA, rndAZ);
+            organizarReciente();
         }
-        private void btn_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (sender is Button)
-                pantallaListasHelper.btn_MouseDown((Button)sender);
-        }
-        private void btn_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (sender is Button)
-                pantallaListasHelper.btn_MouseUp((Button)sender);
-        }
-        private void btn_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (sender is Button)
-                pantallaListasHelper.btn_MouseMove((Button)sender);
-        }
+
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarEnter(txt_Buscar);
+            txt_Buscar.Text = string.Empty;
         }
+
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarLeave(txt_Buscar);
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
         }
-        #endregion Botones Filtro
+        #endregion Botones Filtros
+
+        #region Organizar
+        private void organizarAZ()
+        {
+            _areasTrabajo = _areasTrabajo.OrderBy(g => g.nombre).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarZA()
+        {
+            _areasTrabajo = _areasTrabajo.OrderByDescending(g => g.nombre).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarAntiguo()
+        {
+            //_sedes = _sedes.OrderBy(g => g.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarReciente()
+        {
+            //_sedes = _sedes.OrderByDescending(g => g.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+        #endregion Organizar
+
         private void btnAgregarClick(object sender, EventArgs e)
         {
             pantallaEditarAreaTrabajo pes = new pantallaEditarAreaTrabajo();
             if (pes.ShowDialog() == DialogResult.OK)
             {
                 areaTrabajo _areaTrabajo = pes.AreaTrabajo;
-                daoAreaTrabajo.insertarAreaTrabajo(_areaTrabajo);
+                _areasTrabajo.Add(_areaTrabajo);
+                frmMessageBox frm;
+                if (daoAreaTrabajo.insertarAreaTrabajo(_areaTrabajo) == 0) // Ta mal
+                    frm = new frmMessageBox("No se pudo insertar.");
+                else // Inserto bien
+                    frm = new frmMessageBox("Se inserto correctamente el area de trabajo " + _areaTrabajo.nombre);
+                frm.ShowDialog();
+                btnAZ_Click(btnAZ, new EventArgs());
             }
         }
         private void ItemLista_Click(object sender, EventArgs e, areaTrabajo areaTrabajo)
@@ -122,5 +173,28 @@ namespace LP2MegaAutos
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }
+        #region Buscar //AGREGADO PARA BUSCAR
+        private void crearItemsListaBuscar(List<areaTrabajo> _areasTrabajo)
+        {
+            if (_areasTrabajo == null) return;
+            foreach (areaTrabajo u in _areasTrabajo)
+            {
+                createItemListaAreaTrabajo(u, "Carter Kane", DateTime.Now);
+            }
+        }
+
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // Tenemos la lista usuarios
+            List<areaTrabajo> _areasBuscadas = new List<areaTrabajo>();
+            foreach (areaTrabajo u in _areasTrabajo)
+                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()))
+                    _areasBuscadas.Add(u);
+
+            quitarItemsLista();
+            crearItemsListaBuscar(_areasBuscadas);
+        }
+        #endregion Buscar
     }
 }

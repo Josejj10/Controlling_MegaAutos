@@ -66,6 +66,7 @@ namespace LP2MegaAutos
             InitializeComponent();
             _usuario = usuario;
             int i = 0;
+            // TODO
             // Agregar item Lista Permisos
             // foreach(permiso p in _usuario.permisos)
             foreach (EPermisos e in Enum.GetValues(typeof(EPermisos)))

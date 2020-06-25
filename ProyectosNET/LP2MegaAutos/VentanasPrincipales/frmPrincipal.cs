@@ -121,7 +121,6 @@ namespace LP2MegaAutos
 
             Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form
 
-
             // Primera pantalla es pantallaInicioGerente
             inicializarPms();
             if (DarkMode.is_dark_mode_active())
@@ -134,7 +133,7 @@ namespace LP2MegaAutos
         private void inicializarUsuario()
         {
             _usuario.Permisos.Add(EPermisos.All);
-            _usuario.Permisos.Add(EPermisos.ActualizarBD);
+            //_usuario.Permisos.Add(EPermisos.ActualizarBD);
             //_usuario.Permisos.Add(EPermisos.Empresa);
             _usuario.Permisos.Add(EPermisos.Sedes);
             _usuario.Permisos.Add(EPermisos.Drivers);

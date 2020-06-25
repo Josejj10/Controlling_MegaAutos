@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.ServicioDriver;
+using LP2MegaAutos.ServicioCliente;
+using LP2MegaAutos.Framework;
 
 namespace LP2MegaAutos
 {
@@ -16,6 +18,7 @@ namespace LP2MegaAutos
     {
         ServicioDriver.DriverWSClient daoDriver;
         List<driver> drivers;
+        private string textoBuscar;
         public pantallaActualizarDrivers()
         {
             InitializeComponent();
@@ -40,20 +43,20 @@ namespace LP2MegaAutos
 
         private void quitarItemsLista()
         {
-            foreach (Control d in flpDrivers.Controls)
-                d.Parent.Controls.Remove(d);
+            for(int i = 0; i < flpDrivers.Controls.Count;)
+                flpDrivers.Controls.RemoveAt(i);
         }
 
         private void organizarAZ()
         {
-            drivers.OrderBy(d => d.formula);
+            drivers.OrderBy(d => d.formula).ToList();
             quitarItemsLista();
             crearItemLista();
         }
 
         private void organizarZA()
         {
-            drivers.OrderByDescending(d => d.formula);
+            drivers.OrderByDescending(d => d.formula).ToList();
             quitarItemsLista();
             crearItemLista();
         }
@@ -79,14 +82,23 @@ namespace LP2MegaAutos
             pantallaEditarDriver pes = new pantallaEditarDriver(driver);
             DialogResult d = pes.ShowDialog();
             if (d == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                driver _driver = pes.Driver;
+                daoDriver.actualizarDriver(_driver);
+                createItemListaDriver(_driver, "Carter Kane", DateTime.Now);
+                drivers.Remove(driver);
+                drivers.Add(_driver);
+                btnAZ_Click(btnAZ, new EventArgs());
+            }
+                
             else if (d == DialogResult.Retry)
             {
                 // Eliminar
                 daoDriver.eliminarDriver(driver.id);
-                flpDrivers.Controls.RemoveByKey("il" + driver.id);
+                organizarAZ();
+                drivers.Remove(driver);
                 //ordenarItemsLista();
-                inicializarItemsLista();
+                btnAZ_Click(btnAZ, e);
             }
         }
 
@@ -103,6 +115,9 @@ namespace LP2MegaAutos
             pantallaAgregarDriver pas = new pantallaAgregarDriver();
 
             if (pas.ShowDialog() == DialogResult.OK)
+            {
+
+            }
                 MessageBox.Show("OK");
 
             ////MessageBox.Show("NO AUN");
@@ -118,32 +133,16 @@ namespace LP2MegaAutos
 
         private void btnAZ_Click(object sender, EventArgs e)
         {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Colores.ChooseAmarillo;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnAZ.BackColor = Colores.ChooseAmarillo;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndAZ, rndZA, rndAntiguo, rndReciente);
+            organizarAZ();
         }
-
         private void btnZA_Click(object sender, EventArgs e)
         {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndZA.ColorPanel = Colores.ChooseAmarillo;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
 
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Colores.ChooseAmarillo;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndZA, rndAZ, rndAntiguo, rndReciente);
+            organizarZA();
         }
 
         private void btnAntiguo_Click(object sender, EventArgs e)
@@ -200,7 +199,13 @@ namespace LP2MegaAutos
             if(dr.ShowDialog() == DialogResult.OK)
             {
                 driver _driver = dr.Driver;
-                daoDriver.insertarDriver(_driver);
+                drivers.Add(_driver);
+                frmMessageBox frm;
+                if(daoDriver.insertarDriver(_driver) == 0)
+                    frm = new frmMessageBox("No se pudo insertar.");
+                else
+                    frm = new frmMessageBox("Se inserto correctamente el driver en " + _driver.formula);
+                frm.ShowDialog();
             }
         }
     }

@@ -662,6 +662,7 @@
             // 
             // flpPermisos
             // 
+            this.flpPermisos.AutoScroll = true;
             this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.flpPermisos.Location = new System.Drawing.Point(336, 131);
             this.flpPermisos.Name = "flpPermisos";

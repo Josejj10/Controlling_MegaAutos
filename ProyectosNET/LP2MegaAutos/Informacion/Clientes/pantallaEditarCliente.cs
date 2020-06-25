@@ -58,6 +58,17 @@ namespace LP2MegaAutos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (!clienteValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
+            _cliente.nombre = txt_NombreCliente.Text;
+            _cliente.numDocumento = txt_NumeroDocumento.Text;
+            _cliente.tipoDocumento = txt_TIpoDocumento.Text;
+            _cliente.telefono = txt_Telefono.Text;
+            _cliente.correo = txt_Correo.Text;
+            _cliente.tipoCliente = txtTipoCliente.Text;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -218,12 +229,12 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (txt_NumeroDocumento.Text.Length == 8 || txt_NumeroDocumento.Text.Length == 10)
-            {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto.", MessageBoxButtons.OK);
-                f.ShowDialog();
-                return false;
-            } 
+            //if ((txt_NumeroDocumento.Text.Length == 8) || (txt_NumeroDocumento.Text.Length == 10))
+            //{
+            //    frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto.", MessageBoxButtons.OK);
+            //    f.ShowDialog();
+            //    return false;
+            //}
 
             if (isDouble == false)
             {

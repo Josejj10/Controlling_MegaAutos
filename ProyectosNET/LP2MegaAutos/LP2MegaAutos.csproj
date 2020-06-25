@@ -178,12 +178,6 @@
     <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.Designer.cs">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion\Vehiculos\frmAgregarVehiculo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informacion\Vehiculos\frmAgregarVehiculo.Designer.cs">
-      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\Vehiculos\frmEditarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,12 +285,6 @@
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Servicios\pantallaAgregarServicio.Designer.cs">
-      <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.cs">
       <SubType>Form</SubType>
@@ -486,9 +474,6 @@
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.resx">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\Vehiculos\frmAgregarVehiculo.resx">
-      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Vehiculos\frmEditarVehiculo.resx">
       <DependentUpon>frmEditarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,9 +545,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Drivers\pantallaAgregarDriver.resx">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Servicios\pantallaAgregarServicio.resx">
-      <DependentUpon>pantallaAgregarServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\Usuarios\pantallaAgregarUsuario.resx">
       <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>

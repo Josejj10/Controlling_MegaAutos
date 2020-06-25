@@ -52,6 +52,8 @@
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
             this.btn_guardar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.pnl_codServ.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
@@ -117,7 +119,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_codServ, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_codServ, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_codServ, System.Drawing.FontStyle.Bold);
-            this.txt_codServ.Text = "MEC-001";
             // 
             // lbl_codServ
             // 
@@ -206,7 +207,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_descripcion, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_descripcion, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_descripcion, System.Drawing.FontStyle.Bold);
-            this.txt_descripcion.Text = "Mantenimiento integral del vehiculo.\r\n";
             // 
             // lbl_desc
             // 
@@ -281,7 +281,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_tipoServicio, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_tipoServicio, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_tipoServicio, System.Drawing.FontStyle.Bold);
-            this.txt_tipoServicio.Text = "Mecánica";
             // 
             // lbl_tipoServicio
             // 
@@ -340,7 +339,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_NombreServicio, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_NombreServicio, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreServicio, System.Drawing.FontStyle.Bold);
-            this.txt_NombreServicio.Text = "Mantenimiento preventivo\r\n";
             // 
             // title_bar
             // 
@@ -531,12 +529,60 @@
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Driver;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(555, 49);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(28, 28);
+            this.btnEliminar.TabIndex = 68;
+            this.tagsExtender1.SetTag2(this.btnEliminar, null);
+            this.tagsExtender1.SetTag3(this.btnEliminar, null);
+            this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnEliminar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnEliminar, System.Drawing.FontStyle.Regular);
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(514, 49);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(28, 28);
+            this.btnEditar.TabIndex = 67;
+            this.tagsExtender1.SetTag2(this.btnEditar, null);
+            this.tagsExtender1.SetTag3(this.btnEditar, null);
+            this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // pantallaEditarServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar);
@@ -561,7 +607,6 @@
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.pantallaEditarServicios_Load);
             this.pnl_codServ.ResumeLayout(false);
             this.pnl_codServ.PerformLayout();
             this.pnl_descripcion.ResumeLayout(false);
@@ -601,5 +646,7 @@
         private System.Windows.Forms.Button btn_cancelar;
         private RoundedPanel rnd_guardar;
         private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

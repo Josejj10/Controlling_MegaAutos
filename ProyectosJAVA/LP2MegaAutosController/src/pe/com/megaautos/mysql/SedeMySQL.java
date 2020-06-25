@@ -32,7 +32,7 @@ public class SedeMySQL implements SedeDAO {
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_SEDE(?,?)}");
+                    "{call INSERTAR_SEDE(?,?,?,?,?)}");
             // Insertar Sede recibirá el distrito de la sede y lo inserta
             // a MySQL como Nombre
             cs.registerOutParameter("_ID_SEDE", java.sql.Types.INTEGER);
@@ -63,7 +63,7 @@ public class SedeMySQL implements SedeDAO {
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
-                    "{call ACTUALIZAR_SEDE(?,?)}");   
+                    "{call ACTUALIZAR_SEDE(?,?,?,?,?)}");   
             cs.setInt("_ID_SEDE", sede.getId());
             cs.setString("_NOMBRE", sede.getDistrito().toUpperCase());
             cs.setString("_TELEFONO", sede.getTelefono().toUpperCase());

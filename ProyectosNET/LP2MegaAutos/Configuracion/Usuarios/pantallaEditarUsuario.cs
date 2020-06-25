@@ -277,7 +277,8 @@ namespace LP2MegaAutos
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
-            txtNombre.Text = string.Empty;
+            if (txtNombre.Text == "Agregar nombre de usuario...")
+                txtNombre.Text = string.Empty;
             txtNombre.ForeColor = Colores.HighContrast;
         }
 

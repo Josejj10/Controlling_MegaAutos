@@ -74,7 +74,8 @@ namespace LP2MegaAutos
 
         private void txt_NombreSede_Enter(object sender, EventArgs e)
         {
-            txt_NombreSede.Text = string.Empty;
+            if (txt_NombreSede.Text == "Agregar nombre de sede...")
+                txt_NombreSede.Text = string.Empty;
             txt_NombreSede.ForeColor = Colores.HighContrast;
         }
 

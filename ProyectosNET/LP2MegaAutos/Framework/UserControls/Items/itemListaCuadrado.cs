@@ -32,7 +32,21 @@ namespace LP2MegaAutos
             set { pnlImg.BackgroundImage = value; }
         }
         #endregion Propiedades
-        
+
+        #region Event Handlers
+
+        public delegate void ButtonClickEventHandler(object sender, EventArgs e);
+        public event ButtonClickEventHandler ItemListaClick;
+
+        private void itemLista_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = ItemListaClick;
+            if (h != null) h(this, e);
+        }
+
+        #endregion Event Handlers
+
+
         private void rpItem_MouseEnter(object sender, EventArgs e)
         {
             itemListaHelper.rpItem_MouseEnter(rpItem);

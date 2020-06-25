@@ -190,6 +190,7 @@ namespace LP2MegaAutos
                 else // Inserto bien
                     frm = new frmMessageBox("Se inserto correctamente el usuario " + _usuario.nombre);
                 frm.ShowDialog();
+                btnAZ_Click(btnAZ, new EventArgs());
             }
         }
 

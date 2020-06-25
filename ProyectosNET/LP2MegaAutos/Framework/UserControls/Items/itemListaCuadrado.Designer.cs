@@ -30,9 +30,11 @@
         {
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.rpItem = new LP2MegaAutos.RoundedPanel();
-            this.pnlImg = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTexto = new System.Windows.Forms.Label();
+            this.pnlImg = new System.Windows.Forms.Panel();
             this.rpItem.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rpItem
@@ -42,18 +44,18 @@
             this.rpItem.BackColor = System.Drawing.Color.Transparent;
             this.rpItem.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpItem.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.rpItem.Controls.Add(this.tableLayoutPanel1);
             this.rpItem.Controls.Add(this.pnlImg);
-            this.rpItem.Controls.Add(this.lblTexto);
             this.rpItem.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rpItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rpItem.Location = new System.Drawing.Point(0, 0);
-            this.rpItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rpItem.MenosHeightBorde = 1;
             this.rpItem.MenosHeightPanel = 1;
             this.rpItem.MenosWidthBorde = 1;
             this.rpItem.MenosWidthPanel = 1;
             this.rpItem.Name = "rpItem";
             this.rpItem.PorcLuzColorBorde = 0;
-            this.rpItem.Size = new System.Drawing.Size(141, 105);
+            this.rpItem.Size = new System.Drawing.Size(106, 85);
             this.rpItem.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.rpItem, null);
             this.tagsExtender1.SetTag3(this.rpItem, null);
@@ -64,37 +66,38 @@
             this.rpItem.XPanel = 0;
             this.rpItem.YBorde = 0;
             this.rpItem.YPanel = 0;
+            this.rpItem.Click += new System.EventHandler(this.itemLista_Click);
             this.rpItem.MouseEnter += new System.EventHandler(this.rpItem_MouseEnter);
             this.rpItem.MouseLeave += new System.EventHandler(this.roundedPanel1_MouseLeave);
             // 
-            // pnlImg
+            // tableLayoutPanel1
             // 
-            this.pnlImg.BackColor = System.Drawing.Color.Transparent;
-            this.pnlImg.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
-            this.pnlImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlImg.Location = new System.Drawing.Point(48, 17);
-            this.pnlImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlImg.Name = "pnlImg";
-            this.pnlImg.Size = new System.Drawing.Size(47, 43);
-            this.pnlImg.TabIndex = 1;
-            this.tagsExtender1.SetTag2(this.pnlImg, null);
-            this.tagsExtender1.SetTag3(this.pnlImg, null);
-            this.tagsExtender1.SetTagFontName(this.pnlImg, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.pnlImg, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.pnlImg, System.Drawing.FontStyle.Regular);
-            this.pnlImg.MouseEnter += new System.EventHandler(this.rpItem_MouseEnter);
-            this.pnlImg.MouseLeave += new System.EventHandler(this.roundedPanel1_MouseLeave);
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lblTexto, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 53);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(98, 21);
+            this.tableLayoutPanel1.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.tableLayoutPanel1, null);
+            this.tagsExtender1.SetTag3(this.tableLayoutPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.tableLayoutPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.tableLayoutPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.tableLayoutPanel1, System.Drawing.FontStyle.Regular);
             // 
             // lblTexto
             // 
+            this.lblTexto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTexto.AutoSize = true;
             this.lblTexto.BackColor = System.Drawing.Color.Transparent;
+            this.lblTexto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTexto.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lblTexto.Location = new System.Drawing.Point(11, 70);
-            this.lblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTexto.Location = new System.Drawing.Point(3, 2);
             this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(121, 21);
+            this.lblTexto.Size = new System.Drawing.Size(91, 16);
             this.lblTexto.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lblTexto, null);
             this.tagsExtender1.SetTag3(this.lblTexto, null);
@@ -102,24 +105,44 @@
             this.tagsExtender1.SetTagFontSize(this.lblTexto, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lblTexto, System.Drawing.FontStyle.Bold);
             this.lblTexto.Text = "Texto principal";
+            this.lblTexto.Click += new System.EventHandler(this.itemLista_Click);
             this.lblTexto.MouseEnter += new System.EventHandler(this.rpItem_MouseEnter);
             this.lblTexto.MouseLeave += new System.EventHandler(this.roundedPanel1_MouseLeave);
             // 
+            // pnlImg
+            // 
+            this.pnlImg.BackColor = System.Drawing.Color.Transparent;
+            this.pnlImg.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
+            this.pnlImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlImg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlImg.Location = new System.Drawing.Point(33, 8);
+            this.pnlImg.Name = "pnlImg";
+            this.pnlImg.Size = new System.Drawing.Size(40, 40);
+            this.pnlImg.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.pnlImg, null);
+            this.tagsExtender1.SetTag3(this.pnlImg, null);
+            this.tagsExtender1.SetTagFontName(this.pnlImg, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlImg, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlImg, System.Drawing.FontStyle.Regular);
+            this.pnlImg.Click += new System.EventHandler(this.itemLista_Click);
+            this.pnlImg.MouseEnter += new System.EventHandler(this.rpItem_MouseEnter);
+            this.pnlImg.MouseLeave += new System.EventHandler(this.roundedPanel1_MouseLeave);
+            // 
             // itemListaCuadrado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.rpItem);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "itemListaCuadrado";
-            this.Size = new System.Drawing.Size(141, 105);
+            this.Size = new System.Drawing.Size(106, 85);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.rpItem.ResumeLayout(false);
-            this.rpItem.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -129,6 +152,7 @@
         private TagsExtender tagsExtender1;
         private RoundedPanel rpItem;
         private System.Windows.Forms.Label lblTexto;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel pnlImg;
     }
 }

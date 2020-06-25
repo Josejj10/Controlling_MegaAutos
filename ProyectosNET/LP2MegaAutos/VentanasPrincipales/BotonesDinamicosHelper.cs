@@ -16,7 +16,7 @@ namespace LP2MegaAutos.VentanasPrincipales
     {
         // Devolvera el contenedor de flags menu que señala qué botones crear
         // Y también el numero de items de cada menu
-        public static void recibirParametros(BindingList<EPermisos> permisos,ref int menu, ref int nItemsInfo, ref int nItemsConfig)
+        public static void recibirParametros(BindingList<EPermisos> permisos, ref int menu, ref int nItemsInfo, ref int nItemsConfig)
         {
 
             foreach (EPermisos permiso in permisos)
@@ -71,7 +71,7 @@ namespace LP2MegaAutos.VentanasPrincipales
 
         // Devolvera el metodo generico con la clase de la pantalla que se creara segun el permiso que se le 
         public static Action<object, EventArgs> asignarBoton(EPermisos per, Button btn, Image img,
-            Panel panelMenu,ContenedorPantalla cont)
+            Panel panelMenu, ContenedorPantalla cont)
         {
             switch (per)
             {
@@ -141,7 +141,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 switch (btn.Name)
                 {
                     case "btnMenuInformacion":
-                        btn.BackgroundImage = (Image) new Bitmap(Resources.Informacion, new Size(36,36));
+                        btn.BackgroundImage = (Image)new Bitmap(Resources.Informacion, new Size(36, 36));
                         break;
                     case "btnMenuConfiguracion":
                         btn.BackgroundImage = (Image)new Bitmap(Resources.Configuracion, new Size(36, 36));
@@ -158,6 +158,49 @@ namespace LP2MegaAutos.VentanasPrincipales
             il.ColorPanel = Colores.BackBackground;
             il.Margin = new Padding(4);
             il.Size = new Size(497, 104);
+        }
+
+        public static void personalizarItemListaCuadrado(itemListaCuadrado il, Image img)
+        {
+            il.imgFondo = Resources.AreaTrabajo;
+            il.Location = new System.Drawing.Point(3, 3);
+            il.Size = new System.Drawing.Size(106, 85);
+        }
+        public static void agregarImgFondo(EPermisos e, itemListaCuadrado il)
+        {
+            switch (e)
+            {
+                case EPermisos.All:
+                    il.imgFondo = Resources.Estadisticas;
+                    return;
+                case EPermisos.ActualizarBD:
+                    il.imgFondo = Resources.BaseDatos;
+                    return;
+                case EPermisos.AreasTrabajo:
+                    il.imgFondo = Resources.AreaTrabajo;
+                    return;
+                case EPermisos.Clientes:
+                    il.imgFondo = Resources.Clientes;
+                    return;
+                case EPermisos.Drivers:
+                    il.imgFondo = Resources.Driver;
+                    return;
+                case EPermisos.Empresa:
+                    il.imgFondo = Resources.Empresa;
+                    return;
+                case EPermisos.Sedes:
+                    il.imgFondo = Resources.Sede;
+                    return;
+                case EPermisos.Servicios:
+                    il.imgFondo = Resources.Servicio;
+                    return;
+                case EPermisos.Usuarios:
+                    il.imgFondo = Resources.Usuarios;
+                    return;
+                case EPermisos.Vehiculos:
+                    il.imgFondo = Resources.car;
+                    return;
+            }
         }
     }
 }

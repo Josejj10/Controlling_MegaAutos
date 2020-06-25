@@ -73,6 +73,7 @@ namespace LP2MegaAutos
                 sede _sede = pes.Sede;
                 daoSede.actualizarSede(_sede);
                 createItemListaSede(_sede, "Carter Kane", DateTime.Now);
+                _sedes.Remove(sede);
                 _sedes.Add(_sede);
                 btnAZ_Click(btnAZ, new EventArgs());
                 // todo actualizar FechaUltimaModificacion en BD

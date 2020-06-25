@@ -65,7 +65,7 @@ public class SedeMySQL implements SedeDAO {
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_SEDE(?,?,?,?,?)}");   
             cs.setInt("_ID_SEDE", sede.getId());
-            cs.setString("_NOMBRE", sede.getDistrito().toUpperCase());
+            cs.setString("_NOMBRE", sede.getNombre().toUpperCase());
             cs.setString("_TELEFONO", sede.getTelefono().toUpperCase());
             cs.setString("_DISTRITO", sede.getDistrito().toUpperCase());
             cs.setString("_DIRECCION", sede.getDireccion().toUpperCase());

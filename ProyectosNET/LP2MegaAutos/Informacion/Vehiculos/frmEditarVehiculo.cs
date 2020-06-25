@@ -17,9 +17,14 @@ namespace LP2MegaAutos.Informacion.Vehiculos
     public partial class frmEditarVehiculo : MetroForm
     {
         ServicioVehiculo.vehiculo _vehiculo;
+        ServicioCliente.cliente _cliente;
+        ServicioCliente.ClienteWSClient daoCliente;
         public frmEditarVehiculo()
         {
             InitializeComponent();
+            _vehiculo = new ServicioVehiculo.vehiculo();
+            _cliente = new ServicioCliente.cliente();
+            daoCliente = new ServicioCliente.ClienteWSClient();
             lbl_EditarVehiculo.Text = "Agregar vehículo";
         }
         public frmEditarVehiculo(ServicioVehiculo.vehiculo vehiculo)
@@ -79,7 +84,50 @@ namespace LP2MegaAutos.Informacion.Vehiculos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (!vehiculoValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
+            _vehiculo.placa = txt_placaVehiculo.Text;
+            _vehiculo.propietario = new ServicioVehiculo.cliente();
+            _vehiculo.propietario.id = _cliente.id;
+            _vehiculo.tipoVehiculo = txt_TipoVehiculo.Text;
             this.DialogResult = DialogResult.OK;
+        }
+
+        private bool vehiculoValido()
+        {
+            if (string.IsNullOrEmpty(txt_placaVehiculo.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese la placa del vehículo.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_nombVehiculo.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese el nombre del propietario del vehículo.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_TipoVehiculo.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese el tipo de vehículo.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            _cliente = daoCliente.buscarPorNombre(txt_nombVehiculo.Text);
+            if (_cliente.id == 0)
+            {
+                frmMessageBox f = new frmMessageBox("El cliente no existe en la base de datos. Por favor, ingrese un cliente existente.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+            
+            return true;
         }
 
         #region title_bar

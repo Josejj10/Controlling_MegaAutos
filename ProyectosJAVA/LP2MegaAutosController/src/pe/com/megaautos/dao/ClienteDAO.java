@@ -13,6 +13,7 @@ import pe.com.megaautos.model.Cliente;
  * @author Rodrigo
  */
 public interface ClienteDAO {
+    Cliente buscarPorNombre(String nombre);
     Cliente buscar(int id);
     int insertar(Cliente cliente);
     int actualizar(Cliente cliente);

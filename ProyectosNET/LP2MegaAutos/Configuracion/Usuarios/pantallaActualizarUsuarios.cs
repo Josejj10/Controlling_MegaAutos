@@ -15,16 +15,19 @@ namespace LP2MegaAutos
 {
     public partial class pantallaActualizarUsuarios : Pantalla
     {
-        ServicioUsuario.UsuarioWSClient daoUsuario;
-        List<usuario> _usuarios;
+        private ServicioUsuario.UsuarioWSClient daoUsuario;
+        private List<usuario> _usuarios;
+        private string textoBuscar; //AGREGADO PARA BUSCAR
 
         public pantallaActualizarUsuarios()
         {
             InitializeComponent();
+            textoBuscar = " usuario por nombre o correo"; //AGREGADO PARA BUSCAR
             flpUsuarios.AutoScroll = true;
             daoUsuario =
                 new ServicioUsuario.UsuarioWSClient();
             inicializarItemsLista();
+            txt_Buscar.Text += textoBuscar;
         }
 
         #region lista
@@ -112,6 +115,7 @@ namespace LP2MegaAutos
                 daoUsuario.actualizarUsuario(u);
                 flpUsuarios.Controls.RemoveByKey("il" + usu.id);
                 createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+                _usuarios.Remove(usu);
                 _usuarios.Add(u);
                 btnAZ_Click(btnAZ, new EventArgs());
                 // todo actualizar FechaUltimaModificacion en BD
@@ -161,15 +165,16 @@ namespace LP2MegaAutos
         #region Txt Buscar
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarEnter(txt_Buscar);
+            pantallaListasHelper.buscarEnter(txt_Buscar,textoBuscar); //AGREGADO PARA BUSCAR
         }
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarLeave(txt_Buscar);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
         }
         #endregion Txt Buscar
 
+        #region Buscar //AGREGADO PARA BUSCAR
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             pantallaEditarUsuario pas = new pantallaEditarUsuario();
@@ -188,9 +193,29 @@ namespace LP2MegaAutos
             }
         }
 
-        private void txt_Buscar_TextChanged(object sender, EventArgs e)
+        private void crearItemsListaBuscar(List<usuario> _usuariosB)
         {
-
+            if (_usuariosB == null) return;
+            foreach (usuario u in _usuariosB)
+            {
+                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+            }
         }
+
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // Tenemos la lista usuarios
+            List<usuario> _usuariosBuscados = new List<usuario>();
+            foreach (usuario u in _usuarios)
+                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.tipoUsuario.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.correo.Contains(txt_Buscar.Text.ToUpper()))
+                    _usuariosBuscados.Add(u);
+
+            quitarItemsLista();
+            crearItemsListaBuscar(_usuariosBuscados);
+        }
+        #endregion Buscar
     }
 }

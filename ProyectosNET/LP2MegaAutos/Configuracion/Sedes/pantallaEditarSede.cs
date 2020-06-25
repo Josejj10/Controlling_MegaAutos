@@ -90,6 +90,11 @@ namespace LP2MegaAutos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            // VALIDAR
+            // 
+            _sede.nombre = txt_NombreSede.Text;
+            _sede.direccion = txt_direccion.Text;
+            // .....
             this.DialogResult = DialogResult.OK;
         }
 
@@ -113,10 +118,6 @@ namespace LP2MegaAutos
             if (!en)
             {
                 // No habilitado
-                txt_NombreSede.BackColor = txt_distrito.BackColor =
-                    txt_direccion.BackColor = txt_telefono.BackColor
-                    = Colores.FrontBackground;
-
                 txt_NombreSede.ForeColor = txt_distrito.ForeColor =
                     txt_direccion.ForeColor = txt_telefono.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
@@ -131,7 +132,7 @@ namespace LP2MegaAutos
                 return;
             }
             // Habilitado
-            txt_NombreSede.ForeColor = Colores.HighContrast;
+            txt_NombreSede.ForeColor = 
             txt_distrito.ForeColor =
                txt_direccion.ForeColor = txt_telefono.ForeColor =
                Colores.HighContrast;

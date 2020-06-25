@@ -523,7 +523,7 @@
             this.txt_NombreSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.txt_NombreSede.Location = new System.Drawing.Point(27, 42);
             this.txt_NombreSede.Name = "txt_NombreSede";
-            this.txt_NombreSede.Size = new System.Drawing.Size(441, 35);
+            this.txt_NombreSede.Size = new System.Drawing.Size(367, 35);
             this.txt_NombreSede.TabIndex = 64;
             this.tagsExtender1.SetTag2(this.txt_NombreSede, null);
             this.tagsExtender1.SetTag3(this.txt_NombreSede, null);

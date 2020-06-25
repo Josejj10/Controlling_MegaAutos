@@ -261,7 +261,7 @@
             this.btnReciente.Text = "Reciente";
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
-            this.btnReciente.Click += new System.EventHandler(this.btn_Reciente_Click);
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
             // rndAntiguo
             // 
@@ -313,7 +313,7 @@
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
-            this.btnAntiguo.Click += new System.EventHandler(this.btn_Antiguo_Click);
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
             // rndZA
             // 
@@ -365,7 +365,7 @@
             this.btnZA.Text = "Z - A";
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
-            this.btnZA.Click += new System.EventHandler(this.btn_ZA_Click);
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
             // 
             // rndAZ
             // 
@@ -417,7 +417,7 @@
             this.btnAZ.Text = "A - Z";
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
-            this.btnAZ.Click += new System.EventHandler(this.btn_AZ_Click);
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // btn_Agregar
             // 
@@ -439,6 +439,7 @@
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.btnAgregarClick);
             // 
             // pantallaActualizarSedes
             // 

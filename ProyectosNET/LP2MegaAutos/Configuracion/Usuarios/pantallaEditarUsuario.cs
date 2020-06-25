@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using LP2MegaAutos.ServicioUsuario;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.Framework;
+using LP2MegaAutos.Properties;
 
 namespace LP2MegaAutos
 {
@@ -19,18 +21,20 @@ namespace LP2MegaAutos
         public pantallaEditarUsuario()
         {
             InitializeComponent();
+            txtNombre.Text = "Agregar nombre de usuario...";
+            _usuario = new usuario();
         }
         public pantallaEditarUsuario(usuario usuario)
         {
+            if (usuario == null) this.DialogResult = DialogResult.Cancel;
             InitializeComponent();
-            txtNombre.Text = usuario.nombre;    
-            txt_Correo.Text = usuario.correo;
-            txt_RolUsuario.Text = usuario.tipoUsuario;
-            txt_ContraseñaActual.Text = txt_NuevaCont.Text = txt_RepNCont.Text = "";
+            toggleComponentes();
+            txtNombre.Text = OtrosHelper.tipoOracion(usuario.nombre);    
+            txt_Correo.Text = usuario.correo.ToLower();
+            txt_RolUsuario.Text = OtrosHelper.tipoOracion(usuario.tipoUsuario);
+            txt_NuevaCont.Text = txt_RepNCont.Text = "";
             _usuario = usuario;
         }
-
-
 
         #region title_bar
 
@@ -86,11 +90,6 @@ namespace LP2MegaAutos
         }
         #endregion Ver Password
 
-        private void btn_GuardarCambios_Click(object sender, EventArgs e)
-        {
-            this.SendToBack();
-        }
-
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -115,20 +114,12 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (txt_NuevaCont.Text != txt_RepNCont.Text)
+            if (btnCambiarPassword.Enabled && txt_NuevaCont.Text != txt_RepNCont.Text)
             {
                 frmMessageBox f = new frmMessageBox("Por favor repita correctamente la nueva contraseña.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }
-
-            if (string.IsNullOrEmpty(txt_ContraseñaActual.Text))
-            {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese su contraseña para guardar los cambios.", MessageBoxButtons.OK);
-                f.ShowDialog();
-                return false;
-            }
-
 
             return true;
         }
@@ -137,17 +128,34 @@ namespace LP2MegaAutos
         {
             if (!usuarioValido())
                 return;
-            // Validar
-            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel,"Guardar Cambios");
+            // Preguntar si desea realizar la accion
+            frmEliminar f;
+
+            if (_usuario.correo != null)
+                f = new frmEliminar("agregar el usuario " + txtNombre.Text, "Agregar Usuario");
+            else
+                f = new frmEliminar("modificar el usuario " + txtNombre.Text, "Modificar Usuario");
+            
             if (f.ShowDialog() != DialogResult.OK)
                 return;
+
+            // Validar contraseña actual
+            //ServicioUsuario.UsuarioWS daoUsuario;
+            // if (!daoUsuario.validarUsuario(_usuario.id, txt_ContraseñaActual.Text)){ 
+            //     frmMessageBox frm = new frmMessageBox("La contraseña es invalida",MessageBoxButtons.OK);
+            //     frmMessaBox.Show();
+            //     return;
+            //}
+
             // Actualizar usuario
             _usuario.nombre = txtNombre.Text;
             _usuario.correo = txt_Correo.Text;
             _usuario.tipoUsuario = txt_RolUsuario.Text;
-            // TODO 
-            _usuario.password = txt_NuevaCont.Text;
-            //_usuario.nombre = txt_NombreUsuario.Text
+
+            // Actualizar contraseña si cambiarcontraseña esta activo
+            if (btnCambiarPassword.Enabled)
+                _usuario.password = txt_RepNCont.Text;
+            
             this.DialogResult = DialogResult.OK;
         }
 
@@ -162,7 +170,7 @@ namespace LP2MegaAutos
             //daoUsuario.actualizarUsuario(pes.Usuario);
             // Aun no estoy seguro si ver Datos
         }
-
+        #region listaPermisos
         private void crearItemsListaPermisos()
         {
 
@@ -177,23 +185,111 @@ namespace LP2MegaAutos
         {
 
         }
+        #endregion listaPermisos
 
         private void btnReestablecer_Click(object sender, EventArgs e)
         {
             txtNombre.Text = _usuario.nombre;
             txt_Correo.Text = _usuario.correo;
             txt_RolUsuario.Text = _usuario.tipoUsuario;
-            txt_NuevaCont.Text = txt_ContraseñaActual.Text = txt_RepNCont.Text = "";
+            txt_NuevaCont.Text = txt_RepNCont.Text = "";
         }
 
         private void btnCambiarPassword_Click(object sender, EventArgs e)
         {
-            txt_NuevaCont.Enabled = txt_RepNCont.Enabled = !txt_RepNCont.Enabled;
+            bool en = txt_NuevaCont.Enabled = txt_RepNCont.Enabled = !txt_RepNCont.Enabled;
+            // cambiar colores de password
+            if (en)
+            {
+                txt_NuevaCont.ForeColor = txt_RepNCont.ForeColor =
+                Colores.HighContrast;
+                rnd_color_3.ColorBorde = rnd_color_3.ColorPanel =
+                rnd_color_4.ColorBorde = rnd_color_4.ColorPanel =
+                Colores.Rosa;
+            }
+            rnd_color_3.ColorBorde = rnd_color_3.ColorPanel =
+            rnd_color_4.ColorBorde = rnd_color_4.ColorPanel =
+            txt_NuevaCont.ForeColor = txt_RepNCont.ForeColor = 
+            Colores.Disabled;
         }
 
-        private void txt_ContraseñaActual_Enter(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            txt_ContraseñaActual.Text = "";
+            toggleComponentes();
         }
+
+        private void toggleComponentes()
+        {
+            bool en = txtNombre.Enabled = txt_Correo.Enabled =
+                txt_RolUsuario.Enabled = btn_guardar.Enabled =
+                txt_NuevaCont.Enabled = txt_RepNCont.Enabled =
+                btnCambiarPassword.Enabled = btnReestablecer.Enabled
+                = !txtNombre.Enabled;
+
+            if (!en)
+            {
+                // No habilitado
+                txtNombre.BackColor = Colores.FrontBackground;
+
+                txtNombre.ForeColor = txt_Correo.ForeColor =
+                    txt_NuevaCont.ForeColor = txt_RolUsuario.ForeColor =
+                    txt_RepNCont.ForeColor =
+                    rnd_color_1.ColorPanel = rnd_color_2.ColorPanel =
+                    rnd_color_3.ColorPanel = rnd_color_4.ColorPanel =
+                    rnd_guardar.ColorPanel = rpCambiarPassword.ColorPanel =
+                    rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
+                    rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
+                    rnd_guardar.ColorBorde = rpCambiarPassword.ColorBorde =
+                    rnd_Reestablecer.ColorBorde = rnd_Reestablecer.ColorPanel
+                    = Colores.Disabled;
+
+                btnEditar.BackgroundImage = Resources.editar;
+                return;
+            }
+            // Habilitado
+            txtNombre.ForeColor = txt_Correo.ForeColor =
+            txt_NuevaCont.ForeColor = txt_RolUsuario.ForeColor =
+            txt_RepNCont.ForeColor = Colores.HighContrast;
+        
+            rnd_color_1.ColorPanel = rnd_color_2.ColorPanel =
+            rnd_color_3.ColorPanel = rnd_color_4.ColorPanel =
+            rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
+            rnd_color_3.ColorBorde = rnd_color_4.ColorBorde
+            = Colores.Rosa;
+            
+            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde =
+            rpCambiarPassword.ColorPanel = rpCambiarPassword.ColorBorde =
+            rnd_Reestablecer.ColorBorde = rnd_Reestablecer.ColorPanel
+            = Colores.AmarilloInteractivo;
+
+            btnEditar.BackgroundImage = Resources.Logout;
+        }
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmEliminar frm = new frmEliminar("eliminar el usuario " + _usuario.nombre);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.Retry;
+            }
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            txtNombre.Text = string.Empty;
+            txtNombre.ForeColor = Colores.HighContrast;
+        }
+
+        private void txt_Nombre_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                txtNombre.ForeColor = Colores.LowContrast;
+                txtNombre.Text = "Agregar nombre de usuario...";
+            }
+        }
+
+
     }
 }

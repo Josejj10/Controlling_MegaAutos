@@ -1,4 +1,7 @@
-﻿using MetroFramework.Forms;
+﻿using LP2MegaAutos.Framework;
+using LP2MegaAutos.Properties;
+using LP2MegaAutos.VentanasPrincipales;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,17 +16,67 @@ namespace LP2MegaAutos.Informacion.Vehiculos
 {
     public partial class frmEditarVehiculo : MetroForm
     {
+        ServicioVehiculo.vehiculo _vehiculo;
         public frmEditarVehiculo()
         {
             InitializeComponent();
+            lbl_EditarVehiculo.Text = "Agregar vehículo";
         }
         public frmEditarVehiculo(ServicioVehiculo.vehiculo vehiculo)
         {
             InitializeComponent();
+            _vehiculo = vehiculo;
+            toggleComponentes();
+            this.lbl_EditarVehiculo.Text = "Editar vehículo";
             this.txt_placaVehiculo.Text = vehiculo.placa;
-            this.txt_nombVehiculo.Text = vehiculo.propietario.nombre;
-            this.txt_TipoVehiculo.Text = vehiculo.tipoVehiculo;
+            this.txt_nombVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.propietario.nombre);
+            this.txt_TipoVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
         }
+        private void toggleComponentes()
+        {
+            bool en = lbl_EditarVehiculo.Enabled = txt_placaVehiculo.Enabled =
+                txt_nombVehiculo.Enabled = txt_TipoVehiculo.Enabled = btn_guardar.Enabled
+                = !lbl_EditarVehiculo.Enabled;
+
+
+            if (!en)
+            {
+                // No habilitado
+                lbl_EditarVehiculo.BackColor = txt_placaVehiculo.BackColor =
+                    txt_nombVehiculo.BackColor = txt_TipoVehiculo.BackColor
+                    = Colores.FrontBackground;
+
+                lbl_EditarVehiculo.ForeColor = txt_placaVehiculo.ForeColor =
+                    txt_nombVehiculo.ForeColor = txt_TipoVehiculo.ForeColor =
+                    rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
+                    rnd_color_2.ColorPanel =
+                    rnd_guardar.ColorPanel =
+                    rnd_color_1.ColorBorde = rnd_color_3.ColorBorde =
+                    rnd_color_2.ColorBorde = rnd_guardar.ColorBorde
+                    = Colores.Disabled;
+
+
+                btnEditar.BackgroundImage = Resources.editar;
+                return;
+            }
+            // Habilitado
+            lbl_EditarVehiculo.ForeColor = Colores.HighContrast;
+            txt_placaVehiculo.ForeColor =
+               txt_nombVehiculo.ForeColor = txt_TipoVehiculo.ForeColor =
+               Colores.HighContrast;
+
+            rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
+                    rnd_color_2.ColorPanel =
+                    rnd_guardar.ColorPanel =
+                    rnd_color_1.ColorBorde = rnd_color_3.ColorBorde =
+                    rnd_color_2.ColorBorde = rnd_guardar.ColorBorde
+                    = Colores.Rosa;
+
+            btnEditar.BackgroundImage = Resources.Logout;
+        }
+
+        public ServicioVehiculo.vehiculo Vehiculo { get { return _vehiculo; } }
+
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
@@ -68,6 +121,20 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmEliminar frm = new frmEliminar("eliminar el vehículo de placa" + _vehiculo.placa);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.Retry;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            toggleComponentes();
         }
     }
 }

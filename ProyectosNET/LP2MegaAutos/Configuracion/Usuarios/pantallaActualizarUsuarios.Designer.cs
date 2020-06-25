@@ -104,6 +104,7 @@
             this.tagsExtender1.SetTagFontSize(this.txt_Buscar, 11F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
+            this.txt_Buscar.TextChanged += new System.EventHandler(this.txt_Buscar_TextChanged);
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
             this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
@@ -146,6 +147,7 @@
             this.btn_Agregar.Text = "+ Agregar";
             this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // rndReciente
             // 

@@ -15,24 +15,49 @@ namespace LP2MegaAutos
     public partial class pantallaActualizarDrivers : Pantalla
     {
         ServicioDriver.DriverWSClient daoDriver;
+        List<driver> drivers;
         public pantallaActualizarDrivers()
         {
             InitializeComponent();
-            this.btn_Agregar.Click += btnAgregarClick;
             flpDrivers.AutoScroll = true;
             daoDriver = new ServicioDriver.DriverWSClient();
             inicializarItemsLista();
         }
         private void inicializarItemsLista()
         {
-            List<driver> drivers = daoDriver.listarDrivers().ToList();
-            if (drivers == null) return;
-            foreach (driver u in drivers)
-            {
-                createItemListaDriver(u, "Carter Kane", DateTime.Now);
-            }
-
+            drivers = daoDriver.listarDrivers().ToList();
+            crearItemLista();
         }
+
+        private void crearItemLista()
+        {
+            if (drivers == null) return;
+            foreach(driver d in drivers)
+            {
+                createItemListaDriver(d, "Carter Kane", DateTime.Now);
+            }
+        }
+
+        private void quitarItemsLista()
+        {
+            foreach (Control d in flpDrivers.Controls)
+                d.Parent.Controls.Remove(d);
+        }
+
+        private void organizarAZ()
+        {
+            drivers.OrderBy(d => d.formula);
+            quitarItemsLista();
+            crearItemLista();
+        }
+
+        private void organizarZA()
+        {
+            drivers.OrderByDescending(d => d.formula);
+            quitarItemsLista();
+            crearItemLista();
+        }
+
         private itemLista createItemListaDriver(ServicioDriver.driver driver, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
@@ -43,11 +68,28 @@ namespace LP2MegaAutos
             il.TextoPrincipal = driver.formula.ToString();
             il.Textosecundario = "Mecánica TBD";
             il.TextoTercero = "Luz TBD";
-            il.ItemListaClick += (sender, e) => { btnEditarClick(sender, e, driver); };
+            il.ItemListaClick += (sender, e) => { verDatosDriver(sender, e, driver); };
+            il.esconderBotonEditar();
             flpDrivers.Controls.Add(il);
             return il;
         }
-        
+
+        private void verDatosDriver(object sender, EventArgs e, ServicioDriver.driver driver)
+        {
+            pantallaEditarDriver pes = new pantallaEditarDriver(driver);
+            DialogResult d = pes.ShowDialog();
+            if (d == DialogResult.OK)
+                MessageBox.Show("OK");
+            else if (d == DialogResult.Retry)
+            {
+                // Eliminar
+                daoDriver.eliminarDriver(driver.id);
+                flpDrivers.Controls.RemoveByKey("il" + driver.id);
+                //ordenarItemsLista();
+                inicializarItemsLista();
+            }
+        }
+
 
         private void btnEditarClick(Object sender, EventArgs e, driver driver)
         {
@@ -150,6 +192,16 @@ namespace LP2MegaAutos
         {
             if (txt_Buscar.Text == string.Empty)
                 txt_Buscar.Text = "Buscar";
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarDriver dr = new pantallaEditarDriver();
+            if(dr.ShowDialog() == DialogResult.OK)
+            {
+                driver _driver = dr.Driver;
+                daoDriver.insertarDriver(_driver);
+            }
         }
     }
 }

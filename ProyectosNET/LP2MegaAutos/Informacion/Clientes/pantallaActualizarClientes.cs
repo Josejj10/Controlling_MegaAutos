@@ -15,6 +15,7 @@ namespace LP2MegaAutos
     public partial class pantallaActualizarClientes : Pantalla
     {
         ServicioCliente.ClienteWSClient daoCliente;
+        List<cliente> clientes;
         public pantallaActualizarClientes()
         {
             InitializeComponent();
@@ -25,13 +26,39 @@ namespace LP2MegaAutos
         }
         private void inicializarItemsLista()
         {
-            cliente[] clientes = daoCliente.listarClientes();
+            clientes = daoCliente.listarClientes().ToList();
+            crearItemLista();
+        }
+
+        private void crearItemLista()
+        {
             if (clientes == null) return;
-            foreach (cliente u in clientes)
+            foreach(cliente c in clientes)
             {
-                createItemListaCliente(u, "Carter Kane", DateTime.Now);
+                createItemListaCliente(c, "Carter Kane", DateTime.Now);
             }
         }
+
+        private void quitarItemsLista()
+        {
+            foreach (Control c in flpClientes.Controls)
+                c.Parent.Controls.Remove(c);
+        }
+
+        private void organizarAZ()
+        {
+            clientes.OrderBy(c => c.nombre);
+            quitarItemsLista();
+            crearItemLista();
+        }
+
+        private void organizarZA()
+        {
+            clientes.OrderByDescending(c => c.nombre);
+            quitarItemsLista();
+            crearItemLista();
+        }
+
         private itemLista createItemListaCliente(ServicioCliente.cliente cliente, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
@@ -44,9 +71,25 @@ namespace LP2MegaAutos
             else if (cliente.numDocumento.Length == 10) il.Textosecundario = "RUC: ";
             il.Textosecundario += cliente.numDocumento;
             il.TextoTercero = cliente.tipoCliente;
-            il.ItemListaClick += (sender, e) => { btnEditarClick(sender, e, cliente); };
+            il.ItemListaClick += (sender, e) => { verDatosCliente(sender, e, cliente); };
+            il.esconderBotonEditar();
             flpClientes.Controls.Add(il);
             return il;
+        }
+        private void verDatosCliente(object sender, EventArgs e, ServicioCliente.cliente cliente)
+        {
+            pantallaEditarCliente pes = new pantallaEditarCliente(cliente);
+            DialogResult d = pes.ShowDialog();
+            if (d == DialogResult.OK)
+                MessageBox.Show("OK");
+            else if (d == DialogResult.Retry)
+            {
+                // Eliminar
+                daoCliente.eliminarCliente(cliente.id);
+                flpClientes.Controls.RemoveByKey("il" + cliente.id);
+                //ordenarItemsLista();
+                inicializarItemsLista();
+            }
         }
         private void btnEditarClick(Object sender, EventArgs e, cliente cliente)
         {
@@ -143,6 +186,17 @@ namespace LP2MegaAutos
             if (txt_Buscar.Text == string.Empty)
                 txt_Buscar.Text = "Buscar";
         }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarCliente cl = new pantallaEditarCliente();
+            if (cl.ShowDialog() == DialogResult.OK)
+            {
+                cliente _cliente = cl.Cliente;
+                daoCliente.insertarCliente(_cliente);
+            }
+        }
+
 
     }
 }

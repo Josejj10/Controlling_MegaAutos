@@ -126,6 +126,7 @@ namespace LP2MegaAutos
             {
                 // Agregar sede
                 sede _sede = pes.Sede;
+                _sedes.Add(_sede);
                 frmMessageBox frm;
                 if (daoSede.insertarSede(_sede) == 0) // Ta mal
                     frm = new frmMessageBox("No se pudo insertar.");

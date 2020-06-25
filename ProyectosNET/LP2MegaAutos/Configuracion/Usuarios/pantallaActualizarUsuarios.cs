@@ -176,8 +176,9 @@ namespace LP2MegaAutos
 
             if (pas.ShowDialog() == DialogResult.OK)
             {
-                // Agregar sede
+                // Agregar usuario
                 usuario _usuario= pas.Usuario;
+                _usuarios.Add(_usuario);
                 frmMessageBox frm;
                 if (daoUsuario.insertarUsuario(_usuario) == 0) // Ta mal
                     frm = new frmMessageBox("No se pudo insertar.");
@@ -185,6 +186,11 @@ namespace LP2MegaAutos
                     frm = new frmMessageBox("Se inserto correctamente el usuario " + _usuario.nombre);
                 frm.ShowDialog();
             }
+        }
+
+        private void txt_Buscar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

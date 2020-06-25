@@ -16,7 +16,8 @@ namespace LP2MegaAutos
     public partial class pantallaActualizarClientes : Pantalla
     {
         ServicioCliente.ClienteWSClient daoCliente;
-        List<cliente> clientes;
+        List<cliente> _clientes;
+        private string textoBuscar;
         public pantallaActualizarClientes()
         {
             InitializeComponent();
@@ -26,14 +27,14 @@ namespace LP2MegaAutos
         }
         private void inicializarItemsLista()
         {
-            clientes = daoCliente.listarClientes().ToList();
+            _clientes = daoCliente.listarClientes().ToList();
             crearItemLista();
         }
 
         private void crearItemLista()
         {
-            if (clientes == null) return;
-            foreach(cliente c in clientes)
+            if (_clientes == null) return;
+            foreach(cliente c in _clientes)
             {
                 createItemListaCliente(c, "Carter Kane", DateTime.Now);
             }
@@ -47,31 +48,31 @@ namespace LP2MegaAutos
 
         private void organizarAZ()
         {
-            clientes = clientes.OrderBy(c => c.nombre).ToList();
+            _clientes = _clientes.OrderBy(c => c.nombre).ToList();
             quitarItemsLista();
             crearItemLista();
         }
 
         private void organizarZA()
         {
-            clientes = clientes.OrderByDescending(c => c.nombre).ToList();
+            _clientes = _clientes.OrderByDescending(c => c.nombre).ToList();
             quitarItemsLista();
             crearItemLista();
         }
 
-        //private void organizarAntiguo()
-        //{
-        //    clientes = clientes.OrderBy.OrderBy(c => c.fechaCreado).ToList();
-        //    quitarItemsLista();
-        //    crearItemLista();
-        //}
+        private void organizarAntiguo()
+        {
+            //clientes = clientes.OrderBy.OrderBy(c => c.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemLista();
+        }
 
-        //private void organizarReciente()
-        //{
-        //    clientes = clientes.OrderBy(c => c.fechaCreado).ToList();
-        //    quitarItemsLista();
-        //    crearItemLista();
-        //}
+        private void organizarReciente()
+        {
+            //clientes = clientes.OrderBy(c => c.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemLista();
+        }
 
         private itemLista createItemListaCliente(ServicioCliente.cliente cliente, string agregadoPor, DateTime fechaAgregado)
         {
@@ -90,27 +91,27 @@ namespace LP2MegaAutos
             flpClientes.Controls.Add(il);
             return il;
         }
-        private void verDatosCliente(object sender, EventArgs e, ServicioCliente.cliente cl)
+        private void verDatosCliente(object sender, EventArgs e, ServicioCliente.cliente cliente)
         {
-            pantallaEditarCliente pes = new pantallaEditarCliente(cl);
+            pantallaEditarCliente pes = new pantallaEditarCliente(cliente);
             DialogResult d = pes.ShowDialog();
             if (d == DialogResult.OK)
             {
                 // Actualizar el cliente
-                cliente c = pes.Cliente;
-                daoCliente.actualizarCliente(c);
-                flpClientes.Controls.RemoveByKey("il" + cl.id);
-                createItemListaCliente(c, "Carter Kane", DateTime.Now);
-                clientes.Add(c);
+                cliente _cliente = pes.Cliente;
+                daoCliente.actualizarCliente(_cliente);
+                createItemListaCliente(_cliente, "Carter Kane", DateTime.Now);
+                _clientes.Remove(cliente);
+                _clientes.Add(_cliente);
                 btnAZ_Click(btnAZ, new EventArgs());
             }
                 
             else if (d == DialogResult.Retry)
             {
                 // Eliminar
-                daoCliente.eliminarCliente(cl.id);
-                flpClientes.Controls.RemoveByKey("il" + cl.id);
-                clientes.Remove(cl);
+                daoCliente.eliminarCliente(cliente.id);
+                organizarAZ();
+                _clientes.Remove(cliente);
                 //ordenarItemsLista();
                 btnAZ_Click(btnAZ, e);
             }
@@ -144,19 +145,19 @@ namespace LP2MegaAutos
             organizarZA();
         }
 
-        //private void btnAntiguo_Click(object sender, EventArgs e)
-        //{
-        //    pantallaListasHelper.cambiarCuatroPaneles(
-        //        rndAntiguo, rndZA, rndAZ, rndReciente);
-        //    organizarAntiguo();
-        //}
+        private void btnAntiguo_Click(object sender, EventArgs e)
+        {
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndAntiguo, rndZA, rndAZ, rndReciente);
+            organizarAntiguo();
+        }
 
-        //private void btnReciente_Click(object sender, EventArgs e)
-        //{
-        //    pantallaListasHelper.cambiarCuatroPaneles(
-        //        rndReciente, rndAntiguo, rndZA, rndAZ);
-        //    organizarReciente();
-        //}
+        private void btnReciente_Click(object sender, EventArgs e)
+        {
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndReciente, rndAntiguo, rndZA, rndAZ);
+            organizarReciente();
+        }
 
         private void pantallaActualizarClientes_Load(object sender, EventArgs e)
         {
@@ -169,21 +170,23 @@ namespace LP2MegaAutos
         }
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarEnter(txt_Buscar);
+            if (txt_Buscar.Text == "Buscar")
+                txt_Buscar.Text = string.Empty;
         }
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarLeave(txt_Buscar);
+            if (txt_Buscar.Text == string.Empty)
+                txt_Buscar.Text = "Buscar";
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            pantallaEditarCliente cl = new pantallaEditarCliente();
-            if (cl.ShowDialog() == DialogResult.OK)
+            pantallaEditarCliente pec = new pantallaEditarCliente();
+            if (pec.ShowDialog() == DialogResult.OK)
             {
-                cliente _cliente = cl.Cliente;
-                clientes.Add(_cliente);
+                cliente _cliente = pec.Cliente;
+                _clientes.Add(_cliente);
                 frmMessageBox frm;
                 if (daoCliente.insertarCliente(_cliente) == 0)
                     frm = new frmMessageBox("No se pudo insertar.");
@@ -192,7 +195,29 @@ namespace LP2MegaAutos
                 frm.ShowDialog();
             }
         }
+        private void crearItemsListaBuscar(List<cliente> _clientesB)
+        {
+            if (_clientesB == null) return;
+            foreach (cliente c in _clientesB)
+            {
+                createItemListaCliente(c, "Carter Kane", DateTime.Now);
+            }
+        }
 
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // Tenemos la lista usuarios
+            List<cliente> _clientesBuscados = new List<cliente>();
+            foreach (cliente u in _clientes)
+                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.tipoCliente.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.correo.Contains(txt_Buscar.Text.ToUpper()))
+                    _clientesBuscados.Add(u);
+
+            quitarItemsLista();
+            crearItemsListaBuscar(_clientesBuscados);
+        }
 
     }
 }

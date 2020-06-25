@@ -65,4 +65,16 @@ private ClienteDAO daoCliente;
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "buscarPorNombre")
+    public Cliente buscarPorNombre(@WebParam(name="nombre") String nombre){
+        Cliente cliente = new Cliente();
+        try{
+            cliente = daoCliente.buscarPorNombre(nombre);
+        }catch(Exception ex){
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage());
+        }
+        return cliente;
+    } 
 }

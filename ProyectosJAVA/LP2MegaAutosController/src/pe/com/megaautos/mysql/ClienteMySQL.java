@@ -21,7 +21,7 @@ import pe.com.megaautos.model.Cliente;
  */
 public class ClienteMySQL implements ClienteDAO {
     Connection con;
-
+    
     @Override
     public Cliente buscar(int id) {
         Cliente cliente = new Cliente();
@@ -54,7 +54,38 @@ public class ClienteMySQL implements ClienteDAO {
         return cliente;
     }
     
-
+    @Override
+    public Cliente buscarPorNombre(String nombre) {
+        Cliente cliente = new Cliente();
+        try{
+            //Registrar el JAR de conexión
+            Connection con = DBDataSource.getConnection();/*
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer una conexión a la BD
+            Connection con = DriverManager.
+            getConnection(DBManager.url,DBManager.user, DBManager.password);
+            // Llama a un select * from cliente where ID_CLIENTE = id*/
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_CLIENTE_POR_NOMBRE(?)}");
+            cs.setString("_NOMBRE", nombre);
+            ResultSet rs = cs.executeQuery();
+            //Recorrer todas las filas que devuelve la ejecucion sentencia
+            while(rs.next()){
+                cliente.setId(rs.getInt("ID_CLIENTE"));
+                cliente.setNombre(rs.getString("NOMBRE"));
+                cliente.setTipoCliente(rs.getString("TIPO_CLIENTE"));
+                cliente.setTipoDocumento(rs.getString("TIPO_DOCUMENTO"));
+                cliente.setCorreo(rs.getString("CORREO"));
+                cliente.setTelefono(rs.getString("TELEFONO"));
+            }
+            //cerrar conexion
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return cliente;
+    }
+    
     @Override
     public int insertar(Cliente cliente) {
         int rpta = 0;

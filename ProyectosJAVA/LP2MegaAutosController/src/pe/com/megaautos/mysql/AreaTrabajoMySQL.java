@@ -62,11 +62,9 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
-                    "{call ACTUALIZAR_AREA_TRABAJO(?,?,?,?)}");
+                    "{call ACTUALIZAR_AREA_TRABAJO(?,?)}");
             cs.setInt("_ID_AREA_TRABAJO", areaTrabajo.getId());
             cs.setString("_NOMBRE", areaTrabajo.getNombre().toUpperCase());
-            cs.setDouble("_TOTAL_INGRESOS", areaTrabajo.getTotalIngresos());
-            cs.setDouble("_TOTAL_EGRESOS", areaTrabajo.getTotalEgresos());
             cs.executeUpdate();
             con.close();
         }catch(Exception ex){

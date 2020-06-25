@@ -769,7 +769,6 @@
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.pantallaEditarCliente_Load);
             this.pnl_Correo.ResumeLayout(false);
             this.pnl_Correo.PerformLayout();

@@ -2,6 +2,8 @@
 <xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="actualizarCliente" type="tns:actualizarCliente" />
   <xs:element name="actualizarClienteResponse" type="tns:actualizarClienteResponse" />
+  <xs:element name="buscarPorNombre" type="tns:buscarPorNombre" />
+  <xs:element name="buscarPorNombreResponse" type="tns:buscarPorNombreResponse" />
   <xs:element name="eliminarCliente" type="tns:eliminarCliente" />
   <xs:element name="eliminarClienteResponse" type="tns:eliminarClienteResponse" />
   <xs:element name="insertarCliente" type="tns:insertarCliente" />
@@ -45,6 +47,16 @@
   <xs:complexType name="actualizarClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCliente">

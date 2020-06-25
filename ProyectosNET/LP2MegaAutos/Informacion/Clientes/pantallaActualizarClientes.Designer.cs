@@ -317,7 +317,6 @@
             this.btnReciente.Text = "Reciente";
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
-            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
             // rndAntiguo
             // 
@@ -369,7 +368,6 @@
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
-            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
             // rndZA
             // 

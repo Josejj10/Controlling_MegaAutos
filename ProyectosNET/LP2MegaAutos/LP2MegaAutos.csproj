@@ -628,6 +628,9 @@
     <None Include="Connected Services\ServicioCliente\LP2MegaAutos.ServicioCliente.actualizarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioCliente\LP2MegaAutos.ServicioCliente.buscarPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioCliente\LP2MegaAutos.ServicioCliente.cliente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

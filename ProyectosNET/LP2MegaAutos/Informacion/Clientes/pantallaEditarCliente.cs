@@ -42,7 +42,8 @@ namespace LP2MegaAutos
 
         private void txt_NombreCliente_Enter(object sender, EventArgs e)
         {
-            txt_NombreCliente.Text = string.Empty;
+            if (txt_NombreCliente.Text == "Agregar nombre de cliente...")
+                txt_NombreCliente.Text = string.Empty;
             txt_NombreCliente.ForeColor = Colores.HighContrast;
         }
 
@@ -51,7 +52,7 @@ namespace LP2MegaAutos
             if(txt_NombreCliente.Text == string.Empty)
             {
                 txt_NombreCliente.ForeColor = Colores.LowContrast;
-                txt_NombreCliente.Text = "Agregar nombre de sede...";
+                txt_NombreCliente.Text = "Agregar nombre de cliente...";
             }
         }
 

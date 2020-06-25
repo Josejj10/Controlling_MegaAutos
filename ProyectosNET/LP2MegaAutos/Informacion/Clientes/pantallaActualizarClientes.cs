@@ -187,5 +187,16 @@ namespace LP2MegaAutos
                 txt_Buscar.Text = "Buscar";
         }
 
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarCliente cl = new pantallaEditarCliente();
+            if (cl.ShowDialog() == DialogResult.OK)
+            {
+                cliente _cliente = cl.Cliente;
+                daoCliente.insertarCliente(_cliente);
+            }
+        }
+
+
     }
 }

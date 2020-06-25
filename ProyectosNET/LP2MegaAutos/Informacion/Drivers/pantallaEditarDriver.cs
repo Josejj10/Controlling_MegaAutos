@@ -12,6 +12,7 @@ using LP2MegaAutos.Properties;
 using LP2MegaAutos.ServicioDriver;
 using LP2MegaAutos.Framework;
 using LP2MegaAutos.VentanasPrincipales;
+using System.Text.RegularExpressions;
 
 namespace LP2MegaAutos
 {
@@ -21,6 +22,7 @@ namespace LP2MegaAutos
         public pantallaEditarDriver()
         {
             InitializeComponent();
+            _driver = new ServicioDriver.driver();
             this.btnEditar.Visible = false;
             this.btnEliminar.Visible = false;
         }
@@ -41,6 +43,12 @@ namespace LP2MegaAutos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (!driverValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
+            _driver.formula = Convert.ToDouble(txt_Formula.Text);
             this.DialogResult = DialogResult.OK;
         }
 
@@ -89,10 +97,6 @@ namespace LP2MegaAutos
             this.DialogResult = DialogResult.Cancel;
         }
 
-        private void btn_guardar_Click_1(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
 
         private void toggleComponentes()
         {
@@ -150,6 +154,57 @@ namespace LP2MegaAutos
             {
                 this.DialogResult = DialogResult.Retry;
             }
+        }
+
+        private bool driverValido()
+        {
+            // Sacapalabras al txt
+            double resultado = 0;
+            bool isDouble = false;
+
+            isDouble = Double.TryParse(txt_Formula.Text, out resultado);
+
+            if (string.IsNullOrEmpty(txt_Formula.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una formula", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (isDouble == false)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una formula correcta", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+
+
+            if (string.IsNullOrEmpty(txt_CuentaContable.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una cuenta contable.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_AreaTrabajo.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una area de trabajo.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+            return true;
+        }
+
+        private void btn_guardar_Click_1(object sender, EventArgs e)
+        {
+            if (!driverValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
+            _driver.formula = double.Parse(txt_Formula.Text);
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

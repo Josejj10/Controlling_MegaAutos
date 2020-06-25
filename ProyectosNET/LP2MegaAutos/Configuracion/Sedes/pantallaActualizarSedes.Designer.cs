@@ -78,7 +78,7 @@
             this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
-            this.txt_Buscar.Size = new System.Drawing.Size(515, 18);
+            this.txt_Buscar.Size = new System.Drawing.Size(714, 18);
             this.txt_Buscar.TabIndex = 17;
             this.tagsExtender1.SetTag2(this.txt_Buscar, null);
             this.tagsExtender1.SetTag3(this.txt_Buscar, null);
@@ -87,6 +87,7 @@
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Buscar_KeyDown);
             this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // pnlBuscar
@@ -201,7 +202,7 @@
             this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaServicios.Location = new System.Drawing.Point(253, 2);
             this.lbl_ListaServicios.Name = "lbl_ListaServicios";
-            this.lbl_ListaServicios.Size = new System.Drawing.Size(59, 22);
+            this.lbl_ListaServicios.Size = new System.Drawing.Size(63, 19);
             this.lbl_ListaServicios.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
@@ -429,7 +430,7 @@
             this.btn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
+            this.btn_Agregar.Size = new System.Drawing.Size(102, 31);
             this.btn_Agregar.TabIndex = 75;
             this.tagsExtender1.SetTag2(this.btn_Agregar, null);
             this.tagsExtender1.SetTag3(this.btn_Agregar, null);

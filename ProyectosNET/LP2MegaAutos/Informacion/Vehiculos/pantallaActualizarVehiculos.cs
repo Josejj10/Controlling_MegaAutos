@@ -116,6 +116,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             il.TextoTercero = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
             il.ItemListaClick += (sender, e) => { verDatosVehiculo(sender, e, vehiculo); };
             il.EditarClick += (sender, e) => { btnEditarClick(sender, e, vehiculo); };
+            il.esconderBotonEditar();
             flpVehiculos.Controls.Add(il);
             return il;
         }
@@ -139,7 +140,10 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             frmEditarVehiculo pas = new frmEditarVehiculo();
 
             if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                vehiculo _vehiculo= pas.Vehiculo;
+                daoVehiculo.insertarVehiculo(_vehiculo);
+            }
         }
         private void btnEditarClick(Object sender, EventArgs e, ServicioVehiculo.vehiculo vehiculo)
         {

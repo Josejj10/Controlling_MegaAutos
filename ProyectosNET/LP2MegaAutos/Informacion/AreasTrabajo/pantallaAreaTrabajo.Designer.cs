@@ -94,7 +94,7 @@
             this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
-            this.txt_Buscar.Size = new System.Drawing.Size(515, 18);
+            this.txt_Buscar.Size = new System.Drawing.Size(711, 18);
             this.txt_Buscar.TabIndex = 17;
             this.tagsExtender1.SetTag2(this.txt_Buscar, null);
             this.tagsExtender1.SetTag3(this.txt_Buscar, null);
@@ -103,6 +103,7 @@
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Buscar_KeyDown);
             this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // panel3

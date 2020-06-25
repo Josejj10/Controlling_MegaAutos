@@ -17,6 +17,7 @@ namespace LP2MegaAutos
     {
         ServicioSede.SedeWSClient daoSede;
         List<sede> _sedes;
+        public string textoBuscar;
         public pantallaActualizarSedes()
         {
             InitializeComponent();
@@ -171,15 +172,39 @@ namespace LP2MegaAutos
 
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            txt_Buscar.Text = string.Empty;
+            pantallaListasHelper.buscarEnter(txt_Buscar, textoBuscar); //AGREGADO PARA BUSCAR
         }
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            if (txt_Buscar.Text == string.Empty)
-                txt_Buscar.Text = "Buscar";
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
         }
         #endregion Botones Filtros
-        
+
+        #region Buscar //AGREGADO PARA BUSCAR
+        private void crearItemsListaBuscar(List<sede> _sede)
+        {
+            if (_sede == null) return;
+            foreach (sede u in _sede)
+            {
+                createItemListaSede(u, "Carter Kane", DateTime.Now);
+            }
+        }
+
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // Tenemos la lista usuarios
+            List<sede> _usuariosBuscados = new List<sede>();
+            foreach (sede u in _sedes)
+                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.distrito.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.direccion.Contains(txt_Buscar.Text.ToUpper()))
+                    _usuariosBuscados.Add(u);
+
+            quitarItemsLista();
+            crearItemsListaBuscar(_usuariosBuscados);
+        }
+        #endregion Buscar
     }
 }

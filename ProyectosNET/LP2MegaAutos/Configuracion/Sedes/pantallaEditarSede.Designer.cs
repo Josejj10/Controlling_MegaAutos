@@ -531,6 +531,8 @@
             this.tagsExtender1.SetTagFontSize(this.txt_NombreSede, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreSede, System.Drawing.FontStyle.Regular);
             this.txt_NombreSede.Text = "Agregar nombre de sede...";
+            this.txt_NombreSede.Enter += new System.EventHandler(this.txt_NombreSede_Enter);
+            this.txt_NombreSede.Leave += new System.EventHandler(this.txt_NombreSede_Leave);
             // 
             // btnEditar
             // 
@@ -608,7 +610,6 @@
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
-            this.TopMost = true;
             this.pnl_tipoServicio.ResumeLayout(false);
             this.pnl_tipoServicio.PerformLayout();
             this.pnl_codServ.ResumeLayout(false);

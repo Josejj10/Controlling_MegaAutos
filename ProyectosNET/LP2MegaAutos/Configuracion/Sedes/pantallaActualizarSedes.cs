@@ -21,6 +21,7 @@ namespace LP2MegaAutos
             InitializeComponent();
             flpSedes.AutoScroll = true;
             daoSede = new ServicioSede.SedeWSClient();
+
             inicializarItemsLista();
         }
 
@@ -89,13 +90,6 @@ namespace LP2MegaAutos
                 //ordenarItemsLista();
                 inicializarItemsLista();
             }
-        }
-
-        private void btnAgregarClick(Object sender, EventArgs e, sede sede)
-        {
-            pantallaEditarSede pes = new pantallaEditarSede(sede);
-            if (pes.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
         }
 
         private void btn_AZ_Click(object sender, EventArgs e)
@@ -169,6 +163,16 @@ namespace LP2MegaAutos
         {
             if (txt_Buscar.Text == string.Empty)
                 txt_Buscar.Text = "Buscar";
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarSede pes = new pantallaEditarSede();
+            if (pes.ShowDialog() == DialogResult.OK)
+            {
+                sede _sede = pes.Sede;
+                daoSede.insertarSede(_sede);
+            }
         }
     }
 }

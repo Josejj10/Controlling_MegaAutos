@@ -138,7 +138,7 @@
             this.lbl_ContraseñaActual.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ContraseñaActual.Location = new System.Drawing.Point(234, 367);
             this.lbl_ContraseñaActual.Name = "lbl_ContraseñaActual";
-            this.lbl_ContraseñaActual.Size = new System.Drawing.Size(127, 18);
+            this.lbl_ContraseñaActual.Size = new System.Drawing.Size(129, 16);
             this.lbl_ContraseñaActual.TabIndex = 38;
             this.tagsExtender1.SetTag2(this.lbl_ContraseñaActual, null);
             this.tagsExtender1.SetTag3(this.lbl_ContraseñaActual, null);
@@ -730,7 +730,7 @@
             // 
             // flpPermisos
             // 
-            this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
+            this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.flpPermisos.Location = new System.Drawing.Point(336, 131);
             this.flpPermisos.Name = "flpPermisos";
             this.flpPermisos.Size = new System.Drawing.Size(248, 209);
@@ -801,7 +801,7 @@
             this.lbl_ListaPermisosUsuario.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaPermisosUsuario.Location = new System.Drawing.Point(71, 3);
             this.lbl_ListaPermisosUsuario.Name = "lbl_ListaPermisosUsuario";
-            this.lbl_ListaPermisosUsuario.Size = new System.Drawing.Size(114, 29);
+            this.lbl_ListaPermisosUsuario.Size = new System.Drawing.Size(118, 25);
             this.lbl_ListaPermisosUsuario.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaPermisosUsuario, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaPermisosUsuario, null);

@@ -36,10 +36,6 @@
             this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
             this.txt_Telefono = new System.Windows.Forms.TextBox();
             this.lbl_Telefono = new System.Windows.Forms.Label();
-            this.pnl_TipoDocumento = new System.Windows.Forms.Panel();
-            this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
-            this.txt_TIpoDocumento = new System.Windows.Forms.TextBox();
-            this.lbl_TipoDocumento = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_NumeroDocumento = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
@@ -60,14 +56,20 @@
             this.txtTipoCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_NombreCliente = new System.Windows.Forms.TextBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.lbl_TipoDocumento = new System.Windows.Forms.Label();
+            this.txt_TIpoDocumento = new System.Windows.Forms.TextBox();
+            this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
+            this.pnl_TipoDocumento = new System.Windows.Forms.Panel();
             this.pnl_Correo.SuspendLayout();
             this.pnl_Telefono.SuspendLayout();
-            this.pnl_TipoDocumento.SuspendLayout();
             this.pnl_NumeroDocumento.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.pnl_TipoCliente.SuspendLayout();
+            this.pnl_TipoDocumento.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Correo
@@ -221,82 +223,6 @@
             this.tagsExtender1.SetTagFontSize(this.lbl_Telefono, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Telefono, System.Drawing.FontStyle.Regular);
             this.lbl_Telefono.Text = "Teléfono";
-            // 
-            // pnl_TipoDocumento
-            // 
-            this.pnl_TipoDocumento.Controls.Add(this.roundedPanel2);
-            this.pnl_TipoDocumento.Controls.Add(this.txt_TIpoDocumento);
-            this.pnl_TipoDocumento.Controls.Add(this.lbl_TipoDocumento);
-            this.pnl_TipoDocumento.Location = new System.Drawing.Point(151, 163);
-            this.pnl_TipoDocumento.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_TipoDocumento.Name = "pnl_TipoDocumento";
-            this.pnl_TipoDocumento.Size = new System.Drawing.Size(292, 41);
-            this.pnl_TipoDocumento.TabIndex = 39;
-            this.tagsExtender1.SetTag2(this.pnl_TipoDocumento, null);
-            this.tagsExtender1.SetTag3(this.pnl_TipoDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.pnl_TipoDocumento, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.pnl_TipoDocumento, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.pnl_TipoDocumento, System.Drawing.FontStyle.Regular);
-            // 
-            // roundedPanel2
-            // 
-            this.roundedPanel2.ArcRadiusBorde = 15;
-            this.roundedPanel2.ArcRadiusPanel = 15;
-            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
-            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
-            this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel2.Location = new System.Drawing.Point(2, 4);
-            this.roundedPanel2.MenosHeightBorde = 1;
-            this.roundedPanel2.MenosHeightPanel = 1;
-            this.roundedPanel2.MenosWidthBorde = 1;
-            this.roundedPanel2.MenosWidthPanel = 1;
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.PorcLuzColorBorde = 0;
-            this.roundedPanel2.Size = new System.Drawing.Size(3, 36);
-            this.roundedPanel2.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.roundedPanel2, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel2, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel2, System.Drawing.FontStyle.Regular);
-            this.roundedPanel2.XBorde = 0;
-            this.roundedPanel2.XPanel = 0;
-            this.roundedPanel2.YBorde = 0;
-            this.roundedPanel2.YPanel = 0;
-            // 
-            // txt_TIpoDocumento
-            // 
-            this.txt_TIpoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_TIpoDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TIpoDocumento.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TIpoDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_TIpoDocumento.Location = new System.Drawing.Point(7, 18);
-            this.txt_TIpoDocumento.Name = "txt_TIpoDocumento";
-            this.txt_TIpoDocumento.Size = new System.Drawing.Size(284, 23);
-            this.txt_TIpoDocumento.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_TIpoDocumento, null);
-            this.tagsExtender1.SetTag3(this.txt_TIpoDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.txt_TIpoDocumento, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_TIpoDocumento, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_TIpoDocumento, System.Drawing.FontStyle.Regular);
-            this.txt_TIpoDocumento.Text = "DNI";
-            // 
-            // lbl_TipoDocumento
-            // 
-            this.lbl_TipoDocumento.AutoSize = true;
-            this.lbl_TipoDocumento.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TipoDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_TipoDocumento.Location = new System.Drawing.Point(4, 2);
-            this.lbl_TipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_TipoDocumento.Name = "lbl_TipoDocumento";
-            this.lbl_TipoDocumento.Size = new System.Drawing.Size(120, 16);
-            this.lbl_TipoDocumento.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.lbl_TipoDocumento, null);
-            this.tagsExtender1.SetTag3(this.lbl_TipoDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TipoDocumento, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lbl_TipoDocumento, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_TipoDocumento, System.Drawing.FontStyle.Regular);
-            this.lbl_TipoDocumento.Text = "Tipo de Documento";
             // 
             // panel1
             // 
@@ -695,12 +621,136 @@
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreCliente, System.Drawing.FontStyle.Bold);
             this.txt_NombreCliente.Text = "Javier Berrospi";
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(515, 42);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(28, 28);
+            this.btnEditar.TabIndex = 79;
+            this.tagsExtender1.SetTag2(this.btnEditar, null);
+            this.tagsExtender1.SetTag3(this.btnEditar, null);
+            this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnEditar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.Driver;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(557, 42);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(28, 28);
+            this.btnEliminar.TabIndex = 80;
+            this.tagsExtender1.SetTag2(this.btnEliminar, null);
+            this.tagsExtender1.SetTag3(this.btnEliminar, null);
+            this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnEliminar, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnEliminar, System.Drawing.FontStyle.Regular);
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lbl_TipoDocumento
+            // 
+            this.lbl_TipoDocumento.AutoSize = true;
+            this.lbl_TipoDocumento.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TipoDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lbl_TipoDocumento.Location = new System.Drawing.Point(4, 2);
+            this.lbl_TipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TipoDocumento.Name = "lbl_TipoDocumento";
+            this.lbl_TipoDocumento.Size = new System.Drawing.Size(120, 16);
+            this.lbl_TipoDocumento.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.lbl_TipoDocumento, null);
+            this.tagsExtender1.SetTag3(this.lbl_TipoDocumento, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_TipoDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lbl_TipoDocumento, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_TipoDocumento, System.Drawing.FontStyle.Regular);
+            this.lbl_TipoDocumento.Text = "Tipo de Documento";
+            // 
+            // txt_TIpoDocumento
+            // 
+            this.txt_TIpoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_TIpoDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_TIpoDocumento.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TIpoDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txt_TIpoDocumento.Location = new System.Drawing.Point(7, 18);
+            this.txt_TIpoDocumento.Name = "txt_TIpoDocumento";
+            this.txt_TIpoDocumento.Size = new System.Drawing.Size(284, 23);
+            this.txt_TIpoDocumento.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txt_TIpoDocumento, null);
+            this.tagsExtender1.SetTag3(this.txt_TIpoDocumento, null);
+            this.tagsExtender1.SetTagFontName(this.txt_TIpoDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txt_TIpoDocumento, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_TIpoDocumento, System.Drawing.FontStyle.Regular);
+            this.txt_TIpoDocumento.Text = "DNI";
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.ArcRadiusBorde = 15;
+            this.roundedPanel2.ArcRadiusPanel = 15;
+            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel2.Location = new System.Drawing.Point(2, 4);
+            this.roundedPanel2.MenosHeightBorde = 1;
+            this.roundedPanel2.MenosHeightPanel = 1;
+            this.roundedPanel2.MenosWidthBorde = 1;
+            this.roundedPanel2.MenosWidthPanel = 1;
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.PorcLuzColorBorde = 0;
+            this.roundedPanel2.Size = new System.Drawing.Size(3, 36);
+            this.roundedPanel2.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.roundedPanel2, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel2, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel2, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel2, System.Drawing.FontStyle.Regular);
+            this.roundedPanel2.XBorde = 0;
+            this.roundedPanel2.XPanel = 0;
+            this.roundedPanel2.YBorde = 0;
+            this.roundedPanel2.YPanel = 0;
+            // 
+            // pnl_TipoDocumento
+            // 
+            this.pnl_TipoDocumento.Controls.Add(this.roundedPanel2);
+            this.pnl_TipoDocumento.Controls.Add(this.txt_TIpoDocumento);
+            this.pnl_TipoDocumento.Controls.Add(this.lbl_TipoDocumento);
+            this.pnl_TipoDocumento.Location = new System.Drawing.Point(151, 163);
+            this.pnl_TipoDocumento.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_TipoDocumento.Name = "pnl_TipoDocumento";
+            this.pnl_TipoDocumento.Size = new System.Drawing.Size(292, 41);
+            this.pnl_TipoDocumento.TabIndex = 39;
+            this.tagsExtender1.SetTag2(this.pnl_TipoDocumento, null);
+            this.tagsExtender1.SetTag3(this.pnl_TipoDocumento, null);
+            this.tagsExtender1.SetTagFontName(this.pnl_TipoDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnl_TipoDocumento, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnl_TipoDocumento, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txt_NombreCliente);
             this.Controls.Add(this.pnl_TipoCliente);
             this.Controls.Add(this.title_bar);
@@ -731,8 +781,6 @@
             this.pnl_Correo.PerformLayout();
             this.pnl_Telefono.ResumeLayout(false);
             this.pnl_Telefono.PerformLayout();
-            this.pnl_TipoDocumento.ResumeLayout(false);
-            this.pnl_TipoDocumento.PerformLayout();
             this.pnl_NumeroDocumento.ResumeLayout(false);
             this.pnl_NumeroDocumento.PerformLayout();
             this.rnd_guardar.ResumeLayout(false);
@@ -740,6 +788,8 @@
             this.title_bar.ResumeLayout(false);
             this.pnl_TipoCliente.ResumeLayout(false);
             this.pnl_TipoCliente.PerformLayout();
+            this.pnl_TipoDocumento.ResumeLayout(false);
+            this.pnl_TipoDocumento.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -755,10 +805,6 @@
         private RoundedPanel roundedPanel3;
         private System.Windows.Forms.TextBox txt_Telefono;
         private System.Windows.Forms.Label lbl_Telefono;
-        private System.Windows.Forms.Panel pnl_TipoDocumento;
-        private RoundedPanel roundedPanel2;
-        private System.Windows.Forms.TextBox txt_TIpoDocumento;
-        private System.Windows.Forms.Label lbl_TipoDocumento;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_NumeroDocumento;
         private RoundedPanel rnd_color_1;
@@ -779,5 +825,11 @@
         private System.Windows.Forms.TextBox txtTipoCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_NombreCliente;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label lbl_TipoDocumento;
+        private System.Windows.Forms.TextBox txt_TIpoDocumento;
+        private RoundedPanel roundedPanel2;
+        private System.Windows.Forms.Panel pnl_TipoDocumento;
     }
 }

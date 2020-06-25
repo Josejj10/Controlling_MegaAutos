@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using LP2MegaAutos.ServicioAreaTrabajo;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,19 +10,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LP2MegaAutos.Configuracion.Empresa
+namespace LP2MegaAutos.Informacion.AreasTrabajo
 {
-    public partial class frmEditarNombEmpresa : MetroForm
+    public partial class frmAreaTrabajoxCC : MetroForm
     {
-        public frmEditarNombEmpresa()
+        public frmAreaTrabajoxCC(areaTrabajo areaTrabajo)
         {
             InitializeComponent();
+            lbl_NombreAreaTrabajoxCC.Text = areaTrabajo.nombre;
         }
 
-        public frmEditarNombEmpresa(ServicioEmpresa.empresa empresa)
+        private void btnAgregarClick(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this.txt_nombEmpresa.Text = empresa.nombre;
+            frmCuentaContable pas = new frmCuentaContable();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+                MessageBox.Show("OK");
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
 
         #region title_bar
@@ -59,15 +68,10 @@ namespace LP2MegaAutos.Configuracion.Empresa
         #endregion movement
 
         #endregion title_bar
+
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
-
     }
 }

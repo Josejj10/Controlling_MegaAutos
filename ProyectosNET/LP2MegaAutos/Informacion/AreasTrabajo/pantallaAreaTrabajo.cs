@@ -110,7 +110,7 @@ namespace LP2MegaAutos
         }
         private void ItemLista_Click(object sender, EventArgs e, areaTrabajo areaTrabajo)
         {
-            pantallaAreaTrabajoxCC pas = new pantallaAreaTrabajoxCC(areaTrabajo);
+            frmAreaTrabajoxCC pas = new frmAreaTrabajoxCC(areaTrabajo);
 
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");

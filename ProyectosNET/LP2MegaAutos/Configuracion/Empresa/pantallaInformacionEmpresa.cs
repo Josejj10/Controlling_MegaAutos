@@ -16,6 +16,7 @@ namespace LP2MegaAutos
     public partial class pantallaInformacionEmpresa : Pantalla
     {
         ServicioEmpresa.EmpresaWSClient daoEmpresa;
+        empresa _empresa;
         public pantallaInformacionEmpresa()
         {
             InitializeComponent();
@@ -27,14 +28,14 @@ namespace LP2MegaAutos
         {
             List<empresa> empresas = daoEmpresa.listarEmpresa().ToList();
             if (empresas == null) return;
-
+            _empresa = empresas[0];
             this.lbl_nombreEmpresa.Text = empresas[0].nombre;
             
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            frmEditarNombEmpresa pas = new frmEditarNombEmpresa();
+            frmEditarNombEmpresa pas = new frmEditarNombEmpresa(_empresa);
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }

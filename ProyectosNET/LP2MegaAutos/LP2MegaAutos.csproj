@@ -160,6 +160,12 @@
     <Compile Include="Framework\UserControls\UltimoReporteDashboard.Designer.cs">
       <DependentUpon>UltimoReporteDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informacion\AreasTrabajo\frmAreaTrabajoxCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informacion\AreasTrabajo\frmAreaTrabajoxCC.Designer.cs">
+      <DependentUpon>frmAreaTrabajoxCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,12 +303,6 @@
     </Compile>
     <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.Designer.cs">
       <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.Designer.cs">
-      <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
       <SubType>Form</SubType>
@@ -465,6 +465,9 @@
     <EmbeddedResource Include="Framework\UserControls\UltimoReporteDashboard.resx">
       <DependentUpon>UltimoReporteDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informacion\AreasTrabajo\frmAreaTrabajoxCC.resx">
+      <DependentUpon>frmAreaTrabajoxCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\frmCuentaContable.resx">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>
     </EmbeddedResource>
@@ -554,9 +557,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajoxCC.resx">
-      <DependentUpon>pantallaAreaTrabajoxCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Clientes\pantallaEditarCliente.resx">
       <DependentUpon>pantallaEditarCliente.cs</DependentUpon>

@@ -16,6 +16,14 @@ namespace LP2MegaAutos.Framework
             return devolver;
         }
 
+        public static string tipoParrafo(string str)
+        {
+            string devolver = "";
+            foreach (string s in str.ToLower().Split())
+                devolver += s + " ";
+            return char.ToUpper(devolver[0]) + devolver.Substring(1); ;
+        }
+
         public static string tipoOracionPalabra(string str)
         {
             if (string.IsNullOrEmpty(str))

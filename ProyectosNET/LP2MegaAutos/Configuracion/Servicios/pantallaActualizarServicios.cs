@@ -73,6 +73,7 @@ namespace LP2MegaAutos
             il.TextoTercero = OtrosHelper.tipoOracion(servicio.codigoServicio);
             il.ItemListaClick += (sender, e) => { verDatosServicio(sender, e, servicio); };
             il.EditarClick += (sender, e) => { btnEditarClick(sender, e, servicio); };
+            il.esconderBotonEditar();
             flpServicios.Controls.Add(il);
             return il;
         }
@@ -104,7 +105,10 @@ namespace LP2MegaAutos
             pantallaEditarServicio pes = new pantallaEditarServicio();
             
             if (pes.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                servicio _servicio = pes.Servicio;
+                daoServicio.insertarServicio(_servicio);
+            }
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)

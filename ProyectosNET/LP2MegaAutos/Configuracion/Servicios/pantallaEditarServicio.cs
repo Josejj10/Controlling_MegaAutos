@@ -11,6 +11,7 @@ using MetroFramework.Forms;
 using System.Windows.Controls.Primitives;
 using LP2MegaAutos.Properties;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.Framework;
 
 namespace LP2MegaAutos
 {
@@ -20,6 +21,7 @@ namespace LP2MegaAutos
         public pantallaEditarServicio()
         {
             InitializeComponent();
+            _servicio = new ServicioServicio.servicio();
             txt_NombreServicio.Text = "Agregar nombre de servicio...";
         }
         public pantallaEditarServicio(ServicioServicio.servicio servicio)
@@ -27,10 +29,10 @@ namespace LP2MegaAutos
             InitializeComponent();
             _servicio = servicio;
             toggleComponentes();
-            this.txt_NombreServicio.Text = servicio.nombre;
+            this.txt_NombreServicio.Text = OtrosHelper.tipoOracion(servicio.nombre);
             this.txt_codServ.Text = servicio.codigoServicio;
-            this.txt_descripcion.Text = servicio.descripcion;
-            this.txt_tipoServicio.Text = servicio.tipoServicio;
+            this.txt_descripcion.Text = OtrosHelper.tipoParrafo(servicio.descripcion);
+            this.txt_tipoServicio.Text = OtrosHelper.tipoOracion(servicio.tipoServicio);
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -84,7 +86,50 @@ namespace LP2MegaAutos
        
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (!servicioValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
+            _servicio.nombre = txt_NombreServicio.Text;
+            _servicio.codigoServicio = txt_codServ.Text;
+            _servicio.descripcion = txt_descripcion.Text;
+            _servicio.tipoServicio = txt_tipoServicio.Text;
             this.DialogResult = DialogResult.OK;
+        }
+
+        private bool servicioValido()
+        {
+            // Sacapalabras al txt
+            if (string.IsNullOrEmpty(txt_NombreServicio.Text) || txt_NombreServicio.Text=="Agregar nombre de servicio...")
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese el nombre de servicio", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_codServ.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese el código de servicio.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_descripcion.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese la descripción del servicio.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_tipoServicio.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese el tipo de servicio.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            return true;
         }
 
         #region title_bar

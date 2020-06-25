@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.com.megaautos.mysql;
 
 import java.sql.CallableStatement;
@@ -13,10 +8,10 @@ import java.util.ArrayList;
 import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.UsuarioDAO;
+import pe.com.megaautos.model.EPermisos;
 import pe.com.megaautos.model.Usuario;
 
-/**
- *
+/*
  * @author Jose
  */
 public class UsuarioMySQL implements UsuarioDAO {
@@ -43,29 +38,20 @@ public class UsuarioMySQL implements UsuarioDAO {
             cs.setString("_PASSWORD", usuario.getPassword());
             java.sql.Date sqlDate = new java.sql.Date(usuario.getFechaCreado().getTime());
             cs.setDate("_FECHA_CREACION", sqlDate);
-            
-            /*
-            //  INSERTAR PERMISOS
-            for permiso in permisos{
-               cs.prepareCall("{call INSERTAR_PERMISO(?,?}");
-               cs.setString("_PERMISO", permiso);
-               cs.setId("_ID_USUARIO", usuario.getId());
-               cs.executeUpdate(); 
-                EL SQL Seria algo como:
-                - PROCEDURE INSERTAR PERMISO( 
-                - IN _PERMISO VARCHAR(20)
-                - IN _ID_USUARIO INT)
-               BEGIN
-                -- BUSCAR SI _PERMISO EXISTE EN TABLA PERMISOS Y RETORNAR ID
-                -- ELSE CREAR PERMISO EN TABLA PERMISOS Y ALMACENAR ID LOCALMENTE EN SQL
-                -- INSERTAR EL ID DE PERMISO Y EL ID USUARIO EN LA TABLA PERMISOXUSUARIO
-                -- NO DEVOLVER NADA
-              
-            }
-            */
-            
+                     
             cs.executeUpdate();
             rpta = cs.getInt("_ID_USUARIO");
+            if (usuario.getPermisos() != null) {
+                for (EPermisos e : usuario.getPermisos()){
+                    con = DBDataSource.getConnection();
+                    CallableStatement cs2 = con.prepareCall(
+                         "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
+                    cs2.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
+                    cs2.setString("_NOMBRE",e.toString().toUpperCase());
+                    cs2.setInt("_ID_USUARIO", rpta);
+                    cs2.executeUpdate();
+                }
+            }
             con.close();
             // Actualiza el ID del usuario insertado para tenerlo en Java
             usuario.setId(rpta);
@@ -159,5 +145,4 @@ public class UsuarioMySQL implements UsuarioDAO {
         //Devolviendo los usuarios
         return usuarios;    
     }
-    
 }

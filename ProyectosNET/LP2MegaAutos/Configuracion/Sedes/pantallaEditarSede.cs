@@ -21,7 +21,8 @@ namespace LP2MegaAutos
         public pantallaEditarSede()
         {
             InitializeComponent();
-            txt_NombreSede.Text = "Agregar nombre de sede...";   
+            _sede = new ServicioSede.sede();
+            txt_NombreSede.Text = "Agregar nombre de sede...";
         }
 
         public pantallaEditarSede(ServicioSede.sede sede)
@@ -71,7 +72,6 @@ namespace LP2MegaAutos
 
         #endregion title_bar
 
-
         private void txt_NombreSede_Enter(object sender, EventArgs e)
         {
             txt_NombreSede.Text = string.Empty;
@@ -87,14 +87,17 @@ namespace LP2MegaAutos
             }
         }
 
-
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            // VALIDAR
-            // 
+            if (!sedeValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
             _sede.nombre = txt_NombreSede.Text;
+            _sede.distrito = txt_distrito.Text;
             _sede.direccion = txt_direccion.Text;
-            // .....
+            _sede.telefono = txt_telefono.Text;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -118,21 +121,25 @@ namespace LP2MegaAutos
             if (!en)
             {
                 // No habilitado
+                txt_NombreSede.BackColor = txt_distrito.BackColor =
+                    txt_direccion.BackColor = txt_telefono.BackColor
+                    = Colores.FrontBackground;
+
                 txt_NombreSede.ForeColor = txt_distrito.ForeColor =
                     txt_direccion.ForeColor = txt_telefono.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
                     roundedPanel2.ColorPanel =
                     rnd_guardar.ColorPanel =
                     rnd_color_1.ColorBorde = rnd_color_3.ColorBorde =
-                    roundedPanel2.ColorBorde = rnd_guardar.ColorBorde 
+                    roundedPanel2.ColorBorde = rnd_guardar.ColorBorde
                     = Colores.Disabled;
 
-                
+
                 btnEditar.BackgroundImage = Resources.editar;
                 return;
             }
             // Habilitado
-            txt_NombreSede.ForeColor = 
+            txt_NombreSede.ForeColor = Colores.HighContrast;
             txt_distrito.ForeColor =
                txt_direccion.ForeColor = txt_telefono.ForeColor =
                Colores.HighContrast;
@@ -151,11 +158,44 @@ namespace LP2MegaAutos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            frmEliminar frm = new frmEliminar("eliminar la sede "+_sede.nombre);
-            if(frm.ShowDialog() == DialogResult.OK)
+            frmEliminar frm = new frmEliminar("eliminar la sede " + _sede.nombre);
+            if (frm.ShowDialog() == DialogResult.OK)
             {
                 this.DialogResult = DialogResult.Retry;
             }
+        }
+        private bool sedeValido()
+        {
+            // Sacapalabras al txt
+            if (string.IsNullOrEmpty(txt_NombreSede.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_distrito.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un distrito.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_direccion.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una dirreccion.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_telefono.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un teléfono.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            return true;
         }
     }
 }

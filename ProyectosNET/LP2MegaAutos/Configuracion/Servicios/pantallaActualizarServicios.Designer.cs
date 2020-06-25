@@ -43,6 +43,7 @@ namespace LP2MegaAutos
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
             this.cTxt_MasFiltros = new LP2MegaAutos.CustomControls.ClickableText();
             this.cmbFiltrarTipoServicio = new System.Windows.Forms.ComboBox();
+            this.btn_Agregar = new System.Windows.Forms.Button();
             this.rndReciente = new LP2MegaAutos.RoundedPanel();
             this.btnReciente = new System.Windows.Forms.Button();
             this.rndAntiguo = new LP2MegaAutos.RoundedPanel();
@@ -51,7 +52,6 @@ namespace LP2MegaAutos
             this.btnZA = new System.Windows.Forms.Button();
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
-            this.btn_Agregar = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
@@ -78,6 +78,7 @@ namespace LP2MegaAutos
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Bold);
             this.txt_Buscar.Text = "Buscar";
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Buscar_KeyDown);
             this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // pnlBuscar
@@ -248,6 +249,28 @@ namespace LP2MegaAutos
             this.tagsExtender1.SetTagFontSize(this.cmbFiltrarTipoServicio, 10F);
             this.tagsExtender1.SetTagFontStyle(this.cmbFiltrarTipoServicio, System.Drawing.FontStyle.Regular);
             // 
+            // btn_Agregar
+            // 
+            this.btn_Agregar.AutoSize = true;
+            this.btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btn_Agregar.FlatAppearance.BorderSize = 0;
+            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
+            this.btn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
+            this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
+            this.btn_Agregar.TabIndex = 75;
+            this.tagsExtender1.SetTag2(this.btn_Agregar, null);
+            this.tagsExtender1.SetTag3(this.btn_Agregar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_Agregar, System.Drawing.FontStyle.Bold);
+            this.btn_Agregar.Text = "+ Agregar";
+            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
+            // 
             // rndReciente
             // 
             this.rndReciente.ArcRadiusBorde = 8;
@@ -265,7 +288,7 @@ namespace LP2MegaAutos
             this.rndReciente.Name = "rndReciente";
             this.rndReciente.PorcLuzColorBorde = 0;
             this.rndReciente.Size = new System.Drawing.Size(130, 35);
-            this.rndReciente.TabIndex = 74;
+            this.rndReciente.TabIndex = 79;
             this.tagsExtender1.SetTag2(this.rndReciente, null);
             this.tagsExtender1.SetTag3(this.rndReciente, null);
             this.tagsExtender1.SetTagFontName(this.rndReciente, fontsD.Ninguno);
@@ -298,6 +321,7 @@ namespace LP2MegaAutos
             this.btnReciente.Text = "Reciente";
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
+            this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
             // 
             // rndAntiguo
             // 
@@ -316,7 +340,7 @@ namespace LP2MegaAutos
             this.rndAntiguo.Name = "rndAntiguo";
             this.rndAntiguo.PorcLuzColorBorde = 0;
             this.rndAntiguo.Size = new System.Drawing.Size(130, 35);
-            this.rndAntiguo.TabIndex = 73;
+            this.rndAntiguo.TabIndex = 78;
             this.tagsExtender1.SetTag2(this.rndAntiguo, null);
             this.tagsExtender1.SetTag3(this.rndAntiguo, null);
             this.tagsExtender1.SetTagFontName(this.rndAntiguo, fontsD.Ninguno);
@@ -349,6 +373,7 @@ namespace LP2MegaAutos
             this.btnAntiguo.Text = "Antiguo";
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
+            this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
             // 
             // rndZA
             // 
@@ -367,7 +392,7 @@ namespace LP2MegaAutos
             this.rndZA.Name = "rndZA";
             this.rndZA.PorcLuzColorBorde = 0;
             this.rndZA.Size = new System.Drawing.Size(130, 35);
-            this.rndZA.TabIndex = 72;
+            this.rndZA.TabIndex = 77;
             this.tagsExtender1.SetTag2(this.rndZA, null);
             this.tagsExtender1.SetTag3(this.rndZA, null);
             this.tagsExtender1.SetTagFontName(this.rndZA, fontsD.Ninguno);
@@ -400,6 +425,7 @@ namespace LP2MegaAutos
             this.btnZA.Text = "Z - A";
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
+            this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
             // 
             // rndAZ
             // 
@@ -418,7 +444,7 @@ namespace LP2MegaAutos
             this.rndAZ.Name = "rndAZ";
             this.rndAZ.PorcLuzColorBorde = 0;
             this.rndAZ.Size = new System.Drawing.Size(130, 35);
-            this.rndAZ.TabIndex = 71;
+            this.rndAZ.TabIndex = 76;
             this.tagsExtender1.SetTag2(this.rndAZ, null);
             this.tagsExtender1.SetTag3(this.rndAZ, null);
             this.tagsExtender1.SetTagFontName(this.rndAZ, fontsD.Ninguno);
@@ -451,38 +477,18 @@ namespace LP2MegaAutos
             this.btnAZ.Text = "A - Z";
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
-            // 
-            // btn_Agregar
-            // 
-            this.btn_Agregar.AutoSize = true;
-            this.btn_Agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.btn_Agregar.FlatAppearance.BorderSize = 0;
-            this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
-            this.btn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
-            this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
-            this.btn_Agregar.TabIndex = 75;
-            this.tagsExtender1.SetTag2(this.btn_Agregar, null);
-            this.tagsExtender1.SetTag3(this.btn_Agregar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.btn_Agregar, 11F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_Agregar, System.Drawing.FontStyle.Bold);
-            this.btn_Agregar.Text = "+ Agregar";
-            this.btn_Agregar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Agregar.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // pantallaActualizarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.rndReciente);
             this.Controls.Add(this.rndAntiguo);
             this.Controls.Add(this.rndZA);
             this.Controls.Add(this.rndAZ);
+            this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.cmbFiltrarTipoServicio);
             this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.pnlBuscar);
@@ -521,6 +527,7 @@ namespace LP2MegaAutos
         private CustomControls.ClickableText cTxt_MasFiltros;
         private System.Windows.Forms.FlowLayoutPanel flpServicios;
         private System.Windows.Forms.ComboBox cmbFiltrarTipoServicio;
+        private System.Windows.Forms.Button btn_Agregar;
         private RoundedPanel rndReciente;
         private System.Windows.Forms.Button btnReciente;
         private RoundedPanel rndAntiguo;
@@ -529,6 +536,5 @@ namespace LP2MegaAutos
         private System.Windows.Forms.Button btnZA;
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
-        private System.Windows.Forms.Button btn_Agregar;
     }
 }

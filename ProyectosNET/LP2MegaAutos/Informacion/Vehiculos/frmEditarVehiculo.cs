@@ -18,6 +18,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
     {
         ServicioVehiculo.vehiculo _vehiculo;
         ServicioCliente.cliente _cliente;
+        //ServicioVehiculo.cliente _propietario;
         ServicioCliente.ClienteWSClient daoCliente;
         public frmEditarVehiculo()
         {
@@ -31,6 +32,9 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         {
             InitializeComponent();
             _vehiculo = vehiculo;
+            //_propietario = new ServicioVehiculo.cliente();
+            _cliente = new ServicioCliente.cliente();
+            daoCliente = new ServicioCliente.ClienteWSClient();
             toggleComponentes();
             this.lbl_EditarVehiculo.Text = "Editar vehículo";
             this.txt_placaVehiculo.Text = vehiculo.placa;
@@ -92,6 +96,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             _vehiculo.placa = txt_placaVehiculo.Text;
             _vehiculo.propietario = new ServicioVehiculo.cliente();
             _vehiculo.propietario.id = _cliente.id;
+            _vehiculo.propietario.nombre = _cliente.nombre;
             _vehiculo.tipoVehiculo = txt_TipoVehiculo.Text;
             this.DialogResult = DialogResult.OK;
         }

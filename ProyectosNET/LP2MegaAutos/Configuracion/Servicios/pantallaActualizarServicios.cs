@@ -15,12 +15,12 @@ namespace LP2MegaAutos
 {
     public partial class pantallaActualizarServicios : Pantalla
     {
-        ServicioServicio.ServicioWSClient daoServicio;
-        List<servicio> servicios;
+        private ServicioServicio.ServicioWSClient daoServicio;
+        private List<servicio> _servicios;
+        private string textoBuscar; //AGREGADO PARA BUSCAR
         public pantallaActualizarServicios()
         {
             InitializeComponent();
-            btn_Agregar.Click += btnAgregarClick;
             flpServicios.AutoScroll = true;
             daoServicio = new ServicioServicio.ServicioWSClient();
             inicializarItemsLista();
@@ -28,14 +28,14 @@ namespace LP2MegaAutos
 
         private void inicializarItemsLista()
         {
-            servicios = daoServicio.listarServicios().ToList();
+            _servicios = daoServicio.listarServicios().ToList();
             crearItemsLista();
         }
 
         private void crearItemsLista()
         {
-            if (servicios == null) return;
-            foreach (servicio s in servicios)
+            if (_servicios == null) return;
+            foreach (servicio s in _servicios)
             {
                 createItemListaServicio(s, "Carter Kane", DateTime.Now);
             }
@@ -43,24 +43,36 @@ namespace LP2MegaAutos
 
         private void quitarItemsLista()
         {
-            foreach (Control c in flpServicios.Controls)
-                c.Parent.Controls.Remove(c);
+            for (int i = 0; i < flpServicios.Controls.Count;)
+                flpServicios.Controls.RemoveAt(i);
         }
 
         private void organizarAZ()
         {
-            servicios.OrderBy(g => g.nombre);
+            _servicios = _servicios.OrderBy(g => g.nombre).ToList();
             quitarItemsLista();
             crearItemsLista();
         }
 
         private void organizarZA()
         {
-            servicios.OrderByDescending(g => g.nombre);
+            _servicios = _servicios.OrderByDescending(g => g.nombre).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+        private void organizarAntiguo()
+        {
+            //_servicios = _servicios.OrderBy(g => g.fechaCreado).ToList();
             quitarItemsLista();
             crearItemsLista();
         }
 
+        private void organizarReciente()
+        {
+            //_servicios = _servicios.OrderByDescending(g => g.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
         private itemLista createItemListaServicio(ServicioServicio.servicio servicio, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
@@ -78,19 +90,30 @@ namespace LP2MegaAutos
             return il;
         }
 
-        private void verDatosServicio(object sender, EventArgs e, ServicioServicio.servicio servicio)
+        private void verDatosServicio(object sender, EventArgs e, ServicioServicio.servicio serv)
         {
-            pantallaEditarServicio pes = new pantallaEditarServicio(servicio);
-            DialogResult d = pes.ShowDialog();
+            pantallaEditarServicio pas = new pantallaEditarServicio(serv);
+            DialogResult d = pas.ShowDialog();
             if (d == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                // Actualizar el Servicio
+                servicio s = pas.Servicio;
+                daoServicio.actualizarServicio(s);
+                flpServicios.Controls.RemoveByKey("il" + serv.id);
+                createItemListaServicio(s, "Carter Kane", DateTime.Now);
+                _servicios.Remove(serv);
+                _servicios.Add(s);
+                btnAZ_Click(btnAZ, new EventArgs());
+                // todo actualizar FechaUltimaModificacion en BD
+            }
             else if (d == DialogResult.Retry)
             {
-                //Eliminar
-                daoServicio.eliminarServicio(servicio.id);
-                flpServicios.Controls.RemoveByKey("il" + servicio.id);
-                //ordenarItemsLista();
-                inicializarItemsLista();
+                // Eliminar
+                daoServicio.eliminarServicio(serv.id);
+                flpServicios.Controls.RemoveByKey("il" + serv.id);
+                _servicios.Remove(serv);
+                // TODO seleccionar organizar segun el boton seleccionado
+                btnAZ_Click(btnAZ, e);
             }
         }
         private void btnEditarClick(Object sender, EventArgs e, ServicioServicio.servicio servicio)
@@ -100,87 +123,7 @@ namespace LP2MegaAutos
                 MessageBox.Show("OK");
         }
 
-        private void btnAgregarClick(Object sender, EventArgs e)
-        {
-            pantallaEditarServicio pes = new pantallaEditarServicio();
-            
-            if (pes.ShowDialog() == DialogResult.OK)
-            {
-                servicio _servicio = pes.Servicio;
-                daoServicio.insertarServicio(_servicio);
-            }
-        }
-
-        private void txt_Buscar_Enter(object sender, EventArgs e)
-        {
-            txt_Buscar.Text = string.Empty;
-        }
-
-        private void btnAZ_Click(object sender, EventArgs e)
-        {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnAZ.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
-        }
-
-        private void btnZA_Click(object sender, EventArgs e)
-        {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndZA.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
-        }
-
-        private void btnAntiguo_Click(object sender, EventArgs e)
-        {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Color.Transparent;
-        }
-
-        private void btnReciente_Click(object sender, EventArgs e)
-        {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
-        }
-
-        private void txt_Buscar_Leave(object sender, EventArgs e)
-        {
-            if (txt_Buscar.Text == string.Empty)
-                txt_Buscar.Text = "Buscar";
-        }
+        #region Hide
 
         //private void rndAZ_MouseDown(object sender, MouseEventArgs e)
         //{
@@ -229,6 +172,91 @@ namespace LP2MegaAutos
         //    this.rndReciente.ColorPanel = Colores.AmarilloInteractivo;
         //    this.btnReciente.BackColor = Colores.AmarilloInteractivo;
         //}
+        #endregion Hide
 
+        #region Botones Filtros
+        private void btnAZ_Click(object sender, EventArgs e)
+        {
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndAZ, rndZA, rndAntiguo, rndReciente);
+            organizarAZ();
+        }
+        private void btnZA_Click(object sender, EventArgs e)
+        {
+
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndZA, rndAZ, rndAntiguo, rndReciente);
+            organizarZA();
+        }
+
+        private void btnAntiguo_Click(object sender, EventArgs e)
+        {
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndAntiguo, rndZA, rndAZ, rndReciente);
+            organizarAntiguo();
+        }
+
+        private void btnReciente_Click(object sender, EventArgs e)
+        {
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndReciente, rndAntiguo, rndZA, rndAZ);
+            organizarReciente();
+        }
+        #endregion Botones Filtros
+
+        #region Txt Buscar
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            pantallaListasHelper.buscarEnter(txt_Buscar, textoBuscar); //AGREGADO PARA BUSCAR
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
+        }
+        #endregion Txt Buscar
+
+        #region Buscar //AGREGADO PARA BUSCAR
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarServicio pas = new pantallaEditarServicio();
+            if (pas.ShowDialog() == DialogResult.OK)
+            {
+                // Agregar servicio
+                servicio _servicio = pas.Servicio;
+                _servicios.Add(_servicio);
+                frmMessageBox frm;
+                if (daoServicio.insertarServicio(_servicio) == 0) // Ta mal
+                    frm = new frmMessageBox("No se pudo insertar.");
+                else // Inserto bien
+                    frm = new frmMessageBox("Se inserto correctamente el servicio " + _servicio.nombre);
+                frm.ShowDialog();
+                btnAZ_Click(btnAZ, e);
+            }
+        }
+
+        private void crearItemsListaBuscar(List<servicio> _serviciosB)
+        {
+            if (_serviciosB == null) return;
+            foreach (servicio s in _serviciosB)
+            {
+                createItemListaServicio(s, "Carter Kane", DateTime.Now);
+            }
+        }
+
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // Tenemos la lista servicios
+            List<servicio> _serviciosBuscados = new List<servicio>();
+            foreach (servicio s in _servicios)
+                if (s.nombre.Contains(txt_Buscar.Text.ToUpper())||
+                    s.codigoServicio.Contains(txt_Buscar.Text.ToUpper()))
+                    _serviciosBuscados.Add(s);
+
+            quitarItemsLista();
+            crearItemsListaBuscar(_serviciosBuscados);
+        }
+        #endregion Buscar
     }
 }

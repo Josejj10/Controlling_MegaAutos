@@ -18,6 +18,7 @@ namespace LP2MegaAutos
     {
         ServicioDriver.DriverWSClient daoDriver;
         List<driver> drivers;
+        private string textoBuscar;
         public pantallaActualizarDrivers()
         {
             InitializeComponent();

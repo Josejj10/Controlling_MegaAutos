@@ -195,7 +195,29 @@ namespace LP2MegaAutos
                 frm.ShowDialog();
             }
         }
+        private void crearItemsListaBuscar(List<cliente> _clientesB)
+        {
+            if (_clientesB == null) return;
+            foreach (cliente c in _clientesB)
+            {
+                createItemListaCliente(c, "Carter Kane", DateTime.Now);
+            }
+        }
 
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // Tenemos la lista usuarios
+            List<cliente> _clientesBuscados = new List<cliente>();
+            foreach (cliente u in _clientes)
+                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.tipoCliente.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.correo.Contains(txt_Buscar.Text.ToUpper()))
+                    _clientesBuscados.Add(u);
+
+            quitarItemsLista();
+            crearItemsListaBuscar(_clientesBuscados);
+        }
 
     }
 }

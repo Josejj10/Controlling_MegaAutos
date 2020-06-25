@@ -18,6 +18,7 @@ namespace LP2MegaAutos
         [STAThread]
         static void Main()
         {
+
             Tipografias.inicializarFonts();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -33,6 +34,11 @@ namespace LP2MegaAutos
 
                 if (login.ShowDialog() == DialogResult.OK)
                 {
+                    // TODO
+                    // usuario _usuario = login.Usuario;
+                    // Sacar un hilo donde esta verificando 
+                    // los permisos del usuario y el hilo quitaria la sesion
+
                     frmPrincipal frm = new frmPrincipal(login.Usuario);
                     if (frm.ShowDialog() == DialogResult.OK)
                         continue;

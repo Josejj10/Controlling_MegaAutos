@@ -19,7 +19,6 @@ namespace LP2MegaAutos
         public pantallaActualizarDrivers()
         {
             InitializeComponent();
-            this.btn_Agregar.Click += btnAgregarClick;
             flpDrivers.AutoScroll = true;
             daoDriver = new ServicioDriver.DriverWSClient();
             inicializarItemsLista();
@@ -193,6 +192,16 @@ namespace LP2MegaAutos
         {
             if (txt_Buscar.Text == string.Empty)
                 txt_Buscar.Text = "Buscar";
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarDriver dr = new pantallaEditarDriver();
+            if(dr.ShowDialog() == DialogResult.OK)
+            {
+                driver _driver = dr.Driver;
+                daoDriver.insertarDriver(_driver);
+            }
         }
     }
 }

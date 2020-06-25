@@ -74,7 +74,8 @@ namespace LP2MegaAutos
 
         private void txt_NombreSede_Enter(object sender, EventArgs e)
         {
-            txt_NombreSede.Text = string.Empty;
+            if (txt_NombreSede.Text == "Agregar nombre de sede...")
+                txt_NombreSede.Text = string.Empty;
             txt_NombreSede.ForeColor = Colores.HighContrast;
         }
 
@@ -121,9 +122,7 @@ namespace LP2MegaAutos
             if (!en)
             {
                 // No habilitado
-                txt_NombreSede.BackColor = txt_distrito.BackColor =
-                    txt_direccion.BackColor = txt_telefono.BackColor
-                    = Colores.FrontBackground;
+                txt_NombreSede.BackColor = Colores.FrontBackground;
 
                 txt_NombreSede.ForeColor = txt_distrito.ForeColor =
                     txt_direccion.ForeColor = txt_telefono.ForeColor =
@@ -139,7 +138,7 @@ namespace LP2MegaAutos
                 return;
             }
             // Habilitado
-            txt_NombreSede.ForeColor = Colores.HighContrast;
+            txt_NombreSede.ForeColor =
             txt_distrito.ForeColor =
                txt_direccion.ForeColor = txt_telefono.ForeColor =
                Colores.HighContrast;

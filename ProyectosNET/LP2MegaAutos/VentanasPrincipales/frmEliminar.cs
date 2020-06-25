@@ -18,10 +18,11 @@ namespace LP2MegaAutos.VentanasPrincipales
             InitializeComponent();
         }
         
-        public frmEliminar(string nombreAccion)
+        public frmEliminar(string nombreAccion, string titulo = "Confirmar Acción")
         {
             InitializeComponent();
             lblTexto.Text += nombreAccion + "?";
+            lblTitulo.Text = titulo;
         }
 
         #region title_bar

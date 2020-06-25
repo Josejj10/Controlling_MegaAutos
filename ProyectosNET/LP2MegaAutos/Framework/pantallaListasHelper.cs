@@ -20,25 +20,25 @@ namespace LP2MegaAutos.Framework
         {
             // Cambiar Color RoundedPanels
             rpElegido.ColorPanel = Colores.ChooseAmarillo;
-            rp2.ColorPanel = rp3.ColorPanel = 
+            rp2.ColorPanel = rp3.ColorPanel =
                 rp4.ColorPanel = Color.Transparent;
 
             // Cambiar Color Botones
             rpElegido.Controls[0].BackColor = Colores.ChooseAmarillo;
-            rp2.Controls[0].BackColor = 
-                rp3.Controls[0].BackColor =  
+            rp2.Controls[0].BackColor =
+                rp3.Controls[0].BackColor =
                 rp4.Controls[0].BackColor = Color.Transparent;
         }
 
-        public static void buscarEnter(TextBox txt_Buscar)
+        public static void buscarEnter(TextBox txt_Buscar, string datoBuscar = "")
         {
-            if (txt_Buscar.Text == "Buscar")
+            if (txt_Buscar.Text == "Buscar" + datoBuscar)
                 txt_Buscar.Text = string.Empty;
         }
-        public static void buscarLeave(TextBox txt_Buscar)
+        public static void buscarLeave(TextBox txt_Buscar, string datoBuscar = "")
         {
             if (txt_Buscar.Text == string.Empty)
-                txt_Buscar.Text = "Buscar";
+                txt_Buscar.Text = "Buscar"+datoBuscar;
         }
 
         public static void btn_MouseDown(Button btn)

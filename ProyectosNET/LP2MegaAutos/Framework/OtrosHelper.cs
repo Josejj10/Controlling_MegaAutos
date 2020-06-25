@@ -31,7 +31,6 @@ namespace LP2MegaAutos.Framework
                 return string.Empty;
             }
 
-            // Todo cambiar las demas palabras no solo la primera
             return char.ToUpper(str[0]) + str.Substring(1);
         }
     }

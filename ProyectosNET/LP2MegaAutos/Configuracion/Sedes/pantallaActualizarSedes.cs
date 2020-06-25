@@ -9,32 +9,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.ServicioSede;
+using LP2MegaAutos.Framework;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarSedes : Pantalla
     {
         ServicioSede.SedeWSClient daoSede;
-        List<sede> sedes;
+        List<sede> _sedes;
         public pantallaActualizarSedes()
         {
             InitializeComponent();
             flpSedes.AutoScroll = true;
             daoSede = new ServicioSede.SedeWSClient();
-
             inicializarItemsLista();
         }
 
+        #region itemLista
         private void inicializarItemsLista()
         {
-            sedes = daoSede.listarSedes().ToList();
-            crearItemsLista();
+            _sedes = daoSede.listarSedes().ToList();
+            organizarAZ();
         }
 
         private void crearItemsLista()
         {
-            if (sedes == null) return;
-            foreach (sede s in sedes)
+            if (_sedes == null) return;
+            foreach (sede s in _sedes)
             {
                 createItemListaSede(s, "Carter Kane", DateTime.Now);
             }
@@ -42,24 +43,11 @@ namespace LP2MegaAutos
 
         private void quitarItemsLista()
         {
-            foreach (Control c in flpSedes.Controls)
-                c.Parent.Controls.Remove(c);
+            for (int i = 0; i < flpSedes.Controls.Count;)
+                flpSedes.Controls.RemoveAt(i);
         }
 
-        private void organizarAZ()
-        {
-            sedes.OrderBy(g => g.distrito);
-            quitarItemsLista();
-            crearItemsLista();
-        }
-
-        private void organizarZA()
-        {
-            sedes.OrderByDescending(g => g.distrito);
-            quitarItemsLista();
-            crearItemsLista();
-        }
-
+        
         private itemLista createItemListaSede(ServicioSede.sede sede, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
@@ -81,77 +69,103 @@ namespace LP2MegaAutos
             pantallaEditarSede pes = new pantallaEditarSede(sede);
             DialogResult d = pes.ShowDialog();
             if (d == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                sede _sede = pes.Sede;
+                daoSede.actualizarSede(_sede);
+                createItemListaSede(_sede, "Carter Kane", DateTime.Now);
+                _sedes.Add(_sede);
+                btnAZ_Click(btnAZ, new EventArgs());
+                // todo actualizar FechaUltimaModificacion en BD
+            }
             else if (d == DialogResult.Retry)
-            { 
+            {
                 // Eliminar
                 daoSede.eliminarSede(sede.id);
-                flpSedes.Controls.RemoveByKey("il" + sede.id);
-                //ordenarItemsLista();
-                inicializarItemsLista();
+                organizarAZ();
+                // Eliminar
+                _sedes.Remove(sede);
+                // TODO seleccionar organizar segun el boton seleccionado
+                btnAZ_Click(btnAZ, e);
             }
         }
 
-        private void btn_AZ_Click(object sender, EventArgs e)
+        #region Organizar
+        private void organizarAZ()
         {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnAZ.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
-            organizarAZ();
+            _sedes = _sedes.OrderBy(g => g.nombre).ToList();
+            quitarItemsLista();
+            crearItemsLista();
         }
 
-        private void btn_ZA_Click(object sender, EventArgs e)
+        private void organizarZA()
         {
-            // Cambiar color rounded panels de atras
-            this.rndZA.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
+            _sedes = _sedes.OrderByDescending(g => g.nombre).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
 
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
+        private void organizarAntiguo()
+        {
+            //_sedes = _sedes.OrderBy(g => g.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarReciente()
+        {
+            //_sedes = _sedes.OrderByDescending(g => g.fechaCreado).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+        #endregion Organizar
+
+        private void btnAgregarClick(Object sender, EventArgs e)
+        {
+            pantallaEditarSede pes = new pantallaEditarSede();
+            if (pes.ShowDialog() == DialogResult.OK)
+            {
+                // Agregar sede
+                sede _sede = pes.Sede;
+                _sedes.Add(_sede);
+                frmMessageBox frm;
+                if (daoSede.insertarSede(_sede) == 0) // Ta mal
+                    frm = new frmMessageBox("No se pudo insertar.");
+                else // Inserto bien
+                    frm = new frmMessageBox("Se inserto correctamente la sede en " + _sede.distrito);
+                frm.ShowDialog();
+                btnAZ_Click(btnAZ, new EventArgs());
+            }
+        }
+
+        #endregion itemLista
+
+        #region Botones Filtros
+        private void btnAZ_Click(object sender, EventArgs e)
+        {
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndAZ, rndZA, rndAntiguo, rndReciente);
+            organizarAZ();
+        }
+        private void btnZA_Click(object sender, EventArgs e)
+        {
+
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndZA, rndAZ, rndAntiguo, rndReciente);
             organizarZA();
         }
 
-        private void btn_Antiguo_Click(object sender, EventArgs e)
+        private void btnAntiguo_Click(object sender, EventArgs e)
         {
-            // Cambiar color rounded panels de atras
-            this.rndAntiguo.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAZ.BackColor = Color.Transparent;
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndAntiguo, rndZA, rndAZ, rndReciente);
+            organizarAntiguo();
         }
 
-        private void btn_Reciente_Click(object sender, EventArgs e)
+        private void btnReciente_Click(object sender, EventArgs e)
         {
-            // Cambiar color rounded panels de atras
-            this.rndReciente.ColorPanel = Colores.AmarilloInteractivoMenos1;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndAZ.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnReciente.BackColor = Colores.AmarilloInteractivoMenos1;
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndReciente, rndAntiguo, rndZA, rndAZ);
+            organizarReciente();
         }
 
         private void txt_Buscar_Enter(object sender, EventArgs e)
@@ -164,15 +178,7 @@ namespace LP2MegaAutos
             if (txt_Buscar.Text == string.Empty)
                 txt_Buscar.Text = "Buscar";
         }
-
-        private void btn_Agregar_Click(object sender, EventArgs e)
-        {
-            pantallaEditarSede pes = new pantallaEditarSede();
-            if (pes.ShowDialog() == DialogResult.OK)
-            {
-                sede _sede = pes.Sede;
-                daoSede.insertarSede(_sede);
-            }
-        }
+        #endregion Botones Filtros
+        
     }
 }

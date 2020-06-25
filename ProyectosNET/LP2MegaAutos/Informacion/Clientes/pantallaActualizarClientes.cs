@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.ServicioCliente;
+using LP2MegaAutos.Framework;
 
 namespace LP2MegaAutos
 {
@@ -19,7 +20,6 @@ namespace LP2MegaAutos
         public pantallaActualizarClientes()
         {
             InitializeComponent();
-            this.btn_Agregar.Click += btnAgregarClick;
             flpClientes.AutoScroll = true;
             daoCliente = new ServicioCliente.ClienteWSClient();
             inicializarItemsLista();
@@ -41,23 +41,37 @@ namespace LP2MegaAutos
 
         private void quitarItemsLista()
         {
-            foreach (Control c in flpClientes.Controls)
-                c.Parent.Controls.Remove(c);
+            for (int i = 0; i < flpClientes.Controls.Count;)
+                flpClientes.Controls.RemoveAt(i);
         }
 
         private void organizarAZ()
         {
-            clientes.OrderBy(c => c.nombre);
+            clientes = clientes.OrderBy(c => c.nombre).ToList();
             quitarItemsLista();
             crearItemLista();
         }
 
         private void organizarZA()
         {
-            clientes.OrderByDescending(c => c.nombre);
+            clientes = clientes.OrderByDescending(c => c.nombre).ToList();
             quitarItemsLista();
             crearItemLista();
         }
+
+        //private void organizarAntiguo()
+        //{
+        //    clientes = clientes.OrderBy.OrderBy(c => c.fechaCreado).ToList();
+        //    quitarItemsLista();
+        //    crearItemLista();
+        //}
+
+        //private void organizarReciente()
+        //{
+        //    clientes = clientes.OrderBy(c => c.fechaCreado).ToList();
+        //    quitarItemsLista();
+        //    crearItemLista();
+        //}
 
         private itemLista createItemListaCliente(ServicioCliente.cliente cliente, string agregadoPor, DateTime fechaAgregado)
         {
@@ -76,19 +90,29 @@ namespace LP2MegaAutos
             flpClientes.Controls.Add(il);
             return il;
         }
-        private void verDatosCliente(object sender, EventArgs e, ServicioCliente.cliente cliente)
+        private void verDatosCliente(object sender, EventArgs e, ServicioCliente.cliente cl)
         {
-            pantallaEditarCliente pes = new pantallaEditarCliente(cliente);
+            pantallaEditarCliente pes = new pantallaEditarCliente(cl);
             DialogResult d = pes.ShowDialog();
             if (d == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                // Actualizar el cliente
+                cliente c = pes.Cliente;
+                daoCliente.actualizarCliente(c);
+                flpClientes.Controls.RemoveByKey("il" + cl.id);
+                createItemListaCliente(c, "Carter Kane", DateTime.Now);
+                clientes.Add(c);
+                btnAZ_Click(btnAZ, new EventArgs());
+            }
+                
             else if (d == DialogResult.Retry)
             {
                 // Eliminar
-                daoCliente.eliminarCliente(cliente.id);
-                flpClientes.Controls.RemoveByKey("il" + cliente.id);
+                daoCliente.eliminarCliente(cl.id);
+                flpClientes.Controls.RemoveByKey("il" + cl.id);
+                clientes.Remove(cl);
                 //ordenarItemsLista();
-                inicializarItemsLista();
+                btnAZ_Click(btnAZ, e);
             }
         }
         private void btnEditarClick(Object sender, EventArgs e, cliente cliente)
@@ -109,62 +133,30 @@ namespace LP2MegaAutos
         private void btnAZ_Click(object sender, EventArgs e)
         {
             // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Colores.ChooseAmarillo;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnAZ.BackColor = Colores.ChooseAmarillo;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
+            pantallaListasHelper.cambiarCuatroPaneles(rndAZ, rndZA, rndAntiguo, rndReciente);
+            organizarAZ();
         }
 
         private void btnZA_Click(object sender, EventArgs e)
         {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndZA.ColorPanel = Colores.ChooseAmarillo;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Colores.ChooseAmarillo;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
+            pantallaListasHelper.cambiarCuatroPaneles(
+                rndZA, rndAZ, rndAntiguo, rndReciente);
+            organizarZA();
         }
 
-        private void btnAntiguo_Click(object sender, EventArgs e)
-        {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Colores.ChooseAmarillo;
-            this.rndReciente.ColorPanel = Color.Transparent;
+        //private void btnAntiguo_Click(object sender, EventArgs e)
+        //{
+        //    pantallaListasHelper.cambiarCuatroPaneles(
+        //        rndAntiguo, rndZA, rndAZ, rndReciente);
+        //    organizarAntiguo();
+        //}
 
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Colores.ChooseAmarillo;
-            this.btnReciente.BackColor = Color.Transparent;
-            this.btnZA.BackColor = Color.Transparent;
-        }
-
-        private void btnReciente_Click(object sender, EventArgs e)
-        {
-            // Cambiar color rounded panels de atras
-            this.rndAZ.ColorPanel = Color.Transparent;
-            this.rndReciente.ColorPanel = Colores.ChooseAmarillo;
-            this.rndZA.ColorPanel = Color.Transparent;
-            this.rndAntiguo.ColorPanel = Color.Transparent;
-
-            // Cambiar color botones de al frente
-            this.btnAZ.BackColor = Color.Transparent;
-            this.btnReciente.BackColor = Colores.ChooseAmarillo;
-            this.btnZA.BackColor = Color.Transparent;
-            this.btnAntiguo.BackColor = Color.Transparent;
-        }
+        //private void btnReciente_Click(object sender, EventArgs e)
+        //{
+        //    pantallaListasHelper.cambiarCuatroPaneles(
+        //        rndReciente, rndAntiguo, rndZA, rndAZ);
+        //    organizarReciente();
+        //}
 
         private void pantallaActualizarClientes_Load(object sender, EventArgs e)
         {
@@ -177,15 +169,30 @@ namespace LP2MegaAutos
         }
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            if (txt_Buscar.Text == "Buscar")
-                txt_Buscar.Text = string.Empty;
+            pantallaListasHelper.buscarEnter(txt_Buscar);
         }
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            if (txt_Buscar.Text == string.Empty)
-                txt_Buscar.Text = "Buscar";
+            pantallaListasHelper.buscarLeave(txt_Buscar);
         }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarCliente cl = new pantallaEditarCliente();
+            if (cl.ShowDialog() == DialogResult.OK)
+            {
+                cliente _cliente = cl.Cliente;
+                clientes.Add(_cliente);
+                frmMessageBox frm;
+                if (daoCliente.insertarCliente(_cliente) == 0)
+                    frm = new frmMessageBox("No se pudo insertar.");
+                else
+                    frm = new frmMessageBox("Se inserto correctamente el cliente " + _cliente.nombre);
+                frm.ShowDialog();
+            }
+        }
+
 
     }
 }

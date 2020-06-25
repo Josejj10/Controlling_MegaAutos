@@ -120,7 +120,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_AreaTrabajo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_AreaTrabajo, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.txt_AreaTrabajo, System.Drawing.FontStyle.Bold);
-            this.txt_AreaTrabajo.Text = "Mecanica";
             // 
             // lbl_AreaTrabajo
             // 
@@ -197,7 +196,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_CuentaContable, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_CuentaContable, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.txt_CuentaContable, System.Drawing.FontStyle.Bold);
-            this.txt_CuentaContable.Text = "Activos";
             // 
             // lbl_CuentaContable
             // 
@@ -287,7 +285,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_Formula, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txt_Formula, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Formula, System.Drawing.FontStyle.Bold);
-            this.txt_Formula.Text = "1/5";
             // 
             // lbl_Formula
             // 

@@ -172,12 +172,6 @@
     <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.Designer.cs">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.Designer.cs">
-      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -470,9 +464,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\frmCuentaContable.resx">
       <DependentUpon>frmCuentaContable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAgregarAreaTrabajo.resx">
-      <DependentUpon>pantallaAgregarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.resx">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>

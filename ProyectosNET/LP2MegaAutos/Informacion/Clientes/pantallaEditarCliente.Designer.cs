@@ -129,7 +129,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txt_Correo, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Correo, System.Drawing.FontStyle.Regular);
-            this.txt_Correo.Text = "mjavier@pucp.edu.pe";
             // 
             // lbl_Correo
             // 
@@ -205,7 +204,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_Telefono, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txt_Telefono, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txt_Telefono, System.Drawing.FontStyle.Regular);
-            this.txt_Telefono.Text = "996857154";
             // 
             // lbl_Telefono
             // 
@@ -294,7 +292,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_NumeroDocumento, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txt_NumeroDocumento, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NumeroDocumento, System.Drawing.FontStyle.Regular);
-            this.txt_NumeroDocumento.Text = "70251648";
             // 
             // lbl_NumeroDocumento
             // 
@@ -586,7 +583,6 @@
             this.tagsExtender1.SetTagFontName(this.txtTipoCliente, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txtTipoCliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txtTipoCliente, System.Drawing.FontStyle.Regular);
-            this.txtTipoCliente.Text = "Empresa";
             // 
             // label1
             // 
@@ -619,7 +615,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_NombreCliente, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txt_NombreCliente, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreCliente, System.Drawing.FontStyle.Bold);
-            this.txt_NombreCliente.Text = "Javier Berrospi";
             // 
             // btnEditar
             // 
@@ -699,7 +694,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_TIpoDocumento, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txt_TIpoDocumento, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txt_TIpoDocumento, System.Drawing.FontStyle.Regular);
-            this.txt_TIpoDocumento.Text = "DNI";
             // 
             // roundedPanel2
             // 

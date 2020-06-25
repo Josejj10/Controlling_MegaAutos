@@ -1,4 +1,6 @@
-﻿using MetroFramework.Forms;
+﻿using LP2MegaAutos.Framework;
+using LP2MegaAutos.VentanasPrincipales;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,41 @@ namespace LP2MegaAutos.Informacion.AreasTrabajo
 {
     public partial class pantallaEditarAreaTrabajo : MetroForm
     {
+        ServicioAreaTrabajo.areaTrabajo _areaTrabajo;
         public pantallaEditarAreaTrabajo()
         {
             InitializeComponent();
+            _areaTrabajo = new ServicioAreaTrabajo.areaTrabajo();
+            lbl_EditarAreaTrabajo.Text = "Agregar Área de Trabajo";
         }
         
+        public pantallaEditarAreaTrabajo(ServicioAreaTrabajo.areaTrabajo areaTrabajo)
+        {
+            InitializeComponent();
+            _areaTrabajo = areaTrabajo;
+            lbl_EditarAreaTrabajo.Text = "Editar Área de Trabajo";
+            this.txt_nombAreaTrabajo.Text = OtrosHelper.tipoOracion(areaTrabajo.nombre);
+        }
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (!areaTrabajoValido())
+                return;
+            frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
+            if (f.ShowDialog() != DialogResult.OK)
+                return;
+            _areaTrabajo.nombre = txt_nombAreaTrabajo.Text;
             this.DialogResult = DialogResult.OK;
+        }
+
+        public ServicioAreaTrabajo.areaTrabajo AreaTrabajo { get { return _areaTrabajo; } }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmEliminar frm = new frmEliminar("eliminar el area de trabajo " + _areaTrabajo.nombre);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.Retry;
+            }
         }
 
         #region title_bar
@@ -62,6 +91,17 @@ namespace LP2MegaAutos.Informacion.AreasTrabajo
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+        private bool areaTrabajoValido()
+        {
+            // Sacapalabras al txt
+            if (string.IsNullOrEmpty(txt_nombAreaTrabajo.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+            return true;
         }
     }
 }

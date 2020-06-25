@@ -20,7 +20,6 @@ namespace LP2MegaAutos
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
-            this.btn_Agregar.Click += btnAgregarClick;
             flowLayoutPanel1.AutoScroll = true;
             daoAreaTrabajo = new ServicioAreaTrabajo.AreaTrabajoWSClient();
             inicializarItemsLista();
@@ -49,10 +48,17 @@ namespace LP2MegaAutos
         }
         private void EditarClick(Object sender, EventArgs e, areaTrabajo areaTrabajo)
         {
-            pantallaEditarAreaTrabajo pas = new pantallaEditarAreaTrabajo();
-
-            if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
+            pantallaEditarAreaTrabajo pas = new pantallaEditarAreaTrabajo(areaTrabajo);
+            DialogResult d = pas.ShowDialog();
+            if (d == DialogResult.OK) { 
+                areaTrabajo = pas.AreaTrabajo;
+                daoAreaTrabajo.actualizarAreaTrabajo(areaTrabajo);
+            }
+            else if (d == DialogResult.Retry)
+            {
+                daoAreaTrabajo.eliminarAreaTrabajo(areaTrabajo.id);
+                flowLayoutPanel1.Controls.RemoveByKey("il" + areaTrabajo.id);
+            }
         }
         #region Botones Filtro
         private void btnAZ_Click(object sender, EventArgs e)
@@ -103,15 +109,16 @@ namespace LP2MegaAutos
         #endregion Botones Filtro
         private void btnAgregarClick(object sender, EventArgs e)
         {
-            pantallaAgregarAreaTrabajo pas = new pantallaAgregarAreaTrabajo();
-
-            if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
+            pantallaEditarAreaTrabajo pes = new pantallaEditarAreaTrabajo();
+            if (pes.ShowDialog() == DialogResult.OK)
+            {
+                areaTrabajo _areaTrabajo = pes.AreaTrabajo;
+                daoAreaTrabajo.insertarAreaTrabajo(_areaTrabajo);
+            }
         }
         private void ItemLista_Click(object sender, EventArgs e, areaTrabajo areaTrabajo)
         {
             frmAreaTrabajoxCC pas = new frmAreaTrabajoxCC(areaTrabajo);
-
             if (pas.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
         }

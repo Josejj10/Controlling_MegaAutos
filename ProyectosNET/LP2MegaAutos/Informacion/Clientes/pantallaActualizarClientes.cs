@@ -17,6 +17,7 @@ namespace LP2MegaAutos
     {
         ServicioCliente.ClienteWSClient daoCliente;
         List<cliente> clientes;
+        private string textoBuscar;
         public pantallaActualizarClientes()
         {
             InitializeComponent();
@@ -97,11 +98,11 @@ namespace LP2MegaAutos
             if (d == DialogResult.OK)
             {
                 // Actualizar el cliente
-                cliente c = pes.Cliente;
-                daoCliente.actualizarCliente(c);
-                flpClientes.Controls.RemoveByKey("il" + cl.id);
-                createItemListaCliente(c, "Carter Kane", DateTime.Now);
-                clientes.Add(c);
+                cliente _cliente = pes.Cliente;
+                daoCliente.actualizarCliente(_cliente);
+                createItemListaCliente(_cliente, "Carter Kane", DateTime.Now);
+                clientes.Remove(cl);
+                clientes.Add(_cliente);
                 btnAZ_Click(btnAZ, new EventArgs());
             }
                 
@@ -109,7 +110,7 @@ namespace LP2MegaAutos
             {
                 // Eliminar
                 daoCliente.eliminarCliente(cl.id);
-                flpClientes.Controls.RemoveByKey("il" + cl.id);
+                organizarAZ();
                 clientes.Remove(cl);
                 //ordenarItemsLista();
                 btnAZ_Click(btnAZ, e);
@@ -190,6 +191,7 @@ namespace LP2MegaAutos
                 else
                     frm = new frmMessageBox("Se inserto correctamente el cliente " + _cliente.nombre);
                 frm.ShowDialog();
+                btnAZ_Click(btnAZ, new EventArgs());
             }
         }
 

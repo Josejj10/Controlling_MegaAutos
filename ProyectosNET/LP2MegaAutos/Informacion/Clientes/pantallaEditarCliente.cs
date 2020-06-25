@@ -218,6 +218,13 @@ namespace LP2MegaAutos
                 return false;
             }
 
+            if (txt_NumeroDocumento.Text.Length == 8 || txt_NumeroDocumento.Text.Length == 10)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            } 
+
             if (isDouble == false)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto", MessageBoxButtons.OK);

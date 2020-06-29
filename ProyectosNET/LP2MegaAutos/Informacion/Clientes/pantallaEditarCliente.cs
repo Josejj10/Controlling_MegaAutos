@@ -229,7 +229,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if ((txt_NumeroDocumento.Text.Length != 8) || (txt_NumeroDocumento.Text.Length != 10))
+            if ((txt_NumeroDocumento.Text.Length != 8) && (txt_NumeroDocumento.Text.Length != 10))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -260,6 +260,41 @@ namespace LP2MegaAutos
             if (string.IsNullOrEmpty(txtTipoCliente.Text))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un tipo de cliente correcto.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_Telefono.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un telefono correcto.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (txt_Telefono.Text.Length != 9)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un telefono correcto (9 digitos).", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if ((txt_NumeroDocumento.Text.Length == 8) && (txt_TIpoDocumento.Text != "DNI"))
+            {
+                frmMessageBox f = new frmMessageBox("El RUC debe tener 8 digitos.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if ((txt_NumeroDocumento.Text.Length == 10) && (txt_TIpoDocumento.Text != "RUC"))
+            {
+                frmMessageBox f = new frmMessageBox("El DNI debe tener 10 digitos.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_Correo.Text) || (!txt_Correo.Text.Contains("@")) || (!txt_Correo.Text.Contains(".")))
+            {
+                frmMessageBox f = new frmMessageBox("Ingresar un correo correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

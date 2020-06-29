@@ -34,8 +34,7 @@ namespace LP2MegaAutos
             _driver = driver;
             toggleComponentes();
             this.txt_Formula.Text = OtrosHelper.tipoOracion(driver.formula.ToString());
-            this.txt_AreaTrabajo.Text = OtrosHelper.tipoOracion("Area Trabajo TBD");
-            this.txt_CuentaContable.Text = OtrosHelper.tipoOracion("Cuenta Contable TBD");
+
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -101,24 +100,20 @@ namespace LP2MegaAutos
 
         private void toggleComponentes()
         {
-            bool en = txt_Formula.Enabled = txt_CuentaContable.Enabled =
-                txt_AreaTrabajo.Enabled = btn_guardar.Enabled = !lblDriver.Enabled;
+            bool en = txt_Formula.Enabled  = btn_guardar.Enabled = !lblDriver.Enabled;
 
             if (!en)
             {
                 // No habilitado
-                lblDriver.BackColor = txt_Formula.BackColor = txt_CuentaContable.BackColor =
-                    txt_AreaTrabajo.BackColor =  Colores.FrontBackground;
+                lblDriver.BackColor = txt_Formula.BackColor = 
+                     Colores.FrontBackground;
 
-                lblDriver.ForeColor = txt_Formula.ForeColor = txt_CuentaContable.ForeColor =
-                    txt_AreaTrabajo.ForeColor =
+                lblDriver.ForeColor = txt_Formula.ForeColor = 
                     rnd_color_1.ColorPanel =
-                    roundedPanel2.ColorPanel =
-                    roundedPanel3.ColorPanel =
+
                     rnd_guardar.ColorPanel =
                     rnd_color_1.ColorBorde =
-                    roundedPanel2.ColorBorde =
-                    roundedPanel3.ColorBorde =
+
                     rnd_guardar.ColorBorde
                     = Colores.Disabled;
 
@@ -128,17 +123,11 @@ namespace LP2MegaAutos
             }
             // Habilitado
             lblDriver.ForeColor = txt_Formula.ForeColor = Colores.HighContrast;
-            txt_CuentaContable.ForeColor =
-               txt_AreaTrabajo.ForeColor =
-               Colores.HighContrast;
 
             rnd_color_1.ColorPanel =
-                    roundedPanel2.ColorPanel =
-                    roundedPanel3.ColorPanel =
+
                     rnd_guardar.ColorPanel =
                     rnd_color_1.ColorBorde = 
-                    roundedPanel2.ColorBorde =
-                    roundedPanel3.ColorBorde =
                     rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
@@ -179,21 +168,6 @@ namespace LP2MegaAutos
                 return false;
             }
 
-
-
-            if (string.IsNullOrEmpty(txt_CuentaContable.Text))
-            {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese una cuenta contable.", MessageBoxButtons.OK);
-                f.ShowDialog();
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(txt_AreaTrabajo.Text))
-            {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese una area de trabajo.", MessageBoxButtons.OK);
-                f.ShowDialog();
-                return false;
-            }
             return true;
         }
 

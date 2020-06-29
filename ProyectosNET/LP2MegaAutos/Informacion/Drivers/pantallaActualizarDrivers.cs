@@ -69,8 +69,8 @@ namespace LP2MegaAutos
             il.TextoAgregadoPor = agregadoPor;
             il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = driver.formula.ToString();
-            il.Textosecundario = "Mecánica TBD";
-            il.TextoTercero = "Luz TBD";
+            il.Textosecundario = "";
+            il.TextoTercero = "";
             il.ItemListaClick += (sender, e) => { verDatosDriver(sender, e, driver); };
             il.esconderBotonEditar();
             flpDrivers.Controls.Add(il);

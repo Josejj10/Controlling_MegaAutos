@@ -123,13 +123,6 @@ namespace LP2MegaAutos
                 MessageBox.Show("OK");
         }
 
-        private void btnAgregarClick(Object sender, EventArgs e)
-        {
-            pantallaAgregarCliente pas = new pantallaAgregarCliente();
-
-            if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
-        }
 
         private void btnAZ_Click(object sender, EventArgs e)
         {

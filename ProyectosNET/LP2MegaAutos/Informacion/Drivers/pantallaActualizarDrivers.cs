@@ -49,14 +49,14 @@ namespace LP2MegaAutos
 
         private void organizarAZ()
         {
-            drivers.OrderBy(d => d.formula).ToList();
+            drivers = drivers.OrderBy(d => d.formula).ToList();
             quitarItemsLista();
             crearItemLista();
         }
 
         private void organizarZA()
         {
-            drivers.OrderByDescending(d => d.formula).ToList();
+            drivers = drivers.OrderByDescending(d => d.formula).ToList();
             quitarItemsLista();
             crearItemLista();
         }

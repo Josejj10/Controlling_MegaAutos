@@ -36,7 +36,6 @@ public class JoineryExtension extends Serialization{
         }
     }
     
-    
     public static DataFrame<Object> readXlsx(final InputStream input, int nHoja)
     throws IOException {
         final Workbook wb = new XSSFWorkbook(input);
@@ -45,12 +44,12 @@ public class JoineryExtension extends Serialization{
         final List<List<Object>> data = new ArrayList<>();
 
         for (final Row row : sheet) {
-            if (row.getRowNum() == 0) {
+            if (row.getRowNum() == 2) {
                 // read header
                 for (final Cell cell : row) {
                     columns.add(readCell(cell));
                 }
-            } else {
+            } else if (row.getRowNum() > 2) {
                 // read data values
                 final List<Object> values = new ArrayList<>();
                 for (final Cell cell : row) {
@@ -59,14 +58,12 @@ public class JoineryExtension extends Serialization{
                 data.add(values);
             }
         }
-
         // create data frame
-        final DataFrame<Object> df = new DataFrame<>(columns);
+        final DataFrame<Object> dfFact = new DataFrame<>(columns);
         for (final List<Object> row : data) {
-            df.append(row);
+            dfFact.append(row);
         }
-
-        return df.convert();
+        return dfFact;
     }
     
 }

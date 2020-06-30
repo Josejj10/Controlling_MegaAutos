@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package LP2MegaAutos;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -12,8 +15,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
+import java.util.Set;
 import joinery.DataFrame;
 import pe.com.megaautos.config.DAOFactory;
 import pe.com.megaautos.config.DBController;
@@ -57,18 +64,65 @@ import pe.com.megaautos.config.DBDataSource;
  */
 public class LP2MegaAutos {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) throws ParseException, IOException{
+        
+        //Extraction
+        String ruta = "C:\\Users\\Nicolas\\Desktop\\PUCP\\Clases\\20-1\\TA\\Cuadro.xlsx";
+        File initialFile = new File(ruta);
+        InputStream targetStream1 = new FileInputStream(initialFile);
+        InputStream targetStream2 = new FileInputStream(initialFile);
 
-       DataFrame d = JoineryExtension.readXlsx(DAOFactory.class.getClassLoader().getResourceAsStream("Cuadro.xlsx"),5);
-       
-       for (ListIterator<Object> iter =d.iterator(); iter.hasNext(); ) {
-           Object e = iter.next();
-           System.out.println(e);
-       }
+        //Obtenemos el dfFact del documento en excel
+        DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5);
+        DataFrame dfAsig = JoineryExtension.readXlsx(targetStream2,1);
+        //System.out.println(dfFact);
 
+        //Transformation
+        int lastRow = dfFact.length() - 1;
+        int lastCol = dfFact.size();
+        int lastColGris = 24; //Numero de la columna del data frame (empieza en 1)
+        DataFrame dfGris = dfFact.slice(0, lastRow, 0, lastColGris);
+        DataFrame dfAzul = dfFact.slice(0, lastRow, lastColGris, lastCol);
+
+        dfAzul = dfFact.slice(0, lastRow, 24, lastCol);
+        dfAzul = dfAzul.dropna().resetIndex();
+        //System.out.println(dfAsig);
+
+        //Para la tabla cliente:
+        DataFrame dfCliente = dfGris.retain("No OT", "R.U.C.", "Nombre / Razón Social");
+        dfCliente = dfCliente.unique("No OT").joinOn(dfAsig.retain("ORDEN DE TRABAJO", "TIPO DE CLIENTE").unique("ORDEN DE TRABAJO"), DataFrame.JoinType.INNER, "No OT");
+        int lastRowCli = dfCliente.length();
+        //Generamos la columna con el tipo de documento
+        List<String> tipoDoc = new ArrayList<>();
+        for (int i = 0; i < lastRowCli; i++){
+            int numDig = dfCliente.get(i, 1).toString().length();
+            if (numDig == 11)  tipoDoc.add("RUC");
+            else if (numDig == 8)  tipoDoc.add("DNI");
+            else tipoDoc.add("S/TIPO");
+        }
+        DataFrame tablaCliente = new DataFrame();
+        tablaCliente.add(dfCliente.col("Nombre / Razón Social"));
+        tablaCliente.add(dfCliente.col("TIPO DE CLIENTE"));
+        tablaCliente.rename(0, "NOMBRE CLIENTE");
+        tablaCliente.rename(324, "TIPO DE CLIENTE");
+        tablaCliente.add(tipoDoc);
+        tablaCliente.rename(324, "TIPO DE DOCUMENTO");
+        tablaCliente.add(dfCliente.col("R.U.C."));
+        tablaCliente.rename(324, "NUMERO DOCUMENTO");
+        System.out.println(tablaCliente);
+
+
+//BUSCAR UN ELEMENTO EN UN DATAFRAME WARD!!!!
+//        int elem = dfCliente.col(0).indexOf("005-00000058");
+//        System.out.println(dfCliente.get(elem, 4).toString());
+
+        //Load
+        
+        
+//        for (ListIterator<Object> iter = dfFact.iterator(); iter.hasNext(); ) {
+//            Object e = iter.next();
+//            System.out.println(e);
+//        }
 //        
 //        try{
 //            Connection con = DBDataSource.getConnection();
@@ -170,11 +224,11 @@ public class LP2MegaAutos {
 //            System.out.println(c.getId() + " " + c.getNombre() + " " + c.getTipoDocumento());
 //        }
 //        System.out.println(cl1.getNombre());
-        ClienteDAO daoCliente = DBController.controller.getClienteDAO();
+        /*ClienteDAO daoCliente = DBController.controller.getClienteDAO();
         Cliente c2 = new Cliente();
         c2 = daoCliente.buscar(18);
         c2.setNombre("Diego Tuestin");
-        daoCliente.actualizar(c2);
+        daoCliente.actualizar(c2);*/
 //        ArrayList<Cliente> clientes = new ArrayList<>();
 //        clientes = daoCliente.listar();
 //        for(Cliente c : clientes){

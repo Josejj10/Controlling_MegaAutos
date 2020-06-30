@@ -161,7 +161,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (agregando)
+            if (agregando) //Si se agrega
             {
                 if(txt_NuevaCont.Text != txt_RepNCont.Text || string.IsNullOrEmpty(txt_NuevaCont.Text))
                 {

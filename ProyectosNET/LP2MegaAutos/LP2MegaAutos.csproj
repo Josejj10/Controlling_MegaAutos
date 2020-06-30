@@ -190,12 +190,6 @@
     <Compile Include="Informacion\Vehiculos\pantallaActualizarVehiculos.Designer.cs">
       <DependentUpon>pantallaActualizarVehiculos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\frmFiltrarReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\frmFiltrarReportes.Designer.cs">
-      <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reportes\frmResumenReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,6 +356,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Framework\DarkMode.cs" />
+    <Compile Include="Reportes\pantallaOrdenTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\pantallaOrdenTrabajo.Designer.cs">
+      <DependentUpon>pantallaOrdenTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanasPrincipales\BotonesDinamicosHelper.cs" />
     <Compile Include="VentanasPrincipales\ContenedorPantalla.cs">
       <SubType>UserControl</SubType>
@@ -468,8 +468,8 @@
     <EmbeddedResource Include="Informacion\Vehiculos\pantallaActualizarVehiculos.resx">
       <DependentUpon>pantallaActualizarVehiculos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\frmFiltrarReportes.resx">
-      <DependentUpon>frmFiltrarReportes.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\pantallaOrdenTrabajo.resx">
+      <DependentUpon>pantallaOrdenTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasPrincipales\ContenedorPantalla.resx">
       <DependentUpon>ContenedorPantalla.cs</DependentUpon>

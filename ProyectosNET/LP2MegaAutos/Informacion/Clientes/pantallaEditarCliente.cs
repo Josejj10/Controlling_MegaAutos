@@ -250,6 +250,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
+            // Validacion Correo
             if (string.IsNullOrEmpty(txt_Correo.Text))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un correo correcto.", MessageBoxButtons.OK);

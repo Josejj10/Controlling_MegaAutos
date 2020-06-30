@@ -151,7 +151,7 @@ public class UsuarioMySQL implements UsuarioDAO {
     public Usuario verificarPassword(String correo, String password) {
         try{
             Connection con = DBDataSource.getConnection();
-            CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)");
+            CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)}");
             // Seria algo asi
             // "SELECT * FROM Usuarios where correo=CORREO and password=PASSWRD";
             cs.setString(1,correo);

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package LP2MegaAutos;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -12,6 +13,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.ListIterator;
+import joinery.DataFrame;
+import pe.com.megaautos.config.DAOFactory;
 import pe.com.megaautos.config.DBController;
 import pe.com.megaautos.dao.AreaTrabajoDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
@@ -56,7 +60,15 @@ public class LP2MegaAutos {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ParseException{
+    public static void main(String[] args) throws ParseException, IOException{
+
+       DataFrame d = JoineryExtension.readXlsx(DAOFactory.class.getClassLoader().getResourceAsStream("Cuadro.xlsx"),5);
+       
+       for (ListIterator<Object> iter =d.iterator(); iter.hasNext(); ) {
+           Object e = iter.next();
+           System.out.println(e);
+       }
+
 //        
 //        try{
 //            Connection con = DBDataSource.getConnection();

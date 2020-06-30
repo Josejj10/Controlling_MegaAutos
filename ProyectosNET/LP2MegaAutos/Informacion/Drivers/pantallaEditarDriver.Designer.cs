@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.pnl_AreaTrabajo = new System.Windows.Forms.Panel();
-            this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
-            this.txt_AreaTrabajo = new System.Windows.Forms.TextBox();
-            this.lbl_AreaTrabajo = new System.Windows.Forms.Label();
-            this.pnl_CuentaContable = new System.Windows.Forms.Panel();
-            this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
-            this.txt_CuentaContable = new System.Windows.Forms.TextBox();
-            this.lbl_CuentaContable = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_NumeroDocumento = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
@@ -54,165 +46,11 @@
             this.lblDriver = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.pnl_AreaTrabajo.SuspendLayout();
-            this.pnl_CuentaContable.SuspendLayout();
             this.pnl_NumeroDocumento.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnl_AreaTrabajo
-            // 
-            this.pnl_AreaTrabajo.BackColor = System.Drawing.Color.White;
-            this.pnl_AreaTrabajo.Controls.Add(this.roundedPanel3);
-            this.pnl_AreaTrabajo.Controls.Add(this.txt_AreaTrabajo);
-            this.pnl_AreaTrabajo.Controls.Add(this.lbl_AreaTrabajo);
-            this.pnl_AreaTrabajo.Location = new System.Drawing.Point(151, 247);
-            this.pnl_AreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_AreaTrabajo.Name = "pnl_AreaTrabajo";
-            this.pnl_AreaTrabajo.Size = new System.Drawing.Size(292, 41);
-            this.pnl_AreaTrabajo.TabIndex = 48;
-            this.tagsExtender1.SetTag2(this.pnl_AreaTrabajo, null);
-            this.tagsExtender1.SetTag3(this.pnl_AreaTrabajo, null);
-            this.tagsExtender1.SetTagFontName(this.pnl_AreaTrabajo, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.pnl_AreaTrabajo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.pnl_AreaTrabajo, System.Drawing.FontStyle.Regular);
-            // 
-            // roundedPanel3
-            // 
-            this.roundedPanel3.ArcRadiusBorde = 15;
-            this.roundedPanel3.ArcRadiusPanel = 15;
-            this.roundedPanel3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
-            this.roundedPanel3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
-            this.roundedPanel3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel3.Location = new System.Drawing.Point(2, 4);
-            this.roundedPanel3.MenosHeightBorde = 1;
-            this.roundedPanel3.MenosHeightPanel = 1;
-            this.roundedPanel3.MenosWidthBorde = 1;
-            this.roundedPanel3.MenosWidthPanel = 1;
-            this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.PorcLuzColorBorde = 0;
-            this.roundedPanel3.Size = new System.Drawing.Size(3, 36);
-            this.roundedPanel3.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.roundedPanel3, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel3, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel3, System.Drawing.FontStyle.Regular);
-            this.roundedPanel3.XBorde = 0;
-            this.roundedPanel3.XPanel = 0;
-            this.roundedPanel3.YBorde = 0;
-            this.roundedPanel3.YPanel = 0;
-            // 
-            // txt_AreaTrabajo
-            // 
-            this.txt_AreaTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_AreaTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_AreaTrabajo.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_AreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_AreaTrabajo.Location = new System.Drawing.Point(7, 18);
-            this.txt_AreaTrabajo.Name = "txt_AreaTrabajo";
-            this.txt_AreaTrabajo.Size = new System.Drawing.Size(284, 23);
-            this.txt_AreaTrabajo.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_AreaTrabajo, null);
-            this.tagsExtender1.SetTag3(this.txt_AreaTrabajo, null);
-            this.tagsExtender1.SetTagFontName(this.txt_AreaTrabajo, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_AreaTrabajo, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_AreaTrabajo, System.Drawing.FontStyle.Bold);
-            // 
-            // lbl_AreaTrabajo
-            // 
-            this.lbl_AreaTrabajo.AutoSize = true;
-            this.lbl_AreaTrabajo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_AreaTrabajo.Location = new System.Drawing.Point(4, 2);
-            this.lbl_AreaTrabajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_AreaTrabajo.Name = "lbl_AreaTrabajo";
-            this.lbl_AreaTrabajo.Size = new System.Drawing.Size(99, 16);
-            this.lbl_AreaTrabajo.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.lbl_AreaTrabajo, null);
-            this.tagsExtender1.SetTag3(this.lbl_AreaTrabajo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_AreaTrabajo, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_AreaTrabajo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_AreaTrabajo, System.Drawing.FontStyle.Bold);
-            this.lbl_AreaTrabajo.Text = "Area de Trabajo";
-            // 
-            // pnl_CuentaContable
-            // 
-            this.pnl_CuentaContable.BackColor = System.Drawing.Color.White;
-            this.pnl_CuentaContable.Controls.Add(this.roundedPanel2);
-            this.pnl_CuentaContable.Controls.Add(this.txt_CuentaContable);
-            this.pnl_CuentaContable.Controls.Add(this.lbl_CuentaContable);
-            this.pnl_CuentaContable.Location = new System.Drawing.Point(152, 189);
-            this.pnl_CuentaContable.Margin = new System.Windows.Forms.Padding(4);
-            this.pnl_CuentaContable.Name = "pnl_CuentaContable";
-            this.pnl_CuentaContable.Size = new System.Drawing.Size(292, 41);
-            this.pnl_CuentaContable.TabIndex = 46;
-            this.tagsExtender1.SetTag2(this.pnl_CuentaContable, null);
-            this.tagsExtender1.SetTag3(this.pnl_CuentaContable, null);
-            this.tagsExtender1.SetTagFontName(this.pnl_CuentaContable, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.pnl_CuentaContable, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.pnl_CuentaContable, System.Drawing.FontStyle.Regular);
-            // 
-            // roundedPanel2
-            // 
-            this.roundedPanel2.ArcRadiusBorde = 15;
-            this.roundedPanel2.ArcRadiusPanel = 15;
-            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
-            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
-            this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel2.Location = new System.Drawing.Point(2, 4);
-            this.roundedPanel2.MenosHeightBorde = 1;
-            this.roundedPanel2.MenosHeightPanel = 1;
-            this.roundedPanel2.MenosWidthBorde = 1;
-            this.roundedPanel2.MenosWidthPanel = 1;
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.PorcLuzColorBorde = 0;
-            this.roundedPanel2.Size = new System.Drawing.Size(3, 36);
-            this.roundedPanel2.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.roundedPanel2, null);
-            this.tagsExtender1.SetTag3(this.roundedPanel2, null);
-            this.tagsExtender1.SetTagFontName(this.roundedPanel2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.roundedPanel2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.roundedPanel2, System.Drawing.FontStyle.Regular);
-            this.roundedPanel2.XBorde = 0;
-            this.roundedPanel2.XPanel = 0;
-            this.roundedPanel2.YBorde = 0;
-            this.roundedPanel2.YPanel = 0;
-            // 
-            // txt_CuentaContable
-            // 
-            this.txt_CuentaContable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_CuentaContable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_CuentaContable.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CuentaContable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_CuentaContable.Location = new System.Drawing.Point(7, 18);
-            this.txt_CuentaContable.Name = "txt_CuentaContable";
-            this.txt_CuentaContable.Size = new System.Drawing.Size(284, 23);
-            this.txt_CuentaContable.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_CuentaContable, null);
-            this.tagsExtender1.SetTag3(this.txt_CuentaContable, null);
-            this.tagsExtender1.SetTagFontName(this.txt_CuentaContable, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_CuentaContable, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_CuentaContable, System.Drawing.FontStyle.Bold);
-            // 
-            // lbl_CuentaContable
-            // 
-            this.lbl_CuentaContable.AutoSize = true;
-            this.lbl_CuentaContable.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CuentaContable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_CuentaContable.Location = new System.Drawing.Point(4, 2);
-            this.lbl_CuentaContable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_CuentaContable.Name = "lbl_CuentaContable";
-            this.lbl_CuentaContable.Size = new System.Drawing.Size(105, 16);
-            this.lbl_CuentaContable.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.lbl_CuentaContable, null);
-            this.tagsExtender1.SetTag3(this.lbl_CuentaContable, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_CuentaContable, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_CuentaContable, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_CuentaContable, System.Drawing.FontStyle.Bold);
-            this.lbl_CuentaContable.Text = "Cuenta Contable";
             // 
             // panel1
             // 
@@ -233,7 +71,7 @@
             this.pnl_NumeroDocumento.Controls.Add(this.rnd_color_1);
             this.pnl_NumeroDocumento.Controls.Add(this.txt_Formula);
             this.pnl_NumeroDocumento.Controls.Add(this.lbl_Formula);
-            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(152, 131);
+            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(152, 195);
             this.pnl_NumeroDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_NumeroDocumento.Name = "pnl_NumeroDocumento";
             this.pnl_NumeroDocumento.Size = new System.Drawing.Size(292, 41);
@@ -595,8 +433,6 @@
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.rnd_cancelar);
-            this.Controls.Add(this.pnl_AreaTrabajo);
-            this.Controls.Add(this.pnl_CuentaContable);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_NumeroDocumento);
             this.MaximizeBox = false;
@@ -613,10 +449,6 @@
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.pnl_AreaTrabajo.ResumeLayout(false);
-            this.pnl_AreaTrabajo.PerformLayout();
-            this.pnl_CuentaContable.ResumeLayout(false);
-            this.pnl_CuentaContable.PerformLayout();
             this.pnl_NumeroDocumento.ResumeLayout(false);
             this.pnl_NumeroDocumento.PerformLayout();
             this.rnd_guardar.ResumeLayout(false);
@@ -630,14 +462,6 @@
         #endregion
 
         private TagsExtender tagsExtender1;
-        private System.Windows.Forms.Panel pnl_AreaTrabajo;
-        private RoundedPanel roundedPanel3;
-        private System.Windows.Forms.TextBox txt_AreaTrabajo;
-        private System.Windows.Forms.Label lbl_AreaTrabajo;
-        private System.Windows.Forms.Panel pnl_CuentaContable;
-        private RoundedPanel roundedPanel2;
-        private System.Windows.Forms.TextBox txt_CuentaContable;
-        private System.Windows.Forms.Label lbl_CuentaContable;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_NumeroDocumento;
         private RoundedPanel rnd_color_1;

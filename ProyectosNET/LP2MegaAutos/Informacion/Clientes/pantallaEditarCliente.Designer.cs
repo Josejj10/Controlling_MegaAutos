@@ -681,6 +681,11 @@
             // 
             // txt_TIpoDocumento
             // 
+            this.txt_TIpoDocumento.AutoCompleteCustomSource.AddRange(new string[] {
+            "DNI",
+            "RUC"});
+            this.txt_TIpoDocumento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_TIpoDocumento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_TIpoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.txt_TIpoDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_TIpoDocumento.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

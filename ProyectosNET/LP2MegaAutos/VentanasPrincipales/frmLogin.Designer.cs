@@ -457,7 +457,8 @@ namespace LP2MegaAutos
             // textBox_correo
             // 
             this.textBox_correo.AutoCompleteCustomSource.AddRange(new string[] {
-            "josejj2210@gmail.com"});
+            "josejj2210@gmail.com",
+            "agua@gmail.com"});
             this.textBox_correo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox_correo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox_correo.BackColor = System.Drawing.Color.White;

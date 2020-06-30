@@ -22,6 +22,14 @@ public class UsuarioWS {
         daoUsuario = DBController.controller.getUsuarioDAO();
     }
     
+    @WebMethod(operationName = "verificarPassword")
+    public Usuario verificarPassword(@WebParam(name = "correo") String correo,
+            @WebParam(name = "password") String password){
+        // retorna null al cliente si no hay usuario, y 
+        // el usuario si si hay
+        return daoUsuario.verificarPassword(correo,password);
+    }
+    
     @WebMethod(operationName = "listarUsuarios")
     public ArrayList<Usuario> listarUsuarios(){
         ArrayList<Usuario> usuarios = new ArrayList<>();

@@ -3,6 +3,7 @@ package pe.com.megaautos.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.com.megaautos.config.DBDataSource;
@@ -144,5 +145,35 @@ public class UsuarioMySQL implements UsuarioDAO {
         }
         //Devolviendo los usuarios
         return usuarios;    
+    }
+
+    @Override
+    public Usuario verificarPassword(String correo, String password) {
+        try{
+            Connection con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)");
+            // Seria algo asi
+            // "SELECT * FROM Usuarios where correo=CORREO and password=PASSWRD";
+            cs.setString(1,correo);
+            cs.setString(2,password);
+            ResultSet rs = cs.executeQuery();
+            if(!rs.next())
+                return null;
+            // Si no, actualizar usuario y retornarlo
+            Usuario usuario = new Usuario();
+            usuario.setId(rs.getInt("ID_USUARIO"));
+            usuario.setNombre(rs.getString("NOMBRE"));
+            usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
+            usuario.setCorreo(rs.getString("CORREO"));
+            usuario.setPassword(rs.getString("PASSWRD"));
+            // usuario.setPermisos Ahi hagan su magia con SQL y java 
+            // creo que seria un borrar permisos(?)
+            // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
+            return usuario;
+            
+        }catch(Exception e){
+            System.out.println(e);
+            return null;
+        }
     }
 }

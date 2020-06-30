@@ -8,8 +8,10 @@ package pe.com.megaautos.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.ClienteDAO;
@@ -24,6 +26,28 @@ import pe.com.megaautos.model.OrdenTrabajo;
  */
 public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
     Connection con;
+    
+    // Seria ideal recibir una lista de ordenes Trabajo sacada del DF 
+    // pero si no pueden transformarlo, cambiar los parametros para recibir un
+    // DF o como prefieran, pero para eficiencia es mejor solo recibir una lista
+    // Replicar para las demas wbds que quieran guardar
+    public void guardarBatch(List<OrdenTrabajo> ordenesTrabajo){
+        try{
+            Connection con = DBDataSource.getConnection();
+            PreparedStatement st = con.prepareStatement("");
+            int i = 0;
+            //for(OrdenTrabajo ordenTrabajo : ordenesTrabajo){
+            // st.setString(indexParametro, ordenTrabajo.getAlgo);
+            //st.addBatch();
+            //i++
+            // if(i%1000 ==0 || i == ordenesTrabajo.size()){
+            // st.executeBatch();
+            
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+    
     @Override
     public int insertar(OrdenTrabajo ordenTrabajo) {
         int rpta = 0;

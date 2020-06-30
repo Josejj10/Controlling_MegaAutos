@@ -66,6 +66,11 @@ public class LP2MegaAutos {
 
     public static void main(String[] args) throws ParseException, IOException{
         
+//        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
+//        Usuario u = new Usuario();
+//        u = daoUsuario.verificarPassword("nicolas@gmail.com", "1234");
+//        System.out.println(u.getId() + " " + u.getNombre() + " " + u.getCorreo() + " " + u.getTipoUsuario());
+        
         //Extraction
         String ruta = "C:\\Users\\Nicolas\\Desktop\\PUCP\\Clases\\20-1\\TA\\Cuadro.xlsx";
         File initialFile = new File(ruta);

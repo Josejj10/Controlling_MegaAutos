@@ -345,10 +345,16 @@ FodyWeavers.xsd
 /ProyectosJAVA/LP2MegaAutosModel/build/
 /ProyectosJAVA/LP2MegaAutosModel/dist/
 /ProyectosJAVA/LP2MegaAutos/nbproject/private/
-/ProyectosJAVA/LP2MegaAutos/build/
+/ProyectosJAVA/LP2MegaAutos/nbproject/private/private.xml
+/ProyectosJAVA/LP2MegaAutos/build/built-jar.properties
 /ProyectosJAVA/LP2MegaAutosController/nbproject/private/
 /ProyectosJAVA/LP2MegaAutosController/dist/
 /ProyectosJAVA/LP2MegaAutosController/build/
 /ProyectosJAVA/LP2MegaAutosServices/build/
 /ProyectosJAVA/LP2MegaAutosServices/dist/
 /ProyectosJAVA/LP2MegaAutos/dist/
+/ProyectosJAVA/LP2MegaAutos/LP2MegaAutos.class
+
+
+*.xml
+*.properties

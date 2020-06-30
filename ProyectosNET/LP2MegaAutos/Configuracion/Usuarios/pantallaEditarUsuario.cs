@@ -172,7 +172,7 @@ namespace LP2MegaAutos
 
             }
             else
-            if (btnCambiarPassword.Enabled && ( txt_NuevaCont.Text != txt_RepNCont.Text || string.IsNullOrEmpty(txt_NuevaCont.Text)))
+            if (txt_NuevaCont.Enabled && ( txt_NuevaCont.Text != txt_RepNCont.Text || string.IsNullOrEmpty(txt_NuevaCont.Text)))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese y repita correctamente la nueva contraseña.", MessageBoxButtons.OK);
                 f.ShowDialog();

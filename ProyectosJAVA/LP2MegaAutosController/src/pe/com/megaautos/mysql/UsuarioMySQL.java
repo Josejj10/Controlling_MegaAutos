@@ -77,7 +77,7 @@ public class UsuarioMySQL implements UsuarioDAO {
             cs.setString("_NOMBRE", usuario.getNombre().toUpperCase());
             cs.setString("_TIPO_USUARIO", usuario.getTipoUsuario().toUpperCase());
             cs.setString("_CORREO", usuario.getCorreo());
-            cs.setString("_PASSWORD", usuario.getPassword());
+            cs.setString("_PASSWRD", usuario.getPassword());
             java.sql.Date sqlDate = new java.sql.Date(usuario.getFechaCreado().getTime());
             cs.setDate("_FECHA_CREACION", sqlDate);
             cs.executeUpdate();

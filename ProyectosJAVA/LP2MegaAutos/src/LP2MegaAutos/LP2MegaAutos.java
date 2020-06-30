@@ -145,9 +145,9 @@ public class LP2MegaAutos {
 //        sedes = daoSede.listar();
 //        for(Sede d : sedes)
 //            System.out.println(d.getDistrito());
-
-        // Prueba Cliente/TipoCliente/Documento/TipoDocumento
-        //Cliente cl1 = new Cliente("LUIS PEREZ", "465445", "DNI", "45644564", "a2020@pucp.edu.pe", "Personal");
+//
+//        //Prueba Cliente/TipoCliente/Documento/TipoDocumento
+//        Cliente cl1 = new Cliente("LUIS PEREZ", "465445", "DNI", "45644564", "a2020@pucp.edu.pe", "Personal");
 //        ClienteDAO daoCliente = new ClienteMySQL();
 //        Cliente cl1 = new Cliente();
 //        cl1 = daoCliente.buscar(13);
@@ -158,13 +158,11 @@ public class LP2MegaAutos {
 //            System.out.println(c.getId() + " " + c.getNombre() + " " + c.getTipoDocumento());
 //        }
 //        System.out.println(cl1.getNombre());
-
-//        Cliente c2 = new Cliente();
-//        c2 = daoCliente.buscar(14);
-//        c2.setTipoCliente("Empresa");
-//        c2.setTelefono("4421210");
-//        daoCliente.actualizar(c2);
-//        daoCliente.eliminar(7);
+        ClienteDAO daoCliente = DBController.controller.getClienteDAO();
+        Cliente c2 = new Cliente();
+        c2 = daoCliente.buscar(18);
+        c2.setNombre("Diego Tuestin");
+        daoCliente.actualizar(c2);
 //        ArrayList<Cliente> clientes = new ArrayList<>();
 //        clientes = daoCliente.listar();
 //        for(Cliente c : clientes){
@@ -221,27 +219,27 @@ public class LP2MegaAutos {
 //        for(AreaTrabajo at : ats)
 //            System.out.println(at.getNombre());
 
-        // Prueba Orden Trabajo
-        ClienteDAO daoCliente = new ClienteMySQL();
-        Cliente cl1 = new Cliente();
-        cl1 = daoCliente.buscar(13);
-        SedeDAO daoSede = new SedeMySQL();
-        Sede s1 = new Sede();
-        s1 = daoSede.buscar(2);
-        VehiculoDAO daoVehiculo = new VehiculoMySQL();
-        Vehiculo veh1 = new Vehiculo();
-        veh1 = daoVehiculo.buscar(1);
-        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-        Date date = formato.parse("24-12-2020");
-        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0, s1);
-        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
-        ot1.setCliente(cl1);
-        ot1.setVehiculo(veh1);
-        daoOrdenTrabajo.insertar(ot1);
-        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
-        ots = daoOrdenTrabajo.listar();
-        for(OrdenTrabajo ot : ots)
-            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre() + " " + ot.getSede().getDistrito() + " " + ot.getVehiculo().getPlaca());
+//        // Prueba Orden Trabajo
+//        ClienteDAO daoCliente = new ClienteMySQL();
+//        Cliente cl1 = new Cliente();
+//        cl1 = daoCliente.buscar(13);
+//        SedeDAO daoSede = new SedeMySQL();
+//        Sede s1 = new Sede();
+//        s1 = daoSede.buscar(2);
+//        VehiculoDAO daoVehiculo = new VehiculoMySQL();
+//        Vehiculo veh1 = new Vehiculo();
+//        veh1 = daoVehiculo.buscar(1);
+//        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+//        Date date = formato.parse("24-12-2020");
+//        OrdenTrabajo ot1 = new OrdenTrabajo("007-005", date, 4550.25, 3000.0, s1);
+//        OrdenTrabajoDAO daoOrdenTrabajo = new OrdenTrabajoMySQL();
+//        ot1.setCliente(cl1);
+//        ot1.setVehiculo(veh1);
+//        daoOrdenTrabajo.insertar(ot1);
+//        ArrayList<OrdenTrabajo> ots = new ArrayList<>();
+//        ots = daoOrdenTrabajo.listar();
+//        for(OrdenTrabajo ot : ots)
+//            System.out.println(ot.getNumeroOrden() + " " + ot.getCliente().getNombre() + " " + ot.getSede().getDistrito() + " " + ot.getVehiculo().getPlaca());
 
         // Prueba CuentaContable
 //        CuentaContable ct1 = new CuentaContable("Planilla");

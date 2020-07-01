@@ -772,6 +772,9 @@
     <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.verificarPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioUsuario\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioUsuario\UsuarioWS.xsd">
       <SubType>Designer</SubType>

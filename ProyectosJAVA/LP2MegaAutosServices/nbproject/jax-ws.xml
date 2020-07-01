@@ -37,6 +37,9 @@
     <service name="ClienteWS">
       <implementation-class>pe.com.megaautos.services.ClienteWS</implementation-class>
     </service>
+    <service name="ExcelWS">
+      <implementation-class>pe.com.megaautos.services.ExcelWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

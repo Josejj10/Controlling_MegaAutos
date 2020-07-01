@@ -129,6 +129,13 @@ namespace LP2MegaAutos
                 return false;
             }
 
+            if (txt_codServ.Text.Length != 7)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un codigo de servicio correcto.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
             return true;
         }
 

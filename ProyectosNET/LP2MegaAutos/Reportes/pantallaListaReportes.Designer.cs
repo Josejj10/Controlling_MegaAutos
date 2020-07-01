@@ -41,7 +41,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlBuscar = new System.Windows.Forms.Panel();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
-            this.cTxt_MasFiltros = new LP2MegaAutos.CustomControls.ClickableText();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpReportes = new System.Windows.Forms.FlowLayoutPanel();
             this.itemListaReporte1 = new LP2MegaAutos.itemListaReporte();
@@ -283,6 +282,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(6, 3);
@@ -297,7 +297,7 @@
             // 
             // pnlBuscar
             // 
-            this.pnlBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.pnlBuscar.BackColor = System.Drawing.Color.White;
             this.pnlBuscar.Controls.Add(this.panel2);
             this.pnlBuscar.Controls.Add(this.txt_Buscar);
             this.pnlBuscar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -313,10 +313,10 @@
             // 
             // txt_Buscar
             // 
-            this.txt_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_Buscar.BackColor = System.Drawing.Color.White;
             this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_Buscar.ForeColor = System.Drawing.Color.Black;
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(515, 18);
@@ -329,25 +329,6 @@
             this.txt_Buscar.Text = "Buscar";
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
             this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
-            // 
-            // cTxt_MasFiltros
-            // 
-            this.cTxt_MasFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cTxt_MasFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cTxt_MasFiltros.Font = new System.Drawing.Font("Montserrat", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTxt_MasFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
-            this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
-            this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 38);
-            this.cTxt_MasFiltros.TabIndex = 52;
-            this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
-            this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
-            this.tagsExtender1.SetTagFontName(this.cTxt_MasFiltros, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.cTxt_MasFiltros, 11.25F);
-            this.tagsExtender1.SetTagFontStyle(this.cTxt_MasFiltros, System.Drawing.FontStyle.Bold);
-            this.cTxt_MasFiltros.Text = "Más Filtros";
-            this.cTxt_MasFiltros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel3
             // 
@@ -521,7 +502,7 @@
             this.lbl_ListaReportes.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaReportes.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaReportes.Name = "lbl_ListaReportes";
-            this.lbl_ListaReportes.Size = new System.Drawing.Size(91, 19);
+            this.lbl_ListaReportes.Size = new System.Drawing.Size(85, 22);
             this.lbl_ListaReportes.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaReportes, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaReportes, null);
@@ -786,7 +767,6 @@
             this.Controls.Add(this.rndZA);
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.rndCliente);
             this.Controls.Add(this.rndAreaTrabajo);
@@ -832,7 +812,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlBuscar;
         private System.Windows.Forms.TextBox txt_Buscar;
-        private CustomControls.ClickableText cTxt_MasFiltros;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flpReportes;
         private RoundedPanel roundedPanel4;

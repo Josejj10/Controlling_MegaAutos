@@ -30,10 +30,10 @@ namespace LP2MegaAutos
             InitializeComponent();
             _sede = sede;
             toggleComponentes();
-            this.txt_distrito.Text = OtrosHelper.tipoOracion(sede.distrito);
-            this.txt_NombreSede.Text = OtrosHelper.tipoOracion(sede.nombre);
-            this.txt_direccion.Text = OtrosHelper.tipoOracion(sede.direccion);
-            this.txt_telefono.Text = OtrosHelper.tipoOracion(sede.telefono);
+            this.txt_distrito.Text = OtrosHelper.tipoOracion(sede.distrito).Trim();
+            this.txt_NombreSede.Text = OtrosHelper.tipoOracion(sede.nombre).Trim();
+            this.txt_direccion.Text = OtrosHelper.tipoOracion(sede.direccion).Trim();
+            this.txt_telefono.Text = OtrosHelper.tipoOracion(sede.telefono).Trim();
         }
 
         #region title_bar
@@ -95,10 +95,10 @@ namespace LP2MegaAutos
             frmMessageBox f = new frmMessageBox("¿Guardar Cambios?", MessageBoxButtons.OKCancel, "Guardar Cambios");
             if (f.ShowDialog() != DialogResult.OK)
                 return;
-            _sede.nombre = txt_NombreSede.Text;
-            _sede.distrito = txt_distrito.Text;
-            _sede.direccion = txt_direccion.Text;
-            _sede.telefono = txt_telefono.Text;
+            _sede.nombre = txt_NombreSede.Text.Trim();
+            _sede.distrito = txt_distrito.Text.Trim();
+            _sede.direccion = txt_direccion.Text.Trim();
+            _sede.telefono = txt_telefono.Text.Trim();
             this.DialogResult = DialogResult.OK;
         }
 
@@ -190,6 +190,13 @@ namespace LP2MegaAutos
             if (string.IsNullOrEmpty(txt_telefono.Text))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un teléfono.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (txt_telefono.Text.Length != 8)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un teléfono correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

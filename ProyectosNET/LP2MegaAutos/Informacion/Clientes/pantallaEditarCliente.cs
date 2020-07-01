@@ -31,12 +31,12 @@ namespace LP2MegaAutos
             InitializeComponent();
             _cliente = cliente;
             toggleComponentes();
-            this.txt_NombreCliente.Text = OtrosHelper.tipoOracion(cliente.nombre);
-            this.txt_NumeroDocumento.Text = OtrosHelper.tipoOracion(cliente.numDocumento);
-            this.txt_TIpoDocumento.Text = OtrosHelper.tipoOracion(cliente.tipoCliente);
-            this.txt_Telefono.Text = OtrosHelper.tipoOracion(cliente.telefono);
-            this.txt_Correo.Text = OtrosHelper.tipoOracion(cliente.correo);
-            this.txtTipoCliente.Text = OtrosHelper.tipoOracion(cliente.tipoCliente);
+            this.txt_NombreCliente.Text = OtrosHelper.tipoOracion(cliente.nombre).Trim();
+            this.txt_NumeroDocumento.Text = OtrosHelper.tipoOracion(cliente.numDocumento).Trim();
+            this.txt_TIpoDocumento.Text = OtrosHelper.tipoOracion(cliente.tipoDocumento).ToUpper().Trim();
+            this.txt_Telefono.Text = OtrosHelper.tipoOracion(cliente.telefono).Trim();
+            this.txt_Correo.Text = OtrosHelper.tipoOracion(cliente.correo).Trim();
+            this.txtTipoCliente.Text = OtrosHelper.tipoOracion(cliente.tipoCliente).Trim();
 
         }
 
@@ -64,9 +64,9 @@ namespace LP2MegaAutos
             if (f.ShowDialog() != DialogResult.OK)
                 return;
             _cliente.nombre = txt_NombreCliente.Text;
-            _cliente.numDocumento = txt_NumeroDocumento.Text;
-            _cliente.tipoDocumento = txt_TIpoDocumento.Text;
-            _cliente.telefono = txt_Telefono.Text;
+            _cliente.numDocumento = txt_NumeroDocumento.Text.Trim();
+            _cliente.tipoDocumento = txt_TIpoDocumento.Text.Trim();
+            _cliente.telefono = txt_Telefono.Text.Trim();
             _cliente.correo = txt_Correo.Text;
             _cliente.tipoCliente = txtTipoCliente.Text;
             this.DialogResult = DialogResult.OK;

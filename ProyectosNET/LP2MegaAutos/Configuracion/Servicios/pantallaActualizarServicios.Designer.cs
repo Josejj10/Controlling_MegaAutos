@@ -41,8 +41,6 @@ namespace LP2MegaAutos
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
-            this.cTxt_MasFiltros = new LP2MegaAutos.CustomControls.ClickableText();
-            this.cmbFiltrarTipoServicio = new System.Windows.Forms.ComboBox();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.rndReciente = new LP2MegaAutos.RoundedPanel();
             this.btnReciente = new System.Windows.Forms.Button();
@@ -63,10 +61,10 @@ namespace LP2MegaAutos
             // 
             // txt_Buscar
             // 
-            this.txt_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_Buscar.BackColor = System.Drawing.Color.White;
             this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_Buscar.ForeColor = System.Drawing.Color.Black;
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(515, 18);
@@ -83,7 +81,7 @@ namespace LP2MegaAutos
             // 
             // pnlBuscar
             // 
-            this.pnlBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.pnlBuscar.BackColor = System.Drawing.Color.White;
             this.pnlBuscar.Controls.Add(this.panel2);
             this.pnlBuscar.Controls.Add(this.txt_Buscar);
             this.pnlBuscar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -99,6 +97,7 @@ namespace LP2MegaAutos
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(6, 3);
@@ -216,38 +215,6 @@ namespace LP2MegaAutos
             this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Bold);
             this.lbl_ListaServicios.Text = "Servicios";
             this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cTxt_MasFiltros
-            // 
-            this.cTxt_MasFiltros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cTxt_MasFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cTxt_MasFiltros.Font = new System.Drawing.Font("Montserrat", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cTxt_MasFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
-            this.cTxt_MasFiltros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cTxt_MasFiltros.Location = new System.Drawing.Point(23, 272);
-            this.cTxt_MasFiltros.Name = "cTxt_MasFiltros";
-            this.cTxt_MasFiltros.Size = new System.Drawing.Size(97, 21);
-            this.cTxt_MasFiltros.TabIndex = 51;
-            this.tagsExtender1.SetTag2(this.cTxt_MasFiltros, null);
-            this.tagsExtender1.SetTag3(this.cTxt_MasFiltros, null);
-            this.tagsExtender1.SetTagFontName(this.cTxt_MasFiltros, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.cTxt_MasFiltros, 11F);
-            this.tagsExtender1.SetTagFontStyle(this.cTxt_MasFiltros, System.Drawing.FontStyle.Bold);
-            this.cTxt_MasFiltros.Text = "Más Filtros";
-            this.cTxt_MasFiltros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cmbFiltrarTipoServicio
-            // 
-            this.cmbFiltrarTipoServicio.FormattingEnabled = true;
-            this.cmbFiltrarTipoServicio.Location = new System.Drawing.Point(26, 315);
-            this.cmbFiltrarTipoServicio.Name = "cmbFiltrarTipoServicio";
-            this.cmbFiltrarTipoServicio.Size = new System.Drawing.Size(121, 21);
-            this.cmbFiltrarTipoServicio.TabIndex = 52;
-            this.tagsExtender1.SetTag2(this.cmbFiltrarTipoServicio, null);
-            this.tagsExtender1.SetTag3(this.cmbFiltrarTipoServicio, null);
-            this.tagsExtender1.SetTagFontName(this.cmbFiltrarTipoServicio, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.cmbFiltrarTipoServicio, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.cmbFiltrarTipoServicio, System.Drawing.FontStyle.Regular);
             // 
             // btn_Agregar
             // 
@@ -489,8 +456,6 @@ namespace LP2MegaAutos
             this.Controls.Add(this.rndZA);
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.btn_Agregar);
-            this.Controls.Add(this.cmbFiltrarTipoServicio);
-            this.Controls.Add(this.cTxt_MasFiltros);
             this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -524,9 +489,7 @@ namespace LP2MegaAutos
         private RoundedPanel roundedPanel4;
         private RoundedPanel rpn_ListaServicios;
         private System.Windows.Forms.Label lbl_ListaServicios;
-        private CustomControls.ClickableText cTxt_MasFiltros;
         private System.Windows.Forms.FlowLayoutPanel flpServicios;
-        private System.Windows.Forms.ComboBox cmbFiltrarTipoServicio;
         private System.Windows.Forms.Button btn_Agregar;
         private RoundedPanel rndReciente;
         private System.Windows.Forms.Button btnReciente;

@@ -37,7 +37,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             daoCliente = new ServicioCliente.ClienteWSClient();
             toggleComponentes();
             this.lbl_EditarVehiculo.Text = "Editar vehículo";
-            this.txt_placaVehiculo.Text = vehiculo.placa;
+            this.txt_placaVehiculo.Text = vehiculo.placa.Trim();
             this.txt_nombVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.propietario.nombre);
             this.txt_TipoVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
         }
@@ -106,6 +106,13 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             if (string.IsNullOrEmpty(txt_placaVehiculo.Text))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese la placa del vehículo.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (txt_placaVehiculo.Text.Length != 7)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una placa correcta.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

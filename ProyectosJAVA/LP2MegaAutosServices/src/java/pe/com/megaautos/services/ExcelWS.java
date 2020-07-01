@@ -21,15 +21,15 @@ public class ExcelWS {
         
     }
     @WebMethod(operationName = "leerExcel1")
-    public Excel leerExcel1(@WebParam(name = "excel1") byte[] excel1) {
+    public Excel leerExcel(@WebParam(name = "excel1") byte[] excel1, @WebParam(name = "excel2") byte[] excel2) {
         Excel excel = new Excel();
         excel.setExcel1(excel1);
+        excel.setExcel2(excel2);        
         return excel;
     }
-    @WebMethod(operationName = "leerExce2")
-    public Excel leerExcel2(@WebParam(name = "excel2") byte[] excel2) {
-        Excel excel = new Excel();
-        excel.setExcel1(excel2);
+    
+    @WebMethod(operationName = "enviarExcel")
+    public Excel enviarExcel(@WebParam(name="excel") Excel excel){
         return excel;
     }
 }

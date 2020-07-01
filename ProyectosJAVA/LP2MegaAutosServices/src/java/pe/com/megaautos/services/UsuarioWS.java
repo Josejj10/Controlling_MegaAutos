@@ -30,6 +30,13 @@ public class UsuarioWS {
         return daoUsuario.verificarPassword(correo,password);
     }
     
+    @WebMethod(operationName = "buscarPorCorreo")
+    public Usuario buscarPorCorreo(@WebParam(name = "correo") String correo){
+        // retorna null al cliente si no hay usuario, y 
+        // el usuario si si hay
+        return daoUsuario.buscarPorCorreo(correo);
+    }
+    
     @WebMethod(operationName = "listarUsuarios")
     public ArrayList<Usuario> listarUsuarios(){
         ArrayList<Usuario> usuarios = new ArrayList<>();

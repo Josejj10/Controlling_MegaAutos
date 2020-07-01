@@ -17,6 +17,7 @@ public interface UsuarioDAO {
     int insertar(Usuario usuario);
     int actualizar(Usuario usuario);
     int eliminar(int idUsuario);
+    Usuario buscarPorCorreo(String correo);
     ArrayList<Usuario> listar();
     Usuario verificarPassword(String correo, String Password);
 }

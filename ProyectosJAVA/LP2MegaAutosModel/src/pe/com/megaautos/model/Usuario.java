@@ -120,5 +120,9 @@ public class Usuario {
         return permisos;
     }
 
+    public void setPermisos(ArrayList<EPermisos> permisos) {
+        this.permisos = permisos;
+    }
+
     
 }

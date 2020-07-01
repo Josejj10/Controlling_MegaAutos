@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;      
 import java.util.ArrayList;
+import joinery.DataFrame;
 import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.VehiculoDAO;
@@ -47,7 +48,39 @@ public class VehiculoMySQL implements VehiculoDAO{
         }
          return rpta;
     }
-
+    
+//    @Override
+//    public void guardarBatch (DataFrame df) {
+//        int rpta = 0;
+//         try{
+//            Connection con = DBDataSource.getConnection();/*
+//            //Registrar el JAR de conexión
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            //Establecer la conexion
+//            con = DriverManager.getConnection(DBManager.url, 
+//                    DBManager.user, DBManager.password);
+//            */
+//            CallableStatement cs = con.prepareCall(
+//                    "{call INSERTAR_VEHICULO(?,?,?,?)}");
+//            // Insertar Vehiculo recibirá la placa, el nombre del tipo vehiculo
+//            // Y el id del propietario
+//            // En el procedure de MySQL, cambiara el nombre del tipo vehiculo
+//            // Por su id, para poder insertarlo en la tabla 
+//            cs.registerOutParameter("_ID_VEHICULO", java.sql.Types.INTEGER);
+//            cs.setString("_PLACA", vehiculo.getPlaca().toUpperCase());
+//            cs.setString("_TIPO_VEHICULO", vehiculo.getTipoVehiculo().toUpperCase());
+//            cs.setInt("_ID_PROPIETARIO", vehiculo.getPropietario().getId());
+//            cs.executeUpdate();
+//            rpta = cs.getInt("_ID_VEHICULO");
+//            con.close();
+//            // Actualiza el ID del vehiculo insertado para tenerlo en Java
+//            vehiculo.setId(rpta);
+//        }catch(Exception ex){
+//             System.out.println(ex.getMessage());
+//        }
+//         return rpta;
+//    }
+    
     @Override
     public int actualizar(Vehiculo vehiculo) {
          int rpta = 0;

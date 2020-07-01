@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package LP2MegaAutos;
+import static LP2MegaAutos.JoineryExtension.guardarBatch;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -58,6 +59,7 @@ import pe.com.megaautos.mysql.EmpresaMySQL;
 import pe.com.megaautos.mysql.OrdenTrabajoMySQL;
 import pe.com.megaautos.mysql.UsuarioMySQL;
 import pe.com.megaautos.config.DBDataSource;
+import pe.com.megaautos.model.EPermisos;
 /**
  *
  * @author Jose
@@ -68,11 +70,26 @@ public class LP2MegaAutos {
         
 //        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
 //        Usuario u = new Usuario();
-//        u = daoUsuario.verificarPassword("nicolas@gmail.com", "1234");
-//        System.out.println(u.getId() + " " + u.getNombre() + " " + u.getCorreo() + " " + u.getTipoUsuario());
-        
-        //Extraction
-        String ruta = "C:\\Users\\Nicolas\\Desktop\\PUCP\\Clases\\20-1\\TA\\Cuadro.xlsx";
+//        u = daoUsuario.buscarPorCorreo("nicolas@gmail.com");
+//        System.out.println(u.getId() + " " + u.getNombre() + " " + 
+//               u.getCorreo() + " " + u.getTipoUsuario() + u.getPassword());
+//        
+//        for (EPermisos e : u.getPermisos()){
+//            System.out.println(e);
+//        }
+//        u.addPermisos(EPermisos.Vehiculos);
+//        int a = daoUsuario.actualizar(u);
+//        Usuario u2 = new Usuario();
+//        u2 = daoUsuario.verificarPassword("nicolas@gmail.com", "1234");
+//        System.out.println(u2.getId() + " " + u2.getNombre() + " " + 
+//                u2.getCorreo() + " " + u2.getTipoUsuario());
+//        
+//        for (EPermisos e : u2.getPermisos()){
+//            System.out.println(e);
+//        }
+//        
+//        Extraction
+        String ruta = "D:\\Documentos\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Cuadro.xlsx";
         File initialFile = new File(ruta);
         InputStream targetStream1 = new FileInputStream(initialFile);
         InputStream targetStream2 = new FileInputStream(initialFile);
@@ -92,7 +109,7 @@ public class LP2MegaAutos {
         dfAzul = dfFact.slice(0, lastRow, 24, lastCol);
         dfAzul = dfAzul.dropna().resetIndex();
         //System.out.println(dfAsig);
-
+        
         //Para la tabla cliente:
         DataFrame dfCliente = dfGris.retain("No OT", "R.U.C.", "Nombre / Razón Social");
         dfCliente = dfCliente.unique("No OT").joinOn(dfAsig.retain("ORDEN DE TRABAJO", "TIPO DE CLIENTE").unique("ORDEN DE TRABAJO"), DataFrame.JoinType.INNER, "No OT");
@@ -105,16 +122,29 @@ public class LP2MegaAutos {
             else if (numDig == 8)  tipoDoc.add("DNI");
             else tipoDoc.add("S/TIPO");
         }
+        
+        List <String> a = new ArrayList<>();
+        for (int i=0; i<7;i++){
+            a.add("-");
+        }
+        int cantidad = tipoDoc.size();
         DataFrame tablaCliente = new DataFrame();
         tablaCliente.add(dfCliente.col("Nombre / Razón Social"));
         tablaCliente.add(dfCliente.col("TIPO DE CLIENTE"));
+        //System.out.println(tablaCliente);
         tablaCliente.rename(0, "NOMBRE CLIENTE");
-        tablaCliente.rename(324, "TIPO DE CLIENTE");
+        tablaCliente.rename(cantidad, "TIPO DE CLIENTE");
         tablaCliente.add(tipoDoc);
-        tablaCliente.rename(324, "TIPO DE DOCUMENTO");
+        tablaCliente.rename(cantidad, "TIPO DE DOCUMENTO");
         tablaCliente.add(dfCliente.col("R.U.C."));
-        tablaCliente.rename(324, "NUMERO DOCUMENTO");
+        tablaCliente.rename(cantidad, "NUMERO DOCUMENTO");
+        tablaCliente.add(a);
+        tablaCliente.rename(cantidad, "TELEFONO");
+        tablaCliente.add(a);
+        tablaCliente.rename(cantidad, "CORREO");
+        tablaCliente = tablaCliente.unique("NOMBRE CLIENTE");
         System.out.println(tablaCliente);
+        guardarBatch(tablaCliente);
 
 
 //BUSCAR UN ELEMENTO EN UN DATAFRAME WARD!!!!

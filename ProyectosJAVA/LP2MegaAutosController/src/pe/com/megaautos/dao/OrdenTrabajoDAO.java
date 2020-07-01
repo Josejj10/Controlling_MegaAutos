@@ -6,6 +6,7 @@
 package pe.com.megaautos.dao;
 
 import java.util.ArrayList;
+import java.util.List;
 import pe.com.megaautos.model.OrdenTrabajo;
 
 /**
@@ -13,6 +14,7 @@ import pe.com.megaautos.model.OrdenTrabajo;
  * @author Rodrigo
  */
 public interface OrdenTrabajoDAO {
+    void guardarBatch(List<OrdenTrabajo> ordenesTrabajo);
     int insertar(OrdenTrabajo ordenTrabajo);
     int actualizar(OrdenTrabajo ordenTrabajo);
     int eliminar(int idOrdenTrabajo);

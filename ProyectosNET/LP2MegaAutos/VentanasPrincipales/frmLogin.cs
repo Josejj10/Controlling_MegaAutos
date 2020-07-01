@@ -14,14 +14,16 @@ using System.Reflection;
 using System.IO;
 using System.Runtime.InteropServices;
 using MetroFramework;
+using LP2MegaAutos.ServicioUsuario;
+using LP2MegaAutos.VentanasPrincipales;
 
 namespace LP2MegaAutos
 {
     public partial class Login_Screen : MetroFramework.Forms.MetroForm
     {
         private Usuario _usuario = new Usuario();
-        private bool password_seen = false;
-
+        private bool password_seen = false; 
+        
         public Usuario Usuario { get => _usuario; set => _usuario = value; }
 
 
@@ -133,17 +135,24 @@ namespace LP2MegaAutos
 
         private void boton_acceder_Click(object sender, EventArgs e)
         {
-            // TODO boton acceder click
-            if(verificarUsuario())
+            if (verificarUsuario())
                 this.DialogResult = DialogResult.OK;
-        }
+            else {
+                // Si no, MessageBox
+                frmMessageBox frm = new frmMessageBox("Usuario o contraseña incorrectos.",
+                    MessageBoxButtons.OK, "Inicio de Sesión Fallido", true);
+                frm.ShowDialog();
+            }
+        }   
 
         private bool verificarUsuario()
         {
-            _usuario.Correo = textBox_correo.Text;
-            _usuario.Password = textBox_password.Text;
-
-            // Llamar al DBController para verificar
+            ServicioUsuario.UsuarioWSClient daoUsuario = new UsuarioWSClient();
+            ServicioUsuario.usuario _usu;
+            _usu = daoUsuario.verificarPassword(textBox_correo.Text, textBox_password.Text);
+            if (_usu == null)
+                return false;
+            // Igualar _usuario a _usu
 
             return true;
         }

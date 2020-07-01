@@ -30,7 +30,7 @@ namespace LP2MegaAutos
             InitializeComponent();
             _sede = sede;
             toggleComponentes();
-            this.txt_distrito.Text = OtrosHelper.tipoOracion(sede.distrito).Trim();
+            this.cboDistritos.Text = OtrosHelper.tipoOracion(sede.distrito).Trim();
             this.txt_NombreSede.Text = OtrosHelper.tipoOracion(sede.nombre).Trim();
             this.txt_direccion.Text = OtrosHelper.tipoOracion(sede.direccion).Trim();
             this.txt_telefono.Text = OtrosHelper.tipoOracion(sede.telefono).Trim();
@@ -96,7 +96,7 @@ namespace LP2MegaAutos
             if (f.ShowDialog() != DialogResult.OK)
                 return;
             _sede.nombre = txt_NombreSede.Text.Trim();
-            _sede.distrito = txt_distrito.Text.Trim();
+            _sede.distrito = cboDistritos.Text.Trim();
             _sede.direccion = txt_direccion.Text.Trim();
             _sede.telefono = txt_telefono.Text.Trim();
             this.DialogResult = DialogResult.OK;
@@ -114,7 +114,7 @@ namespace LP2MegaAutos
 
         private void toggleComponentes()
         {
-            bool en = txt_NombreSede.Enabled = txt_distrito.Enabled =
+            bool en = txt_NombreSede.Enabled = cboDistritos.Enabled =
                 txt_direccion.Enabled = txt_telefono.Enabled = btn_guardar.Enabled
                 = !txt_NombreSede.Enabled;
 
@@ -124,7 +124,7 @@ namespace LP2MegaAutos
                 // No habilitado
                 txt_NombreSede.BackColor = Colores.FrontBackground;
 
-                txt_NombreSede.ForeColor = txt_distrito.ForeColor =
+                txt_NombreSede.ForeColor = cboDistritos.ForeColor =
                     txt_direccion.ForeColor = txt_telefono.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
                     roundedPanel2.ColorPanel =
@@ -139,7 +139,7 @@ namespace LP2MegaAutos
             }
             // Habilitado
             txt_NombreSede.ForeColor =
-            txt_distrito.ForeColor =
+            cboDistritos.ForeColor =
                txt_direccion.ForeColor = txt_telefono.ForeColor =
                Colores.HighContrast;
 
@@ -173,7 +173,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txt_distrito.Text))
+            if (cboDistritos.SelectedIndex == -1)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un distrito.", MessageBoxButtons.OK);
                 f.ShowDialog();

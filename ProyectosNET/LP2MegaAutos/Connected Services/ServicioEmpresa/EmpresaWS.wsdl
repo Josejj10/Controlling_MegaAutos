@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/EmpresaWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
+  <message name="actualizarEmpresa">
+    <part name="parameters" element="tns:actualizarEmpresa" />
+  </message>
+  <message name="actualizarEmpresaResponse">
+    <part name="parameters" element="tns:actualizarEmpresaResponse" />
+  </message>
   <message name="listarEmpresa">
     <part name="parameters" element="tns:listarEmpresa" />
   </message>
@@ -23,13 +29,11 @@
   <message name="eliminarEmpresaResponse">
     <part name="parameters" element="tns:eliminarEmpresaResponse" />
   </message>
-  <message name="actualizarEmpresa">
-    <part name="parameters" element="tns:actualizarEmpresa" />
-  </message>
-  <message name="actualizarEmpresaResponse">
-    <part name="parameters" element="tns:actualizarEmpresaResponse" />
-  </message>
   <portType name="EmpresaWS">
+    <operation name="actualizarEmpresa">
+      <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaRequest" message="tns:actualizarEmpresa" />
+      <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaResponse" message="tns:actualizarEmpresaResponse" />
+    </operation>
     <operation name="listarEmpresa">
       <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/listarEmpresaRequest" message="tns:listarEmpresa" />
       <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/listarEmpresaResponse" message="tns:listarEmpresaResponse" />
@@ -42,13 +46,18 @@
       <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/eliminarEmpresaRequest" message="tns:eliminarEmpresa" />
       <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/eliminarEmpresaResponse" message="tns:eliminarEmpresaResponse" />
     </operation>
-    <operation name="actualizarEmpresa">
-      <input wsam:Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaRequest" message="tns:actualizarEmpresa" />
-      <output wsam:Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaResponse" message="tns:actualizarEmpresaResponse" />
-    </operation>
   </portType>
   <binding name="EmpresaWSPortBinding" type="tns:EmpresaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarEmpresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarEmpresa">
       <soap:operation soapAction="" />
       <input>
@@ -68,15 +77,6 @@
       </output>
     </operation>
     <operation name="eliminarEmpresa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarEmpresa">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

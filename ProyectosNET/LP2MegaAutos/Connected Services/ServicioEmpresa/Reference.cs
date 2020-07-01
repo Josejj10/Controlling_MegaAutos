@@ -16,6 +16,15 @@ namespace LP2MegaAutos.ServicioEmpresa {
     public interface EmpresaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaRequest", ReplyAction="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse actualizarEmpresa(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaRequest", ReplyAction="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse> actualizarEmpresaAsync(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/EmpresaWS/listarEmpresaRequest", ReplyAction="http://services.megaautos.com.pe/EmpresaWS/listarEmpresaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,15 +50,6 @@ namespace LP2MegaAutos.ServicioEmpresa {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/EmpresaWS/eliminarEmpresaRequest", ReplyAction="http://services.megaautos.com.pe/EmpresaWS/eliminarEmpresaResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioEmpresa.eliminarEmpresaResponse> eliminarEmpresaAsync(LP2MegaAutos.ServicioEmpresa.eliminarEmpresaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaRequest", ReplyAction="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse actualizarEmpresa(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaRequest", ReplyAction="http://services.megaautos.com.pe/EmpresaWS/actualizarEmpresaResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse> actualizarEmpresaAsync(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request);
     }
     
     /// <remarks/>
@@ -95,6 +95,42 @@ namespace LP2MegaAutos.ServicioEmpresa {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEmpresa", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class actualizarEmpresaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioEmpresa.empresa objEmpresa;
+        
+        public actualizarEmpresaRequest() {
+        }
+        
+        public actualizarEmpresaRequest(LP2MegaAutos.ServicioEmpresa.empresa objEmpresa) {
+            this.objEmpresa = objEmpresa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEmpresaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class actualizarEmpresaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarEmpresaResponse() {
+        }
+        
+        public actualizarEmpresaResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -198,42 +234,6 @@ namespace LP2MegaAutos.ServicioEmpresa {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEmpresa", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class actualizarEmpresaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioEmpresa.empresa objEmpresa;
-        
-        public actualizarEmpresaRequest() {
-        }
-        
-        public actualizarEmpresaRequest(LP2MegaAutos.ServicioEmpresa.empresa objEmpresa) {
-            this.objEmpresa = objEmpresa;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEmpresaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class actualizarEmpresaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarEmpresaResponse() {
-        }
-        
-        public actualizarEmpresaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EmpresaWSChannel : LP2MegaAutos.ServicioEmpresa.EmpresaWS, System.ServiceModel.IClientChannel {
     }
@@ -259,6 +259,29 @@ namespace LP2MegaAutos.ServicioEmpresa {
         
         public EmpresaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse LP2MegaAutos.ServicioEmpresa.EmpresaWS.actualizarEmpresa(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request) {
+            return base.Channel.actualizarEmpresa(request);
+        }
+        
+        public int actualizarEmpresa(LP2MegaAutos.ServicioEmpresa.empresa objEmpresa) {
+            LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest inValue = new LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest();
+            inValue.objEmpresa = objEmpresa;
+            LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse retVal = ((LP2MegaAutos.ServicioEmpresa.EmpresaWS)(this)).actualizarEmpresa(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse> LP2MegaAutos.ServicioEmpresa.EmpresaWS.actualizarEmpresaAsync(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request) {
+            return base.Channel.actualizarEmpresaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse> actualizarEmpresaAsync(LP2MegaAutos.ServicioEmpresa.empresa objEmpresa) {
+            LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest inValue = new LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest();
+            inValue.objEmpresa = objEmpresa;
+            return ((LP2MegaAutos.ServicioEmpresa.EmpresaWS)(this)).actualizarEmpresaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -326,29 +349,6 @@ namespace LP2MegaAutos.ServicioEmpresa {
             LP2MegaAutos.ServicioEmpresa.eliminarEmpresaRequest inValue = new LP2MegaAutos.ServicioEmpresa.eliminarEmpresaRequest();
             inValue.idEmpresa = idEmpresa;
             return ((LP2MegaAutos.ServicioEmpresa.EmpresaWS)(this)).eliminarEmpresaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse LP2MegaAutos.ServicioEmpresa.EmpresaWS.actualizarEmpresa(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request) {
-            return base.Channel.actualizarEmpresa(request);
-        }
-        
-        public int actualizarEmpresa(LP2MegaAutos.ServicioEmpresa.empresa objEmpresa) {
-            LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest inValue = new LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest();
-            inValue.objEmpresa = objEmpresa;
-            LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse retVal = ((LP2MegaAutos.ServicioEmpresa.EmpresaWS)(this)).actualizarEmpresa(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse> LP2MegaAutos.ServicioEmpresa.EmpresaWS.actualizarEmpresaAsync(LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest request) {
-            return base.Channel.actualizarEmpresaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioEmpresa.actualizarEmpresaResponse> actualizarEmpresaAsync(LP2MegaAutos.ServicioEmpresa.empresa objEmpresa) {
-            LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest inValue = new LP2MegaAutos.ServicioEmpresa.actualizarEmpresaRequest();
-            inValue.objEmpresa = objEmpresa;
-            return ((LP2MegaAutos.ServicioEmpresa.EmpresaWS)(this)).actualizarEmpresaAsync(inValue);
         }
     }
 }

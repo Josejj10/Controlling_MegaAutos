@@ -41,6 +41,8 @@
             this.btnEditarRutas = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnDefault = new System.Windows.Forms.Button();
+            this.ofdArchivo1 = new System.Windows.Forms.OpenFileDialog();
+            this.ofdArchivo2 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // lbl_nombreEmpresa
@@ -232,7 +234,7 @@
             this.tagsExtender1.SetTagFontName(this.btnGuardar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.btnGuardar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btnGuardar, System.Drawing.FontStyle.Regular);
-            this.btnGuardar.Text = "Actualizar";
+            this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Visible = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -252,6 +254,14 @@
             this.btnDefault.UseVisualStyleBackColor = true;
             this.btnDefault.Visible = false;
             this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
+            // 
+            // ofdArchivo1
+            // 
+            this.ofdArchivo1.FileName = "ofdArchivo1";
+            // 
+            // ofdArchivo2
+            // 
+            this.ofdArchivo2.FileName = "ofdArchivo2";
             // 
             // pantallaInformacionEmpresa
             // 
@@ -296,5 +306,7 @@
         private System.Windows.Forms.Button btnEditarRutas;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnDefault;
+        private System.Windows.Forms.OpenFileDialog ofdArchivo1;
+        private System.Windows.Forms.OpenFileDialog ofdArchivo2;
     }
 }

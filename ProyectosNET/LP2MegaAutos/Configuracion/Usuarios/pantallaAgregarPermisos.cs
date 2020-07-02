@@ -73,8 +73,11 @@ namespace LP2MegaAutos
             {
                 if (e == ePermisos.All) return;
                 clbPermisos.Items.Add(e.ToString());
-                //clbPermisos.SetItemChecked(i,_usuario.permisos.contains(e));
-                //i++;
+                if (_usuario.permisos != null)
+                {
+                    clbPermisos.SetItemChecked(i, _usuario.permisos.ToList().Contains(e));
+                    i++;
+                }
             }
             // if 
         }

@@ -49,9 +49,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.panel1.Location = new System.Drawing.Point(7, 71);
+            this.panel1.Location = new System.Drawing.Point(9, 87);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 1);
+            this.panel1.Size = new System.Drawing.Size(533, 1);
             this.panel1.TabIndex = 57;
             this.tagsExtender1.SetTag2(this.panel1, null);
             this.tagsExtender1.SetTag3(this.panel1, null);
@@ -67,14 +68,15 @@
             this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 22);
+            this.rpTopMain.Location = new System.Drawing.Point(0, 27);
+            this.rpTopMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rpTopMain.MenosHeightBorde = 1;
             this.rpTopMain.MenosHeightPanel = 1;
             this.rpTopMain.MenosWidthBorde = 1;
             this.rpTopMain.MenosWidthPanel = 1;
             this.rpTopMain.Name = "rpTopMain";
             this.rpTopMain.PorcLuzColorBorde = 0;
-            this.rpTopMain.Size = new System.Drawing.Size(425, 8);
+            this.rpTopMain.Size = new System.Drawing.Size(567, 10);
             this.rpTopMain.TabIndex = 67;
             this.tagsExtender1.SetTag2(this.rpTopMain, null);
             this.tagsExtender1.SetTag3(this.rpTopMain, null);
@@ -94,14 +96,15 @@
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(35, 257);
+            this.rnd_guardar.Location = new System.Drawing.Point(47, 316);
+            this.rnd_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
             this.rnd_guardar.MenosWidthPanel = 1;
             this.rnd_guardar.Name = "rnd_guardar";
             this.rnd_guardar.PorcLuzColorBorde = 0;
-            this.rnd_guardar.Size = new System.Drawing.Size(180, 35);
+            this.rnd_guardar.Size = new System.Drawing.Size(240, 43);
             this.rnd_guardar.TabIndex = 69;
             this.tagsExtender1.SetTag2(this.rnd_guardar, null);
             this.tagsExtender1.SetTag3(this.rnd_guardar, null);
@@ -123,8 +126,9 @@
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
             this.btn_guardar.Location = new System.Drawing.Point(1, 1);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(178, 33);
+            this.btn_guardar.Size = new System.Drawing.Size(237, 41);
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
@@ -146,10 +150,10 @@
             this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
-            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
+            this.boton_cerrar.Location = new System.Drawing.Point(1077, 0);
             this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
             this.boton_cerrar.Name = "boton_cerrar";
-            this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
+            this.boton_cerrar.Size = new System.Drawing.Size(32, 30);
             this.boton_cerrar.TabIndex = 0;
             this.boton_cerrar.TabStop = false;
             this.boton_cerrar.Tag = "titlebar";
@@ -168,9 +172,10 @@
             this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
+            this.boton_minimizar.Location = new System.Drawing.Point(1045, 0);
+            this.boton_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.boton_minimizar.Name = "boton_minimizar";
-            this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
+            this.boton_minimizar.Size = new System.Drawing.Size(32, 30);
             this.boton_minimizar.TabIndex = 0;
             this.boton_minimizar.TabStop = false;
             this.boton_minimizar.Tag = "titlebar";
@@ -192,10 +197,10 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(397, -2);
+            this.button3.Location = new System.Drawing.Point(529, -2);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 24);
+            this.button3.Size = new System.Drawing.Size(32, 30);
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
             this.button3.Tag = "titlebar";
@@ -215,8 +220,9 @@
             this.title_bar.Controls.Add(this.boton_minimizar);
             this.title_bar.Controls.Add(this.boton_cerrar);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
+            this.title_bar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.title_bar.Name = "title_bar";
-            this.title_bar.Size = new System.Drawing.Size(425, 24);
+            this.title_bar.Size = new System.Drawing.Size(566, 29);
             this.title_bar.TabIndex = 68;
             this.title_bar.Tag = "titlebar";
             this.tagsExtender1.SetTag2(this.title_bar, null);
@@ -234,9 +240,10 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblNombre.Location = new System.Drawing.Point(6, 33);
+            this.lblNombre.Location = new System.Drawing.Point(8, 41);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(132, 35);
+            this.lblNombre.Size = new System.Drawing.Size(169, 45);
             this.lblNombre.TabIndex = 78;
             this.tagsExtender1.SetTag2(this.lblNombre, null);
             this.tagsExtender1.SetTag3(this.lblNombre, null);
@@ -255,8 +262,9 @@
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
             this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(153, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(204, 41);
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
@@ -275,14 +283,15 @@
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
             this.rnd_cancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_cancelar.Location = new System.Drawing.Point(231, 257);
+            this.rnd_cancelar.Location = new System.Drawing.Point(308, 316);
+            this.rnd_cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rnd_cancelar.MenosHeightBorde = 1;
             this.rnd_cancelar.MenosHeightPanel = 1;
             this.rnd_cancelar.MenosWidthBorde = 1;
             this.rnd_cancelar.MenosWidthPanel = 1;
             this.rnd_cancelar.Name = "rnd_cancelar";
             this.rnd_cancelar.PorcLuzColorBorde = 0;
-            this.rnd_cancelar.Size = new System.Drawing.Size(157, 35);
+            this.rnd_cancelar.Size = new System.Drawing.Size(209, 43);
             this.rnd_cancelar.TabIndex = 70;
             this.tagsExtender1.SetTag2(this.rnd_cancelar, null);
             this.tagsExtender1.SetTag3(this.rnd_cancelar, null);
@@ -304,11 +313,11 @@
             this.clbPermisos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.clbPermisos.FormattingEnabled = true;
             this.clbPermisos.HorizontalScrollbar = true;
-            this.clbPermisos.Location = new System.Drawing.Point(7, 86);
+            this.clbPermisos.Location = new System.Drawing.Point(9, 106);
+            this.clbPermisos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clbPermisos.MultiColumn = true;
             this.clbPermisos.Name = "clbPermisos";
-            this.clbPermisos.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.clbPermisos.Size = new System.Drawing.Size(410, 156);
+            this.clbPermisos.Size = new System.Drawing.Size(547, 192);
             this.clbPermisos.Sorted = true;
             this.clbPermisos.TabIndex = 79;
             this.tagsExtender1.SetTag2(this.clbPermisos, null);
@@ -319,9 +328,9 @@
             // 
             // pantallaAgregarPermisos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 315);
+            this.ClientSize = new System.Drawing.Size(567, 388);
             this.ControlBox = false;
             this.Controls.Add(this.clbPermisos);
             this.Controls.Add(this.lblNombre);
@@ -330,9 +339,11 @@
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "pantallaAgregarPermisos";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowIcon = false;

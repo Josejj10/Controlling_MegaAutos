@@ -27,6 +27,12 @@ namespace LP2MegaAutos
             DarkMode.agregarExcepcion("title_bar_2");
             //DarkMode.agregarExcepcion("panelMenu");
 
+            // Thread para excepciones
+            //Task<int> task = new Task<int>(Test);
+            //task.ContinueWith(ExceptionHandler, TaskContinuationOptions.OnlyOnFaulted);
+            //task.Start();
+            //Console.ReadLine();
+
             while (true)
             {
                 Login_Screen login = new Login_Screen();
@@ -48,6 +54,12 @@ namespace LP2MegaAutos
                 else
                     break;
             }
+        }
+
+        static void ExceptionHandler(Task<int> task)
+        {
+            var exception = task.Exception;
+            Console.WriteLine(exception);
         }
 
     }

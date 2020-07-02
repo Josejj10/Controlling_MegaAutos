@@ -56,9 +56,10 @@ namespace LP2MegaAutos
             // pnlLineaTitulo
             // 
             this.pnlLineaTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.pnlLineaTitulo.Location = new System.Drawing.Point(20, 69);
+            this.pnlLineaTitulo.Location = new System.Drawing.Point(27, 85);
+            this.pnlLineaTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLineaTitulo.Name = "pnlLineaTitulo";
-            this.pnlLineaTitulo.Size = new System.Drawing.Size(690, 1);
+            this.pnlLineaTitulo.Size = new System.Drawing.Size(920, 1);
             this.pnlLineaTitulo.TabIndex = 40;
             this.tags.SetTag2(this.pnlLineaTitulo, null);
             this.tags.SetTag3(this.pnlLineaTitulo, null);
@@ -71,16 +72,17 @@ namespace LP2MegaAutos
             this.lblBienvenido.AutoSize = true;
             this.lblBienvenido.Font = new System.Drawing.Font("Lato", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblBienvenido.Location = new System.Drawing.Point(36, 24);
+            this.lblBienvenido.Location = new System.Drawing.Point(48, 30);
+            this.lblBienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(252, 39);
+            this.lblBienvenido.Size = new System.Drawing.Size(122, 48);
             this.lblBienvenido.TabIndex = 41;
             this.tags.SetTag2(this.lblBienvenido, null);
             this.tags.SetTag3(this.lblBienvenido, null);
             this.tags.SetTagFontName(this.lblBienvenido, fontsD.Lato);
             this.tags.SetTagFontSize(this.lblBienvenido, 24F);
             this.tags.SetTagFontStyle(this.lblBienvenido, System.Drawing.FontStyle.Bold);
-            this.lblBienvenido.Text = "Bienvenido, Jose";
+            this.lblBienvenido.Text = "Hola, ";
             // 
             // btnPerfil
             // 
@@ -91,9 +93,10 @@ namespace LP2MegaAutos
             this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Location = new System.Drawing.Point(659, 29);
+            this.btnPerfil.Location = new System.Drawing.Point(879, 36);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(36, 36);
+            this.btnPerfil.Size = new System.Drawing.Size(48, 44);
             this.btnPerfil.TabIndex = 42;
             this.tags.SetTag2(this.btnPerfil, null);
             this.tags.SetTag3(this.btnPerfil, null);
@@ -113,9 +116,10 @@ namespace LP2MegaAutos
             this.btnListaReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.btnListaReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.btnListaReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaReportes.Location = new System.Drawing.Point(36, 88);
+            this.btnListaReportes.Location = new System.Drawing.Point(48, 108);
+            this.btnListaReportes.Margin = new System.Windows.Forms.Padding(4);
             this.btnListaReportes.Name = "btnListaReportes";
-            this.btnListaReportes.Size = new System.Drawing.Size(179, 80);
+            this.btnListaReportes.Size = new System.Drawing.Size(239, 98);
             this.btnListaReportes.TabIndex = 43;
             this.tags.SetTag2(this.btnListaReportes, null);
             this.tags.SetTag3(this.btnListaReportes, null);
@@ -135,9 +139,10 @@ namespace LP2MegaAutos
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lato", 15F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(36, 166);
+            this.button1.Location = new System.Drawing.Point(48, 204);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 40);
+            this.button1.Size = new System.Drawing.Size(239, 49);
             this.button1.TabIndex = 44;
             this.tags.SetTag2(this.button1, null);
             this.tags.SetTag3(this.button1, null);
@@ -158,9 +163,10 @@ namespace LP2MegaAutos
             this.btnImgVehiculo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgVehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgVehiculo.Location = new System.Drawing.Point(214, 88);
+            this.btnImgVehiculo.Location = new System.Drawing.Point(285, 108);
+            this.btnImgVehiculo.Margin = new System.Windows.Forms.Padding(4);
             this.btnImgVehiculo.Name = "btnImgVehiculo";
-            this.btnImgVehiculo.Size = new System.Drawing.Size(41, 40);
+            this.btnImgVehiculo.Size = new System.Drawing.Size(55, 49);
             this.btnImgVehiculo.TabIndex = 45;
             this.tags.SetTag2(this.btnImgVehiculo, null);
             this.tags.SetTag3(this.btnImgVehiculo, null);
@@ -180,9 +186,10 @@ namespace LP2MegaAutos
             this.btnImgCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgCliente.Location = new System.Drawing.Point(214, 166);
+            this.btnImgCliente.Location = new System.Drawing.Point(285, 204);
+            this.btnImgCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnImgCliente.Name = "btnImgCliente";
-            this.btnImgCliente.Size = new System.Drawing.Size(41, 40);
+            this.btnImgCliente.Size = new System.Drawing.Size(55, 49);
             this.btnImgCliente.TabIndex = 46;
             this.tags.SetTag2(this.btnImgCliente, null);
             this.tags.SetTag3(this.btnImgCliente, null);
@@ -202,9 +209,10 @@ namespace LP2MegaAutos
             this.btnImgAreaTrabajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgAreaTrabajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.btnImgAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImgAreaTrabajo.Location = new System.Drawing.Point(214, 127);
+            this.btnImgAreaTrabajo.Location = new System.Drawing.Point(285, 156);
+            this.btnImgAreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.btnImgAreaTrabajo.Name = "btnImgAreaTrabajo";
-            this.btnImgAreaTrabajo.Size = new System.Drawing.Size(41, 40);
+            this.btnImgAreaTrabajo.Size = new System.Drawing.Size(55, 49);
             this.btnImgAreaTrabajo.TabIndex = 47;
             this.tags.SetTag2(this.btnImgAreaTrabajo, null);
             this.tags.SetTag3(this.btnImgAreaTrabajo, null);
@@ -224,9 +232,10 @@ namespace LP2MegaAutos
             this.btnGenerarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarVehiculo.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.btnGenerarVehiculo.Location = new System.Drawing.Point(254, 88);
+            this.btnGenerarVehiculo.Location = new System.Drawing.Point(339, 108);
+            this.btnGenerarVehiculo.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerarVehiculo.Name = "btnGenerarVehiculo";
-            this.btnGenerarVehiculo.Size = new System.Drawing.Size(249, 40);
+            this.btnGenerarVehiculo.Size = new System.Drawing.Size(332, 49);
             this.btnGenerarVehiculo.TabIndex = 48;
             this.tags.SetTag2(this.btnGenerarVehiculo, null);
             this.tags.SetTag3(this.btnGenerarVehiculo, null);
@@ -248,9 +257,10 @@ namespace LP2MegaAutos
             this.btnGenerarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarCliente.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.btnGenerarCliente.Location = new System.Drawing.Point(254, 166);
+            this.btnGenerarCliente.Location = new System.Drawing.Point(339, 204);
+            this.btnGenerarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerarCliente.Name = "btnGenerarCliente";
-            this.btnGenerarCliente.Size = new System.Drawing.Size(249, 40);
+            this.btnGenerarCliente.Size = new System.Drawing.Size(332, 49);
             this.btnGenerarCliente.TabIndex = 49;
             this.tags.SetTag2(this.btnGenerarCliente, null);
             this.tags.SetTag3(this.btnGenerarCliente, null);
@@ -272,9 +282,10 @@ namespace LP2MegaAutos
             this.btnGenerarAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarAreaTrabajo.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarAreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.btnGenerarAreaTrabajo.Location = new System.Drawing.Point(254, 127);
+            this.btnGenerarAreaTrabajo.Location = new System.Drawing.Point(339, 156);
+            this.btnGenerarAreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerarAreaTrabajo.Name = "btnGenerarAreaTrabajo";
-            this.btnGenerarAreaTrabajo.Size = new System.Drawing.Size(249, 40);
+            this.btnGenerarAreaTrabajo.Size = new System.Drawing.Size(332, 49);
             this.btnGenerarAreaTrabajo.TabIndex = 50;
             this.tags.SetTag2(this.btnGenerarAreaTrabajo, null);
             this.tags.SetTag3(this.btnGenerarAreaTrabajo, null);
@@ -293,9 +304,10 @@ namespace LP2MegaAutos
             this.lblCreditos.Font = new System.Drawing.Font("Montserrat", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.lblCreditos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCreditos.Location = new System.Drawing.Point(671, 493);
+            this.lblCreditos.Location = new System.Drawing.Point(895, 607);
+            this.lblCreditos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCreditos.Name = "lblCreditos";
-            this.lblCreditos.Size = new System.Drawing.Size(80, 22);
+            this.lblCreditos.Size = new System.Drawing.Size(107, 28);
             this.lblCreditos.TabIndex = 52;
             this.tags.SetTag2(this.lblCreditos, null);
             this.tags.SetTag3(this.lblCreditos, null);
@@ -312,9 +324,10 @@ namespace LP2MegaAutos
             this.pnlInformacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlInformacion.BackgroundImage")));
             this.pnlInformacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInformacion.Location = new System.Drawing.Point(540, 88);
+            this.pnlInformacion.Location = new System.Drawing.Point(720, 108);
+            this.pnlInformacion.Margin = new System.Windows.Forms.Padding(4);
             this.pnlInformacion.Name = "pnlInformacion";
-            this.pnlInformacion.Size = new System.Drawing.Size(80, 80);
+            this.pnlInformacion.Size = new System.Drawing.Size(106, 98);
             this.pnlInformacion.TabIndex = 53;
             this.tags.SetTag2(this.pnlInformacion, null);
             this.tags.SetTag3(this.pnlInformacion, null);
@@ -327,9 +340,10 @@ namespace LP2MegaAutos
             this.pnlAbajoInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.pnlAbajoInformacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlAbajoInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAbajoInformacion.Location = new System.Drawing.Point(540, 167);
+            this.pnlAbajoInformacion.Location = new System.Drawing.Point(720, 206);
+            this.pnlAbajoInformacion.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAbajoInformacion.Name = "pnlAbajoInformacion";
-            this.pnlAbajoInformacion.Size = new System.Drawing.Size(80, 10);
+            this.pnlAbajoInformacion.Size = new System.Drawing.Size(106, 12);
             this.pnlAbajoInformacion.TabIndex = 54;
             this.tags.SetTag2(this.pnlAbajoInformacion, null);
             this.tags.SetTag3(this.pnlAbajoInformacion, null);
@@ -342,9 +356,10 @@ namespace LP2MegaAutos
             this.pnlAbajoConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.pnlAbajoConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlAbajoConfiguracion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAbajoConfiguracion.Location = new System.Drawing.Point(626, 167);
+            this.pnlAbajoConfiguracion.Location = new System.Drawing.Point(835, 206);
+            this.pnlAbajoConfiguracion.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAbajoConfiguracion.Name = "pnlAbajoConfiguracion";
-            this.pnlAbajoConfiguracion.Size = new System.Drawing.Size(80, 10);
+            this.pnlAbajoConfiguracion.Size = new System.Drawing.Size(106, 12);
             this.pnlAbajoConfiguracion.TabIndex = 56;
             this.tags.SetTag2(this.pnlAbajoConfiguracion, null);
             this.tags.SetTag3(this.pnlAbajoConfiguracion, null);
@@ -358,9 +373,10 @@ namespace LP2MegaAutos
             this.pnlConfiguracion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlConfiguracion.BackgroundImage")));
             this.pnlConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlConfiguracion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlConfiguracion.Location = new System.Drawing.Point(626, 88);
+            this.pnlConfiguracion.Location = new System.Drawing.Point(835, 108);
+            this.pnlConfiguracion.Margin = new System.Windows.Forms.Padding(4);
             this.pnlConfiguracion.Name = "pnlConfiguracion";
-            this.pnlConfiguracion.Size = new System.Drawing.Size(80, 80);
+            this.pnlConfiguracion.Size = new System.Drawing.Size(106, 98);
             this.pnlConfiguracion.TabIndex = 55;
             this.tags.SetTag2(this.pnlConfiguracion, null);
             this.tags.SetTag3(this.pnlConfiguracion, null);
@@ -371,7 +387,8 @@ namespace LP2MegaAutos
             // ultimoReporteDashboard1
             // 
             this.ultimoReporteDashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.ultimoReporteDashboard1.Location = new System.Drawing.Point(36, 228);
+            this.ultimoReporteDashboard1.Location = new System.Drawing.Point(48, 281);
+            this.ultimoReporteDashboard1.Margin = new System.Windows.Forms.Padding(5);
             this.ultimoReporteDashboard1.MontoEgresos = "9,999,999.00";
             this.ultimoReporteDashboard1.MontoIngresos = "9,999,999.00";
             this.ultimoReporteDashboard1.MontoTotal = "9,999,999.00";
@@ -379,7 +396,7 @@ namespace LP2MegaAutos
             this.ultimoReporteDashboard1.PeriodoReporte = "Mensual";
             this.ultimoReporteDashboard1.RangoFechasReporte = "24/03/2020 - 24/04/2020";
             this.ultimoReporteDashboard1.SedeReporte = "Surquillo";
-            this.ultimoReporteDashboard1.Size = new System.Drawing.Size(430, 255);
+            this.ultimoReporteDashboard1.Size = new System.Drawing.Size(573, 314);
             this.ultimoReporteDashboard1.TabIndex = 57;
             this.tags.SetTag2(this.ultimoReporteDashboard1, null);
             this.tags.SetTag3(this.ultimoReporteDashboard1, null);
@@ -398,9 +415,10 @@ namespace LP2MegaAutos
             this.lblActualizarBD.Font = new System.Drawing.Font("Montserrat", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActualizarBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.lblActualizarBD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblActualizarBD.Location = new System.Drawing.Point(32, 493);
+            this.lblActualizarBD.Location = new System.Drawing.Point(43, 607);
+            this.lblActualizarBD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblActualizarBD.Name = "lblActualizarBD";
-            this.lblActualizarBD.Size = new System.Drawing.Size(249, 22);
+            this.lblActualizarBD.Size = new System.Drawing.Size(332, 28);
             this.lblActualizarBD.TabIndex = 58;
             this.tags.SetTag2(this.lblActualizarBD, null);
             this.tags.SetTag3(this.lblActualizarBD, null);
@@ -412,9 +430,9 @@ namespace LP2MegaAutos
             this.lblActualizarBD.Visible = false;
             this.lblActualizarBD.Click += new System.EventHandler(this.lblActualizarBD_Click);
             // 
-            // pantallaInicioGerente
+            // pantallaInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Controls.Add(this.lblActualizarBD);
@@ -436,9 +454,9 @@ namespace LP2MegaAutos
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.pnlLineaTitulo);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "pantallaInicioGerente";
-            this.Size = new System.Drawing.Size(751, 520);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "pantallaInicio";
+            this.Size = new System.Drawing.Size(1001, 640);
             this.tags.SetTag2(this, null);
             this.tags.SetTag3(this, null);
             this.tags.SetTagFontName(this, fontsD.Ninguno);

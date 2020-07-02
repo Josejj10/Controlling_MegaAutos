@@ -11,6 +11,7 @@ using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Framework.UserControls.Items;
 using LP2MegaAutos.Properties;
 using LP2MegaAutos.ServicioUsuario;
+using LP2MegaAutos.Framework;
 
 namespace LP2MegaAutos
 {
@@ -26,6 +27,7 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             _usuario = u;
+            lblBienvenido.Text += OtrosHelper.tipoOracion(_usuario.nombre);
         }
 
         #region Dynamic

@@ -802,7 +802,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1019,6 +1018,9 @@
     <WCFMetadataStorage Include="Connected Services\ServicioServicio\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />
     <WCFMetadataStorage Include="Connected Services\ServicioVehiculo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

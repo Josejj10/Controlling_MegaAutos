@@ -100,8 +100,8 @@ namespace LP2MegaAutos
         #region listaPermisos
         private void crearItemsListaPermisos()
         {
-            foreach(EPermisos e in Enum.GetValues(typeof(EPermisos))){
-                if (e == EPermisos.All) return;
+            foreach(ePermisos e in Enum.GetValues(typeof(ePermisos))){
+                if (e == ePermisos.All) return;
                 itemListaCuadrado il = crearitemListaPermiso(e.ToString());
                 BotonesDinamicosHelper.agregarImgFondo(e,il);
                 flpPermisos.Controls.Add(il);

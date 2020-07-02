@@ -1,6 +1,7 @@
 ﻿using LP2MegaAutos.Framework.UserControls;
 using LP2MegaAutos.Informacion.Vehiculos;
 using LP2MegaAutos.Properties;
+using LP2MegaAutos.ServicioUsuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,50 +17,50 @@ namespace LP2MegaAutos.VentanasPrincipales
     {
         // Devolvera el contenedor de flags menu que señala qué botones crear
         // Y también el numero de items de cada menu
-        public static void recibirParametros(BindingList<EPermisos> permisos, ref int menu, ref int nItemsInfo, ref int nItemsConfig)
+        public static void recibirParametros(List<ePermisos?> permisos, ref int menu, ref int nItemsInfo, ref int nItemsConfig)
         {
 
-            foreach (EPermisos permiso in permisos)
+            foreach (ePermisos permiso in permisos)
             {
                 switch (permiso)
                 {
-                    case EPermisos.All:
+                    case ePermisos.All:
                         nItemsInfo = 4;
                         nItemsConfig = 4;
                         menu |= 7;
                         break;
-                    case EPermisos.ActualizarBD:
+                    case ePermisos.ActualizarBD:
                         menu |= 1;
                         break;
-                    case EPermisos.AreasTrabajo:
+                    case ePermisos.AreasTrabajo:
                         menu |= 4;
                         nItemsInfo++;
                         break;
-                    case EPermisos.Clientes:
+                    case ePermisos.Clientes:
                         menu |= 4;
                         nItemsInfo++;
                         break;
-                    case EPermisos.Drivers:
+                    case ePermisos.Drivers:
                         menu |= 4;
                         nItemsInfo++;
                         break;
-                    case EPermisos.Empresa:
+                    case ePermisos.Empresa:
                         menu |= 2;
                         nItemsConfig++;
                         break;
-                    case EPermisos.Sedes:
+                    case ePermisos.Sedes:
                         menu |= 2;
                         nItemsConfig++;
                         break;
-                    case EPermisos.Servicios:
+                    case ePermisos.Servicios:
                         menu |= 2;
                         nItemsConfig++;
                         break;
-                    case EPermisos.Usuarios:
+                    case ePermisos.Usuarios:
                         menu |= 2;
                         nItemsConfig++;
                         break;
-                    case EPermisos.Vehiculos:
+                    case ePermisos.Vehiculos:
                         menu |= 4;
                         nItemsInfo++;
                         break;
@@ -70,26 +71,26 @@ namespace LP2MegaAutos.VentanasPrincipales
         }
 
         // Devolvera el metodo generico con la clase de la pantalla que se creara segun el permiso que se le 
-        public static Action<object, EventArgs> asignarBoton(EPermisos per, Button btn, Image img,
+        public static Action<object, EventArgs> asignarBoton(ePermisos? per, Button btn, Image img,
             Panel panelMenu, ContenedorPantalla cont)
         {
             switch (per)
             {
-                case EPermisos.AreasTrabajo:
+                case ePermisos.AreasTrabajo:
                     return (sender, e) => { pmsBtn_Click<pantallaAreaTrabajo>(sender, e, btn, img, panelMenu, cont); };
-                case EPermisos.Clientes:
+                case ePermisos.Clientes:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarClientes>(sender, e, btn, img, panelMenu, cont); };
-                case EPermisos.Drivers:
+                case ePermisos.Drivers:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarDrivers>(sender, e, btn, img, panelMenu, cont); };
-                case EPermisos.Empresa:
+                case ePermisos.Empresa:
                     return (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img, panelMenu, cont); };
-                case EPermisos.Sedes:
+                case ePermisos.Sedes:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarSedes>(sender, e, btn, img, panelMenu, cont); };
-                case EPermisos.Servicios:
+                case ePermisos.Servicios:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarServicios>(sender, e, btn, img, panelMenu, cont); };
-                case EPermisos.Usuarios:
+                case ePermisos.Usuarios:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarUsuarios>(sender, e, btn, img, panelMenu, cont); };
-                case EPermisos.Vehiculos:
+                case ePermisos.Vehiculos:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarVehiculos>(sender, e, btn, img, panelMenu, cont); };
                 default:
                     return (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img, panelMenu, cont); };
@@ -166,38 +167,38 @@ namespace LP2MegaAutos.VentanasPrincipales
             il.Location = new System.Drawing.Point(3, 3);
             il.Size = new System.Drawing.Size(106, 85);
         }
-        public static void agregarImgFondo(EPermisos e, itemListaCuadrado il)
+        public static void agregarImgFondo(ePermisos e, itemListaCuadrado il)
         {
             switch (e)
             {
-                case EPermisos.All:
+                case ePermisos.All:
                     il.imgFondo = Resources.Estadisticas;
                     return;
-                case EPermisos.ActualizarBD:
+                case ePermisos.ActualizarBD:
                     il.imgFondo = Resources.BaseDatos;
                     return;
-                case EPermisos.AreasTrabajo:
+                case ePermisos.AreasTrabajo:
                     il.imgFondo = Resources.AreaTrabajo;
                     return;
-                case EPermisos.Clientes:
+                case ePermisos.Clientes:
                     il.imgFondo = Resources.Clientes;
                     return;
-                case EPermisos.Drivers:
+                case ePermisos.Drivers:
                     il.imgFondo = Resources.Driver;
                     return;
-                case EPermisos.Empresa:
+                case ePermisos.Empresa:
                     il.imgFondo = Resources.Empresa;
                     return;
-                case EPermisos.Sedes:
+                case ePermisos.Sedes:
                     il.imgFondo = Resources.Sede;
                     return;
-                case EPermisos.Servicios:
+                case ePermisos.Servicios:
                     il.imgFondo = Resources.Servicio;
                     return;
-                case EPermisos.Usuarios:
+                case ePermisos.Usuarios:
                     il.imgFondo = Resources.Usuarios;
                     return;
-                case EPermisos.Vehiculos:
+                case ePermisos.Vehiculos:
                     il.imgFondo = Resources.car;
                     return;
             }

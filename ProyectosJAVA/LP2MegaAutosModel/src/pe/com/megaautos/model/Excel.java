@@ -10,33 +10,31 @@ package pe.com.megaautos.model;
  * @author Rodrigo
  */
 public class Excel {
-    private byte[] excel1;
-    private byte[] excel2;
+    int id;
+    private byte[] archivo;
 
     public Excel(){
         
     }
     
-    public Excel(byte[] excel1, byte[] excel2) {
-        this.excel1 = excel1;
-        this.excel2 = excel2;
+    public Excel(byte[] excel1) {
+        this.archivo = excel1;
     }
 
-    public byte[] getExcel1() {
-        return excel1;
+    public byte[] getArchivo() {
+        return archivo;
     }
 
-    public void setExcel1(byte[] excel1) {
-        this.excel1 = excel1;
+    public void setArchivo(byte[] archivo) {
+        this.archivo = archivo;
     }
 
-    public byte[] getExcel2() {
-        return excel2;
+    public int getId() {
+        return id;
     }
 
-    public void setExcel2(byte[] excel2) {
-        this.excel2 = excel2;
+    public void setId(int id) {
+        this.id = id;
     }
-    
     
 }

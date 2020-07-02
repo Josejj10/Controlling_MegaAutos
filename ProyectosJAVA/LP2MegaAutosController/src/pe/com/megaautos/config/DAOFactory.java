@@ -7,6 +7,7 @@ import pe.com.megaautos.dao.ComprobantePagoDAO;
 import pe.com.megaautos.dao.CuentaContableDAO;
 import pe.com.megaautos.dao.DriverDAO;
 import pe.com.megaautos.dao.EmpresaDAO;
+import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.OrdenTrabajoDAO;
 import pe.com.megaautos.dao.SedeDAO;
 import pe.com.megaautos.dao.ServicioDAO;
@@ -37,4 +38,5 @@ public abstract class DAOFactory {
     public abstract ServicioDAO getServicioDAO();
     public abstract UsuarioDAO getUsuarioDAO();
     public abstract VehiculoDAO getVehiculoDAO();
+    public abstract ExcelDAO getExcelDAO();
 }

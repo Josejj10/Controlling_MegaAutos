@@ -8,6 +8,8 @@ package pe.com.megaautos.services;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import pe.com.megaautos.config.DBController;
+import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.model.Excel;
 
 /**
@@ -16,20 +18,30 @@ import pe.com.megaautos.model.Excel;
  */
 @WebService(serviceName = "ExcelWS")
 public class ExcelWS {
-
+private ExcelDAO daoExcel;
     public ExcelWS(){
-        
+        daoExcel = DBController.controller.getExcelDAO();
     }
     @WebMethod(operationName = "leerExcel1")
-    public Excel leerExcel(@WebParam(name = "excel1") byte[] excel1, @WebParam(name = "excel2") byte[] excel2) {
-        Excel excel = new Excel();
-        excel.setExcel1(excel1);
-        excel.setExcel2(excel2);        
-        return excel;
+    public int insertarExcel(@WebParam(name = "archivo") Excel excel) {
+        int resultado = 0;
+        try{
+            resultado = daoExcel.insertarArchivo(excel);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
     }
     
     @WebMethod(operationName = "enviarExcel")
-    public Excel enviarExcel(@WebParam(name="excel") Excel excel){
+    public Excel leerExcel(){
+        Excel excel = new Excel();
+        try{
+            excel = daoExcel.leerArchivo();
+        }catch(Exception ex){
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage());
+        }
         return excel;
     }
 }

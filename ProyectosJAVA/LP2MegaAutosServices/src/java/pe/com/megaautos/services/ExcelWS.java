@@ -105,8 +105,21 @@ private ExcelDAO daoExcel;
             //Transformation
             int lastRow = dfFact.length() - 1;
             int lastCol = dfFact.size();
-            int lastColGris = 24; //Numero de la columna del data frame (empieza en 1)
+            int lastColGris = 23; //Numero de la columna del data frame (empieza en 1)
             DataFrame dfGris = dfFact.slice(0, lastRow, 0, lastColGris);
+            //Calculamos la columna Sin_IGV para todo el dataframe
+            List<Double> sin_igv = new ArrayList<>();
+            for (int i = 0; i < lastRow; i++){
+                String tipoMoneda = dfGris.get(i, 16).toString(); 
+                if (tipoMoneda.contentEquals("$")) {
+                    Double tCambio = (Double)dfGris.get(i, 17);
+                    sin_igv.add(tCambio*(Double)dfGris.get(i, 20));
+                }
+                else sin_igv.add((Double)dfGris.get(i,20));
+            }
+            dfGris.add(sin_igv);
+            dfGris.rename(lastRow, "Sin_IGV");    
+            //System.out.println(dfGris);
 
             //Para la tabla cliente:
             DataFrame dfCliente = dfGris.retain("No OT", "R.U.C.", "Nombre / Razón Social");
@@ -120,7 +133,8 @@ private ExcelDAO daoExcel;
                 else if (numDig == 8)  tipoDoc.add("DNI");
                 else tipoDoc.add("S/TIPO");
             }
-
+            
+            //TODO Se agregan espacios en blanco en correo y telefono (Eliminar campos)
             int cantidad = tipoDoc.size();
             List <String> a = new ArrayList<>();
             for (int i=0; i<cantidad;i++){
@@ -185,8 +199,19 @@ private ExcelDAO daoExcel;
             daoAreaTrabajo.guardarBatch(tablaAreaTrabajo);
 
             //Para la tabla Orden de Trabajo
+            dfGris = dfGris.sortBy("No OT");
+            int lastFact1 = dfGris.col("Doc.").indexOf("ABO");
+            int lastFact2 = dfGris.col("Doc.").indexOf("CAR");
+            if (lastFact1 != -1){
+                dfGris = dfGris.slice(0, lastFact1 - 1);
+            }
+            else if (lastFact2 != -1){
+                dfGris = dfGris.slice(0, lastFact2 - 1);            
+            }
+
             DataFrame dfOT = dfGris.retain("No OT", "Sin_IGV").groupBy("No OT").sum(); //REVISAR
-            int lastRowOT = dfOT.length();
+            int lastRowOT = dfOT.length();    
+            //Filtramos para obtener solo los documentos Factura y Boleta
 
             //Calculamos Salidas_Almacen
             dfSalxAlm = dfSalxAlm.retain("Total S/.", "OT").groupBy("OT").sum();
@@ -282,22 +307,37 @@ private ExcelDAO daoExcel;
     //        dfOT.rename(lastRowOT, "Ser_Ter_Taller");
 
             List<Double> total_gastos = new ArrayList<>();
+            List<Double> margen = new ArrayList<>();
+            List<Double> porc = new ArrayList<>();
             //Unimos todas las columnas para obtener el total gastos
             for (int i = 0; i < lastRowOT; i++){
-                double suma = salidas_alm.get(i) + compras_rpto.get(i) + serv_terceros.get(i) + 
-                              mo_mecanica.get(i) + mo_planchado.get(i) + mo_pintura.get(i) +
-                              serv_ter.get(i);
-                total_gastos.add(suma);
+                    double suma = salidas_alm.get(i) + compras_rpto.get(i) + serv_terceros.get(i) + 
+                                  mo_mecanica.get(i) + mo_planchado.get(i) + mo_pintura.get(i) +
+                                  serv_ter.get(i);
+                    total_gastos.add(suma);
+                    double dato = (Double)dfOT.col("Sin_IGV").get(i);
+                    double montoMargen = dato-suma;
+                    margen.add(montoMargen);
+                    if(dato==0)
+                        porc.add(0.0);
+                    else
+                        porc.add(montoMargen/dato*100);
             }
             dfOT.add(total_gastos); //CHECK
             dfOT.rename(lastRowOT, "TOTAL GASTOS");  
-            dfOT = dfOT.joinOn(dfGris.retain("No OT", "Placa", "Nombre / Razón Social").unique("No OT"), DataFrame.JoinType.INNER, "No OT");
+            dfOT = dfOT.joinOn(dfGris.retain("No OT", "Placa", "Nombre / Razón Social", "Mon.", "T/C.").unique("No OT"), DataFrame.JoinType.INNER, "No OT");
             dfOT = dfOT.resetIndex().drop("No OT_right");
             dfOT.rename("No OT_left", "ORDEN DE TRABAJO");
             dfOT.rename("Sin_IGV", "TOTAL INGRESOS");
             dfOT.rename("Placa", "PLACA");
             dfOT.rename("Nombre / Razón Social", "CLIENTE");
-            System.out.println(dfOT);
+            dfOT.rename("Mon.", "MONEDA");
+            dfOT.add(margen);            
+            dfOT.rename(lastRowOT, "MARGEN BRUTO");
+            dfOT.add(porc);
+            dfOT.rename(lastRowOT, "PORCENTAJE UTILIDAD");
+            //System.out.println(dfOT);
+            
             String rutaSalida = "/Salida.xlsx";
             File fileSalida = new File(rutaSalida);
             OutputStream targetStream = new FileOutputStream(fileSalida);

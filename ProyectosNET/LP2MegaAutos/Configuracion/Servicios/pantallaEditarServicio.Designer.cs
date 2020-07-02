@@ -40,7 +40,6 @@
             this.lbl_desc = new System.Windows.Forms.Label();
             this.pnl_tipoServicio = new System.Windows.Forms.Panel();
             this.rnd_color_3 = new LP2MegaAutos.RoundedPanel();
-            this.txt_tipoServicio = new System.Windows.Forms.TextBox();
             this.lbl_tipoServicio = new System.Windows.Forms.Label();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.txt_NombreServicio = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.cboTipoServicio = new System.Windows.Forms.ComboBox();
             this.pnl_codServ.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
@@ -226,8 +226,8 @@
             // 
             // pnl_tipoServicio
             // 
+            this.pnl_tipoServicio.Controls.Add(this.cboTipoServicio);
             this.pnl_tipoServicio.Controls.Add(this.rnd_color_3);
-            this.pnl_tipoServicio.Controls.Add(this.txt_tipoServicio);
             this.pnl_tipoServicio.Controls.Add(this.lbl_tipoServicio);
             this.pnl_tipoServicio.Location = new System.Drawing.Point(161, 333);
             this.pnl_tipoServicio.Margin = new System.Windows.Forms.Padding(4);
@@ -265,22 +265,6 @@
             this.rnd_color_3.XPanel = 0;
             this.rnd_color_3.YBorde = 0;
             this.rnd_color_3.YPanel = 0;
-            // 
-            // txt_tipoServicio
-            // 
-            this.txt_tipoServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_tipoServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_tipoServicio.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tipoServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_tipoServicio.Location = new System.Drawing.Point(7, 18);
-            this.txt_tipoServicio.Name = "txt_tipoServicio";
-            this.txt_tipoServicio.Size = new System.Drawing.Size(284, 23);
-            this.txt_tipoServicio.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_tipoServicio, null);
-            this.tagsExtender1.SetTag3(this.txt_tipoServicio, null);
-            this.tagsExtender1.SetTagFontName(this.txt_tipoServicio, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_tipoServicio, 14F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_tipoServicio, System.Drawing.FontStyle.Bold);
             // 
             // lbl_tipoServicio
             // 
@@ -575,6 +559,25 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // cboTipoServicio
+            // 
+            this.cboTipoServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.cboTipoServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoServicio.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboTipoServicio.FormattingEnabled = true;
+            this.cboTipoServicio.Items.AddRange(new object[] {
+            "DNI",
+            "RUC"});
+            this.cboTipoServicio.Location = new System.Drawing.Point(5, 16);
+            this.cboTipoServicio.Name = "cboTipoServicio";
+            this.cboTipoServicio.Size = new System.Drawing.Size(286, 24);
+            this.cboTipoServicio.TabIndex = 82;
+            this.tagsExtender1.SetTag2(this.cboTipoServicio, null);
+            this.tagsExtender1.SetTag3(this.cboTipoServicio, null);
+            this.tagsExtender1.SetTagFontName(this.cboTipoServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cboTipoServicio, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cboTipoServicio, System.Drawing.FontStyle.Bold);
+            // 
             // pantallaEditarServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -633,7 +636,6 @@
         private System.Windows.Forms.Label lbl_desc;
         private System.Windows.Forms.Panel pnl_tipoServicio;
         private RoundedPanel rnd_color_3;
-        private System.Windows.Forms.TextBox txt_tipoServicio;
         private System.Windows.Forms.Label lbl_tipoServicio;
         private RoundedPanel rpTopMain;
         private System.Windows.Forms.TextBox txt_NombreServicio;
@@ -647,5 +649,6 @@
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.ComboBox cboTipoServicio;
     }
 }

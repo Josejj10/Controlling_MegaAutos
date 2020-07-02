@@ -204,7 +204,10 @@ namespace LP2MegaAutos
                 if(daoDriver.insertarDriver(_driver) == 0)
                     frm = new frmMessageBox("No se pudo insertar.");
                 else
+                {
                     frm = new frmMessageBox("Se inserto correctamente el driver en " + _driver.formula);
+                    btnAZ_Click(btnAZ, e);
+                }
                 frm.ShowDialog();
             }
         }

@@ -44,7 +44,7 @@ public class ExcelMySQL implements ExcelDAO {
             Connection con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall(
                     "{call LEER_ARCHIVO(?)}");            
-            cs.setInt("_TIPO", 1);
+            cs.setInt("_TIPO", 2);
             ResultSet rs = cs.executeQuery(); 
             while(rs.next()){                
                 excel.setArchivo(rs.getBytes("ARCHIVO"));

@@ -3,6 +3,7 @@ package pe.com.megaautos.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;      
 import java.util.ArrayList;
 import joinery.DataFrame;
@@ -201,4 +202,23 @@ public class VehiculoMySQL implements VehiculoDAO{
         return vehiculo;
     }
 
+    
+    @Override
+    public void guardarBatch(DataFrame df){
+        try{
+            Connection con = DBDataSource.getConnection();
+            PreparedStatement st = con.prepareStatement("{CALL INSERTAR_VEHICULO_DF(?,?,?)}");
+            for (int r = 0; r < df.length(); r++) {
+                for (int c = 1; c <= df.size(); c++) {
+                    st.setObject(c, df.get(r, c - 1));
+                }
+                st.addBatch();
+            }
+            st.executeBatch();
+            con.close();
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
 }

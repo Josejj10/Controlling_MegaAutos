@@ -7,6 +7,7 @@ import pe.com.megaautos.dao.ComprobantePagoDAO;
 import pe.com.megaautos.dao.CuentaContableDAO;
 import pe.com.megaautos.dao.DriverDAO;
 import pe.com.megaautos.dao.EmpresaDAO;
+import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.OrdenTrabajoDAO;
 import pe.com.megaautos.dao.SedeDAO;
 import pe.com.megaautos.dao.ServicioDAO;
@@ -73,6 +74,11 @@ public class MSSQLFactory extends DAOFactory{
 
     @Override
     public VehiculoDAO getVehiculoDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ExcelDAO getExcelDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

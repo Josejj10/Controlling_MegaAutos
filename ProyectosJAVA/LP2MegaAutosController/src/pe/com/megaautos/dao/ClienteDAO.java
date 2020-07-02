@@ -6,6 +6,7 @@
 package pe.com.megaautos.dao;
 
 import java.util.ArrayList;
+import joinery.DataFrame;
 import pe.com.megaautos.model.Cliente;
 
 /**
@@ -19,4 +20,5 @@ public interface ClienteDAO {
     int actualizar(Cliente cliente);
     int eliminar(int idCliente);
     ArrayList<Cliente> listar();
+    void guardarBatch(DataFrame df);
 }

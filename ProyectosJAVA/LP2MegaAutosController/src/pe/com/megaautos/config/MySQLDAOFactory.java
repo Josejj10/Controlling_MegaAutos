@@ -7,6 +7,7 @@ import pe.com.megaautos.dao.ComprobantePagoDAO;
 import pe.com.megaautos.dao.CuentaContableDAO;
 import pe.com.megaautos.dao.DriverDAO;
 import pe.com.megaautos.dao.EmpresaDAO;
+import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.OrdenTrabajoDAO;
 import pe.com.megaautos.dao.SedeDAO;
 import pe.com.megaautos.dao.ServicioDAO;
@@ -19,6 +20,7 @@ import pe.com.megaautos.mysql.ComprobantePagoMySQL;
 import pe.com.megaautos.mysql.CuentaContableMySQL;
 import pe.com.megaautos.mysql.DriverMySQL;
 import pe.com.megaautos.mysql.EmpresaMySQL;
+import pe.com.megaautos.mysql.ExcelMySQL;
 import pe.com.megaautos.mysql.OrdenTrabajoMySQL;
 import pe.com.megaautos.mysql.SedeMySQL;
 import pe.com.megaautos.mysql.ServicioMySQL;
@@ -86,5 +88,10 @@ public class MySQLDAOFactory extends DAOFactory{
     @Override
     public VehiculoDAO getVehiculoDAO() {
         return new VehiculoMySQL();
+    }
+    
+    @Override
+    public ExcelDAO getExcelDAO(){
+        return new ExcelMySQL();
     }
 }

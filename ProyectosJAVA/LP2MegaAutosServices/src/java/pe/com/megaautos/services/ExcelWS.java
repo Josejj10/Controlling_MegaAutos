@@ -8,6 +8,8 @@ package pe.com.megaautos.services;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import pe.com.megaautos.config.DBController;
+import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.model.Excel;
 
 /**
@@ -16,20 +18,52 @@ import pe.com.megaautos.model.Excel;
  */
 @WebService(serviceName = "ExcelWS")
 public class ExcelWS {
-
+private ExcelDAO daoExcel;
     public ExcelWS(){
-        
+        daoExcel = DBController.controller.getExcelDAO();
     }
-    @WebMethod(operationName = "leerExcel1")
-    public Excel leerExcel(@WebParam(name = "excel1") byte[] excel1, @WebParam(name = "excel2") byte[] excel2) {
+    @WebMethod(operationName = "insertarArchivoEntrada")
+    public int insertarArchivoEntrada(@WebParam(name = "archivo") Excel excel) {
+        int resultado = 0;
+        try{
+            resultado = daoExcel.insertarArchivoEntrada(excel);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "insertarArchivoSalida")
+    public int insertarArchivoSalida(@WebParam(name = "archivo") Excel excel) {
+        int resultado = 0;
+        try{
+            resultado = daoExcel.insertarArchivoSalida(excel);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "leerArchivoSalida")
+    public Excel leerArchivoSalida(){
         Excel excel = new Excel();
-        excel.setExcel1(excel1);
-        excel.setExcel2(excel2);        
+        try{
+            excel = daoExcel.leerArchivoSalida();
+        }catch(Exception ex){
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage());
+        }
         return excel;
     }
     
-    @WebMethod(operationName = "enviarExcel")
-    public Excel enviarExcel(@WebParam(name="excel") Excel excel){
+    @WebMethod(operationName = "leerArchivoEntrada")
+    public Excel leerArchivoEntrada(){
+        Excel excel = new Excel();
+        try{
+            excel = daoExcel.leerArchivoEntrada();
+        }catch(Exception ex){
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage());
+        }
         return excel;
     }
 }

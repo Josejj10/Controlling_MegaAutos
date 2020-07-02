@@ -16,22 +16,40 @@ namespace LP2MegaAutos.ServicioExcel {
     public interface ExcelWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerExcel1Request", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerExcel1Response")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioExcel.leerExcel1Response leerExcel1(LP2MegaAutos.ServicioExcel.leerExcel1Request request);
+        LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerExcel1Request", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerExcel1Response")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerExcel1Response> leerExcel1Async(LP2MegaAutos.ServicioExcel.leerExcel1Request request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse> insertarArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/enviarExcelRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/enviarExcelResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioExcel.enviarExcelResponse enviarExcel(LP2MegaAutos.ServicioExcel.enviarExcelRequest request);
+        LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse leerArchivoEntrada(LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/enviarExcelRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/enviarExcelResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.enviarExcelResponse> enviarExcelAsync(LP2MegaAutos.ServicioExcel.enviarExcelRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse> leerArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse leerArchivoSalida(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> leerArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse insertarArchivoSalida(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse> insertarArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
     }
     
     /// <remarks/>
@@ -83,17 +101,17 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="leerExcel1", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class leerExcel1Request {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarArchivoEntrada", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarArchivoEntradaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2MegaAutos.ServicioExcel.excel archivo;
         
-        public leerExcel1Request() {
+        public insertarArchivoEntradaRequest() {
         }
         
-        public leerExcel1Request(LP2MegaAutos.ServicioExcel.excel archivo) {
+        public insertarArchivoEntradaRequest(LP2MegaAutos.ServicioExcel.excel archivo) {
             this.archivo = archivo;
         }
     }
@@ -101,17 +119,17 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="leerExcel1Response", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class leerExcel1Response {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarArchivoEntradaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarArchivoEntradaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public leerExcel1Response() {
+        public insertarArchivoEntradaResponse() {
         }
         
-        public leerExcel1Response(int @return) {
+        public insertarArchivoEntradaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -119,27 +137,91 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarExcel", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class enviarExcelRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoEntrada", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class leerArchivoEntradaRequest {
         
-        public enviarExcelRequest() {
+        public leerArchivoEntradaRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="enviarExcelResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class enviarExcelResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoEntradaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class leerArchivoEntradaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2MegaAutos.ServicioExcel.excel @return;
         
-        public enviarExcelResponse() {
+        public leerArchivoEntradaResponse() {
         }
         
-        public enviarExcelResponse(LP2MegaAutos.ServicioExcel.excel @return) {
+        public leerArchivoEntradaResponse(LP2MegaAutos.ServicioExcel.excel @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoSalida", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class leerArchivoSalidaRequest {
+        
+        public leerArchivoSalidaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoSalidaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class leerArchivoSalidaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioExcel.excel @return;
+        
+        public leerArchivoSalidaResponse() {
+        }
+        
+        public leerArchivoSalidaResponse(LP2MegaAutos.ServicioExcel.excel @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarArchivoSalida", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarArchivoSalidaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioExcel.excel archivo;
+        
+        public insertarArchivoSalidaRequest() {
+        }
+        
+        public insertarArchivoSalidaRequest(LP2MegaAutos.ServicioExcel.excel archivo) {
+            this.archivo = archivo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarArchivoSalidaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarArchivoSalidaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarArchivoSalidaResponse() {
+        }
+        
+        public insertarArchivoSalidaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -172,47 +254,91 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioExcel.leerExcel1Response LP2MegaAutos.ServicioExcel.ExcelWS.leerExcel1(LP2MegaAutos.ServicioExcel.leerExcel1Request request) {
-            return base.Channel.leerExcel1(request);
+        LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse LP2MegaAutos.ServicioExcel.ExcelWS.insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request) {
+            return base.Channel.insertarArchivoEntrada(request);
         }
         
-        public int leerExcel1(LP2MegaAutos.ServicioExcel.excel archivo) {
-            LP2MegaAutos.ServicioExcel.leerExcel1Request inValue = new LP2MegaAutos.ServicioExcel.leerExcel1Request();
+        public int insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.excel archivo) {
+            LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest inValue = new LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest();
             inValue.archivo = archivo;
-            LP2MegaAutos.ServicioExcel.leerExcel1Response retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerExcel1(inValue);
+            LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).insertarArchivoEntrada(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerExcel1Response> LP2MegaAutos.ServicioExcel.ExcelWS.leerExcel1Async(LP2MegaAutos.ServicioExcel.leerExcel1Request request) {
-            return base.Channel.leerExcel1Async(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse> LP2MegaAutos.ServicioExcel.ExcelWS.insertarArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request) {
+            return base.Channel.insertarArchivoEntradaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerExcel1Response> leerExcel1Async(LP2MegaAutos.ServicioExcel.excel archivo) {
-            LP2MegaAutos.ServicioExcel.leerExcel1Request inValue = new LP2MegaAutos.ServicioExcel.leerExcel1Request();
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse> insertarArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.excel archivo) {
+            LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest inValue = new LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest();
             inValue.archivo = archivo;
-            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerExcel1Async(inValue);
+            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).insertarArchivoEntradaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioExcel.enviarExcelResponse LP2MegaAutos.ServicioExcel.ExcelWS.enviarExcel(LP2MegaAutos.ServicioExcel.enviarExcelRequest request) {
-            return base.Channel.enviarExcel(request);
+        LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoEntrada(LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest request) {
+            return base.Channel.leerArchivoEntrada(request);
         }
         
-        public LP2MegaAutos.ServicioExcel.excel enviarExcel() {
-            LP2MegaAutos.ServicioExcel.enviarExcelRequest inValue = new LP2MegaAutos.ServicioExcel.enviarExcelRequest();
-            LP2MegaAutos.ServicioExcel.enviarExcelResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).enviarExcel(inValue);
+        public LP2MegaAutos.ServicioExcel.excel leerArchivoEntrada() {
+            LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest();
+            LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoEntrada(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.enviarExcelResponse> LP2MegaAutos.ServicioExcel.ExcelWS.enviarExcelAsync(LP2MegaAutos.ServicioExcel.enviarExcelRequest request) {
-            return base.Channel.enviarExcelAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse> LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest request) {
+            return base.Channel.leerArchivoEntradaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.enviarExcelResponse> enviarExcelAsync() {
-            LP2MegaAutos.ServicioExcel.enviarExcelRequest inValue = new LP2MegaAutos.ServicioExcel.enviarExcelRequest();
-            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).enviarExcelAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse> leerArchivoEntradaAsync() {
+            LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest();
+            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoEntradaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoSalida(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request) {
+            return base.Channel.leerArchivoSalida(request);
+        }
+        
+        public LP2MegaAutos.ServicioExcel.excel leerArchivoSalida() {
+            LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest();
+            LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoSalida(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request) {
+            return base.Channel.leerArchivoSalidaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> leerArchivoSalidaAsync() {
+            LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest();
+            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoSalidaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse LP2MegaAutos.ServicioExcel.ExcelWS.insertarArchivoSalida(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request) {
+            return base.Channel.insertarArchivoSalida(request);
+        }
+        
+        public int insertarArchivoSalida(LP2MegaAutos.ServicioExcel.excel archivo) {
+            LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest();
+            inValue.archivo = archivo;
+            LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).insertarArchivoSalida(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse> LP2MegaAutos.ServicioExcel.ExcelWS.insertarArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request) {
+            return base.Channel.insertarArchivoSalidaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse> insertarArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.excel archivo) {
+            LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest();
+            inValue.archivo = archivo;
+            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).insertarArchivoSalidaAsync(inValue);
         }
     }
 }

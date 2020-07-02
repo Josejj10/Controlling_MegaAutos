@@ -21,13 +21,16 @@ namespace LP2MegaAutos
 
         private string archivoSeleccionado1;
         private string archivoSeleccionado2;
-        private ServicioExcel.excel _excel;
+        private ServicioExcel.excel _excelEnviado;
+        private ServicioExcel.excel _excelRecibido;
         empresa _empresa;
         public pantallaInformacionEmpresa()
         {
             InitializeComponent();
             daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
             daoExcel = new ServicioExcel.ExcelWSClient();
+            _excelEnviado = new ServicioExcel.excel();
+            _excelRecibido = new ServicioExcel.excel();
             inicializarEmpresas();
         }
 
@@ -65,7 +68,7 @@ namespace LP2MegaAutos
                     BinaryReader br = new BinaryReader(fs);
 
                     // Asignamos el archivo al objeto
-                    //this._excel.excel1 = br.ReadBytes((int)fs.Length);
+                    this._excelEnviado.archivo = br.ReadBytes((int)fs.Length);
                     br.Close();
                     fs.Close();
                 }
@@ -90,7 +93,6 @@ namespace LP2MegaAutos
                 if (ofdArchivo2.ShowDialog() == DialogResult.OK)
                 {
                     archivoSeleccionado2 = ofdArchivo2.FileName;
-                    txtArchivo2.Text = archivoSeleccionado1;
                     FileStream fs = new FileStream(archivoSeleccionado2, FileMode.Open, FileAccess.Read);
                     BinaryReader br = new BinaryReader(fs);
 
@@ -108,9 +110,8 @@ namespace LP2MegaAutos
 
         private void btnEditarRutas_Click(object sender, EventArgs e)
         {
-            txtArchivo1.Enabled = txtArchivo2.Enabled =
-            btnExaminar.Enabled = btnExaminar2.Enabled = !btnExaminar2.Enabled;
-            btnDefault.Visible = btnGuardar.Visible = !btnGuardar.Visible;
+            btnExaminar.Enabled = !btnExaminar.Enabled;
+            btnObtener.Visible = btnGuardar.Visible = !btnGuardar.Visible;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -119,13 +120,46 @@ namespace LP2MegaAutos
             // WebService.GuardarArchivo(txtArchivo1.Text);
             // WebService.GuardarArchivo(txtArchivo2.Text);
 
-            
+            frmMessageBox frm;
+            if (daoExcel.insertarArchivoEntrada(_excelEnviado) == 0)
+                frm = new frmMessageBox("No se pudo insertar el archivo.",MessageBoxButtons.OK);
+            else // Inserto bien
+                frm = new frmMessageBox("Se inserto correctamente el archivo excel.",MessageBoxButtons.OK);
+            frm.ShowDialog();
 
         }
 
         private void btnDefault_Click(object sender, EventArgs e)
         {
-            // Poner las rutas por default
+            
+            if (sfdArchivoReporte.ShowDialog() == DialogResult.OK)
+            {
+                // Poner las rutas por default
+                String archivoEntrada = sfdArchivoReporte.FileName + ".xlsx";
+                _excelRecibido = daoExcel.leerArchivoSalida();
+                File.WriteAllBytes(archivoEntrada, _excelRecibido.archivo);
+                frmMessageBox frm = new frmMessageBox("Se ha guardado el Archivo", MessageBoxButtons.OK, "Mensaje de Confirmación");
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnDescargar1_Click(object sender, EventArgs e)
+        {
+            if(sfdArchivoEntrada.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    String archivoEntrada = sfdArchivoEntrada.FileName + ".xlsx";
+                    _excelRecibido = daoExcel.leerArchivoEntrada();
+                    File.WriteAllBytes(archivoEntrada, _excelRecibido.archivo);
+                    MessageBox.Show("Se ha guardado el archivo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show("Se ha generado un error al momento de guardar el archivo", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    System.Console.WriteLine(ex.Message);
+                }
+            }
         }
     }
 }

@@ -48,7 +48,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             string cadena = vehiculo.propietario.numDocumento + " - " + vehiculo.propietario.nombre;
 
             cboTipoCliente.DataSource = new BindingList<ServicioCliente.cliente>(daoCliente.listarClientes().ToArray());
-            cboTipoCliente.Text = cadena;
+            cboTipoCliente.SelectedIndex = cboTipoCliente.FindString(cadena);
             cboTipoCliente.DisplayMember = "numDocumento";
             cboTipoCliente.ValueMember = "id";
 
@@ -112,7 +112,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
 
             _vehiculo.propietario.id = cliente.id;
             _vehiculo.propietario.nombre = cliente.nombre;
-            _vehiculo.propietario.numDocumento = _cliente.numDocumento;
+            _vehiculo.propietario.numDocumento = cliente.numDocumento;
             _vehiculo.tipoVehiculo = txt_TipoVehiculo.Text;
             this.DialogResult = DialogResult.OK;
         }
@@ -126,7 +126,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
                 return false;
             }
 
-            if (txt_placaVehiculo.Text.Length != 7)
+            if (txt_placaVehiculo.Text.Length != 6)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese una placa correcta.", MessageBoxButtons.OK);
                 f.ShowDialog();

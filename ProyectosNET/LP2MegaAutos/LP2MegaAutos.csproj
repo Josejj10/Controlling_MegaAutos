@@ -691,13 +691,19 @@
     <None Include="Connected Services\ServicioExcel\ExcelWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.enviarExcelResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.excel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerExcel1Response.datasource">
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.actualizarOrdenTrabajoResponse.datasource">
@@ -802,7 +808,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\LP2MegaAutos.Constantes.CustomColor.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1019,6 +1024,9 @@
     <WCFMetadataStorage Include="Connected Services\ServicioServicio\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />
     <WCFMetadataStorage Include="Connected Services\ServicioVehiculo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

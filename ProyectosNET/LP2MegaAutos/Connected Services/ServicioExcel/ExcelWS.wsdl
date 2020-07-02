@@ -5,31 +5,51 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/ExcelWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
-  <message name="leerExcel1">
-    <part name="parameters" element="tns:leerExcel1" />
+  <message name="insertarArchivoEntrada">
+    <part name="parameters" element="tns:insertarArchivoEntrada" />
   </message>
-  <message name="leerExcel1Response">
-    <part name="parameters" element="tns:leerExcel1Response" />
+  <message name="insertarArchivoEntradaResponse">
+    <part name="parameters" element="tns:insertarArchivoEntradaResponse" />
   </message>
-  <message name="enviarExcel">
-    <part name="parameters" element="tns:enviarExcel" />
+  <message name="leerArchivoEntrada">
+    <part name="parameters" element="tns:leerArchivoEntrada" />
   </message>
-  <message name="enviarExcelResponse">
-    <part name="parameters" element="tns:enviarExcelResponse" />
+  <message name="leerArchivoEntradaResponse">
+    <part name="parameters" element="tns:leerArchivoEntradaResponse" />
+  </message>
+  <message name="leerArchivoSalida">
+    <part name="parameters" element="tns:leerArchivoSalida" />
+  </message>
+  <message name="leerArchivoSalidaResponse">
+    <part name="parameters" element="tns:leerArchivoSalidaResponse" />
+  </message>
+  <message name="insertarArchivoSalida">
+    <part name="parameters" element="tns:insertarArchivoSalida" />
+  </message>
+  <message name="insertarArchivoSalidaResponse">
+    <part name="parameters" element="tns:insertarArchivoSalidaResponse" />
   </message>
   <portType name="ExcelWS">
-    <operation name="leerExcel1">
-      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerExcel1Request" message="tns:leerExcel1" />
-      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerExcel1Response" message="tns:leerExcel1Response" />
+    <operation name="insertarArchivoEntrada">
+      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaRequest" message="tns:insertarArchivoEntrada" />
+      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaResponse" message="tns:insertarArchivoEntradaResponse" />
     </operation>
-    <operation name="enviarExcel">
-      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/enviarExcelRequest" message="tns:enviarExcel" />
-      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/enviarExcelResponse" message="tns:enviarExcelResponse" />
+    <operation name="leerArchivoEntrada">
+      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaRequest" message="tns:leerArchivoEntrada" />
+      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaResponse" message="tns:leerArchivoEntradaResponse" />
+    </operation>
+    <operation name="leerArchivoSalida">
+      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest" message="tns:leerArchivoSalida" />
+      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse" message="tns:leerArchivoSalidaResponse" />
+    </operation>
+    <operation name="insertarArchivoSalida">
+      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest" message="tns:insertarArchivoSalida" />
+      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse" message="tns:insertarArchivoSalidaResponse" />
     </operation>
   </portType>
   <binding name="ExcelWSPortBinding" type="tns:ExcelWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="leerExcel1">
+    <operation name="insertarArchivoEntrada">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +58,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="enviarExcel">
+    <operation name="leerArchivoEntrada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="leerArchivoSalida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarArchivoSalida">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -133,24 +133,23 @@ namespace LP2MegaAutos
 
         private void inicializarUsuario()
         {
-            foreach (ePermisos p in _usuario.permisos)
-            {
-                Console.WriteLine(p.ToString());
-            }
-            List <ePermisos?> uPer =  _usuario.permisos.ToList();
-            uPer.Remove(ePermisos.All);
-            uPer.Add(ePermisos.Drivers);
-            //uPer.Remove(ePermisos.Vehiculos);
-            uPer.Add(ePermisos.Servicios);
-            //uPer.Remove(ePermisos.Sedes);
-            uPer.Remove(ePermisos.AreasTrabajo);
-            uPer.Add(ePermisos.Empresa);
-            _usuario.permisos = uPer.ToArray();
+            //foreach (ePermisos p in _usuario.permisos)
+            //{
+            //    Console.WriteLine(p.ToString());
+            //}
+            //List <ePermisos?> uPer =  _usuario.permisos.ToList();
+            //uPer.Remove(ePermisos.All);
+            //_usuario.permisos = uPer.ToArray();
             
-            foreach (ePermisos p in _usuario.permisos)
-            {
-                Console.WriteLine(p.ToString());
-            }
+            //foreach (ePermisos p in _usuario.permisos)
+            //{
+            //    Console.WriteLine(p.ToString());
+            //}
+            //_usuario.permisos.ToList().Add(ePermisos.ActualizarBD);
+            //_usuario.permisos.ToList().Add(ePermisos.Empresa);
+            //_usuario.permisos.ToList().Add(ePermisos.Sedes);
+            //_usuario.permisos.ToList().Add(ePermisos.Drivers);
+            //_usuario.permisos.ToList().Add(ePermisos.Clientes);
         }
 
         private void inicializarPms()
@@ -386,9 +385,6 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 2)
                 {
-                    // contiene drivers? no contiene vehiculos? si, 2
-                    // puesto4 = true
-
                     iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
                               3 :
                               _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) ?
@@ -399,7 +395,7 @@ namespace LP2MegaAutos
                         pms.Texto3 = txts[iUtilizado];
                         if (puesto4) puesto3 = true;
                         else puesto4 = true;
-                        
+
                         pms.item3Click +=
                             new PanelMenuStrip.ButtonClickEventHandler
                             (BotonesDinamicosHelper.asignarBoton(per[iUtilizado], btnMenu, ims[iUtilizado], panelMenu, contenedorPantalla1));
@@ -408,9 +404,9 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 1)
                 {
-                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
                               3 :
-                              _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !puesto3?
+                              _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !puesto3 ?
                               2 :
                               _usuario.permisos.ToList<ePermisos?>().Contains(per[1]) ?
                               1 : -1;
@@ -423,21 +419,15 @@ namespace LP2MegaAutos
                                 puesto2 = true;
                             else puesto3 = true;
                         else puesto4 = true;
-                        
                         pms.item2Click +=
                             new PanelMenuStrip.ButtonClickEventHandler
                             (BotonesDinamicosHelper.asignarBoton(per[iUtilizado], btnMenu, ims[iUtilizado], panelMenu, contenedorPantalla1));
                     }
                     else pms.Imagen2 = Resources.Reloj;
                 }
-                if (nItems > 0) 
-                { 
-                    // tiene empresa? NO
-                    // tiene Sede? Si, se ha puesto??? Si
-                    // como se que sede se ha puesto?
-                    // simple, pues si sede se ha puesto, entonces estaria activado puesto 3 o puesto 2
-                    // Asi, si no esta activo puesto3 y no esta activo puesto4
-                        iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
+                if (nItems > 0)
+                {
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
                                   3 :
                                   _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !puesto3 ?
                                   2 :

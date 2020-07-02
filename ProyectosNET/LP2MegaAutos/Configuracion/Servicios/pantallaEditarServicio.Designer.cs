@@ -39,6 +39,7 @@
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.lbl_desc = new System.Windows.Forms.Label();
             this.pnl_tipoServicio = new System.Windows.Forms.Panel();
+            this.cboTipoServicio = new System.Windows.Forms.ComboBox();
             this.rnd_color_3 = new LP2MegaAutos.RoundedPanel();
             this.lbl_tipoServicio = new System.Windows.Forms.Label();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
@@ -53,7 +54,6 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.cboTipoServicio = new System.Windows.Forms.ComboBox();
             this.pnl_codServ.SuspendLayout();
             this.pnl_descripcion.SuspendLayout();
             this.pnl_tipoServicio.SuspendLayout();
@@ -239,6 +239,27 @@
             this.tagsExtender1.SetTagFontName(this.pnl_tipoServicio, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnl_tipoServicio, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_tipoServicio, System.Drawing.FontStyle.Regular);
+            // 
+            // cboTipoServicio
+            // 
+            this.cboTipoServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.cboTipoServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoServicio.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboTipoServicio.FormattingEnabled = true;
+            this.cboTipoServicio.Items.AddRange(new object[] {
+            "PLANCHADO",
+            "MECANICA",
+            "PINTURA",
+            "REPUESTOS"});
+            this.cboTipoServicio.Location = new System.Drawing.Point(5, 16);
+            this.cboTipoServicio.Name = "cboTipoServicio";
+            this.cboTipoServicio.Size = new System.Drawing.Size(286, 24);
+            this.cboTipoServicio.TabIndex = 82;
+            this.tagsExtender1.SetTag2(this.cboTipoServicio, null);
+            this.tagsExtender1.SetTag3(this.cboTipoServicio, null);
+            this.tagsExtender1.SetTagFontName(this.cboTipoServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cboTipoServicio, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cboTipoServicio, System.Drawing.FontStyle.Bold);
             // 
             // rnd_color_3
             // 
@@ -558,25 +579,6 @@
             this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // cboTipoServicio
-            // 
-            this.cboTipoServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.cboTipoServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboTipoServicio.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
-            this.cboTipoServicio.FormattingEnabled = true;
-            this.cboTipoServicio.Items.AddRange(new object[] {
-            "DNI",
-            "RUC"});
-            this.cboTipoServicio.Location = new System.Drawing.Point(5, 16);
-            this.cboTipoServicio.Name = "cboTipoServicio";
-            this.cboTipoServicio.Size = new System.Drawing.Size(286, 24);
-            this.cboTipoServicio.TabIndex = 82;
-            this.tagsExtender1.SetTag2(this.cboTipoServicio, null);
-            this.tagsExtender1.SetTag3(this.cboTipoServicio, null);
-            this.tagsExtender1.SetTagFontName(this.cboTipoServicio, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.cboTipoServicio, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.cboTipoServicio, System.Drawing.FontStyle.Bold);
             // 
             // pantallaEditarServicio
             // 

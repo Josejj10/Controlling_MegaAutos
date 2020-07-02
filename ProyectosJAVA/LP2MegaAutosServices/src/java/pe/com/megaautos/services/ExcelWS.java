@@ -22,22 +22,44 @@ private ExcelDAO daoExcel;
     public ExcelWS(){
         daoExcel = DBController.controller.getExcelDAO();
     }
-    @WebMethod(operationName = "leerExcel1")
-    public int insertarExcel(@WebParam(name = "archivo") Excel excel) {
+    @WebMethod(operationName = "insertarArchivoEntrada")
+    public int insertarArchivoEntrada(@WebParam(name = "archivo") Excel excel) {
         int resultado = 0;
         try{
-            resultado = daoExcel.insertarArchivo(excel);
+            resultado = daoExcel.insertarArchivoEntrada(excel);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "insertarArchivoSalida")
+    public int insertarArchivoSalida(@WebParam(name = "archivo") Excel excel) {
+        int resultado = 0;
+        try{
+            resultado = daoExcel.insertarArchivoSalida(excel);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
         return resultado;
     }
     
-    @WebMethod(operationName = "enviarExcel")
-    public Excel leerExcel(){
+    @WebMethod(operationName = "leerArchivoSalida")
+    public Excel leerArchivoSalida(){
         Excel excel = new Excel();
         try{
-            excel = daoExcel.leerArchivo();
+            excel = daoExcel.leerArchivoSalida();
+        }catch(Exception ex){
+            System.out.println(ex.getCause());
+            System.out.println(ex.getMessage());
+        }
+        return excel;
+    }
+    
+    @WebMethod(operationName = "leerArchivoEntrada")
+    public Excel leerArchivoEntrada(){
+        Excel excel = new Excel();
+        try{
+            excel = daoExcel.leerArchivoEntrada();
         }catch(Exception ex){
             System.out.println(ex.getCause());
             System.out.println(ex.getMessage());

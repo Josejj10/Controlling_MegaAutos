@@ -286,7 +286,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if ((txt_NumeroDocumento.Text.Length == 10) && (cboTipoDocumento.Text != "RUC"))
+            if ((txt_NumeroDocumento.Text.Length == 11) && (cboTipoDocumento.Text != "RUC"))
             {
                 frmMessageBox f = new frmMessageBox("El DNI debe tener 8 digitos.", MessageBoxButtons.OK);
                 f.ShowDialog();

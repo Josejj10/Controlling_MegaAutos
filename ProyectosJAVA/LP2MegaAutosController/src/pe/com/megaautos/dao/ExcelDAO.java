@@ -12,6 +12,8 @@ import pe.com.megaautos.model.Excel;
  * @author Rodrigo
  */
 public interface ExcelDAO {
-    Excel leerArchivo();
-    int insertarArchivo(Excel excel);
+    Excel leerArchivoEntrada();
+    Excel leerArchivoSalida();
+    int insertarArchivoEntrada(Excel excel);
+    int insertarArchivoSalida(Excel excel);
 }

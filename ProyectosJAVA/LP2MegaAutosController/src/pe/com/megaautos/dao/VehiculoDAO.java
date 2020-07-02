@@ -18,4 +18,5 @@ public interface VehiculoDAO {
     int eliminar(int idVehiculo);
     ArrayList<Vehiculo> listar();
     Vehiculo buscar(int idVehiculo);
+    void guardarBatch(DataFrame df);
 }

@@ -6,6 +6,7 @@
 package pe.com.megaautos.dao;
 
 import java.util.ArrayList;
+import joinery.DataFrame;
 import pe.com.megaautos.model.AreaTrabajo;
 
 /**
@@ -18,5 +19,5 @@ public interface AreaTrabajoDAO {
     int eliminar(int idAreaTrabajo);
     ArrayList<AreaTrabajo> listar();
     AreaTrabajo buscar(int idAreaTrabajo);
-    
+    void guardarBatch(DataFrame df);
 }

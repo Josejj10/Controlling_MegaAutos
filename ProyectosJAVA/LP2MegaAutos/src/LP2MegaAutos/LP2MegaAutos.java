@@ -68,24 +68,31 @@ public class LP2MegaAutos {
 
     public static void main(String[] args) throws ParseException, IOException{
         
-        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
-        Usuario u = new Usuario();
-        u = daoUsuario.buscarPorCorreo("nicolas@gmail.com");
-        System.out.println(u.getId() + " " + u.getNombre() + " " + 
-               u.getCorreo() + " " + u.getTipoUsuario() + u.getPassword());
-        
-        for (EPermisos e : u.getPermisos()){
-            System.out.println(e);
-        }
-        int a = daoUsuario.actualizar(u);
-        Usuario u2 = new Usuario();
-        u2 = daoUsuario.verificarPassword("nicolas@gmail.com", "1234");
-        System.out.println(u2.getId() + " " + u2.getNombre() + " " + 
-                u2.getCorreo() + " " + u2.getTipoUsuario());
-        
-        for (EPermisos e : u2.getPermisos()){
-            System.out.println(e);
-        }
+//        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
+//        Usuario u = new Usuario();
+//        u = daoUsuario.buscarPorCorreo("nicolas@gmail.com");
+//        System.out.println(u.getId() + " " + u.getNombre() + " " + 
+//               u.getCorreo() + " " + u.getTipoUsuario() + u.getPassword());
+//        
+//        for (EPermisos e : u.getPermisos()){
+//            System.out.println(e);
+//        }
+//        int a = daoUsuario.actualizar(u);
+//        Usuario u2 = new Usuario();
+//        u2 = daoUsuario.verificarPassword("nicolas@gmail.com", "1234");
+//        System.out.println(u2.getId() + " " + u2.getNombre() + " " + 
+//                u2.getCorreo() + " " + u2.getTipoUsuario());
+//        
+//        for (EPermisos e : u2.getPermisos()){
+//            System.out.println(e);
+//        }
+
+        VehiculoDAO daoVehiculo = DBController.controller.getVehiculoDAO();
+        ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+        vehiculos = daoVehiculo.listar();
+        for(Vehiculo v : vehiculos)
+            System.out.println(v.getId() + " " + v.getPlaca() + " " + v.getTipoVehiculo() + " " + v.getPropietario().getNombre());
+    
 //        
 //        Extraction
 //        String ruta = "D:\\Documentos\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Cuadro.xlsx";

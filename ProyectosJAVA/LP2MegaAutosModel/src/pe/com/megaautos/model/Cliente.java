@@ -87,4 +87,6 @@ public class Cliente implements IConsultable{
     public void setTipoCliente(String tipoCliente) {
         this.tipoCliente = tipoCliente;
     }
+    
+    
 }

@@ -263,7 +263,8 @@ public class UsuarioMySQL implements UsuarioDAO {
         return usuarios;    
     }
 
-    public Usuario buscarPorCorreo(String correo){
+    public Usuario buscarPorCorreo(String correo){        
+        Usuario usuario = new Usuario();
         try{
             Connection con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall("{call BUSCAR_POR_CORREO(?)}");
@@ -272,7 +273,6 @@ public class UsuarioMySQL implements UsuarioDAO {
             if(!rs.next())
                 return null;
             // Si no, actualizar usuario y retornarlo
-            Usuario usuario = new Usuario();
             usuario.setId(rs.getInt("ID_USUARIO"));
             usuario.setNombre(rs.getString("NOMBRE"));
             usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
@@ -322,12 +322,12 @@ public class UsuarioMySQL implements UsuarioDAO {
             
             // usuario.setPermisos Ahi hagan su magia con SQL y java
             // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
-            return usuario;
+
             
         }catch(Exception e){
             System.out.println(e);
-            return null;
         }
+        return usuario;
     }
     @Override
     public Usuario verificarPassword(String correo, String password) {

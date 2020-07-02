@@ -19,12 +19,13 @@ import pe.com.megaautos.model.Excel;
 public class ExcelMySQL implements ExcelDAO {
 
     @Override
-    public Excel leerArchivo() {           
+    public Excel leerArchivoEntrada() {           
         Excel excel = new Excel();
         try{
             Connection con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall(
-                    "{call LEER_ARCHIVO()}");
+                    "{call LEER_ARCHIVO(?)}");            
+            cs.setInt("_TIPO", 1);
             ResultSet rs = cs.executeQuery(); 
             while(rs.next()){                
                 excel.setArchivo(rs.getBytes("ARCHIVO"));
@@ -36,16 +37,56 @@ public class ExcelMySQL implements ExcelDAO {
 
         return excel;        
     }
+@Override
+    public Excel leerArchivoSalida() {           
+        Excel excel = new Excel();
+        try{
+            Connection con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall(
+                    "{call LEER_ARCHIVO(?)}");            
+            cs.setInt("_TIPO", 1);
+            ResultSet rs = cs.executeQuery(); 
+            while(rs.next()){                
+                excel.setArchivo(rs.getBytes("ARCHIVO"));
+            }
+        }
+        catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }        
 
+        return excel;        
+    }
     @Override
-    public int insertarArchivo(Excel excel) {
+    public int insertarArchivoEntrada(Excel excel) {
         int rpta = 0;
          try{
             Connection con = DBDataSource.getConnection();            
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_ARCHIVO(?,?)}");
+                    "{call INSERTAR_ARCHIVO(?,?,?)}");
+            cs.registerOutParameter("_ID_ARCHIVO", java.sql.Types.INTEGER);
+            cs.setBytes("_ARCHIVO", excel.getArchivo());            
+            cs.setInt("_TIPO", 1);
+            cs.executeUpdate();
+            rpta = cs.getInt("_ID_ARCHIVO");
+            con.close();
+            // Actualiza el ID del cliente insertado para tenerlo en Java
+            excel.setId(rpta);
+        }catch(Exception ex){
+             System.out.println(ex.getMessage());
+        }
+         return rpta;
+    }
+    
+    @Override
+    public int insertarArchivoSalida(Excel excel) {
+        int rpta = 0;
+         try{
+            Connection con = DBDataSource.getConnection();            
+            CallableStatement cs = con.prepareCall(
+                    "{call INSERTAR_ARCHIVO(?,?,?)}");
             cs.registerOutParameter("_ID_ARCHIVO", java.sql.Types.INTEGER);
             cs.setBytes("_ARCHIVO", excel.getArchivo());
+            cs.setInt("_TIPO", 2);
             cs.executeUpdate();
             rpta = cs.getInt("_ID_ARCHIVO");
             con.close();

@@ -133,23 +133,15 @@ namespace LP2MegaAutos
 
         private void inicializarUsuario()
         {
-            //foreach (ePermisos p in _usuario.permisos)
-            //{
-            //    Console.WriteLine(p.ToString());
-            //}
-            //List <ePermisos?> uPer =  _usuario.permisos.ToList();
-            //uPer.Remove(ePermisos.All);
-            //_usuario.permisos = uPer.ToArray();
-            
-            //foreach (ePermisos p in _usuario.permisos)
-            //{
-            //    Console.WriteLine(p.ToString());
-            //}
-            //_usuario.permisos.ToList().Add(ePermisos.ActualizarBD);
-            //_usuario.permisos.ToList().Add(ePermisos.Empresa);
-            //_usuario.permisos.ToList().Add(ePermisos.Sedes);
-            //_usuario.permisos.ToList().Add(ePermisos.Drivers);
-            //_usuario.permisos.ToList().Add(ePermisos.Clientes);
+            List<ePermisos?> uPer = _usuario.permisos.ToList();
+            uPer.Remove(ePermisos.All);
+            uPer.Add(ePermisos.Sedes);
+            _usuario.permisos = uPer.ToArray();
+
+            foreach (ePermisos p in _usuario.permisos)
+            {
+                Console.WriteLine(p.ToString());
+            }   
         }
 
         private void inicializarPms()
@@ -364,9 +356,7 @@ namespace LP2MegaAutos
             {
                 // Si tiene 4 items, pone la imagen al 4to item. Si no,
                 // Pone el del 3ero, y así
-                bool puesto4 = false;
-                bool puesto3 = false;
-                bool puesto2 = false;
+                bool[] insertados = { false, false, false, false };
                 int iUtilizado;
                 if (nItems > 3)
                 {
@@ -376,7 +366,7 @@ namespace LP2MegaAutos
                     {
                         pms.Imagen4 = ims[iUtilizado];
                         pms.Texto4 = txts[iUtilizado];
-                        puesto4 = true;
+                        insertados[iUtilizado] = true;
                         pms.item4Click +=
                             new PanelMenuStrip.ButtonClickEventHandler
                             (BotonesDinamicosHelper.asignarBoton(per[iUtilizado], btnMenu, ims[iUtilizado], panelMenu, contenedorPantalla1));
@@ -385,7 +375,7 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 2)
                 {
-                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !insertados[3] ?
                               3 :
                               _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) ?
                               2 : -1;
@@ -393,9 +383,7 @@ namespace LP2MegaAutos
                     {
                         pms.Imagen3 = ims[iUtilizado];
                         pms.Texto3 = txts[iUtilizado];
-                        if (puesto4) puesto3 = true;
-                        else puesto4 = true;
-
+                        insertados[iUtilizado] = true;                      
                         pms.item3Click +=
                             new PanelMenuStrip.ButtonClickEventHandler
                             (BotonesDinamicosHelper.asignarBoton(per[iUtilizado], btnMenu, ims[iUtilizado], panelMenu, contenedorPantalla1));
@@ -404,9 +392,9 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 1)
                 {
-                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !insertados[3] ?
                               3 :
-                              _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !puesto3 ?
+                              _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !insertados[2] ?
                               2 :
                               _usuario.permisos.ToList<ePermisos?>().Contains(per[1]) ?
                               1 : -1;
@@ -414,11 +402,7 @@ namespace LP2MegaAutos
                     {
                         pms.Imagen2 = ims[iUtilizado];
                         pms.Texto2 = txts[iUtilizado];
-                        if (puesto4)
-                            if (puesto3)
-                                puesto2 = true;
-                            else puesto3 = true;
-                        else puesto4 = true;
+                        insertados[iUtilizado] = true;
                         pms.item2Click +=
                             new PanelMenuStrip.ButtonClickEventHandler
                             (BotonesDinamicosHelper.asignarBoton(per[iUtilizado], btnMenu, ims[iUtilizado], panelMenu, contenedorPantalla1));
@@ -427,11 +411,11 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 0)
                 {
-                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !insertados[3] ?
                                   3 :
-                                  _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !puesto3 ?
+                                  _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !insertados[2] ?
                                   2 :
-                                  _usuario.permisos.ToList<ePermisos?>().Contains(per[1]) && !puesto2 ?
+                                  _usuario.permisos.ToList<ePermisos?>().Contains(per[1]) && !insertados[1] ?
                                   1 :
                                   _usuario.permisos.ToList<ePermisos?>().Contains(per[0]) ?
                                   0 : -1;

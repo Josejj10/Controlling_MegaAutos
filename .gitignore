@@ -355,6 +355,6 @@ FodyWeavers.xsd
 /ProyectosJAVA/LP2MegaAutos/dist/
 /ProyectosJAVA/LP2MegaAutos/LP2MegaAutos.class
 
-
+*.class
 *.xml
 *.properties

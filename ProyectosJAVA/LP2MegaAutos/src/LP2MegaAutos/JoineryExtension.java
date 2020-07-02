@@ -39,8 +39,8 @@ public class JoineryExtension extends Serialization{
                 return cell.getStringCellValue();
         }
     }
-    
-    public static DataFrame<Object> readXlsx(final InputStream input, int nHoja)
+    //TODO: AGREGAR EL PARAMETRO DE LA CABECERA A LA FUNCION 
+    public static DataFrame<Object> readXlsx(final InputStream input, int nHoja, int rowIni)
     throws IOException {
         final Workbook wb = new XSSFWorkbook(input);
         final Sheet sheet = wb.getSheetAt(nHoja);
@@ -48,12 +48,12 @@ public class JoineryExtension extends Serialization{
         final List<List<Object>> data = new ArrayList<>();
 
         for (final Row row : sheet) {
-            if (row.getRowNum() == 2) {
+            if (row.getRowNum() == rowIni) {
                 // read header
                 for (final Cell cell : row) {
                     columns.add(readCell(cell));
                 }
-            } else if (row.getRowNum() > 2) {
+            } else if (row.getRowNum() > rowIni) {
                 // read data values
                 final List<Object> values = new ArrayList<>();
                 for (final Cell cell : row) {
@@ -63,11 +63,11 @@ public class JoineryExtension extends Serialization{
             }
         }
         // create data frame
-        final DataFrame<Object> dfFact = new DataFrame<>(columns);
+        final DataFrame<Object> df = new DataFrame<>(columns);
         for (final List<Object> row : data) {
-            dfFact.append(row);
+            df.append(row);
         }
-        return dfFact;
+        return df;
     }
     
     public static void guardarBatch(DataFrame df){
@@ -87,21 +87,4 @@ public class JoineryExtension extends Serialization{
             System.out.println(ex.getMessage());
         }
     }
-//    public void guardarBatch(List<OrdenTrabajo> ordenesTrabajo){
-//        try{
-//            Connection con = DBDataSource.getConnection();
-//            PreparedStatement st = con.prepareStatement("");
-//            int i = 0;
-//            //for(OrdenTrabajo ordenTrabajo : ordenesTrabajo){
-//            // st.setString(indexParametro, ordenTrabajo.getAlgo);
-//            //st.addBatch();
-//            //i++
-//            // if(i%1000 ==0 || i == ordenesTrabajo.size()){
-//            // st.executeBatch();
-//            
-//        }catch(Exception e){
-//            System.out.println(e);
-//        }
-//    }
-    
 }

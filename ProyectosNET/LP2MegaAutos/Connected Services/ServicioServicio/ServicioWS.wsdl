@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/ServicioWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
+  <message name="actualizarServicio">
+    <part name="parameters" element="tns:actualizarServicio" />
+  </message>
+  <message name="actualizarServicioResponse">
+    <part name="parameters" element="tns:actualizarServicioResponse" />
+  </message>
   <message name="eliminarServicio">
     <part name="parameters" element="tns:eliminarServicio" />
   </message>
   <message name="eliminarServicioResponse">
     <part name="parameters" element="tns:eliminarServicioResponse" />
-  </message>
-  <message name="listarServicios">
-    <part name="parameters" element="tns:listarServicios" />
-  </message>
-  <message name="listarServiciosResponse">
-    <part name="parameters" element="tns:listarServiciosResponse" />
   </message>
   <message name="insertarServicio">
     <part name="parameters" element="tns:insertarServicio" />
@@ -23,33 +23,33 @@
   <message name="insertarServicioResponse">
     <part name="parameters" element="tns:insertarServicioResponse" />
   </message>
-  <message name="actualizarServicio">
-    <part name="parameters" element="tns:actualizarServicio" />
+  <message name="listarServicios">
+    <part name="parameters" element="tns:listarServicios" />
   </message>
-  <message name="actualizarServicioResponse">
-    <part name="parameters" element="tns:actualizarServicioResponse" />
+  <message name="listarServiciosResponse">
+    <part name="parameters" element="tns:listarServiciosResponse" />
   </message>
   <portType name="ServicioWS">
+    <operation name="actualizarServicio">
+      <input wsam:Action="http://services.megaautos.com.pe/ServicioWS/actualizarServicioRequest" message="tns:actualizarServicio" />
+      <output wsam:Action="http://services.megaautos.com.pe/ServicioWS/actualizarServicioResponse" message="tns:actualizarServicioResponse" />
+    </operation>
     <operation name="eliminarServicio">
       <input wsam:Action="http://services.megaautos.com.pe/ServicioWS/eliminarServicioRequest" message="tns:eliminarServicio" />
       <output wsam:Action="http://services.megaautos.com.pe/ServicioWS/eliminarServicioResponse" message="tns:eliminarServicioResponse" />
-    </operation>
-    <operation name="listarServicios">
-      <input wsam:Action="http://services.megaautos.com.pe/ServicioWS/listarServiciosRequest" message="tns:listarServicios" />
-      <output wsam:Action="http://services.megaautos.com.pe/ServicioWS/listarServiciosResponse" message="tns:listarServiciosResponse" />
     </operation>
     <operation name="insertarServicio">
       <input wsam:Action="http://services.megaautos.com.pe/ServicioWS/insertarServicioRequest" message="tns:insertarServicio" />
       <output wsam:Action="http://services.megaautos.com.pe/ServicioWS/insertarServicioResponse" message="tns:insertarServicioResponse" />
     </operation>
-    <operation name="actualizarServicio">
-      <input wsam:Action="http://services.megaautos.com.pe/ServicioWS/actualizarServicioRequest" message="tns:actualizarServicio" />
-      <output wsam:Action="http://services.megaautos.com.pe/ServicioWS/actualizarServicioResponse" message="tns:actualizarServicioResponse" />
+    <operation name="listarServicios">
+      <input wsam:Action="http://services.megaautos.com.pe/ServicioWS/listarServiciosRequest" message="tns:listarServicios" />
+      <output wsam:Action="http://services.megaautos.com.pe/ServicioWS/listarServiciosResponse" message="tns:listarServiciosResponse" />
     </operation>
   </portType>
   <binding name="ServicioWSPortBinding" type="tns:ServicioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarServicio">
+    <operation name="actualizarServicio">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarServicios">
+    <operation name="eliminarServicio">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarServicio">
+    <operation name="listarServicios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

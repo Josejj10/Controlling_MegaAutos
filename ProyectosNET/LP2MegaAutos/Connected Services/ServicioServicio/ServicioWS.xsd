@@ -18,7 +18,7 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarServicio">
+  <xs:complexType name="actualizarServicio">
     <xs:sequence>
       <xs:element minOccurs="0" name="objServicio" type="tns:servicio" />
     </xs:sequence>
@@ -32,17 +32,17 @@
       <xs:element minOccurs="0" name="tipoServicio" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarServicioResponse">
+  <xs:complexType name="actualizarServicioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarServicio">
+  <xs:complexType name="insertarServicio">
     <xs:sequence>
       <xs:element minOccurs="0" name="objServicio" type="tns:servicio" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarServicioResponse">
+  <xs:complexType name="insertarServicioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

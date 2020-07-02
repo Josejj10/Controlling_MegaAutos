@@ -16,15 +16,6 @@ namespace LP2MegaAutos.ServicioCliente {
     public interface ClienteWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioCliente.buscarPorNombreResponse buscarPorNombre(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.buscarPorNombreResponse> buscarPorNombreAsync(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/listarClientesRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/listarClientesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,6 +23,15 @@ namespace LP2MegaAutos.ServicioCliente {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/listarClientesRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/listarClientesResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.listarClientesResponse> listarClientesAsync(LP2MegaAutos.ServicioCliente.listarClientesRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/insertarClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioCliente.insertarClienteResponse insertarCliente(LP2MegaAutos.ServicioCliente.insertarClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/insertarClienteResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.insertarClienteResponse> insertarClienteAsync(LP2MegaAutos.ServicioCliente.insertarClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/eliminarClienteRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/eliminarClienteResponse")]
@@ -43,13 +43,13 @@ namespace LP2MegaAutos.ServicioCliente {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.eliminarClienteResponse> eliminarClienteAsync(LP2MegaAutos.ServicioCliente.eliminarClienteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/insertarClienteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioCliente.insertarClienteResponse insertarCliente(LP2MegaAutos.ServicioCliente.insertarClienteRequest request);
+        LP2MegaAutos.ServicioCliente.buscarPorNombreResponse buscarPorNombre(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/insertarClienteResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.insertarClienteResponse> insertarClienteAsync(LP2MegaAutos.ServicioCliente.insertarClienteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.buscarPorNombreResponse> buscarPorNombreAsync(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ClienteWS/actualizarClienteRequest", ReplyAction="http://services.megaautos.com.pe/ClienteWS/actualizarClienteResponse")]
@@ -180,42 +180,6 @@ namespace LP2MegaAutos.ServicioCliente {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorNombre", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class buscarPorNombreRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        public buscarPorNombreRequest() {
-        }
-        
-        public buscarPorNombreRequest(string nombre) {
-            this.nombre = nombre;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorNombreResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class buscarPorNombreResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioCliente.cliente @return;
-        
-        public buscarPorNombreResponse() {
-        }
-        
-        public buscarPorNombreResponse(LP2MegaAutos.ServicioCliente.cliente @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientes", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class listarClientesRequest {
         
@@ -237,6 +201,42 @@ namespace LP2MegaAutos.ServicioCliente {
         }
         
         public listarClientesResponse(LP2MegaAutos.ServicioCliente.cliente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioCliente.cliente objCliente;
+        
+        public insertarClienteRequest() {
+        }
+        
+        public insertarClienteRequest(LP2MegaAutos.ServicioCliente.cliente objCliente) {
+            this.objCliente = objCliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarClienteResponse() {
+        }
+        
+        public insertarClienteResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -280,35 +280,35 @@ namespace LP2MegaAutos.ServicioCliente {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarClienteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorNombre", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class buscarPorNombreRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioCliente.cliente objCliente;
+        public string nombre;
         
-        public insertarClienteRequest() {
+        public buscarPorNombreRequest() {
         }
         
-        public insertarClienteRequest(LP2MegaAutos.ServicioCliente.cliente objCliente) {
-            this.objCliente = objCliente;
+        public buscarPorNombreRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarClienteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorNombreResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class buscarPorNombreResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public LP2MegaAutos.ServicioCliente.cliente @return;
         
-        public insertarClienteResponse() {
+        public buscarPorNombreResponse() {
         }
         
-        public insertarClienteResponse(int @return) {
+        public buscarPorNombreResponse(LP2MegaAutos.ServicioCliente.cliente @return) {
             this.@return = @return;
         }
     }
@@ -377,29 +377,6 @@ namespace LP2MegaAutos.ServicioCliente {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioCliente.buscarPorNombreResponse LP2MegaAutos.ServicioCliente.ClienteWS.buscarPorNombre(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request) {
-            return base.Channel.buscarPorNombre(request);
-        }
-        
-        public LP2MegaAutos.ServicioCliente.cliente buscarPorNombre(string nombre) {
-            LP2MegaAutos.ServicioCliente.buscarPorNombreRequest inValue = new LP2MegaAutos.ServicioCliente.buscarPorNombreRequest();
-            inValue.nombre = nombre;
-            LP2MegaAutos.ServicioCliente.buscarPorNombreResponse retVal = ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).buscarPorNombre(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.buscarPorNombreResponse> LP2MegaAutos.ServicioCliente.ClienteWS.buscarPorNombreAsync(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request) {
-            return base.Channel.buscarPorNombreAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.buscarPorNombreResponse> buscarPorNombreAsync(string nombre) {
-            LP2MegaAutos.ServicioCliente.buscarPorNombreRequest inValue = new LP2MegaAutos.ServicioCliente.buscarPorNombreRequest();
-            inValue.nombre = nombre;
-            return ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).buscarPorNombreAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2MegaAutos.ServicioCliente.listarClientesResponse LP2MegaAutos.ServicioCliente.ClienteWS.listarClientes(LP2MegaAutos.ServicioCliente.listarClientesRequest request) {
             return base.Channel.listarClientes(request);
         }
@@ -418,6 +395,29 @@ namespace LP2MegaAutos.ServicioCliente {
         public System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.listarClientesResponse> listarClientesAsync() {
             LP2MegaAutos.ServicioCliente.listarClientesRequest inValue = new LP2MegaAutos.ServicioCliente.listarClientesRequest();
             return ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).listarClientesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioCliente.insertarClienteResponse LP2MegaAutos.ServicioCliente.ClienteWS.insertarCliente(LP2MegaAutos.ServicioCliente.insertarClienteRequest request) {
+            return base.Channel.insertarCliente(request);
+        }
+        
+        public int insertarCliente(LP2MegaAutos.ServicioCliente.cliente objCliente) {
+            LP2MegaAutos.ServicioCliente.insertarClienteRequest inValue = new LP2MegaAutos.ServicioCliente.insertarClienteRequest();
+            inValue.objCliente = objCliente;
+            LP2MegaAutos.ServicioCliente.insertarClienteResponse retVal = ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).insertarCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.insertarClienteResponse> LP2MegaAutos.ServicioCliente.ClienteWS.insertarClienteAsync(LP2MegaAutos.ServicioCliente.insertarClienteRequest request) {
+            return base.Channel.insertarClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.insertarClienteResponse> insertarClienteAsync(LP2MegaAutos.ServicioCliente.cliente objCliente) {
+            LP2MegaAutos.ServicioCliente.insertarClienteRequest inValue = new LP2MegaAutos.ServicioCliente.insertarClienteRequest();
+            inValue.objCliente = objCliente;
+            return ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).insertarClienteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -444,26 +444,26 @@ namespace LP2MegaAutos.ServicioCliente {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioCliente.insertarClienteResponse LP2MegaAutos.ServicioCliente.ClienteWS.insertarCliente(LP2MegaAutos.ServicioCliente.insertarClienteRequest request) {
-            return base.Channel.insertarCliente(request);
+        LP2MegaAutos.ServicioCliente.buscarPorNombreResponse LP2MegaAutos.ServicioCliente.ClienteWS.buscarPorNombre(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request) {
+            return base.Channel.buscarPorNombre(request);
         }
         
-        public int insertarCliente(LP2MegaAutos.ServicioCliente.cliente objCliente) {
-            LP2MegaAutos.ServicioCliente.insertarClienteRequest inValue = new LP2MegaAutos.ServicioCliente.insertarClienteRequest();
-            inValue.objCliente = objCliente;
-            LP2MegaAutos.ServicioCliente.insertarClienteResponse retVal = ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).insertarCliente(inValue);
+        public LP2MegaAutos.ServicioCliente.cliente buscarPorNombre(string nombre) {
+            LP2MegaAutos.ServicioCliente.buscarPorNombreRequest inValue = new LP2MegaAutos.ServicioCliente.buscarPorNombreRequest();
+            inValue.nombre = nombre;
+            LP2MegaAutos.ServicioCliente.buscarPorNombreResponse retVal = ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).buscarPorNombre(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.insertarClienteResponse> LP2MegaAutos.ServicioCliente.ClienteWS.insertarClienteAsync(LP2MegaAutos.ServicioCliente.insertarClienteRequest request) {
-            return base.Channel.insertarClienteAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.buscarPorNombreResponse> LP2MegaAutos.ServicioCliente.ClienteWS.buscarPorNombreAsync(LP2MegaAutos.ServicioCliente.buscarPorNombreRequest request) {
+            return base.Channel.buscarPorNombreAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.insertarClienteResponse> insertarClienteAsync(LP2MegaAutos.ServicioCliente.cliente objCliente) {
-            LP2MegaAutos.ServicioCliente.insertarClienteRequest inValue = new LP2MegaAutos.ServicioCliente.insertarClienteRequest();
-            inValue.objCliente = objCliente;
-            return ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).insertarClienteAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioCliente.buscarPorNombreResponse> buscarPorNombreAsync(string nombre) {
+            LP2MegaAutos.ServicioCliente.buscarPorNombreRequest inValue = new LP2MegaAutos.ServicioCliente.buscarPorNombreRequest();
+            inValue.nombre = nombre;
+            return ((LP2MegaAutos.ServicioCliente.ClienteWS)(this)).buscarPorNombreAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -16,13 +16,13 @@ namespace LP2MegaAutos.ServicioAreaTrabajo {
     public interface AreaTrabajoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse listarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request);
+        LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse eliminarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse> listarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse> eliminarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/insertarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/insertarAreaTrabajoResponse")]
@@ -43,13 +43,49 @@ namespace LP2MegaAutos.ServicioAreaTrabajo {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.actualizarAreaTrabajoResponse> actualizarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.actualizarAreaTrabajoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse eliminarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request);
+        LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse listarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse> eliminarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse> listarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAreaTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarAreaTrabajoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAreaTrabajo;
+        
+        public eliminarAreaTrabajoRequest() {
+        }
+        
+        public eliminarAreaTrabajoRequest(int idAreaTrabajo) {
+            this.idAreaTrabajo = idAreaTrabajo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAreaTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarAreaTrabajoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarAreaTrabajoResponse() {
+        }
+        
+        public eliminarAreaTrabajoResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -157,34 +193,6 @@ namespace LP2MegaAutos.ServicioAreaTrabajo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAreaTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarAreaTrabajoRequest {
-        
-        public listarAreaTrabajoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAreaTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarAreaTrabajoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioAreaTrabajo.areaTrabajo[] @return;
-        
-        public listarAreaTrabajoResponse() {
-        }
-        
-        public listarAreaTrabajoResponse(LP2MegaAutos.ServicioAreaTrabajo.areaTrabajo[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAreaTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class insertarAreaTrabajoRequest {
         
@@ -257,35 +265,27 @@ namespace LP2MegaAutos.ServicioAreaTrabajo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAreaTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarAreaTrabajoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAreaTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarAreaTrabajoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAreaTrabajo;
-        
-        public eliminarAreaTrabajoRequest() {
-        }
-        
-        public eliminarAreaTrabajoRequest(int idAreaTrabajo) {
-            this.idAreaTrabajo = idAreaTrabajo;
+        public listarAreaTrabajoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAreaTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarAreaTrabajoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAreaTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarAreaTrabajoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioAreaTrabajo.areaTrabajo[] @return;
         
-        public eliminarAreaTrabajoResponse() {
+        public listarAreaTrabajoResponse() {
         }
         
-        public eliminarAreaTrabajoResponse(int @return) {
+        public listarAreaTrabajoResponse(LP2MegaAutos.ServicioAreaTrabajo.areaTrabajo[] @return) {
             this.@return = @return;
         }
     }
@@ -318,24 +318,26 @@ namespace LP2MegaAutos.ServicioAreaTrabajo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.listarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request) {
-            return base.Channel.listarAreaTrabajo(request);
+        LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.eliminarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request) {
+            return base.Channel.eliminarAreaTrabajo(request);
         }
         
-        public LP2MegaAutos.ServicioAreaTrabajo.areaTrabajo[] listarAreaTrabajo() {
-            LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest();
-            LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse retVal = ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).listarAreaTrabajo(inValue);
+        public int eliminarAreaTrabajo(int idAreaTrabajo) {
+            LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest();
+            inValue.idAreaTrabajo = idAreaTrabajo;
+            LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse retVal = ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).eliminarAreaTrabajo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse> LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.listarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request) {
-            return base.Channel.listarAreaTrabajoAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse> LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.eliminarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request) {
+            return base.Channel.eliminarAreaTrabajoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse> listarAreaTrabajoAsync() {
-            LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest();
-            return ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).listarAreaTrabajoAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse> eliminarAreaTrabajoAsync(int idAreaTrabajo) {
+            LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest();
+            inValue.idAreaTrabajo = idAreaTrabajo;
+            return ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).eliminarAreaTrabajoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -385,26 +387,24 @@ namespace LP2MegaAutos.ServicioAreaTrabajo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.eliminarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request) {
-            return base.Channel.eliminarAreaTrabajo(request);
+        LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.listarAreaTrabajo(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request) {
+            return base.Channel.listarAreaTrabajo(request);
         }
         
-        public int eliminarAreaTrabajo(int idAreaTrabajo) {
-            LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest();
-            inValue.idAreaTrabajo = idAreaTrabajo;
-            LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse retVal = ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).eliminarAreaTrabajo(inValue);
+        public LP2MegaAutos.ServicioAreaTrabajo.areaTrabajo[] listarAreaTrabajo() {
+            LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest();
+            LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse retVal = ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).listarAreaTrabajo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse> LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.eliminarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest request) {
-            return base.Channel.eliminarAreaTrabajoAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse> LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS.listarAreaTrabajoAsync(LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest request) {
+            return base.Channel.listarAreaTrabajoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoResponse> eliminarAreaTrabajoAsync(int idAreaTrabajo) {
-            LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.eliminarAreaTrabajoRequest();
-            inValue.idAreaTrabajo = idAreaTrabajo;
-            return ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).eliminarAreaTrabajoAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoResponse> listarAreaTrabajoAsync() {
+            LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest inValue = new LP2MegaAutos.ServicioAreaTrabajo.listarAreaTrabajoRequest();
+            return ((LP2MegaAutos.ServicioAreaTrabajo.AreaTrabajoWS)(this)).listarAreaTrabajoAsync(inValue);
         }
     }
 }

@@ -16,13 +16,13 @@ namespace LP2MegaAutos.ServicioDriver {
     public interface DriverWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/eliminarDriverResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/actualizarDriverResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioDriver.eliminarDriverResponse eliminarDriver(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request);
+        LP2MegaAutos.ServicioDriver.actualizarDriverResponse actualizarDriver(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/eliminarDriverResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.eliminarDriverResponse> eliminarDriverAsync(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/actualizarDriverResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.actualizarDriverResponse> actualizarDriverAsync(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/insertarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/insertarDriverResponse")]
@@ -34,15 +34,6 @@ namespace LP2MegaAutos.ServicioDriver {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.insertarDriverResponse> insertarDriverAsync(LP2MegaAutos.ServicioDriver.insertarDriverRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/actualizarDriverResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioDriver.actualizarDriverResponse actualizarDriver(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/actualizarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/actualizarDriverResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.actualizarDriverResponse> actualizarDriverAsync(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/listarDriversRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/listarDriversResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,42 +41,15 @@ namespace LP2MegaAutos.ServicioDriver {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/listarDriversRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/listarDriversResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.listarDriversResponse> listarDriversAsync(LP2MegaAutos.ServicioDriver.listarDriversRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDriver", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarDriverRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idDriver;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/eliminarDriverResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioDriver.eliminarDriverResponse eliminarDriver(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request);
         
-        public eliminarDriverRequest() {
-        }
-        
-        public eliminarDriverRequest(int idDriver) {
-            this.idDriver = idDriver;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDriverResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarDriverResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarDriverResponse() {
-        }
-        
-        public eliminarDriverResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/DriverWS/eliminarDriverRequest", ReplyAction="http://services.megaautos.com.pe/DriverWS/eliminarDriverResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.eliminarDriverResponse> eliminarDriverAsync(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request);
     }
     
     /// <remarks/>
@@ -137,42 +101,6 @@ namespace LP2MegaAutos.ServicioDriver {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriver", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarDriverRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioDriver.driver objDriver;
-        
-        public insertarDriverRequest() {
-        }
-        
-        public insertarDriverRequest(LP2MegaAutos.ServicioDriver.driver objDriver) {
-            this.objDriver = objDriver;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriverResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarDriverResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarDriverResponse() {
-        }
-        
-        public insertarDriverResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDriver", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class actualizarDriverRequest {
         
@@ -209,6 +137,42 @@ namespace LP2MegaAutos.ServicioDriver {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriver", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarDriverRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioDriver.driver objDriver;
+        
+        public insertarDriverRequest() {
+        }
+        
+        public insertarDriverRequest(LP2MegaAutos.ServicioDriver.driver objDriver) {
+            this.objDriver = objDriver;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarDriverResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarDriverResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarDriverResponse() {
+        }
+        
+        public insertarDriverResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarDrivers", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class listarDriversRequest {
         
@@ -230,6 +194,42 @@ namespace LP2MegaAutos.ServicioDriver {
         }
         
         public listarDriversResponse(LP2MegaAutos.ServicioDriver.driver[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDriver", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarDriverRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idDriver;
+        
+        public eliminarDriverRequest() {
+        }
+        
+        public eliminarDriverRequest(int idDriver) {
+            this.idDriver = idDriver;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDriverResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarDriverResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarDriverResponse() {
+        }
+        
+        public eliminarDriverResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -262,26 +262,26 @@ namespace LP2MegaAutos.ServicioDriver {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioDriver.eliminarDriverResponse LP2MegaAutos.ServicioDriver.DriverWS.eliminarDriver(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request) {
-            return base.Channel.eliminarDriver(request);
+        LP2MegaAutos.ServicioDriver.actualizarDriverResponse LP2MegaAutos.ServicioDriver.DriverWS.actualizarDriver(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request) {
+            return base.Channel.actualizarDriver(request);
         }
         
-        public int eliminarDriver(int idDriver) {
-            LP2MegaAutos.ServicioDriver.eliminarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.eliminarDriverRequest();
-            inValue.idDriver = idDriver;
-            LP2MegaAutos.ServicioDriver.eliminarDriverResponse retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).eliminarDriver(inValue);
+        public int actualizarDriver(LP2MegaAutos.ServicioDriver.driver objDriver) {
+            LP2MegaAutos.ServicioDriver.actualizarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.actualizarDriverRequest();
+            inValue.objDriver = objDriver;
+            LP2MegaAutos.ServicioDriver.actualizarDriverResponse retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).actualizarDriver(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.eliminarDriverResponse> LP2MegaAutos.ServicioDriver.DriverWS.eliminarDriverAsync(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request) {
-            return base.Channel.eliminarDriverAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.actualizarDriverResponse> LP2MegaAutos.ServicioDriver.DriverWS.actualizarDriverAsync(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request) {
+            return base.Channel.actualizarDriverAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.eliminarDriverResponse> eliminarDriverAsync(int idDriver) {
-            LP2MegaAutos.ServicioDriver.eliminarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.eliminarDriverRequest();
-            inValue.idDriver = idDriver;
-            return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).eliminarDriverAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.actualizarDriverResponse> actualizarDriverAsync(LP2MegaAutos.ServicioDriver.driver objDriver) {
+            LP2MegaAutos.ServicioDriver.actualizarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.actualizarDriverRequest();
+            inValue.objDriver = objDriver;
+            return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).actualizarDriverAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -308,29 +308,6 @@ namespace LP2MegaAutos.ServicioDriver {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioDriver.actualizarDriverResponse LP2MegaAutos.ServicioDriver.DriverWS.actualizarDriver(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request) {
-            return base.Channel.actualizarDriver(request);
-        }
-        
-        public int actualizarDriver(LP2MegaAutos.ServicioDriver.driver objDriver) {
-            LP2MegaAutos.ServicioDriver.actualizarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.actualizarDriverRequest();
-            inValue.objDriver = objDriver;
-            LP2MegaAutos.ServicioDriver.actualizarDriverResponse retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).actualizarDriver(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.actualizarDriverResponse> LP2MegaAutos.ServicioDriver.DriverWS.actualizarDriverAsync(LP2MegaAutos.ServicioDriver.actualizarDriverRequest request) {
-            return base.Channel.actualizarDriverAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.actualizarDriverResponse> actualizarDriverAsync(LP2MegaAutos.ServicioDriver.driver objDriver) {
-            LP2MegaAutos.ServicioDriver.actualizarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.actualizarDriverRequest();
-            inValue.objDriver = objDriver;
-            return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).actualizarDriverAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2MegaAutos.ServicioDriver.listarDriversResponse LP2MegaAutos.ServicioDriver.DriverWS.listarDrivers(LP2MegaAutos.ServicioDriver.listarDriversRequest request) {
             return base.Channel.listarDrivers(request);
         }
@@ -349,6 +326,29 @@ namespace LP2MegaAutos.ServicioDriver {
         public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.listarDriversResponse> listarDriversAsync() {
             LP2MegaAutos.ServicioDriver.listarDriversRequest inValue = new LP2MegaAutos.ServicioDriver.listarDriversRequest();
             return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).listarDriversAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioDriver.eliminarDriverResponse LP2MegaAutos.ServicioDriver.DriverWS.eliminarDriver(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request) {
+            return base.Channel.eliminarDriver(request);
+        }
+        
+        public int eliminarDriver(int idDriver) {
+            LP2MegaAutos.ServicioDriver.eliminarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.eliminarDriverRequest();
+            inValue.idDriver = idDriver;
+            LP2MegaAutos.ServicioDriver.eliminarDriverResponse retVal = ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).eliminarDriver(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.eliminarDriverResponse> LP2MegaAutos.ServicioDriver.DriverWS.eliminarDriverAsync(LP2MegaAutos.ServicioDriver.eliminarDriverRequest request) {
+            return base.Channel.eliminarDriverAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioDriver.eliminarDriverResponse> eliminarDriverAsync(int idDriver) {
+            LP2MegaAutos.ServicioDriver.eliminarDriverRequest inValue = new LP2MegaAutos.ServicioDriver.eliminarDriverRequest();
+            inValue.idDriver = idDriver;
+            return ((LP2MegaAutos.ServicioDriver.DriverWS)(this)).eliminarDriverAsync(inValue);
         }
     }
 }

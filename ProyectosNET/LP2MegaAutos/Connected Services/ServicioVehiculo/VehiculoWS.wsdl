@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/VehiculoWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
-  <message name="eliminarVehiculo">
-    <part name="parameters" element="tns:eliminarVehiculo" />
+  <message name="listarVehiculos">
+    <part name="parameters" element="tns:listarVehiculos" />
   </message>
-  <message name="eliminarVehiculoResponse">
-    <part name="parameters" element="tns:eliminarVehiculoResponse" />
+  <message name="listarVehiculosResponse">
+    <part name="parameters" element="tns:listarVehiculosResponse" />
   </message>
   <message name="insertarVehiculo">
     <part name="parameters" element="tns:insertarVehiculo" />
@@ -17,11 +17,11 @@
   <message name="insertarVehiculoResponse">
     <part name="parameters" element="tns:insertarVehiculoResponse" />
   </message>
-  <message name="listarVehiculos">
-    <part name="parameters" element="tns:listarVehiculos" />
+  <message name="eliminarVehiculo">
+    <part name="parameters" element="tns:eliminarVehiculo" />
   </message>
-  <message name="listarVehiculosResponse">
-    <part name="parameters" element="tns:listarVehiculosResponse" />
+  <message name="eliminarVehiculoResponse">
+    <part name="parameters" element="tns:eliminarVehiculoResponse" />
   </message>
   <message name="actualizarVehiculo">
     <part name="parameters" element="tns:actualizarVehiculo" />
@@ -30,17 +30,17 @@
     <part name="parameters" element="tns:actualizarVehiculoResponse" />
   </message>
   <portType name="VehiculoWS">
-    <operation name="eliminarVehiculo">
-      <input wsam:Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoRequest" message="tns:eliminarVehiculo" />
-      <output wsam:Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoResponse" message="tns:eliminarVehiculoResponse" />
+    <operation name="listarVehiculos">
+      <input wsam:Action="http://services.megaautos.com.pe/VehiculoWS/listarVehiculosRequest" message="tns:listarVehiculos" />
+      <output wsam:Action="http://services.megaautos.com.pe/VehiculoWS/listarVehiculosResponse" message="tns:listarVehiculosResponse" />
     </operation>
     <operation name="insertarVehiculo">
       <input wsam:Action="http://services.megaautos.com.pe/VehiculoWS/insertarVehiculoRequest" message="tns:insertarVehiculo" />
       <output wsam:Action="http://services.megaautos.com.pe/VehiculoWS/insertarVehiculoResponse" message="tns:insertarVehiculoResponse" />
     </operation>
-    <operation name="listarVehiculos">
-      <input wsam:Action="http://services.megaautos.com.pe/VehiculoWS/listarVehiculosRequest" message="tns:listarVehiculos" />
-      <output wsam:Action="http://services.megaautos.com.pe/VehiculoWS/listarVehiculosResponse" message="tns:listarVehiculosResponse" />
+    <operation name="eliminarVehiculo">
+      <input wsam:Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoRequest" message="tns:eliminarVehiculo" />
+      <output wsam:Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoResponse" message="tns:eliminarVehiculoResponse" />
     </operation>
     <operation name="actualizarVehiculo">
       <input wsam:Action="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoRequest" message="tns:actualizarVehiculo" />
@@ -49,7 +49,7 @@
   </portType>
   <binding name="VehiculoWSPortBinding" type="tns:VehiculoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarVehiculo">
+    <operation name="listarVehiculos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarVehiculos">
+    <operation name="eliminarVehiculo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

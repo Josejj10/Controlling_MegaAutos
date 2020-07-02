@@ -45,12 +45,13 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             this.lbl_EditarVehiculo.Text = "Editar vehículo";
             this.txt_placaVehiculo.Text = vehiculo.placa.Trim();
 
+            string cadena = vehiculo.propietario.numDocumento + " - " + vehiculo.propietario.nombre;
+
             cboTipoCliente.DataSource = new BindingList<ServicioCliente.cliente>(daoCliente.listarClientes().ToArray());
+            cboTipoCliente.Text = cadena;
             cboTipoCliente.DisplayMember = "numDocumento";
             cboTipoCliente.ValueMember = "id";
 
-            //this.cboTipoCliente.Text = vehiculo.propietario.numDocumento;
-            this.cboTipoCliente.Text = OtrosHelper.tipoOracion(vehiculo.propietario.nombre);
             this.txt_TipoVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
         }
         private void toggleComponentes()
@@ -111,6 +112,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
 
             _vehiculo.propietario.id = cliente.id;
             _vehiculo.propietario.nombre = cliente.nombre;
+            _vehiculo.propietario.numDocumento = _cliente.numDocumento;
             _vehiculo.tipoVehiculo = txt_TipoVehiculo.Text;
             this.DialogResult = DialogResult.OK;
         }
@@ -209,6 +211,13 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         private void btnEditar_Click(object sender, EventArgs e)
         {
             toggleComponentes();
+        }
+
+        private void cboTipoCliente_Format(object sender, ListControlConvertEventArgs e)
+        {
+            string dni = ((cliente)e.ListItem).numDocumento;
+            string nombre = ((cliente)e.ListItem).nombre;
+            e.Value = dni + " - " + nombre;
         }
     }
 }

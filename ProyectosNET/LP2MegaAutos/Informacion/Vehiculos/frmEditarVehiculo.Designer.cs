@@ -46,6 +46,7 @@
             this.txt_TipoVehiculo = new System.Windows.Forms.TextBox();
             this.lbl_TipoVehiculo = new System.Windows.Forms.Label();
             this.pnl_nombCliente = new System.Windows.Forms.Panel();
+            this.cboTipoCliente = new System.Windows.Forms.ComboBox();
             this.rnd_color_2 = new LP2MegaAutos.RoundedPanel();
             this.lbl_nombCliente = new System.Windows.Forms.Label();
             this.pnl_placaVehiculo = new System.Windows.Forms.Panel();
@@ -54,7 +55,6 @@
             this.lbl_placaVehiculo = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.cboTipoCliente = new System.Windows.Forms.ComboBox();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
@@ -428,6 +428,23 @@
             this.tagsExtender1.SetTagFontSize(this.pnl_nombCliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_nombCliente, System.Drawing.FontStyle.Regular);
             // 
+            // cboTipoCliente
+            // 
+            this.cboTipoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.cboTipoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoCliente.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboTipoCliente.FormattingEnabled = true;
+            this.cboTipoCliente.Location = new System.Drawing.Point(4, 16);
+            this.cboTipoCliente.Name = "cboTipoCliente";
+            this.cboTipoCliente.Size = new System.Drawing.Size(286, 24);
+            this.cboTipoCliente.TabIndex = 84;
+            this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
+            this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
+            this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cboTipoCliente, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cboTipoCliente, System.Drawing.FontStyle.Bold);
+            this.cboTipoCliente.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboTipoCliente_Format);
+            // 
             // rnd_color_2
             // 
             this.rnd_color_2.ArcRadiusBorde = 15;
@@ -593,22 +610,6 @@
             this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // cboTipoCliente
-            // 
-            this.cboTipoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.cboTipoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboTipoCliente.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
-            this.cboTipoCliente.FormattingEnabled = true;
-            this.cboTipoCliente.Location = new System.Drawing.Point(3, 16);
-            this.cboTipoCliente.Name = "cboTipoCliente";
-            this.cboTipoCliente.Size = new System.Drawing.Size(286, 24);
-            this.cboTipoCliente.TabIndex = 84;
-            this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
-            this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
-            this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.cboTipoCliente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.cboTipoCliente, System.Drawing.FontStyle.Bold);
             // 
             // frmEditarVehiculo
             // 

@@ -35,8 +35,8 @@
             this.txt_telefono = new System.Windows.Forms.TextBox();
             this.lbl_teléfono = new System.Windows.Forms.Label();
             this.pnl_codServ = new System.Windows.Forms.Panel();
+            this.cboDistritos = new System.Windows.Forms.ComboBox();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
-            this.txt_distrito = new System.Windows.Forms.TextBox();
             this.lbl_distrito = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
@@ -152,8 +152,8 @@
             // 
             // pnl_codServ
             // 
+            this.pnl_codServ.Controls.Add(this.cboDistritos);
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
-            this.pnl_codServ.Controls.Add(this.txt_distrito);
             this.pnl_codServ.Controls.Add(this.lbl_distrito);
             this.pnl_codServ.Location = new System.Drawing.Point(90, 107);
             this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
@@ -165,6 +165,66 @@
             this.tagsExtender1.SetTagFontName(this.pnl_codServ, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnl_codServ, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_codServ, System.Drawing.FontStyle.Regular);
+            // 
+            // cboDistritos
+            // 
+            this.cboDistritos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.cboDistritos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboDistritos.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboDistritos.FormattingEnabled = true;
+            this.cboDistritos.Items.AddRange(new object[] {
+            "Ancon",
+            "Ate Vitarte",
+            "Barranco",
+            "Breña",
+            "Carabayllo",
+            "Chaclacayo",
+            "Chorrillos",
+            "Cieneguilla",
+            "Comas",
+            "El Agustino",
+            "Independencia",
+            "Jesus Maria",
+            "La Molina",
+            "La Victoria",
+            "Lima",
+            "Lince",
+            "Los Olivos",
+            "Lurigancho",
+            "Lurin",
+            "Magdalena del Mar",
+            "Miraflores",
+            "Pachacamac",
+            "Pucusuna",
+            "Pueblo Libre",
+            "Puente Piedra",
+            "Punta Hermosa",
+            "Punta Negra",
+            "Rimac",
+            "San Bartolo",
+            "San Borja",
+            "San Isidro",
+            "San Juan de Lurigancho",
+            "San Juan de Miraflores",
+            "San Luis",
+            "San Martin de Porres",
+            "San Miguel",
+            "San Anita",
+            "Santa Maria del Mar",
+            "Santa Rosa",
+            "Santiago de Surco",
+            "Surquillo",
+            "Villa El Salvador",
+            "Villa Maria del Triunfo"});
+            this.cboDistritos.Location = new System.Drawing.Point(5, 17);
+            this.cboDistritos.Name = "cboDistritos";
+            this.cboDistritos.Size = new System.Drawing.Size(286, 24);
+            this.cboDistritos.TabIndex = 67;
+            this.tagsExtender1.SetTag2(this.cboDistritos, null);
+            this.tagsExtender1.SetTag3(this.cboDistritos, null);
+            this.tagsExtender1.SetTagFontName(this.cboDistritos, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cboDistritos, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cboDistritos, System.Drawing.FontStyle.Bold);
             // 
             // rnd_color_1
             // 
@@ -191,22 +251,6 @@
             this.rnd_color_1.XPanel = 0;
             this.rnd_color_1.YBorde = 0;
             this.rnd_color_1.YPanel = 0;
-            // 
-            // txt_distrito
-            // 
-            this.txt_distrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_distrito.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_distrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_distrito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_distrito.Location = new System.Drawing.Point(7, 18);
-            this.txt_distrito.Name = "txt_distrito";
-            this.txt_distrito.Size = new System.Drawing.Size(284, 23);
-            this.txt_distrito.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_distrito, null);
-            this.tagsExtender1.SetTag3(this.txt_distrito, null);
-            this.tagsExtender1.SetTagFontName(this.txt_distrito, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_distrito, 14F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_distrito, System.Drawing.FontStyle.Bold);
             // 
             // lbl_distrito
             // 
@@ -279,7 +323,7 @@
             this.txt_direccion.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_direccion, null);
             this.tagsExtender1.SetTag3(this.txt_direccion, null);
-            this.tagsExtender1.SetTagFontName(this.txt_direccion, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_direccion, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_direccion, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_direccion, System.Drawing.FontStyle.Bold);
             // 
@@ -633,7 +677,6 @@
         private System.Windows.Forms.Label lbl_teléfono;
         private System.Windows.Forms.Panel pnl_codServ;
         private RoundedPanel rnd_color_1;
-        private System.Windows.Forms.TextBox txt_distrito;
         private System.Windows.Forms.Label lbl_distrito;
         private System.Windows.Forms.Panel panel2;
         private RoundedPanel roundedPanel2;
@@ -651,5 +694,6 @@
         private System.Windows.Forms.TextBox txt_NombreSede;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ComboBox cboDistritos;
     }
 }

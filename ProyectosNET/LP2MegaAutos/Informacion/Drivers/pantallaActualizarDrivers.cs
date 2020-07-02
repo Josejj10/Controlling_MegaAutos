@@ -204,9 +204,35 @@ namespace LP2MegaAutos
                 if(daoDriver.insertarDriver(_driver) == 0)
                     frm = new frmMessageBox("No se pudo insertar.");
                 else
+                {
                     frm = new frmMessageBox("Se inserto correctamente el driver en " + _driver.formula);
+                    btnAZ_Click(btnAZ, e);
+                }
                 frm.ShowDialog();
             }
+        }
+
+        private void crearItemsListaBuscar(List<driver> _driversB)
+        {
+            if (_driversB == null) return;
+            foreach (driver d in _driversB)
+            {
+                createItemListaDriver(d, "Carter Kane", DateTime.Now);
+            }
+        }
+
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // Tenemos la lista usuarios
+            List<driver> _driversBuscados = new List<driver>();
+            foreach (driver d in drivers)
+                if (d.formula.ToString().Contains(txt_Buscar.Text)){
+                    _driversBuscados.Add(d);
+                }                    
+
+            quitarItemsLista();
+            crearItemsListaBuscar(_driversBuscados);
         }
     }
 }

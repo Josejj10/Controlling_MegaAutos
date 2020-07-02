@@ -5,6 +5,7 @@
  */
 package pe.com.megaautos.dao;
 import java.util.ArrayList;
+import joinery.DataFrame;
 import pe.com.megaautos.model.Vehiculo;
 /**
  *
@@ -12,6 +13,7 @@ import pe.com.megaautos.model.Vehiculo;
  */
 public interface VehiculoDAO {
     int insertar(Vehiculo vehiculo);
+    //void guardarBatch(DataFrame df);
     int actualizar(Vehiculo vehiculo);
     int eliminar(int idVehiculo);
     ArrayList<Vehiculo> listar();

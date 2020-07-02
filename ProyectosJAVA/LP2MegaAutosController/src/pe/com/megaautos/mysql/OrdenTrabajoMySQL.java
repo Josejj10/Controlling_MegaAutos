@@ -31,6 +31,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
     // pero si no pueden transformarlo, cambiar los parametros para recibir un
     // DF o como prefieran, pero para eficiencia es mejor solo recibir una lista
     // Replicar para las demas wbds que quieran guardar
+    @Override
     public void guardarBatch(List<OrdenTrabajo> ordenesTrabajo){
         try{
             Connection con = DBDataSource.getConnection();

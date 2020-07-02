@@ -1,5 +1,7 @@
 ﻿using LP2MegaAutos.Framework;
 using LP2MegaAutos.Properties;
+using LP2MegaAutos.ServicioCliente;
+using LP2MegaAutos.ServicioServicio;
 using LP2MegaAutos.VentanasPrincipales;
 using MetroFramework.Forms;
 using System;
@@ -26,6 +28,10 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             _vehiculo = new ServicioVehiculo.vehiculo();
             _cliente = new ServicioCliente.cliente();
             daoCliente = new ServicioCliente.ClienteWSClient();
+
+            cboTipoCliente.DataSource = new BindingList<ServicioCliente.cliente>(daoCliente.listarClientes().ToArray());
+            cboTipoCliente.DisplayMember = "numDocumento";
+            cboTipoCliente.ValueMember = "id";
             lbl_EditarVehiculo.Text = "Agregar vehículo";
         }
         public frmEditarVehiculo(ServicioVehiculo.vehiculo vehiculo)
@@ -37,14 +43,20 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             daoCliente = new ServicioCliente.ClienteWSClient();
             toggleComponentes();
             this.lbl_EditarVehiculo.Text = "Editar vehículo";
-            this.txt_placaVehiculo.Text = vehiculo.placa;
-            this.txt_nombVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.propietario.nombre);
+            this.txt_placaVehiculo.Text = vehiculo.placa.Trim();
+
+            cboTipoCliente.DataSource = new BindingList<ServicioCliente.cliente>(daoCliente.listarClientes().ToArray());
+            cboTipoCliente.DisplayMember = "numDocumento";
+            cboTipoCliente.ValueMember = "id";
+
+            //this.cboTipoCliente.Text = vehiculo.propietario.numDocumento;
+            this.cboTipoCliente.Text = OtrosHelper.tipoOracion(vehiculo.propietario.nombre);
             this.txt_TipoVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
         }
         private void toggleComponentes()
         {
             bool en = lbl_EditarVehiculo.Enabled = txt_placaVehiculo.Enabled =
-                txt_nombVehiculo.Enabled = txt_TipoVehiculo.Enabled = btn_guardar.Enabled
+                cboTipoCliente.Enabled = txt_TipoVehiculo.Enabled = btn_guardar.Enabled
                 = !lbl_EditarVehiculo.Enabled;
 
 
@@ -52,11 +64,11 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             {
                 // No habilitado
                 lbl_EditarVehiculo.BackColor = txt_placaVehiculo.BackColor =
-                    txt_nombVehiculo.BackColor = txt_TipoVehiculo.BackColor
+                    cboTipoCliente.BackColor = txt_TipoVehiculo.BackColor
                     = Colores.FrontBackground;
 
                 lbl_EditarVehiculo.ForeColor = txt_placaVehiculo.ForeColor =
-                    txt_nombVehiculo.ForeColor = txt_TipoVehiculo.ForeColor =
+                    cboTipoCliente.ForeColor = txt_TipoVehiculo.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
                     rnd_color_2.ColorPanel =
                     rnd_guardar.ColorPanel =
@@ -71,7 +83,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             // Habilitado
             lbl_EditarVehiculo.ForeColor = Colores.HighContrast;
             txt_placaVehiculo.ForeColor =
-               txt_nombVehiculo.ForeColor = txt_TipoVehiculo.ForeColor =
+               cboTipoCliente.ForeColor = txt_TipoVehiculo.ForeColor =
                Colores.HighContrast;
 
             rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
@@ -95,8 +107,10 @@ namespace LP2MegaAutos.Informacion.Vehiculos
                 return;
             _vehiculo.placa = txt_placaVehiculo.Text;
             _vehiculo.propietario = new ServicioVehiculo.cliente();
-            _vehiculo.propietario.id = _cliente.id;
-            _vehiculo.propietario.nombre = _cliente.nombre;
+            ServicioCliente.cliente cliente = (ServicioCliente.cliente)cboTipoCliente.SelectedItem;
+
+            _vehiculo.propietario.id = cliente.id;
+            _vehiculo.propietario.nombre = cliente.nombre;
             _vehiculo.tipoVehiculo = txt_TipoVehiculo.Text;
             this.DialogResult = DialogResult.OK;
         }
@@ -110,7 +124,14 @@ namespace LP2MegaAutos.Informacion.Vehiculos
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txt_nombVehiculo.Text))
+            if (txt_placaVehiculo.Text.Length != 7)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una placa correcta.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (cboTipoCliente.SelectedIndex == -1)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese el nombre del propietario del vehículo.", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -124,13 +145,13 @@ namespace LP2MegaAutos.Informacion.Vehiculos
                 return false;
             }
 
-            _cliente = daoCliente.buscarPorNombre(txt_nombVehiculo.Text);
-            if (_cliente.id == 0)
-            {
-                frmMessageBox f = new frmMessageBox("El cliente no existe en la base de datos. Por favor, ingrese un cliente existente.", MessageBoxButtons.OK);
-                f.ShowDialog();
-                return false;
-            }
+            //_cliente = daoCliente.buscarPorNombre(txt_nombVehiculo.Text);
+            //if (_cliente.id == 0)
+            //{
+            //    frmMessageBox f = new frmMessageBox("El cliente no existe en la base de datos. Por favor, ingrese un cliente existente.", MessageBoxButtons.OK);
+            //    f.ShowDialog();
+            //    return false;
+            //}
             
             return true;
         }

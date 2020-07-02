@@ -31,18 +31,18 @@ namespace LP2MegaAutos
             InitializeComponent();
             _cliente = cliente;
             toggleComponentes();
-            this.txt_NombreCliente.Text = OtrosHelper.tipoOracion(cliente.nombre);
-            this.txt_NumeroDocumento.Text = OtrosHelper.tipoOracion(cliente.numDocumento);
-            this.txt_TIpoDocumento.Text = OtrosHelper.tipoOracion(cliente.tipoCliente);
-            this.txt_Telefono.Text = OtrosHelper.tipoOracion(cliente.telefono);
-            this.txt_Correo.Text = OtrosHelper.tipoOracion(cliente.correo);
-            this.txtTipoCliente.Text = OtrosHelper.tipoOracion(cliente.tipoCliente);
+            this.txt_NombreCliente.Text = OtrosHelper.tipoOracion(cliente.nombre).Trim();
+            this.txt_NumeroDocumento.Text = OtrosHelper.tipoOracion(cliente.numDocumento).Trim();
+            this.cboTipoDocumento.Text = OtrosHelper.tipoOracion(cliente.tipoDocumento).Trim();
+            this.txt_Telefono.Text = OtrosHelper.tipoOracion(cliente.telefono).Trim();
+            this.txt_Correo.Text = OtrosHelper.tipoOracion(cliente.correo).Trim();
+            this.cboTipoCliente.Text = OtrosHelper.tipoOracion(cliente.tipoCliente).Trim();
 
         }
 
         private void txt_NombreCliente_Enter(object sender, EventArgs e)
         {
-            if (txt_NombreCliente.Text == "Agregar nombre de cliente...")
+            if (txt_NombreCliente.Text == "Agregar nombre del cliente...")
                 txt_NombreCliente.Text = string.Empty;
             txt_NombreCliente.ForeColor = Colores.HighContrast;
         }
@@ -52,7 +52,7 @@ namespace LP2MegaAutos
             if(txt_NombreCliente.Text == string.Empty)
             {
                 txt_NombreCliente.ForeColor = Colores.LowContrast;
-                txt_NombreCliente.Text = "Agregar nombre de cliente...";
+                txt_NombreCliente.Text = "Agregar nombre del cliente...";
             }
         }
 
@@ -64,11 +64,11 @@ namespace LP2MegaAutos
             if (f.ShowDialog() != DialogResult.OK)
                 return;
             _cliente.nombre = txt_NombreCliente.Text;
-            _cliente.numDocumento = txt_NumeroDocumento.Text;
-            _cliente.tipoDocumento = txt_TIpoDocumento.Text;
-            _cliente.telefono = txt_Telefono.Text;
+            _cliente.numDocumento = txt_NumeroDocumento.Text.Trim();
+            _cliente.tipoDocumento = cboTipoDocumento.Text.Trim();
+            _cliente.telefono = txt_Telefono.Text.Trim();
             _cliente.correo = txt_Correo.Text;
-            _cliente.tipoCliente = txtTipoCliente.Text;
+            _cliente.tipoCliente = cboTipoCliente.Text;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -125,10 +125,10 @@ namespace LP2MegaAutos
                 return;
             _cliente.nombre = txt_NombreCliente.Text;
             _cliente.numDocumento= txt_NumeroDocumento.Text;
-            _cliente.tipoDocumento = txt_TIpoDocumento.Text;
+            _cliente.tipoDocumento = cboTipoDocumento.Text;
             _cliente.telefono = txt_Telefono.Text;
             _cliente.correo = txt_Correo.Text;
-            _cliente.tipoCliente = txtTipoCliente.Text;
+            _cliente.tipoCliente = cboTipoCliente.Text;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -140,8 +140,8 @@ namespace LP2MegaAutos
         private void toggleComponentes()
         {
             bool en = txt_NombreCliente.Enabled = txt_NumeroDocumento.Enabled =
-                txt_TIpoDocumento.Enabled = txt_Telefono.Enabled = 
-                txtTipoCliente.Enabled = btn_guardar.Enabled
+                cboTipoDocumento.Enabled = txt_Telefono.Enabled = 
+                cboTipoCliente.Enabled = btn_guardar.Enabled
                 = !txt_NombreCliente.Enabled;
 
             
@@ -151,11 +151,11 @@ namespace LP2MegaAutos
             {
                 // No habilitado
                 txt_NombreCliente.BackColor = txt_NumeroDocumento.BackColor =
-                    txt_TIpoDocumento.BackColor = txt_Telefono.BackColor = txt_Correo.BackColor = txtTipoCliente.BackColor = Colores.FrontBackground;
+                    cboTipoDocumento.BackColor = txt_Telefono.BackColor = txt_Correo.BackColor = cboTipoCliente.BackColor = Colores.FrontBackground;
 
                 txt_NombreCliente.ForeColor = txt_NumeroDocumento.ForeColor =
-                    txt_TIpoDocumento.ForeColor = txt_Telefono.ForeColor =
-                    txt_Correo.ForeColor = txtTipoCliente.ForeColor =
+                    cboTipoDocumento.ForeColor = txt_Telefono.ForeColor =
+                    txt_Correo.ForeColor = cboTipoCliente.ForeColor =
                     rnd_color_1.ColorPanel = 
                     roundedPanel1.ColorPanel =
                     roundedPanel2.ColorPanel =
@@ -177,8 +177,8 @@ namespace LP2MegaAutos
             // Habilitado
             txt_NombreCliente.ForeColor = Colores.HighContrast;
             txt_NumeroDocumento.ForeColor =
-               txt_TIpoDocumento.ForeColor = txt_Telefono.ForeColor =
-               txt_Correo.ForeColor = txtTipoCliente.ForeColor = 
+               cboTipoDocumento.ForeColor = txt_Telefono.ForeColor =
+               txt_Correo.ForeColor = cboTipoCliente.ForeColor = 
                Colores.HighContrast;
 
             rnd_color_1.ColorPanel = 
@@ -243,7 +243,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txt_TIpoDocumento.Text))
+            if (cboTipoDocumento.SelectedIndex == -1)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un tipo documento correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -258,7 +258,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txtTipoCliente.Text))
+            if (cboTipoCliente.SelectedIndex == -1)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un tipo de cliente correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -279,16 +279,16 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if ((txt_NumeroDocumento.Text.Length == 8) && (txt_TIpoDocumento.Text != "DNI"))
+            if ((txt_NumeroDocumento.Text.Length == 8) && (cboTipoDocumento.Text != "DNI"))
             {
-                frmMessageBox f = new frmMessageBox("El RUC debe tener 8 digitos.", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("El RUC debe tener 10 digitos.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }
 
-            if ((txt_NumeroDocumento.Text.Length == 10) && (txt_TIpoDocumento.Text != "RUC"))
+            if ((txt_NumeroDocumento.Text.Length == 10) && (cboTipoDocumento.Text != "RUC"))
             {
-                frmMessageBox f = new frmMessageBox("El DNI debe tener 10 digitos.", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("El DNI debe tener 8 digitos.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

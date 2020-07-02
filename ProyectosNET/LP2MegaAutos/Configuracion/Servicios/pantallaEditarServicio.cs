@@ -32,7 +32,8 @@ namespace LP2MegaAutos
             this.txt_NombreServicio.Text = OtrosHelper.tipoOracion(servicio.nombre);
             this.txt_codServ.Text = servicio.codigoServicio;
             this.txt_descripcion.Text = OtrosHelper.tipoParrafo(servicio.descripcion);
-            this.txt_tipoServicio.Text = OtrosHelper.tipoOracion(servicio.tipoServicio);
+            //this.txt_tipoServicio.Text = OtrosHelper.tipoOracion(servicio.tipoServicio);
+            this.cboTipoServicio.Text = OtrosHelper.tipoOracion(servicio.tipoServicio);
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -42,7 +43,7 @@ namespace LP2MegaAutos
         private void toggleComponentes()
         {
             bool en = txt_NombreServicio.Enabled = txt_codServ.Enabled =
-                txt_descripcion.Enabled = txt_tipoServicio.Enabled = btn_guardar.Enabled
+                txt_descripcion.Enabled = cboTipoServicio.Enabled = btn_guardar.Enabled
                 = !txt_NombreServicio.Enabled;
 
 
@@ -50,11 +51,11 @@ namespace LP2MegaAutos
             {
                 // No habilitado
                 txt_NombreServicio.BackColor = txt_codServ.BackColor =
-                    txt_descripcion.BackColor = txt_tipoServicio.BackColor
+                    txt_descripcion.BackColor = cboTipoServicio.BackColor
                     = Colores.FrontBackground;
 
                 txt_NombreServicio.ForeColor = txt_codServ.ForeColor =
-                    txt_descripcion.ForeColor = txt_tipoServicio.ForeColor =
+                    txt_descripcion.ForeColor = cboTipoServicio.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
                     rnd_color_2.ColorPanel =
                     rnd_guardar.ColorPanel =
@@ -69,7 +70,7 @@ namespace LP2MegaAutos
             // Habilitado
             txt_NombreServicio.ForeColor = Colores.HighContrast;
             txt_codServ.ForeColor =
-               txt_descripcion.ForeColor = txt_tipoServicio.ForeColor =
+               txt_descripcion.ForeColor = cboTipoServicio.ForeColor =
                Colores.HighContrast;
 
             rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =
@@ -94,7 +95,7 @@ namespace LP2MegaAutos
             _servicio.nombre = txt_NombreServicio.Text;
             _servicio.codigoServicio = txt_codServ.Text;
             _servicio.descripcion = txt_descripcion.Text;
-            _servicio.tipoServicio = txt_tipoServicio.Text;
+            _servicio.tipoServicio = cboTipoServicio.Text;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -122,9 +123,16 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txt_tipoServicio.Text))
+            if (cboTipoServicio.SelectedIndex == -1)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese el tipo de servicio.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (txt_codServ.Text.Length != 7)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un codigo de servicio correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

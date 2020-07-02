@@ -184,7 +184,11 @@ namespace LP2MegaAutos
                 if (daoCliente.insertarCliente(_cliente) == 0)
                     frm = new frmMessageBox("No se pudo insertar.");
                 else
+                {
                     frm = new frmMessageBox("Se inserto correctamente el cliente " + _cliente.nombre);
+                    btnAZ_Click(btnAZ, e);
+                }
+
                 frm.ShowDialog();
             }
         }
@@ -203,9 +207,10 @@ namespace LP2MegaAutos
             // Tenemos la lista usuarios
             List<cliente> _clientesBuscados = new List<cliente>();
             foreach (cliente u in _clientes)
-                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
-                    u.tipoCliente.Contains(txt_Buscar.Text.ToUpper()) ||
-                    u.correo.Contains(txt_Buscar.Text.ToUpper()))
+                if (u.nombre.Contains(txt_Buscar.Text) ||
+                    u.tipoCliente.Contains(txt_Buscar.Text) ||
+                    u.correo.Contains(txt_Buscar.Text) ||
+                    u.tipoDocumento.Contains(txt_Buscar.Text.ToUpper()))
                     _clientesBuscados.Add(u);
 
             quitarItemsLista();

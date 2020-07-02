@@ -43,8 +43,8 @@ public class UsuarioMySQL implements UsuarioDAO {
             cs.executeUpdate();
             rpta = cs.getInt("_ID_USUARIO");
             if (usuario.getPermisos() != null) {
-                for (EPermisos e : usuario.getPermisos()){
-                    con = DBDataSource.getConnection();
+                //con = DBDataSource.getConnection();
+                for (EPermisos e : usuario.getPermisos()){                    
                     CallableStatement cs2 = con.prepareCall(
                          "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
                     cs2.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
@@ -73,15 +73,39 @@ public class UsuarioMySQL implements UsuarioDAO {
             con = DriverManager.getConnection(DBManager.url, 
                     DBManager.user, DBManager.password);*/
             CallableStatement cs = con.prepareCall(
-                    "{call ACTUALIZAR_USUARIO(?,?,?,?,?,?)}");
+                    "{call ACTUALIZAR_USUARIO(?,?,?,?,?)}");
             cs.setInt("_ID_USUARIO", usuario.getId());
             cs.setString("_NOMBRE", usuario.getNombre().toUpperCase());
             cs.setString("_TIPO_USUARIO", usuario.getTipoUsuario().toUpperCase());
             cs.setString("_CORREO", usuario.getCorreo());
-            cs.setString("_PASSWRD", usuario.getPassword());
             java.sql.Date sqlDate = new java.sql.Date(usuario.getFechaCreado().getTime());
             cs.setDate("_FECHA_CREACION", sqlDate);
             cs.executeUpdate();
+            
+            if (usuario.getPermisos() != null) {
+                Usuario u2 = buscarPorCorreo(usuario.getCorreo());
+                //Se recorre para eliminar los permisos
+                for (EPermisos e : u2.getPermisos()){
+                    if (usuario.getPermisos().contains(e))
+                        continue;
+                    CallableStatement cs2 = con.prepareCall("{call ELIMINAR_PERMISO_USUARIO(?,?)");
+                    cs2.setString("_NOMBRE",e.toString().toUpperCase());
+                    cs2.setInt("_ID_USUARIO", usuario.getId());
+                    cs2.executeUpdate();
+                }
+                //Se recorre para agregar los permisos
+                for (EPermisos e : usuario.getPermisos()){
+                    if (u2.getPermisos().contains(e))
+                            continue;
+                    CallableStatement cs2 = con.prepareCall(
+                         "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
+                    cs2.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
+                    cs2.setString("_NOMBRE",e.toString().toUpperCase());
+                    cs2.setInt("_ID_USUARIO", usuario.getId());
+                    cs2.executeUpdate();
+                }
+            }
+            
             con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -90,6 +114,58 @@ public class UsuarioMySQL implements UsuarioDAO {
         return rpta;
     }
 
+    public int actualizarConPassword(Usuario usuario) {
+        int rpta = 0;
+        try{
+            Connection con = DBDataSource.getConnection();/*
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);*/
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_USUARIO_CONTRASEÑA(?,?,?,?,?,?)}");
+            cs.setInt("_ID_USUARIO", usuario.getId());
+            cs.setString("_NOMBRE", usuario.getNombre().toUpperCase());
+            cs.setString("_TIPO_USUARIO", usuario.getTipoUsuario().toUpperCase());
+            cs.setString("_CORREO", usuario.getCorreo());
+            cs.setString("_PASSWRD", usuario.getPassword());
+            java.sql.Date sqlDate = new java.sql.Date(usuario.getFechaCreado().getTime());
+            cs.setDate("_FECHA_CREACION", sqlDate);
+            cs.executeUpdate();
+            
+            if (usuario.getPermisos() != null) {
+                Usuario u2 = buscarPorCorreo(usuario.getCorreo());
+                //Se recorre para eliminar los permisos
+                for (EPermisos e : u2.getPermisos()){
+                    if (usuario.getPermisos().contains(e))
+                        continue;
+                    CallableStatement cs2 = con.prepareCall("{call ELIMINAR_PERMISO_USUARIO(?,?)");
+                    cs2.setString("_NOMBRE",e.toString().toUpperCase());
+                    cs2.setInt("_ID_USUARIO", rpta);
+                    cs2.executeUpdate();
+                }
+                //Se recorre para agregar los permisos
+                for (EPermisos e : usuario.getPermisos()){
+                    if (u2.getPermisos().contains(e))
+                            continue;
+                    CallableStatement cs2 = con.prepareCall(
+                         "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
+                    cs2.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
+                    cs2.setString("_NOMBRE",e.toString().toUpperCase());
+                    cs2.setInt("_ID_USUARIO", rpta);
+                    cs2.executeUpdate();
+                }
+            }
+            
+            con.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            rpta = 1;
+        }
+        return rpta;
+    }
+    
     @Override
     public int eliminar(int idUsuario) {
         int rpta = 0;
@@ -137,6 +213,46 @@ public class UsuarioMySQL implements UsuarioDAO {
                 usuario.setPassword(rs.getString("PASSWRD"));
                 //usuario.setFechaCreado(rs.getDate("FECHA_CREACION"));
                 usuarios.add(usuario);
+                con = DBDataSource.getConnection();
+            CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
+            cs2.setInt(1, usuario.getId());
+            ResultSet rs2 = cs2.executeQuery();
+            int permiso;
+            while(rs2.next()){
+                permiso = rs2.getInt("ID_PERMISO");
+                switch(permiso){
+                    case 1:
+                        usuario.addPermisos(EPermisos.AreasTrabajo);
+                        break;
+                    case 2:
+                        usuario.addPermisos(EPermisos.Clientes);
+                        break;
+                    case 3:
+                        usuario.addPermisos(EPermisos.Vehiculos);
+                        break;
+                    case 4:
+                        usuario.addPermisos(EPermisos.Drivers);
+                        break;
+                    case 5:
+                        usuario.addPermisos(EPermisos.Usuarios);
+                        break;
+                    case 6:
+                        usuario.addPermisos(EPermisos.Servicios);
+                        break;
+                    case 7:
+                        usuario.addPermisos(EPermisos.Sedes);
+                        break;
+                    case 8:
+                        usuario.addPermisos(EPermisos.Empresa);
+                        break;
+                    case 9:
+                        usuario.addPermisos(EPermisos.ActualizarBD);
+                        break;
+                    case 10:
+                        usuario.addPermisos(EPermisos.All);
+                        break;
+                }
+            }
             }
             //cerrar conexion
             con.close();
@@ -147,11 +263,77 @@ public class UsuarioMySQL implements UsuarioDAO {
         return usuarios;    
     }
 
+    public Usuario buscarPorCorreo(String correo){
+        try{
+            Connection con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall("{call BUSCAR_POR_CORREO(?)}");
+            cs.setString(1,correo);
+            ResultSet rs = cs.executeQuery();
+            if(!rs.next())
+                return null;
+            // Si no, actualizar usuario y retornarlo
+            Usuario usuario = new Usuario();
+            usuario.setId(rs.getInt("ID_USUARIO"));
+            usuario.setNombre(rs.getString("NOMBRE"));
+            usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
+            usuario.setCorreo(rs.getString("CORREO"));
+            
+            con = DBDataSource.getConnection();
+            CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
+            cs2.setInt(1, usuario.getId());
+            ResultSet rs2 = cs2.executeQuery();
+            int permiso;
+            while(rs2.next()){
+                permiso = rs2.getInt("ID_PERMISO");
+                switch(permiso){
+                    case 1:
+                        usuario.addPermisos(EPermisos.AreasTrabajo);
+                        break;
+                    case 2:
+                        usuario.addPermisos(EPermisos.Clientes);
+                        break;
+                    case 3:
+                        usuario.addPermisos(EPermisos.Vehiculos);
+                        break;
+                    case 4:
+                        usuario.addPermisos(EPermisos.Drivers);
+                        break;
+                    case 5:
+                        usuario.addPermisos(EPermisos.Usuarios);
+                        break;
+                    case 6:
+                        usuario.addPermisos(EPermisos.Servicios);
+                        break;
+                    case 7:
+                        usuario.addPermisos(EPermisos.Sedes);
+                        break;
+                    case 8:
+                        usuario.addPermisos(EPermisos.Empresa);
+                        break;
+                    case 9:
+                        usuario.addPermisos(EPermisos.ActualizarBD);
+                        break;
+                    case 10:
+                        usuario.addPermisos(EPermisos.All);
+                        break;
+                }
+            }
+            
+            
+            // usuario.setPermisos Ahi hagan su magia con SQL y java
+            // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
+            return usuario;
+            
+        }catch(Exception e){
+            System.out.println(e);
+            return null;
+        }
+    }
     @Override
     public Usuario verificarPassword(String correo, String password) {
         try{
             Connection con = DBDataSource.getConnection();
-            CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)");
+            CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)}");
             // Seria algo asi
             // "SELECT * FROM Usuarios where correo=CORREO and password=PASSWRD";
             cs.setString(1,correo);
@@ -166,8 +348,50 @@ public class UsuarioMySQL implements UsuarioDAO {
             usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
             usuario.setCorreo(rs.getString("CORREO"));
             usuario.setPassword(rs.getString("PASSWRD"));
-            // usuario.setPermisos Ahi hagan su magia con SQL y java 
-            // creo que seria un borrar permisos(?)
+            
+            con = DBDataSource.getConnection();
+            CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
+            cs2.setInt(1, usuario.getId());
+            ResultSet rs2 = cs2.executeQuery();
+            int permiso;
+            while(rs2.next()){
+                permiso = rs2.getInt("ID_PERMISO");
+                switch(permiso){
+                    case 1:
+                        usuario.addPermisos(EPermisos.AreasTrabajo);
+                        break;
+                    case 2:
+                        usuario.addPermisos(EPermisos.Clientes);
+                        break;
+                    case 3:
+                        usuario.addPermisos(EPermisos.Vehiculos);
+                        break;
+                    case 4:
+                        usuario.addPermisos(EPermisos.Drivers);
+                        break;
+                    case 5:
+                        usuario.addPermisos(EPermisos.Usuarios);
+                        break;
+                    case 6:
+                        usuario.addPermisos(EPermisos.Servicios);
+                        break;
+                    case 7:
+                        usuario.addPermisos(EPermisos.Sedes);
+                        break;
+                    case 8:
+                        usuario.addPermisos(EPermisos.Empresa);
+                        break;
+                    case 9:
+                        usuario.addPermisos(EPermisos.ActualizarBD);
+                        break;
+                    case 10:
+                        usuario.addPermisos(EPermisos.All);
+                        break;
+                }
+            }
+            
+            
+            // usuario.setPermisos Ahi hagan su magia con SQL y java
             // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
             return usuario;
             

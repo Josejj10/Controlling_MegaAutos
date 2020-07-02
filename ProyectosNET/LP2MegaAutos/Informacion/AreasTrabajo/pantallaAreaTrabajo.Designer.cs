@@ -58,7 +58,7 @@
             // 
             // pnlBuscar
             // 
-            this.pnlBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.pnlBuscar.BackColor = System.Drawing.Color.White;
             this.pnlBuscar.Controls.Add(this.panel2);
             this.pnlBuscar.Controls.Add(this.txt_Buscar);
             this.pnlBuscar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -88,10 +88,10 @@
             // 
             // txt_Buscar
             // 
-            this.txt_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txt_Buscar.BackColor = System.Drawing.Color.White;
             this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.txt_Buscar.ForeColor = System.Drawing.Color.Black;
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(711, 18);
@@ -202,7 +202,7 @@
             this.lbl_ListaAreasTrabajo.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaAreasTrabajo.Location = new System.Drawing.Point(229, 2);
             this.lbl_ListaAreasTrabajo.Name = "lbl_ListaAreasTrabajo";
-            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(158, 19);
+            this.lbl_ListaAreasTrabajo.Size = new System.Drawing.Size(151, 22);
             this.lbl_ListaAreasTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaAreasTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaAreasTrabajo, null);

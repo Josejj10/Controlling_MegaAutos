@@ -153,6 +153,7 @@ namespace LP2MegaAutos
             bool isDouble = false;
 
             isDouble = Double.TryParse(txt_Formula.Text, out resultado);
+            resultado = Double.Parse(txt_Formula.Text);
 
             if (string.IsNullOrEmpty(txt_Formula.Text))
             {
@@ -164,6 +165,13 @@ namespace LP2MegaAutos
             if (isDouble == false)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese una formula correcta", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (resultado >= 1)
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una formula correcta (menor a 1)", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

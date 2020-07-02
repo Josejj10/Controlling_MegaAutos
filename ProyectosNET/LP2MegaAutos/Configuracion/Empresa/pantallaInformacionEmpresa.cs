@@ -21,13 +21,16 @@ namespace LP2MegaAutos
 
         private string archivoSeleccionado1;
         private string archivoSeleccionado2;
-        private ServicioExcel.excel _excel;
+        private ServicioExcel.excel _excelEnviado;
+        private ServicioExcel.excel _excelRecibido;
         empresa _empresa;
         public pantallaInformacionEmpresa()
         {
             InitializeComponent();
             daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
             daoExcel = new ServicioExcel.ExcelWSClient();
+            _excelEnviado = new ServicioExcel.excel();
+            _excelRecibido = new ServicioExcel.excel();
             inicializarEmpresas();
         }
 
@@ -65,7 +68,7 @@ namespace LP2MegaAutos
                     BinaryReader br = new BinaryReader(fs);
 
                     // Asignamos el archivo al objeto
-                    //this._excel.excel1 = br.ReadBytes((int)fs.Length);
+                    this._excelEnviado.archivo = br.ReadBytes((int)fs.Length);
                     br.Close();
                     fs.Close();
                 }
@@ -119,13 +122,37 @@ namespace LP2MegaAutos
             // WebService.GuardarArchivo(txtArchivo1.Text);
             // WebService.GuardarArchivo(txtArchivo2.Text);
 
-            
+            frmMessageBox frm;
+            if (daoExcel.insertarArchivoEntrada(_excelEnviado) == 0)
+                frm = new frmMessageBox("No se pudo insertar el archivo.");
+            else // Inserto bien
+                frm = new frmMessageBox("Se inserto correctamente el archivo excel ");
+            frm.ShowDialog();
 
         }
 
         private void btnDefault_Click(object sender, EventArgs e)
         {
             // Poner las rutas por default
+        }
+
+        private void btnDescargar1_Click(object sender, EventArgs e)
+        {
+            if(sfdArchivoEntrada.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    String archivoEntrada = sfdArchivoEntrada.FileName + ".xlsx";
+                    _excelRecibido = daoExcel.leerArchivoEntrada();
+                    File.WriteAllBytes(archivoEntrada, _excelRecibido.archivo);
+                    MessageBox.Show("Se ha guardado el archivo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show("Se ha generado un error al momento de guardar el archivo", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    System.Console.WriteLine(ex.Message);
+                }
+            }
         }
     }
 }

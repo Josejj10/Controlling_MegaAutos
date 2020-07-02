@@ -16,6 +16,24 @@ namespace LP2MegaAutos.ServicioVehiculo {
     public interface VehiculoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse actualizarVehiculo(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse> actualizarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse eliminarVehiculo(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse> eliminarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/listarVehiculosRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/listarVehiculosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,24 +50,6 @@ namespace LP2MegaAutos.ServicioVehiculo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/insertarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/insertarVehiculoResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.insertarVehiculoResponse> insertarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.insertarVehiculoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse eliminarVehiculo(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/eliminarVehiculoResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse> eliminarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse actualizarVehiculo(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoRequest", ReplyAction="http://services.megaautos.com.pe/VehiculoWS/actualizarVehiculoResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse> actualizarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request);
     }
     
     /// <remarks/>
@@ -245,6 +245,78 @@ namespace LP2MegaAutos.ServicioVehiculo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarVehiculo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class actualizarVehiculoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo;
+        
+        public actualizarVehiculoRequest() {
+        }
+        
+        public actualizarVehiculoRequest(LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo) {
+            this.objVehiculo = objVehiculo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarVehiculoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class actualizarVehiculoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarVehiculoResponse() {
+        }
+        
+        public actualizarVehiculoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarVehiculo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarVehiculoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idVehiculo;
+        
+        public eliminarVehiculoRequest() {
+        }
+        
+        public eliminarVehiculoRequest(int idVehiculo) {
+            this.idVehiculo = idVehiculo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarVehiculoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarVehiculoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarVehiculoResponse() {
+        }
+        
+        public eliminarVehiculoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarVehiculos", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class listarVehiculosRequest {
         
@@ -306,78 +378,6 @@ namespace LP2MegaAutos.ServicioVehiculo {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarVehiculo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarVehiculoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idVehiculo;
-        
-        public eliminarVehiculoRequest() {
-        }
-        
-        public eliminarVehiculoRequest(int idVehiculo) {
-            this.idVehiculo = idVehiculo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarVehiculoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarVehiculoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarVehiculoResponse() {
-        }
-        
-        public eliminarVehiculoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarVehiculo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class actualizarVehiculoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo;
-        
-        public actualizarVehiculoRequest() {
-        }
-        
-        public actualizarVehiculoRequest(LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo) {
-            this.objVehiculo = objVehiculo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarVehiculoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class actualizarVehiculoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarVehiculoResponse() {
-        }
-        
-        public actualizarVehiculoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface VehiculoWSChannel : LP2MegaAutos.ServicioVehiculo.VehiculoWS, System.ServiceModel.IClientChannel {
     }
@@ -403,6 +403,52 @@ namespace LP2MegaAutos.ServicioVehiculo {
         
         public VehiculoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse LP2MegaAutos.ServicioVehiculo.VehiculoWS.actualizarVehiculo(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request) {
+            return base.Channel.actualizarVehiculo(request);
+        }
+        
+        public int actualizarVehiculo(LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo) {
+            LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest();
+            inValue.objVehiculo = objVehiculo;
+            LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse retVal = ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).actualizarVehiculo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse> LP2MegaAutos.ServicioVehiculo.VehiculoWS.actualizarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request) {
+            return base.Channel.actualizarVehiculoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse> actualizarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo) {
+            LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest();
+            inValue.objVehiculo = objVehiculo;
+            return ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).actualizarVehiculoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse LP2MegaAutos.ServicioVehiculo.VehiculoWS.eliminarVehiculo(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request) {
+            return base.Channel.eliminarVehiculo(request);
+        }
+        
+        public int eliminarVehiculo(int idVehiculo) {
+            LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest();
+            inValue.idVehiculo = idVehiculo;
+            LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse retVal = ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).eliminarVehiculo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse> LP2MegaAutos.ServicioVehiculo.VehiculoWS.eliminarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request) {
+            return base.Channel.eliminarVehiculoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse> eliminarVehiculoAsync(int idVehiculo) {
+            LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest();
+            inValue.idVehiculo = idVehiculo;
+            return ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).eliminarVehiculoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -447,52 +493,6 @@ namespace LP2MegaAutos.ServicioVehiculo {
             LP2MegaAutos.ServicioVehiculo.insertarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.insertarVehiculoRequest();
             inValue.objVehiculo = objVehiculo;
             return ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).insertarVehiculoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse LP2MegaAutos.ServicioVehiculo.VehiculoWS.eliminarVehiculo(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request) {
-            return base.Channel.eliminarVehiculo(request);
-        }
-        
-        public int eliminarVehiculo(int idVehiculo) {
-            LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest();
-            inValue.idVehiculo = idVehiculo;
-            LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse retVal = ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).eliminarVehiculo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse> LP2MegaAutos.ServicioVehiculo.VehiculoWS.eliminarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest request) {
-            return base.Channel.eliminarVehiculoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.eliminarVehiculoResponse> eliminarVehiculoAsync(int idVehiculo) {
-            LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.eliminarVehiculoRequest();
-            inValue.idVehiculo = idVehiculo;
-            return ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).eliminarVehiculoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse LP2MegaAutos.ServicioVehiculo.VehiculoWS.actualizarVehiculo(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request) {
-            return base.Channel.actualizarVehiculo(request);
-        }
-        
-        public int actualizarVehiculo(LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo) {
-            LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest();
-            inValue.objVehiculo = objVehiculo;
-            LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse retVal = ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).actualizarVehiculo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse> LP2MegaAutos.ServicioVehiculo.VehiculoWS.actualizarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest request) {
-            return base.Channel.actualizarVehiculoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioVehiculo.actualizarVehiculoResponse> actualizarVehiculoAsync(LP2MegaAutos.ServicioVehiculo.vehiculo objVehiculo) {
-            LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest inValue = new LP2MegaAutos.ServicioVehiculo.actualizarVehiculoRequest();
-            inValue.objVehiculo = objVehiculo;
-            return ((LP2MegaAutos.ServicioVehiculo.VehiculoWS)(this)).actualizarVehiculoAsync(inValue);
         }
     }
 }

@@ -43,6 +43,8 @@
             this.btnDefault = new System.Windows.Forms.Button();
             this.ofdArchivo1 = new System.Windows.Forms.OpenFileDialog();
             this.ofdArchivo2 = new System.Windows.Forms.OpenFileDialog();
+            this.btnDescargar1 = new System.Windows.Forms.Button();
+            this.sfdArchivoEntrada = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // lbl_nombreEmpresa
@@ -263,11 +265,27 @@
             // 
             this.ofdArchivo2.FileName = "ofdArchivo2";
             // 
+            // btnDescargar1
+            // 
+            this.btnDescargar1.Location = new System.Drawing.Point(620, 123);
+            this.btnDescargar1.Name = "btnDescargar1";
+            this.btnDescargar1.Size = new System.Drawing.Size(75, 23);
+            this.btnDescargar1.TabIndex = 67;
+            this.tagsExtender1.SetTag2(this.btnDescargar1, null);
+            this.tagsExtender1.SetTag3(this.btnDescargar1, null);
+            this.tagsExtender1.SetTagFontName(this.btnDescargar1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnDescargar1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnDescargar1, System.Drawing.FontStyle.Regular);
+            this.btnDescargar1.Text = "Descargar";
+            this.btnDescargar1.UseVisualStyleBackColor = true;
+            this.btnDescargar1.Click += new System.EventHandler(this.btnDescargar1_Click);
+            // 
             // pantallaInformacionEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnDescargar1);
             this.Controls.Add(this.btnDefault);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEditarRutas);
@@ -308,5 +326,7 @@
         private System.Windows.Forms.Button btnDefault;
         private System.Windows.Forms.OpenFileDialog ofdArchivo1;
         private System.Windows.Forms.OpenFileDialog ofdArchivo2;
+        private System.Windows.Forms.Button btnDescargar1;
+        private System.Windows.Forms.SaveFileDialog sfdArchivoEntrada;
     }
 }

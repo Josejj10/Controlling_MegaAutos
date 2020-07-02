@@ -20,12 +20,9 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarClientes">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarClientesResponse">
+  <xs:complexType name="actualizarCliente">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+      <xs:element minOccurs="0" name="objCliente" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="cliente">
@@ -39,14 +36,17 @@
       <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarCliente">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="objCliente" type="tns:cliente" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="actualizarClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClientes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarClientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="buscarPorNombre">

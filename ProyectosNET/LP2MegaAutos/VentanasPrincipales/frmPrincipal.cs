@@ -133,18 +133,18 @@ namespace LP2MegaAutos
 
         private void inicializarUsuario()
         {
-            foreach (ePermisos p in _usuario.permisos)
-            {
-                Console.WriteLine(p.ToString());
-            }
-            List <ePermisos?> uPer =  _usuario.permisos.ToList();
-            uPer.Remove(ePermisos.All);
-            _usuario.permisos = uPer.ToArray();
+            //foreach (ePermisos p in _usuario.permisos)
+            //{
+            //    Console.WriteLine(p.ToString());
+            //}
+            //List <ePermisos?> uPer =  _usuario.permisos.ToList();
+            //uPer.Remove(ePermisos.All);
+            //_usuario.permisos = uPer.ToArray();
             
-            foreach (ePermisos p in _usuario.permisos)
-            {
-                Console.WriteLine(p.ToString());
-            }
+            //foreach (ePermisos p in _usuario.permisos)
+            //{
+            //    Console.WriteLine(p.ToString());
+            //}
             //_usuario.permisos.ToList().Add(ePermisos.ActualizarBD);
             //_usuario.permisos.ToList().Add(ePermisos.Empresa);
             //_usuario.permisos.ToList().Add(ePermisos.Sedes);

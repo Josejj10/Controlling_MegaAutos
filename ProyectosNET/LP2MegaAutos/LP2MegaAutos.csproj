@@ -691,13 +691,19 @@
     <None Include="Connected Services\ServicioExcel\ExcelWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.enviarExcelResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.excel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerExcel1Response.datasource">
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.actualizarOrdenTrabajoResponse.datasource">

@@ -69,9 +69,9 @@ namespace LP2MegaAutos
             // TODO
             // Agregar item Lista Permisos
             // foreach(permiso p in _usuario.permisos)
-            foreach (EPermisos e in Enum.GetValues(typeof(EPermisos)))
+            foreach (ePermisos e in Enum.GetValues(typeof(ePermisos)))
             {
-                if (e == EPermisos.All) return;
+                if (e == ePermisos.All) return;
                 clbPermisos.Items.Add(e.ToString());
                 //clbPermisos.SetItemChecked(i,_usuario.permisos.contains(e));
                 //i++;

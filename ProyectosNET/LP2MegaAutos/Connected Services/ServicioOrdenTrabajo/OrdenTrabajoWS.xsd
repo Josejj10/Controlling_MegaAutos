@@ -8,12 +8,9 @@
   <xs:element name="insertarOrdenTrabajoResponse" type="tns:insertarOrdenTrabajoResponse" />
   <xs:element name="listarOrdenTrabajo" type="tns:listarOrdenTrabajo" />
   <xs:element name="listarOrdenTrabajoResponse" type="tns:listarOrdenTrabajoResponse" />
-  <xs:complexType name="listarOrdenTrabajo">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarOrdenTrabajoResponse">
+  <xs:complexType name="insertarOrdenTrabajo">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ordenTrabajo" />
+      <xs:element minOccurs="0" name="objOT" type="tns:ordenTrabajo" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ordenTrabajo">
@@ -67,14 +64,17 @@
       <xs:element minOccurs="0" name="tipoVehiculo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarOrdenTrabajo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="objOT" type="tns:ordenTrabajo" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarOrdenTrabajoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarOrdenTrabajo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarOrdenTrabajoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ordenTrabajo" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarOrdenTrabajo">

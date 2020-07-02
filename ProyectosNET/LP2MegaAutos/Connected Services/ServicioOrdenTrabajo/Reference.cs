@@ -16,13 +16,13 @@ namespace LP2MegaAutos.ServicioOrdenTrabajo {
     public interface OrdenTrabajoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse listarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request);
+        LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse insertarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse> listarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse> insertarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/eliminarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/eliminarOrdenTrabajoResponse")]
@@ -34,13 +34,13 @@ namespace LP2MegaAutos.ServicioOrdenTrabajo {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.eliminarOrdenTrabajoResponse> eliminarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.eliminarOrdenTrabajoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse insertarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request);
+        LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse listarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse> insertarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse> listarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/OrdenTrabajoWS/actualizarOrdenTrabajoRequest", ReplyAction="http://services.megaautos.com.pe/OrdenTrabajoWS/actualizarOrdenTrabajoResponse")]
@@ -607,27 +607,35 @@ namespace LP2MegaAutos.ServicioOrdenTrabajo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarOrdenTrabajoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOrdenTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarOrdenTrabajoRequest {
         
-        public listarOrdenTrabajoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT;
+        
+        public insertarOrdenTrabajoRequest() {
+        }
+        
+        public insertarOrdenTrabajoRequest(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT) {
+            this.objOT = objOT;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarOrdenTrabajoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOrdenTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarOrdenTrabajoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarOrdenTrabajoResponse() {
+        public insertarOrdenTrabajoResponse() {
         }
         
-        public listarOrdenTrabajoResponse(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo[] @return) {
+        public insertarOrdenTrabajoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -671,35 +679,27 @@ namespace LP2MegaAutos.ServicioOrdenTrabajo {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOrdenTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarOrdenTrabajoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenTrabajo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarOrdenTrabajoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT;
-        
-        public insertarOrdenTrabajoRequest() {
-        }
-        
-        public insertarOrdenTrabajoRequest(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT) {
-            this.objOT = objOT;
+        public listarOrdenTrabajoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarOrdenTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarOrdenTrabajoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarOrdenTrabajoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarOrdenTrabajoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo[] @return;
         
-        public insertarOrdenTrabajoResponse() {
+        public listarOrdenTrabajoResponse() {
         }
         
-        public insertarOrdenTrabajoResponse(int @return) {
+        public listarOrdenTrabajoResponse(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo[] @return) {
             this.@return = @return;
         }
     }
@@ -768,24 +768,26 @@ namespace LP2MegaAutos.ServicioOrdenTrabajo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.listarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request) {
-            return base.Channel.listarOrdenTrabajo(request);
+        LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.insertarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request) {
+            return base.Channel.insertarOrdenTrabajo(request);
         }
         
-        public LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo[] listarOrdenTrabajo() {
-            LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest();
-            LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse retVal = ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).listarOrdenTrabajo(inValue);
+        public int insertarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT) {
+            LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest();
+            inValue.objOT = objOT;
+            LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse retVal = ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).insertarOrdenTrabajo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse> LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.listarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request) {
-            return base.Channel.listarOrdenTrabajoAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse> LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.insertarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request) {
+            return base.Channel.insertarOrdenTrabajoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse> listarOrdenTrabajoAsync() {
-            LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest();
-            return ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).listarOrdenTrabajoAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse> insertarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT) {
+            LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest();
+            inValue.objOT = objOT;
+            return ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).insertarOrdenTrabajoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -812,26 +814,24 @@ namespace LP2MegaAutos.ServicioOrdenTrabajo {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.insertarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request) {
-            return base.Channel.insertarOrdenTrabajo(request);
+        LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.listarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request) {
+            return base.Channel.listarOrdenTrabajo(request);
         }
         
-        public int insertarOrdenTrabajo(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT) {
-            LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest();
-            inValue.objOT = objOT;
-            LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse retVal = ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).insertarOrdenTrabajo(inValue);
+        public LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo[] listarOrdenTrabajo() {
+            LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest();
+            LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse retVal = ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).listarOrdenTrabajo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse> LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.insertarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest request) {
-            return base.Channel.insertarOrdenTrabajoAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse> LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS.listarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest request) {
+            return base.Channel.listarOrdenTrabajoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoResponse> insertarOrdenTrabajoAsync(LP2MegaAutos.ServicioOrdenTrabajo.ordenTrabajo objOT) {
-            LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.insertarOrdenTrabajoRequest();
-            inValue.objOT = objOT;
-            return ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).insertarOrdenTrabajoAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoResponse> listarOrdenTrabajoAsync() {
+            LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest inValue = new LP2MegaAutos.ServicioOrdenTrabajo.listarOrdenTrabajoRequest();
+            return ((LP2MegaAutos.ServicioOrdenTrabajo.OrdenTrabajoWS)(this)).listarOrdenTrabajoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

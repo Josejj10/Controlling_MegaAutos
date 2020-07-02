@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/OrdenTrabajoWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarOrdenTrabajo">
-    <part name="parameters" element="tns:listarOrdenTrabajo" />
+  <message name="insertarOrdenTrabajo">
+    <part name="parameters" element="tns:insertarOrdenTrabajo" />
   </message>
-  <message name="listarOrdenTrabajoResponse">
-    <part name="parameters" element="tns:listarOrdenTrabajoResponse" />
+  <message name="insertarOrdenTrabajoResponse">
+    <part name="parameters" element="tns:insertarOrdenTrabajoResponse" />
   </message>
   <message name="eliminarOrdenTrabajo">
     <part name="parameters" element="tns:eliminarOrdenTrabajo" />
@@ -17,11 +17,11 @@
   <message name="eliminarOrdenTrabajoResponse">
     <part name="parameters" element="tns:eliminarOrdenTrabajoResponse" />
   </message>
-  <message name="insertarOrdenTrabajo">
-    <part name="parameters" element="tns:insertarOrdenTrabajo" />
+  <message name="listarOrdenTrabajo">
+    <part name="parameters" element="tns:listarOrdenTrabajo" />
   </message>
-  <message name="insertarOrdenTrabajoResponse">
-    <part name="parameters" element="tns:insertarOrdenTrabajoResponse" />
+  <message name="listarOrdenTrabajoResponse">
+    <part name="parameters" element="tns:listarOrdenTrabajoResponse" />
   </message>
   <message name="actualizarOrdenTrabajo">
     <part name="parameters" element="tns:actualizarOrdenTrabajo" />
@@ -30,17 +30,17 @@
     <part name="parameters" element="tns:actualizarOrdenTrabajoResponse" />
   </message>
   <portType name="OrdenTrabajoWS">
-    <operation name="listarOrdenTrabajo">
-      <input wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoRequest" message="tns:listarOrdenTrabajo" />
-      <output wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoResponse" message="tns:listarOrdenTrabajoResponse" />
+    <operation name="insertarOrdenTrabajo">
+      <input wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoRequest" message="tns:insertarOrdenTrabajo" />
+      <output wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoResponse" message="tns:insertarOrdenTrabajoResponse" />
     </operation>
     <operation name="eliminarOrdenTrabajo">
       <input wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/eliminarOrdenTrabajoRequest" message="tns:eliminarOrdenTrabajo" />
       <output wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/eliminarOrdenTrabajoResponse" message="tns:eliminarOrdenTrabajoResponse" />
     </operation>
-    <operation name="insertarOrdenTrabajo">
-      <input wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoRequest" message="tns:insertarOrdenTrabajo" />
-      <output wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/insertarOrdenTrabajoResponse" message="tns:insertarOrdenTrabajoResponse" />
+    <operation name="listarOrdenTrabajo">
+      <input wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoRequest" message="tns:listarOrdenTrabajo" />
+      <output wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/listarOrdenTrabajoResponse" message="tns:listarOrdenTrabajoResponse" />
     </operation>
     <operation name="actualizarOrdenTrabajo">
       <input wsam:Action="http://services.megaautos.com.pe/OrdenTrabajoWS/actualizarOrdenTrabajoRequest" message="tns:actualizarOrdenTrabajo" />
@@ -49,7 +49,7 @@
   </portType>
   <binding name="OrdenTrabajoWSPortBinding" type="tns:OrdenTrabajoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarOrdenTrabajo">
+    <operation name="insertarOrdenTrabajo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarOrdenTrabajo">
+    <operation name="listarOrdenTrabajo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

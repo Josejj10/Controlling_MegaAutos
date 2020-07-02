@@ -184,7 +184,11 @@ namespace LP2MegaAutos
                 if (daoCliente.insertarCliente(_cliente) == 0)
                     frm = new frmMessageBox("No se pudo insertar.");
                 else
+                {
                     frm = new frmMessageBox("Se inserto correctamente el cliente " + _cliente.nombre);
+                    btnAZ_Click(btnAZ, e);
+                }
+
                 frm.ShowDialog();
             }
         }

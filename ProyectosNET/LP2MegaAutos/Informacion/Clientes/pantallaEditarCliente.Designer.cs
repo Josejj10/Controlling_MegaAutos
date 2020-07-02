@@ -52,16 +52,16 @@
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.rpTopMain = new LP2MegaAutos.RoundedPanel();
             this.pnl_TipoCliente = new System.Windows.Forms.Panel();
+            this.cboTipoCliente = new System.Windows.Forms.ComboBox();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
-            this.txtTipoCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_NombreCliente = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lbl_TipoDocumento = new System.Windows.Forms.Label();
-            this.txt_TIpoDocumento = new System.Windows.Forms.TextBox();
             this.roundedPanel2 = new LP2MegaAutos.RoundedPanel();
             this.pnl_TipoDocumento = new System.Windows.Forms.Panel();
+            this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
             this.pnl_Correo.SuspendLayout();
             this.pnl_Telefono.SuspendLayout();
             this.pnl_NumeroDocumento.SuspendLayout();
@@ -528,8 +528,8 @@
             // 
             // pnl_TipoCliente
             // 
+            this.pnl_TipoCliente.Controls.Add(this.cboTipoCliente);
             this.pnl_TipoCliente.Controls.Add(this.roundedPanel1);
-            this.pnl_TipoCliente.Controls.Add(this.txtTipoCliente);
             this.pnl_TipoCliente.Controls.Add(this.label1);
             this.pnl_TipoCliente.Location = new System.Drawing.Point(151, 310);
             this.pnl_TipoCliente.Margin = new System.Windows.Forms.Padding(4);
@@ -541,6 +541,27 @@
             this.tagsExtender1.SetTagFontName(this.pnl_TipoCliente, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnl_TipoCliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_TipoCliente, System.Drawing.FontStyle.Regular);
+            // 
+            // cboTipoCliente
+            // 
+            this.cboTipoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.cboTipoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoCliente.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboTipoCliente.FormattingEnabled = true;
+            this.cboTipoCliente.Items.AddRange(new object[] {
+            "ACCESO",
+            "C.C",
+            "POSITIVA",
+            "RIMAC"});
+            this.cboTipoCliente.Location = new System.Drawing.Point(5, 17);
+            this.cboTipoCliente.Name = "cboTipoCliente";
+            this.cboTipoCliente.Size = new System.Drawing.Size(286, 24);
+            this.cboTipoCliente.TabIndex = 82;
+            this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
+            this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
+            this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cboTipoCliente, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cboTipoCliente, System.Drawing.FontStyle.Bold);
             // 
             // roundedPanel1
             // 
@@ -567,22 +588,6 @@
             this.roundedPanel1.XPanel = 0;
             this.roundedPanel1.YBorde = 0;
             this.roundedPanel1.YPanel = 0;
-            // 
-            // txtTipoCliente
-            // 
-            this.txtTipoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txtTipoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTipoCliente.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtTipoCliente.Location = new System.Drawing.Point(7, 18);
-            this.txtTipoCliente.Name = "txtTipoCliente";
-            this.txtTipoCliente.Size = new System.Drawing.Size(284, 23);
-            this.txtTipoCliente.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txtTipoCliente, null);
-            this.tagsExtender1.SetTag3(this.txtTipoCliente, null);
-            this.tagsExtender1.SetTagFontName(this.txtTipoCliente, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txtTipoCliente, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txtTipoCliente, System.Drawing.FontStyle.Regular);
             // 
             // label1
             // 
@@ -615,6 +620,8 @@
             this.tagsExtender1.SetTagFontName(this.txt_NombreCliente, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txt_NombreCliente, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreCliente, System.Drawing.FontStyle.Bold);
+            this.txt_NombreCliente.Enter += new System.EventHandler(this.txt_NombreCliente_Enter);
+            this.txt_NombreCliente.Leave += new System.EventHandler(this.txt_NombreCliente_Leave);
             // 
             // btnEditar
             // 
@@ -679,27 +686,6 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_TipoDocumento, System.Drawing.FontStyle.Regular);
             this.lbl_TipoDocumento.Text = "Tipo de Documento";
             // 
-            // txt_TIpoDocumento
-            // 
-            this.txt_TIpoDocumento.AutoCompleteCustomSource.AddRange(new string[] {
-            "DNI",
-            "RUC"});
-            this.txt_TIpoDocumento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txt_TIpoDocumento.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_TIpoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_TIpoDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TIpoDocumento.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TIpoDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_TIpoDocumento.Location = new System.Drawing.Point(7, 18);
-            this.txt_TIpoDocumento.Name = "txt_TIpoDocumento";
-            this.txt_TIpoDocumento.Size = new System.Drawing.Size(284, 23);
-            this.txt_TIpoDocumento.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_TIpoDocumento, null);
-            this.tagsExtender1.SetTag3(this.txt_TIpoDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.txt_TIpoDocumento, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_TIpoDocumento, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_TIpoDocumento, System.Drawing.FontStyle.Regular);
-            // 
             // roundedPanel2
             // 
             this.roundedPanel2.ArcRadiusBorde = 15;
@@ -728,8 +714,8 @@
             // 
             // pnl_TipoDocumento
             // 
+            this.pnl_TipoDocumento.Controls.Add(this.cboTipoDocumento);
             this.pnl_TipoDocumento.Controls.Add(this.roundedPanel2);
-            this.pnl_TipoDocumento.Controls.Add(this.txt_TIpoDocumento);
             this.pnl_TipoDocumento.Controls.Add(this.lbl_TipoDocumento);
             this.pnl_TipoDocumento.Location = new System.Drawing.Point(151, 163);
             this.pnl_TipoDocumento.Margin = new System.Windows.Forms.Padding(4);
@@ -741,6 +727,25 @@
             this.tagsExtender1.SetTagFontName(this.pnl_TipoDocumento, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnl_TipoDocumento, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_TipoDocumento, System.Drawing.FontStyle.Regular);
+            // 
+            // cboTipoDocumento
+            // 
+            this.cboTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.cboTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoDocumento.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboTipoDocumento.FormattingEnabled = true;
+            this.cboTipoDocumento.Items.AddRange(new object[] {
+            "DNI",
+            "RUC"});
+            this.cboTipoDocumento.Location = new System.Drawing.Point(5, 16);
+            this.cboTipoDocumento.Name = "cboTipoDocumento";
+            this.cboTipoDocumento.Size = new System.Drawing.Size(286, 24);
+            this.cboTipoDocumento.TabIndex = 81;
+            this.tagsExtender1.SetTag2(this.cboTipoDocumento, null);
+            this.tagsExtender1.SetTag3(this.cboTipoDocumento, null);
+            this.tagsExtender1.SetTagFontName(this.cboTipoDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.cboTipoDocumento, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.cboTipoDocumento, System.Drawing.FontStyle.Bold);
             // 
             // pantallaEditarCliente
             // 
@@ -820,14 +825,14 @@
         private RoundedPanel rpTopMain;
         private System.Windows.Forms.Panel pnl_TipoCliente;
         private RoundedPanel roundedPanel1;
-        private System.Windows.Forms.TextBox txtTipoCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_NombreCliente;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lbl_TipoDocumento;
-        private System.Windows.Forms.TextBox txt_TIpoDocumento;
         private RoundedPanel roundedPanel2;
         private System.Windows.Forms.Panel pnl_TipoDocumento;
+        private System.Windows.Forms.ComboBox cboTipoDocumento;
+        private System.Windows.Forms.ComboBox cboTipoCliente;
     }
 }

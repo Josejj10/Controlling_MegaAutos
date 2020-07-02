@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="leerExce2" type="tns:leerExce2" />
-  <xs:element name="leerExce2Response" type="tns:leerExce2Response" />
+  <xs:element name="enviarExcel" type="tns:enviarExcel" />
+  <xs:element name="enviarExcelResponse" type="tns:enviarExcelResponse" />
   <xs:element name="leerExcel1" type="tns:leerExcel1" />
   <xs:element name="leerExcel1Response" type="tns:leerExcel1Response" />
-  <xs:complexType name="leerExcel1">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="excel1" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
+  <xs:complexType name="enviarExcel">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="leerExcel1Response">
+  <xs:complexType name="enviarExcelResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:excel" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="excel">
     <xs:sequence>
-      <xs:element minOccurs="0" name="excel1" type="xs:base64Binary" />
-      <xs:element minOccurs="0" name="excel2" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+      <xs:element name="id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="leerExce2">
+  <xs:complexType name="leerExcel1">
     <xs:sequence>
-      <xs:element minOccurs="0" name="excel2" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="archivo" type="tns:excel" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="leerExce2Response">
+  <xs:complexType name="leerExcel1Response">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:excel" />
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

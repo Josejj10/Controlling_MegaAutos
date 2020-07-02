@@ -691,10 +691,10 @@
     <None Include="Connected Services\ServicioExcel\ExcelWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.excel.datasource">
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.enviarExcelResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerExce2Response.datasource">
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.excel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.leerExcel1Response.datasource">
@@ -758,6 +758,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.actualizarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.buscarPorCorreoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse.datasource">

@@ -17,17 +17,17 @@
   <message name="insertarComprobantePagoResponse">
     <part name="parameters" element="tns:insertarComprobantePagoResponse" />
   </message>
-  <message name="eliminarComprobantePago">
-    <part name="parameters" element="tns:eliminarComprobantePago" />
-  </message>
-  <message name="eliminarComprobantePagoResponse">
-    <part name="parameters" element="tns:eliminarComprobantePagoResponse" />
-  </message>
   <message name="listarComprobantePago">
     <part name="parameters" element="tns:listarComprobantePago" />
   </message>
   <message name="listarComprobantePagoResponse">
     <part name="parameters" element="tns:listarComprobantePagoResponse" />
+  </message>
+  <message name="eliminarComprobantePago">
+    <part name="parameters" element="tns:eliminarComprobantePago" />
+  </message>
+  <message name="eliminarComprobantePagoResponse">
+    <part name="parameters" element="tns:eliminarComprobantePagoResponse" />
   </message>
   <portType name="ComprobantePagoWS">
     <operation name="actualizarComprobantePago">
@@ -38,13 +38,13 @@
       <input wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/insertarComprobantePagoRequest" message="tns:insertarComprobantePago" />
       <output wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/insertarComprobantePagoResponse" message="tns:insertarComprobantePagoResponse" />
     </operation>
-    <operation name="eliminarComprobantePago">
-      <input wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/eliminarComprobantePagoRequest" message="tns:eliminarComprobantePago" />
-      <output wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/eliminarComprobantePagoResponse" message="tns:eliminarComprobantePagoResponse" />
-    </operation>
     <operation name="listarComprobantePago">
       <input wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoRequest" message="tns:listarComprobantePago" />
       <output wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoResponse" message="tns:listarComprobantePagoResponse" />
+    </operation>
+    <operation name="eliminarComprobantePago">
+      <input wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/eliminarComprobantePagoRequest" message="tns:eliminarComprobantePago" />
+      <output wsam:Action="http://services.megaautos.com.pe/ComprobantePagoWS/eliminarComprobantePagoResponse" message="tns:eliminarComprobantePagoResponse" />
     </operation>
   </portType>
   <binding name="ComprobantePagoWSPortBinding" type="tns:ComprobantePagoWS">
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarComprobantePago">
+    <operation name="listarComprobantePago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarComprobantePago">
+    <operation name="eliminarComprobantePago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

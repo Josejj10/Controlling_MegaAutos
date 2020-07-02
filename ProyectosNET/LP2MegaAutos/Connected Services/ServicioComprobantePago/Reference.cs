@@ -42,6 +42,15 @@ namespace LP2MegaAutos.ServicioComprobantePago {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.insertarComprobantePagoResponse> insertarComprobantePagoAsync(LP2MegaAutos.ServicioComprobantePago.insertarComprobantePagoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoRequest", ReplyAction="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse listarComprobantePago(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoRequest", ReplyAction="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse> listarComprobantePagoAsync(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ComprobantePagoWS/eliminarComprobantePagoRequest" +
             "", ReplyAction="http://services.megaautos.com.pe/ComprobantePagoWS/eliminarComprobantePagoRespons" +
             "e")]
@@ -53,15 +62,6 @@ namespace LP2MegaAutos.ServicioComprobantePago {
             "", ReplyAction="http://services.megaautos.com.pe/ComprobantePagoWS/eliminarComprobantePagoRespons" +
             "e")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.eliminarComprobantePagoResponse> eliminarComprobantePagoAsync(LP2MegaAutos.ServicioComprobantePago.eliminarComprobantePagoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoRequest", ReplyAction="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse listarComprobantePago(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoRequest", ReplyAction="http://services.megaautos.com.pe/ComprobantePagoWS/listarComprobantePagoResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse> listarComprobantePagoAsync(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request);
     }
     
     /// <remarks/>
@@ -691,6 +691,34 @@ namespace LP2MegaAutos.ServicioComprobantePago {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarComprobantePago", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarComprobantePagoRequest {
+        
+        public listarComprobantePagoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarComprobantePagoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarComprobantePagoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioComprobantePago.comprobantePago[] @return;
+        
+        public listarComprobantePagoResponse() {
+        }
+        
+        public listarComprobantePagoResponse(LP2MegaAutos.ServicioComprobantePago.comprobantePago[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarComprobantePago", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class eliminarComprobantePagoRequest {
         
@@ -720,34 +748,6 @@ namespace LP2MegaAutos.ServicioComprobantePago {
         }
         
         public eliminarComprobantePagoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarComprobantePago", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarComprobantePagoRequest {
-        
-        public listarComprobantePagoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarComprobantePagoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarComprobantePagoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioComprobantePago.comprobantePago[] @return;
-        
-        public listarComprobantePagoResponse() {
-        }
-        
-        public listarComprobantePagoResponse(LP2MegaAutos.ServicioComprobantePago.comprobantePago[] @return) {
             this.@return = @return;
         }
     }
@@ -826,6 +826,27 @@ namespace LP2MegaAutos.ServicioComprobantePago {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS.listarComprobantePago(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request) {
+            return base.Channel.listarComprobantePago(request);
+        }
+        
+        public LP2MegaAutos.ServicioComprobantePago.comprobantePago[] listarComprobantePago() {
+            LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest inValue = new LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest();
+            LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse retVal = ((LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS)(this)).listarComprobantePago(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse> LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS.listarComprobantePagoAsync(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request) {
+            return base.Channel.listarComprobantePagoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse> listarComprobantePagoAsync() {
+            LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest inValue = new LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest();
+            return ((LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS)(this)).listarComprobantePagoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2MegaAutos.ServicioComprobantePago.eliminarComprobantePagoResponse LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS.eliminarComprobantePago(LP2MegaAutos.ServicioComprobantePago.eliminarComprobantePagoRequest request) {
             return base.Channel.eliminarComprobantePago(request);
         }
@@ -846,27 +867,6 @@ namespace LP2MegaAutos.ServicioComprobantePago {
             LP2MegaAutos.ServicioComprobantePago.eliminarComprobantePagoRequest inValue = new LP2MegaAutos.ServicioComprobantePago.eliminarComprobantePagoRequest();
             inValue.idCp = idCp;
             return ((LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS)(this)).eliminarComprobantePagoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS.listarComprobantePago(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request) {
-            return base.Channel.listarComprobantePago(request);
-        }
-        
-        public LP2MegaAutos.ServicioComprobantePago.comprobantePago[] listarComprobantePago() {
-            LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest inValue = new LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest();
-            LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse retVal = ((LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS)(this)).listarComprobantePago(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse> LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS.listarComprobantePagoAsync(LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest request) {
-            return base.Channel.listarComprobantePagoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoResponse> listarComprobantePagoAsync() {
-            LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest inValue = new LP2MegaAutos.ServicioComprobantePago.listarComprobantePagoRequest();
-            return ((LP2MegaAutos.ServicioComprobantePago.ComprobantePagoWS)(this)).listarComprobantePagoAsync(inValue);
         }
     }
 }

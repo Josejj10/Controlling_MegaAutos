@@ -65,7 +65,7 @@ namespace LP2MegaAutos
                     BinaryReader br = new BinaryReader(fs);
 
                     // Asignamos el archivo al objeto
-                    this._excel.excel1 = br.ReadBytes((int)fs.Length);
+                    //this._excel.excel1 = br.ReadBytes((int)fs.Length);
                     br.Close();
                     fs.Close();
                 }
@@ -95,7 +95,7 @@ namespace LP2MegaAutos
                     BinaryReader br = new BinaryReader(fs);
 
                     // Asignamos el archivo al objeto
-                    this._excel.excel2 = br.ReadBytes((int)fs.Length);
+                    //this._excel.excel2 = br.ReadBytes((int)fs.Length);
                     br.Close();
                     fs.Close();
                 }

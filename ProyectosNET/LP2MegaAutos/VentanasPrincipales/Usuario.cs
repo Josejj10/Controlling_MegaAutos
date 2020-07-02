@@ -7,34 +7,32 @@ namespace LP2MegaAutos
     public class Usuario
     {
         private string _correo;
-        private string _password;
         private BindingList<EPermisos> _permisos;
 
         public Usuario()
         {
-            this.Permisos = new BindingList<EPermisos>();
+          //  this.Permisos = new BindingList<EPermisos>();
         }
 
         public string Correo { get => _correo; set => _correo = value; }
-        public string Password { get => _password; set => _password = value; }
-        public BindingList<EPermisos> Permisos { get => _permisos; set => _permisos = value; }
+        //public BindingList<EPermisos> Permisos { get => _permisos; set => _permisos = value; }
 
         public void agregarPermiso(EPermisos permiso)
         {
-            Permisos.Add(permiso);   
+            //Permisos.Add(permiso);   
             // TODO Agregar permiso a la BD
         }
 
         public int quitarPermiso(EPermisos permiso)
         {
-            if (Permisos.Contains(permiso))
-                Permisos.Remove(permiso);
-            else
+            //if (Permisos.Contains(permiso))
+              //  Permisos.Remove(permiso);
+            //else
                 return 0;
             
             // TODO Quitar permiso de la BD
 
-            return 1;
+            //return 1;
         }
 
     }

@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/AreaTrabajoWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarAreaTrabajo">
-    <part name="parameters" element="tns:listarAreaTrabajo" />
+  <message name="eliminarAreaTrabajo">
+    <part name="parameters" element="tns:eliminarAreaTrabajo" />
   </message>
-  <message name="listarAreaTrabajoResponse">
-    <part name="parameters" element="tns:listarAreaTrabajoResponse" />
+  <message name="eliminarAreaTrabajoResponse">
+    <part name="parameters" element="tns:eliminarAreaTrabajoResponse" />
   </message>
   <message name="insertarAreaTrabajo">
     <part name="parameters" element="tns:insertarAreaTrabajo" />
@@ -23,16 +23,16 @@
   <message name="actualizarAreaTrabajoResponse">
     <part name="parameters" element="tns:actualizarAreaTrabajoResponse" />
   </message>
-  <message name="eliminarAreaTrabajo">
-    <part name="parameters" element="tns:eliminarAreaTrabajo" />
+  <message name="listarAreaTrabajo">
+    <part name="parameters" element="tns:listarAreaTrabajo" />
   </message>
-  <message name="eliminarAreaTrabajoResponse">
-    <part name="parameters" element="tns:eliminarAreaTrabajoResponse" />
+  <message name="listarAreaTrabajoResponse">
+    <part name="parameters" element="tns:listarAreaTrabajoResponse" />
   </message>
   <portType name="AreaTrabajoWS">
-    <operation name="listarAreaTrabajo">
-      <input wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoRequest" message="tns:listarAreaTrabajo" />
-      <output wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoResponse" message="tns:listarAreaTrabajoResponse" />
+    <operation name="eliminarAreaTrabajo">
+      <input wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoRequest" message="tns:eliminarAreaTrabajo" />
+      <output wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoResponse" message="tns:eliminarAreaTrabajoResponse" />
     </operation>
     <operation name="insertarAreaTrabajo">
       <input wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/insertarAreaTrabajoRequest" message="tns:insertarAreaTrabajo" />
@@ -42,14 +42,14 @@
       <input wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/actualizarAreaTrabajoRequest" message="tns:actualizarAreaTrabajo" />
       <output wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/actualizarAreaTrabajoResponse" message="tns:actualizarAreaTrabajoResponse" />
     </operation>
-    <operation name="eliminarAreaTrabajo">
-      <input wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoRequest" message="tns:eliminarAreaTrabajo" />
-      <output wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/eliminarAreaTrabajoResponse" message="tns:eliminarAreaTrabajoResponse" />
+    <operation name="listarAreaTrabajo">
+      <input wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoRequest" message="tns:listarAreaTrabajo" />
+      <output wsam:Action="http://services.megaautos.com.pe/AreaTrabajoWS/listarAreaTrabajoResponse" message="tns:listarAreaTrabajoResponse" />
     </operation>
   </portType>
   <binding name="AreaTrabajoWSPortBinding" type="tns:AreaTrabajoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarAreaTrabajo">
+    <operation name="eliminarAreaTrabajo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarAreaTrabajo">
+    <operation name="listarAreaTrabajo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

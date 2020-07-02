@@ -10,18 +10,19 @@ using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Framework.UserControls.Items;
 using LP2MegaAutos.Properties;
+using LP2MegaAutos.ServicioUsuario;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaInicio : Pantalla
     {
-        private Usuario _usuario;
-        public Usuario Usuario { get { return _usuario; } set { _usuario = value; } }
+        private usuario _usuario;
+        public usuario Usuario { get { return _usuario; } set { _usuario = value; } }
         public pantallaInicio()
         {
             InitializeComponent();
         }
-        public pantallaInicio(Usuario u)
+        public pantallaInicio(usuario u)
         {
             InitializeComponent();
             _usuario = u;
@@ -38,7 +39,7 @@ namespace LP2MegaAutos
             int botones = 0;
             int nItemsInfo = 0;
             int nItemsConfig = 0;
-            BotonesDinamicosHelper.recibirParametros(_usuario.Permisos, ref botones, ref nItemsInfo, ref nItemsConfig);
+            BotonesDinamicosHelper.recibirParametros(_usuario.permisos.ToList<ePermisos?>(), ref botones, ref nItemsInfo, ref nItemsConfig);
             // TODO
             if ((botones & 4) == 4)
             {
@@ -81,14 +82,14 @@ namespace LP2MegaAutos
             return ims;
         }
 
-        private void crearBotones(int xLoc, BindingList<string> nombres, BindingList<EPermisos> per, 
+        private void crearBotones(int xLoc, BindingList<string> nombres, List<ePermisos?> per, 
             BindingList<Image> imgs, Button btnMenu, BindingList<string> txts)
         {
             ContenedorPantalla cnt = ((frmPrincipal)this.Parent.Parent.Parent).ContenedorPantallas;
             Panel panelMenu = ((frmPrincipal)this.Parent.Parent.Parent).PanelMenu;
             // Crear segun permisos 
             // Si tiene el permiso todos
-            if (_usuario.Permisos.Contains(EPermisos.All))
+            if (_usuario.permisos.ToList<ePermisos?>().Contains(ePermisos.All))
             {
                 // Crear todos
                 itemMenuStrip ims1 = crearItemMenuStrip(xLoc, 176, nombres[0], imgs[0],txts[0]);
@@ -123,7 +124,7 @@ namespace LP2MegaAutos
             int yLoc;
 
             // Primero Area de Trabajo
-            if (_usuario.Permisos.Contains(per[0]))
+            if (_usuario.permisos.ToList<ePermisos?>().Contains(per[0]))
             {
                 yLoc = 176;
 
@@ -140,7 +141,7 @@ namespace LP2MegaAutos
                 menu |= 8;
             }
 
-            if (_usuario.Permisos.Contains(per[1]))
+            if (_usuario.permisos.ToList<ePermisos?>().Contains(per[1]))
             {
 
                 // Si se esta utilizando el item 1
@@ -158,7 +159,7 @@ namespace LP2MegaAutos
                 menu |= yLoc == 176 ? 8 : 4;
             }
 
-            if (_usuario.Permisos.Contains(per[2]))
+            if (_usuario.permisos.ToList<ePermisos?>().Contains(per[2]))
             {
                 // yLoc depende de que items ya hayan sido creados
                 yLoc = (menu & 8) == 8 ? (menu & 4) == 4 ? 334 : 255 : 176;
@@ -175,7 +176,7 @@ namespace LP2MegaAutos
                 menu |= yLoc == 176 ? 8 : yLoc == 255 ? 4 : 2;  
             }
 
-            if (_usuario.Permisos.Contains(per[3]))
+            if (_usuario.permisos.ToList<ePermisos?>().Contains(per[3]))
             {
                 // yLoc dependera de que items ya han sido creados
                 yLoc = (menu & 8) == 8 ? (menu & 4) == 4 ? (menu & 2) == 2 ?
@@ -198,7 +199,7 @@ namespace LP2MegaAutos
             // Crear listas necesarias
             BindingList<string> nombres = new BindingList<string>();
             BindingList<string> textos = new BindingList<string>();
-            BindingList<EPermisos> per = new BindingList<EPermisos>();
+            List<ePermisos?> per = new List<ePermisos?>();
             BindingList<Image> imgs = new BindingList<Image>();
 
             nombres.Add("btnAreaTrabajo");
@@ -211,10 +212,10 @@ namespace LP2MegaAutos
             textos.Add("Drivers");
             textos.Add("Carros");
 
-            per.Add(EPermisos.AreasTrabajo);
-            per.Add(EPermisos.Clientes);
-            per.Add(EPermisos.Drivers);
-            per.Add(EPermisos.Vehiculos);
+            per.Add(ePermisos.AreasTrabajo);
+            per.Add(ePermisos.Clientes);
+            per.Add(ePermisos.Drivers);
+            per.Add(ePermisos.Vehiculos);
 
             imgs.Add(Resources.AreaTrabajo);            
             imgs.Add(Resources.Clientes);            
@@ -231,7 +232,7 @@ namespace LP2MegaAutos
             // Crear listas necesarias
             BindingList<string> nombres = new BindingList<string>();
             BindingList<string> textos = new BindingList<string>();
-            BindingList<EPermisos> per = new BindingList<EPermisos>();
+            List<ePermisos?> per = new List<ePermisos?>();
             BindingList<Image> imgs = new BindingList<Image>();
 
             nombres.Add("btnUsuarios");
@@ -244,10 +245,10 @@ namespace LP2MegaAutos
             textos.Add("Sedes");
             textos.Add("Empresa");
 
-            per.Add(EPermisos.Usuarios);
-            per.Add(EPermisos.Servicios);
-            per.Add(EPermisos.Sedes);
-            per.Add(EPermisos.Empresa);
+            per.Add(ePermisos.Usuarios);
+            per.Add(ePermisos.Servicios);
+            per.Add(ePermisos.Sedes);
+            per.Add(ePermisos.Empresa);
 
             imgs.Add(Resources.Usuarios);
             imgs.Add(Resources.Servicio);

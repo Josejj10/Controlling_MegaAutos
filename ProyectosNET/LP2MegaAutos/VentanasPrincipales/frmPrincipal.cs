@@ -16,15 +16,16 @@ using System.Threading;
 using LP2MegaAutos.Framework.UserControls;
 using System.IO;
 using LP2MegaAutos.Properties;
+using LP2MegaAutos.ServicioUsuario;
 
 namespace LP2MegaAutos
 {
     public partial class frmPrincipal : MetroForm
     {
 
-        private Usuario _usuario;
+        private usuario _usuario;
         #region Getters y Setters
-        public Usuario Usuario { get => _usuario; set => _usuario = value; }
+        public usuario Usuario { get => _usuario; set => _usuario = value; }
 
         private Button getBotonPanel(string nom, Control cont)
         {
@@ -113,7 +114,7 @@ namespace LP2MegaAutos
 
         #region inicializacion
         #region constructor
-        public frmPrincipal(Usuario usuario)
+        public frmPrincipal(usuario usuario)
         {
             InitializeComponent();
             _usuario = usuario;
@@ -132,13 +133,23 @@ namespace LP2MegaAutos
 
         private void inicializarUsuario()
         {
-            _usuario.Permisos.Add(EPermisos.All);
-            //_usuario.Permisos.Add(EPermisos.ActualizarBD);
-            //_usuario.Permisos.Add(EPermisos.Empresa);
-            _usuario.Permisos.Add(EPermisos.Sedes);
-            _usuario.Permisos.Add(EPermisos.Drivers);
-            _usuario.Permisos.Add(EPermisos.Clientes);
-
+            foreach (ePermisos p in _usuario.permisos)
+            {
+                Console.WriteLine(p.ToString());
+            }
+            List <ePermisos?> uPer =  _usuario.permisos.ToList();
+            uPer.Remove(ePermisos.All);
+            _usuario.permisos = uPer.ToArray();
+            
+            foreach (ePermisos p in _usuario.permisos)
+            {
+                Console.WriteLine(p.ToString());
+            }
+            //_usuario.permisos.ToList().Add(ePermisos.ActualizarBD);
+            //_usuario.permisos.ToList().Add(ePermisos.Empresa);
+            //_usuario.permisos.ToList().Add(ePermisos.Sedes);
+            //_usuario.permisos.ToList().Add(ePermisos.Drivers);
+            //_usuario.permisos.ToList().Add(ePermisos.Clientes);
         }
 
         private void inicializarPms()
@@ -198,9 +209,9 @@ namespace LP2MegaAutos
             int menu = 0;
             int nItemsInfo = 0;
             int nItemsConfig = 0;
-
+            
             // Recibir los parametros del usuario enviando variables por referencia
-            BotonesDinamicosHelper.recibirParametros(_usuario.Permisos, ref menu, ref nItemsInfo, ref nItemsConfig);
+            BotonesDinamicosHelper.recibirParametros(_usuario.permisos.ToList<ePermisos?>(), ref menu, ref nItemsInfo, ref nItemsConfig);
 
             // Crear los botones segun los flags de menu
             bool estaBtnInformacion = false;
@@ -320,12 +331,12 @@ namespace LP2MegaAutos
 
         // Crear Strip dinamicamente
         private void crearStrip(PanelMenuStrip pms, int nItems, BindingList<Image> ims,
-                                BindingList<EPermisos> per, Button btnMenu, BindingList<string>txts)
+                                BindingList<ePermisos?> per, Button btnMenu, BindingList<string>txts)
         {
             // Asignar imagenes segun los permisos del usuario
             // En orden, son: Areas de Trabajo, Clientes, Vehiculos, Drivers
             // Si no tiene el primero, entonces el segundo
-            if (_usuario.Permisos.Contains(EPermisos.All))
+            if (_usuario.permisos.ToList<ePermisos?>().Contains(ePermisos.All))
             {
                 pms.Imagen1 = ims[0];
                 pms.Imagen2 = ims[1];
@@ -359,11 +370,12 @@ namespace LP2MegaAutos
                 int iUtilizado;
                 if (nItems > 3)
                 {
-                    iUtilizado = _usuario.Permisos.Contains(per[3]) ?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) ?
                              3 : -1;
                     if (iUtilizado != -1)
                     {
                         pms.Imagen4 = ims[iUtilizado];
+                        pms.Texto4 = txts[iUtilizado];
                         puesto4 = true;
                         pms.item4Click +=
                             new PanelMenuStrip.ButtonClickEventHandler
@@ -373,13 +385,14 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 2)
                 {
-                    iUtilizado = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
                               3 :
-                              _usuario.Permisos.Contains(per[2]) ?
+                              _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) ?
                               2 : -1;
                     if (iUtilizado != -1)
                     {
                         pms.Imagen3 = ims[iUtilizado];
+                        pms.Texto3 = txts[iUtilizado];
                         if (puesto4) puesto3 = true;
                         else puesto4 = true;
 
@@ -391,15 +404,16 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 1)
                 {
-                    iUtilizado = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
                               3 :
-                              _usuario.Permisos.Contains(per[2]) && !puesto3 ?
+                              _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !puesto3 ?
                               2 :
-                              _usuario.Permisos.Contains(per[1]) ?
+                              _usuario.permisos.ToList<ePermisos?>().Contains(per[1]) ?
                               1 : -1;
                     if (iUtilizado != -1)
                     {
                         pms.Imagen2 = ims[iUtilizado];
+                        pms.Texto2 = txts[iUtilizado];
                         if (puesto4)
                             if (puesto3)
                                 puesto2 = true;
@@ -413,17 +427,18 @@ namespace LP2MegaAutos
                 }
                 if (nItems > 0)
                 {
-                    iUtilizado = _usuario.Permisos.Contains(per[3]) && !puesto4 ?
+                    iUtilizado = _usuario.permisos.ToList<ePermisos?>().Contains(per[3]) && !puesto4 ?
                                   3 :
-                                  _usuario.Permisos.Contains(per[2]) && !puesto3 ?
+                                  _usuario.permisos.ToList<ePermisos?>().Contains(per[2]) && !puesto3 ?
                                   2 :
-                                  _usuario.Permisos.Contains(per[1]) && !puesto2 ?
+                                  _usuario.permisos.ToList<ePermisos?>().Contains(per[1]) && !puesto2 ?
                                   1 :
-                                  _usuario.Permisos.Contains(per[0]) ?
+                                  _usuario.permisos.ToList<ePermisos?>().Contains(per[0]) ?
                                   0 : -1;
                     if (iUtilizado != -1)
                     {
                         pms.Imagen1 = ims[iUtilizado];
+                        pms.Texto1 = txts[iUtilizado];
                         pms.item1Click +=
                             new PanelMenuStrip.ButtonClickEventHandler
                             (BotonesDinamicosHelper.asignarBoton(per[iUtilizado], btnMenu, ims[iUtilizado], panelMenu, contenedorPantalla1));
@@ -445,11 +460,11 @@ namespace LP2MegaAutos
             pms.Location = new Point(0, yLoc);
             pms.LayoutImagenes = ImageLayout.Center;
 
-            BindingList<EPermisos> per = new BindingList<EPermisos>();
-            per.Add(EPermisos.AreasTrabajo);
-            per.Add(EPermisos.Clientes);
-            per.Add(EPermisos.Vehiculos);
-            per.Add(EPermisos.Drivers);
+            BindingList<ePermisos?> per = new BindingList<ePermisos?>();
+            per.Add(ePermisos.AreasTrabajo);
+            per.Add(ePermisos.Clientes);
+            per.Add(ePermisos.Vehiculos);
+            per.Add(ePermisos.Drivers);
 
             BindingList<string> txts= new BindingList<string>();
             txts.Add("Areas");
@@ -481,11 +496,11 @@ namespace LP2MegaAutos
             pms.Location = new Point(0, yLoc);
             pms.LayoutImagenes = ImageLayout.Center;
 
-            BindingList<EPermisos> per = new BindingList<EPermisos>();
-            per.Add(EPermisos.Usuarios);
-            per.Add(EPermisos.Servicios);
-            per.Add(EPermisos.Sedes);
-            per.Add(EPermisos.Empresa);
+            BindingList<ePermisos?> per = new BindingList<ePermisos?>();
+            per.Add(ePermisos.Usuarios);
+            per.Add(ePermisos.Servicios);
+            per.Add(ePermisos.Sedes);
+            per.Add(ePermisos.Empresa);
 
             BindingList<string> txts = new BindingList<string>();
             txts.Add("Usuarios");

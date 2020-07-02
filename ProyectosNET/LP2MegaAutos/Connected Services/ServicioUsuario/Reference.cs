@@ -16,31 +16,13 @@ namespace LP2MegaAutos.ServicioUsuario {
     public interface UsuarioWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/buscarPorCorreoRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/buscarPorCorreoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioUsuario.listarUsuariosResponse listarUsuarios(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request);
+        LP2MegaAutos.ServicioUsuario.buscarPorCorreoResponse buscarPorCorreo(LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.listarUsuariosResponse> listarUsuariosAsync(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse insertarUsuario(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse> insertarUsuarioAsync(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/buscarPorCorreoRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/buscarPorCorreoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.buscarPorCorreoResponse> buscarPorCorreoAsync(LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/actualizarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/actualizarUsuarioResponse")]
@@ -59,6 +41,33 @@ namespace LP2MegaAutos.ServicioUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/verificarPasswordRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/verificarPasswordResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.verificarPasswordResponse> verificarPasswordAsync(LP2MegaAutos.ServicioUsuario.verificarPasswordRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse insertarUsuario(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse> insertarUsuarioAsync(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioUsuario.listarUsuariosResponse listarUsuarios(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.listarUsuariosResponse> listarUsuariosAsync(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request);
     }
     
     /// <remarks/>
@@ -80,6 +89,8 @@ namespace LP2MegaAutos.ServicioUsuario {
         private string nombreField;
         
         private string passwordField;
+        
+        private System.Nullable<ePermisos>[] permisosField;
         
         private string tipoUsuarioField;
         
@@ -156,7 +167,19 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute("permisos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+        public System.Nullable<ePermisos>[] permisos {
+            get {
+                return this.permisosField;
+            }
+            set {
+                this.permisosField = value;
+                this.RaisePropertyChanged("permisos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string tipoUsuario {
             get {
                 return this.tipoUsuarioField;
@@ -177,102 +200,75 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarios", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarUsuariosRequest {
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public enum ePermisos {
         
-        public listarUsuariosRequest() {
-        }
+        /// <remarks/>
+        AreasTrabajo,
+        
+        /// <remarks/>
+        Clientes,
+        
+        /// <remarks/>
+        Vehiculos,
+        
+        /// <remarks/>
+        Drivers,
+        
+        /// <remarks/>
+        Usuarios,
+        
+        /// <remarks/>
+        Servicios,
+        
+        /// <remarks/>
+        Sedes,
+        
+        /// <remarks/>
+        Empresa,
+        
+        /// <remarks/>
+        ActualizarBD,
+        
+        /// <remarks/>
+        All,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuariosResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class listarUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioUsuario.usuario[] @return;
-        
-        public listarUsuariosResponse() {
-        }
-        
-        public listarUsuariosResponse(LP2MegaAutos.ServicioUsuario.usuario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuario", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public eliminarUsuarioRequest() {
-        }
-        
-        public eliminarUsuarioRequest(int idUsuario) {
-            this.idUsuario = idUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuarioResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarUsuarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorCorreo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class buscarPorCorreoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public string correo;
         
-        public eliminarUsuarioResponse() {
+        public buscarPorCorreoRequest() {
         }
         
-        public eliminarUsuarioResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioUsuario.usuario objUsuario;
-        
-        public insertarUsuarioRequest() {
-        }
-        
-        public insertarUsuarioRequest(LP2MegaAutos.ServicioUsuario.usuario objUsuario) {
-            this.objUsuario = objUsuario;
+        public buscarPorCorreoRequest(string correo) {
+            this.correo = correo;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuarioResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class insertarUsuarioResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorCorreoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class buscarPorCorreoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public LP2MegaAutos.ServicioUsuario.usuario @return;
         
-        public insertarUsuarioResponse() {
+        public buscarPorCorreoResponse() {
         }
         
-        public insertarUsuarioResponse(int @return) {
+        public buscarPorCorreoResponse(LP2MegaAutos.ServicioUsuario.usuario @return) {
             this.@return = @return;
         }
     }
@@ -354,6 +350,106 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioUsuario.usuario objUsuario;
+        
+        public insertarUsuarioRequest() {
+        }
+        
+        public insertarUsuarioRequest(LP2MegaAutos.ServicioUsuario.usuario objUsuario) {
+            this.objUsuario = objUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuarioResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class insertarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarUsuarioResponse() {
+        }
+        
+        public insertarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuario", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public eliminarUsuarioRequest() {
+        }
+        
+        public eliminarUsuarioRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuarioResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarUsuarioResponse() {
+        }
+        
+        public eliminarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarios", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarUsuariosRequest {
+        
+        public listarUsuariosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuariosResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class listarUsuariosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioUsuario.usuario[] @return;
+        
+        public listarUsuariosResponse() {
+        }
+        
+        public listarUsuariosResponse(LP2MegaAutos.ServicioUsuario.usuario[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : LP2MegaAutos.ServicioUsuario.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -382,70 +478,26 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioUsuario.listarUsuariosResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.listarUsuarios(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request) {
-            return base.Channel.listarUsuarios(request);
+        LP2MegaAutos.ServicioUsuario.buscarPorCorreoResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.buscarPorCorreo(LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest request) {
+            return base.Channel.buscarPorCorreo(request);
         }
         
-        public LP2MegaAutos.ServicioUsuario.usuario[] listarUsuarios() {
-            LP2MegaAutos.ServicioUsuario.listarUsuariosRequest inValue = new LP2MegaAutos.ServicioUsuario.listarUsuariosRequest();
-            LP2MegaAutos.ServicioUsuario.listarUsuariosResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).listarUsuarios(inValue);
+        public LP2MegaAutos.ServicioUsuario.usuario buscarPorCorreo(string correo) {
+            LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest inValue = new LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest();
+            inValue.correo = correo;
+            LP2MegaAutos.ServicioUsuario.buscarPorCorreoResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).buscarPorCorreo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.listarUsuariosResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.listarUsuariosAsync(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request) {
-            return base.Channel.listarUsuariosAsync(request);
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.buscarPorCorreoResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.buscarPorCorreoAsync(LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest request) {
+            return base.Channel.buscarPorCorreoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.listarUsuariosResponse> listarUsuariosAsync() {
-            LP2MegaAutos.ServicioUsuario.listarUsuariosRequest inValue = new LP2MegaAutos.ServicioUsuario.listarUsuariosRequest();
-            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).listarUsuariosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
-            return base.Channel.eliminarUsuario(request);
-        }
-        
-        public int eliminarUsuario(int idUsuario) {
-            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
-            inValue.idUsuario = idUsuario;
-            LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
-            return base.Channel.eliminarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(int idUsuario) {
-            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
-            inValue.idUsuario = idUsuario;
-            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.insertarUsuario(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request) {
-            return base.Channel.insertarUsuario(request);
-        }
-        
-        public int insertarUsuario(LP2MegaAutos.ServicioUsuario.usuario objUsuario) {
-            LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest();
-            inValue.objUsuario = objUsuario;
-            LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).insertarUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.insertarUsuarioAsync(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request) {
-            return base.Channel.insertarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse> insertarUsuarioAsync(LP2MegaAutos.ServicioUsuario.usuario objUsuario) {
-            LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest();
-            inValue.objUsuario = objUsuario;
-            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).insertarUsuarioAsync(inValue);
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.buscarPorCorreoResponse> buscarPorCorreoAsync(string correo) {
+            LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest inValue = new LP2MegaAutos.ServicioUsuario.buscarPorCorreoRequest();
+            inValue.correo = correo;
+            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).buscarPorCorreoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -494,6 +546,73 @@ namespace LP2MegaAutos.ServicioUsuario {
             inValue.correo = correo;
             inValue.password = password;
             return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).verificarPasswordAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.insertarUsuario(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request) {
+            return base.Channel.insertarUsuario(request);
+        }
+        
+        public int insertarUsuario(LP2MegaAutos.ServicioUsuario.usuario objUsuario) {
+            LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest();
+            inValue.objUsuario = objUsuario;
+            LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).insertarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.insertarUsuarioAsync(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request) {
+            return base.Channel.insertarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse> insertarUsuarioAsync(LP2MegaAutos.ServicioUsuario.usuario objUsuario) {
+            LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest();
+            inValue.objUsuario = objUsuario;
+            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).insertarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
+            return base.Channel.eliminarUsuario(request);
+        }
+        
+        public int eliminarUsuario(int idUsuario) {
+            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
+            return base.Channel.eliminarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(int idUsuario) {
+            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioUsuario.listarUsuariosResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.listarUsuarios(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request) {
+            return base.Channel.listarUsuarios(request);
+        }
+        
+        public LP2MegaAutos.ServicioUsuario.usuario[] listarUsuarios() {
+            LP2MegaAutos.ServicioUsuario.listarUsuariosRequest inValue = new LP2MegaAutos.ServicioUsuario.listarUsuariosRequest();
+            LP2MegaAutos.ServicioUsuario.listarUsuariosResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).listarUsuarios(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.listarUsuariosResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.listarUsuariosAsync(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request) {
+            return base.Channel.listarUsuariosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.listarUsuariosResponse> listarUsuariosAsync() {
+            LP2MegaAutos.ServicioUsuario.listarUsuariosRequest inValue = new LP2MegaAutos.ServicioUsuario.listarUsuariosRequest();
+            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).listarUsuariosAsync(inValue);
         }
     }
 }

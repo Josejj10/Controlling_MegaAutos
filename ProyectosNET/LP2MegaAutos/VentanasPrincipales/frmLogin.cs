@@ -21,10 +21,10 @@ namespace LP2MegaAutos
 {
     public partial class Login_Screen : MetroFramework.Forms.MetroForm
     {
-        private Usuario _usuario = new Usuario();
+        private usuario _usuario = new usuario();
         private bool password_seen = false; 
         
-        public Usuario Usuario { get => _usuario; set => _usuario = value; }
+        public usuario Usuario { get => _usuario; set => _usuario = value; }
 
 
         public Login_Screen()
@@ -148,12 +148,9 @@ namespace LP2MegaAutos
         private bool verificarUsuario()
         {
             ServicioUsuario.UsuarioWSClient daoUsuario = new UsuarioWSClient();
-            ServicioUsuario.usuario _usu;
-            _usu = daoUsuario.verificarPassword(textBox_correo.Text, textBox_password.Text);
-            if (_usu == null)
+            _usuario = daoUsuario.verificarPassword(textBox_correo.Text, textBox_password.Text);
+            if (_usuario == null)
                 return false;
-            // Igualar _usuario a _usu
-
             return true;
         }
 
@@ -174,5 +171,11 @@ namespace LP2MegaAutos
         }
 
         #endregion Dark Mode
+
+        private void textBox_correo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            boton_acceder_Click(sender, e);            
+        }
     }
 }

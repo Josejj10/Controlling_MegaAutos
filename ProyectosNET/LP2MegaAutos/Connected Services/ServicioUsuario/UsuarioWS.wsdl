@@ -5,23 +5,11 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/UsuarioWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarUsuarios">
-    <part name="parameters" element="tns:listarUsuarios" />
+  <message name="buscarPorCorreo">
+    <part name="parameters" element="tns:buscarPorCorreo" />
   </message>
-  <message name="listarUsuariosResponse">
-    <part name="parameters" element="tns:listarUsuariosResponse" />
-  </message>
-  <message name="eliminarUsuario">
-    <part name="parameters" element="tns:eliminarUsuario" />
-  </message>
-  <message name="eliminarUsuarioResponse">
-    <part name="parameters" element="tns:eliminarUsuarioResponse" />
-  </message>
-  <message name="insertarUsuario">
-    <part name="parameters" element="tns:insertarUsuario" />
-  </message>
-  <message name="insertarUsuarioResponse">
-    <part name="parameters" element="tns:insertarUsuarioResponse" />
+  <message name="buscarPorCorreoResponse">
+    <part name="parameters" element="tns:buscarPorCorreoResponse" />
   </message>
   <message name="actualizarUsuario">
     <part name="parameters" element="tns:actualizarUsuario" />
@@ -35,18 +23,28 @@
   <message name="verificarPasswordResponse">
     <part name="parameters" element="tns:verificarPasswordResponse" />
   </message>
+  <message name="insertarUsuario">
+    <part name="parameters" element="tns:insertarUsuario" />
+  </message>
+  <message name="insertarUsuarioResponse">
+    <part name="parameters" element="tns:insertarUsuarioResponse" />
+  </message>
+  <message name="eliminarUsuario">
+    <part name="parameters" element="tns:eliminarUsuario" />
+  </message>
+  <message name="eliminarUsuarioResponse">
+    <part name="parameters" element="tns:eliminarUsuarioResponse" />
+  </message>
+  <message name="listarUsuarios">
+    <part name="parameters" element="tns:listarUsuarios" />
+  </message>
+  <message name="listarUsuariosResponse">
+    <part name="parameters" element="tns:listarUsuariosResponse" />
+  </message>
   <portType name="UsuarioWS">
-    <operation name="listarUsuarios">
-      <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosRequest" message="tns:listarUsuarios" />
-      <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
-    </operation>
-    <operation name="eliminarUsuario">
-      <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
-      <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
-    </operation>
-    <operation name="insertarUsuario">
-      <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
-      <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
+    <operation name="buscarPorCorreo">
+      <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/buscarPorCorreoRequest" message="tns:buscarPorCorreo" />
+      <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/buscarPorCorreoResponse" message="tns:buscarPorCorreoResponse" />
     </operation>
     <operation name="actualizarUsuario">
       <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
@@ -56,28 +54,22 @@
       <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/verificarPasswordRequest" message="tns:verificarPassword" />
       <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/verificarPasswordResponse" message="tns:verificarPasswordResponse" />
     </operation>
+    <operation name="insertarUsuario">
+      <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
+      <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
+    </operation>
+    <operation name="eliminarUsuario">
+      <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
+      <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
+    </operation>
+    <operation name="listarUsuarios">
+      <input wsam:Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosRequest" message="tns:listarUsuarios" />
+      <output wsam:Action="http://services.megaautos.com.pe/UsuarioWS/listarUsuariosResponse" message="tns:listarUsuariosResponse" />
+    </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarUsuarios">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarUsuario">
+    <operation name="buscarPorCorreo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,6 +88,33 @@
       </output>
     </operation>
     <operation name="verificarPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarUsuarios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

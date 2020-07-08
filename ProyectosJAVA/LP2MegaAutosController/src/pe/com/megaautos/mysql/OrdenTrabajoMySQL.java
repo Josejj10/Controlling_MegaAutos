@@ -43,7 +43,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             //i++
             // if(i%1000 ==0 || i == ordenesTrabajo.size()){
             // st.executeBatch();
-            
+            con.close();
         }catch(Exception e){
             System.out.println(e);
         }finally{

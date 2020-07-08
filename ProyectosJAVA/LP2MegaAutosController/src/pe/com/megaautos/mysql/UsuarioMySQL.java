@@ -22,7 +22,7 @@ public class UsuarioMySQL implements UsuarioDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -43,7 +43,6 @@ public class UsuarioMySQL implements UsuarioDAO {
             cs.executeUpdate();
             rpta = cs.getInt("_ID_USUARIO");
             if (usuario.getPermisos() != null) {
-                //con = DBDataSource.getConnection();
                 for (EPermisos e : usuario.getPermisos()){                    
                     CallableStatement cs2 = con.prepareCall(
                          "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
@@ -53,11 +52,17 @@ public class UsuarioMySQL implements UsuarioDAO {
                     cs2.executeUpdate();
                 }
             }
-            con.close();
             // Actualiza el ID del usuario insertado para tenerlo en Java
             usuario.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -66,7 +71,7 @@ public class UsuarioMySQL implements UsuarioDAO {
     public int actualizar(Usuario usuario) {
         int rpta = 0;
         try{
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
@@ -105,11 +110,16 @@ public class UsuarioMySQL implements UsuarioDAO {
                     cs2.executeUpdate();
                 }
             }
-            
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -117,7 +127,7 @@ public class UsuarioMySQL implements UsuarioDAO {
     public int actualizarConPassword(Usuario usuario) {
         int rpta = 0;
         try{
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
@@ -157,11 +167,16 @@ public class UsuarioMySQL implements UsuarioDAO {
                     cs2.executeUpdate();
                 }
             }
-            
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -170,7 +185,7 @@ public class UsuarioMySQL implements UsuarioDAO {
     public int eliminar(int idUsuario) {
         int rpta = 0;
         try{
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
@@ -180,10 +195,16 @@ public class UsuarioMySQL implements UsuarioDAO {
                     "{call ELIMINAR_USUARIO(?)}");
             cs.setInt("_ID_USUARIO", idUsuario);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -192,7 +213,7 @@ public class UsuarioMySQL implements UsuarioDAO {
     public ArrayList<Usuario> listar() {
         ArrayList<Usuario> usuarios = new ArrayList<>();
         try{
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
@@ -213,7 +234,6 @@ public class UsuarioMySQL implements UsuarioDAO {
                 usuario.setPassword(rs.getString("PASSWRD"));
                 //usuario.setFechaCreado(rs.getDate("FECHA_CREACION"));
                 usuarios.add(usuario);
-                con = DBDataSource.getConnection();
             CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
             cs2.setInt(1, usuario.getId());
             ResultSet rs2 = cs2.executeQuery();
@@ -254,10 +274,15 @@ public class UsuarioMySQL implements UsuarioDAO {
                 }
             }
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo los usuarios
         return usuarios;    
@@ -266,7 +291,7 @@ public class UsuarioMySQL implements UsuarioDAO {
     public Usuario buscarPorCorreo(String correo){        
         Usuario usuario = new Usuario();
         try{
-            Connection con = DBDataSource.getConnection();
+            con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall("{call BUSCAR_POR_CORREO(?)}");
             cs.setString(1,correo);
             ResultSet rs = cs.executeQuery();
@@ -278,7 +303,6 @@ public class UsuarioMySQL implements UsuarioDAO {
             usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
             usuario.setCorreo(rs.getString("CORREO"));
             
-            con = DBDataSource.getConnection();
             CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
             cs2.setInt(1, usuario.getId());
             ResultSet rs2 = cs2.executeQuery();
@@ -326,13 +350,22 @@ public class UsuarioMySQL implements UsuarioDAO {
             
         }catch(Exception e){
             System.out.println(e);
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return usuario;
     }
     @Override
     public Usuario verificarPassword(String correo, String password) {
+        
+        Usuario usuario = new Usuario();
         try{
-            Connection con = DBDataSource.getConnection();
+            con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)}");
             // Seria algo asi
             // "SELECT * FROM Usuarios where correo=CORREO and password=PASSWRD";
@@ -342,14 +375,12 @@ public class UsuarioMySQL implements UsuarioDAO {
             if(!rs.next())
                 return null;
             // Si no, actualizar usuario y retornarlo
-            Usuario usuario = new Usuario();
             usuario.setId(rs.getInt("ID_USUARIO"));
             usuario.setNombre(rs.getString("NOMBRE"));
             usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
             usuario.setCorreo(rs.getString("CORREO"));
             usuario.setPassword(rs.getString("PASSWRD"));
             
-            con = DBDataSource.getConnection();
             CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
             cs2.setInt(1, usuario.getId());
             ResultSet rs2 = cs2.executeQuery();
@@ -392,12 +423,18 @@ public class UsuarioMySQL implements UsuarioDAO {
             
             
             // usuario.setPermisos Ahi hagan su magia con SQL y java
-            // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
-            return usuario;
+            // usuario.setFechaCreado(rs.getDate("FECHA_CREACION")
             
         }catch(Exception e){
             System.out.println(e);
-            return null;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
+        return usuario;
     }
 }

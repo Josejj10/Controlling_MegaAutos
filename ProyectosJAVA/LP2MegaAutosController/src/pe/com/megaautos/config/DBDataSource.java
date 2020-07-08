@@ -23,13 +23,13 @@ public class DBDataSource {
 			ds.setUser(DBManager.user);
 			ds.setPassword(DBManager.password);
                         
-                        
                         ds.setInitialPoolSize(5);
 			ds.setMinPoolSize(5);
                         ds.setAcquireIncrement(5);     
                         ds.setAcquireRetryAttempts(2);
                         // Establecer max statements para PreparedStatement pooling
                         ds.setMaxStatements(200);
+                        ds.setMaxStatementsPerConnection(40);
                         
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());    

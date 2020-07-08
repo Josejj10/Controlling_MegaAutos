@@ -22,7 +22,7 @@ public class VehiculoMySQL implements VehiculoDAO{
     public int insertar(Vehiculo vehiculo) {
         int rpta = 0;
          try{
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
@@ -41,11 +41,17 @@ public class VehiculoMySQL implements VehiculoDAO{
             cs.setInt("_ID_PROPIETARIO", vehiculo.getPropietario().getId());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_VEHICULO");
-            con.close();
             // Actualiza el ID del vehiculo insertado para tenerlo en Java
             vehiculo.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -87,7 +93,7 @@ public class VehiculoMySQL implements VehiculoDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -100,10 +106,16 @@ public class VehiculoMySQL implements VehiculoDAO{
             cs.setString("_TIPO_VEHICULO", vehiculo.getTipoVehiculo().toUpperCase());
             cs.setInt("_ID_PROPIETARIO", vehiculo.getPropietario().getId());
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -113,7 +125,7 @@ public class VehiculoMySQL implements VehiculoDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -123,10 +135,16 @@ public class VehiculoMySQL implements VehiculoDAO{
                     "{call ELIMINAR_VEHICULO(?)}");
             cs.setInt("_ID_VEHICULO", idVehiculo);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -136,7 +154,7 @@ public class VehiculoMySQL implements VehiculoDAO{
         ArrayList<Vehiculo> vehiculos = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -159,10 +177,15 @@ public class VehiculoMySQL implements VehiculoDAO{
                 vehiculo.setPropietario(prop);
                 vehiculos.add(vehiculo);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo los vehiculos
         return vehiculos;
@@ -173,7 +196,7 @@ public class VehiculoMySQL implements VehiculoDAO{
         Vehiculo vehiculo = new Vehiculo();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -194,10 +217,15 @@ public class VehiculoMySQL implements VehiculoDAO{
                 Cliente prop = daoCliente.buscar(rs.getInt("ID_PROPIETARIO"));
                 vehiculo.setPropietario(prop);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return vehiculo;
     }
@@ -206,7 +234,7 @@ public class VehiculoMySQL implements VehiculoDAO{
     @Override
     public void guardarBatch(DataFrame df){
         try{
-            Connection con = DBDataSource.getConnection();
+            con = DBDataSource.getConnection();
             PreparedStatement st = con.prepareStatement("{CALL INSERTAR_VEHICULO_DF(?,?,?)}");
             for (int r = 0; r < df.length(); r++) {
                 for (int c = 1; c <= df.size(); c++) {
@@ -215,10 +243,16 @@ public class VehiculoMySQL implements VehiculoDAO{
                 st.addBatch();
             }
             st.executeBatch();
-            con.close();
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
     }
 }

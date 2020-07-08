@@ -26,7 +26,7 @@ public class DriverMySQL implements DriverDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -38,11 +38,17 @@ public class DriverMySQL implements DriverDAO {
             cs.setDouble("_DRIVER", driver.getFormula());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_DRIVER");
-            con.close();
             // Actualiza el ID del driver insertado para tenerlo en Java
             driver.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -52,7 +58,7 @@ public class DriverMySQL implements DriverDAO {
         int rpta = 0;
         try{
             //Registar el JAR de conexion
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -64,10 +70,16 @@ public class DriverMySQL implements DriverDAO {
             cs.setDouble("_DRIVER", driver.getFormula());
             //El procedure de MySQL, cambiará el valor en base a su id.
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -77,7 +89,7 @@ public class DriverMySQL implements DriverDAO {
         int rpta = 0;
         try{
             //Registar el JAR de conexion
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -87,10 +99,16 @@ public class DriverMySQL implements DriverDAO {
             //Actualizar Driver recibirá el id_driver y su valor
             cs.setInt("_ID_DRIVER", idDriver);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -100,7 +118,7 @@ public class DriverMySQL implements DriverDAO {
         ArrayList<Driver> drivers = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -117,10 +135,15 @@ public class DriverMySQL implements DriverDAO {
                 driver.setFormula(rs.getDouble("VALOR"));
                 drivers.add(driver);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo los drivers
         return drivers;
@@ -131,7 +154,7 @@ public class DriverMySQL implements DriverDAO {
         Driver driver = new Driver();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -145,10 +168,15 @@ public class DriverMySQL implements DriverDAO {
                 driver.setId(idDriver);
                 driver.setFormula(rs.getDouble("VALOR"));
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return driver;
     }

@@ -26,7 +26,7 @@ public class ServicioMySQL implements ServicioDAO{
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -45,11 +45,17 @@ public class ServicioMySQL implements ServicioDAO{
             cs.setString("_CODIGO_SERVICIO", servicio.getCodigoServicio().toUpperCase());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_SERVICIO");
-            con.close();
             // Actualiza el ID del Servicio insertado para tenerlo en Java
             servicio.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -59,7 +65,7 @@ public class ServicioMySQL implements ServicioDAO{
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -72,10 +78,16 @@ public class ServicioMySQL implements ServicioDAO{
             cs.setString("_DESCRIPCION", servicio.getDescripcion().toUpperCase());
             cs.setString("_TIPO_SERVICIO", servicio.getTipoServicio().toUpperCase());
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;   
     }
@@ -85,7 +97,7 @@ public class ServicioMySQL implements ServicioDAO{
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -94,10 +106,16 @@ public class ServicioMySQL implements ServicioDAO{
                     "{call ELIMINAR_SERVICIO(?)}");
             cs.setInt("_ID_SERVICIO", idServicio);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;    
     }
@@ -107,7 +125,7 @@ public class ServicioMySQL implements ServicioDAO{
          ArrayList<Servicio> servicios = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -127,10 +145,15 @@ public class ServicioMySQL implements ServicioDAO{
                 servicio.setTipoServicio(rs.getString("TIPO_SERVICIO"));
                 servicios.add(servicio);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo los servicios
         return servicios;

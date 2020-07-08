@@ -26,29 +26,36 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
     @Override
     public int insertar(AreaTrabajo areaTrabajo) {
         int rpta = 0;
-         try{
-            //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //Establecer la conexion
-            con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);*/
-            CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_AREA_TRABAJO(?,?,?,?)}");
-            // Insertar AreaTrabajo recibirá el nombre, el total de ingresos 
-            // y de egresos. Devolvera el id
-            cs.registerOutParameter("_ID_AREA_TRABAJO", java.sql.Types.INTEGER);
-            // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
-            cs.setString("_NOMBRE", areaTrabajo.getNombre().toUpperCase());
-            cs.setDouble("_TOTAL_INGRESOS", areaTrabajo.getTotalIngresos());
-            cs.setDouble("_TOTAL_EGRESOS", areaTrabajo.getTotalEgresos());
-            cs.executeUpdate();
-            rpta = cs.getInt("_ID_AREA_TRABAJO");
-            con.close();
-            // Actualiza el ID del area de trabajo insertada para tenerlo en Java
-            areaTrabajo.setId(rpta);
+        try{
+           //Registrar el JAR de conexión
+           con = DBDataSource.getConnection();/*
+           Class.forName("com.mysql.cj.jdbc.Driver");
+           //Establecer la conexion
+           con = DriverManager.getConnection(DBManager.url, 
+                   DBManager.user, DBManager.password);*/
+           CallableStatement cs = con.prepareCall(
+                   "{call INSERTAR_AREA_TRABAJO(?,?,?,?)}");
+           // Insertar AreaTrabajo recibirá el nombre, el total de ingresos 
+           // y de egresos. Devolvera el id
+           cs.registerOutParameter("_ID_AREA_TRABAJO", java.sql.Types.INTEGER);
+           // TODO AL NOMBRE AGREGARLE SACAPALABRAS QUE BORRE LOS DOBLE ESPACIOS
+           cs.setString("_NOMBRE", areaTrabajo.getNombre().toUpperCase());
+           cs.setDouble("_TOTAL_INGRESOS", areaTrabajo.getTotalIngresos());
+           cs.setDouble("_TOTAL_EGRESOS", areaTrabajo.getTotalEgresos());
+           cs.executeUpdate();
+           rpta = cs.getInt("_ID_AREA_TRABAJO");
+           // Actualiza el ID del area de trabajo insertada para tenerlo en Java
+           areaTrabajo.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -58,7 +65,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -68,10 +75,17 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
             cs.setInt("_ID_AREA_TRABAJO", areaTrabajo.getId());
             cs.setString("_NOMBRE", areaTrabajo.getNombre().toUpperCase());
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             rpta = 1;
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -81,7 +95,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -90,10 +104,17 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
                     "{call ELIMINAR_AREA_TRABAJO(?)}");
             cs.setInt("_ID_AREA_TRABAJO", idAreaTrabajo);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
             rpta = 1;
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -103,7 +124,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
         ArrayList<AreaTrabajo> areaTrabajos = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -123,9 +144,16 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
                 areaTrabajos.add(areaTrabajo);
             }
             //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo las areas de trabajo
         return areaTrabajos;    
@@ -136,7 +164,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
         AreaTrabajo areaTrabajo = new AreaTrabajo();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -158,9 +186,16 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
                 // Idea, podria ser solo con ID pero igual necesita sus ATxCC
             }
             //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return areaTrabajo;
     }
@@ -168,7 +203,7 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
     @Override
     public void guardarBatch(DataFrame df){
         try{
-            Connection con = DBDataSource.getConnection();
+            con = DBDataSource.getConnection();
             PreparedStatement st = con.prepareStatement("{CALL INSERTAR_AREA_TRABAJO_DF(?,?,?)}");
             for (int r = 0; r < df.length(); r++) {
                 for (int c = 1; c <= df.size(); c++) {
@@ -177,10 +212,17 @@ public class AreaTrabajoMySQL implements AreaTrabajoDAO {
                 st.addBatch();
             }
             st.executeBatch();
-            con.close();
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ public class EmpresaMySQL implements EmpresaDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -39,11 +39,17 @@ public class EmpresaMySQL implements EmpresaDAO{
             cs.setString("_NOMBRE", empresa.getNombre().toUpperCase());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_EMPRESA");
-            con.close();
             // Actualiza el ID de la empresa insertada para tenerlo en Java
             empresa.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -53,7 +59,7 @@ public class EmpresaMySQL implements EmpresaDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -63,10 +69,16 @@ public class EmpresaMySQL implements EmpresaDAO{
             cs.setInt("_ID_EMPRESA", empresa.getId());
             cs.setString("_NOMBRE", empresa.getNombre().toUpperCase());
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -76,7 +88,7 @@ public class EmpresaMySQL implements EmpresaDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -85,10 +97,16 @@ public class EmpresaMySQL implements EmpresaDAO{
                     "{call ELIMINAR_EMPRESA(?)}");
             cs.setInt("_ID_EMPRESA", idEmpresa);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -98,7 +116,7 @@ public class EmpresaMySQL implements EmpresaDAO{
         ArrayList<Empresa> empresas = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -115,10 +133,15 @@ public class EmpresaMySQL implements EmpresaDAO{
                 empresa.setNombre(rs.getString("NOMBRE"));
                 empresas.add(empresa);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo las empresas
         return empresas;    

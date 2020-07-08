@@ -30,6 +30,7 @@ public class ExcelMySQL implements ExcelDAO {
             while(rs.next()){                
                 excel.setArchivo(rs.getBytes("ARCHIVO"));
             }
+            con.close();
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());
@@ -49,6 +50,7 @@ public class ExcelMySQL implements ExcelDAO {
             while(rs.next()){                
                 excel.setArchivo(rs.getBytes("ARCHIVO"));
             }
+            con.close();
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());

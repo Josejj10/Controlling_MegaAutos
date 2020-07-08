@@ -318,7 +318,7 @@ public class UsuarioMySQL implements UsuarioDAO {
                         break;
                 }
             }
-            
+            con.close();
             
             // usuario.setPermisos Ahi hagan su magia con SQL y java
             // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
@@ -331,8 +331,9 @@ public class UsuarioMySQL implements UsuarioDAO {
     }
     @Override
     public Usuario verificarPassword(String correo, String password) {
+        Usuario usuario = new Usuario();
         try{
-            Connection con = DBDataSource.getConnection();
+            con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)}");
             // Seria algo asi
             // "SELECT * FROM Usuarios where correo=CORREO and password=PASSWRD";
@@ -342,14 +343,12 @@ public class UsuarioMySQL implements UsuarioDAO {
             if(!rs.next())
                 return null;
             // Si no, actualizar usuario y retornarlo
-            Usuario usuario = new Usuario();
             usuario.setId(rs.getInt("ID_USUARIO"));
             usuario.setNombre(rs.getString("NOMBRE"));
             usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
             usuario.setCorreo(rs.getString("CORREO"));
             usuario.setPassword(rs.getString("PASSWRD"));
-            
-            con = DBDataSource.getConnection();
+
             CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
             cs2.setInt(1, usuario.getId());
             ResultSet rs2 = cs2.executeQuery();
@@ -393,11 +392,20 @@ public class UsuarioMySQL implements UsuarioDAO {
             
             // usuario.setPermisos Ahi hagan su magia con SQL y java
             // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
-            return usuario;
+           
             
         }catch(Exception e){
             System.out.println(e);
-            return null;
         }
+        finally{
+            try{
+                con.close();
+            }catch(Exception e){
+                System.out.println(e);
+            }   
+        }
+        
+        return usuario;
+        
     }
 }

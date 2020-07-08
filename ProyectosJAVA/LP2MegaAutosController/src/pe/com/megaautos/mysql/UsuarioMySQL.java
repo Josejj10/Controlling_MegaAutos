@@ -362,6 +362,8 @@ public class UsuarioMySQL implements UsuarioDAO {
     }
     @Override
     public Usuario verificarPassword(String correo, String password) {
+        
+        Usuario usuario = new Usuario();
         try{
             con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall("{call VERIFICAR_PASSWORD(?,?)}");
@@ -373,7 +375,6 @@ public class UsuarioMySQL implements UsuarioDAO {
             if(!rs.next())
                 return null;
             // Si no, actualizar usuario y retornarlo
-            Usuario usuario = new Usuario();
             usuario.setId(rs.getInt("ID_USUARIO"));
             usuario.setNombre(rs.getString("NOMBRE"));
             usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
@@ -422,12 +423,10 @@ public class UsuarioMySQL implements UsuarioDAO {
             
             
             // usuario.setPermisos Ahi hagan su magia con SQL y java
-            // usuario.setFechaCreado(rs.getDate("FECHA_CREACION"))         
-            return usuario;
+            // usuario.setFechaCreado(rs.getDate("FECHA_CREACION")
             
         }catch(Exception e){
             System.out.println(e);
-            return null;
         }finally{
             try{
                 con.close();
@@ -436,5 +435,6 @@ public class UsuarioMySQL implements UsuarioDAO {
                 System.out.println(ex.getMessage());
             }
         }
+        return usuario;
     }
 }

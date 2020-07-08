@@ -82,7 +82,9 @@ namespace LP2MegaAutos.VentanasPrincipales
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarClientes>(sender, e, btn, img, panelMenu, cont); };
                 case ePermisos.Drivers:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarDrivers>(sender, e, btn, img, panelMenu, cont); };
-                case ePermisos.Empresa:
+                case ePermisos.Empresa: // TODO solo abrir el frm empresa 
+                                        // frmEditarNombEmpresa pas = new frmEditarNombEmpresa(_empresa);
+                    // if (pas.ShowDialog() == DialogResult.OK)
                     return (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img, panelMenu, cont); };
                 case ePermisos.Sedes:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarSedes>(sender, e, btn, img, panelMenu, cont); };

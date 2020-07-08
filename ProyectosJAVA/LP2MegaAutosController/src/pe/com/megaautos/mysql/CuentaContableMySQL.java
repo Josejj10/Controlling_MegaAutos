@@ -26,7 +26,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -42,11 +42,17 @@ public class CuentaContableMySQL implements CuentaContableDAO{
             cs.setDouble("_MONTO_EGRESOS",cuentaContable.getMontoEgresos());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_CUENTA_CONTABLE");
-            con.close();
             // Actualiza el ID de la cuentaContable insertada para tenerla en Java
             cuentaContable.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -56,7 +62,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -68,12 +74,18 @@ public class CuentaContableMySQL implements CuentaContableDAO{
             cs.setDouble("_MONTO_INGRESOS",cuentaContable.getMontoIngresos());
             cs.setDouble("_MONTO_EGRESOS",cuentaContable.getMontoEgresos());
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
-         return rpta;
+        return rpta;
     }
 
     @Override
@@ -81,7 +93,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
          int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -90,10 +102,16 @@ public class CuentaContableMySQL implements CuentaContableDAO{
                     "{call ELIMINAR_CUENTA_CONTABLE(?)}");
             cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -103,7 +121,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
         ArrayList<CuentaContable> cuentaContables = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -122,10 +140,15 @@ public class CuentaContableMySQL implements CuentaContableDAO{
                 cuentaContable.setMontoEgresos(rs.getDouble("MONTO_EGRESOS"));
                 cuentaContables.add(cuentaContable);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo las cuentas 
         return cuentaContables;    
@@ -136,7 +159,7 @@ public class CuentaContableMySQL implements CuentaContableDAO{
        CuentaContable cuentaContable = new CuentaContable();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -154,10 +177,15 @@ public class CuentaContableMySQL implements CuentaContableDAO{
                 // TODO cuentaContable.setOrdenesTrabajo(ordenesTrabajo);
                 // Al parecer sería bucar en OTxCC igual a idOT, idCC
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return cuentaContable;
     }

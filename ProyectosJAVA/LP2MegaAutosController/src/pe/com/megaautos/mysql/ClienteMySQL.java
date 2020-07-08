@@ -29,7 +29,7 @@ public class ClienteMySQL implements ClienteDAO {
         Cliente cliente = new Cliente();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -49,10 +49,15 @@ public class ClienteMySQL implements ClienteDAO {
                 cliente.setCorreo(rs.getString("CORREO"));
                 cliente.setTelefono(rs.getString("TELEFONO"));
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return cliente;
     }
@@ -62,7 +67,7 @@ public class ClienteMySQL implements ClienteDAO {
         Cliente cliente = new Cliente();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -82,10 +87,15 @@ public class ClienteMySQL implements ClienteDAO {
                 cliente.setCorreo(rs.getString("CORREO"));
                 cliente.setTelefono(rs.getString("TELEFONO"));
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return cliente;
     }
@@ -94,7 +104,7 @@ public class ClienteMySQL implements ClienteDAO {
     public int insertar(Cliente cliente) {
         int rpta = 0;
          try{
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
@@ -116,11 +126,17 @@ public class ClienteMySQL implements ClienteDAO {
             cs.setString("_TELEFONO",cliente.getTelefono());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_CLIENTE");
-            con.close();
             // Actualiza el ID del cliente insertado para tenerlo en Java
             cliente.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -130,7 +146,7 @@ public class ClienteMySQL implements ClienteDAO {
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -145,10 +161,16 @@ public class ClienteMySQL implements ClienteDAO {
             cs.setString("_CORREO", cliente.getCorreo());
             cs.setString("_TELEFONO",cliente.getTelefono());
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -158,7 +180,7 @@ public class ClienteMySQL implements ClienteDAO {
         int rpta = 0;
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -167,10 +189,16 @@ public class ClienteMySQL implements ClienteDAO {
                     "{call ELIMINAR_CLIENTE(?)}");
             cs.setInt("_ID_CLIENTE", idCliente);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;    
     }
@@ -180,7 +208,7 @@ public class ClienteMySQL implements ClienteDAO {
         ArrayList<Cliente> clientes = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -202,10 +230,15 @@ public class ClienteMySQL implements ClienteDAO {
                 cliente.setTelefono(rs.getString("TELEFONO"));
                 clientes.add(cliente);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo los clientes
         return clientes;    
@@ -214,7 +247,7 @@ public class ClienteMySQL implements ClienteDAO {
     @Override
     public void guardarBatch(DataFrame df){
         try{
-            Connection con = DBDataSource.getConnection();
+            con = DBDataSource.getConnection();
             PreparedStatement st = con.prepareStatement("{CALL INSERTAR_CLIENTE_DF(?,?,?,?,?,?)}");
             for (int r = 0; r < df.length(); r++) {
                 for (int c = 1; c <= df.size(); c++) {
@@ -223,10 +256,16 @@ public class ClienteMySQL implements ClienteDAO {
                 st.addBatch();
             }
             st.executeBatch();
-            con.close();
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
     }
 }

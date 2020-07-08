@@ -26,7 +26,7 @@ public class SedeMySQL implements SedeDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -43,11 +43,17 @@ public class SedeMySQL implements SedeDAO {
             cs.setString("_DIRECCION", sede.getDireccion().toUpperCase());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_SEDE");
-            con.close();
             // Actualiza el ID de la sede insertada para tenerlo en Java
             sede.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -57,7 +63,7 @@ public class SedeMySQL implements SedeDAO {
         int rpta = 0;
         try{
         //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -70,10 +76,16 @@ public class SedeMySQL implements SedeDAO {
             cs.setString("_DISTRITO", sede.getDistrito().toUpperCase());
             cs.setString("_DIRECCION", sede.getDireccion().toUpperCase());
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -83,7 +95,7 @@ public class SedeMySQL implements SedeDAO {
         int rpta = 0;
         try{
         //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -92,10 +104,16 @@ public class SedeMySQL implements SedeDAO {
                     "{call ELIMINAR_SEDE(?)}");   
             cs.setInt("_ID_SEDE", idSede);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return rpta;
     }
@@ -105,7 +123,7 @@ public class SedeMySQL implements SedeDAO {
         ArrayList<Sede> sedes = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -125,10 +143,15 @@ public class SedeMySQL implements SedeDAO {
                 sede.setTelefono(rs.getString("TELEFONO"));
                 sedes.add(sede);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo las sedes
         return sedes;    
@@ -139,7 +162,7 @@ public class SedeMySQL implements SedeDAO {
         Sede sede = new Sede();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -153,10 +176,15 @@ public class SedeMySQL implements SedeDAO {
                 sede.setId(rs.getInt("ID_SEDE"));
                 sede.setDistrito(rs.getString("NOMBRE"));
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return sede;
     }

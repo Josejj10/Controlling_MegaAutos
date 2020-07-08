@@ -27,7 +27,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -48,11 +48,17 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
             cs.setDate("_FECHA",new java.sql.Date(comprobantePago.getFecha().getTime()));
             cs.executeUpdate();
             rpta = cs.getInt("_ID_COMPROBANTE");
-            con.close();
             // Actualiza el ID del comprobante insertado para tenerlo en Java
             comprobantePago.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -62,7 +68,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -78,10 +84,16 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
                     new java.sql.Date(comprobantePago.getFecha().getTime());
             cs.setDate("_FECHA",fechaSql);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -91,7 +103,7 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -100,10 +112,16 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
                     "{call ELIMINAR_COMPROBANTE(?)}");
             cs.setInt("_ID_COMPROBANTE", idComprobantePago);
             cs.executeUpdate();
-            con.close();
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -138,10 +156,15 @@ public class ComprobantePagoMySQL implements ComprobantePagoDAO {
                 //comprobantePago.setFecha(rs.getDate("FECHA"));
                 comprobantePagos.add(comprobantePago);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo los comprobantes
         return comprobantePagos;    

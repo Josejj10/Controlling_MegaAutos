@@ -32,7 +32,7 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -47,11 +47,17 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
             cs.setInt("_ID_DRIVER", atCc.getDriver().getId());
             cs.setDouble("_DISTRIBUCION_INGRESOS", atCc.getDistribucionIngresos());
             cs.setDouble("_DISTRIBUCION_EGRESOS", atCc.getDistribucionEgresos());
-            cs.executeUpdate();
-            con.close();
-         
+            cs.executeUpdate();       
         }catch(Exception ex){
-             System.out.println(ex.getMessage());
+            System.out.println(ex.getMessage()); 
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
     }
 
@@ -61,7 +67,7 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -74,45 +80,60 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
             cs.setDouble("_DISTRIBUCION_INGRESOS", atCc.getDistribucionIngresos());
             cs.setDouble("_DISTRIBUCION_EGRESOS", atCc.getDistribucionEgresos());
             cs.executeUpdate();
-            con.close();
-         
         }catch(Exception ex){
              System.out.println(ex.getMessage());
 	     rpta = 1;
         }
+        finally{
+             try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+         }
         return rpta;
     }
 
     @Override
     public int eliminar(int idAtCc, int idCuentaContable) {
         int rpta = 0;
-         try{
-            //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //Establecer la conexion
-            con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);*/
-            CallableStatement cs = con.prepareCall(
-                    "{call ELIMINAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?)}");
-            cs.setInt("_ID_AREA_TRABAJO", idAtCc);
-            cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);
-            cs.executeUpdate();
-            con.close();
-         
-        }catch(Exception ex){
+        try
+        {
+           //Registrar el JAR de conexión
+           con = DBDataSource.getConnection();/*
+           Class.forName("com.mysql.cj.jdbc.Driver");
+           //Establecer la conexion
+           con = DriverManager.getConnection(DBManager.url, 
+                   DBManager.user, DBManager.password);*/
+           CallableStatement cs = con.prepareCall(
+                   "{call ELIMINAR_AREA_TRABAJO_X_CUENTA_CONTABLE(?,?)}");
+           cs.setInt("_ID_AREA_TRABAJO", idAtCc);
+           cs.setInt("_ID_CUENTA_CONTABLE", idCuentaContable);
+           cs.executeUpdate();
+        }
+        catch(Exception ex)
+        {
              System.out.println(ex.getMessage());
 	     rpta = 1;
         }
-    return rpta;	
-    }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return rpta;	
+}
 
     @Override
     public ArrayList<AreaTrabajoCuentaContable> listar(int idAreaTrabajo) {
         ArrayList<AreaTrabajoCuentaContable> atCcs = new ArrayList<>();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -145,9 +166,16 @@ public class AreaTrabajoCuentaContableMySQL implements AreaTrabajoCuentaContable
                 atCcs.add(atCc);
             }
             //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }
+        finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo las atCcs
         return atCcs;    

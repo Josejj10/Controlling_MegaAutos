@@ -34,7 +34,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
     @Override
     public void guardarBatch(List<OrdenTrabajo> ordenesTrabajo){
         try{
-            Connection con = DBDataSource.getConnection();
+            con = DBDataSource.getConnection();
             PreparedStatement st = con.prepareStatement("");
             int i = 0;
             //for(OrdenTrabajo ordenTrabajo : ordenesTrabajo){
@@ -46,6 +46,13 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             
         }catch(Exception e){
             System.out.println(e);
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
     }
     
@@ -54,7 +61,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -77,11 +84,17 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             cs.setInt("_ID_VEHICULO",ordenTrabajo.getVehiculo().getId());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_ORDEN_TRABAJO");
-            con.close();
             // Actualiza el ID de la OT insertado para tenerlo en Java
             ordenTrabajo.setId(rpta);
         }catch(Exception ex){
              System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -91,7 +104,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
         int rpta = 0;
          try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
             con = DriverManager.getConnection(DBManager.url, 
@@ -108,11 +121,17 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             cs.setInt("_ID_SEDE",ordenTrabajo.getSede().getId());
             cs.setInt("_ID_CLIENTE",ordenTrabajo.getCliente().getId());
             cs.setInt("_ID_VEHICULO",ordenTrabajo.getVehiculo().getId());
-            cs.executeUpdate();
-            con.close();            
+            cs.executeUpdate();         
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -121,7 +140,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
     public int eliminar(int idOrdenTrabajo) {
         int rpta = 0;
          try{             
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer la conexion
@@ -130,11 +149,17 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_ORDEN_TRABAJO(?)}");
             cs.setInt("_ID_ORDEN_TRABAJO", idOrdenTrabajo);
-            cs.executeUpdate();
-            con.close();            
+            cs.executeUpdate();       
         }catch(Exception ex){
              System.out.println(ex.getMessage());
              rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
          return rpta;
     }
@@ -143,7 +168,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
     public ArrayList<OrdenTrabajo> listar() {
         ArrayList<OrdenTrabajo> ordenTrabajos = new ArrayList<>();
         try{            
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             //Registrar el JAR de conexión
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
@@ -174,10 +199,15 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
                 ordenTrabajo.setVehiculo(daoVehiculo.buscar(rs.getInt("ID_VEHICULO")));
                 ordenTrabajos.add(ordenTrabajo);
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         //Devolviendo las Ordenes de Trabajo
         return ordenTrabajos;    
@@ -188,7 +218,7 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
         OrdenTrabajo ordenTrabajo = new OrdenTrabajo();
         try{
             //Registrar el JAR de conexión
-            Connection con = DBDataSource.getConnection();/*
+            con = DBDataSource.getConnection();/*
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Establecer una conexión a la BD
             Connection con = DriverManager.
@@ -215,10 +245,15 @@ public class OrdenTrabajoMySQL implements OrdenTrabajoDAO{
                 ordenTrabajo.setCliente(daoCliente.buscar(rs.getInt("ID_CLIENTE")));
                 ordenTrabajo.setVehiculo(daoVehiculo.buscar(rs.getInt("ID_VEHICULO")));
             }
-            //cerrar conexion
-            con.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
         }
         return ordenTrabajo;
     }

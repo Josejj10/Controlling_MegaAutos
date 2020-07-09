@@ -390,7 +390,7 @@
             this.txt_TipoVehiculo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_TipoVehiculo, null);
             this.tagsExtender1.SetTag3(this.txt_TipoVehiculo, null);
-            this.tagsExtender1.SetTagFontName(this.txt_TipoVehiculo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_TipoVehiculo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_TipoVehiculo, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_TipoVehiculo, System.Drawing.FontStyle.Bold);
             // 
@@ -407,7 +407,7 @@
             this.lbl_TipoVehiculo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_TipoVehiculo, null);
             this.tagsExtender1.SetTag3(this.lbl_TipoVehiculo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TipoVehiculo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_TipoVehiculo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_TipoVehiculo, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_TipoVehiculo, System.Drawing.FontStyle.Bold);
             this.lbl_TipoVehiculo.Text = "Tipo Vehiculo";
@@ -440,7 +440,7 @@
             this.cboTipoCliente.TabIndex = 84;
             this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
             this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
-            this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.cboTipoCliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.cboTipoCliente, System.Drawing.FontStyle.Bold);
             this.cboTipoCliente.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboTipoCliente_Format);
@@ -484,7 +484,7 @@
             this.lbl_nombCliente.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_nombCliente, null);
             this.tagsExtender1.SetTag3(this.lbl_nombCliente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_nombCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_nombCliente, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_nombCliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_nombCliente, System.Drawing.FontStyle.Bold);
             this.lbl_nombCliente.Text = "Cliente";

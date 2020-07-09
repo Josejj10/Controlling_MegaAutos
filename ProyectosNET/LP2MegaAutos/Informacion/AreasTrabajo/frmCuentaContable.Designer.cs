@@ -205,7 +205,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Regular);
             this.btn_cancelar.Text = "Cancelar";
@@ -253,7 +253,7 @@
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_guardar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
             this.btn_guardar.Text = "Guardar";
@@ -273,7 +273,7 @@
             this.lbl_CuentaContable.TabIndex = 75;
             this.tagsExtender1.SetTag2(this.lbl_CuentaContable, null);
             this.tagsExtender1.SetTag3(this.lbl_CuentaContable, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_CuentaContable, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_CuentaContable, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_CuentaContable, 12F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_CuentaContable, System.Drawing.FontStyle.Bold);
             this.lbl_CuentaContable.Text = "Cuenta Contable";

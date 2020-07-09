@@ -207,7 +207,7 @@
             this.lbl_ListaClientes.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaClientes, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaClientes, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaClientes, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaClientes, fontsD.Montserrat);
             this.tagsExtender1.SetTagFontSize(this.lbl_ListaClientes, 12F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_ListaClientes, System.Drawing.FontStyle.Bold);
             this.lbl_ListaClientes.Text = "Clientes";

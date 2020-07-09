@@ -126,9 +126,9 @@
             this.txt_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_Correo, null);
             this.tagsExtender1.SetTag3(this.txt_Correo, null);
-            this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_Correo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_Correo, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_Correo, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_Correo, System.Drawing.FontStyle.Bold);
             // 
             // lbl_Correo
             // 
@@ -142,9 +142,9 @@
             this.lbl_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Correo, null);
             this.tagsExtender1.SetTag3(this.lbl_Correo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Correo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_Correo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Correo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_Correo, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_Correo, System.Drawing.FontStyle.Bold);
             this.lbl_Correo.Text = "Correo";
             // 
             // pnl_Telefono
@@ -201,9 +201,9 @@
             this.txt_Telefono.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_Telefono, null);
             this.tagsExtender1.SetTag3(this.txt_Telefono, null);
-            this.tagsExtender1.SetTagFontName(this.txt_Telefono, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_Telefono, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_Telefono, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.txt_Telefono, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_Telefono, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_Telefono, System.Drawing.FontStyle.Bold);
             // 
             // lbl_Telefono
             // 
@@ -217,9 +217,9 @@
             this.lbl_Telefono.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Telefono, null);
             this.tagsExtender1.SetTag3(this.lbl_Telefono, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Telefono, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_Telefono, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Telefono, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_Telefono, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_Telefono, System.Drawing.FontStyle.Bold);
             this.lbl_Telefono.Text = "Teléfono";
             // 
             // panel1
@@ -289,9 +289,9 @@
             this.txt_NumeroDocumento.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_NumeroDocumento, null);
             this.tagsExtender1.SetTag3(this.txt_NumeroDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NumeroDocumento, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.txt_NumeroDocumento, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_NumeroDocumento, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontName(this.txt_NumeroDocumento, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.txt_NumeroDocumento, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.txt_NumeroDocumento, System.Drawing.FontStyle.Bold);
             // 
             // lbl_NumeroDocumento
             // 
@@ -305,9 +305,9 @@
             this.lbl_NumeroDocumento.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_NumeroDocumento, null);
             this.tagsExtender1.SetTag3(this.lbl_NumeroDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_NumeroDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_NumeroDocumento, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_NumeroDocumento, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_NumeroDocumento, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_NumeroDocumento, System.Drawing.FontStyle.Bold);
             this.lbl_NumeroDocumento.Text = "Número de Documento";
             // 
             // rnd_guardar
@@ -399,7 +399,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";
@@ -559,7 +559,7 @@
             this.cboTipoCliente.TabIndex = 82;
             this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
             this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
-            this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.cboTipoCliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.cboTipoCliente, System.Drawing.FontStyle.Bold);
             // 
@@ -601,9 +601,9 @@
             this.label1.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.label1, null);
             this.tagsExtender1.SetTag3(this.label1, null);
-            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.label1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Bold);
             this.label1.Text = "Tipo de Cliente";
             // 
             // txt_NombreCliente
@@ -617,7 +617,7 @@
             this.txt_NombreCliente.TabIndex = 78;
             this.tagsExtender1.SetTag2(this.txt_NombreCliente, null);
             this.tagsExtender1.SetTag3(this.txt_NombreCliente, null);
-            this.tagsExtender1.SetTagFontName(this.txt_NombreCliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_NombreCliente, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_NombreCliente, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.txt_NombreCliente, System.Drawing.FontStyle.Bold);
             this.txt_NombreCliente.Enter += new System.EventHandler(this.txt_NombreCliente_Enter);
@@ -681,9 +681,9 @@
             this.lbl_TipoDocumento.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_TipoDocumento, null);
             this.tagsExtender1.SetTag3(this.lbl_TipoDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TipoDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_TipoDocumento, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_TipoDocumento, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_TipoDocumento, System.Drawing.FontStyle.Regular);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_TipoDocumento, System.Drawing.FontStyle.Bold);
             this.lbl_TipoDocumento.Text = "Tipo de Documento";
             // 
             // roundedPanel2
@@ -743,7 +743,7 @@
             this.cboTipoDocumento.TabIndex = 81;
             this.tagsExtender1.SetTag2(this.cboTipoDocumento, null);
             this.tagsExtender1.SetTag3(this.cboTipoDocumento, null);
-            this.tagsExtender1.SetTagFontName(this.cboTipoDocumento, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.cboTipoDocumento, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.cboTipoDocumento, 10F);
             this.tagsExtender1.SetTagFontStyle(this.cboTipoDocumento, System.Drawing.FontStyle.Bold);
             // 

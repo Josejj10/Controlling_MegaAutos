@@ -438,7 +438,7 @@
             this.txtPassword.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txtPassword, null);
             this.tagsExtender1.SetTag3(this.txtPassword, null);
-            this.tagsExtender1.SetTagFontName(this.txtPassword, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txtPassword, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txtPassword, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txtPassword, System.Drawing.FontStyle.Bold);
             // 
@@ -512,7 +512,7 @@
             this.txtNewPass.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txtNewPass, null);
             this.tagsExtender1.SetTag3(this.txtNewPass, null);
-            this.tagsExtender1.SetTagFontName(this.txtNewPass, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txtNewPass, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txtNewPass, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txtNewPass, System.Drawing.FontStyle.Bold);
             // 

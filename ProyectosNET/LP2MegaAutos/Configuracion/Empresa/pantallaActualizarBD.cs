@@ -111,9 +111,11 @@ namespace LP2MegaAutos
 
             frmMessageBox frm;
             if (daoExcel.insertarArchivoEntrada(_excelEnviado) == 0)
-                frm = new frmMessageBox("No se pudo insertar el archivo.",MessageBoxButtons.OK);
-            else // Inserto bien
-                frm = new frmMessageBox("Se inserto correctamente el archivo excel.",MessageBoxButtons.OK);
+                frm = new frmMessageBox("No se pudo insertar el archivo.", MessageBoxButtons.OK);
+            else {// Inserto bien{
+                frm = new frmMessageBox("Se inserto correctamente el archivo excel.", MessageBoxButtons.OK);
+                this.btnObtener.Enabled = true;
+            }
             frm.ShowDialog();
 
         }

@@ -23,6 +23,7 @@ import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFDataFormat;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.extensions.XSSFCellBorder;
 import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.model.OrdenTrabajo;
 
@@ -160,26 +161,26 @@ public class JoineryExtension extends Serialization{
         encabezadoStyle.setBorderLeft(BorderStyle.THIN);
         encabezadoStyle.setBorderRight(BorderStyle.THIN);
         encabezadoStyle.setFont(encabezadoFont);
+        encabezadoStyle.setDataFormat(wb.createDataFormat().getFormat("#,##0.00"));
         
         XSSFCellStyle contenidoStyle = wb.createCellStyle();
-        contenidoStyle.setBorderBottom(BorderStyle.THIN);
-        contenidoStyle.setBorderTop(BorderStyle.THIN);
-        contenidoStyle.setBorderLeft(BorderStyle.THIN);
-        contenidoStyle.setBorderRight(BorderStyle.THIN);
+        contenidoStyle.setDataFormat(wb.createDataFormat().getFormat("#,##0.00"));
         
         XSSFCellStyle pieStyle = wb.createCellStyle();
+        pieStyle.setFillForegroundColor(new XSSFColor(new java.awt.Color(194, 224, 180), new DefaultIndexedColorMap()));
         pieStyle.setBorderBottom(BorderStyle.THIN);
         pieStyle.setBorderTop(BorderStyle.THIN);
         pieStyle.setBorderLeft(BorderStyle.THIN);
         pieStyle.setBorderRight(BorderStyle.THIN);
-        pieStyle.setFont(encabezadoFont);
+        pieStyle.setFont(encabezadoFont);        
+        pieStyle.setDataFormat(wb.createDataFormat().getFormat("#,##0.00"));
         
 //        final Sheet sheet = wb.createSheet();
         int i=0;
         for(DataFrame df : dfs){  
             Sheet sheet = wb.createSheet(nombres.get(i));
-            sheet.setDefaultColumnWidth(25);
-            i=i+1;
+            sheet.setDefaultColumnWidth(15);
+            i+=1;//En el primero, i=1
             // add header
             Row row = sheet.createRow(0);
             final Iterator<Object> it = df.columns().iterator();
@@ -190,14 +191,16 @@ public class JoineryExtension extends Serialization{
             }
             int lastRow=df.length();
             // add data values
+            //Lastrow=10
+            //r=9
             for (int r = 0; r < lastRow; r++) {
-                row = sheet.createRow(r + 1);
+                row = sheet.createRow(r + 1);//fila 10
                 for (int c = 0; c < df.size(); c++) {
                     final Cell cell = row.createCell(c);
                     //Ojo al tejo
-                    if(i==1 && r==lastRow)
+                    if(i==1 || r != lastRow)
                         cell.setCellStyle(contenidoStyle);
-                    else if(i!=1 && r==lastRow)
+                    else if(i>1 && r==(lastRow-1))
                         cell.setCellStyle(pieStyle);
                     writeCell(cell, df.get(r, c));
                 }

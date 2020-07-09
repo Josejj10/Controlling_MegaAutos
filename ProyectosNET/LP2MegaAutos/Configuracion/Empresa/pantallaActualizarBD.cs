@@ -39,8 +39,7 @@ namespace LP2MegaAutos
             List<empresa> empresas = daoEmpresa.listarEmpresa().ToList();
             if (empresas == null) return;
             _empresa = empresas[0];
-            this.lbl_nombreEmpresa.Text = empresas[0].nombre;
-            
+            this.lbl_nombreEmpresa.Text = empresas[0].nombre; 
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

@@ -92,6 +92,23 @@ namespace LP2MegaAutos.Inicio
                 frm.ShowDialog();
                 return false;
             }
+
+            if (string.IsNullOrEmpty(txt_codServ.Text) ||
+                !txt_codServ.Text.Contains("@"))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un correo valido.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txt_codServ.Text) ||
+                !txt_codServ.Text.Contains("."))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un correo valido.", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
             return true;
         }
     }

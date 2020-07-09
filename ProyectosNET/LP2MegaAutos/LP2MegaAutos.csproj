@@ -116,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioPassword\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioSede\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -743,6 +748,25 @@
     <None Include="Connected Services\ServicioOrdenTrabajo\OrdenTrabajoWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServicioPassword\LP2MegaAutos.ServicioPassword.enviarCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioPassword\LP2MegaAutos.ServicioPassword.invalidarTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioPassword\LP2MegaAutos.ServicioPassword.recuperarPasswrdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioPassword\LP2MegaAutos.ServicioPassword.sendMailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioPassword\LP2MegaAutos.ServicioPassword.verificarTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioPassword\PasswordWS.wsdl" />
+    <None Include="Connected Services\ServicioPassword\PasswordWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServicioSede\LP2MegaAutos.ServicioSede.actualizarSedeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1005,6 +1029,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\ServicioPassword\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioPassword\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioPassword\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Informacion\creditos.txt" />
     <Content Include="Resources\editar.png" />
     <None Include="Resources\Menu\car.png" />
@@ -1038,6 +1068,7 @@
     <WCFMetadataStorage Include="Connected Services\ServicioEmpresa\" />
     <WCFMetadataStorage Include="Connected Services\ServicioExcel\" />
     <WCFMetadataStorage Include="Connected Services\ServicioOrdenTrabajo\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioPassword\" />
     <WCFMetadataStorage Include="Connected Services\ServicioSede\" />
     <WCFMetadataStorage Include="Connected Services\ServicioServicio\" />
     <WCFMetadataStorage Include="Connected Services\ServicioUsuario\" />

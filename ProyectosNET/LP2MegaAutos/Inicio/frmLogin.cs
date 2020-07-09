@@ -106,7 +106,6 @@ namespace LP2MegaAutos
             if (frm.ShowDialog() != DialogResult.OK) return; // No sucede nada
             // Si funciono, entonces 
             _usuario = frm.Usuario;
-            Console.WriteLine("USUARIO: "+_usuario);
             this.DialogResult = DialogResult.OK;
             
         }

@@ -124,6 +124,7 @@ public class UsuarioMySQL implements UsuarioDAO {
         return rpta;
     }
 
+    @Override
     public int actualizarConPassword(Usuario usuario) {
         int rpta = 0;
         try{
@@ -287,7 +288,7 @@ public class UsuarioMySQL implements UsuarioDAO {
         //Devolviendo los usuarios
         return usuarios;    
     }
-
+    @Override
     public Usuario buscarPorCorreo(String correo){        
         Usuario usuario = new Usuario();
         try{
@@ -436,5 +437,108 @@ public class UsuarioMySQL implements UsuarioDAO {
             }
         }
         return usuario;
+    }
+
+    @Override
+    public int actualizarToken(Usuario usuario, String token) {
+        int rpta = 0;
+        try{
+            con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_USUARIO_TOKEN(?,?)}");
+            cs.setInt("_ID_USUARIO", usuario.getId());
+            cs.setString("_TOKEN",token);
+            cs.executeUpdate();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return rpta;
+    }
+
+    @Override
+    public int actualizarPasswrd(String correo, String token, String passwrd) {
+        int rpta = 0;
+        try{
+            con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTUALIZAR_PASSWRD(?,?,?)}");
+            cs.setString("_CORREO",correo);
+            cs.setString("_TOKEN",token);            
+            cs.setString("_NUEVA_PASSWRD",passwrd);
+            cs.executeUpdate();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return rpta;
+    }
+
+    @Override
+    public boolean verificarToken(String correo, String token) {
+        boolean rpta = false;
+        try{
+            con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall(
+                    "{call VERIFICAR_TOKEN(?,?,?)}");
+            cs.registerOutParameter("_RESULTADO", java.sql.Types.INTEGER);
+            cs.setString("_CORREO",correo);
+            cs.setString("_TOKEN",token);
+            cs.executeQuery();
+            rpta=cs.getBoolean("_RESULTADO");
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            rpta=false;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return rpta;
+    }
+
+    @Override
+    public int invalidarToken(String correo, String token) {
+        int rpta = 0;
+        try{
+            con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall(
+                    "{call INVALIDAR_TOKEN(?,?)}");
+            cs.setString("_CORREO",correo);
+            cs.setString("_TOKEN",token);           
+            cs.executeUpdate();
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+            rpta = 1;
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return rpta;
     }
 }

@@ -247,7 +247,6 @@
             this.tagsExtender1.SetTagFontName(this.txt_nombEmpresa, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_nombEmpresa, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_nombEmpresa, System.Drawing.FontStyle.Bold);
-            this.txt_nombEmpresa.Text = "MegaAutos";
             // 
             // lbl_nombEmpresa
             // 

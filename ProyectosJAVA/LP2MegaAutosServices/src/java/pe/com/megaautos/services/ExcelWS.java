@@ -31,7 +31,7 @@ import static pe.com.megaautos.services.JoineryExtension.writeXlsx;
  */
 @WebService(serviceName = "ExcelWS")
 public class ExcelWS {
-private ExcelDAO daoExcel;
+    private ExcelDAO daoExcel;
     public ExcelWS(){
         daoExcel = DBController.controller.getExcelDAO();
     }

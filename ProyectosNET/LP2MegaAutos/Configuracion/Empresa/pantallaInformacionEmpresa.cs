@@ -111,7 +111,7 @@ namespace LP2MegaAutos
         private void btnEditarRutas_Click(object sender, EventArgs e)
         {
             btnExaminar.Enabled = !btnExaminar.Enabled;
-            btnObtener.Visible = btnGuardar.Visible = !btnGuardar.Visible;
+            pnlObtener.Visible = btnGuardar.Visible = !btnGuardar.Visible;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -160,6 +160,11 @@ namespace LP2MegaAutos
                     System.Console.WriteLine(ex.Message);
                 }
             }
+        }
+
+        private void pantallaInformacionEmpresa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

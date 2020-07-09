@@ -37,13 +37,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEditarRutas = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnObtener = new System.Windows.Forms.Button();
+            this.btnGuardar = new LP2MegaAutos.RoundedPanel();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.btnDescargar1 = new System.Windows.Forms.Button();
+            this.pnlObtener = new LP2MegaAutos.RoundedPanel();
+            this.btnObtener = new System.Windows.Forms.Button();
             this.ofdArchivo1 = new System.Windows.Forms.OpenFileDialog();
             this.ofdArchivo2 = new System.Windows.Forms.OpenFileDialog();
             this.sfdArchivoEntrada = new System.Windows.Forms.SaveFileDialog();
             this.sfdArchivoReporte = new System.Windows.Forms.SaveFileDialog();
+            this.btnGuardar.SuspendLayout();
+            this.roundedPanel1.SuspendLayout();
+            this.pnlObtener.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_nombreEmpresa
@@ -51,10 +57,10 @@
             this.lbl_nombreEmpresa.AutoSize = true;
             this.lbl_nombreEmpresa.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombreEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lbl_nombreEmpresa.Location = new System.Drawing.Point(32, 25);
-            this.lbl_nombreEmpresa.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbl_nombreEmpresa.Location = new System.Drawing.Point(24, 20);
+            this.lbl_nombreEmpresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nombreEmpresa.Name = "lbl_nombreEmpresa";
-            this.lbl_nombreEmpresa.Size = new System.Drawing.Size(211, 45);
+            this.lbl_nombreEmpresa.Size = new System.Drawing.Size(164, 35);
             this.lbl_nombreEmpresa.TabIndex = 52;
             this.tagsExtender1.SetTag2(this.lbl_nombreEmpresa, null);
             this.tagsExtender1.SetTag3(this.lbl_nombreEmpresa, null);
@@ -66,10 +72,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.panel4.Location = new System.Drawing.Point(25, 94);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(19, 76);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(959, 2);
+            this.panel4.Size = new System.Drawing.Size(719, 2);
             this.panel4.TabIndex = 56;
             this.tagsExtender1.SetTag2(this.panel4, null);
             this.tagsExtender1.SetTag3(this.panel4, null);
@@ -90,10 +95,9 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(281, 25);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(211, 20);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(43, 39);
+            this.btnEditar.Size = new System.Drawing.Size(32, 32);
             this.btnEditar.TabIndex = 57;
             this.btnEditar.TabStop = false;
             this.btnEditar.Tag = "botonImagen";
@@ -108,10 +112,9 @@
             // btnExaminar
             // 
             this.btnExaminar.Enabled = false;
-            this.btnExaminar.Location = new System.Drawing.Point(676, 153);
-            this.btnExaminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExaminar.Location = new System.Drawing.Point(507, 124);
             this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(49, 28);
+            this.btnExaminar.Size = new System.Drawing.Size(37, 23);
             this.btnExaminar.TabIndex = 58;
             this.tagsExtender1.SetTag2(this.btnExaminar, null);
             this.tagsExtender1.SetTag3(this.btnExaminar, null);
@@ -126,10 +129,9 @@
             // 
             this.txtArchivo1.Enabled = false;
             this.txtArchivo1.Font = new System.Drawing.Font("Lato", 10F);
-            this.txtArchivo1.Location = new System.Drawing.Point(36, 155);
-            this.txtArchivo1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtArchivo1.Location = new System.Drawing.Point(27, 126);
             this.txtArchivo1.Name = "txtArchivo1";
-            this.txtArchivo1.Size = new System.Drawing.Size(632, 27);
+            this.txtArchivo1.Size = new System.Drawing.Size(475, 23);
             this.txtArchivo1.TabIndex = 59;
             this.tagsExtender1.SetTag2(this.txtArchivo1, null);
             this.tagsExtender1.SetTag3(this.txtArchivo1, null);
@@ -142,10 +144,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.label1.Location = new System.Drawing.Point(41, 116);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(31, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 30);
+            this.label1.Size = new System.Drawing.Size(128, 24);
             this.label1.TabIndex = 60;
             this.tagsExtender1.SetTag2(this.label1, null);
             this.tagsExtender1.SetTag3(this.label1, null);
@@ -159,10 +161,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.label2.Location = new System.Drawing.Point(35, 218);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(23, 231);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 30);
+            this.label2.Size = new System.Drawing.Size(144, 24);
             this.label2.TabIndex = 63;
             this.tagsExtender1.SetTag2(this.label2, null);
             this.tagsExtender1.SetTag3(this.label2, null);
@@ -184,10 +186,9 @@
             this.btnEditarRutas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarRutas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditarRutas.ForeColor = System.Drawing.Color.White;
-            this.btnEditarRutas.Location = new System.Drawing.Point(931, 104);
-            this.btnEditarRutas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarRutas.Location = new System.Drawing.Point(561, 120);
             this.btnEditarRutas.Name = "btnEditarRutas";
-            this.btnEditarRutas.Size = new System.Drawing.Size(43, 39);
+            this.btnEditarRutas.Size = new System.Drawing.Size(32, 32);
             this.btnEditarRutas.TabIndex = 64;
             this.btnEditarRutas.TabStop = false;
             this.btnEditarRutas.Tag = "botonImagen";
@@ -201,53 +202,149 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(733, 153);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.ArcRadiusBorde = 5;
+            this.btnGuardar.ArcRadiusPanel = 5;
+            this.btnGuardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnGuardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnGuardar.Controls.Add(this.btn_guardar);
+            this.btnGuardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.btnGuardar.Location = new System.Drawing.Point(27, 164);
+            this.btnGuardar.MenosHeightBorde = 1;
+            this.btnGuardar.MenosHeightPanel = 1;
+            this.btnGuardar.MenosWidthBorde = 1;
+            this.btnGuardar.MenosWidthPanel = 1;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(92, 28);
-            this.btnGuardar.TabIndex = 65;
+            this.btnGuardar.PorcLuzColorBorde = 0;
+            this.btnGuardar.Size = new System.Drawing.Size(119, 35);
+            this.btnGuardar.TabIndex = 82;
             this.tagsExtender1.SetTag2(this.btnGuardar, null);
             this.tagsExtender1.SetTag3(this.btnGuardar, null);
             this.tagsExtender1.SetTagFontName(this.btnGuardar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.btnGuardar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btnGuardar, System.Drawing.FontStyle.Regular);
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Visible = false;
+            this.btnGuardar.XBorde = 0;
+            this.btnGuardar.XPanel = 0;
+            this.btnGuardar.YBorde = 0;
+            this.btnGuardar.YPanel = 0;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnObtener
+            // btn_guardar
             // 
-            this.btnObtener.Location = new System.Drawing.Point(234, 224);
-            this.btnObtener.Margin = new System.Windows.Forms.Padding(4);
-            this.btnObtener.Name = "btnObtener";
-            this.btnObtener.Size = new System.Drawing.Size(171, 28);
-            this.btnObtener.TabIndex = 66;
-            this.tagsExtender1.SetTag2(this.btnObtener, null);
-            this.tagsExtender1.SetTag3(this.btnObtener, null);
-            this.tagsExtender1.SetTagFontName(this.btnObtener, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnObtener, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnObtener, System.Drawing.FontStyle.Regular);
-            this.btnObtener.Text = "Obtener Reporte";
-            this.btnObtener.UseVisualStyleBackColor = true;
-            this.btnObtener.Visible = false;
-            this.btnObtener.Click += new System.EventHandler(this.btnDefault_Click);
+            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.Enabled = false;
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.ForeColor = System.Drawing.Color.White;
+            this.btn_guardar.Location = new System.Drawing.Point(0, 0);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(119, 35);
+            this.btn_guardar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btn_guardar, null);
+            this.tagsExtender1.SetTag3(this.btn_guardar, null);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.btn_guardar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Bold);
+            this.btn_guardar.Text = "Guardar";
+            this.btn_guardar.UseVisualStyleBackColor = false;
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.ArcRadiusBorde = 5;
+            this.roundedPanel1.ArcRadiusPanel = 5;
+            this.roundedPanel1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel1.Controls.Add(this.btnDescargar1);
+            this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel1.Location = new System.Drawing.Point(166, 164);
+            this.roundedPanel1.MenosHeightBorde = 1;
+            this.roundedPanel1.MenosHeightPanel = 1;
+            this.roundedPanel1.MenosWidthBorde = 1;
+            this.roundedPanel1.MenosWidthPanel = 1;
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.PorcLuzColorBorde = 0;
+            this.roundedPanel1.Size = new System.Drawing.Size(119, 35);
+            this.roundedPanel1.TabIndex = 83;
+            this.tagsExtender1.SetTag2(this.roundedPanel1, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel1, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel1, System.Drawing.FontStyle.Regular);
+            this.roundedPanel1.XBorde = 0;
+            this.roundedPanel1.XPanel = 0;
+            this.roundedPanel1.YBorde = 0;
+            this.roundedPanel1.YPanel = 0;
             // 
             // btnDescargar1
             // 
-            this.btnDescargar1.Location = new System.Drawing.Point(833, 153);
-            this.btnDescargar1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDescargar1.BackColor = System.Drawing.Color.Transparent;
+            this.btnDescargar1.FlatAppearance.BorderSize = 0;
+            this.btnDescargar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDescargar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescargar1.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargar1.ForeColor = System.Drawing.Color.White;
+            this.btnDescargar1.Location = new System.Drawing.Point(0, 0);
             this.btnDescargar1.Name = "btnDescargar1";
-            this.btnDescargar1.Size = new System.Drawing.Size(100, 28);
-            this.btnDescargar1.TabIndex = 67;
+            this.btnDescargar1.Size = new System.Drawing.Size(119, 35);
+            this.btnDescargar1.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnDescargar1, null);
             this.tagsExtender1.SetTag3(this.btnDescargar1, null);
             this.tagsExtender1.SetTagFontName(this.btnDescargar1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.btnDescargar1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.btnDescargar1, System.Drawing.FontStyle.Regular);
-            this.btnDescargar1.Text = "Descargar último archivo";
-            this.btnDescargar1.UseVisualStyleBackColor = true;
+            this.tagsExtender1.SetTagFontSize(this.btnDescargar1, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btnDescargar1, System.Drawing.FontStyle.Bold);
+            this.btnDescargar1.Text = "Descargar";
+            this.btnDescargar1.UseVisualStyleBackColor = false;
             this.btnDescargar1.Click += new System.EventHandler(this.btnDescargar1_Click);
+            // 
+            // pnlObtener
+            // 
+            this.pnlObtener.ArcRadiusBorde = 5;
+            this.pnlObtener.ArcRadiusPanel = 5;
+            this.pnlObtener.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.pnlObtener.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.pnlObtener.Controls.Add(this.btnObtener);
+            this.pnlObtener.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.pnlObtener.Location = new System.Drawing.Point(27, 267);
+            this.pnlObtener.MenosHeightBorde = 1;
+            this.pnlObtener.MenosHeightPanel = 1;
+            this.pnlObtener.MenosWidthBorde = 1;
+            this.pnlObtener.MenosWidthPanel = 1;
+            this.pnlObtener.Name = "pnlObtener";
+            this.pnlObtener.PorcLuzColorBorde = 0;
+            this.pnlObtener.Size = new System.Drawing.Size(246, 35);
+            this.pnlObtener.TabIndex = 84;
+            this.tagsExtender1.SetTag2(this.pnlObtener, null);
+            this.tagsExtender1.SetTag3(this.pnlObtener, null);
+            this.tagsExtender1.SetTagFontName(this.pnlObtener, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlObtener, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlObtener, System.Drawing.FontStyle.Regular);
+            this.pnlObtener.XBorde = 0;
+            this.pnlObtener.XPanel = 0;
+            this.pnlObtener.YBorde = 0;
+            this.pnlObtener.YPanel = 0;
+            // 
+            // btnObtener
+            // 
+            this.btnObtener.BackColor = System.Drawing.Color.Transparent;
+            this.btnObtener.Enabled = false;
+            this.btnObtener.FlatAppearance.BorderSize = 0;
+            this.btnObtener.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnObtener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnObtener.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObtener.ForeColor = System.Drawing.Color.White;
+            this.btnObtener.Location = new System.Drawing.Point(0, 0);
+            this.btnObtener.Name = "btnObtener";
+            this.btnObtener.Size = new System.Drawing.Size(246, 35);
+            this.btnObtener.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btnObtener, null);
+            this.tagsExtender1.SetTag3(this.btnObtener, null);
+            this.tagsExtender1.SetTagFontName(this.btnObtener, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnObtener, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btnObtener, System.Drawing.FontStyle.Bold);
+            this.btnObtener.Text = "Obtener Reporte";
+            this.btnObtener.UseVisualStyleBackColor = false;
+            this.btnObtener.Click += new System.EventHandler(this.btnDefault_Click);
             // 
             // ofdArchivo1
             // 
@@ -259,11 +356,11 @@
             // 
             // pantallaInformacionEmpresa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnDescargar1);
-            this.Controls.Add(this.btnObtener);
+            this.Controls.Add(this.pnlObtener);
+            this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEditarRutas);
             this.Controls.Add(this.label2);
@@ -273,14 +370,18 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.lbl_nombreEmpresa);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaInformacionEmpresa";
-            this.Size = new System.Drawing.Size(1001, 640);
+            this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.Load += new System.EventHandler(this.pantallaInformacionEmpresa_Load);
+            this.btnGuardar.ResumeLayout(false);
+            this.roundedPanel1.ResumeLayout(false);
+            this.pnlObtener.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,12 +397,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEditarRutas;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnObtener;
         private System.Windows.Forms.OpenFileDialog ofdArchivo1;
         private System.Windows.Forms.OpenFileDialog ofdArchivo2;
-        private System.Windows.Forms.Button btnDescargar1;
         private System.Windows.Forms.SaveFileDialog sfdArchivoEntrada;
         private System.Windows.Forms.SaveFileDialog sfdArchivoReporte;
+        private RoundedPanel btnGuardar;
+        private System.Windows.Forms.Button btn_guardar;
+        private RoundedPanel roundedPanel1;
+        private System.Windows.Forms.Button btnDescargar1;
+        private RoundedPanel pnlObtener;
+        private System.Windows.Forms.Button btnObtener;
     }
 }

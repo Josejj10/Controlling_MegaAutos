@@ -11,6 +11,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
@@ -23,6 +25,7 @@ import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.model.Excel;
+import static pe.com.megaautos.services.JoineryExtension.writeListXlsx;
 import static pe.com.megaautos.services.JoineryExtension.writeXlsx;
 
 /**
@@ -104,12 +107,28 @@ public class ExcelWS {
 
             //Transformation
             int lastRow = dfFact.length() - 1;
-            int lastCol = dfFact.size();
             int lastColGris = 23; //Numero de la columna del data frame (empieza en 1)
             DataFrame dfGris = dfFact.slice(0, lastRow, 0, lastColGris);
+            
             //Calculamos la columna Sin_IGV para todo el dataframe
             List<Double> sin_igv = new ArrayList<>();
+            List<String> mes = new ArrayList<>();
+            List<String> dia = new ArrayList<>();
+            List<String> anio = new ArrayList<>();
+            DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+            List<Integer> prior = new ArrayList<>();
+            
+            //SI QUEREMOS UN REPORTE MENSUAL LA FUNCION RECIBE MES Y ANIO
             for (int i = 0; i < lastRow; i++){
+                if (dfGris.get(i, 1).toString().equals("ABO")) prior.add(3);
+                else if (dfGris.get(i, 1).toString().equals("BOL")) prior.add(1);
+                else if (dfGris.get(i, 1).toString().equals("FAC")) prior.add(2);
+                else if (dfGris.get(i, 1).toString().equals("CAR")) prior.add(3);
+                String strDate = dateFormat.format(dfGris.get(i,0));
+                anio.add(strDate.substring(0, 4));
+                mes.add(strDate.substring(4, 6));
+                dia.add(strDate.substring(6, 8));
+
                 String tipoMoneda = dfGris.get(i, 16).toString(); 
                 if (tipoMoneda.contentEquals("$")) {
                     Double tCambio = (Double)dfGris.get(i, 17);
@@ -117,44 +136,282 @@ public class ExcelWS {
                 }
                 else sin_igv.add((Double)dfGris.get(i,20));
             }
+            
+            
             dfGris.add(sin_igv);
-            dfGris.rename(lastRow, "Sin_IGV");    
+            dfGris.rename(lastRow, "Sin_IGV");
+            dfGris.add(prior);
+            dfGris.rename(lastRow, "PRIOR");
+            dfGris.add(anio);
+            dfGris.rename(lastRow, "ANIO");
+            dfGris.add(mes);
+            dfGris.rename(lastRow, "MES");
+            dfGris.add(dia);
+            dfGris.rename(lastRow, "DIA");    
             //System.out.println(dfGris);
 
+            //Para el reporte Orden de Trabajo
+            dfGris = dfGris.sortBy(4).resetIndex();
+            dfGris = dfGris.sortBy(24).resetIndex();
+            int first3 = dfGris.col(24).indexOf(3);
+            dfGris = dfGris.slice(0, first3);
+            dfGris = dfGris.sortBy(4).resetIndex();
+
+            DataFrame dfOT = dfGris.retain("ANIO", "MES", "No OT", "Sin_IGV").groupBy("No OT", "ANIO", "MES").sum();
+            dfOT = dfOT.resetIndex();
+            int lastRowOT = dfOT.length();    
+
+            String strAnio = "2020", strMes = "02", strDia;        
+            List<Integer> filtFecha = new ArrayList<>();
+            //Filtramos el DF en base a la fecha solicitada:
+            for(int i = 0; i<lastRowOT; i++){
+                if(dfOT.get(i, 1).toString().equals(strAnio) && dfOT.get(i, 2).toString().equals(strMes))
+                    filtFecha.add(1);
+                else    filtFecha.add(-1);
+            }
+            dfOT.add(filtFecha);
+            dfOT.rename(lastRowOT, "FiltFecha");
+            dfOT = dfOT.sortBy("FiltFecha").resetIndex();
+            int firstDate = dfOT.col("FiltFecha").indexOf(1);
+            dfOT = dfOT.slice(firstDate, lastRowOT);
+            dfOT = dfOT.sortBy("No OT").resetIndex();
+            lastRowOT = dfOT.length(); 
+
+            //Calculamos el detalle de los GASTOS
+            dfSalxAlm = dfSalxAlm.retain("Total S/.", "OT").groupBy("OT").sum();
+            dfCompras = dfCompras.retain("OT", "CLAS_SERV", "MONTO").groupBy("OT", "CLAS_SERV").sum();
+            dfCompras = dfCompras.sortBy("CLAS_SERV");
+            int firstST = dfCompras.col(1).indexOf("ST");
+            int lastRowComp = dfCompras.length();
+            DataFrame dfRP = dfCompras.slice(0, firstST - 1);
+            DataFrame dfST = dfCompras.slice(firstST, lastRowComp);
+            DataFrame dfMO = dfAsig.retain("ORDEN DE TRABAJO", "HORA AJUSTADA", "TERCEROS / PLANCHADOR" ,"PAÑOS AJUSTADOS", "TERCEROS/PINTOR ($)","HORAS MECÁNICA")
+                                   .groupBy("ORDEN DE TRABAJO")
+                                   .sum();
+
+            List<Double> salidas_alm = new ArrayList<>();
+            List<Double> compras_rpto = new ArrayList<>();
+            List<Double> serv_terceros = new ArrayList<>();
+            List<Double> mo_mecanica = new ArrayList<>();
+            List<Double> mo_planchado = new ArrayList<>();
+            List<Double> mo_pintura = new ArrayList<>();
+            List<Double> serv_ter = new ArrayList<>();
+            List<Double> total_gastos = new ArrayList<>();
+            List<Double> margen = new ArrayList<>();
+            List<Double> porc = new ArrayList<>();
+            List<String> clientes = new ArrayList<>();
+            List<String> placas = new ArrayList<>();
+            List<String> tipo_cli = new ArrayList<>();
+            List<String> tipo_sin = new ArrayList<>();
+            List<String> marca = new ArrayList<>();
+            List<String> modelo = new ArrayList<>();
+            double celda;
+            int elem;
+            String OT;
+
+            for (int i = 0; i < lastRowOT; i++){
+                OT = dfOT.get(i, 0).toString();
+                //Calculamos salidas x almacen
+                elem = dfSalxAlm.col(0).indexOf(OT);
+                if (elem != -1) {
+                    celda = (Double)dfSalxAlm.get(elem ,1);
+                    salidas_alm.add(celda);                    
+                }
+                else    salidas_alm.add(0.0);
+
+                //Calculamos las compras rpto y serv_terceros
+                elem = dfRP.col(0).indexOf(OT);
+                if (elem != -1){
+                        celda = (Double)dfRP.get(elem ,2);
+                        compras_rpto.add(celda);
+                }
+                else    compras_rpto.add(0.0);
+
+                elem = dfST.col(0).indexOf(OT);
+                if (elem != -1){
+                        celda = (Double)dfST.get(elem ,2);
+                        serv_terceros.add(celda);
+                }
+                else    serv_terceros.add(0.0); 
+
+                //Calculamos las MO
+                elem = dfMO.col(0).indexOf(OT);
+                if (elem != -1){
+                    double hora_planchado = (Double)dfMO.get(elem, 1);
+                    double terc_plan = (Double)dfMO.get(elem, 2);
+                    double panio_pint = (Double)dfMO.get(elem, 3);
+                    double terc_pint = (Double)dfMO.get(elem, 4);
+                    double hora_mec = (Double)dfMO.get(elem, 5);
+                    double tipoCambio = (Double)dfCostos.get(3, 1);
+                    mo_mecanica.add(hora_mec*(Double)dfCostos.get(2, 1)*tipoCambio);
+                    mo_planchado.add(hora_planchado*(Double)dfCostos.get(0, 1)*tipoCambio);
+                    mo_pintura.add(panio_pint*(Double)dfCostos.get(1, 1)*tipoCambio);
+                    serv_ter.add(terc_plan*tipoCambio + terc_pint*tipoCambio);
+                }
+                else{
+                    mo_mecanica.add(0.0);
+                    mo_pintura.add(0.0);
+                    mo_planchado.add(0.0);
+                    serv_ter.add(0.0);
+                }
+
+                //Calculamos el total de los gastos.
+                double suma = salidas_alm.get(i) + compras_rpto.get(i) + serv_terceros.get(i) + 
+                              mo_mecanica.get(i) + mo_planchado.get(i) + mo_pintura.get(i) +
+                              serv_ter.get(i);
+                total_gastos.add(suma);
+                double dato = (Double)dfOT.col("Sin_IGV").get(i);
+                double montoMargen = dato-suma;
+                margen.add(montoMargen);
+                if(dato==0) porc.add(0.0);
+                else    porc.add(montoMargen/dato*100);
+
+                //Hallamos las columnas faltantes
+                elem = dfGris.col("No OT").indexOf(OT);
+                clientes.add(dfGris.get(elem, 8).toString());
+                placas.add(dfGris.get(elem, 5).toString().substring(0, 3) 
+                            + "-" 
+                            + dfGris.get(elem, 5).toString().substring(3));
+                elem = dfAsig.col("ORDEN DE TRABAJO").indexOf(OT);
+                if (elem != -1){
+                    tipo_cli.add(dfAsig.get(elem, 6).toString());
+                    tipo_sin.add(dfAsig.get(elem, 18).toString());
+                    marca.add(dfAsig.get(elem, 4).toString());
+                    modelo.add(dfAsig.get(elem, 5).toString());
+                }
+                else{
+                    tipo_cli.add("S/TIPO");
+                    tipo_sin.add("S/TIPO");
+                    marca.add("S/MARCA");
+                    modelo.add("S/MODELO");
+                }
+            }
+
+            dfOT = dfOT.drop("FiltFecha");
+            dfOT.rename("Sin_IGV", "TOTAL INGRESOS");
+            dfOT.add(salidas_alm); //CHECK
+            dfOT.rename(lastRowOT, "Salidas_Almacen");
+            dfOT.add(compras_rpto); //CHECK
+            dfOT.rename(lastRowOT, "Compras_Rpto");
+            dfOT.add(serv_terceros); //CHECK
+            dfOT.rename(lastRowOT, "Serv_Terceros");        
+            dfOT.add(mo_mecanica); //CHECK
+            dfOT.rename(lastRowOT, "MO_Mecanica");
+            dfOT.add(mo_planchado); //CHECK
+            dfOT.rename(lastRowOT, "MO_Planchado");        
+            dfOT.add(mo_pintura); //CHECK
+            dfOT.rename(lastRowOT, "MO_Pintura");
+            dfOT.add(serv_ter); //CHECK
+            dfOT.rename(lastRowOT, "Ser_Ter_Taller");
+            dfOT.add(total_gastos); //CHECK
+            dfOT.rename(lastRowOT, "TOTAL GASTOS");
+            dfOT.add(margen);            
+            dfOT.rename(lastRowOT, "Margen Bruto");
+            dfOT.add(porc);
+            dfOT.rename(lastRowOT, "PORCENTAJE UTILIDAD");
+            dfOT.add(tipo_sin);
+            dfOT.rename(lastRowOT, "Tipo de Siniestro");         
+            dfOT.add(placas);
+            dfOT.rename(lastRowOT, "Placa");
+            dfOT.add(marca);
+            dfOT.rename(lastRowOT, "Marca");   
+            dfOT.add(modelo);
+            dfOT.rename(lastRowOT, "Modelo");           
+            dfOT.add(clientes);
+            dfOT.rename(lastRowOT, "Cliente"); 
+            dfOT.add(tipo_cli);
+            dfOT.rename(lastRowOT, "Tipo de Cliente");           
+             System.out.println(dfOT);  
+
+            //Reporte por tipo_cliente:
+            DataFrame repTipoCli = dfOT.retain("Tipo de Cliente", "TOTAL INGRESOS", "TOTAL GASTOS", "Margen Bruto").groupBy("Tipo de Cliente").sum().resetIndex();
+            int lastRowTipoCli = repTipoCli.length();
+            List<Double> margenTipCli = new ArrayList<>();
+            double totalFac = 0, totalCosto = 0, totalMargen = 0, totalPorc;
+            for (int i = 0; i<lastRowTipoCli; i++){
+                Double totalI = (Double)repTipoCli.get(i, 1);
+                if(totalI == 0)   margenTipCli.add(0.0);
+                else margenTipCli.add((Double)repTipoCli.get(i, 3)/totalI*100);
+                totalFac += totalI;
+                totalCosto += (Double)repTipoCli.get(i, 2);
+                totalMargen += (Double)repTipoCli.get(i,3);
+            }
+            if (totalFac == 0)  totalPorc = 0.0;
+            else totalPorc = totalMargen/totalFac*100;
+
+            repTipoCli.rename("TOTAL INGRESOS", "Facturación");
+            repTipoCli.rename("TOTAL GASTOS", "Costo");        
+            repTipoCli.add(margenTipCli);
+            repTipoCli.rename(lastRowTipoCli, "%");
+            List<Object> totalGeneral = new ArrayList<>();
+            totalGeneral.add("Total General");
+            totalGeneral.add(totalFac);
+            totalGeneral.add(totalCosto);
+            totalGeneral.add(totalMargen);
+            totalGeneral.add(totalPorc);
+            repTipoCli = repTipoCli.append(totalGeneral);
+            System.out.println(repTipoCli);  
+
+            //Reporte por tipo_siniestro:
+            DataFrame repTipoSin = dfOT.retain("Tipo de Siniestro", "TOTAL INGRESOS", "TOTAL GASTOS", "Margen Bruto").groupBy("Tipo de Siniestro").sum().resetIndex();
+            int lastRowTipoSin = repTipoSin.length();
+            List<Double> margenTipSin = new ArrayList<>();
+            totalFac = totalCosto = totalMargen = 0; 
+
+            for (int i = 0; i<lastRowTipoSin; i++){
+                Double totalI = (Double)repTipoSin.get(i, 1);
+                if(totalI == 0)   margenTipSin.add(0.0);
+                else margenTipSin.add((Double)repTipoSin.get(i, 3)/totalI*100);
+                totalFac += totalI;
+                totalCosto += (Double)repTipoSin.get(i, 2);
+                totalMargen += (Double)repTipoSin.get(i,3);
+            }
+            if (totalFac == 0)  totalPorc = 0.0;
+            else totalPorc = totalMargen/totalFac*100;
+
+            repTipoSin.rename("TOTAL INGRESOS", "Facturación");
+            repTipoSin.rename("TOTAL GASTOS", "Costo");        
+            repTipoSin.add(margenTipSin);
+            repTipoSin.rename(lastRowTipoSin, "%");
+            totalGeneral = new ArrayList<>();
+            totalGeneral.add("Total General");
+            totalGeneral.add(totalFac);
+            totalGeneral.add(totalCosto);
+            totalGeneral.add(totalMargen);
+            totalGeneral.add(totalPorc);
+            repTipoSin = repTipoSin.append(totalGeneral);
+            System.out.println(repTipoSin);
+            
             //Para la tabla cliente:
             DataFrame dfCliente = dfGris.retain("No OT", "R.U.C.", "Nombre / Razón Social");
-            dfCliente = dfCliente.unique("No OT").joinOn(dfAsig.retain("ORDEN DE TRABAJO", "TIPO DE CLIENTE").unique("ORDEN DE TRABAJO"), DataFrame.JoinType.INNER, "No OT");
+            dfCliente = dfCliente.unique("No OT").joinOn(dfAsig.retain("ORDEN DE TRABAJO", "TIPO DE CLIENTE", "TIPO SINIESTRO").unique("ORDEN DE TRABAJO"), DataFrame.JoinType.LEFT, "No OT");
             int lastRowCli = dfCliente.length();
             //Generamos la columna con el tipo de documento
             List<String> tipoDoc = new ArrayList<>();
+            List <String> a = new ArrayList<>();
             for (int i = 0; i < lastRowCli; i++){
                 int numDig = dfCliente.get(i, 1).toString().length();
                 if (numDig == 11)  tipoDoc.add("RUC");
                 else if (numDig == 8)  tipoDoc.add("DNI");
                 else tipoDoc.add("S/TIPO");
-            }
-            
-            //TODO Se agregan espacios en blanco en correo y telefono (Eliminar campos)
-            int cantidad = tipoDoc.size();
-            List <String> a = new ArrayList<>();
-            for (int i=0; i<cantidad;i++){
                 a.add("-");
             }
+            
             DataFrame tablaCliente = new DataFrame();
             tablaCliente.add(dfCliente.col("Nombre / Razón Social"));
-            tablaCliente.add(dfCliente.col("TIPO DE CLIENTE"));
-            //System.out.println(tablaCliente);
             tablaCliente.rename(0, "NOMBRE CLIENTE");
-            tablaCliente.rename(cantidad, "TIPO DE CLIENTE");
+            tablaCliente.add(dfCliente.col("TIPO DE CLIENTE"));        
+            tablaCliente.rename(lastRowCli, "TIPO DE CLIENTE");
             tablaCliente.add(tipoDoc);
-            tablaCliente.rename(cantidad, "TIPO DE DOCUMENTO");
+            tablaCliente.rename(lastRowCli, "TIPO DE DOCUMENTO");
             tablaCliente.add(dfCliente.col("R.U.C."));
-            tablaCliente.rename(cantidad, "NUMERO DOCUMENTO");
+            tablaCliente.rename(lastRowCli, "NUMERO DOCUMENTO");
             tablaCliente.add(a);
-            tablaCliente.rename(cantidad, "TELEFONO");
+            tablaCliente.rename(lastRowCli, "TELEFONO");
             tablaCliente.add(a);
-            tablaCliente.rename(cantidad, "CORREO");
+            tablaCliente.rename(lastRowCli, "CORREO");        
             tablaCliente = tablaCliente.unique("NOMBRE CLIENTE");
+            System.out.println(tablaCliente);
             //System.out.println(tablaCliente);
             ClienteDAO daoCliente = DBController.controller.getClienteDAO();
             daoCliente.guardarBatch(tablaCliente);
@@ -178,6 +435,7 @@ public class ExcelWS {
             tablaVehiculo.add(dfVehiculo.col("Nombre / Razón Social"));
             tablaVehiculo.rename(lastRowVeh, "CLIENTE");
             tablaVehiculo = tablaVehiculo.unique("PLACA");
+            System.out.println(tablaVehiculo);
             //System.out.println(tablaVehiculo);
             VehiculoDAO daoVehiculo = DBController.controller.getVehiculoDAO();
             daoVehiculo.guardarBatch(tablaVehiculo);
@@ -192,157 +450,25 @@ public class ExcelWS {
             }
             tablaAreaTrabajo.rename("División", "Area de Trabajo"); 
             tablaAreaTrabajo.add(b);
-            tablaAreaTrabajo.rename(cant, "MONTO"); 
-            tablaAreaTrabajo.add(b);        
+            tablaAreaTrabajo.rename(cant, "Total Ingresos"); 
+            tablaAreaTrabajo.add(b);      
+            tablaAreaTrabajo.rename(cant, "Total Egresos"); 
             //System.out.println(tablaAreaTrabajo);
             AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
             daoAreaTrabajo.guardarBatch(tablaAreaTrabajo);
 
-            //Para la tabla Orden de Trabajo
-            dfGris = dfGris.sortBy("No OT");
-            int lastFact1 = dfGris.col("Doc.").indexOf("ABO");
-            int lastFact2 = dfGris.col("Doc.").indexOf("CAR");
-            if (lastFact1 != -1){
-                dfGris = dfGris.slice(0, lastFact1 - 1);
-            }
-            else if (lastFact2 != -1){
-                dfGris = dfGris.slice(0, lastFact2 - 1);            
-            }
-
-            DataFrame dfOT = dfGris.retain("No OT", "Sin_IGV").groupBy("No OT").sum(); //REVISAR
-            int lastRowOT = dfOT.length();    
-            //Filtramos para obtener solo los documentos Factura y Boleta
-
-            //Calculamos Salidas_Almacen
-            dfSalxAlm = dfSalxAlm.retain("Total S/.", "OT").groupBy("OT").sum();
-            List<Double> salidas_alm = new ArrayList<>();
-            double celda;
-            int elem;
-            for (int i = 0; i < lastRowOT; i++){
-                String OT = dfOT.get(i, 0).toString();
-                elem = dfSalxAlm.col(0).indexOf(OT);
-                if (elem != -1) {
-                    celda = (Double)dfSalxAlm.get(elem ,1);
-                    salidas_alm.add(celda);                    
-                }
-                else    salidas_alm.add(0.0);
-            }
-    //        dfOT.add(salidas_alm); //CHECK
-    //        dfOT.rename(lastRowOT, "Salidas_Almacen");
-
-            //Calculamos Compras_Rpto y Serv_Terceros
-            dfCompras = dfCompras.retain("OT", "CLAS_SERV", "MONTO").groupBy("OT", "CLAS_SERV").sum();
-            List<Double> compras_rpto = new ArrayList<>();
-            for (int i = 0; i < lastRowOT; i++){
-                String OT = dfOT.get(i, 0).toString();
-                elem = dfCompras.col(0).indexOf(OT);
-                if (elem != -1){
-                    String tipoServ = dfCompras.get(elem, 1).toString();
-                    if (tipoServ.contentEquals("RP")){
-                        celda = (Double)dfCompras.get(elem ,2);
-                        compras_rpto.add(celda);
-                    }
-                    else    compras_rpto.add(0.0);
-                }
-                else    compras_rpto.add(0.0);
-            }        
-    //        dfOT.add(compras_rpto); //CHECK
-    //        dfOT.rename(lastRowOT, "Compras_Rpto");
-
-            List<Double> serv_terceros = new ArrayList<>();
-            for (int i = 0; i < lastRowOT; i++){
-                String OT = dfOT.get(i, 0).toString();
-                elem = dfCompras.col(0).indexOf(OT);
-                if (elem != -1){
-                    String tipoServ = dfCompras.get(elem, 1).toString();
-                    if (tipoServ.contentEquals("ST")){
-                        celda = (Double)dfCompras.get(elem ,2);
-                        serv_terceros.add(celda);
-                    }
-                    else    serv_terceros.add(0.0);
-                }
-                else    serv_terceros.add(0.0);
-            } 
-    //        dfOT.add(serv_terceros); //CHECK
-    //        dfOT.rename(lastRowOT, "Serv_Terceros");
-
-            DataFrame dfMO = dfAsig.retain("ORDEN DE TRABAJO", "HORA AJUSTADA", "TERCEROS / PLANCHADOR" ,"PAÑOS AJUSTADOS", "TERCEROS/PINTOR ($)","HORAS MECÁNICA")
-                                   .groupBy("ORDEN DE TRABAJO")
-                                   .sum();
-            //System.out.println(dfMO);
-            //System.out.println(dfCostos);
-            List<Double> mo_mecanica = new ArrayList<>();
-            List<Double> mo_planchado = new ArrayList<>();
-            List<Double> mo_pintura = new ArrayList<>();
-            List<Double> serv_ter = new ArrayList<>();
-            for (int i = 0; i < lastRowOT; i++){
-                String OT = dfOT.get(i, 0).toString();
-                elem = dfMO.col(0).indexOf(OT);
-                if (elem != -1){
-                    double hora_planchado = (Double)dfMO.get(elem, 1);
-                    double terc_plan = (Double)dfMO.get(elem, 2);
-                    double panio_pint = (Double)dfMO.get(elem, 3);
-                    double terc_pint = (Double)dfMO.get(elem, 4);
-                    double hora_mec = (Double)dfMO.get(elem, 5);
-                    double tipoCambio = (Double)dfCostos.get(3, 1);
-                    mo_mecanica.add(hora_mec*(Double)dfCostos.get(2, 1)*tipoCambio);
-                    mo_planchado.add(hora_planchado*(Double)dfCostos.get(0, 1)*tipoCambio);
-                    mo_pintura.add(panio_pint*(Double)dfCostos.get(1, 1)*tipoCambio);
-                    serv_ter.add(terc_plan*tipoCambio + terc_pint*tipoCambio);
-                }
-                else{
-                    mo_mecanica.add(0.0);
-                    mo_pintura.add(0.0);
-                    mo_planchado.add(0.0);
-                    serv_ter.add(0.0);
-                }
-            }
-    //        dfOT.add(mo_mecanica); //CHECK
-    //        dfOT.rename(lastRowOT, "MO_Mecanica");
-    //        dfOT.add(mo_planchado); //CHECK
-    //        dfOT.rename(lastRowOT, "MO_Planchado");        
-    //        dfOT.add(mo_pintura); //CHECK
-    //        dfOT.rename(lastRowOT, "MO_Pintura");
-    //        dfOT.add(serv_ter); //CHECK
-    //        dfOT.rename(lastRowOT, "Ser_Ter_Taller");
-
-            List<Double> total_gastos = new ArrayList<>();
-            List<Double> margen = new ArrayList<>();
-            List<Double> porc = new ArrayList<>();
-            //Unimos todas las columnas para obtener el total gastos
-            for (int i = 0; i < lastRowOT; i++){
-                    double suma = salidas_alm.get(i) + compras_rpto.get(i) + serv_terceros.get(i) + 
-                                  mo_mecanica.get(i) + mo_planchado.get(i) + mo_pintura.get(i) +
-                                  serv_ter.get(i);
-                    total_gastos.add(suma);
-                    double dato = (Double)dfOT.col("Sin_IGV").get(i);
-                    double montoMargen = dato-suma;
-                    margen.add(montoMargen);
-                    if(dato==0)
-                        porc.add(0.0);
-                    else
-                        porc.add(montoMargen/dato*100);
-            }
-            dfOT.add(total_gastos); //CHECK
-            dfOT.rename(lastRowOT, "TOTAL GASTOS");  
-            dfOT = dfOT.joinOn(dfGris.retain("No OT", "Placa", "Nombre / Razón Social", "Mon.", "T/C.").unique("No OT"), DataFrame.JoinType.INNER, "No OT");
-            dfOT = dfOT.resetIndex().drop("No OT_right");
-            dfOT.rename("No OT_left", "ORDEN DE TRABAJO");
-            dfOT.rename("Sin_IGV", "TOTAL INGRESOS");
-            dfOT.rename("Placa", "PLACA");
-            dfOT.rename("Nombre / Razón Social", "CLIENTE");
-            dfOT.rename("Mon.", "MONEDA");
-            dfOT.add(margen);            
-            dfOT.rename(lastRowOT, "MARGEN BRUTO");
-            dfOT.add(porc);
-            dfOT.rename(lastRowOT, "PORCENTAJE UTILIDAD");
-            //System.out.println(dfOT);
-            
             String rutaSalida = "/Salida.xlsx";
             File fileSalida = new File(rutaSalida);
             OutputStream targetStream = new FileOutputStream(fileSalida);
-            salida.setArchivo(writeXlsx(dfOT, targetStream));
-            
+            List<String> nombres = new ArrayList<>();
+            List<DataFrame> dfs = new ArrayList<>();
+            nombres.add("Rep. por Orden de Trabajo");
+            dfs.add(dfOT);
+            nombres.add("Rep. por Tipo de Siniestro");
+            dfs.add(repTipoSin);
+            nombres.add("Rep. por Tipo de Cliente");
+            dfs.add(repTipoCli);
+            salida.setArchivo(writeListXlsx(dfs, nombres, targetStream));
             
         }
         catch(Exception ex){

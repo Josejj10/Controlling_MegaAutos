@@ -17,7 +17,11 @@ import java.util.List;
 import joinery.DataFrame;
 import joinery.impl.Serialization;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.DefaultIndexedColorMap;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFDataFormat;
+import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.model.OrdenTrabajo;
@@ -141,5 +145,72 @@ public class JoineryExtension extends Serialization{
         return output2.toByteArray();
     }
     
+    public static byte[] writeListXlsx(final List<DataFrame> dfs, List<String> nombres, final OutputStream output)
+    throws IOException {
+        final XSSFWorkbook  wb = new XSSFWorkbook();
+        
+        XSSFFont encabezadoFont = wb.createFont();
+        encabezadoFont.setBold(true);
+        
+        XSSFCellStyle encabezadoStyle = wb.createCellStyle();
+        encabezadoStyle.setFillForegroundColor(new XSSFColor(new java.awt.Color(191, 191, 191), new DefaultIndexedColorMap()));
+        encabezadoStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+        encabezadoStyle.setBorderBottom(BorderStyle.THIN);
+        encabezadoStyle.setBorderTop(BorderStyle.THIN);
+        encabezadoStyle.setBorderLeft(BorderStyle.THIN);
+        encabezadoStyle.setBorderRight(BorderStyle.THIN);
+        encabezadoStyle.setFont(encabezadoFont);
+        
+        XSSFCellStyle contenidoStyle = wb.createCellStyle();
+        contenidoStyle.setBorderBottom(BorderStyle.THIN);
+        contenidoStyle.setBorderTop(BorderStyle.THIN);
+        contenidoStyle.setBorderLeft(BorderStyle.THIN);
+        contenidoStyle.setBorderRight(BorderStyle.THIN);
+        
+        XSSFCellStyle pieStyle = wb.createCellStyle();
+        pieStyle.setBorderBottom(BorderStyle.THIN);
+        pieStyle.setBorderTop(BorderStyle.THIN);
+        pieStyle.setBorderLeft(BorderStyle.THIN);
+        pieStyle.setBorderRight(BorderStyle.THIN);
+        pieStyle.setFont(encabezadoFont);
+        
+//        final Sheet sheet = wb.createSheet();
+        int i=0;
+        for(DataFrame df : dfs){  
+            Sheet sheet = wb.createSheet(nombres.get(i));
+            sheet.setDefaultColumnWidth(25);
+            i=i+1;
+            // add header
+            Row row = sheet.createRow(0);
+            final Iterator<Object> it = df.columns().iterator();
+            for (int c = 0; c < df.size(); c++) {
+                final Cell cell = row.createCell(c);
+                cell.setCellStyle(encabezadoStyle);
+                writeCell(cell, it.hasNext() ? it.next() : c);
+            }
+            int lastRow=df.length();
+            // add data values
+            for (int r = 0; r < lastRow; r++) {
+                row = sheet.createRow(r + 1);
+                for (int c = 0; c < df.size(); c++) {
+                    final Cell cell = row.createCell(c);
+                    //Ojo al tejo
+                    if(i==1 && r==lastRow)
+                        cell.setCellStyle(contenidoStyle);
+                    else if(i!=1 && r==lastRow)
+                        cell.setCellStyle(pieStyle);
+                    writeCell(cell, df.get(r, c));
+                }
+            }
+        }
+
+        //  write to stream
+        wb.write(output);
+        output.close();
+        ByteArrayOutputStream output2 = new ByteArrayOutputStream();
+        wb.write(output2);
+        output2.close();
+        return output2.toByteArray();
+    }
 }
 

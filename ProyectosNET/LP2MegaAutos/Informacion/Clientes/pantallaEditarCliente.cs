@@ -215,7 +215,7 @@ namespace LP2MegaAutos
             isDouble = Double.TryParse(txt_NumeroDocumento.Text, out resultado);
 
             // Sacapalabras al txt
-            if (string.IsNullOrEmpty(txt_NombreCliente.Text))
+            if (string.IsNullOrEmpty(txt_NombreCliente.Text) || txt_NombreCliente.Text == "Agregar nombre del cliente...")
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
                 f.ShowDialog();

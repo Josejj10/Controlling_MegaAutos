@@ -32,6 +32,10 @@ namespace LP2MegaAutos.VentanasPrincipales
                     case ePermisos.ActualizarBD:
                         menu |= 1;
                         break;
+                    case ePermisos.Empresa:
+                        menu |= 2;
+                        nItemsConfig++;
+                        break;
                     case ePermisos.AreasTrabajo:
                         menu |= 4;
                         nItemsInfo++;
@@ -43,10 +47,6 @@ namespace LP2MegaAutos.VentanasPrincipales
                     case ePermisos.Drivers:
                         menu |= 4;
                         nItemsInfo++;
-                        break;
-                    case ePermisos.Empresa:
-                        menu |= 2;
-                        nItemsConfig++;
                         break;
                     case ePermisos.Sedes:
                         menu |= 2;
@@ -85,7 +85,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 case ePermisos.Empresa: // TODO solo abrir el frm empresa 
                                         // frmEditarNombEmpresa pas = new frmEditarNombEmpresa(_empresa);
                     // if (pas.ShowDialog() == DialogResult.OK)
-                    return (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img, panelMenu, cont); };
+                    return (sender, e) => { pmsBtn_Click<pantallaActualizarBD>(sender, e, btn, img, panelMenu, cont); };
                 case ePermisos.Sedes:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarSedes>(sender, e, btn, img, panelMenu, cont); };
                 case ePermisos.Servicios:
@@ -95,7 +95,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 case ePermisos.Vehiculos:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarVehiculos>(sender, e, btn, img, panelMenu, cont); };
                 default:
-                    return (sender, e) => { pmsBtn_Click<pantallaInformacionEmpresa>(sender, e, btn, img, panelMenu, cont); };
+                    return (sender, e) => { pmsBtn_Click<pantallaActualizarBD>(sender, e, btn, img, panelMenu, cont); };
             }
         }
 

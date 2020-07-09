@@ -345,11 +345,11 @@
     <Compile Include="Reportes\pantallaGenerarReporte.Designer.cs">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresa.cs">
+    <Compile Include="Configuracion\Empresa\pantallaActualizarBD.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Configuracion\Empresa\pantallaInformacionEmpresa.Designer.cs">
-      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
+    <Compile Include="Configuracion\Empresa\pantallaActualizarBD.Designer.cs">
+      <DependentUpon>pantallaActualizarBD.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\pantallaInicio.cs">
       <SubType>UserControl</SubType>
@@ -584,8 +584,8 @@
     <EmbeddedResource Include="Reportes\pantallaGenerarReporte.resx">
       <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Empresa\pantallaInformacionEmpresa.resx">
-      <DependentUpon>pantallaInformacionEmpresa.cs</DependentUpon>
+    <EmbeddedResource Include="Configuracion\Empresa\pantallaActualizarBD.resx">
+      <DependentUpon>pantallaActualizarBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>

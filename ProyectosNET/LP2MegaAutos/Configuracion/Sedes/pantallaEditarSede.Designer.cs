@@ -129,7 +129,7 @@
             this.txt_telefono.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_telefono, null);
             this.tagsExtender1.SetTag3(this.txt_telefono, null);
-            this.tagsExtender1.SetTagFontName(this.txt_telefono, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txt_telefono, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txt_telefono, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txt_telefono, System.Drawing.FontStyle.Bold);
             // 
@@ -222,7 +222,7 @@
             this.cboDistritos.TabIndex = 67;
             this.tagsExtender1.SetTag2(this.cboDistritos, null);
             this.tagsExtender1.SetTag3(this.cboDistritos, null);
-            this.tagsExtender1.SetTagFontName(this.cboDistritos, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.cboDistritos, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.cboDistritos, 10F);
             this.tagsExtender1.SetTagFontStyle(this.cboDistritos, System.Drawing.FontStyle.Bold);
             // 
@@ -505,7 +505,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";

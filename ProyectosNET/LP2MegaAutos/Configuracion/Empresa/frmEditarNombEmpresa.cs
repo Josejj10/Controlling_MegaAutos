@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using LP2MegaAutos.VentanasPrincipales;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,11 @@ namespace LP2MegaAutos.Configuracion.Empresa
 {
     public partial class frmEditarNombEmpresa : MetroForm
     {
+        private string nuevoNombre;
+
+        public string NuevoNombre { get => nuevoNombre; }
+
+
         public frmEditarNombEmpresa()
         {
             InitializeComponent();
@@ -21,7 +27,7 @@ namespace LP2MegaAutos.Configuracion.Empresa
         public frmEditarNombEmpresa(ServicioEmpresa.empresa empresa)
         {
             InitializeComponent();
-            this.txt_nombEmpresa.Text = empresa.nombre;
+            this.txt_nombEmpresa.Text = nuevoNombre = empresa.nombre;
         }
 
         #region title_bar
@@ -66,7 +72,17 @@ namespace LP2MegaAutos.Configuracion.Empresa
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            // TODO actualizar nombre de la empresa
+            // this.nuevoNombre = nuevoNombre de la empresa q devuelve el dao 
+            frmMessageBox confirmar = new frmMessageBox(
+                $"¿Desea cambiar el nombre de la empresa a {nuevoNombre}?",MessageBoxButtons.OKCancel , "Advertencia",true);
+            if (confirmar.ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            confirmar = new frmMessageBox(
+                "No se realizo ningún cambio.", MessageBoxButtons.OK);
+            confirmar.ShowDialog();
         }
 
     }

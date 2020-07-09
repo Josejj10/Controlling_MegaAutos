@@ -511,7 +511,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";
@@ -578,7 +578,7 @@
             this.lbl_RolUsuario.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_RolUsuario, null);
             this.tagsExtender1.SetTag3(this.lbl_RolUsuario, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_RolUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_RolUsuario, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_RolUsuario, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_RolUsuario, System.Drawing.FontStyle.Bold);
             this.lbl_RolUsuario.Text = "Rol";
@@ -653,7 +653,7 @@
             this.txtNombre.TabIndex = 65;
             this.tagsExtender1.SetTag2(this.txtNombre, null);
             this.tagsExtender1.SetTag3(this.txtNombre, null);
-            this.tagsExtender1.SetTagFontName(this.txtNombre, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txtNombre, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txtNombre, 10F);
             this.tagsExtender1.SetTagFontStyle(this.txtNombre, System.Drawing.FontStyle.Regular);
             this.txtNombre.Text = "Agregar Nombre de Usuario...";
@@ -738,7 +738,7 @@
             this.lbl_ListaPermisosUsuario.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaPermisosUsuario, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaPermisosUsuario, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaPermisosUsuario, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaPermisosUsuario, fontsD.Montserrat);
             this.tagsExtender1.SetTagFontSize(this.lbl_ListaPermisosUsuario, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_ListaPermisosUsuario, System.Drawing.FontStyle.Regular);
             this.lbl_ListaPermisosUsuario.Text = "Permisos";
@@ -785,7 +785,7 @@
             this.btnReestablecer.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnReestablecer, null);
             this.tagsExtender1.SetTag3(this.btnReestablecer, null);
-            this.tagsExtender1.SetTagFontName(this.btnReestablecer, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnReestablecer, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnReestablecer, 13F);
             this.tagsExtender1.SetTagFontStyle(this.btnReestablecer, System.Drawing.FontStyle.Bold);
             this.btnReestablecer.Text = "Reestablecer Datos";
@@ -833,7 +833,7 @@
             this.btnCambiarPassword.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnCambiarPassword, null);
             this.tagsExtender1.SetTag3(this.btnCambiarPassword, null);
-            this.tagsExtender1.SetTagFontName(this.btnCambiarPassword, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnCambiarPassword, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnCambiarPassword, 13F);
             this.tagsExtender1.SetTagFontStyle(this.btnCambiarPassword, System.Drawing.FontStyle.Bold);
             this.btnCambiarPassword.Text = "Cambiar Contraseña";

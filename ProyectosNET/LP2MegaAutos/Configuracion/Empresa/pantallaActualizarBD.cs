@@ -14,7 +14,7 @@ using System.IO;
 
 namespace LP2MegaAutos
 {
-    public partial class pantallaInformacionEmpresa : Pantalla
+    public partial class pantallaActualizarBD : Pantalla
     {
         ServicioEmpresa.EmpresaWSClient daoEmpresa;
         ServicioExcel.ExcelWSClient daoExcel;
@@ -24,7 +24,7 @@ namespace LP2MegaAutos
         private ServicioExcel.excel _excelEnviado;
         private ServicioExcel.excel _excelRecibido;
         empresa _empresa;
-        public pantallaInformacionEmpresa()
+        public pantallaActualizarBD()
         {
             InitializeComponent();
             daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
@@ -52,13 +52,7 @@ namespace LP2MegaAutos
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
-            //FolderBrowserDialog fld = new FolderBrowserDialog();
-            //if (fld.ShowDialog() == DialogResult.OK)
-            //{
-            //    txtArchivo1.Text = fld.SelectedPath;
-            //}
-
-            try
+           try
             {
                 if (ofdArchivo1.ShowDialog() == DialogResult.OK)
                 {
@@ -68,14 +62,16 @@ namespace LP2MegaAutos
                     BinaryReader br = new BinaryReader(fs);
 
                     // Asignamos el archivo al objeto
+                    // Habilitar el boton guardar
                     this._excelEnviado.archivo = br.ReadBytes((int)fs.Length);
                     br.Close();
                     fs.Close();
+                    this.btnGuardar.Enabled = this.btnDescargar1.Enabled= true;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("El archivo seleccionado no es un tipo valido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                MessageBox.Show("El archivo seleccionado no es un tipo valido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
         }
 
@@ -106,12 +102,6 @@ namespace LP2MegaAutos
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo valido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
             }
-        }
-
-        private void btnEditarRutas_Click(object sender, EventArgs e)
-        {
-            btnExaminar.Enabled = !btnExaminar.Enabled;
-            btnObtener.Visible = btnGuardar.Visible = !btnGuardar.Visible;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -161,5 +151,6 @@ namespace LP2MegaAutos
                 }
             }
         }
+
     }
 }

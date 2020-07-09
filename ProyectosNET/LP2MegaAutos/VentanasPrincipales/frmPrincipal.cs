@@ -17,6 +17,8 @@ using LP2MegaAutos.Framework.UserControls;
 using System.IO;
 using LP2MegaAutos.Properties;
 using LP2MegaAutos.ServicioUsuario;
+using LP2MegaAutos.Configuracion.Empresa;
+using LP2MegaAutos.ServicioEmpresa;
 
 namespace LP2MegaAutos
 {
@@ -24,6 +26,9 @@ namespace LP2MegaAutos
     {
 
         private usuario _usuario;
+        ServicioEmpresa.EmpresaWSClient daoEmpresa;
+        empresa _empresa;
+
         #region Getters y Setters
         public usuario Usuario { get => _usuario; set => _usuario = value; }
 
@@ -133,8 +138,9 @@ namespace LP2MegaAutos
 
         private void inicializarUsuario()
         {
+            
             List<ePermisos?> uPer = _usuario.permisos.ToList();
-            //uPer.Remove(ePermisos.All);
+            uPer.Add(ePermisos.All);
             uPer.Add(ePermisos.Sedes);
             _usuario.permisos = uPer.ToArray();
 
@@ -184,7 +190,7 @@ namespace LP2MegaAutos
             ((pantallaInicio)contenedorPantalla1.PInicial).ReporteClienteClick += pmsReportes_ReporteClienteClick;
             ((pantallaInicio)contenedorPantalla1.PInicial).ReporteVehiculoClick += pmsReportes_ReporteVehiculoClick;
             ((pantallaInicio)contenedorPantalla1.PInicial).CreditosClick += verCreditos;
-            ((pantallaInicio)contenedorPantalla1.PInicial).ActualizarBDClick += btnMenuActualizarBD_Click;
+            ((pantallaInicio)contenedorPantalla1.PInicial).ActualizarEmpresaClick += btnMenuActualizarEmpresa_Click;
             ((pantallaInicio)contenedorPantalla1.PInicial).VerUltimoReporteClick+= btnMenuUltimoReporte_Click;
         }
         #endregion constructor
@@ -300,15 +306,15 @@ namespace LP2MegaAutos
         private void crearBotonBD(bool estaBtnInfo, bool estaBtnConfig)
         {
             int yLoc = estaBtnConfig ? estaBtnInfo ? 229 : 170 : 115;
-            RoundedPanel rpBtnMenuActualizarBD = new LP2MegaAutos.RoundedPanel();
+            RoundedPanel rpBtnMenuActualizarEmpresa = new LP2MegaAutos.RoundedPanel();
             Button btnMenuActualizarBD = new System.Windows.Forms.Button();
-            crearRPMenu(rpBtnMenuActualizarBD, "rpBtnMenuActualizarBD", yLoc);
-            crearBtnMenu(rpBtnMenuActualizarBD, btnMenuActualizarBD, "rpBtnMenuActualizarBD", global::LP2MegaAutos.Properties.Resources.BaseDatos);
+            crearRPMenu(rpBtnMenuActualizarEmpresa, "rpBtnMenuActualizarEmpresa", yLoc);
+            crearBtnMenu(rpBtnMenuActualizarEmpresa, btnMenuActualizarBD, "rpBtnMenuActualizarEmpresa", global::LP2MegaAutos.Properties.Resources.Empresa);
             btnMenuActualizarBD.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
             btnMenuActualizarBD.Cursor = Cursors.Hand;
             btnMenuActualizarBD.MouseEnter+= btnMenu_MouseEnter;
             btnMenuActualizarBD.MouseLeave+= btnMenu_MouseLeave;
-            btnMenuActualizarBD.Click += btnMenuActualizarBD_Click;
+            btnMenuActualizarBD.Click += btnMenuActualizarEmpresa_Click;
         }
         #endregion Creacion Botones
 
@@ -484,19 +490,19 @@ namespace LP2MegaAutos
             per.Add(ePermisos.Usuarios);
             per.Add(ePermisos.Servicios);
             per.Add(ePermisos.Sedes);
-            per.Add(ePermisos.Empresa);
+            per.Add(ePermisos.ActualizarBD);
 
             BindingList<string> txts = new BindingList<string>();
             txts.Add("Usuarios");
             txts.Add("Servicios");
             txts.Add("Sedes");
-            txts.Add("Empresa");
+            txts.Add("Actualizar BD");
 
             BindingList<Image> ims = new BindingList<Image>();
             ims.Add((Image)new Bitmap(Resources.Usuarios, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Servicio, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Sede, new Size(36, 36)));
-            ims.Add((Image)new Bitmap(Resources.Empresa, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.BaseDatos, new Size(36, 36)));
 
             crearStrip(pms, nItems, ims, per, btnMenu,txts);
 
@@ -506,17 +512,21 @@ namespace LP2MegaAutos
         }
 
 
-        private void btnMenuActualizarBD_Click(object sender, EventArgs e)
+        private void btnMenuActualizarEmpresa_Click(object sender, EventArgs e)
         {
-            if (MetroMessageBox.Show(this, "Actualizar BD", "Actualizar Base de Datos", MessageBoxButtons.YesNo) ==
-                DialogResult.OK)
-            {
-                // Logica de actualizar bd
-                // TODO devolver un string que diga lo que ha actualizado
-                MessageBox.Show(this, "Se han actualizado 256 entradas");
-            }
-            if(sender.GetType()==typeof(Control))
+            if (sender.GetType() == typeof(Control))
                 ((Control)sender).Parent.Focus();
+            daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
+            List<empresa> empresas = daoEmpresa.listarEmpresa().ToList();
+            if (empresas == null) return;
+            _empresa = empresas[0];
+            frmEditarNombEmpresa pas = new frmEditarNombEmpresa(_empresa);
+            if (pas.ShowDialog() == DialogResult.OK)
+            {
+                frmMessageBox frm = new frmMessageBox("Se actualizo el nombre de la empresa a." +
+                    MessageBoxButtons.OK);
+                frm.ShowDialog();
+            }
         }
 
         #endregion Creacion Strips

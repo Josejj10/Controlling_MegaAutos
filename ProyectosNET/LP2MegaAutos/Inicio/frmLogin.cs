@@ -16,6 +16,7 @@ using System.Runtime.InteropServices;
 using MetroFramework;
 using LP2MegaAutos.ServicioUsuario;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.Inicio;
 
 namespace LP2MegaAutos
 {
@@ -101,9 +102,13 @@ namespace LP2MegaAutos
         
         void boton_olvido_password_Click(object sender, EventArgs e)
         {
-            // TODO funcion de olvido Password
+            frmRecuperarPassword frm = new frmRecuperarPassword();
+            if (frm.ShowDialog() != DialogResult.OK) return; // No sucede nada
+            // Si funciono, entonces 
+            _usuario = frm.Usuario;
+            Console.WriteLine("USUARIO: "+_usuario);
+            this.DialogResult = DialogResult.OK;
             
-            MetroMessageBox.Show(this,"Puedes recuperarla enviando un mensaje a IT.", "¿Olvidaste tu Contraseña?");
         }
         #endregion olvido_password
 

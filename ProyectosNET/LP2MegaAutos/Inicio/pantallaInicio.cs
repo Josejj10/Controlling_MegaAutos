@@ -63,7 +63,7 @@ namespace LP2MegaAutos
             if ((botones & 1) == 1)
             {
                 // Hacer Visible el Label de Actualizar BD
-                this.lblActualizarBD.Visible = true;
+                this.lblActualizarEmpresa.Visible = true;
             }
 
         }
@@ -240,22 +240,22 @@ namespace LP2MegaAutos
             nombres.Add("btnUsuarios");
             nombres.Add("btnServicios");
             nombres.Add("btnSedes");
-            nombres.Add("btnEmpresa");
+            nombres.Add("btnActualizarBD");
 
             textos.Add("Usuarios");
             textos.Add("Servicios");
             textos.Add("Sedes");
-            textos.Add("Empresa");
+            textos.Add("Actualizar BD");
 
             per.Add(ePermisos.Usuarios);
             per.Add(ePermisos.Servicios);
             per.Add(ePermisos.Sedes);
-            per.Add(ePermisos.Empresa);
+            per.Add(ePermisos.ActualizarBD);
 
             imgs.Add(Resources.Usuarios);
             imgs.Add(Resources.Servicio);
             imgs.Add(Resources.Sede);
-            imgs.Add(Resources.Empresa);
+            imgs.Add(Resources.BaseDatos);
 
             Button btnConfig = ((frmPrincipal)this.Parent.Parent.Parent).
                 getBotonPanelMenuString("btnMenuConfiguracion");
@@ -276,7 +276,7 @@ namespace LP2MegaAutos
         public event ButtonClickEventHandler ReporteClienteClick;
         public event ButtonClickEventHandler ReporteVehiculoClick;
         public event ButtonClickEventHandler CreditosClick;
-        public event ButtonClickEventHandler ActualizarBDClick;
+        public event ButtonClickEventHandler ActualizarEmpresaClick;
         public event ButtonClickEventHandler VerUltimoReporteClick;
         #endregion Event Handlers
 
@@ -316,9 +316,10 @@ namespace LP2MegaAutos
             ButtonClickEventHandler h = CreditosClick;
             if (h != null) h(this, e);
         }
-        private void lblActualizarBD_Click(object sender, EventArgs e)
+        private void lblActualizarEmpresa_Click(object sender, EventArgs e)
         {
-            ButtonClickEventHandler h = ActualizarBDClick;
+            ButtonClickEventHandler h = ActualizarEmpresaClick;
+            
             if (h != null) h(this, e);
         }
         private void ultimoReporteDashboard1_VerReporteClick(object sender, EventArgs e)

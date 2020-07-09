@@ -257,7 +257,7 @@
             this.cboTipoServicio.TabIndex = 82;
             this.tagsExtender1.SetTag2(this.cboTipoServicio, null);
             this.tagsExtender1.SetTag3(this.cboTipoServicio, null);
-            this.tagsExtender1.SetTagFontName(this.cboTipoServicio, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.cboTipoServicio, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.cboTipoServicio, 10F);
             this.tagsExtender1.SetTagFontStyle(this.cboTipoServicio, System.Drawing.FontStyle.Bold);
             // 
@@ -479,7 +479,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";

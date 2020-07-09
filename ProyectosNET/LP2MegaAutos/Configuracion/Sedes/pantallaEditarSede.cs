@@ -166,9 +166,9 @@ namespace LP2MegaAutos
         private bool sedeValido()
         {
             // Sacapalabras al txt
-            if (string.IsNullOrEmpty(txt_NombreSede.Text))
+            if (string.IsNullOrEmpty(txt_NombreSede.Text) || txt_NombreSede.Text == "Agregar nombre de sede...")
             {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre de la sede", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

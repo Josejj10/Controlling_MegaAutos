@@ -178,7 +178,7 @@
             this.lbl_NombreAreaTrabajoxCC.TabIndex = 66;
             this.tagsExtender1.SetTag2(this.lbl_NombreAreaTrabajoxCC, null);
             this.tagsExtender1.SetTag3(this.lbl_NombreAreaTrabajoxCC, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_NombreAreaTrabajoxCC, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_NombreAreaTrabajoxCC, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_NombreAreaTrabajoxCC, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_NombreAreaTrabajoxCC, System.Drawing.FontStyle.Regular);
             this.lbl_NombreAreaTrabajoxCC.Text = "Planchado";
@@ -219,7 +219,7 @@
             this.lbl_ListaCCAreaTrabajo.ForeColor = System.Drawing.Color.White;
             this.lbl_ListaCCAreaTrabajo.Location = new System.Drawing.Point(154, 4);
             this.lbl_ListaCCAreaTrabajo.Name = "lbl_ListaCCAreaTrabajo";
-            this.lbl_ListaCCAreaTrabajo.Size = new System.Drawing.Size(231, 25);
+            this.lbl_ListaCCAreaTrabajo.Size = new System.Drawing.Size(219, 29);
             this.lbl_ListaCCAreaTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaCCAreaTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaCCAreaTrabajo, null);
@@ -283,7 +283,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";

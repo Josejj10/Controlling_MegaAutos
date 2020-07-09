@@ -206,7 +206,7 @@
             this.lbl_ListaAreasTrabajo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaAreasTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaAreasTrabajo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ListaAreasTrabajo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_ListaAreasTrabajo, fontsD.Montserrat);
             this.tagsExtender1.SetTagFontSize(this.lbl_ListaAreasTrabajo, 12F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_ListaAreasTrabajo, System.Drawing.FontStyle.Bold);
             this.lbl_ListaAreasTrabajo.Text = "Áreas de Trabajo";

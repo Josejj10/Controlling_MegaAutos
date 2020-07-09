@@ -9,11 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.Configuracion.Empresa;
+using LP2MegaAutos.ServicioEmpresa;
 
 namespace LP2MegaAutos.Configuracion.Empresa
 {
     public partial class frmEditarNombEmpresa : MetroForm
     {
+        ServicioEmpresa.EmpresaWSClient daoEmpresa;
+        ServicioEmpresa.empresa _empresa;
         private string nuevoNombre;
 
         public string NuevoNombre { get => nuevoNombre; }
@@ -22,12 +26,16 @@ namespace LP2MegaAutos.Configuracion.Empresa
         public frmEditarNombEmpresa()
         {
             InitializeComponent();
+            _empresa = new ServicioEmpresa.empresa();
         }
 
         public frmEditarNombEmpresa(ServicioEmpresa.empresa empresa)
         {
             InitializeComponent();
             this.txt_nombEmpresa.Text = nuevoNombre = empresa.nombre;
+            daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
+            _empresa = new ServicioEmpresa.empresa();
+            _empresa = empresa;
         }
 
         #region title_bar
@@ -73,16 +81,32 @@ namespace LP2MegaAutos.Configuracion.Empresa
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             // TODO actualizar nombre de la empresa
+            if (!validarEmpresa())
+                return;
+
             // this.nuevoNombre = nuevoNombre de la empresa q devuelve el dao 
             frmMessageBox confirmar = new frmMessageBox(
-                $"¿Desea cambiar el nombre de la empresa a {nuevoNombre}?",MessageBoxButtons.OKCancel , "Advertencia",true);
+                $"¿Desea cambiar el nombre de la empresa a {txt_nombEmpresa.Text}?",MessageBoxButtons.OKCancel , "Advertencia",true);
             if (confirmar.ShowDialog() == DialogResult.OK)
             {
+                _empresa.nombre = txt_nombEmpresa.Text;
+                daoEmpresa.actualizarEmpresa(_empresa);
                 this.DialogResult = DialogResult.OK;
             }
-            confirmar = new frmMessageBox(
-                "No se realizo ningún cambio.", MessageBoxButtons.OK);
-            confirmar.ShowDialog();
+            //confirmar = new frmMessageBox(
+            //    "No se realizo ningún cambio.", MessageBoxButtons.OK);
+            //confirmar.ShowDialog();
+        }
+
+        private bool validarEmpresa()
+        {
+            if (string.IsNullOrEmpty(txt_nombEmpresa.Text))
+            {
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+            return true;
         }
 
     }

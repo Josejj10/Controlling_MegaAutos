@@ -138,8 +138,14 @@ namespace LP2MegaAutos
 
         private void inicializarUsuario()
         {
-            
-            List<ePermisos?> uPer = _usuario.permisos.ToList();
+            List<ePermisos?> uPer;
+            if (_usuario.permisos == null)
+            {
+                uPer = new List<ePermisos?>();
+                _usuario.permisos = uPer.ToArray();
+                return;
+            }
+            uPer= _usuario.permisos.ToList();
             uPer.Add(ePermisos.All);
             uPer.Add(ePermisos.Sedes);
             _usuario.permisos = uPer.ToArray();

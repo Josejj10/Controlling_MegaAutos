@@ -42,7 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_codServ = new System.Windows.Forms.Panel();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
-            this.txt_codServ = new System.Windows.Forms.TextBox();
+            this.txtToken = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
@@ -55,6 +55,8 @@
             this.roundedPanel3 = new LP2MegaAutos.RoundedPanel();
             this.btnValidar = new System.Windows.Forms.Button();
             this.lblTexto = new System.Windows.Forms.Label();
+            this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
+            this.btnReenviar = new System.Windows.Forms.Button();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
@@ -62,6 +64,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
+            this.roundedPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // rpTopMain
@@ -313,7 +316,7 @@
             // pnl_codServ
             // 
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
-            this.pnl_codServ.Controls.Add(this.txt_codServ);
+            this.pnl_codServ.Controls.Add(this.txtToken);
             this.pnl_codServ.Controls.Add(this.lblCorreo);
             this.pnl_codServ.Location = new System.Drawing.Point(151, 141);
             this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
@@ -352,21 +355,22 @@
             this.rnd_color_1.YBorde = 0;
             this.rnd_color_1.YPanel = 0;
             // 
-            // txt_codServ
+            // txtToken
             // 
-            this.txt_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_codServ.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_codServ.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codServ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_codServ.Location = new System.Drawing.Point(7, 18);
-            this.txt_codServ.Name = "txt_codServ";
-            this.txt_codServ.Size = new System.Drawing.Size(284, 23);
-            this.txt_codServ.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.txt_codServ, null);
-            this.tagsExtender1.SetTag3(this.txt_codServ, null);
-            this.tagsExtender1.SetTagFontName(this.txt_codServ, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.txt_codServ, 14F);
-            this.tagsExtender1.SetTagFontStyle(this.txt_codServ, System.Drawing.FontStyle.Bold);
+            this.txtToken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.txtToken.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtToken.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtToken.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.txtToken.Location = new System.Drawing.Point(7, 18);
+            this.txtToken.Name = "txtToken";
+            this.txtToken.Size = new System.Drawing.Size(284, 23);
+            this.txtToken.TabIndex = 2;
+            this.tagsExtender1.SetTag2(this.txtToken, null);
+            this.tagsExtender1.SetTag3(this.txtToken, null);
+            this.tagsExtender1.SetTagFontName(this.txtToken, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.txtToken, 14F);
+            this.tagsExtender1.SetTagFontStyle(this.txtToken, System.Drawing.FontStyle.Bold);
+            this.txtToken.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblCorreo
             // 
@@ -434,6 +438,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txtPassword.Location = new System.Drawing.Point(7, 18);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(284, 23);
             this.txtPassword.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txtPassword, null);
@@ -508,6 +513,7 @@
             this.txtNewPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txtNewPass.Location = new System.Drawing.Point(7, 18);
             this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.Size = new System.Drawing.Size(284, 23);
             this.txtNewPass.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txtNewPass, null);
@@ -541,7 +547,7 @@
             this.roundedPanel3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel3.Controls.Add(this.btnValidar);
             this.roundedPanel3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.roundedPanel3.Location = new System.Drawing.Point(207, 196);
+            this.roundedPanel3.Location = new System.Drawing.Point(109, 195);
             this.roundedPanel3.MenosHeightBorde = 1;
             this.roundedPanel3.MenosHeightPanel = 1;
             this.roundedPanel3.MenosWidthBorde = 1;
@@ -585,19 +591,67 @@
             // 
             this.lblTexto.AutoSize = true;
             this.lblTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblTexto.Location = new System.Drawing.Point(141, 97);
+            this.lblTexto.Location = new System.Drawing.Point(101, 97);
             this.lblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(331, 32);
+            this.lblTexto.Size = new System.Drawing.Size(392, 32);
             this.lblTexto.TabIndex = 68;
             this.tagsExtender1.SetTag2(this.lblTexto, null);
             this.tagsExtender1.SetTag3(this.lblTexto, null);
             this.tagsExtender1.SetTagFontName(this.lblTexto, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.lblTexto, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lblTexto, System.Drawing.FontStyle.Bold);
-            this.lblTexto.Text = "Recordar que el token expirará en 2 horas y que se envio\r\n a su correo desde mega" +
-    "autos@gmail.com";
+            this.lblTexto.Text = "Se le envió un correo desde megaautos@gmail.com con\r\nun token que expirará en 2 h" +
+    "oras o si le da Cancelar a esta pantalla.";
             this.lblTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.ArcRadiusBorde = 5;
+            this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel4.Controls.Add(this.btnReenviar);
+            this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.roundedPanel4.Location = new System.Drawing.Point(305, 196);
+            this.roundedPanel4.MenosHeightBorde = 1;
+            this.roundedPanel4.MenosHeightPanel = 1;
+            this.roundedPanel4.MenosWidthBorde = 1;
+            this.roundedPanel4.MenosWidthPanel = 1;
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.PorcLuzColorBorde = 0;
+            this.roundedPanel4.Size = new System.Drawing.Size(180, 35);
+            this.roundedPanel4.TabIndex = 69;
+            this.tagsExtender1.SetTag2(this.roundedPanel4, null);
+            this.tagsExtender1.SetTag3(this.roundedPanel4, null);
+            this.tagsExtender1.SetTagFontName(this.roundedPanel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.roundedPanel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.roundedPanel4, System.Drawing.FontStyle.Regular);
+            this.roundedPanel4.XBorde = 0;
+            this.roundedPanel4.XPanel = 0;
+            this.roundedPanel4.YBorde = 0;
+            this.roundedPanel4.YPanel = 0;
+            // 
+            // btnReenviar
+            // 
+            this.btnReenviar.BackColor = System.Drawing.Color.Transparent;
+            this.btnReenviar.FlatAppearance.BorderSize = 0;
+            this.btnReenviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnReenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReenviar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReenviar.ForeColor = System.Drawing.Color.White;
+            this.btnReenviar.Location = new System.Drawing.Point(1, 1);
+            this.btnReenviar.Name = "btnReenviar";
+            this.btnReenviar.Size = new System.Drawing.Size(178, 33);
+            this.btnReenviar.TabIndex = 0;
+            this.tagsExtender1.SetTag2(this.btnReenviar, null);
+            this.tagsExtender1.SetTag3(this.btnReenviar, null);
+            this.tagsExtender1.SetTagFontName(this.btnReenviar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnReenviar, 15F);
+            this.tagsExtender1.SetTagFontStyle(this.btnReenviar, System.Drawing.FontStyle.Bold);
+            this.btnReenviar.Text = "Reenviar Correo";
+            this.btnReenviar.UseVisualStyleBackColor = false;
+            this.btnReenviar.Click += new System.EventHandler(this.btnReenviar_Click);
             // 
             // frmRecuperacionPassword
             // 
@@ -605,6 +659,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 417);
             this.ControlBox = false;
+            this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.panel3);
@@ -640,6 +695,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.roundedPanel3.ResumeLayout(false);
+            this.roundedPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,7 +716,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_codServ;
         private RoundedPanel rnd_color_1;
-        private System.Windows.Forms.TextBox txt_codServ;
+        private System.Windows.Forms.TextBox txtToken;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Panel panel2;
         private RoundedPanel roundedPanel1;
@@ -673,5 +729,7 @@
         private RoundedPanel roundedPanel3;
         private System.Windows.Forms.Button btnValidar;
         private System.Windows.Forms.Label lblTexto;
+        private RoundedPanel roundedPanel4;
+        private System.Windows.Forms.Button btnReenviar;
     }
 }

@@ -372,7 +372,7 @@ namespace LP2MegaAutos
             // 
             this.ultimoReporteDashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.ultimoReporteDashboard1.Location = new System.Drawing.Point(36, 228);
-            this.ultimoReporteDashboard1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ultimoReporteDashboard1.Margin = new System.Windows.Forms.Padding(4);
             this.ultimoReporteDashboard1.MontoEgresos = "9,999,999.00";
             this.ultimoReporteDashboard1.MontoIngresos = "9,999,999.00";
             this.ultimoReporteDashboard1.MontoTotal = "9,999,999.00";
@@ -437,7 +437,7 @@ namespace LP2MegaAutos
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.pnlLineaTitulo);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaInicio";
             this.Size = new System.Drawing.Size(751, 520);
             this.tags.SetTag2(this, null);

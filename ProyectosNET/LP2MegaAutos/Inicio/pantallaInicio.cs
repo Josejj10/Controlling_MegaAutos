@@ -27,10 +27,31 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             _usuario = u;
+            if (_usuario.permisos.Length == 0)
+                sinPermisos();
+               
             lblBienvenido.Text += OtrosHelper.tipoOracion(_usuario.nombre);
         }
 
         #region Dynamic
+        
+        private void sinPermisos()
+        {
+            pnlInformacion.Visible = pnlAbajoInformacion.Visible =
+                   pnlAbajoConfiguracion.Visible = pnlConfiguracion.Visible = false;
+
+            // Poner los otros dos a la mitad, agregandoles 106 a la derecha
+            btnGenerarVehiculo.Left += 106;
+            btnGenerarCliente.Left += 106;
+            btnGenerarAreaTrabajo.Left += 106;
+            btnImgVehiculo.Left += 106;
+            btnImgCliente.Left += 106;
+            btnImgAreaTrabajo.Left += 106;
+            btnListaReportes.Left += 106;
+            button1.Left += 106;
+            ultimoReporteDashboard1.Left += 124;
+        }
+
         public void crearBotonesSegunPermisos()
         {
             // Ver los permisos que tiene el usuario

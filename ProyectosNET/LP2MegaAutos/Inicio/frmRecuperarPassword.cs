@@ -68,7 +68,13 @@ namespace LP2MegaAutos.Inicio
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             if (!validarCampos()) return;
-            frmRecuperacionPassword frm = new frmRecuperacionPassword();
+            // Enviar token
+            ServicioPassword.PasswordWSClient daoPassword = new ServicioPassword.PasswordWSClient();
+            int idUsu;
+            if (0 == (idUsu = daoPassword.sendMail(this.txtCorreo.Text)))
+                return;
+            // Si no, si se envio el correo al usuario
+            frmRecuperacionPassword frm = new frmRecuperacionPassword(this.txtCorreo.Text);
             if(frm.ShowDialog() == DialogResult.OK)
             {
                 _usuario = frm.Usuario;
@@ -86,23 +92,23 @@ namespace LP2MegaAutos.Inicio
         private bool validarCampos()
         {
             frmMessageBox frm;
-            if (String.IsNullOrEmpty(this.txt_codServ.Text))
+            if (String.IsNullOrEmpty(this.txtCorreo.Text))
             {
                 frm = new frmMessageBox("Por favor ingrese correo electronico.", MessageBoxButtons.OK);
                 frm.ShowDialog();
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txt_codServ.Text) ||
-                !txt_codServ.Text.Contains("@"))
+            if (string.IsNullOrEmpty(txtCorreo.Text) ||
+                !txtCorreo.Text.Contains("@"))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un correo valido.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txt_codServ.Text) ||
-                !txt_codServ.Text.Contains("."))
+            if (string.IsNullOrEmpty(txtCorreo.Text) ||
+                !txtCorreo.Text.Contains("."))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un correo valido.", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -111,5 +117,13 @@ namespace LP2MegaAutos.Inicio
 
             return true;
         }
+
+
+        private void txtCorreo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            btn_guardar_Click(sender, e);
+        }
+
     }
 }

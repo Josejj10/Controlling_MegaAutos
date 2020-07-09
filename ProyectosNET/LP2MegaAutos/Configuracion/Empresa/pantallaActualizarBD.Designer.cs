@@ -82,7 +82,6 @@
             // 
             // btnExaminar
             // 
-            this.btnExaminar.Enabled = false;
             this.btnExaminar.Location = new System.Drawing.Point(508, 126);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(37, 23);
@@ -299,7 +298,7 @@
             // 
             this.ofdArchivo2.FileName = "ofdArchivo2";
             // 
-            // pantallaInformacionEmpresa
+            // pantallaActualizarBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -314,7 +313,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.lbl_nombreEmpresa);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "pantallaInformacionEmpresa";
+            this.Name = "pantallaActualizarBD";
             this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);

@@ -15,12 +15,24 @@ namespace LP2MegaAutos.Inicio
 {
     public partial class frmRecuperacionPassword : MetroForm
     {
-        usuario _usuario;
+        private usuario _usuario;
+        private string _correo;
+        private int CARACTERES_TOKEN = 16;
+        ServicioPassword.PasswordWSClient daoPassword;
 
         public frmRecuperacionPassword()
         {
             InitializeComponent();
             cambiarEstados();
+            daoPassword = new ServicioPassword.PasswordWSClient();
+        }
+        
+        public frmRecuperacionPassword(string correo)
+        {
+            InitializeComponent();
+            cambiarEstados();
+            _correo = correo;
+            daoPassword = new ServicioPassword.PasswordWSClient();
         }
 
         public void cambiarEstados()
@@ -90,18 +102,43 @@ namespace LP2MegaAutos.Inicio
         #endregion title_bar
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            frmMessageBox frm = new frmMessageBox(
+                "Cancelar invalidaría el token y se le tendría que enviar un correo nuevamente.",
+                MessageBoxButtons.OKCancel, "Cancelar Recuperación", true);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                daoPassword.invalidarToken(_correo, "");
+                this.DialogResult = DialogResult.Cancel;
+            }
+        }
+
+        private bool validarTxtToken()
+        {
+            frmMessageBox frm;
+            if (this.txtToken.Text.Length!=CARACTERES_TOKEN || 
+                String.IsNullOrEmpty(this.txtToken.Text))
+            {
+                frm = new frmMessageBox("El token debe tener "+CARACTERES_TOKEN+ " caracteres.");
+                frm.ShowDialog();
+                return false;
+            }
+            return true;
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
-            //if(validar)
-            if (true)
+            frmMessageBox frm;
+            if (!validarTxtToken()) return;
+            Console.WriteLine($"Correo: {_correo}, token: {this.txtToken.Text}");
+            if (!daoPassword.verificarToken(_correo, this.txtToken.Text))
             {
-                cambiarEstados();
-                this.btnValidar.Enabled = false;
-                this.btnValidar.Text = "Validado.";
+                frm = new frmMessageBox("Token Invalido.", MessageBoxButtons.OK, "Error", true);
+                frm.ShowDialog();
+                return;
             }
+            cambiarEstados();
+            this.btnValidar.Enabled = this.txtToken.Enabled = this.btnReenviar.Enabled = false;
+            this.btnValidar.Text = "Validado.";
         }
 
         private bool validarCampos()
@@ -127,13 +164,34 @@ namespace LP2MegaAutos.Inicio
             frmMessageBox frm = new frmMessageBox("¿Desea guardar los cambios?");
             if (frm.ShowDialog() != DialogResult.OK) return;
 
-            // _usuario = ServicioToken.getUsuario();
-            _usuario = new usuario();
-            _usuario.nombre = "Cambio Password";
+            daoPassword.recuperarPasswrd(_correo, this.txtToken.Text, this.txtPassword.Text);
+
+            // Conseguir el usuario para iniciar sesion
+            ServicioUsuario.UsuarioWSClient daoUsuario = new ServicioUsuario.UsuarioWSClient();
+            _usuario = daoUsuario.buscarPorCorreo(_correo);
+            if (_usuario == null || _usuario.id == 0)
+            {
+                // Si no,
+                frm = new frmMessageBox("No se ha aplicado ningún cambio.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+            }
             this.DialogResult = DialogResult.OK;
-            
-            // Si no,
-            frm = new frmMessageBox("No se ha aplicado ningún cambio.",MessageBoxButtons.OK);
+        }
+
+        private void btnReenviar_Click(object sender, EventArgs e)
+        {
+            // Enviar token
+            ServicioPassword.PasswordWSClient daoPassword = new ServicioPassword.PasswordWSClient();
+            int idUsu;
+            frmMessageBox frm;
+            if (0 == (idUsu = daoPassword.sendMail(this._correo)))
+            {
+                frm = new frmMessageBox("Usuario no encontrado. No se pudo reenviar el correo a " + _correo, MessageBoxButtons.OK);
+                frm.ShowDialog();
+                return;
+            }
+            // Si no, se envio el correo
+            frm = new frmMessageBox("Se ha reenviado el correo a " + _correo, MessageBoxButtons.OK);
             frm.ShowDialog();
         }
     }

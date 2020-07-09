@@ -11,43 +11,28 @@ using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Configuracion.Empresa;
 using LP2MegaAutos.ServicioEmpresa;
 using System.IO;
+using System.Threading;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaActualizarBD : Pantalla
     {
-        ServicioEmpresa.EmpresaWSClient daoEmpresa;
         ServicioExcel.ExcelWSClient daoExcel;
-
+        private static frmLoading loading = null;
         private string archivoSeleccionado1;
         private string archivoSeleccionado2;
         private ServicioExcel.excel _excelEnviado;
         private ServicioExcel.excel _excelRecibido;
-        empresa _empresa;
+
+
         public pantallaActualizarBD()
         {
             InitializeComponent();
-            daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
             daoExcel = new ServicioExcel.ExcelWSClient();
             _excelEnviado = new ServicioExcel.excel();
             _excelRecibido = new ServicioExcel.excel();
-            inicializarEmpresas();
         }
 
-        private void inicializarEmpresas()
-        {
-            List<empresa> empresas = daoEmpresa.listarEmpresa().ToList();
-            if (empresas == null) return;
-            _empresa = empresas[0];
-            this.lbl_nombreEmpresa.Text = empresas[0].nombre; 
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            frmEditarNombEmpresa pas = new frmEditarNombEmpresa(_empresa);
-            if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
-        }
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
@@ -65,7 +50,8 @@ namespace LP2MegaAutos
                     this._excelEnviado.archivo = br.ReadBytes((int)fs.Length);
                     br.Close();
                     fs.Close();
-                    this.btnGuardar.Enabled = this.btnDescargar1.Enabled= true;
+                    this.btn_guardar.Enabled = this.btnDescargar1.Enabled= true;
+                    this.btn_guardar.Cursor = Cursors.Hand;
                 }
             }
             catch (Exception ex)
@@ -108,16 +94,41 @@ namespace LP2MegaAutos
             // Almacenar los string en el back
             // WebService.GuardarArchivo(txtArchivo1.Text);
             // WebService.GuardarArchivo(txtArchivo2.Text);
+            // Llamar a pantalla de carga
+            Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
+            thrdLoading.Start();
 
             frmMessageBox frm;
-            if (daoExcel.insertarArchivoEntrada(_excelEnviado) == 0)
+            bool inserto = daoExcel.insertarArchivoEntrada(_excelEnviado) ==  0;
+            thrdLoading.Abort();
+            if (inserto)
+            {
                 frm = new frmMessageBox("No se pudo insertar el archivo.", MessageBoxButtons.OK);
-            else {// Inserto bien{
+            }
+            else
+            {
+                // Inserto bien{
                 frm = new frmMessageBox("Se inserto correctamente el archivo excel.", MessageBoxButtons.OK);
                 this.btnObtener.Enabled = true;
             }
             frm.ShowDialog();
 
+        }
+
+        private void showLoadingScreen()
+        {
+            try
+            {
+                if (loading == null) loading = new frmLoading();
+                loading.Enabled = true;
+                loading.ShowDialog();
+            }
+            finally
+            {
+                loading.stopTick();
+                loading.Dispose();
+                loading = null;
+            }
         }
 
         private void btnDefault_Click(object sender, EventArgs e)
@@ -126,8 +137,18 @@ namespace LP2MegaAutos
             if (sfdArchivoReporte.ShowDialog() == DialogResult.OK)
             {
                 // Poner las rutas por default
+                frmMessageBox f;
                 String archivoEntrada = sfdArchivoReporte.FileName + ".xlsx";
+                Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
+                thrdLoading.Start();
                 _excelRecibido = daoExcel.leerArchivoSalida();
+                thrdLoading.Abort();
+                if(_excelRecibido.archivo == null)
+                {
+                    f = new frmMessageBox("No se recibió ningún dato. .El archivo insertado probablemente sea incorrecto", MessageBoxButtons.OK, "ERROR", true);
+                    f.ShowDialog();
+                    return;
+                }
                 File.WriteAllBytes(archivoEntrada, _excelRecibido.archivo);
                 frmMessageBox frm = new frmMessageBox("Se ha guardado el Archivo", MessageBoxButtons.OK, "Mensaje de Confirmación");
                 frm.ShowDialog();
@@ -141,7 +162,11 @@ namespace LP2MegaAutos
                 try
                 {
                     String archivoEntrada = sfdArchivoEntrada.FileName + ".xlsx";
+                    Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
+                    thrdLoading.Start();
                     _excelRecibido = daoExcel.leerArchivoEntrada();
+                    thrdLoading.Abort();
+
                     File.WriteAllBytes(archivoEntrada, _excelRecibido.archivo);
                     MessageBox.Show("Se ha guardado el archivo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

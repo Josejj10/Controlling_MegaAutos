@@ -14,6 +14,8 @@ public class Usuario {
     private String password;
     private String tipoUsuario;
     private Date fechaCreado;
+    private String token;
+    private Date fechaValidezToken;
     // Permisos con los que cuenta el usuario
     // Son permisos para modificar clases o crear reportes
     private ArrayList<EPermisos> permisos; 
@@ -25,6 +27,8 @@ public class Usuario {
     public Usuario(){
         this.permisos = new ArrayList<>();
         this.fechaCreado = new Date();
+        this.token="";
+        this.fechaValidezToken = new Date();
     }
     
     public Usuario(String nombre, String correo, String password){
@@ -122,6 +126,22 @@ public class Usuario {
 
     public void setPermisos(ArrayList<EPermisos> permisos) {
         this.permisos = permisos;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public Date getFechaValidezToken() {
+        return fechaValidezToken;
+    }
+
+    public void setFechaValidezToken(Date fechaValidezToken) {
+        this.fechaValidezToken = fechaValidezToken;
     }
 
     

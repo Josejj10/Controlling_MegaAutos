@@ -40,6 +40,9 @@
     <service name="ExcelWS">
       <implementation-class>pe.com.megaautos.services.ExcelWS</implementation-class>
     </service>
+    <service name="PasswordWS">
+      <implementation-class>pe.com.megaautos.services.PasswordWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

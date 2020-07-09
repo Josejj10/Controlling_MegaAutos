@@ -7,6 +7,7 @@ package pe.com.megaautos.config;
 import com.mchange.v2.c3p0.*;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  *

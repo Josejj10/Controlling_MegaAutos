@@ -13,13 +13,27 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.JOptionPane;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import joinery.DataFrame;
 import joinery.impl.Serialization;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFDataFormat;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import pe.com.megaautos.config.DBController;
 import pe.com.megaautos.config.DBDataSource;
+import pe.com.megaautos.dao.UsuarioDAO;
 import pe.com.megaautos.model.OrdenTrabajo;
+import pe.com.megaautos.model.Usuario;
 
 public class JoineryExtension extends Serialization{
     
@@ -134,6 +148,73 @@ public class JoineryExtension extends Serialization{
         //  write to stream
         wb.write(output);
         output.close();
+    }
+    private static String VALID_CHARACTERS = "@abcdefghijklmnopqrstuvwxyz"
+            + "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    public static String randomAlphaNumeric(int count) {    
+        StringBuilder builder = new StringBuilder();
+        while (count-- != 0) {
+            int character = (int)(Math.random()*VALID_CHARACTERS.length());
+            builder.append(VALID_CHARACTERS.charAt(character));
+        }        
+        return builder.toString();
+    }
+
+    public static int enviarCorreo(String correoDestinatario){
+        Usuario usuario = new Usuario();
+        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
+        usuario = daoUsuario.buscarPorCorreo(correoDestinatario);
+        if(usuario==null){
+            return 0;
+        }
+        Properties propiedad = new Properties();
+        propiedad.setProperty("mail.smtp.host", "smtp.gmail.com");
+        propiedad.setProperty("mail.smtp.starttls.enable", "true");
+        propiedad.setProperty("mail.smtp.port", "587");
+        propiedad.setProperty("mail.smtp.auth", "true"); 
+        
+        Session sesion = Session.getDefaultInstance(propiedad);
+        sesion.setDebug(false);
+        
+        String correoEmpresa = "pruebasistemalp2@gmail.com";//TODO CREAR CORREO SOPORTE soporte.megaautos@gmail.com
+        String contrasena = "C9AA28BA93";
+        String asunto = "Recuperación de Contraseña - Sistema MegaAutos";
+       
+        String token = "";
+        token = randomAlphaNumeric(16);
+        
+        daoUsuario.actualizarToken(usuario, token);
+        
+        String mensaje = "Estimado usuario,\nEl token para recuperar su "
+                + "contraseña es:\n"+token+"\nPor favor, utilícelo para actualizar su contraseña. "
+                + "Se le recuerda que el token tiene una validez máxima de 10 minutos.\n"
+                + "\nSaludos cordiales,\n"
+                + "Soporte MegaAutos";
+        
+        daoUsuario.actualizarToken(usuario, token);
+        
+        MimeMessage mail = new MimeMessage(sesion);
+        
+        try { 
+            mail.setFrom(new InternetAddress(correoEmpresa));
+            mail.addRecipient(Message.RecipientType.TO, new InternetAddress(correoDestinatario));
+            mail.setSubject(asunto);
+            mail.setText(mensaje);
+            
+            Transport transportar = sesion.getTransport("smtp");
+            transportar.connect(correoEmpresa,contrasena);
+            transportar.sendMessage(mail, mail.getRecipients(Message.RecipientType.TO));          
+            transportar.close();
+            
+            //JOptionPane.showMessageDialog(null, "Listo, correo enviado");
+        } catch (AddressException ex) {
+            //Logger.getLogger(PasswordWS.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex);
+        } catch (MessagingException ex) {
+//            Logger.getLogger(PasswordWS.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex);
+        }
+        return 1;
     }
     
 }

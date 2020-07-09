@@ -67,6 +67,7 @@ namespace LP2MegaAutos.Inicio
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (!validarCampos()) return;
             frmRecuperacionPassword frm = new frmRecuperacionPassword();
             if(frm.ShowDialog() == DialogResult.OK)
             {
@@ -80,6 +81,18 @@ namespace LP2MegaAutos.Inicio
                     "", MessageBoxButtons.OK, "No se recupero la contraseña", true);
                 frmMsg.ShowDialog();
             }
+        }
+
+        private bool validarCampos()
+        {
+            frmMessageBox frm;
+            if (String.IsNullOrEmpty(this.txt_codServ.Text))
+            {
+                frm = new frmMessageBox("Por favor ingrese correo electronico.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                return false;
+            }
+            return true;
         }
     }
 }

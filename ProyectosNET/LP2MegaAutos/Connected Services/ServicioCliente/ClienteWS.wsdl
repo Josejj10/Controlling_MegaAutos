@@ -11,23 +11,11 @@
   <message name="actualizarClienteResponse">
     <part name="parameters" element="tns:actualizarClienteResponse" />
   </message>
-  <message name="buscarPorNombre">
-    <part name="parameters" element="tns:buscarPorNombre" />
-  </message>
-  <message name="buscarPorNombreResponse">
-    <part name="parameters" element="tns:buscarPorNombreResponse" />
-  </message>
   <message name="insertarCliente">
     <part name="parameters" element="tns:insertarCliente" />
   </message>
   <message name="insertarClienteResponse">
     <part name="parameters" element="tns:insertarClienteResponse" />
-  </message>
-  <message name="listarClientes">
-    <part name="parameters" element="tns:listarClientes" />
-  </message>
-  <message name="listarClientesResponse">
-    <part name="parameters" element="tns:listarClientesResponse" />
   </message>
   <message name="eliminarCliente">
     <part name="parameters" element="tns:eliminarCliente" />
@@ -35,26 +23,38 @@
   <message name="eliminarClienteResponse">
     <part name="parameters" element="tns:eliminarClienteResponse" />
   </message>
+  <message name="listarClientes">
+    <part name="parameters" element="tns:listarClientes" />
+  </message>
+  <message name="listarClientesResponse">
+    <part name="parameters" element="tns:listarClientesResponse" />
+  </message>
+  <message name="buscarPorNombre">
+    <part name="parameters" element="tns:buscarPorNombre" />
+  </message>
+  <message name="buscarPorNombreResponse">
+    <part name="parameters" element="tns:buscarPorNombreResponse" />
+  </message>
   <portType name="ClienteWS">
     <operation name="actualizarCliente">
       <input wsam:Action="http://services.megaautos.com.pe/ClienteWS/actualizarClienteRequest" message="tns:actualizarCliente" />
       <output wsam:Action="http://services.megaautos.com.pe/ClienteWS/actualizarClienteResponse" message="tns:actualizarClienteResponse" />
     </operation>
-    <operation name="buscarPorNombre">
-      <input wsam:Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreRequest" message="tns:buscarPorNombre" />
-      <output wsam:Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreResponse" message="tns:buscarPorNombreResponse" />
-    </operation>
     <operation name="insertarCliente">
       <input wsam:Action="http://services.megaautos.com.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
       <output wsam:Action="http://services.megaautos.com.pe/ClienteWS/insertarClienteResponse" message="tns:insertarClienteResponse" />
+    </operation>
+    <operation name="eliminarCliente">
+      <input wsam:Action="http://services.megaautos.com.pe/ClienteWS/eliminarClienteRequest" message="tns:eliminarCliente" />
+      <output wsam:Action="http://services.megaautos.com.pe/ClienteWS/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
     </operation>
     <operation name="listarClientes">
       <input wsam:Action="http://services.megaautos.com.pe/ClienteWS/listarClientesRequest" message="tns:listarClientes" />
       <output wsam:Action="http://services.megaautos.com.pe/ClienteWS/listarClientesResponse" message="tns:listarClientesResponse" />
     </operation>
-    <operation name="eliminarCliente">
-      <input wsam:Action="http://services.megaautos.com.pe/ClienteWS/eliminarClienteRequest" message="tns:eliminarCliente" />
-      <output wsam:Action="http://services.megaautos.com.pe/ClienteWS/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
+    <operation name="buscarPorNombre">
+      <input wsam:Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreRequest" message="tns:buscarPorNombre" />
+      <output wsam:Action="http://services.megaautos.com.pe/ClienteWS/buscarPorNombreResponse" message="tns:buscarPorNombreResponse" />
     </operation>
   </portType>
   <binding name="ClienteWSPortBinding" type="tns:ClienteWS">
@@ -68,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="buscarPorNombre">
+    <operation name="insertarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCliente">
+    <operation name="eliminarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCliente">
+    <operation name="buscarPorNombre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

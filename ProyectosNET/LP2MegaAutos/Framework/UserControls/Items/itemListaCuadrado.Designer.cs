@@ -49,13 +49,14 @@
             this.rpItem.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rpItem.Location = new System.Drawing.Point(0, 0);
+            this.rpItem.Margin = new System.Windows.Forms.Padding(4);
             this.rpItem.MenosHeightBorde = 1;
             this.rpItem.MenosHeightPanel = 1;
             this.rpItem.MenosWidthBorde = 1;
             this.rpItem.MenosWidthPanel = 1;
             this.rpItem.Name = "rpItem";
             this.rpItem.PorcLuzColorBorde = 0;
-            this.rpItem.Size = new System.Drawing.Size(106, 85);
+            this.rpItem.Size = new System.Drawing.Size(141, 105);
             this.rpItem.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.rpItem, null);
             this.tagsExtender1.SetTag3(this.rpItem, null);
@@ -75,11 +76,12 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.lblTexto, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 53);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 65);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(98, 21);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(131, 26);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.tableLayoutPanel1, null);
             this.tagsExtender1.SetTag3(this.tableLayoutPanel1, null);
@@ -94,10 +96,11 @@
             this.lblTexto.BackColor = System.Drawing.Color.Transparent;
             this.lblTexto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTexto.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lblTexto.Location = new System.Drawing.Point(3, 2);
+            this.lblTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblTexto.Location = new System.Drawing.Point(5, 2);
+            this.lblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(91, 16);
+            this.lblTexto.Size = new System.Drawing.Size(121, 21);
             this.lblTexto.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lblTexto, null);
             this.tagsExtender1.SetTag3(this.lblTexto, null);
@@ -115,9 +118,10 @@
             this.pnlImg.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
             this.pnlImg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlImg.Location = new System.Drawing.Point(33, 8);
+            this.pnlImg.Location = new System.Drawing.Point(44, 10);
+            this.pnlImg.Margin = new System.Windows.Forms.Padding(4);
             this.pnlImg.Name = "pnlImg";
-            this.pnlImg.Size = new System.Drawing.Size(40, 40);
+            this.pnlImg.Size = new System.Drawing.Size(53, 49);
             this.pnlImg.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.pnlImg, null);
             this.tagsExtender1.SetTag3(this.pnlImg, null);
@@ -130,11 +134,13 @@
             // 
             // itemListaCuadrado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.rpItem);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "itemListaCuadrado";
-            this.Size = new System.Drawing.Size(106, 85);
+            this.Size = new System.Drawing.Size(141, 105);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);

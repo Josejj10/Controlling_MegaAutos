@@ -61,25 +61,54 @@ namespace LP2MegaAutos
 
         }
 
+        #region listaPermisos
+        private void crearItemsListaPermisos()
+        {
+            bool tieneAll = _usuario.permisos.Contains(ePermisos.All);
+            foreach(ePermisos e in Enum.GetValues(typeof(ePermisos)))
+            {
+                if (e == ePermisos.All) continue; 
+                itemListaCuadrado il = crearitemListaPermiso(e.ToString(), e);
+                il.Seleccionado = false;
+                if (tieneAll || _usuario.permisos.Contains(e)) il.Seleccionado = true;
+                BotonesDinamicosHelper.agregarImgFondo(e, il);
+                flpPermisos.Controls.Add(il);
+            }
+        }
+
+
+        private int i = 1;
+        private itemListaCuadrado crearitemListaPermiso(string nom, ePermisos per)
+        {
+            itemListaCuadrado il = new itemListaCuadrado();
+            il.Name = "ilc" + i++;
+            il.TextoPrincipal = nom;
+            il.Anchor = AnchorStyles.None;
+            il.ItemListaClick += (sender, e) => clickItemListaPermiso(sender, e, per);
+            return il;
+        }
+
+        private void clickItemListaPermiso(object sender, EventArgs e, ePermisos per)
+        {
+            bool sel = ((itemListaCuadrado)sender).Seleccionado = !((itemListaCuadrado)sender).Seleccionado;
+            // Agregar o quitar el permiso a la lista del usuario:
+            List<ePermisos?> p = _usuario.permisos.ToList();
+            if (sel)
+                p.Add(per);
+            else
+                p.Remove(per);
+            _usuario.permisos = p.ToArray();
+        }
+        #endregion listaPermisos
+
         public pantallaAgregarPermisos(ServicioUsuario.usuario usuario)
         {
             InitializeComponent();
             _usuario = usuario;
-            int i = 0;
-            // TODO
-            // Agregar item Lista Permisos
-            // foreach(permiso p in _usuario.permisos)
-            foreach (ePermisos e in Enum.GetValues(typeof(ePermisos)))
-            {
-                if (e == ePermisos.All) return;
-                clbPermisos.Items.Add(e.ToString());
-                if (_usuario.permisos != null)
-                {
-                    clbPermisos.SetItemChecked(i, _usuario.permisos.ToList().Contains(e));
-                    i++;
-                }
-            }
-            // if 
+            crearItemsListaPermisos();
+            List<ePermisos?> prs = _usuario.permisos.ToList();
+            prs.Remove(ePermisos.All);
+            _usuario.permisos = prs.ToArray();
         }
 
 
@@ -90,31 +119,33 @@ namespace LP2MegaAutos
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            // Verificar si hay alguna diferencia en los permisos del usuario 
+            bool sel = true;
+            for (int i = 0; i < flpPermisos.Controls.Count; i++)
+                sel &= ((itemListaCuadrado)flpPermisos.Controls[i]).Seleccionado;
 
-            // Si no hay diferencia, 
-                // this.DialogResult = DialogResult.OK
-            
-            // Si si hay diferencia
-            
-            // TODO pensar la logica para cuando se actualiza un usuario quitandole un permiso
-            // Y el usuario tiene la aplicacion abierta 
-            // Informarle que se cambiaron sus permisos y decirle que reinicie el programa(?
+            // Si tiene todos los permisos
+            if (sel)
+            {
+                List<ePermisos?> prs = new List<ePermisos?>();
+                prs.Add(ePermisos.All);
+                _usuario.permisos = prs.ToArray();
+            }
 
-            // Preguntar si desea guardar los cambios
-            if (MessageBox.Show("Guardar cambios?", "", MessageBoxButtons.OKCancel) != DialogResult.OK)
-                return;
-            // Los permisos del usuario ya estaran actualizados porque la 
-            // pantalla agregar permiso lo actualizara
             this.DialogResult = DialogResult.OK;
         }
 
         public usuario Usuario { get {return _usuario ; } }
 
-        private void btnAgregarPermisos_Click(object sender, EventArgs e)
+        private void btnTodos_Click(object sender, EventArgs e)
         {
-            // TODO crear Pantalla Agregar Permiso
+            for (int i = 0; i < flpPermisos.Controls.Count;i++)
+                ((itemListaCuadrado)flpPermisos.Controls[i]).Seleccionado = true;
+        }
 
+        private void btnNinguno_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < flpPermisos.Controls.Count; i++)
+                ((itemListaCuadrado)flpPermisos.Controls[i]).Seleccionado = false;
         }
     }
 }

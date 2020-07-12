@@ -13,6 +13,8 @@ namespace LP2MegaAutos
 {
     public partial class itemListaCuadrado : UserControl
     {
+        private bool _seleccionado;
+
         public itemListaCuadrado()
         {
             InitializeComponent();
@@ -31,7 +33,27 @@ namespace LP2MegaAutos
             get { return pnlImg.BackgroundImage; }
             set { pnlImg.BackgroundImage = value; }
         }
+
+        public bool Seleccionado{
+            get
+            {
+                return this._seleccionado;
+            }
+            set {
+                _seleccionado = value;
+                cambiarColores();
+            }
+        }
+
         #endregion Propiedades
+
+        private void cambiarColores()
+        {
+            rpItem.ColorPanel = lblTexto.BackColor = tableLayoutPanel1.BackColor =
+                pnlImg.BackColor = _seleccionado ? Colores.AmarilloInteractivo : Colores.FrontBackground;
+            lblTexto.ForeColor = _seleccionado ? Colores.FrontBackground : Colores.MediumContrast;
+        }
+
 
         #region Event Handlers
 
@@ -49,12 +71,14 @@ namespace LP2MegaAutos
 
         private void rpItem_MouseEnter(object sender, EventArgs e)
         {
-            itemListaHelper.rpItem_MouseEnter(rpItem);
+            itemListaHelper.rpItem_MouseEnter(rpItem,_seleccionado?true:false);
+            lblTexto.ForeColor = !_seleccionado ? Colores.FrontBackground : Colores.MediumContrast;
         }
 
         private void roundedPanel1_MouseLeave(object sender, EventArgs e)
         {
-            itemListaHelper.rpItem_MouseLeave(rpItem);
+            
+            cambiarColores();
         }
     }
 }

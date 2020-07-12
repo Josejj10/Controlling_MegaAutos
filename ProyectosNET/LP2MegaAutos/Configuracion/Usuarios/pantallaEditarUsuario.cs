@@ -12,12 +12,14 @@ using LP2MegaAutos.ServicioUsuario;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Framework;
 using LP2MegaAutos.Properties;
+using LP2MegaAutos.Framework.UserControls.Items;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaEditarUsuario : MetroForm
     {
         private usuario _usuario;
+        private List<ePermisos?> permisosIniciales = new List<ePermisos?>();
         private bool agregando = true;
         public pantallaEditarUsuario()
         {
@@ -29,6 +31,8 @@ namespace LP2MegaAutos
             rpCambiarPassword.Visible =
             btnEditar.Visible =
             btnEliminar.Visible = false;
+            _usuario.permisos = permisosIniciales.ToArray();
+            txtNombre.ForeColor = Colores.LowContrast;
         }
         public pantallaEditarUsuario(usuario usuario)
         {
@@ -42,6 +46,8 @@ namespace LP2MegaAutos
             _usuario = usuario;
             crearItemsListaPermisos();
             agregando = false;
+            if (_usuario.permisos == null) _usuario.permisos = permisosIniciales.ToArray();
+            permisosIniciales = _usuario.permisos.ToList();
         }
 
         #region title_bar
@@ -100,9 +106,25 @@ namespace LP2MegaAutos
         #region listaPermisos
         private void crearItemsListaPermisos()
         {
-            foreach(ePermisos e in Enum.GetValues(typeof(ePermisos))){
-                if (e == ePermisos.All) return;
-                itemListaCuadrado il = crearitemListaPermiso(e.ToString());
+            borrarItemsLista();
+            // Si no tiene permisos, no se crea nada
+            if (_usuario.permisos == null || _usuario.permisos.Length==0) return;
+
+            if (_usuario.permisos.Contains(ePermisos.All))
+            {
+                foreach (ePermisos e in Enum.GetValues(typeof(ePermisos)))
+                {
+                    if (e == ePermisos.All) continue;
+                    itemListaCuadrado il = crearitemListaPermiso(e.ToString(), e);
+                    BotonesDinamicosHelper.agregarImgFondo(e, il);
+                    flpPermisos.Controls.Add(il);
+                }
+                return;
+            }
+            // Si no, no tiene todos
+            foreach(ePermisos? e in _usuario.permisos) { 
+                if (e == ePermisos.All) continue;
+                itemListaCuadrado il = crearitemListaPermiso(e.ToString(), e);
                 BotonesDinamicosHelper.agregarImgFondo(e,il);
                 flpPermisos.Controls.Add(il);
             }
@@ -110,19 +132,25 @@ namespace LP2MegaAutos
 
 
         private int i = 1;
-        private itemListaCuadrado crearitemListaPermiso(string nom)
+        private itemListaCuadrado crearitemListaPermiso(string nom, ePermisos? per)
         {
             itemListaCuadrado il = new itemListaCuadrado();
             il.Name = "ilc" + i++;
             il.TextoPrincipal = nom;
-            il.ItemListaClick += (sender,e) => clickItemListaPermiso(sender,e);
+            il.ItemListaClick += (sender,e) => clickItemListaPermiso(sender,e,per);
             return il;
         }
 
-        private void clickItemListaPermiso(object sender, EventArgs e)
+        private void clickItemListaPermiso(object sender, EventArgs e, ePermisos? per)
         {
-            frmMessageBox f = new frmMessageBox("Por crear", MessageBoxButtons.OK, 
-                ((itemListaCuadrado)sender).TextoPrincipal, true);
+            string titulo, descripcion;
+            Image img = itemListaHelper.imagenPermisos(per);
+            string [] str = itemListaHelper.recibirDescripcionPermisos(per).Split('|');
+            titulo = str[0];
+            descripcion = str[1];
+
+            frmMessageBox f = new frmMessageBox(descripcion, MessageBoxButtons.OK, 
+                titulo, false);
             f.ShowDialog();
         }
         #endregion listaPermisos
@@ -186,6 +214,7 @@ namespace LP2MegaAutos
         {
             if (!usuarioValido())
                 return;
+            
             // Preguntar si desea realizar la accion
             frmEliminar f;
 
@@ -197,21 +226,22 @@ namespace LP2MegaAutos
             if (f.ShowDialog() != DialogResult.OK)
                 return;
 
-            // Validar contraseña actual
-            //ServicioUsuario.UsuarioWS daoUsuario;
-            // if (!daoUsuario.validarUsuario(_usuario.id, txt_ContraseñaActual.Text)){ 
-            //     frmMessageBox frm = new frmMessageBox("La contraseña es invalida",MessageBoxButtons.OK);
-            //     frmMessaBox.Show();
-            //     return;
-            //}
+            ServicioUsuario.UsuarioWSClient daoUsuario = new UsuarioWSClient();
+            
+            if (daoUsuario.verificarPassword(frmPrincipal.Usuario.correo, f.Password) == null)
+            {
+                frmMessageBox frm = new frmMessageBox("La contraseña es invalida", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                return;
+            }
 
             // Actualizar usuario
             _usuario.nombre = txtNombre.Text.ToUpper();
-            _usuario.correo = txt_Correo.Text.ToUpper();
+            _usuario.correo = txt_Correo.Text;
             _usuario.tipoUsuario = txt_RolUsuario.Text.ToUpper();
 
             // Actualizar contraseña si cambiarcontraseña esta activo
-            if (btnCambiarPassword.Enabled)
+            if (btnCambiarPassword.Enabled || agregando)
                 _usuario.password = txt_RepNCont.Text;
             
             this.DialogResult = DialogResult.OK;
@@ -224,17 +254,39 @@ namespace LP2MegaAutos
             if (pes.ShowDialog() != DialogResult.OK)
                 return;
 
-            // Si devolvio OK, actualizar los permisos del Usuario
-            //daoUsuario.actualizarUsuario(pes.Usuario);
-            // Aun no estoy seguro si ver Datos
+            if(pes.Usuario.permisos.ToList().Equals(permisosIniciales))
+            {
+                btn_guardar.Enabled = false;
+                rnd_guardar.ColorBorde = rnd_guardar.ColorPanel
+                    = Colores.Disabled;
+            }
+            else
+            {
+                btn_guardar.Enabled = true;
+                rnd_guardar.ColorBorde = rnd_guardar.ColorPanel 
+                    = Colores.AmarilloInteractivo;
+            }
+
+            // Si devolvio OK, cargar de nuevo la pantalla de permisos del usuario
+            // y actualizar los permisos del usuario
+            _usuario.permisos = pes.Usuario.permisos;
+            crearItemsListaPermisos();
         }
       
+        private void borrarItemsLista()
+        {
+            for (int i = 0; i < flpPermisos.Controls.Count;)
+                flpPermisos.Controls.RemoveAt(i);
+        }
+
         private void btnReestablecer_Click(object sender, EventArgs e)
         {
-            txtNombre.Text = _usuario.nombre;
-            txt_Correo.Text = _usuario.correo;
-            txt_RolUsuario.Text = _usuario.tipoUsuario;
+            txtNombre.Text = OtrosHelper.tipoOracion(_usuario.nombre);
+            txt_Correo.Text = OtrosHelper.tipoOracion(_usuario.correo);
+            txt_RolUsuario.Text = OtrosHelper.tipoOracion(_usuario.tipoUsuario);
             txt_NuevaCont.Text = txt_RepNCont.Text = "";
+            _usuario.permisos = permisosIniciales.ToArray();
+            crearItemsListaPermisos();
         }
 
         private void btnCambiarPassword_Click(object sender, EventArgs e)
@@ -273,7 +325,7 @@ namespace LP2MegaAutos
             bool en = txtNombre.Enabled = txt_Correo.Enabled =
                 txt_RolUsuario.Enabled = btn_guardar.Enabled =
                 //txt_NuevaCont.Enabled = txt_RepNCont.Enabled =
-                btnCambiarPassword.Enabled = btnReestablecer.Enabled =
+                btnCambiarPassword.Enabled = 
                 //flpPermisos.Enabled =
                 !txtNombre.Enabled;
 
@@ -291,8 +343,7 @@ namespace LP2MegaAutos
                     rnd_guardar.ColorPanel = rpCambiarPassword.ColorPanel =
                     rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
                     rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
-                    rnd_guardar.ColorBorde = rpCambiarPassword.ColorBorde =
-                    rnd_Reestablecer.ColorBorde = rnd_Reestablecer.ColorPanel
+                    rnd_guardar.ColorBorde = rpCambiarPassword.ColorBorde
                     = Colores.Disabled;
 
                 btnEditar.BackgroundImage = Resources.editar;
@@ -310,8 +361,7 @@ namespace LP2MegaAutos
             Colores.Rosa;
             
             rnd_guardar.ColorPanel = rnd_guardar.ColorBorde =
-            rpCambiarPassword.ColorPanel = rpCambiarPassword.ColorBorde =
-            rnd_Reestablecer.ColorBorde = rnd_Reestablecer.ColorPanel
+            rpCambiarPassword.ColorPanel = rpCambiarPassword.ColorBorde
             = Colores.AmarilloInteractivo;
 
             btnEditar.BackgroundImage = Resources.Cancelar;

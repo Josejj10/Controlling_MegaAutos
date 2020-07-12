@@ -141,7 +141,8 @@ namespace LP2MegaAutos
         {
             if (verificarUsuario())
                 this.DialogResult = DialogResult.OK;
-            else {
+            else
+            {
                 // Si no, MessageBox
                 frmMessageBox frm = new frmMessageBox("Usuario o contraseña incorrectos.",
                     MessageBoxButtons.OK, "Inicio de Sesión Fallido", true);

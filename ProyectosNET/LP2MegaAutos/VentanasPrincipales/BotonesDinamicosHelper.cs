@@ -167,7 +167,7 @@ namespace LP2MegaAutos.VentanasPrincipales
             il.Location = new System.Drawing.Point(3, 3);
             il.Size = new System.Drawing.Size(106, 85);
         }
-        public static void agregarImgFondo(ePermisos e, itemListaCuadrado il)
+        public static void agregarImgFondo(ePermisos? e, itemListaCuadrado il)
         {
             switch (e)
             {

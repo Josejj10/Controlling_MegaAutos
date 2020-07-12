@@ -25,12 +25,12 @@ namespace LP2MegaAutos
     public partial class frmPrincipal : MetroForm
     {
 
-        private usuario _usuario;
+        private static usuario _usuario;
         ServicioEmpresa.EmpresaWSClient daoEmpresa;
         empresa _empresa;
 
         #region Getters y Setters
-        public usuario Usuario { get => _usuario; set => _usuario = value; }
+        public static usuario Usuario { get => _usuario; set => _usuario = value; }
 
         private Button getBotonPanel(string nom, Control cont)
         {
@@ -127,7 +127,6 @@ namespace LP2MegaAutos
 
             Tipografias.crearFonts(this, tags); // Inicializa los fonts de este form
 
-            // Primera pantalla es pantallaInicioGerente
             inicializarPms();
             if (DarkMode.is_dark_mode_active())
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
@@ -143,7 +142,7 @@ namespace LP2MegaAutos
             {
                 uPer = new List<ePermisos?>();
                 _usuario.permisos = uPer.ToArray();
-                return;
+                //return;
             }
             uPer= _usuario.permisos.ToList();
             uPer.Add(ePermisos.All);

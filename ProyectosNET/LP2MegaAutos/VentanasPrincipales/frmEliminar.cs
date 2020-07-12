@@ -62,6 +62,8 @@ namespace LP2MegaAutos.VentanasPrincipales
 
         #endregion title_bar
 
+        public string Password { get { return this.txt_ContraseñaActual.Text; } }
+
         private void btnDarDeBaja_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;

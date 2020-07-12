@@ -18,6 +18,7 @@ namespace LP2MegaAutos
         private ServicioUsuario.UsuarioWSClient daoUsuario;
         private List<usuario> _usuarios;
         private string textoBuscar; //AGREGADO PARA BUSCAR
+        bool viendoActivo = true;
 
         public pantallaActualizarUsuarios()
         {
@@ -112,7 +113,11 @@ namespace LP2MegaAutos
             {
                 // Actualizar el Usuario
                 usuario u = pas.Usuario;
-                daoUsuario.actualizarUsuario(u);
+                frmMessageBox frm = new frmMessageBox("Se actualizo correctamente el usuario", MessageBoxButtons.OK, "Mensaje", false);
+                if (daoUsuario.actualizarUsuario(u) == 0)
+                    frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK,"Error", true);
+                
+                frm.ShowDialog();
                 flpUsuarios.Controls.RemoveByKey("il" + usu.id);
                 createItemListaUsuario(u, "Carter Kane", DateTime.Now);
                 _usuarios.Remove(usu);
@@ -183,12 +188,16 @@ namespace LP2MegaAutos
             {
                 // Agregar usuario
                 usuario _usuario= pas.Usuario;
-                _usuarios.Add(_usuario);
                 frmMessageBox frm;
-                if (daoUsuario.insertarUsuario(_usuario) == 0) // Ta mal
-                    frm = new frmMessageBox("No se pudo insertar.");
+                if (daoUsuario.insertarUsuario(_usuario) == 0)
+                { // Ta mal
+                    frm = new frmMessageBox("No se pudo insertar.",MessageBoxButtons.OK);
+                    frm.ShowDialog();
+                    return;
+                }
                 else // Inserto bien
-                    frm = new frmMessageBox("Se inserto correctamente el usuario " + _usuario.nombre);
+                    frm = new frmMessageBox("Se inserto correctamente el usuario " + _usuario.nombre,MessageBoxButtons.OK);
+                _usuarios.Add(_usuario);
                 frm.ShowDialog();
                 btnAZ_Click(btnAZ, new EventArgs());
             }
@@ -218,5 +227,12 @@ namespace LP2MegaAutos
             crearItemsListaBuscar(_usuariosBuscados);
         }
         #endregion Buscar
+
+        private void btnVerInactivos_Click(object sender, EventArgs e)
+        {
+            this.viendoActivo = !this.viendoActivo;
+            // TODO llamar a DAO de Inactivos 
+            btnVerInactivos.Text = this.viendoActivo ? "Ver Inactivos": "Ver Activos";
+        }
     }
 }

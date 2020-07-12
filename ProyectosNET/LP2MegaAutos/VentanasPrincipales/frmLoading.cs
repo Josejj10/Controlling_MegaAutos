@@ -15,9 +15,12 @@ namespace LP2MegaAutos
         public frmLoading()
         {
             InitializeComponent();
-        }
+        }        
 
-        
+        public void stopTick()
+        {
+            timerLoading.Stop();
+        }
 
         private void timerLoading_Tick(object sender, EventArgs e)
         {

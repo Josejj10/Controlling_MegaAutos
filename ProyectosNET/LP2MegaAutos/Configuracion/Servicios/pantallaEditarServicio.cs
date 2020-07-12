@@ -23,6 +23,7 @@ namespace LP2MegaAutos
             InitializeComponent();
             _servicio = new ServicioServicio.servicio();
             txt_NombreServicio.Text = "Agregar nombre de servicio...";
+            this.btnEditar.Visible = this.btnEliminar.Visible = false;
         }
         public pantallaEditarServicio(ServicioServicio.servicio servicio)
         {
@@ -80,7 +81,7 @@ namespace LP2MegaAutos
                     rnd_color_2.ColorBorde = rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
         public ServicioServicio.servicio Servicio { get { return _servicio; } }

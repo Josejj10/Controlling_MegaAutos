@@ -132,7 +132,7 @@ namespace LP2MegaAutos
                     = Colores.Rosa;
 
             lblDriver.Enabled = true;
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
         public ServicioDriver.driver Driver { get { return _driver; } }

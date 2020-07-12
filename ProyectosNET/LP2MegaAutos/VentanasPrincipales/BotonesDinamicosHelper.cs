@@ -199,7 +199,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                     il.imgFondo = Resources.Usuarios;
                     return;
                 case ePermisos.Vehiculos:
-                    il.imgFondo = Resources.car;
+                    il.imgFondo = Resources.Vehiculo;
                     return;
             }
         }

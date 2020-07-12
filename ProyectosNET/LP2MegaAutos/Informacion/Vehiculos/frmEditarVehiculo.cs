@@ -33,6 +33,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             cboTipoCliente.DisplayMember = "numDocumento";
             cboTipoCliente.ValueMember = "id";
             lbl_EditarVehiculo.Text = "Agregar vehículo";
+            btnEliminar.Visible = btnEditar.Visible = false;
         }
         public frmEditarVehiculo(ServicioVehiculo.vehiculo vehiculo)
         {
@@ -94,7 +95,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
                     rnd_color_2.ColorBorde = rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
         public ServicioVehiculo.vehiculo Vehiculo { get { return _vehiculo; } }

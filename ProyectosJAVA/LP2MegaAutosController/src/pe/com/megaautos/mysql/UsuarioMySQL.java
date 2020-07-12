@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.com.megaautos.config.DBController;
 import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.config.DBManager;
 import pe.com.megaautos.dao.UsuarioDAO;
@@ -86,6 +87,8 @@ public class UsuarioMySQL implements UsuarioDAO {
             java.sql.Date sqlDate = new java.sql.Date(usuario.getFechaCreado().getTime());
             cs.setDate("_FECHA_CREACION", sqlDate);
             cs.executeUpdate();
+            Connection con2 = DBDataSource.getConnection();
+            Connection con3 = DBDataSource.getConnection();
             
             if (usuario.getPermisos() != null) {
                 Usuario u2 = buscarPorCorreo(usuario.getCorreo());
@@ -93,22 +96,24 @@ public class UsuarioMySQL implements UsuarioDAO {
                 for (EPermisos e : u2.getPermisos()){
                     if (usuario.getPermisos().contains(e))
                         continue;
-                    CallableStatement cs2 = con.prepareCall("{call ELIMINAR_PERMISO_USUARIO(?,?)");
+                    CallableStatement cs2 = con2.prepareCall("{call ELIMINAR_PERMISO_USUARIO(?,?)}");
                     cs2.setString("_NOMBRE",e.toString().toUpperCase());
                     cs2.setInt("_ID_USUARIO", usuario.getId());
                     cs2.executeUpdate();
                 }
+                con2.close();
                 //Se recorre para agregar los permisos
                 for (EPermisos e : usuario.getPermisos()){
                     if (u2.getPermisos().contains(e))
                             continue;
-                    CallableStatement cs2 = con.prepareCall(
+                    CallableStatement cs3 = con3.prepareCall(
                          "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
-                    cs2.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
-                    cs2.setString("_NOMBRE",e.toString().toUpperCase());
-                    cs2.setInt("_ID_USUARIO", usuario.getId());
-                    cs2.executeUpdate();
+                    cs3.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
+                    cs3.setString("_NOMBRE",e.toString().toUpperCase());
+                    cs3.setInt("_ID_USUARIO", usuario.getId());
+                    cs3.executeUpdate();
                 }
+                con3.close();
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -144,29 +149,32 @@ public class UsuarioMySQL implements UsuarioDAO {
             java.sql.Date sqlDate = new java.sql.Date(usuario.getFechaCreado().getTime());
             cs.setDate("_FECHA_CREACION", sqlDate);
             cs.executeUpdate();
-            
+            Connection con2 = DBDataSource.getConnection();
+            Connection con3 = DBDataSource.getConnection();
             if (usuario.getPermisos() != null) {
                 Usuario u2 = buscarPorCorreo(usuario.getCorreo());
                 //Se recorre para eliminar los permisos
                 for (EPermisos e : u2.getPermisos()){
                     if (usuario.getPermisos().contains(e))
                         continue;
-                    CallableStatement cs2 = con.prepareCall("{call ELIMINAR_PERMISO_USUARIO(?,?)");
+                    CallableStatement cs2 = con2.prepareCall("{call ELIMINAR_PERMISO_USUARIO(?,?)");
                     cs2.setString("_NOMBRE",e.toString().toUpperCase());
                     cs2.setInt("_ID_USUARIO", rpta);
                     cs2.executeUpdate();
                 }
+                con2.close();
                 //Se recorre para agregar los permisos
                 for (EPermisos e : usuario.getPermisos()){
                     if (u2.getPermisos().contains(e))
                             continue;
-                    CallableStatement cs2 = con.prepareCall(
+                    CallableStatement cs3 = con3.prepareCall(
                          "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
-                    cs2.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
-                    cs2.setString("_NOMBRE",e.toString().toUpperCase());
-                    cs2.setInt("_ID_USUARIO", rpta);
-                    cs2.executeUpdate();
+                    cs3.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
+                    cs3.setString("_NOMBRE",e.toString().toUpperCase());
+                    cs3.setInt("_ID_USUARIO", rpta);
+                    cs3.executeUpdate();
                 }
+                con3.close();
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -540,5 +548,84 @@ public class UsuarioMySQL implements UsuarioDAO {
             }
         }
         return rpta;
+    }
+    
+    @Override
+    public ArrayList<Usuario> listarInactivos() {
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        try{
+            con = DBDataSource.getConnection();/*
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer una conexión a la BD
+            Connection con = DriverManager.
+            getConnection(DBManager.url,DBManager.user, DBManager.password);*/
+            // Listar usuarios devuelve una lista de usuarios
+            // con ID_Usuario, nombre, tipo_usuario, correo, passwrd y fecha
+            CallableStatement cs = con.prepareCall(
+                    "{call LISTAR_USUARIOS_INACTIVOS()}");
+            ResultSet rs = cs.executeQuery();
+            //Recorrer todas las filas que devuelve la ejecucion sentencia
+            while(rs.next()){
+                Usuario usuario = new Usuario();
+                usuario.setId(rs.getInt("ID_USUARIO"));
+                usuario.setNombre(rs.getString("NOMBRE"));
+                usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
+                usuario.setCorreo(rs.getString("CORREO"));
+                usuario.setPassword(rs.getString("PASSWRD"));
+                //usuario.setFechaCreado(rs.getDate("FECHA_CREACION"));
+                usuarios.add(usuario);
+            CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
+            cs2.setInt(1, usuario.getId());
+            ResultSet rs2 = cs2.executeQuery();
+            int permiso;
+            while(rs2.next()){
+                permiso = rs2.getInt("ID_PERMISO");
+                switch(permiso){
+                    case 1:
+                        usuario.addPermisos(EPermisos.AreasTrabajo);
+                        break;
+                    case 2:
+                        usuario.addPermisos(EPermisos.Clientes);
+                        break;
+                    case 3:
+                        usuario.addPermisos(EPermisos.Vehiculos);
+                        break;
+                    case 4:
+                        usuario.addPermisos(EPermisos.Drivers);
+                        break;
+                    case 5:
+                        usuario.addPermisos(EPermisos.Usuarios);
+                        break;
+                    case 6:
+                        usuario.addPermisos(EPermisos.Servicios);
+                        break;
+                    case 7:
+                        usuario.addPermisos(EPermisos.Sedes);
+                        break;
+                    case 8:
+                        usuario.addPermisos(EPermisos.Empresa);
+                        break;
+                    case 9:
+                        usuario.addPermisos(EPermisos.ActualizarBD);
+                        break;
+                    case 10:
+                        usuario.addPermisos(EPermisos.All);
+                        break;
+                }
+            }
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        //Devolviendo los usuarios
+        return usuarios;    
     }
 }

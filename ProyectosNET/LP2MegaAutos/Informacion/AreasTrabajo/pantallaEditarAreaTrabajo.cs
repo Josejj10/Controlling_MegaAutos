@@ -21,6 +21,7 @@ namespace LP2MegaAutos.Informacion.AreasTrabajo
             InitializeComponent();
             _areaTrabajo = new ServicioAreaTrabajo.areaTrabajo();
             lbl_EditarAreaTrabajo.Text = "Agregar Área de Trabajo";
+            btnEliminar.Visible = false;
         }
         
         public pantallaEditarAreaTrabajo(ServicioAreaTrabajo.areaTrabajo areaTrabajo)

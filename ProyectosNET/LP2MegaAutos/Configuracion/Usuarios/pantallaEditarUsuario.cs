@@ -314,7 +314,7 @@ namespace LP2MegaAutos
             rnd_Reestablecer.ColorBorde = rnd_Reestablecer.ColorPanel
             = Colores.AmarilloInteractivo;
 
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
 

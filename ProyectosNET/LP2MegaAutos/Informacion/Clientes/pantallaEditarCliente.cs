@@ -194,7 +194,7 @@ namespace LP2MegaAutos
                     rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
         public ServicioCliente.cliente Cliente { get { return _cliente; } }

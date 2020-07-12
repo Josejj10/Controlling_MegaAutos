@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="actualizarUsuario" type="tns:actualizarUsuario" />
+  <xs:element name="actualizarUsuarioPassword" type="tns:actualizarUsuarioPassword" />
+  <xs:element name="actualizarUsuarioPasswordResponse" type="tns:actualizarUsuarioPasswordResponse" />
   <xs:element name="actualizarUsuarioResponse" type="tns:actualizarUsuarioResponse" />
   <xs:element name="buscarPorCorreo" type="tns:buscarPorCorreo" />
   <xs:element name="buscarPorCorreoResponse" type="tns:buscarPorCorreoResponse" />
@@ -9,6 +11,8 @@
   <xs:element name="insertarUsuario" type="tns:insertarUsuario" />
   <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
   <xs:element name="listarUsuarios" type="tns:listarUsuarios" />
+  <xs:element name="listarUsuariosInactivos" type="tns:listarUsuariosInactivos" />
+  <xs:element name="listarUsuariosInactivosResponse" type="tns:listarUsuariosInactivosResponse" />
   <xs:element name="listarUsuariosResponse" type="tns:listarUsuariosResponse" />
   <xs:element name="verificarPassword" type="tns:verificarPassword" />
   <xs:element name="verificarPasswordResponse" type="tns:verificarPasswordResponse" />
@@ -80,6 +84,24 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosInactivos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosInactivosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarUsuarioPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="objUsuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarUsuarioPasswordResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

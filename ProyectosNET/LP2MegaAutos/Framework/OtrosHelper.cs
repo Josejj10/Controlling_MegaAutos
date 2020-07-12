@@ -10,8 +10,8 @@ namespace LP2MegaAutos.Framework
     {
         public static string tipoOracion(string str)
         {
-            //if (string.IsNullOrEmpty(str))
-            //    return "";
+            if (string.IsNullOrEmpty(str))
+                return "";
             string devolver = "";
             foreach (string s in str.ToLower().Split())
                 devolver += tipoOracionPalabra(s)+" ";

@@ -243,7 +243,7 @@ namespace LP2MegaAutos
             imgs.Add(Resources.AreaTrabajo);            
             imgs.Add(Resources.Clientes);            
             imgs.Add(Resources.Driver);            
-            imgs.Add(Resources.car);
+            imgs.Add(Resources.Vehiculo);
 
             Button btnInfo = ((frmPrincipal)this.Parent.Parent.Parent).getBotonPanelMenuString("btnMenuInformacion");
 

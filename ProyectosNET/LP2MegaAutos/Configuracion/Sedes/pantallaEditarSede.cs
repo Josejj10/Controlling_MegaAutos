@@ -23,6 +23,7 @@ namespace LP2MegaAutos
             InitializeComponent();
             _sede = new ServicioSede.sede();
             txt_NombreSede.Text = "Agregar nombre de sede...";
+            this.btnEliminar.Visible = this.btnEditar.Visible =false;
         }
 
         public pantallaEditarSede(ServicioSede.sede sede)
@@ -150,7 +151,7 @@ namespace LP2MegaAutos
                     roundedPanel2.ColorBorde = rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
         public ServicioSede.sede Sede { get { return _sede; } }

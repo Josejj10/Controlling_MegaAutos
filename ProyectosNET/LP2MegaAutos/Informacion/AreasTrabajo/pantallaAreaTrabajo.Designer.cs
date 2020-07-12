@@ -445,6 +445,7 @@
             this.btnAZ.Text = "A - Z";
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
+            this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
             // 
             // pantallaAreaTrabajo
             // 

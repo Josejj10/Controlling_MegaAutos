@@ -73,34 +73,49 @@ public class LP2MegaAutos {
     public static void main(String[] args) throws ParseException, IOException{
         
         //Prueba correo
-        int i = enviarCorreo("rodrigo.dulanto@pucp.edu.pe");
+//        int i = enviarCorreo("rodrigo.dulanto@pucp.edu.pe");
         
-        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
-        daoUsuario.actualizarPasswrd("rodrigo.dulanto@pucp.edu.pe", "Z7fMUX83IAcqBrIl", "1234");
+//        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
+//        daoUsuario.actualizarPasswrd("rodrigo.dulanto@pucp.edu.pe", "Z7fMUX83IAcqBrIl", "1234");
         //Z7fMUX83IAcqBrIl
         
         
         
         
-//        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
-//        Usuario u = new Usuario();
-//        u = daoUsuario.buscarPorCorreo("nicolas@gmail.com");
-//        System.out.println(u.getId() + " " + u.getNombre() + " " + 
-//               u.getCorreo() + " " + u.getTipoUsuario() + u.getPassword());
-//        
-//        for (EPermisos e : u.getPermisos()){
-//            System.out.println(e);
-//        }
-//        int a = daoUsuario.actualizar(u);
-//        Usuario u2 = new Usuario();
-//        u2 = daoUsuario.verificarPassword("nicolas@gmail.com", "1234");
-//        System.out.println(u2.getId() + " " + u2.getNombre() + " " + 
-//                u2.getCorreo() + " " + u2.getTipoUsuario());
-//        
-//        for (EPermisos e : u2.getPermisos()){
-//            System.out.println(e);
-//        }
-
+        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
+        Usuario u = new Usuario();
+        u = daoUsuario.buscarPorCorreo("t@");
+        System.out.println(u.getId() + " " + u.getNombre() + " " + 
+               u.getCorreo() + " " + u.getTipoUsuario());
+        
+        for (EPermisos e : u.getPermisos()){
+            System.out.println(e);
+        }
+        
+        u.addPermisos(EPermisos.Servicios);
+        
+        int a = daoUsuario.actualizar(u);
+        Usuario u2 = new Usuario();
+        u2 = daoUsuario.buscarPorCorreo("t@");
+        System.out.println(u2.getId() + " " + u2.getNombre() + " " + 
+                u2.getCorreo() + " " + u2.getTipoUsuario());
+        
+        for (EPermisos e : u2.getPermisos()){
+            System.out.println(e);
+        }
+        
+        u2.addPermisos(EPermisos.Sedes);
+        u2.addPermisos(EPermisos.Clientes);
+        u2.removePermiso(EPermisos.Servicios);
+        int b=daoUsuario.actualizar(u2);
+        Usuario u3 = new Usuario();
+        u3 = daoUsuario.buscarPorCorreo("t@");
+        System.out.println(u3.getId() + " " + u3.getNombre() + " " + 
+                u3.getCorreo() + " " + u3.getTipoUsuario());
+        
+        for (EPermisos e : u3.getPermisos()){
+            System.out.println(e);
+        }
 //        
 ////        Extraction
 //        String ruta = "D:\\Documentos\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Cuadro.xlsx";

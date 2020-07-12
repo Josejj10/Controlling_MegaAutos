@@ -364,7 +364,7 @@ namespace LP2MegaAutos
             rpCambiarPassword.ColorPanel = rpCambiarPassword.ColorBorde
             = Colores.AmarilloInteractivo;
 
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
 

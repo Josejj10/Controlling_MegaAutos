@@ -70,6 +70,17 @@ public class UsuarioWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "actualizarUsuarioPassword")
+    public int actualizarUsuarioPassword(@WebParam(name = "objUsuario") Usuario usuario) {
+        int resultado = 0;
+        try{
+            resultado = daoUsuario.actualizarConPassword(usuario);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
     @WebMethod(operationName = "eliminarUsuario")
     public int eliminarUsuario(@WebParam(name = "idUsuario") int idUsuario) {
         int resultado = 0;
@@ -79,5 +90,16 @@ public class UsuarioWS {
             System.out.println(ex.getMessage());
         }
         return resultado;
+    }
+    
+    @WebMethod(operationName = "listarUsuariosInactivos")
+    public ArrayList<Usuario> listarUsuariosInactivos(){
+        ArrayList<Usuario> usuarios = new ArrayList<>();
+        try{
+            usuarios = daoUsuario.listarInactivos();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return usuarios;
     }
 }

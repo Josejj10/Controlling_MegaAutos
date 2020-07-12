@@ -29,6 +29,7 @@ namespace LP2MegaAutos
         public pantallaEditarCliente(ServicioCliente.cliente cliente)
         {
             InitializeComponent();
+            _cliente = new ServicioCliente.cliente();
             _cliente = cliente;
             toggleComponentes();
             this.txt_NombreCliente.Text = OtrosHelper.tipoOracion(cliente.nombre).Trim();
@@ -194,7 +195,7 @@ namespace LP2MegaAutos
                     rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
-            btnEditar.BackgroundImage = Resources.Logout;
+            btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
         public ServicioCliente.cliente Cliente { get { return _cliente; } }
@@ -281,7 +282,7 @@ namespace LP2MegaAutos
 
             if ((txt_NumeroDocumento.Text.Length == 8) && (cboTipoDocumento.Text != "DNI"))
             {
-                frmMessageBox f = new frmMessageBox("El RUC debe tener 10 digitos.", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("El RUC debe tener 11 digitos.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

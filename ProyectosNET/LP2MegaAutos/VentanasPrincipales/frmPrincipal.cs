@@ -161,7 +161,7 @@ namespace LP2MegaAutos
             pmsReportes.Imagen1 = (Image)new Bitmap(Resources.Reporte, 36, 36);
             pmsReportes.Imagen2 = (Image)new Bitmap(Resources.AreaTrabajo, 36, 36);
             pmsReportes.Imagen3 = (Image)new Bitmap(Resources.Clientes, 36, 36);
-            pmsReportes.Imagen4 = (Image)new Bitmap(Resources.car, 36, 36);
+            pmsReportes.Imagen4 = (Image)new Bitmap(Resources.Vehiculo, 36, 36);
 
             pmsReportes.Texto1 = "Todos";
             pmsReportes.Texto2 = "Por" + Environment.NewLine +"Area" ;
@@ -470,7 +470,7 @@ namespace LP2MegaAutos
             BindingList<Image> ims = new BindingList<Image>();
             ims.Add((Image)new Bitmap(Resources.AreaTrabajo, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Clientes, new Size(36, 36)));
-            ims.Add((Image)new Bitmap(Resources.car, new Size(36, 36)));
+            ims.Add((Image)new Bitmap(Resources.Vehiculo, new Size(36, 36)));
             ims.Add((Image)new Bitmap(Resources.Driver, new Size(36, 36)));
 
             crearStrip(pms, nItems, ims, per, btnMenu,txts);

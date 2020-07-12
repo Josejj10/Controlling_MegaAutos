@@ -42,15 +42,12 @@
             this.rpFechaIni = new LP2MegaAutos.RoundedPanel();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.pnlImgFechaIni = new System.Windows.Forms.Panel();
-            this.rpPorAreaTrabajo = new LP2MegaAutos.RoundedPanel();
+            this.rpPorTipoSiniestro = new LP2MegaAutos.RoundedPanel();
             this.btnPorAreaTrabajo = new System.Windows.Forms.Button();
             this.rpPorVehiculo = new LP2MegaAutos.RoundedPanel();
             this.btnPorVehiculo = new System.Windows.Forms.Button();
             this.rpPorCliente = new LP2MegaAutos.RoundedPanel();
             this.btnPorCliente = new System.Windows.Forms.Button();
-            this.rpInputBuscar = new LP2MegaAutos.RoundedPanel();
-            this.txt_InputBuscar = new System.Windows.Forms.TextBox();
-            this.pnlImgBuscar = new System.Windows.Forms.Panel();
             this.rpFechaFin = new LP2MegaAutos.RoundedPanel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pnlImgFechaFin = new System.Windows.Forms.Panel();
@@ -69,10 +66,9 @@
             this.rndMensual.SuspendLayout();
             this.rpDiario.SuspendLayout();
             this.rpFechaIni.SuspendLayout();
-            this.rpPorAreaTrabajo.SuspendLayout();
+            this.rpPorTipoSiniestro.SuspendLayout();
             this.rpPorVehiculo.SuspendLayout();
             this.rpPorCliente.SuspendLayout();
-            this.rpInputBuscar.SuspendLayout();
             this.rpFechaFin.SuspendLayout();
             this.pnlSede.SuspendLayout();
             this.title_bar.SuspendLayout();
@@ -104,14 +100,14 @@
             this.rndOtro.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndOtro.Controls.Add(this.btnOtro);
             this.rndOtro.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndOtro.Location = new System.Drawing.Point(408, 128);
+            this.rndOtro.Location = new System.Drawing.Point(338, 113);
             this.rndOtro.MenosHeightBorde = 1;
             this.rndOtro.MenosHeightPanel = 1;
             this.rndOtro.MenosWidthBorde = 1;
             this.rndOtro.MenosWidthPanel = 1;
             this.rndOtro.Name = "rndOtro";
             this.rndOtro.PorcLuzColorBorde = 0;
-            this.rndOtro.Size = new System.Drawing.Size(82, 35);
+            this.rndOtro.Size = new System.Drawing.Size(95, 35);
             this.rndOtro.TabIndex = 34;
             this.tags.SetTag2(this.rndOtro, null);
             this.tags.SetTag3(this.rndOtro, null);
@@ -133,7 +129,7 @@
             this.btnOtro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnOtro.Location = new System.Drawing.Point(3, 3);
             this.btnOtro.Name = "btnOtro";
-            this.btnOtro.Size = new System.Drawing.Size(76, 30);
+            this.btnOtro.Size = new System.Drawing.Size(89, 30);
             this.btnOtro.TabIndex = 8;
             this.tags.SetTag2(this.btnOtro, null);
             this.tags.SetTag3(this.btnOtro, null);
@@ -152,7 +148,7 @@
             this.rndAnual.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndAnual.Controls.Add(this.btnAnual);
             this.rndAnual.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndAnual.Location = new System.Drawing.Point(309, 128);
+            this.rndAnual.Location = new System.Drawing.Point(238, 113);
             this.rndAnual.MenosHeightBorde = 1;
             this.rndAnual.MenosHeightPanel = 1;
             this.rndAnual.MenosWidthBorde = 1;
@@ -200,7 +196,7 @@
             this.rndMensual.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndMensual.Controls.Add(this.btnMensual);
             this.rndMensual.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndMensual.Location = new System.Drawing.Point(209, 128);
+            this.rndMensual.Location = new System.Drawing.Point(140, 113);
             this.rndMensual.MenosHeightBorde = 1;
             this.rndMensual.MenosHeightPanel = 1;
             this.rndMensual.MenosWidthBorde = 1;
@@ -248,7 +244,7 @@
             this.rpDiario.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rpDiario.Controls.Add(this.btnDiario);
             this.rpDiario.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpDiario.Location = new System.Drawing.Point(120, 128);
+            this.rpDiario.Location = new System.Drawing.Point(51, 113);
             this.rpDiario.MenosHeightBorde = 1;
             this.rpDiario.MenosHeightPanel = 1;
             this.rpDiario.MenosWidthBorde = 1;
@@ -297,7 +293,7 @@
             this.rpFechaIni.Controls.Add(this.dtpInicio);
             this.rpFechaIni.Controls.Add(this.pnlImgFechaIni);
             this.rpFechaIni.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpFechaIni.Location = new System.Drawing.Point(120, 177);
+            this.rpFechaIni.Location = new System.Drawing.Point(51, 162);
             this.rpFechaIni.Margin = new System.Windows.Forms.Padding(2);
             this.rpFechaIni.MenosHeightBorde = 1;
             this.rpFechaIni.MenosHeightPanel = 1;
@@ -325,7 +321,7 @@
             this.dtpInicio.CustomFormat = "dd/MM/yyyy";
             this.dtpInicio.Font = new System.Drawing.Font("Montserrat", 13F);
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpInicio.Location = new System.Drawing.Point(41, 21);
+            this.dtpInicio.Location = new System.Drawing.Point(42, 17);
             this.dtpInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(128, 29);
@@ -342,7 +338,7 @@
             this.pnlImgFechaIni.BackColor = System.Drawing.Color.Transparent;
             this.pnlImgFechaIni.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImgFechaIni.BackgroundImage")));
             this.pnlImgFechaIni.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlImgFechaIni.Location = new System.Drawing.Point(11, 25);
+            this.pnlImgFechaIni.Location = new System.Drawing.Point(12, 21);
             this.pnlImgFechaIni.Name = "pnlImgFechaIni";
             this.pnlImgFechaIni.Size = new System.Drawing.Size(25, 25);
             this.pnlImgFechaIni.TabIndex = 37;
@@ -352,32 +348,32 @@
             this.tags.SetTagFontSize(this.pnlImgFechaIni, 10F);
             this.tags.SetTagFontStyle(this.pnlImgFechaIni, System.Drawing.FontStyle.Regular);
             // 
-            // rpPorAreaTrabajo
+            // rpPorTipoSiniestro
             // 
-            this.rpPorAreaTrabajo.ArcRadiusBorde = 8;
-            this.rpPorAreaTrabajo.ArcRadiusPanel = 8;
-            this.rpPorAreaTrabajo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rpPorAreaTrabajo.ColorPanel = System.Drawing.Color.Transparent;
-            this.rpPorAreaTrabajo.Controls.Add(this.btnPorAreaTrabajo);
-            this.rpPorAreaTrabajo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpPorAreaTrabajo.Location = new System.Drawing.Point(233, 255);
-            this.rpPorAreaTrabajo.MenosHeightBorde = 1;
-            this.rpPorAreaTrabajo.MenosHeightPanel = 1;
-            this.rpPorAreaTrabajo.MenosWidthBorde = 1;
-            this.rpPorAreaTrabajo.MenosWidthPanel = 1;
-            this.rpPorAreaTrabajo.Name = "rpPorAreaTrabajo";
-            this.rpPorAreaTrabajo.PorcLuzColorBorde = 0;
-            this.rpPorAreaTrabajo.Size = new System.Drawing.Size(144, 59);
-            this.rpPorAreaTrabajo.TabIndex = 38;
-            this.tags.SetTag2(this.rpPorAreaTrabajo, null);
-            this.tags.SetTag3(this.rpPorAreaTrabajo, null);
-            this.tags.SetTagFontName(this.rpPorAreaTrabajo, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpPorAreaTrabajo, 10F);
-            this.tags.SetTagFontStyle(this.rpPorAreaTrabajo, System.Drawing.FontStyle.Regular);
-            this.rpPorAreaTrabajo.XBorde = 0;
-            this.rpPorAreaTrabajo.XPanel = 0;
-            this.rpPorAreaTrabajo.YBorde = 0;
-            this.rpPorAreaTrabajo.YPanel = 0;
+            this.rpPorTipoSiniestro.ArcRadiusBorde = 8;
+            this.rpPorTipoSiniestro.ArcRadiusPanel = 8;
+            this.rpPorTipoSiniestro.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rpPorTipoSiniestro.ColorPanel = System.Drawing.Color.Transparent;
+            this.rpPorTipoSiniestro.Controls.Add(this.btnPorAreaTrabajo);
+            this.rpPorTipoSiniestro.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rpPorTipoSiniestro.Location = new System.Drawing.Point(176, 240);
+            this.rpPorTipoSiniestro.MenosHeightBorde = 1;
+            this.rpPorTipoSiniestro.MenosHeightPanel = 1;
+            this.rpPorTipoSiniestro.MenosWidthBorde = 1;
+            this.rpPorTipoSiniestro.MenosWidthPanel = 1;
+            this.rpPorTipoSiniestro.Name = "rpPorTipoSiniestro";
+            this.rpPorTipoSiniestro.PorcLuzColorBorde = 0;
+            this.rpPorTipoSiniestro.Size = new System.Drawing.Size(144, 35);
+            this.rpPorTipoSiniestro.TabIndex = 38;
+            this.tags.SetTag2(this.rpPorTipoSiniestro, null);
+            this.tags.SetTag3(this.rpPorTipoSiniestro, null);
+            this.tags.SetTagFontName(this.rpPorTipoSiniestro, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpPorTipoSiniestro, 10F);
+            this.tags.SetTagFontStyle(this.rpPorTipoSiniestro, System.Drawing.FontStyle.Regular);
+            this.rpPorTipoSiniestro.XBorde = 0;
+            this.rpPorTipoSiniestro.XPanel = 0;
+            this.rpPorTipoSiniestro.YBorde = 0;
+            this.rpPorTipoSiniestro.YPanel = 0;
             // 
             // btnPorAreaTrabajo
             // 
@@ -389,14 +385,14 @@
             this.btnPorAreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnPorAreaTrabajo.Location = new System.Drawing.Point(3, 3);
             this.btnPorAreaTrabajo.Name = "btnPorAreaTrabajo";
-            this.btnPorAreaTrabajo.Size = new System.Drawing.Size(138, 54);
+            this.btnPorAreaTrabajo.Size = new System.Drawing.Size(138, 28);
             this.btnPorAreaTrabajo.TabIndex = 5;
             this.tags.SetTag2(this.btnPorAreaTrabajo, null);
             this.tags.SetTag3(this.btnPorAreaTrabajo, null);
             this.tags.SetTagFontName(this.btnPorAreaTrabajo, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.btnPorAreaTrabajo, 10F);
             this.tags.SetTagFontStyle(this.btnPorAreaTrabajo, System.Drawing.FontStyle.Regular);
-            this.btnPorAreaTrabajo.Text = "Área de\r\nTrabajo";
+            this.btnPorAreaTrabajo.Text = "Tipo Siniestro";
             this.btnPorAreaTrabajo.UseVisualStyleBackColor = false;
             this.btnPorAreaTrabajo.Click += new System.EventHandler(this.btnPorAreaTrabajo_Click);
             // 
@@ -408,14 +404,14 @@
             this.rpPorVehiculo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rpPorVehiculo.Controls.Add(this.btnPorVehiculo);
             this.rpPorVehiculo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpPorVehiculo.Location = new System.Drawing.Point(120, 255);
+            this.rpPorVehiculo.Location = new System.Drawing.Point(51, 240);
             this.rpPorVehiculo.MenosHeightBorde = 1;
             this.rpPorVehiculo.MenosHeightPanel = 1;
             this.rpPorVehiculo.MenosWidthBorde = 1;
             this.rpPorVehiculo.MenosWidthPanel = 1;
             this.rpPorVehiculo.Name = "rpPorVehiculo";
             this.rpPorVehiculo.PorcLuzColorBorde = 0;
-            this.rpPorVehiculo.Size = new System.Drawing.Size(107, 59);
+            this.rpPorVehiculo.Size = new System.Drawing.Size(119, 35);
             this.rpPorVehiculo.TabIndex = 39;
             this.tags.SetTag2(this.rpPorVehiculo, null);
             this.tags.SetTag3(this.rpPorVehiculo, null);
@@ -437,14 +433,14 @@
             this.btnPorVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnPorVehiculo.Location = new System.Drawing.Point(3, 3);
             this.btnPorVehiculo.Name = "btnPorVehiculo";
-            this.btnPorVehiculo.Size = new System.Drawing.Size(101, 54);
+            this.btnPorVehiculo.Size = new System.Drawing.Size(113, 28);
             this.btnPorVehiculo.TabIndex = 5;
             this.tags.SetTag2(this.btnPorVehiculo, null);
             this.tags.SetTag3(this.btnPorVehiculo, null);
             this.tags.SetTagFontName(this.btnPorVehiculo, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.btnPorVehiculo, 10F);
             this.tags.SetTagFontStyle(this.btnPorVehiculo, System.Drawing.FontStyle.Regular);
-            this.btnPorVehiculo.Text = "Vehículo";
+            this.btnPorVehiculo.Text = "A. Trabajo";
             this.btnPorVehiculo.UseVisualStyleBackColor = false;
             this.btnPorVehiculo.Click += new System.EventHandler(this.btnPorVehiculo_Click);
             // 
@@ -456,14 +452,14 @@
             this.rpPorCliente.ColorPanel = System.Drawing.Color.Transparent;
             this.rpPorCliente.Controls.Add(this.btnPorCliente);
             this.rpPorCliente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpPorCliente.Location = new System.Drawing.Point(383, 255);
+            this.rpPorCliente.Location = new System.Drawing.Point(326, 240);
             this.rpPorCliente.MenosHeightBorde = 1;
             this.rpPorCliente.MenosHeightPanel = 1;
             this.rpPorCliente.MenosWidthBorde = 1;
             this.rpPorCliente.MenosWidthPanel = 1;
             this.rpPorCliente.Name = "rpPorCliente";
             this.rpPorCliente.PorcLuzColorBorde = 0;
-            this.rpPorCliente.Size = new System.Drawing.Size(107, 59);
+            this.rpPorCliente.Size = new System.Drawing.Size(107, 35);
             this.rpPorCliente.TabIndex = 40;
             this.tags.SetTag2(this.rpPorCliente, null);
             this.tags.SetTag3(this.rpPorCliente, null);
@@ -485,7 +481,7 @@
             this.btnPorCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnPorCliente.Location = new System.Drawing.Point(3, 3);
             this.btnPorCliente.Name = "btnPorCliente";
-            this.btnPorCliente.Size = new System.Drawing.Size(101, 54);
+            this.btnPorCliente.Size = new System.Drawing.Size(101, 28);
             this.btnPorCliente.TabIndex = 5;
             this.tags.SetTag2(this.btnPorCliente, null);
             this.tags.SetTag3(this.btnPorCliente, null);
@@ -496,76 +492,6 @@
             this.btnPorCliente.UseVisualStyleBackColor = false;
             this.btnPorCliente.Click += new System.EventHandler(this.btnPorCliente_Click);
             // 
-            // rpInputBuscar
-            // 
-            this.rpInputBuscar.ArcRadiusBorde = 15;
-            this.rpInputBuscar.ArcRadiusPanel = 15;
-            this.rpInputBuscar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.rpInputBuscar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.rpInputBuscar.Controls.Add(this.txt_InputBuscar);
-            this.rpInputBuscar.Controls.Add(this.pnlImgBuscar);
-            this.rpInputBuscar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpInputBuscar.Location = new System.Drawing.Point(120, 330);
-            this.rpInputBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.rpInputBuscar.MenosHeightBorde = 1;
-            this.rpInputBuscar.MenosHeightPanel = 1;
-            this.rpInputBuscar.MenosWidthBorde = 1;
-            this.rpInputBuscar.MenosWidthPanel = 1;
-            this.rpInputBuscar.Name = "rpInputBuscar";
-            this.rpInputBuscar.PorcLuzColorBorde = 0;
-            this.rpInputBuscar.Size = new System.Drawing.Size(371, 45);
-            this.rpInputBuscar.TabIndex = 41;
-            this.tags.SetTag2(this.rpInputBuscar, null);
-            this.tags.SetTag3(this.rpInputBuscar, null);
-            this.tags.SetTagFontName(this.rpInputBuscar, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpInputBuscar, 10F);
-            this.tags.SetTagFontStyle(this.rpInputBuscar, System.Drawing.FontStyle.Regular);
-            this.rpInputBuscar.XBorde = 0;
-            this.rpInputBuscar.XPanel = 0;
-            this.rpInputBuscar.YBorde = 0;
-            this.rpInputBuscar.YPanel = 0;
-            // 
-            // txt_InputBuscar
-            // 
-            this.txt_InputBuscar.AutoCompleteCustomSource.AddRange(new string[] {
-            "ABC-123",
-            "AAA-222",
-            "LWYRUP"});
-            this.txt_InputBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txt_InputBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_InputBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txt_InputBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_InputBuscar.Font = new System.Drawing.Font("Montserrat", 15F);
-            this.txt_InputBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.txt_InputBuscar.Location = new System.Drawing.Point(41, 7);
-            this.txt_InputBuscar.Margin = new System.Windows.Forms.Padding(0);
-            this.txt_InputBuscar.Name = "txt_InputBuscar";
-            this.txt_InputBuscar.Size = new System.Drawing.Size(315, 25);
-            this.txt_InputBuscar.TabIndex = 18;
-            this.tags.SetTag2(this.txt_InputBuscar, null);
-            this.tags.SetTag3(this.txt_InputBuscar, null);
-            this.tags.SetTagFontName(this.txt_InputBuscar, fontsD.Montserrat);
-            this.tags.SetTagFontSize(this.txt_InputBuscar, 15F);
-            this.tags.SetTagFontStyle(this.txt_InputBuscar, System.Drawing.FontStyle.Regular);
-            this.txt_InputBuscar.Text = "Filtro tipo de reporte";
-            this.txt_InputBuscar.Enter += new System.EventHandler(this.txt_InputBuscar_Enter);
-            this.txt_InputBuscar.Leave += new System.EventHandler(this.txt_InputBuscar_Leave);
-            // 
-            // pnlImgBuscar
-            // 
-            this.pnlImgBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.pnlImgBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImgBuscar.BackgroundImage")));
-            this.pnlImgBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlImgBuscar.Location = new System.Drawing.Point(8, 10);
-            this.pnlImgBuscar.Name = "pnlImgBuscar";
-            this.pnlImgBuscar.Size = new System.Drawing.Size(25, 25);
-            this.pnlImgBuscar.TabIndex = 37;
-            this.tags.SetTag2(this.pnlImgBuscar, null);
-            this.tags.SetTag3(this.pnlImgBuscar, null);
-            this.tags.SetTagFontName(this.pnlImgBuscar, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.pnlImgBuscar, 10F);
-            this.tags.SetTagFontStyle(this.pnlImgBuscar, System.Drawing.FontStyle.Regular);
-            // 
             // rpFechaFin
             // 
             this.rpFechaFin.ArcRadiusBorde = 15;
@@ -575,7 +501,7 @@
             this.rpFechaFin.Controls.Add(this.dateTimePicker1);
             this.rpFechaFin.Controls.Add(this.pnlImgFechaFin);
             this.rpFechaFin.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpFechaFin.Location = new System.Drawing.Point(308, 177);
+            this.rpFechaFin.Location = new System.Drawing.Point(237, 162);
             this.rpFechaFin.Margin = new System.Windows.Forms.Padding(2);
             this.rpFechaFin.MenosHeightBorde = 1;
             this.rpFechaFin.MenosHeightPanel = 1;
@@ -583,7 +509,7 @@
             this.rpFechaFin.MenosWidthPanel = 1;
             this.rpFechaFin.Name = "rpFechaFin";
             this.rpFechaFin.PorcLuzColorBorde = 0;
-            this.rpFechaFin.Size = new System.Drawing.Size(182, 62);
+            this.rpFechaFin.Size = new System.Drawing.Size(196, 62);
             this.rpFechaFin.TabIndex = 42;
             this.tags.SetTag2(this.rpFechaFin, null);
             this.tags.SetTag3(this.rpFechaFin, null);
@@ -603,7 +529,7 @@
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 13F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(41, 21);
+            this.dateTimePicker1.Location = new System.Drawing.Point(51, 17);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(128, 29);
@@ -620,7 +546,7 @@
             this.pnlImgFechaFin.BackColor = System.Drawing.Color.Transparent;
             this.pnlImgFechaFin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImgFechaFin.BackgroundImage")));
             this.pnlImgFechaFin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlImgFechaFin.Location = new System.Drawing.Point(11, 25);
+            this.pnlImgFechaFin.Location = new System.Drawing.Point(17, 21);
             this.pnlImgFechaFin.Name = "pnlImgFechaFin";
             this.pnlImgFechaFin.Size = new System.Drawing.Size(25, 25);
             this.pnlImgFechaFin.TabIndex = 37;
@@ -706,7 +632,7 @@
             this.title_bar_2.Enabled = false;
             this.title_bar_2.Location = new System.Drawing.Point(0, 24);
             this.title_bar_2.Name = "title_bar_2";
-            this.title_bar_2.Size = new System.Drawing.Size(595, 8);
+            this.title_bar_2.Size = new System.Drawing.Size(498, 8);
             this.title_bar_2.TabIndex = 59;
             this.title_bar_2.Tag = "titlebar";
             this.tags.SetTag2(this.title_bar_2, null);
@@ -726,7 +652,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(571, -1);
+            this.button3.Location = new System.Drawing.Point(473, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(24, 24);
@@ -750,7 +676,7 @@
             this.title_bar.Controls.Add(this.boton_cerrar);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
             this.title_bar.Name = "title_bar";
-            this.title_bar.Size = new System.Drawing.Size(595, 24);
+            this.title_bar.Size = new System.Drawing.Size(498, 24);
             this.title_bar.TabIndex = 60;
             this.title_bar.Tag = "titlebar";
             this.tags.SetTag2(this.title_bar, null);
@@ -816,7 +742,7 @@
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btn_GenerarReporte);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(207, 385);
+            this.rnd_guardar.Location = new System.Drawing.Point(152, 282);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -860,17 +786,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ClientSize = new System.Drawing.Size(497, 346);
             this.ControlBox = false;
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.pnlSede);
             this.Controls.Add(this.rpFechaFin);
-            this.Controls.Add(this.rpInputBuscar);
             this.Controls.Add(this.rpPorCliente);
             this.Controls.Add(this.rpPorVehiculo);
-            this.Controls.Add(this.rpPorAreaTrabajo);
+            this.Controls.Add(this.rpPorTipoSiniestro);
             this.Controls.Add(this.rpFechaIni);
             this.Controls.Add(this.rndOtro);
             this.Controls.Add(this.rndAnual);
@@ -891,17 +816,14 @@
             this.tags.SetTagFontName(this, fontsD.Ninguno);
             this.tags.SetTagFontSize(this, 10F);
             this.tags.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
-            this.TopMost = true;
             this.rndOtro.ResumeLayout(false);
             this.rndAnual.ResumeLayout(false);
             this.rndMensual.ResumeLayout(false);
             this.rpDiario.ResumeLayout(false);
             this.rpFechaIni.ResumeLayout(false);
-            this.rpPorAreaTrabajo.ResumeLayout(false);
+            this.rpPorTipoSiniestro.ResumeLayout(false);
             this.rpPorVehiculo.ResumeLayout(false);
             this.rpPorCliente.ResumeLayout(false);
-            this.rpInputBuscar.ResumeLayout(false);
-            this.rpInputBuscar.PerformLayout();
             this.rpFechaFin.ResumeLayout(false);
             this.pnlSede.ResumeLayout(false);
             this.pnlSede.PerformLayout();
@@ -926,15 +848,12 @@
         private RoundedPanel rpFechaIni;
         private System.Windows.Forms.Panel pnlImgFechaIni;
         private System.Windows.Forms.DateTimePicker dtpInicio;
-        private RoundedPanel rpPorAreaTrabajo;
+        private RoundedPanel rpPorTipoSiniestro;
         private System.Windows.Forms.Button btnPorAreaTrabajo;
         private RoundedPanel rpPorVehiculo;
         private System.Windows.Forms.Button btnPorVehiculo;
         private System.Windows.Forms.Button btnPorCliente;
         private RoundedPanel rpPorCliente;
-        private RoundedPanel rpInputBuscar;
-        private System.Windows.Forms.Panel pnlImgBuscar;
-        private System.Windows.Forms.TextBox txt_InputBuscar;
         private RoundedPanel rpFechaFin;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel pnlImgFechaFin;

@@ -97,7 +97,7 @@ namespace LP2MegaAutos.Framework.UserControls.Items
                 case ePermisos.Usuarios:
                     return Resources.Usuario;
                 case ePermisos.Vehiculos:
-                    return Resources.car;
+                    return Resources.Vehiculo;
             }
             return Resources.editar;
         }

@@ -36,9 +36,9 @@
             this.tags = new LP2MegaAutos.TagsExtender();
             this.tlpGeneradoEl = new System.Windows.Forms.TableLayoutPanel();
             this.lblGeneradoEl = new System.Windows.Forms.Label();
-            this.lblFechaGenerado = new System.Windows.Forms.Label();
             this.lblQuienGenero = new System.Windows.Forms.Label();
             this.lblPor = new System.Windows.Forms.Label();
+            this.lblFechaGenerado = new System.Windows.Forms.Label();
             this.title_bar_2 = new System.Windows.Forms.Panel();
             this.title_bar = new System.Windows.Forms.Panel();
             this.boton_minimizar = new System.Windows.Forms.Button();
@@ -52,9 +52,11 @@
             this.btnEstadisticas = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.flpReporteResumen.SuspendLayout();
             this.tlpGeneradoEl.SuspendLayout();
             this.title_bar.SuspendLayout();
+            this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpReporteResumen
@@ -159,7 +161,7 @@
             // 
             // tlpGeneradoEl
             // 
-            this.tlpGeneradoEl.BackColor = System.Drawing.Color.Transparent;
+            this.tlpGeneradoEl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.tlpGeneradoEl.ColumnCount = 4;
             this.tlpGeneradoEl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpGeneradoEl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
@@ -198,22 +200,6 @@
             this.tags.SetTagFontStyle(this.lblGeneradoEl, System.Drawing.FontStyle.Regular);
             this.lblGeneradoEl.Text = "Generado el";
             // 
-            // lblFechaGenerado
-            // 
-            this.lblFechaGenerado.AutoSize = true;
-            this.lblFechaGenerado.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaGenerado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblFechaGenerado.Location = new System.Drawing.Point(106, 0);
-            this.lblFechaGenerado.Name = "lblFechaGenerado";
-            this.lblFechaGenerado.Size = new System.Drawing.Size(95, 19);
-            this.lblFechaGenerado.TabIndex = 36;
-            this.tags.SetTag2(this.lblFechaGenerado, null);
-            this.tags.SetTag3(this.lblFechaGenerado, null);
-            this.tags.SetTagFontName(this.lblFechaGenerado, fontsD.Lato);
-            this.tags.SetTagFontSize(this.lblFechaGenerado, 12F);
-            this.tags.SetTagFontStyle(this.lblFechaGenerado, System.Drawing.FontStyle.Bold);
-            this.lblFechaGenerado.Text = "24/05/2020";
-            // 
             // lblQuienGenero
             // 
             this.lblQuienGenero.AutoSize = true;
@@ -245,6 +231,22 @@
             this.tags.SetTagFontSize(this.lblPor, 12F);
             this.tags.SetTagFontStyle(this.lblPor, System.Drawing.FontStyle.Regular);
             this.lblPor.Text = "por";
+            // 
+            // lblFechaGenerado
+            // 
+            this.lblFechaGenerado.AutoSize = true;
+            this.lblFechaGenerado.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaGenerado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblFechaGenerado.Location = new System.Drawing.Point(106, 0);
+            this.lblFechaGenerado.Name = "lblFechaGenerado";
+            this.lblFechaGenerado.Size = new System.Drawing.Size(95, 19);
+            this.lblFechaGenerado.TabIndex = 36;
+            this.tags.SetTag2(this.lblFechaGenerado, null);
+            this.tags.SetTag3(this.lblFechaGenerado, null);
+            this.tags.SetTagFontName(this.lblFechaGenerado, fontsD.Lato);
+            this.tags.SetTagFontSize(this.lblFechaGenerado, 12F);
+            this.tags.SetTagFontStyle(this.lblFechaGenerado, System.Drawing.FontStyle.Bold);
+            this.lblFechaGenerado.Text = "24/05/2020";
             // 
             // title_bar_2
             // 
@@ -332,13 +334,13 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.Font = new System.Drawing.Font("Montserrat", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.btnFiltrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.Location = new System.Drawing.Point(31, 601);
+            this.btnFiltrar.Location = new System.Drawing.Point(37, 595);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(173, 26);
             this.btnFiltrar.TabIndex = 55;
@@ -353,7 +355,7 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lblTitulo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblTitulo.Location = new System.Drawing.Point(29, 35);
@@ -372,6 +374,7 @@
             // 
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblFecha.AutoSize = true;
+            this.lblFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lblFecha.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblFecha.Location = new System.Drawing.Point(817, 70);
@@ -389,6 +392,7 @@
             // 
             this.lblSede.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSede.AutoSize = true;
+            this.lblSede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lblSede.Font = new System.Drawing.Font("Lato", 18F, System.Drawing.FontStyle.Bold);
             this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblSede.Location = new System.Drawing.Point(908, 41);
@@ -485,6 +489,20 @@
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = false;
             // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Controls.Add(this.btnFiltrar);
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(1040, 654);
+            this.pnlBackground.TabIndex = 63;
+            this.tags.SetTag2(this.pnlBackground, null);
+            this.tags.SetTag3(this.pnlBackground, null);
+            this.tags.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.pnlBackground, 10F);
+            this.tags.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
+            // 
             // frmResumenReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,12 +516,12 @@
             this.Controls.Add(this.pnlColorArriba);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblSede);
-            this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.tlpGeneradoEl);
             this.Controls.Add(this.flpReporteResumen);
+            this.Controls.Add(this.pnlBackground);
             this.DisplayHeader = false;
             this.Name = "frmResumenReporte";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
@@ -518,6 +536,7 @@
             this.tlpGeneradoEl.ResumeLayout(false);
             this.tlpGeneradoEl.PerformLayout();
             this.title_bar.ResumeLayout(false);
+            this.pnlBackground.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,5 +568,6 @@
         private System.Windows.Forms.Button btnEstadisticas;
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.Button btnExportar;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

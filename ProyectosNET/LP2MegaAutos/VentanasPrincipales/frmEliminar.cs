@@ -23,6 +23,7 @@ namespace LP2MegaAutos.VentanasPrincipales
             InitializeComponent();
             lblTexto.Text += nombreAccion + "?";
             lblTitulo.Text = titulo;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         #region title_bar

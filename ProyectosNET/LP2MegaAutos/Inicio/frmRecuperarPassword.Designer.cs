@@ -45,6 +45,7 @@
             this.btnEnviarCorreo = new System.Windows.Forms.Button();
             this.lbl_nombreEmpresa = new System.Windows.Forms.Label();
             this.lblTexto = new System.Windows.Forms.Label();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.pnl_codServ.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // pnl_codServ
             // 
+            this.pnl_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.txtCorreo);
             this.pnl_codServ.Controls.Add(this.lblCorreo);
@@ -263,11 +265,12 @@
             // 
             this.rnd_cancelar.ArcRadiusBorde = 5;
             this.rnd_cancelar.ArcRadiusPanel = 5;
+            this.rnd_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_cancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
             this.rnd_cancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_cancelar.Location = new System.Drawing.Point(226, 227);
+            this.rnd_cancelar.Location = new System.Drawing.Point(213, 205);
             this.rnd_cancelar.MenosHeightBorde = 1;
             this.rnd_cancelar.MenosHeightPanel = 1;
             this.rnd_cancelar.MenosWidthBorde = 1;
@@ -290,13 +293,14 @@
             // 
             this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(178, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(174, 29);
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
@@ -311,11 +315,12 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btnEnviarCorreo);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(15, 226);
+            this.rnd_guardar.Location = new System.Drawing.Point(27, 205);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -338,13 +343,14 @@
             // 
             this.btnEnviarCorreo.BackColor = System.Drawing.Color.Transparent;
             this.btnEnviarCorreo.FlatAppearance.BorderSize = 0;
+            this.btnEnviarCorreo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEnviarCorreo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEnviarCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviarCorreo.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviarCorreo.ForeColor = System.Drawing.Color.White;
-            this.btnEnviarCorreo.Location = new System.Drawing.Point(1, 1);
+            this.btnEnviarCorreo.Location = new System.Drawing.Point(3, 4);
             this.btnEnviarCorreo.Name = "btnEnviarCorreo";
-            this.btnEnviarCorreo.Size = new System.Drawing.Size(178, 33);
+            this.btnEnviarCorreo.Size = new System.Drawing.Size(174, 28);
             this.btnEnviarCorreo.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnEnviarCorreo, null);
             this.tagsExtender1.SetTag3(this.btnEnviarCorreo, null);
@@ -358,6 +364,7 @@
             // lbl_nombreEmpresa
             // 
             this.lbl_nombreEmpresa.AutoSize = true;
+            this.lbl_nombreEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lbl_nombreEmpresa.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombreEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lbl_nombreEmpresa.Location = new System.Drawing.Point(60, 46);
@@ -375,6 +382,7 @@
             // lblTexto
             // 
             this.lblTexto.AutoSize = true;
+            this.lblTexto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lblTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblTexto.Location = new System.Drawing.Point(115, 111);
             this.lblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -388,11 +396,24 @@
             this.tagsExtender1.SetTagFontStyle(this.lblTexto, System.Drawing.FontStyle.Bold);
             this.lblTexto.Text = "Se enviará un token a su correo.";
             // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(420, 258);
+            this.pnlBackground.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.pnlBackground, null);
+            this.tagsExtender1.SetTag3(this.pnlBackground, null);
+            this.tagsExtender1.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlBackground, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
+            // 
             // frmRecuperarPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 272);
+            this.ClientSize = new System.Drawing.Size(420, 255);
             this.ControlBox = false;
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.lbl_nombreEmpresa);
@@ -402,6 +423,7 @@
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_codServ);
+            this.Controls.Add(this.pnlBackground);
             this.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -445,5 +467,6 @@
         private System.Windows.Forms.Label lbl_nombreEmpresa;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblTexto;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

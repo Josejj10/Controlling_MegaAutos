@@ -20,6 +20,7 @@ namespace LP2MegaAutos.Reportes
         public pantallaOrdenTrabajo()
         {
             InitializeComponent();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         #region title_bar

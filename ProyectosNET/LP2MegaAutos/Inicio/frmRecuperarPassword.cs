@@ -21,6 +21,7 @@ namespace LP2MegaAutos.Inicio
         public frmRecuperarPassword()
         {
             InitializeComponent();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         public usuario Usuario { get { return this._usuario; } }

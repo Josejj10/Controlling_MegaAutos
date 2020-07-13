@@ -35,8 +35,9 @@ namespace LP2MegaAutos
             btnEliminar.Visible = false;
             _usuario.permisos = _permisosIniciales.ToArray();
             txtNombre.ForeColor = Colores.LowContrast;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
-        public pantallaEditarUsuario(usuario usuario)
+        public pantallaEditarUsuario(usuario usuario, bool viendoPropio = false)
         {
             if (usuario == null) this.DialogResult = DialogResult.Cancel;
             InitializeComponent();
@@ -45,26 +46,31 @@ namespace LP2MegaAutos
             txt_RolUsuario.Text = OtrosHelper.tipoOracion(usuario.tipoUsuario);
             txt_NuevaCont.Text = txt_RepNCont.Text = "";
             _usuario = usuario;
-            crearItemsListaPermisos();
             _agregando = false;
             if (_usuario.permisos == null) _usuario.permisos = _permisosIniciales.ToArray();
             _permisosIniciales = _usuario.permisos.ToList();
             toggleComponentes();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
+            crearItemsListaPermisos();
+            if (viendoPropio)
+            {
+                this.btnAgregarPermisos.Visible = false;
+            }
 
             // if (usuario.activo != 0) return;
-            
+
             // Si el usuario es inactivo
-            lbl_NuevaCont.Visible = rnd_color_3.Visible =
-            txt_NuevaCont.Visible = boton_ver_password.Visible =
-            lbl_RepNCont.Visible = rnd_color_4.Visible=
-            txt_RepNCont.Visible = btnVerRepetir.Visible=
-            btnAgregarPermisos.Visible =
-            rnd_Reestablecer.Visible = 
-            rpCambiarPassword.Visible = 
-            btnEditar.Visible = btnEliminar.Visible=
-            false;
-            _activando = true;
-            btn_guardar.Text = "Activar";
+            //lbl_NuevaCont.Visible = rnd_color_3.Visible =
+            //txt_NuevaCont.Visible = boton_ver_password.Visible =
+            //lbl_RepNCont.Visible = rnd_color_4.Visible =
+            //txt_RepNCont.Visible = btnVerRepetir.Visible =
+            //btnAgregarPermisos.Visible =
+            //rnd_Reestablecer.Visible =
+            //rpCambiarPassword.Visible =
+            //btnEditar.Visible = btnEliminar.Visible =
+            //false;
+            //_activando = true;
+            //btn_guardar.Text = "Activar";
         }
 
         #region title_bar
@@ -155,6 +161,7 @@ namespace LP2MegaAutos
             il.Name = "ilc" + i++;
             il.TextoPrincipal = nom;
             il.ItemListaClick += (sender,e) => clickItemListaPermiso(sender,e,per);
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(il);
             return il;
         }
 
@@ -284,7 +291,13 @@ namespace LP2MegaAutos
             if (pes.ShowDialog() != DialogResult.OK)
                 return;
 
-            if(pes.Usuario.permisos.ToList().Equals(_permisosIniciales))
+            bool a = true;
+            foreach (ePermisos per in pes.Usuario.permisos)
+            {
+                a &= _permisosIniciales.Contains(per);
+            }
+
+            if (a)
             {
                 btn_guardar.Enabled = false;
                 rnd_guardar.ColorBorde = rnd_guardar.ColorPanel
@@ -317,6 +330,9 @@ namespace LP2MegaAutos
             txt_NuevaCont.Text = txt_RepNCont.Text = "";
             _usuario.permisos = _permisosIniciales.ToArray();
             crearItemsListaPermisos();
+            btn_guardar.Enabled = false;
+            rnd_guardar.ColorBorde = rnd_guardar.ColorPanel
+            = Colores.Disabled;
         }
 
         private void btnCambiarPassword_Click(object sender, EventArgs e)
@@ -356,14 +372,20 @@ namespace LP2MegaAutos
                 txt_RolUsuario.Enabled = btnCambiarPassword.Enabled =
                 !txtNombre.Enabled;
 
+            bool a = true;
+            foreach(ePermisos e in _usuario.permisos)
+            {
+                a &= _permisosIniciales.Contains(e);
+            }
+            
             // Si son los mismos permisos que al inicio, se desactiva 
-            if (_usuario.permisos.ToList().Equals(_permisosIniciales))
+            if (a)
             {
                 btn_guardar.Enabled = false;
                 rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Disabled;
             }
             else {
-                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.AmarilloInteractivo;
+                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
                 btn_guardar.Enabled = true;
             }
 
@@ -402,6 +424,10 @@ namespace LP2MegaAutos
             = Colores.AmarilloInteractivo;
 
             btnEditar.BackgroundImage = Resources.Cancelar;
+
+            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
+            btn_guardar.Enabled = true;
+
         }
 
 

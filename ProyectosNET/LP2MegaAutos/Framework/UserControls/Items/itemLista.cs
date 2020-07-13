@@ -25,7 +25,8 @@ namespace LP2MegaAutos
         //private tipoItem _tipoItem;
         public itemLista()
         {
-            InitializeComponent();   
+            InitializeComponent();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         #region Propiedades

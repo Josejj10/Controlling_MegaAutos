@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace LP2MegaAutos.VentanasPrincipales
 {
@@ -71,7 +72,11 @@ namespace LP2MegaAutos.VentanasPrincipales
                 Controls.Add(value);
                 if (DarkMode.is_dark_mode_active() && !value.DarkModeActive)
                     DarkMode.iniciarSinTimer(this);
-                
+
+                // Iniicalizar los botones de la pantalla
+                MethodInfo inic;
+                if((inic = value.GetType()  .GetMethod("inicializarItemsLista"))!=null)
+                    inic.Invoke(value,null);
 
                 if (_pantallas.Count >= maximo) // Limite de pantallas
                     _pantallas.RemoveAt(0);

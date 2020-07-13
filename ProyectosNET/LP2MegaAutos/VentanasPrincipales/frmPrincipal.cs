@@ -565,9 +565,8 @@ namespace LP2MegaAutos
         }
         private void btnMenuUsuario_Click(object sender, EventArgs e)
         {
-            this.contenedorPantalla1.PantallaActual = new pantallaAjustesUsuarioGerente();
-            // Cambiar los botones y rPanel excepto el enviado
-            BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)btnPanelMenuProfile.Parent, panelMenu);
+            pantallaEditarUsuario pas = new pantallaEditarUsuario(_usuario, true);
+            pas.ShowDialog();
         }
         private void pmsReportes_ListaReportesClick(object sender, EventArgs e, string generando= "")
         {

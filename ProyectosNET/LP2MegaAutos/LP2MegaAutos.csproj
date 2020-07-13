@@ -296,18 +296,6 @@
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.Designer.cs">
-      <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.Designer.cs">
-      <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -558,12 +546,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Drivers\pantallaAgregarDriver.resx">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAgregarUsuario.resx">
-      <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.resx">
-      <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>

@@ -57,6 +57,7 @@
             this.lblTexto = new System.Windows.Forms.Label();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.btnReenviar = new System.Windows.Forms.Button();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
@@ -191,6 +192,7 @@
             // 
             this.rnd_cancelar.ArcRadiusBorde = 5;
             this.rnd_cancelar.ArcRadiusPanel = 5;
+            this.rnd_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_cancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
@@ -218,13 +220,14 @@
             // 
             this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(178, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(173, 29);
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
@@ -239,6 +242,7 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btnAceptar);
@@ -266,6 +270,7 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.Transparent;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,6 +291,7 @@
             // lbl_nombreEmpresa
             // 
             this.lbl_nombreEmpresa.AutoSize = true;
+            this.lbl_nombreEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lbl_nombreEmpresa.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombreEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lbl_nombreEmpresa.Location = new System.Drawing.Point(106, 40);
@@ -315,6 +321,7 @@
             // 
             // pnl_codServ
             // 
+            this.pnl_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.txtToken);
             this.pnl_codServ.Controls.Add(this.lblCorreo);
@@ -391,6 +398,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel2.Controls.Add(this.roundedPanel1);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.label1);
@@ -467,6 +475,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel3.Controls.Add(this.roundedPanel2);
             this.panel3.Controls.Add(this.txtNewPass);
             this.panel3.Controls.Add(this.label2);
@@ -546,6 +555,7 @@
             // 
             this.roundedPanel3.ArcRadiusBorde = 5;
             this.roundedPanel3.ArcRadiusPanel = 5;
+            this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.roundedPanel3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel3.Controls.Add(this.btnValidar);
@@ -573,13 +583,14 @@
             // 
             this.btnValidar.BackColor = System.Drawing.Color.Transparent;
             this.btnValidar.FlatAppearance.BorderSize = 0;
+            this.btnValidar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnValidar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValidar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidar.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.Location = new System.Drawing.Point(1, 1);
+            this.btnValidar.Location = new System.Drawing.Point(3, 3);
             this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Size = new System.Drawing.Size(178, 33);
+            this.btnValidar.Size = new System.Drawing.Size(174, 29);
             this.btnValidar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnValidar, null);
             this.tagsExtender1.SetTag3(this.btnValidar, null);
@@ -593,6 +604,7 @@
             // lblTexto
             // 
             this.lblTexto.AutoSize = true;
+            this.lblTexto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lblTexto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.lblTexto.Location = new System.Drawing.Point(101, 97);
             this.lblTexto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -612,6 +624,7 @@
             // 
             this.roundedPanel4.ArcRadiusBorde = 5;
             this.roundedPanel4.ArcRadiusPanel = 5;
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.roundedPanel4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel4.Controls.Add(this.btnReenviar);
@@ -639,13 +652,14 @@
             // 
             this.btnReenviar.BackColor = System.Drawing.Color.Transparent;
             this.btnReenviar.FlatAppearance.BorderSize = 0;
+            this.btnReenviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReenviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReenviar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReenviar.ForeColor = System.Drawing.Color.White;
-            this.btnReenviar.Location = new System.Drawing.Point(1, 1);
+            this.btnReenviar.Location = new System.Drawing.Point(3, 3);
             this.btnReenviar.Name = "btnReenviar";
-            this.btnReenviar.Size = new System.Drawing.Size(178, 33);
+            this.btnReenviar.Size = new System.Drawing.Size(174, 28);
             this.btnReenviar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnReenviar, null);
             this.tagsExtender1.SetTag3(this.btnReenviar, null);
@@ -655,6 +669,19 @@
             this.btnReenviar.Text = "Reenviar Correo";
             this.btnReenviar.UseVisualStyleBackColor = false;
             this.btnReenviar.Click += new System.EventHandler(this.btnReenviar_Click);
+            // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(596, 421);
+            this.pnlBackground.TabIndex = 70;
+            this.tagsExtender1.SetTag2(this.pnlBackground, null);
+            this.tagsExtender1.SetTag3(this.pnlBackground, null);
+            this.tagsExtender1.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlBackground, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
             // 
             // frmRecuperacionPassword
             // 
@@ -674,6 +701,7 @@
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
+            this.Controls.Add(this.pnlBackground);
             this.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -734,5 +762,6 @@
         private System.Windows.Forms.Label lblTexto;
         private RoundedPanel roundedPanel4;
         private System.Windows.Forms.Button btnReenviar;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

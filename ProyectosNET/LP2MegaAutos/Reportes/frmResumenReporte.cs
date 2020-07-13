@@ -13,10 +13,6 @@ namespace LP2MegaAutos
 {
     public partial class frmResumenReporte : MetroForm
     {
-        public frmResumenReporte()
-        {
-            InitializeComponent();
-        }
 
         #region title_bar
 
@@ -53,6 +49,12 @@ namespace LP2MegaAutos
         #endregion movement
 
         #endregion title_bar
+
+        public frmResumenReporte()
+        {
+            InitializeComponent();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
+        }
 
 
         private void btnDetalle_Click(object sender, EventArgs e)

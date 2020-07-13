@@ -41,27 +41,28 @@
             this.btn_Ok = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_TotalIngresosEscrito = new System.Windows.Forms.Label();
             this.rnd_color_4 = new LP2MegaAutos.RoundedPanel();
             this.lbl_TotalIngresos = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_PlacaEscrito = new System.Windows.Forms.Label();
             this.rnd_color_3 = new LP2MegaAutos.RoundedPanel();
             this.lbl_Placa = new System.Windows.Forms.Label();
             this.pnl_Direccion = new System.Windows.Forms.Panel();
+            this.lbl_ClienteEscrito = new System.Windows.Forms.Label();
             this.rnd_color_2 = new LP2MegaAutos.RoundedPanel();
             this.lbl_Cliente = new System.Windows.Forms.Label();
             this.pnl_codServ = new System.Windows.Forms.Panel();
+            this.lbl_SedeEscrito = new System.Windows.Forms.Label();
             this.rnd_color_1 = new LP2MegaAutos.RoundedPanel();
             this.lbl_Sede = new System.Windows.Forms.Label();
             this.lbl_OrdenTrabajo = new System.Windows.Forms.Label();
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_TotalEgresosEscrito = new System.Windows.Forms.Label();
             this.roundedPanel1 = new LP2MegaAutos.RoundedPanel();
             this.lbl_TotalEgresos = new System.Windows.Forms.Label();
-            this.lbl_SedeEscrito = new System.Windows.Forms.Label();
-            this.lbl_ClienteEscrito = new System.Windows.Forms.Label();
-            this.lbl_PlacaEscrito = new System.Windows.Forms.Label();
-            this.lbl_TotalIngresosEscrito = new System.Windows.Forms.Label();
-            this.lbl_TotalEgresosEscrito = new System.Windows.Forms.Label();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.title_bar.SuspendLayout();
             this.rpn_ListaPermisosUsuario.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
@@ -252,11 +253,12 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btn_Ok);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(207, 374);
+            this.rnd_guardar.Location = new System.Drawing.Point(207, 350);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -279,17 +281,18 @@
             // 
             this.btn_Ok.BackColor = System.Drawing.Color.Transparent;
             this.btn_Ok.FlatAppearance.BorderSize = 0;
+            this.btn_Ok.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_Ok.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_Ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ok.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ok.ForeColor = System.Drawing.Color.White;
-            this.btn_Ok.Location = new System.Drawing.Point(1, 1);
+            this.btn_Ok.Location = new System.Drawing.Point(3, 3);
             this.btn_Ok.Name = "btn_Ok";
-            this.btn_Ok.Size = new System.Drawing.Size(178, 33);
+            this.btn_Ok.Size = new System.Drawing.Size(174, 29);
             this.btn_Ok.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_Ok, null);
             this.tagsExtender1.SetTag3(this.btn_Ok, null);
-            this.tagsExtender1.SetTagFontName(this.btn_Ok, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_Ok, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_Ok, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btn_Ok, System.Drawing.FontStyle.Bold);
             this.btn_Ok.Text = "OK";
@@ -310,7 +313,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel3.Controls.Add(this.lbl_TotalIngresosEscrito);
             this.panel3.Controls.Add(this.rnd_color_4);
             this.panel3.Controls.Add(this.lbl_TotalIngresos);
@@ -324,6 +327,22 @@
             this.tagsExtender1.SetTagFontName(this.panel3, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.panel3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel3, System.Drawing.FontStyle.Regular);
+            // 
+            // lbl_TotalIngresosEscrito
+            // 
+            this.lbl_TotalIngresosEscrito.AutoSize = true;
+            this.lbl_TotalIngresosEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.lbl_TotalIngresosEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_TotalIngresosEscrito.Location = new System.Drawing.Point(5, 17);
+            this.lbl_TotalIngresosEscrito.Name = "lbl_TotalIngresosEscrito";
+            this.lbl_TotalIngresosEscrito.Size = new System.Drawing.Size(92, 23);
+            this.lbl_TotalIngresosEscrito.TabIndex = 90;
+            this.tagsExtender1.SetTag2(this.lbl_TotalIngresosEscrito, null);
+            this.tagsExtender1.SetTag3(this.lbl_TotalIngresosEscrito, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_TotalIngresosEscrito, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_TotalIngresosEscrito, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_TotalIngresosEscrito, System.Drawing.FontStyle.Bold);
+            this.lbl_TotalIngresosEscrito.Text = "29646.45";
             // 
             // rnd_color_4
             // 
@@ -370,7 +389,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel2.Controls.Add(this.lbl_PlacaEscrito);
             this.panel2.Controls.Add(this.rnd_color_3);
             this.panel2.Controls.Add(this.lbl_Placa);
@@ -384,6 +403,22 @@
             this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
+            // 
+            // lbl_PlacaEscrito
+            // 
+            this.lbl_PlacaEscrito.AutoSize = true;
+            this.lbl_PlacaEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.lbl_PlacaEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_PlacaEscrito.Location = new System.Drawing.Point(5, 17);
+            this.lbl_PlacaEscrito.Name = "lbl_PlacaEscrito";
+            this.lbl_PlacaEscrito.Size = new System.Drawing.Size(88, 23);
+            this.lbl_PlacaEscrito.TabIndex = 89;
+            this.tagsExtender1.SetTag2(this.lbl_PlacaEscrito, null);
+            this.tagsExtender1.SetTag3(this.lbl_PlacaEscrito, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_PlacaEscrito, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_PlacaEscrito, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_PlacaEscrito, System.Drawing.FontStyle.Bold);
+            this.lbl_PlacaEscrito.Text = "KO-9126";
             // 
             // rnd_color_3
             // 
@@ -430,7 +465,7 @@
             // 
             // pnl_Direccion
             // 
-            this.pnl_Direccion.BackColor = System.Drawing.Color.White;
+            this.pnl_Direccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_Direccion.Controls.Add(this.lbl_ClienteEscrito);
             this.pnl_Direccion.Controls.Add(this.rnd_color_2);
             this.pnl_Direccion.Controls.Add(this.lbl_Cliente);
@@ -444,6 +479,22 @@
             this.tagsExtender1.SetTagFontName(this.pnl_Direccion, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnl_Direccion, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_Direccion, System.Drawing.FontStyle.Regular);
+            // 
+            // lbl_ClienteEscrito
+            // 
+            this.lbl_ClienteEscrito.AutoSize = true;
+            this.lbl_ClienteEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.lbl_ClienteEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_ClienteEscrito.Location = new System.Drawing.Point(5, 17);
+            this.lbl_ClienteEscrito.Name = "lbl_ClienteEscrito";
+            this.lbl_ClienteEscrito.Size = new System.Drawing.Size(125, 23);
+            this.lbl_ClienteEscrito.TabIndex = 88;
+            this.tagsExtender1.SetTag2(this.lbl_ClienteEscrito, null);
+            this.tagsExtender1.SetTag3(this.lbl_ClienteEscrito, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_ClienteEscrito, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_ClienteEscrito, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_ClienteEscrito, System.Drawing.FontStyle.Bold);
+            this.lbl_ClienteEscrito.Text = "Diego Tuestin";
             // 
             // rnd_color_2
             // 
@@ -490,7 +541,7 @@
             // 
             // pnl_codServ
             // 
-            this.pnl_codServ.BackColor = System.Drawing.Color.White;
+            this.pnl_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_codServ.Controls.Add(this.lbl_SedeEscrito);
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.lbl_Sede);
@@ -504,6 +555,22 @@
             this.tagsExtender1.SetTagFontName(this.pnl_codServ, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnl_codServ, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnl_codServ, System.Drawing.FontStyle.Regular);
+            // 
+            // lbl_SedeEscrito
+            // 
+            this.lbl_SedeEscrito.AutoSize = true;
+            this.lbl_SedeEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.lbl_SedeEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_SedeEscrito.Location = new System.Drawing.Point(5, 17);
+            this.lbl_SedeEscrito.Name = "lbl_SedeEscrito";
+            this.lbl_SedeEscrito.Size = new System.Drawing.Size(98, 23);
+            this.lbl_SedeEscrito.TabIndex = 87;
+            this.tagsExtender1.SetTag2(this.lbl_SedeEscrito, null);
+            this.tagsExtender1.SetTag3(this.lbl_SedeEscrito, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_SedeEscrito, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_SedeEscrito, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_SedeEscrito, System.Drawing.FontStyle.Bold);
+            this.lbl_SedeEscrito.Text = "Miraflores";
             // 
             // rnd_color_1
             // 
@@ -551,6 +618,7 @@
             // lbl_OrdenTrabajo
             // 
             this.lbl_OrdenTrabajo.AutoSize = true;
+            this.lbl_OrdenTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lbl_OrdenTrabajo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_OrdenTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lbl_OrdenTrabajo.Location = new System.Drawing.Point(23, 46);
@@ -567,6 +635,7 @@
             // lbl_Fecha
             // 
             this.lbl_Fecha.AutoSize = true;
+            this.lbl_Fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lbl_Fecha.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lbl_Fecha.Location = new System.Drawing.Point(435, 44);
@@ -582,7 +651,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel4.Controls.Add(this.lbl_TotalEgresosEscrito);
             this.panel4.Controls.Add(this.roundedPanel1);
             this.panel4.Controls.Add(this.lbl_TotalEgresos);
@@ -596,6 +665,22 @@
             this.tagsExtender1.SetTagFontName(this.panel4, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.panel4, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel4, System.Drawing.FontStyle.Regular);
+            // 
+            // lbl_TotalEgresosEscrito
+            // 
+            this.lbl_TotalEgresosEscrito.AutoSize = true;
+            this.lbl_TotalEgresosEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.lbl_TotalEgresosEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_TotalEgresosEscrito.Location = new System.Drawing.Point(5, 17);
+            this.lbl_TotalEgresosEscrito.Name = "lbl_TotalEgresosEscrito";
+            this.lbl_TotalEgresosEscrito.Size = new System.Drawing.Size(125, 23);
+            this.lbl_TotalEgresosEscrito.TabIndex = 91;
+            this.tagsExtender1.SetTag2(this.lbl_TotalEgresosEscrito, null);
+            this.tagsExtender1.SetTag3(this.lbl_TotalEgresosEscrito, null);
+            this.tagsExtender1.SetTagFontName(this.lbl_TotalEgresosEscrito, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lbl_TotalEgresosEscrito, 14.25F);
+            this.tagsExtender1.SetTagFontStyle(this.lbl_TotalEgresosEscrito, System.Drawing.FontStyle.Bold);
+            this.lbl_TotalEgresosEscrito.Text = "12649763.93";
             // 
             // roundedPanel1
             // 
@@ -640,91 +725,24 @@
             this.tagsExtender1.SetTagFontStyle(this.lbl_TotalEgresos, System.Drawing.FontStyle.Bold);
             this.lbl_TotalEgresos.Text = "Total Egresos";
             // 
-            // lbl_SedeEscrito
+            // pnlBackground
             // 
-            this.lbl_SedeEscrito.AutoSize = true;
-            this.lbl_SedeEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.lbl_SedeEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_SedeEscrito.Location = new System.Drawing.Point(5, 17);
-            this.lbl_SedeEscrito.Name = "lbl_SedeEscrito";
-            this.lbl_SedeEscrito.Size = new System.Drawing.Size(98, 23);
-            this.lbl_SedeEscrito.TabIndex = 87;
-            this.tagsExtender1.SetTag2(this.lbl_SedeEscrito, null);
-            this.tagsExtender1.SetTag3(this.lbl_SedeEscrito, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_SedeEscrito, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_SedeEscrito, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_SedeEscrito, System.Drawing.FontStyle.Bold);
-            this.lbl_SedeEscrito.Text = "Miraflores";
-            // 
-            // lbl_ClienteEscrito
-            // 
-            this.lbl_ClienteEscrito.AutoSize = true;
-            this.lbl_ClienteEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.lbl_ClienteEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_ClienteEscrito.Location = new System.Drawing.Point(5, 17);
-            this.lbl_ClienteEscrito.Name = "lbl_ClienteEscrito";
-            this.lbl_ClienteEscrito.Size = new System.Drawing.Size(125, 23);
-            this.lbl_ClienteEscrito.TabIndex = 88;
-            this.tagsExtender1.SetTag2(this.lbl_ClienteEscrito, null);
-            this.tagsExtender1.SetTag3(this.lbl_ClienteEscrito, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_ClienteEscrito, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_ClienteEscrito, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_ClienteEscrito, System.Drawing.FontStyle.Bold);
-            this.lbl_ClienteEscrito.Text = "Diego Tuestin";
-            // 
-            // lbl_PlacaEscrito
-            // 
-            this.lbl_PlacaEscrito.AutoSize = true;
-            this.lbl_PlacaEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.lbl_PlacaEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_PlacaEscrito.Location = new System.Drawing.Point(5, 17);
-            this.lbl_PlacaEscrito.Name = "lbl_PlacaEscrito";
-            this.lbl_PlacaEscrito.Size = new System.Drawing.Size(88, 23);
-            this.lbl_PlacaEscrito.TabIndex = 89;
-            this.tagsExtender1.SetTag2(this.lbl_PlacaEscrito, null);
-            this.tagsExtender1.SetTag3(this.lbl_PlacaEscrito, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_PlacaEscrito, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_PlacaEscrito, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_PlacaEscrito, System.Drawing.FontStyle.Bold);
-            this.lbl_PlacaEscrito.Text = "KO-9126";
-            // 
-            // lbl_TotalIngresosEscrito
-            // 
-            this.lbl_TotalIngresosEscrito.AutoSize = true;
-            this.lbl_TotalIngresosEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.lbl_TotalIngresosEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_TotalIngresosEscrito.Location = new System.Drawing.Point(5, 17);
-            this.lbl_TotalIngresosEscrito.Name = "lbl_TotalIngresosEscrito";
-            this.lbl_TotalIngresosEscrito.Size = new System.Drawing.Size(92, 23);
-            this.lbl_TotalIngresosEscrito.TabIndex = 90;
-            this.tagsExtender1.SetTag2(this.lbl_TotalIngresosEscrito, null);
-            this.tagsExtender1.SetTag3(this.lbl_TotalIngresosEscrito, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TotalIngresosEscrito, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_TotalIngresosEscrito, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_TotalIngresosEscrito, System.Drawing.FontStyle.Bold);
-            this.lbl_TotalIngresosEscrito.Text = "29646.45";
-            // 
-            // lbl_TotalEgresosEscrito
-            // 
-            this.lbl_TotalEgresosEscrito.AutoSize = true;
-            this.lbl_TotalEgresosEscrito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.lbl_TotalEgresosEscrito.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_TotalEgresosEscrito.Location = new System.Drawing.Point(5, 17);
-            this.lbl_TotalEgresosEscrito.Name = "lbl_TotalEgresosEscrito";
-            this.lbl_TotalEgresosEscrito.Size = new System.Drawing.Size(125, 23);
-            this.lbl_TotalEgresosEscrito.TabIndex = 91;
-            this.tagsExtender1.SetTag2(this.lbl_TotalEgresosEscrito, null);
-            this.tagsExtender1.SetTag3(this.lbl_TotalEgresosEscrito, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TotalEgresosEscrito, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.lbl_TotalEgresosEscrito, 14.25F);
-            this.tagsExtender1.SetTagFontStyle(this.lbl_TotalEgresosEscrito, System.Drawing.FontStyle.Bold);
-            this.lbl_TotalEgresosEscrito.Text = "12649763.93";
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(596, 401);
+            this.pnlBackground.TabIndex = 87;
+            this.tagsExtender1.SetTag2(this.pnlBackground, null);
+            this.tagsExtender1.SetTag3(this.pnlBackground, null);
+            this.tagsExtender1.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlBackground, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
             // 
             // pantallaOrdenTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(595, 399);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.lbl_Fecha);
             this.Controls.Add(this.lbl_OrdenTrabajo);
@@ -738,8 +756,8 @@
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.title_bar);
+            this.Controls.Add(this.pnlBackground);
             this.Name = "pantallaOrdenTrabajo";
-            this.Size = new System.Drawing.Size(595, 447);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
@@ -800,5 +818,6 @@
         private System.Windows.Forms.Label lbl_ClienteEscrito;
         private System.Windows.Forms.Label lbl_TotalIngresosEscrito;
         private System.Windows.Forms.Label lbl_TotalEgresosEscrito;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

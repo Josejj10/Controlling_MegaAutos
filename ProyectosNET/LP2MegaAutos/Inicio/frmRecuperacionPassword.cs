@@ -25,6 +25,7 @@ namespace LP2MegaAutos.Inicio
             InitializeComponent();
             cambiarEstados();
             daoPassword = new ServicioPassword.PasswordWSClient();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         
         public frmRecuperacionPassword(string correo)
@@ -33,6 +34,7 @@ namespace LP2MegaAutos.Inicio
             cambiarEstados();
             _correo = correo;
             daoPassword = new ServicioPassword.PasswordWSClient();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         public void cambiarEstados()

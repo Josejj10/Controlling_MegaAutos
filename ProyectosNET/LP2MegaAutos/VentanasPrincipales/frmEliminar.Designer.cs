@@ -44,16 +44,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTexto = new System.Windows.Forms.Label();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rndEliminar.SuspendLayout();
             this.rpn_Reportes.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Contraseña
             // 
             this.lbl_Contraseña.AutoSize = true;
+            this.lbl_Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lbl_Contraseña.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Contraseña.Location = new System.Drawing.Point(168, 161);
             this.lbl_Contraseña.Name = "lbl_Contraseña";
@@ -137,7 +140,7 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lblTitulo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblTitulo.Location = new System.Drawing.Point(96, 37);
@@ -150,11 +153,12 @@
             // 
             this.rnd_cancelar.ArcRadiusBorde = 5;
             this.rnd_cancelar.ArcRadiusPanel = 5;
+            this.rnd_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_cancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
             this.rnd_cancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_cancelar.Location = new System.Drawing.Point(238, 241);
+            this.rnd_cancelar.Location = new System.Drawing.Point(222, 227);
             this.rnd_cancelar.MenosHeightBorde = 1;
             this.rnd_cancelar.MenosHeightPanel = 1;
             this.rnd_cancelar.MenosWidthBorde = 1;
@@ -177,9 +181,9 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(153, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(151, 29);
             this.btn_cancelar.TabIndex = 0;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
@@ -211,11 +215,12 @@
             // 
             this.rndEliminar.ArcRadiusBorde = 5;
             this.rndEliminar.ArcRadiusPanel = 5;
+            this.rndEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rndEliminar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.rndEliminar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.rndEliminar.Controls.Add(this.btnDarDeBaja);
             this.rndEliminar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndEliminar.Location = new System.Drawing.Point(36, 242);
+            this.rndEliminar.Location = new System.Drawing.Point(51, 227);
             this.rndEliminar.MenosHeightBorde = 1;
             this.rndEliminar.MenosHeightPanel = 1;
             this.rndEliminar.MenosWidthBorde = 1;
@@ -237,9 +242,9 @@
             this.btnDarDeBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDarDeBaja.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarDeBaja.ForeColor = System.Drawing.Color.White;
-            this.btnDarDeBaja.Location = new System.Drawing.Point(1, 1);
+            this.btnDarDeBaja.Location = new System.Drawing.Point(3, 3);
             this.btnDarDeBaja.Name = "btnDarDeBaja";
-            this.btnDarDeBaja.Size = new System.Drawing.Size(161, 33);
+            this.btnDarDeBaja.Size = new System.Drawing.Size(159, 28);
             this.btnDarDeBaja.TabIndex = 0;
             this.btnDarDeBaja.Text = "Confirmar";
             this.btnDarDeBaja.UseVisualStyleBackColor = false;
@@ -249,7 +254,7 @@
             // 
             this.rpn_Reportes.ArcRadiusBorde = 15;
             this.rpn_Reportes.ArcRadiusPanel = 15;
-            this.rpn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rpn_Reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rpn_Reportes.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpn_Reportes.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rpn_Reportes.Controls.Add(this.txt_ContraseñaActual);
@@ -295,7 +300,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.lblTexto, 0, 0);
@@ -318,21 +323,30 @@
             this.lblTexto.Text = "¿Desea ";
             this.lblTexto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Controls.Add(this.rnd_cancelar);
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(430, 277);
+            this.pnlBackground.TabIndex = 83;
+            // 
             // frmEliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 300);
+            this.ClientSize = new System.Drawing.Size(430, 276);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.rndEliminar);
             this.Controls.Add(this.lbl_Contraseña);
             this.Controls.Add(this.rpn_Reportes);
+            this.Controls.Add(this.pnlBackground);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEliminar";
@@ -346,6 +360,7 @@
             this.rpn_Reportes.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.pnlBackground.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,5 +384,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblTexto;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

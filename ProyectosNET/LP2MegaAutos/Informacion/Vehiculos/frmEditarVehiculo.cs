@@ -67,10 +67,6 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             if (!en)
             {
                 // No habilitado
-                lbl_EditarVehiculo.BackColor = txt_placaVehiculo.BackColor =
-                    cboTipoCliente.BackColor = txt_TipoVehiculo.BackColor
-                    = Colores.FrontBackground;
-
                 lbl_EditarVehiculo.ForeColor = txt_placaVehiculo.ForeColor =
                     cboTipoCliente.ForeColor = txt_TipoVehiculo.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =

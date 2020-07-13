@@ -106,9 +106,6 @@ namespace LP2MegaAutos
             if (!en)
             {
                 // No habilitado
-                lblDriver.BackColor = txt_Formula.BackColor = 
-                     Colores.FrontBackground;
-
                 lblDriver.ForeColor = txt_Formula.ForeColor = 
                     rnd_color_1.ColorPanel =
 

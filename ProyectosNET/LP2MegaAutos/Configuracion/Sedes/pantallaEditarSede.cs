@@ -127,10 +127,6 @@ namespace LP2MegaAutos
             if (!en)
             {
                 // No habilitado
-                txt_NombreSede.BackColor = cboDistritos.BackColor =
-                txt_direccion.BackColor = txt_telefono.BackColor =
-                Colores.FormBackground;
-
                 txt_NombreSede.ForeColor = cboDistritos.ForeColor =
                     txt_direccion.ForeColor = txt_telefono.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =

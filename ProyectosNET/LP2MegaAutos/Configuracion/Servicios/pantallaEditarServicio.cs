@@ -53,10 +53,6 @@ namespace LP2MegaAutos
             if (!en)
             {
                 // No habilitado
-                txt_NombreServicio.BackColor = txt_codServ.BackColor =
-                    txt_descripcion.BackColor = cboTipoServicio.BackColor
-                    = Colores.FormBackground;
-
                 txt_NombreServicio.ForeColor = txt_codServ.ForeColor =
                     txt_descripcion.ForeColor = cboTipoServicio.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_3.ColorPanel =

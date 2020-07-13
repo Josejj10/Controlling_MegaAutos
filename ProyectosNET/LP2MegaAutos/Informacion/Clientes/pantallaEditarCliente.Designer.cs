@@ -736,7 +736,8 @@
             this.cboTipoDocumento.FormattingEnabled = true;
             this.cboTipoDocumento.Items.AddRange(new object[] {
             "DNI",
-            "RUC"});
+            "RUC",
+            "CARNET EXTRANJERIA"});
             this.cboTipoDocumento.Location = new System.Drawing.Point(5, 16);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
             this.cboTipoDocumento.Size = new System.Drawing.Size(286, 24);

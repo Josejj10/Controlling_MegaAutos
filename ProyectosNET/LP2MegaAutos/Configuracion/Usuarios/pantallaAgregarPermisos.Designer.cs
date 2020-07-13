@@ -365,7 +365,7 @@
             this.btnTodos.Location = new System.Drawing.Point(2, 3);
             this.btnTodos.Name = "btnTodos";
             this.btnTodos.Size = new System.Drawing.Size(80, 26);
-            this.btnTodos.TabIndex = 0;
+            this.btnTodos.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.btnTodos, null);
             this.tagsExtender1.SetTag3(this.btnTodos, null);
             this.tagsExtender1.SetTagFontName(this.btnTodos, fontsD.Lato);
@@ -415,7 +415,7 @@
             this.btnNinguno.Location = new System.Drawing.Point(2, 3);
             this.btnNinguno.Name = "btnNinguno";
             this.btnNinguno.Size = new System.Drawing.Size(80, 27);
-            this.btnNinguno.TabIndex = 0;
+            this.btnNinguno.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.btnNinguno, null);
             this.tagsExtender1.SetTag3(this.btnNinguno, null);
             this.tagsExtender1.SetTagFontName(this.btnNinguno, fontsD.Lato);
@@ -465,7 +465,7 @@
             this.btnReestablecer.Location = new System.Drawing.Point(2, 3);
             this.btnReestablecer.Name = "btnReestablecer";
             this.btnReestablecer.Size = new System.Drawing.Size(80, 27);
-            this.btnReestablecer.TabIndex = 0;
+            this.btnReestablecer.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.btnReestablecer, null);
             this.tagsExtender1.SetTag3(this.btnReestablecer, null);
             this.tagsExtender1.SetTagFontName(this.btnReestablecer, fontsD.Ninguno);

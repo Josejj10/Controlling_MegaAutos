@@ -237,7 +237,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(174, 29);
-            this.btn_cancelar.TabIndex = 0;
+            this.btn_cancelar.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
             this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
@@ -287,7 +287,7 @@
             this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(174, 29);
-            this.btn_guardar.TabIndex = 0;
+            this.btn_guardar.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
             this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
@@ -395,7 +395,7 @@
             this.txt_TipoVehiculo.Location = new System.Drawing.Point(6, 18);
             this.txt_TipoVehiculo.Name = "txt_TipoVehiculo";
             this.txt_TipoVehiculo.Size = new System.Drawing.Size(284, 23);
-            this.txt_TipoVehiculo.TabIndex = 2;
+            this.txt_TipoVehiculo.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.txt_TipoVehiculo, null);
             this.tagsExtender1.SetTag3(this.txt_TipoVehiculo, null);
             this.tagsExtender1.SetTagFontName(this.txt_TipoVehiculo, fontsD.Lato);
@@ -447,7 +447,7 @@
             this.cboTipoCliente.Location = new System.Drawing.Point(4, 16);
             this.cboTipoCliente.Name = "cboTipoCliente";
             this.cboTipoCliente.Size = new System.Drawing.Size(286, 31);
-            this.cboTipoCliente.TabIndex = 84;
+            this.cboTipoCliente.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
             this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
             this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Lato);
@@ -589,6 +589,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 28);
             this.btnEliminar.TabIndex = 68;
+            this.btnEliminar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
             this.tagsExtender1.SetTag3(this.btnEliminar, null);
             this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);
@@ -610,6 +611,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(28, 28);
             this.btnEditar.TabIndex = 67;
+            this.btnEditar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEditar, null);
             this.tagsExtender1.SetTag3(this.btnEditar, null);
             this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);

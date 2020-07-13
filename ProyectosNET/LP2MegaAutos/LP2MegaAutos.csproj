@@ -763,6 +763,9 @@
     <None Include="Connected Services\ServicioServicio\ServicioWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.activarInactivoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.actualizarUsuarioPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

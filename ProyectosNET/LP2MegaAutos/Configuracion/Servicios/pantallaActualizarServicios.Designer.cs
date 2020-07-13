@@ -68,7 +68,7 @@ namespace LP2MegaAutos
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(515, 18);
-            this.txt_Buscar.TabIndex = 17;
+            this.txt_Buscar.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.txt_Buscar, null);
             this.tagsExtender1.SetTag3(this.txt_Buscar, null);
             this.tagsExtender1.SetTagFontName(this.txt_Buscar, fontsD.Lato);
@@ -227,7 +227,7 @@ namespace LP2MegaAutos
             this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
-            this.btn_Agregar.TabIndex = 75;
+            this.btn_Agregar.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.btn_Agregar, null);
             this.tagsExtender1.SetTag3(this.btn_Agregar, null);
             this.tagsExtender1.SetTagFontName(this.btn_Agregar, fontsD.Montserrat);
@@ -435,7 +435,7 @@ namespace LP2MegaAutos
             this.btnAZ.Location = new System.Drawing.Point(3, 3);
             this.btnAZ.Name = "btnAZ";
             this.btnAZ.Size = new System.Drawing.Size(124, 29);
-            this.btnAZ.TabIndex = 5;
+            this.btnAZ.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.btnAZ, null);
             this.tagsExtender1.SetTag3(this.btnAZ, null);
             this.tagsExtender1.SetTagFontName(this.btnAZ, fontsD.Montserrat);

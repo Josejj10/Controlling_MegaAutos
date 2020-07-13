@@ -181,7 +181,7 @@
             this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(174, 29);
-            this.btn_guardar.TabIndex = 0;
+            this.btn_guardar.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
             this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
@@ -230,7 +230,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(174, 29);
-            this.btn_cancelar.TabIndex = 0;
+            this.btn_cancelar.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
             this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
@@ -392,6 +392,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(28, 28);
             this.btnEditar.TabIndex = 80;
+            this.btnEditar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEditar, null);
             this.tagsExtender1.SetTag3(this.btnEditar, null);
             this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
@@ -415,6 +416,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 28);
             this.btnEliminar.TabIndex = 81;
+            this.btnEliminar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
             this.tagsExtender1.SetTag3(this.btnEliminar, null);
             this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);

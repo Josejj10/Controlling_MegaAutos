@@ -125,7 +125,7 @@
             this.txt_Correo.Location = new System.Drawing.Point(7, 18);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(284, 23);
-            this.txt_Correo.TabIndex = 2;
+            this.txt_Correo.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.txt_Correo, null);
             this.tagsExtender1.SetTag3(this.txt_Correo, null);
             this.tagsExtender1.SetTagFontName(this.txt_Correo, fontsD.Lato);
@@ -201,7 +201,7 @@
             this.txt_Telefono.Location = new System.Drawing.Point(7, 18);
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(284, 23);
-            this.txt_Telefono.TabIndex = 2;
+            this.txt_Telefono.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.txt_Telefono, null);
             this.tagsExtender1.SetTag3(this.txt_Telefono, null);
             this.tagsExtender1.SetTagFontName(this.txt_Telefono, fontsD.Lato);
@@ -354,7 +354,7 @@
             this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(174, 29);
-            this.btn_guardar.TabIndex = 0;
+            this.btn_guardar.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
             this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
@@ -404,7 +404,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(174, 29);
-            this.btn_cancelar.TabIndex = 0;
+            this.btn_cancelar.TabIndex = 8;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
             this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
@@ -566,7 +566,7 @@
             this.cboTipoCliente.Location = new System.Drawing.Point(5, 17);
             this.cboTipoCliente.Name = "cboTipoCliente";
             this.cboTipoCliente.Size = new System.Drawing.Size(286, 31);
-            this.cboTipoCliente.TabIndex = 82;
+            this.cboTipoCliente.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
             this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
             this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Lato);
@@ -625,7 +625,7 @@
             this.txt_NombreCliente.Location = new System.Drawing.Point(27, 42);
             this.txt_NombreCliente.Name = "txt_NombreCliente";
             this.txt_NombreCliente.Size = new System.Drawing.Size(441, 35);
-            this.txt_NombreCliente.TabIndex = 78;
+            this.txt_NombreCliente.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.txt_NombreCliente, null);
             this.tagsExtender1.SetTag3(this.txt_NombreCliente, null);
             this.tagsExtender1.SetTagFontName(this.txt_NombreCliente, fontsD.Lato);
@@ -647,6 +647,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(28, 28);
             this.btnEditar.TabIndex = 79;
+            this.btnEditar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEditar, null);
             this.tagsExtender1.SetTag3(this.btnEditar, null);
             this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
@@ -668,6 +669,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 28);
             this.btnEliminar.TabIndex = 80;
+            this.btnEliminar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
             this.tagsExtender1.SetTag3(this.btnEliminar, null);
             this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);
@@ -750,7 +752,7 @@
             this.cboTipoDocumento.Location = new System.Drawing.Point(5, 16);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
             this.cboTipoDocumento.Size = new System.Drawing.Size(286, 31);
-            this.cboTipoDocumento.TabIndex = 81;
+            this.cboTipoDocumento.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.cboTipoDocumento, null);
             this.tagsExtender1.SetTag3(this.cboTipoDocumento, null);
             this.tagsExtender1.SetTagFontName(this.cboTipoDocumento, fontsD.Lato);

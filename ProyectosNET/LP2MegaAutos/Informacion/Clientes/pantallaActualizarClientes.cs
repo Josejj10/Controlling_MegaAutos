@@ -23,9 +23,9 @@ namespace LP2MegaAutos
             InitializeComponent();
             flpClientes.AutoScroll = true;
             daoCliente = new ServicioCliente.ClienteWSClient();
-            inicializarItemsLista();
+            //inicializarItemsLista();
         }
-        private void inicializarItemsLista()
+        public void inicializarItemsLista()
         {
             _clientes = daoCliente.listarClientes().ToList();
             crearItemLista();

@@ -102,4 +102,14 @@ public class UsuarioWS {
         }
         return usuarios;
     }
+    @WebMethod(operationName = "activarInactivo")
+    public int activarInactivo(@WebParam(name = "idUsuario") int idUsuario) {
+        int resultado = 0;
+        try{
+            resultado = daoUsuario.activarInactivo(idUsuario);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
 }

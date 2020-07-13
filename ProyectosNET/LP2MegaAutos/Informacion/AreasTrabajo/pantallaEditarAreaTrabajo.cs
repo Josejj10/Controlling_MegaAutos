@@ -22,6 +22,7 @@ namespace LP2MegaAutos.Informacion.AreasTrabajo
             _areaTrabajo = new ServicioAreaTrabajo.areaTrabajo();
             lbl_EditarAreaTrabajo.Text = "Agregar Área de Trabajo";
             btnEliminar.Visible = false;
+            txt_nombAreaTrabajo.ForeColor = Colores.LowContrast;
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         

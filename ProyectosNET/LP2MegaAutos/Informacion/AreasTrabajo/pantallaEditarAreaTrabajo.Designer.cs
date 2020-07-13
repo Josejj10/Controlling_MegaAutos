@@ -172,7 +172,7 @@
             this.pnl_nombAreaTrabajo.Controls.Add(this.txt_nombAreaTrabajo);
             this.pnl_nombAreaTrabajo.Controls.Add(this.lbl_nombAreaTrabajo);
             this.pnl_nombAreaTrabajo.Location = new System.Drawing.Point(94, 100);
-            this.pnl_nombAreaTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_nombAreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_nombAreaTrabajo.Name = "pnl_nombAreaTrabajo";
             this.pnl_nombAreaTrabajo.Size = new System.Drawing.Size(292, 41);
             this.pnl_nombAreaTrabajo.TabIndex = 68;
@@ -217,7 +217,7 @@
             this.txt_nombAreaTrabajo.Location = new System.Drawing.Point(7, 18);
             this.txt_nombAreaTrabajo.Name = "txt_nombAreaTrabajo";
             this.txt_nombAreaTrabajo.Size = new System.Drawing.Size(284, 23);
-            this.txt_nombAreaTrabajo.TabIndex = 2;
+            this.txt_nombAreaTrabajo.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.txt_nombAreaTrabajo, null);
             this.tagsExtender1.SetTag3(this.txt_nombAreaTrabajo, null);
             this.tagsExtender1.SetTagFontName(this.txt_nombAreaTrabajo, fontsD.Lato);
@@ -423,7 +423,7 @@
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 29);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.button1, null);
             this.tagsExtender1.SetTag3(this.button1, null);
             this.tagsExtender1.SetTagFontName(this.button1, fontsD.Lato);
@@ -438,8 +438,8 @@
             this.roundedPanel2.ArcRadiusBorde = 5;
             this.roundedPanel2.ArcRadiusPanel = 5;
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.roundedPanel2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
+            this.roundedPanel2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.roundedPanel2.Controls.Add(this.button2);
             this.roundedPanel2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.roundedPanel2.Location = new System.Drawing.Point(57, 148);
@@ -472,7 +472,7 @@
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 29);
-            this.button2.TabIndex = 0;
+            this.button2.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.button2, null);
             this.tagsExtender1.SetTag3(this.button2, null);
             this.tagsExtender1.SetTagFontName(this.button2, fontsD.Lato);
@@ -492,10 +492,11 @@
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(440, 47);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 28);
             this.btnEliminar.TabIndex = 77;
+            this.btnEliminar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
             this.tagsExtender1.SetTag3(this.btnEliminar, null);
             this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);

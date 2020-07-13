@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,6 +21,36 @@ import java.util.List;
 public class Excel {
     int id;
     private byte[] archivo;
+    private Date fechaIni;
+    private Date fechaFin;
+    private Sede sede;
+
+    public Sede getSede() {
+        return sede;
+    }
+
+    public void setSede(Sede sede) {
+        this.sede = sede;
+    }
+    
+    
+    public Date getFechaIni() {
+        return fechaIni;
+    }
+
+    public void setFechaIni(Date fechaIni) {
+        this.fechaIni = fechaIni;
+    }
+
+    public Date getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+    
+    
 
     public Excel(){
         

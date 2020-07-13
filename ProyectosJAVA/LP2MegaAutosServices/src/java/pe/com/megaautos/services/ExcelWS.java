@@ -14,6 +14,7 @@ import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -25,6 +26,7 @@ import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.model.Excel;
+import pe.com.megaautos.model.Reporte;
 import static pe.com.megaautos.services.JoineryExtension.writeListXlsx;
 import static pe.com.megaautos.services.JoineryExtension.writeXlsx;
 
@@ -42,14 +44,66 @@ public class ExcelWS {
     public int insertarArchivoEntrada(@WebParam(name = "archivo") Excel excel) {
         int resultado = 0;
         try{
+            InputStream targetStream1 = new ByteArrayInputStream(excel.getArchivo());
+            DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5, 2);
+            
+            int lastRow = dfFact.length()-1;
+            Date fechaIni = (Date)dfFact.slice(0, lastRow).sortBy(0).resetIndex().col(0).get(0);
+            Date fechaFin = (Date)dfFact.slice(0, lastRow).sortBy(0).resetIndex().col(0).get(lastRow-1);
+            
+            excel.setFechaIni(fechaIni);
+            excel.setFechaFin(fechaFin);
+            
             resultado = daoExcel.insertarArchivoEntrada(excel);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        Excel excel2 = procesar(excel);
-        insertarArchivoSalida(excel2);
+        //TODO actualizarFechas-> genera df y actualiza fecha inicio y fin
+        //Generar reporte
+        //Buscar el más reciente dentrod el rango de fechas
+        //
         return resultado;
     }
+    
+    
+    //
+    @WebMethod(operationName = "generarReporte")
+    public int generarReporte(@WebParam(name = "fechaInicio") String fechaInicio,
+                              @WebParam(name = "fechaFin") String fechaFin,
+                              @WebParam(name = "tipo") String tipo,
+                              @WebParam(name = "idSede") int idSede,
+                              @WebParam(name = "idUsuario") int idUsuario) {
+        int resultado = 0;
+        try{  
+            Date fecha1=new SimpleDateFormat("dd-MM-yyyy").parse(fechaInicio);
+            Date fecha2=new SimpleDateFormat("dd-MM-yyyy").parse(fechaFin);
+            Excel excel = daoExcel.buscar(fecha1, fecha2, idSede);
+            Reporte reporte = procesar(excel, fechaInicio, fechaFin,
+                    tipo, idSede, fecha1, fecha2,
+                    excel.getId(), idUsuario);
+            //Reporte reporte = procesar(excel, tipo,fechaInicio, fechaFin,idSede);
+            //fecha1(dd-MM-aaaa)|fecha2|"s|at|tc"|idSede|idUsuario
+            //Buscas el excel que corresponde
+            //De la lista de excel que tienes
+            //Con ese excel llamaas a procesar(s, at, tc)
+            //en procesar guardas el excel de salida (que contiene las ots y el tipo de reporte)
+            //y lo subes a la bd
+            //procesar debe devolver la clase reporte
+            //Subir reporte a BD
+            //Retornar reporte
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        //TODO actualizarFechas-> genera df y actualiza fecha inicio y fin
+        //Generar reporte
+        //Buscar el más reciente dentrod el rango de fechas
+        //
+//        Excel excel2 = procesar(excel);
+//        
+        return resultado;
+    }
+    
     @WebMethod(operationName = "insertarArchivoSalida")
     public int insertarArchivoSalida(@WebParam(name = "archivo") Excel excel) {
         int resultado = 0;
@@ -87,9 +141,16 @@ public class ExcelWS {
         return excel;
     }
     
-    public Excel procesar(Excel excel){
+    public Reporte procesar(Excel excel, String fechaIni, String fechaFin,
+                    String tipoReporte, int idSede, Date fecha1, Date fecha2,
+                    int idEntrada, int idUsuario){//tipo
         Excel salida = new Excel();
+        Reporte reporte = new Reporte();
         try{
+            //tipo=at
+            //Reporte reporte = 
+            
+            
             //String ruta = "D:\\Documentos\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Cuadro.xlsx";
             //excel.getArchivo = byte[];
             InputStream targetStream1 = new ByteArrayInputStream(excel.getArchivo());
@@ -99,7 +160,7 @@ public class ExcelWS {
             InputStream targetStream5 = new ByteArrayInputStream(excel.getArchivo());
 
             //Obtenemos el dfFact del documento en excel
-            DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5, 2);
+            DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5, 2);      
             DataFrame dfAsig = JoineryExtension.readXlsx(targetStream2,1, 3);
             DataFrame dfSalxAlm = JoineryExtension.readXlsx(targetStream3, 3, 3);
             DataFrame dfCompras = JoineryExtension.readXlsx(targetStream4, 2, 2);
@@ -114,9 +175,10 @@ public class ExcelWS {
             List<Double> sin_igv = new ArrayList<>();
             List<String> mes = new ArrayList<>();
             List<String> dia = new ArrayList<>();
-            List<String> anio = new ArrayList<>();
+            List<String> anio = new ArrayList<>();//2020-20-01 20202002
             DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
             List<Integer> prior = new ArrayList<>();
+            List<String> priorDiv = new ArrayList<>();
             
             //SI QUEREMOS UN REPORTE MENSUAL LA FUNCION RECIBE MES Y ANIO
             for (int i = 0; i < lastRow; i++){
@@ -135,19 +197,19 @@ public class ExcelWS {
                     sin_igv.add(tCambio*(Double)dfGris.get(i, 20));
                 }
                 else sin_igv.add((Double)dfGris.get(i,20));
+
+                String division = dfGris.get(i, 15).toString();
+                if (division.contentEquals("PLANCHADO"))    priorDiv.add("Planchado");
+                else if (division.contentEquals("PINTURA")) priorDiv.add("Pintura");
+                else priorDiv.add("Mecanica");
+
             }
-            
-            
-            dfGris.add(sin_igv);
-            dfGris.rename(lastRow, "Sin_IGV");
-            dfGris.add(prior);
-            dfGris.rename(lastRow, "PRIOR");
-            dfGris.add(anio);
-            dfGris.rename(lastRow, "ANIO");
-            dfGris.add(mes);
-            dfGris.rename(lastRow, "MES");
-            dfGris.add(dia);
-            dfGris.rename(lastRow, "DIA");    
+            dfGris.add("Sin_IGV", sin_igv);
+            dfGris.add("PRIOR", prior);
+            dfGris.add("ANIO", anio);
+            dfGris.add("MES", mes);
+            dfGris.add("DIA", dia);
+            dfGris.add("PRIOR_DIV", priorDiv);
             //System.out.println(dfGris);
 
             //Para el reporte Orden de Trabajo
@@ -158,15 +220,31 @@ public class ExcelWS {
             dfGris = dfGris.sortBy(4).resetIndex();
 
             DataFrame dfOT = dfGris.retain("ANIO", "MES", "No OT", "Sin_IGV").groupBy("No OT", "ANIO", "MES").sum();
+            List<String> colDias = dfGris.retain("ANIO", "MES", "No OT", "DIA").unique("No OT", "ANIO", "MES").col("DIA");
+            dfOT.add("DIA", colDias);
+            int lastRowOT = dfOT.length();
             dfOT = dfOT.resetIndex();
-            int lastRowOT = dfOT.length();    
+            //System.out.println(dfOT);   
 
-            String strAnio = "2020", strMes = "02", strDia;        
+            //ESTE ES EL FILTRO PARA LA FECHA
+            //YA SEA SOLO MES Y ANIO O SOLO ANIO O ANIO MES Y DIA O RANGO DE FECHAS
+            String anio1, mes1, dia1, anio2, mes2, dia2, dfAnio, dfMes, dfDia;
+            anio1 = fechaIni.substring(6, 10);    
+            mes1 = fechaIni.substring(3, 5);    
+            dia1 = fechaIni.substring(0, 2);    
+            anio2 = fechaFin.substring(6, 10);    
+            mes2 = fechaFin.substring(3, 5);    
+            dia2 = fechaFin.substring(0, 2);         
             List<Integer> filtFecha = new ArrayList<>();
             //Filtramos el DF en base a la fecha solicitada:
             for(int i = 0; i<lastRowOT; i++){
-                if(dfOT.get(i, 1).toString().equals(strAnio) && dfOT.get(i, 2).toString().equals(strMes))
-                    filtFecha.add(1);
+                dfAnio = dfOT.get(i, 1).toString();
+                dfMes = dfOT.get(i,2).toString();
+                dfDia = dfOT.get(i, 4).toString();
+                if(anio1.compareTo(dfAnio) <= 0 && anio2.compareTo(dfAnio) >= 0  &&
+                   mes1.compareTo(dfMes) <= 0 && mes2.compareTo(dfMes) >=  0 &&
+                   dia1.compareTo(dfDia) <= 0 && dia2.compareTo(dfDia) >=  0)
+                        filtFecha.add(1);
                 else    filtFecha.add(-1);
             }
             dfOT.add(filtFecha);
@@ -188,7 +266,6 @@ public class ExcelWS {
             DataFrame dfMO = dfAsig.retain("ORDEN DE TRABAJO", "HORA AJUSTADA", "TERCEROS / PLANCHADOR" ,"PAÑOS AJUSTADOS", "TERCEROS/PINTOR ($)","HORAS MECÁNICA")
                                    .groupBy("ORDEN DE TRABAJO")
                                    .sum();
-
             List<Double> salidas_alm = new ArrayList<>();
             List<Double> compras_rpto = new ArrayList<>();
             List<Double> serv_terceros = new ArrayList<>();
@@ -289,173 +366,23 @@ public class ExcelWS {
 
             dfOT = dfOT.drop("FiltFecha");
             dfOT.rename("Sin_IGV", "TOTAL INGRESOS");
-            dfOT.add(salidas_alm); //CHECK
-            dfOT.rename(lastRowOT, "Salidas_Almacen");
-            dfOT.add(compras_rpto); //CHECK
-            dfOT.rename(lastRowOT, "Compras_Rpto");
-            dfOT.add(serv_terceros); //CHECK
-            dfOT.rename(lastRowOT, "Serv_Terceros");        
-            dfOT.add(mo_mecanica); //CHECK
-            dfOT.rename(lastRowOT, "MO_Mecanica");
-            dfOT.add(mo_planchado); //CHECK
-            dfOT.rename(lastRowOT, "MO_Planchado");        
-            dfOT.add(mo_pintura); //CHECK
-            dfOT.rename(lastRowOT, "MO_Pintura");
-            dfOT.add(serv_ter); //CHECK
-            dfOT.rename(lastRowOT, "Ser_Ter_Taller");
-            dfOT.add(total_gastos); //CHECK
-            dfOT.rename(lastRowOT, "TOTAL GASTOS");
-            dfOT.add(margen);            
-            dfOT.rename(lastRowOT, "Margen Bruto");
-            dfOT.add(porc);
-            dfOT.rename(lastRowOT, "PORCENTAJE UTILIDAD");
-            dfOT.add(tipo_sin);
-            dfOT.rename(lastRowOT, "Tipo de Siniestro");         
-            dfOT.add(placas);
-            dfOT.rename(lastRowOT, "Placa");
-            dfOT.add(marca);
-            dfOT.rename(lastRowOT, "Marca");   
-            dfOT.add(modelo);
-            dfOT.rename(lastRowOT, "Modelo");           
-            dfOT.add(clientes);
-            dfOT.rename(lastRowOT, "Cliente"); 
-            dfOT.add(tipo_cli);
-            dfOT.rename(lastRowOT, "Tipo de Cliente");           
-             System.out.println(dfOT);  
-
-            //Reporte por tipo_cliente:
-            DataFrame repTipoCli = dfOT.retain("Tipo de Cliente", "TOTAL INGRESOS", "TOTAL GASTOS", "Margen Bruto").groupBy("Tipo de Cliente").sum().resetIndex();
-            int lastRowTipoCli = repTipoCli.length();
-            List<Double> margenTipCli = new ArrayList<>();
-            double totalFac = 0, totalCosto = 0, totalMargen = 0, totalPorc;
-            for (int i = 0; i<lastRowTipoCli; i++){
-                Double totalI = (Double)repTipoCli.get(i, 1);
-                if(totalI == 0)   margenTipCli.add(0.0);
-                else margenTipCli.add((Double)repTipoCli.get(i, 3)/totalI*100);
-                totalFac += totalI;
-                totalCosto += (Double)repTipoCli.get(i, 2);
-                totalMargen += (Double)repTipoCli.get(i,3);
-            }
-            if (totalFac == 0)  totalPorc = 0.0;
-            else totalPorc = totalMargen/totalFac*100;
-
-            repTipoCli.rename("TOTAL INGRESOS", "Facturación");
-            repTipoCli.rename("TOTAL GASTOS", "Costo");        
-            repTipoCli.add(margenTipCli);
-            repTipoCli.rename(lastRowTipoCli, "%");
-            List<Object> totalGeneral = new ArrayList<>();
-            totalGeneral.add("Total General");
-            totalGeneral.add(totalFac);
-            totalGeneral.add(totalCosto);
-            totalGeneral.add(totalMargen);
-            totalGeneral.add(totalPorc);
-            repTipoCli = repTipoCli.append(totalGeneral);
-            System.out.println(repTipoCli);  
-
-            //Reporte por tipo_siniestro:
-            DataFrame repTipoSin = dfOT.retain("Tipo de Siniestro", "TOTAL INGRESOS", "TOTAL GASTOS", "Margen Bruto").groupBy("Tipo de Siniestro").sum().resetIndex();
-            int lastRowTipoSin = repTipoSin.length();
-            List<Double> margenTipSin = new ArrayList<>();
-            totalFac = totalCosto = totalMargen = 0; 
-
-            for (int i = 0; i<lastRowTipoSin; i++){
-                Double totalI = (Double)repTipoSin.get(i, 1);
-                if(totalI == 0)   margenTipSin.add(0.0);
-                else margenTipSin.add((Double)repTipoSin.get(i, 3)/totalI*100);
-                totalFac += totalI;
-                totalCosto += (Double)repTipoSin.get(i, 2);
-                totalMargen += (Double)repTipoSin.get(i,3);
-            }
-            if (totalFac == 0)  totalPorc = 0.0;
-            else totalPorc = totalMargen/totalFac*100;
-
-            repTipoSin.rename("TOTAL INGRESOS", "Facturación");
-            repTipoSin.rename("TOTAL GASTOS", "Costo");        
-            repTipoSin.add(margenTipSin);
-            repTipoSin.rename(lastRowTipoSin, "%");
-            totalGeneral = new ArrayList<>();
-            totalGeneral.add("Total General");
-            totalGeneral.add(totalFac);
-            totalGeneral.add(totalCosto);
-            totalGeneral.add(totalMargen);
-            totalGeneral.add(totalPorc);
-            repTipoSin = repTipoSin.append(totalGeneral);
-            System.out.println(repTipoSin);
-            
-            //Para la tabla cliente:
-            DataFrame dfCliente = dfGris.retain("No OT", "R.U.C.", "Nombre / Razón Social");
-            dfCliente = dfCliente.unique("No OT").joinOn(dfAsig.retain("ORDEN DE TRABAJO", "TIPO DE CLIENTE", "TIPO SINIESTRO").unique("ORDEN DE TRABAJO"), DataFrame.JoinType.LEFT, "No OT");
-            int lastRowCli = dfCliente.length();
-            //Generamos la columna con el tipo de documento
-            List<String> tipoDoc = new ArrayList<>();
-            List <String> a = new ArrayList<>();
-            for (int i = 0; i < lastRowCli; i++){
-                int numDig = dfCliente.get(i, 1).toString().length();
-                if (numDig == 11)  tipoDoc.add("RUC");
-                else if (numDig == 8)  tipoDoc.add("DNI");
-                else tipoDoc.add("S/TIPO");
-                a.add("-");
-            }
-            
-            DataFrame tablaCliente = new DataFrame();
-            tablaCliente.add(dfCliente.col("Nombre / Razón Social"));
-            tablaCliente.rename(0, "NOMBRE CLIENTE");
-            tablaCliente.add(dfCliente.col("TIPO DE CLIENTE"));        
-            tablaCliente.rename(lastRowCli, "TIPO DE CLIENTE");
-            tablaCliente.add(tipoDoc);
-            tablaCliente.rename(lastRowCli, "TIPO DE DOCUMENTO");
-            tablaCliente.add(dfCliente.col("R.U.C."));
-            tablaCliente.rename(lastRowCli, "NUMERO DOCUMENTO");
-            tablaCliente.add(a);
-            tablaCliente.rename(lastRowCli, "TELEFONO");
-            tablaCliente.add(a);
-            tablaCliente.rename(lastRowCli, "CORREO");        
-            tablaCliente = tablaCliente.unique("NOMBRE CLIENTE");
-            System.out.println(tablaCliente);
-            //System.out.println(tablaCliente);
-            ClienteDAO daoCliente = DBController.controller.getClienteDAO();
-            daoCliente.guardarBatch(tablaCliente);
-
-            //Para la tabla Vehiculo
-            DataFrame dfVehiculo = dfGris.retain("No OT", "Placa", "Nombre / Razón Social");
-            dfVehiculo = dfVehiculo.unique("No OT").joinOn(dfAsig.retain("ORDEN DE TRABAJO", "MARCA", "MODELO").unique("ORDEN DE TRABAJO"), DataFrame.JoinType.INNER, "No OT");
-            int lastRowVeh = dfVehiculo.length();
-            //Generamos la columna con el tipo de documento
-            List<String> tipoVeh = new ArrayList<>();
-            String tipo;
-            for (int i = 0; i < lastRowVeh; i++){
-                tipo = dfVehiculo.get(i,4).toString() + " " + dfVehiculo.get(i,5).toString();
-                tipoVeh.add(tipo);
-            }        
-            DataFrame tablaVehiculo = new DataFrame();
-            tablaVehiculo.add(dfVehiculo.col("Placa"));
-            tablaVehiculo.rename(0, "PLACA");
-            tablaVehiculo.add(tipoVeh);
-            tablaVehiculo.rename(lastRowVeh, "TIPO VEHICULO");
-            tablaVehiculo.add(dfVehiculo.col("Nombre / Razón Social"));
-            tablaVehiculo.rename(lastRowVeh, "CLIENTE");
-            tablaVehiculo = tablaVehiculo.unique("PLACA");
-            System.out.println(tablaVehiculo);
-            //System.out.println(tablaVehiculo);
-            VehiculoDAO daoVehiculo = DBController.controller.getVehiculoDAO();
-            daoVehiculo.guardarBatch(tablaVehiculo);
-
-            //Para la tabla Area de Trabajo
-            DataFrame tablaAreaTrabajo = dfGris.retain("División");
-            tablaAreaTrabajo = tablaAreaTrabajo.unique("División");
-            int cant = tablaAreaTrabajo.length();
-            List <Double>b = new ArrayList<>();
-            for (int i=0; i<cant;i++){
-                b.add(0.0);
-            }
-            tablaAreaTrabajo.rename("División", "Area de Trabajo"); 
-            tablaAreaTrabajo.add(b);
-            tablaAreaTrabajo.rename(cant, "Total Ingresos"); 
-            tablaAreaTrabajo.add(b);      
-            tablaAreaTrabajo.rename(cant, "Total Egresos"); 
-            //System.out.println(tablaAreaTrabajo);
-            AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
-            daoAreaTrabajo.guardarBatch(tablaAreaTrabajo);
+            dfOT.add("Salidas_Almacen", salidas_alm); //CHECK
+            dfOT.add("Compras_Rpto", compras_rpto); //CHECK
+            dfOT.add("Serv_Terceros", serv_terceros); //CHECK
+            dfOT.add("MO_Mecanica", mo_mecanica); //CHECK
+            dfOT.add("MO_Planchado", mo_planchado); //CHECK
+            dfOT.add("MO_Pintura", mo_pintura); //CHECK
+            dfOT.add("Ser_Ter_Taller", serv_ter); //CHECK
+            dfOT.add("TOTAL GASTOS", total_gastos); //CHECK
+            dfOT.add("Margen Bruto", margen);            
+            dfOT.add("PORCENTAJE UTILIDAD", porc);
+            dfOT.add("Tipo de Siniestro", tipo_sin);
+            dfOT.add("Placa", placas);
+            dfOT.add("Marca", marca);
+            dfOT.add("Modelo", modelo);
+            dfOT.add("Cliente", clientes);
+            dfOT.add("Tipo de Cliente", tipo_cli);
+//            System.out.println(dfOT);  
 
             String rutaSalida = "/Salida.xlsx";
             File fileSalida = new File(rutaSalida);
@@ -464,16 +391,206 @@ public class ExcelWS {
             List<DataFrame> dfs = new ArrayList<>();
             nombres.add("Rep. por Orden de Trabajo");
             dfs.add(dfOT);
-            nombres.add("Rep. por Tipo de Siniestro");
-            dfs.add(repTipoSin);
-            nombres.add("Rep. por Tipo de Cliente");
-            dfs.add(repTipoCli);
-            salida.setArchivo(writeListXlsx(dfs, nombres, targetStream));
+
+            DataFrame<Object> repTipoCli = new DataFrame<>();
             
+            DataFrame<Object> repTipoSin = new DataFrame<>();
+            
+            DataFrame<Object> repAreaTrabajo = new DataFrame<>();
+                    
+            String titulo = "";
+            Double ingresos = 0.0;
+            Double egresos = 0.0;
+            
+            switch(tipoReporte){
+                case "tipoCliente":
+                    //Reporte por tipo_cliente:"
+                    repTipoCli = dfOT.retain("Tipo de Cliente", "TOTAL INGRESOS", "TOTAL GASTOS", "Margen Bruto").groupBy("Tipo de Cliente").sum().resetIndex();
+                    int lastRowTipoCli = repTipoCli.length();
+                    List<Double> margenTipCli = new ArrayList<>();
+                    double totalFac = 0, totalCosto = 0, totalMargen = 0, totalPorc;
+                    for (int i = 0; i<lastRowTipoCli; i++){
+                        Double totalI = (Double)repTipoCli.get(i, 1);
+                        if(totalI == 0)   margenTipCli.add(0.0);
+                        else margenTipCli.add((Double)repTipoCli.get(i, 3)/totalI*100);
+                        totalFac += totalI;
+                        totalCosto += (Double)repTipoCli.get(i, 2);
+                        totalMargen += (Double)repTipoCli.get(i,3);
+                    }
+                    if (totalFac == 0)  totalPorc = 0.0;
+                    else totalPorc = totalMargen/totalFac*100;
+
+                    repTipoCli.rename("TOTAL INGRESOS", "Facturación");
+                    repTipoCli.rename("TOTAL GASTOS", "Costo");        
+                    repTipoCli.add(margenTipCli);
+                    repTipoCli.rename(lastRowTipoCli, "%");
+                    List<Object> totalGeneral = new ArrayList<>();
+                    totalGeneral.add("Total General");
+                    totalGeneral.add(totalFac);
+                    totalGeneral.add(totalCosto);
+                    totalGeneral.add(totalMargen);
+                    totalGeneral.add(totalPorc);
+                    repTipoCli = repTipoCli.append(totalGeneral);
+                    System.out.println(repTipoCli); 
+                    titulo = "Rep. por Tipo de Cliente";
+                    ingresos = totalFac;
+                    egresos = totalCosto;
+                    nombres.add(titulo);
+                    dfs.add(repTipoCli);
+                    break;
+                case "tipoSiniestro":
+                    //Reporte por tipo_siniestro:
+                    repTipoSin = dfOT.retain("Tipo de Siniestro", "TOTAL INGRESOS", "TOTAL GASTOS", "Margen Bruto").groupBy("Tipo de Siniestro").sum().resetIndex();
+                    int lastRowTipoSin = repTipoSin.length();
+                    List<Double> margenTipSin = new ArrayList<>();
+                    totalFac = totalCosto = totalMargen = 0; 
+
+                    for (int i = 0; i<lastRowTipoSin; i++){
+                        Double totalI = (Double)repTipoSin.get(i, 1);
+                        if(totalI == 0)   margenTipSin.add(0.0);
+                        else margenTipSin.add((Double)repTipoSin.get(i, 3)/totalI*100);
+                        totalFac += totalI;
+                        totalCosto += (Double)repTipoSin.get(i, 2);
+                        totalMargen += (Double)repTipoSin.get(i,3);
+                    }
+                    if (totalFac == 0)  totalPorc = 0.0;
+                    else totalPorc = totalMargen/totalFac*100;
+                    repTipoSin.rename("TOTAL INGRESOS", "Facturación");
+                    repTipoSin.rename("TOTAL GASTOS", "Costo");        
+                    repTipoSin.add(margenTipSin);
+                    repTipoSin.rename(lastRowTipoSin, "%");
+                    totalGeneral = new ArrayList<>();
+                    totalGeneral.add("Total General");
+                    totalGeneral.add(totalFac);
+                    totalGeneral.add(totalCosto);
+                    totalGeneral.add(totalMargen);
+                    totalGeneral.add(totalPorc);
+                    repTipoSin = repTipoSin.append(totalGeneral);
+                    System.out.println(repTipoSin);
+                    titulo = "Rep. por Tipo de Siniestro";
+                    ingresos = totalFac;
+                    egresos = totalCosto;
+                    nombres.add(titulo);
+                    dfs.add(repTipoSin);
+                    break;
+                case "areaTrabajo":
+                    Double totalPlanchado, totalPintura, totalMecanica;
+                    totalPlanchado = totalPintura = totalMecanica = 0.0;
+                    for (int i = 0;i<lastRowOT; i++){
+                        totalPlanchado += (Double)dfOT.get(i, 9);
+                        totalPintura += (Double)dfOT.get(i, 10);
+                        totalMecanica += (Double)dfOT.get(i, 8) 
+                                       + (Double)dfOT.get(i, 7)
+                                       + (Double)dfOT.get(i, 6)
+                                       + (Double)dfOT.get(i, 5);
+                    }
+                    repAreaTrabajo = dfGris.retain("PRIOR_DIV", "Sin_IGV").groupBy("PRIOR_DIV").sum();
+                    totalGeneral = new ArrayList<>();
+                    totalGeneral.add(totalPintura);
+                    totalGeneral.add(totalPlanchado);
+                    totalGeneral.add(totalMecanica);
+                    repAreaTrabajo.rename("PRIOR_DIV", "Area de Trabajo");
+                    repAreaTrabajo.rename("Sin_IGV", "Total Ingresos");
+                    repAreaTrabajo.add("Total Egresos", totalGeneral);
+                    repAreaTrabajo = repAreaTrabajo.resetIndex();
+                    System.out.println(repAreaTrabajo);
+                    titulo = "Rep. por Area de Trabajo";
+                    nombres.add(titulo);
+                    dfs.add(repAreaTrabajo);
+                    break;
+            }
+            
+            //Para la tabla cliente:
+            DataFrame dfCliente = dfOT.retain("No OT", "RUC", "Cliente", "Tipo de Cliente");
+            //Generamos la columna con el tipo de documento
+            List<String> tipoDoc = new ArrayList<>();
+            List<String> a = new ArrayList<>();
+            for (int i = 0; i < lastRowOT; i++){
+                int numDig = dfCliente.get(i, 1).toString().length();
+                if (numDig == 11)  tipoDoc.add("RUC");
+                else if (numDig == 8)  tipoDoc.add("DNI");
+                else if (numDig == 9) tipoDoc.add("CARNET EXTRANJERIA");
+                a.add("-");
+            }
+            DataFrame tablaCliente = new DataFrame();
+            tablaCliente.add("NOMBRE CLIENTE", dfCliente.col("Cliente"));
+            tablaCliente.add("TIPO DE CLIENTE", dfCliente.col("Tipo de Cliente"));        
+            tablaCliente.add("TIPO DE DOCUMENTO", tipoDoc);
+            tablaCliente.add("NUMERO DOCUMENTO", dfCliente.col("RUC"));
+            tablaCliente.add("TELEFONO", a);
+            tablaCliente.add("CORREO", a);
+            tablaCliente = tablaCliente.unique("NOMBRE CLIENTE");
+            //System.out.println(tablaCliente);
+            ClienteDAO daoCliente = DBController.controller.getClienteDAO();
+            daoCliente.guardarBatch(tablaCliente);
+    //
+            //Para la tabla Vehiculo
+            DataFrame dfVehiculo = dfOT.retain("No OT", "Placa", "Marca", "Modelo", "Cliente");
+            //Generamos la columna con el tipo de documento
+            List<String> tipoVeh = new ArrayList<>();
+            String tipo;
+            for (int i = 0; i < lastRowOT; i++){
+                tipo = dfVehiculo.get(i,2).toString() + " " + dfVehiculo.get(i,3).toString();
+                tipoVeh.add(tipo);
+            }        
+            DataFrame tablaVehiculo = new DataFrame();
+            tablaVehiculo.add("PLACA", dfVehiculo.col("Placa"));
+            tablaVehiculo.add("TIPO VEHICULO", tipoVeh);
+            tablaVehiculo.add("CLIENTE", dfVehiculo.col("Cliente"));
+            tablaVehiculo = tablaVehiculo.unique("PLACA");
+            System.out.println(tablaVehiculo);
+            VehiculoDAO daoVehiculo = DBController.controller.getVehiculoDAO();
+            daoVehiculo.guardarBatch(tablaVehiculo);
+
+            if(tipoReporte.equals("areaTrabajo")){
+                AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
+                daoAreaTrabajo.guardarBatch(repAreaTrabajo);
+            }
+            else {
+                Double totalPlanchado, totalPintura, totalMecanica;
+                totalPlanchado = totalPintura = totalMecanica = 0.0;
+                for (int i = 0;i<lastRowOT; i++){
+                    totalPlanchado += (Double)dfOT.get(i, 9);
+                    totalPintura += (Double)dfOT.get(i, 10);
+                    totalMecanica += (Double)dfOT.get(i, 8) 
+                                   + (Double)dfOT.get(i, 7)
+                                   + (Double)dfOT.get(i, 6)
+                                   + (Double)dfOT.get(i, 5);
+                }
+                repAreaTrabajo = dfGris.retain("PRIOR_DIV", "Sin_IGV").groupBy("PRIOR_DIV").sum();
+                List<Object> totalGeneral = new ArrayList<>();
+                totalGeneral.add(totalPintura);
+                totalGeneral.add(totalPlanchado);
+                totalGeneral.add(totalMecanica);
+                repAreaTrabajo.rename("PRIOR_DIV", "Area de Trabajo");
+                repAreaTrabajo.rename("Sin_IGV", "Total Ingresos");
+                repAreaTrabajo.add("Total Egresos", totalGeneral);
+                repAreaTrabajo = repAreaTrabajo.resetIndex();
+                AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
+                daoAreaTrabajo.guardarBatch(repAreaTrabajo);
+            }
+            
+            //IMPRIMIR TABLAS Y REPORTES
+            
+            salida.setArchivo(writeListXlsx(dfs, nombres, targetStream));
+            salida.setFechaIni(fecha1);
+            salida.setFechaFin(fecha2);
+            salida.getSede().setId(idSede);
+            int idExcelSalida = insertarArchivoSalida(salida);
+            reporte.setFechaInicio(fecha1);
+            reporte.setFechaFin(fecha2);
+            reporte.getSede().setId(idSede);
+            reporte.setIdExcelSalida(idExcelSalida);
+            reporte.setIdExcelEntrada(idEntrada);
+            reporte.setIdUsuario(idUsuario);
+            reporte.setTipoReporte(tipoReporte);
+            reporte.setTitulo(titulo);
+            reporte.setIngresos(ingresos);
+            reporte.setEgresos(egresos);
         }
         catch(Exception ex){
             System.out.println(ex);
         }
-        return salida;
+        return reporte;
     }
 }

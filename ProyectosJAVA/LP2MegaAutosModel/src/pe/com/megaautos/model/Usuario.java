@@ -16,6 +16,7 @@ public class Usuario {
     private Date fechaCreado;
     private String token;
     private Date fechaValidezToken;
+    private int activo;
     // Permisos con los que cuenta el usuario
     // Son permisos para modificar clases o crear reportes
     private ArrayList<EPermisos> permisos; 
@@ -142,6 +143,14 @@ public class Usuario {
 
     public void setFechaValidezToken(Date fechaValidezToken) {
         this.fechaValidezToken = fechaValidezToken;
+    }
+
+    public int getActivo() {
+        return activo;
+    }
+
+    public void setActivo(int activo) {
+        this.activo = activo;
     }
 
     

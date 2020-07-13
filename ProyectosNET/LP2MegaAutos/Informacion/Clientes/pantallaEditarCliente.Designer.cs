@@ -244,7 +244,7 @@
             this.pnl_NumeroDocumento.Controls.Add(this.rnd_color_1);
             this.pnl_NumeroDocumento.Controls.Add(this.txt_NumeroDocumento);
             this.pnl_NumeroDocumento.Controls.Add(this.lbl_NumeroDocumento);
-            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(151, 114);
+            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(151, 112);
             this.pnl_NumeroDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_NumeroDocumento.Name = "pnl_NumeroDocumento";
             this.pnl_NumeroDocumento.Size = new System.Drawing.Size(292, 41);
@@ -346,6 +346,7 @@
             // 
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -395,6 +396,7 @@
             // 
             this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -639,7 +641,6 @@
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Location = new System.Drawing.Point(515, 42);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
@@ -661,7 +662,6 @@
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(557, 42);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
@@ -707,7 +707,7 @@
             this.roundedPanel2.MenosWidthPanel = 1;
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.PorcLuzColorBorde = 0;
-            this.roundedPanel2.Size = new System.Drawing.Size(3, 36);
+            this.roundedPanel2.Size = new System.Drawing.Size(3, 42);
             this.roundedPanel2.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.roundedPanel2, null);
             this.tagsExtender1.SetTag3(this.roundedPanel2, null);
@@ -725,10 +725,10 @@
             this.pnl_TipoDocumento.Controls.Add(this.cboTipoDocumento);
             this.pnl_TipoDocumento.Controls.Add(this.roundedPanel2);
             this.pnl_TipoDocumento.Controls.Add(this.lbl_TipoDocumento);
-            this.pnl_TipoDocumento.Location = new System.Drawing.Point(151, 163);
+            this.pnl_TipoDocumento.Location = new System.Drawing.Point(151, 158);
             this.pnl_TipoDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_TipoDocumento.Name = "pnl_TipoDocumento";
-            this.pnl_TipoDocumento.Size = new System.Drawing.Size(292, 41);
+            this.pnl_TipoDocumento.Size = new System.Drawing.Size(292, 52);
             this.pnl_TipoDocumento.TabIndex = 39;
             this.tagsExtender1.SetTag2(this.pnl_TipoDocumento, null);
             this.tagsExtender1.SetTag3(this.pnl_TipoDocumento, null);
@@ -740,7 +740,8 @@
             // 
             this.cboTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.cboTipoDocumento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboTipoDocumento.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboTipoDocumento.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cboTipoDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.cboTipoDocumento.FormattingEnabled = true;
             this.cboTipoDocumento.Items.AddRange(new object[] {
             "DNI",
@@ -748,12 +749,12 @@
             "CARNET EXTRANJERIA"});
             this.cboTipoDocumento.Location = new System.Drawing.Point(5, 16);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
-            this.cboTipoDocumento.Size = new System.Drawing.Size(286, 24);
+            this.cboTipoDocumento.Size = new System.Drawing.Size(286, 31);
             this.cboTipoDocumento.TabIndex = 81;
             this.tagsExtender1.SetTag2(this.cboTipoDocumento, null);
             this.tagsExtender1.SetTag3(this.cboTipoDocumento, null);
             this.tagsExtender1.SetTagFontName(this.cboTipoDocumento, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.cboTipoDocumento, 10F);
+            this.tagsExtender1.SetTagFontSize(this.cboTipoDocumento, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.cboTipoDocumento, System.Drawing.FontStyle.Bold);
             // 
             // pnlBackground
@@ -802,7 +803,6 @@
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
-            this.Load += new System.EventHandler(this.pantallaEditarCliente_Load);
             this.pnl_Correo.ResumeLayout(false);
             this.pnl_Correo.PerformLayout();
             this.pnl_Telefono.ResumeLayout(false);

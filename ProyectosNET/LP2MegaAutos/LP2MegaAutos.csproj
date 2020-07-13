@@ -278,12 +278,6 @@
     <Compile Include="Configuracion\Usuarios\pantallaActualizarUsuarios.Designer.cs">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion\Drivers\pantallaAgregarDriver.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
-      <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -525,9 +519,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\Usuarios\pantallaActualizarUsuarios.resx">
       <DependentUpon>pantallaActualizarUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\Drivers\pantallaAgregarDriver.resx">
-      <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>

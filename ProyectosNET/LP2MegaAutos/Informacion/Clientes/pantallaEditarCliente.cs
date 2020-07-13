@@ -74,10 +74,6 @@ namespace LP2MegaAutos
             this.DialogResult = DialogResult.OK;
         }
 
-        private void pantallaEditarCliente_Load(object sender, EventArgs e)
-        {
-
-        }
         #region title_bar
 
         #region botones
@@ -145,16 +141,12 @@ namespace LP2MegaAutos
                 cboTipoDocumento.Enabled = txt_Telefono.Enabled = 
                 cboTipoCliente.Enabled = btn_guardar.Enabled
                 = !txt_NombreCliente.Enabled;
-
             
             // TODO TIPO DOC DISABLED (DEPENDE D LA CANTIDAD DE DIGITOS EN NUM DOC
 
             if (!en)
             {
                 // No habilitado
-                txt_NombreCliente.BackColor = txt_NumeroDocumento.BackColor =
-                    cboTipoDocumento.BackColor = txt_Telefono.BackColor = txt_Correo.BackColor = cboTipoCliente.BackColor = Colores.FrontBackground;
-
                 txt_NombreCliente.ForeColor = txt_NumeroDocumento.ForeColor =
                     cboTipoDocumento.ForeColor = txt_Telefono.ForeColor =
                     txt_Correo.ForeColor = cboTipoCliente.ForeColor =

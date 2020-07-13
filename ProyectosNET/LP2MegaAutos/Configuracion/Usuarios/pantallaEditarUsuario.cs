@@ -41,11 +41,11 @@ namespace LP2MegaAutos
         {
             if (usuario == null) this.DialogResult = DialogResult.Cancel;
             InitializeComponent();
+            _usuario = usuario;
             txtNombre.Text = OtrosHelper.tipoOracion(usuario.nombre);    
             txt_Correo.Text = usuario.correo.ToLower();
             txt_RolUsuario.Text = OtrosHelper.tipoOracion(usuario.tipoUsuario);
             txt_NuevaCont.Text = txt_RepNCont.Text = "";
-            _usuario = usuario;
             _agregando = false;
             if (_usuario.permisos == null) _usuario.permisos = _permisosIniciales.ToArray();
             _permisosIniciales = _usuario.permisos.ToList();
@@ -392,9 +392,6 @@ namespace LP2MegaAutos
                 if (!en)
             {
                 // No habilitado
-                txt_NuevaCont.Enabled = txt_RepNCont.Enabled = false;
-                txtNombre.BackColor = Colores.FrontBackground;
-
                 txtNombre.ForeColor = txt_Correo.ForeColor =
                     txt_NuevaCont.ForeColor = txt_RolUsuario.ForeColor =
                     txt_RepNCont.ForeColor =

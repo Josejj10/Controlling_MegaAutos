@@ -107,27 +107,6 @@ namespace LP2MegaAutos
                 MessageBox.Show("OK");
         }
 
-        private void btnAgregarClick(Object sender, EventArgs e)
-        {
-            pantallaAgregarDriver pas = new pantallaAgregarDriver();
-
-            if (pas.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-                MessageBox.Show("OK");
-
-            ////MessageBox.Show("NO AUN");
-            //if (!this.Controls.Contains(pantallaAgregarDriver.Instancia))
-            //{
-            //    this.Controls.Add(pantallaAgregarDriver.Instancia);
-            //    pantallaAgregarDriver.Instancia.Dock = DockStyle.Fill;
-            //    if (DarkMode.is_dark_mode_active())
-            //        DarkMode.iniciarSinTimer(pantallaAgregarDriver.Instancia.Parent);
-            //}
-            //pantallaAgregarDriver.Instancia.BringToFront();
-        }
-
         private void btnAZ_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
@@ -170,11 +149,6 @@ namespace LP2MegaAutos
             this.btnReciente.BackColor = Colores.ChooseAmarillo;
             this.btnZA.BackColor = Color.Transparent;
             this.btnAntiguo.BackColor = Color.Transparent;
-        }
-
-        private void pantallaActualizarDrivers_Load(object sender, EventArgs e)
-        {
-
         }
 
 

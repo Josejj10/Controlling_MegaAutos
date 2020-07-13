@@ -201,7 +201,7 @@
             this.lbl_ListaClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaClientes.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaClientes.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaClientes.Location = new System.Drawing.Point(229, 2);
+            this.lbl_ListaClientes.Location = new System.Drawing.Point(244, 2);
             this.lbl_ListaClientes.Name = "lbl_ListaClientes";
             this.lbl_ListaClientes.Size = new System.Drawing.Size(78, 22);
             this.lbl_ListaClientes.TabIndex = 0;

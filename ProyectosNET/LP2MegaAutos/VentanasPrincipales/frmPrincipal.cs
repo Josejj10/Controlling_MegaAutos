@@ -166,12 +166,17 @@ namespace LP2MegaAutos
             pmsReportes.Texto1 = "Todos";
             pmsReportes.Texto2 = "Por" + Environment.NewLine +"Area" ;
             pmsReportes.Texto3 = "Por" + Environment.NewLine +"Cliente";
-            pmsReportes.Texto4 = "Por"+Environment.NewLine+ "Vehiculo";
+            pmsReportes.Texto4 = "Por"+Environment.NewLine+ "Siniestro";
 
             pmsUltimoReporte.NumItems = 3;
             pmsUltimoReporte.Imagen1 = (Image)new Bitmap(Resources.Estadisticas, 36, 36);
             pmsUltimoReporte.Imagen2 = (Image)new Bitmap(Resources.ReporteDetalle, 36, 36);
             pmsUltimoReporte.Imagen3 = (Image)new Bitmap(Resources.ReporteResumen, 36, 36);
+
+            pmsUltimoReporte.Texto1 = "Resum.";
+            pmsUltimoReporte.Texto2 = "Detalle";
+            pmsUltimoReporte.Texto3 = "Estad.";
+
 
             pmsReportes.LayoutImagenes = pmsUltimoReporte.LayoutImagenes = ImageLayout.Center;
 
@@ -189,14 +194,15 @@ namespace LP2MegaAutos
             rpBtnMenuUltimoReporte.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsUltimoReporte); };
             btnMenuUltimoReporte.MouseEnter += (sender, e) => { rpBtnMenu_MouseEnter(sender, e, pmsUltimoReporte); };
             rpBtnMenuUltimoReporte.MouseLeave += (sender, e) => { rpBtnMenu_MouseLeave(sender, e, pmsUltimoReporte); };
-            ((pantallaInicio)contenedorPantalla1.PInicial).ListaReportesClick += pmsReportes_ListaReportesClick;
-            ((pantallaInicio)contenedorPantalla1.PInicial).perfilUsuarioClick += btnMenuUsuario_Click;
-            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteAreaTrabajoClick += pmsReportes_ReporteAreaTrabajoClick;
-            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteClienteClick += pmsReportes_ReporteClienteClick;
-            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteVehiculoClick += pmsReportes_ReporteVehiculoClick;
             ((pantallaInicio)contenedorPantalla1.PInicial).CreditosClick += verCreditos;
             ((pantallaInicio)contenedorPantalla1.PInicial).ActualizarEmpresaClick += btnMenuActualizarEmpresa_Click;
             ((pantallaInicio)contenedorPantalla1.PInicial).VerUltimoReporteClick+= btnMenuUltimoReporte_Click;
+            ((pantallaInicio)contenedorPantalla1.PInicial).perfilUsuarioClick += btnMenuUsuario_Click;
+            // TODO Cambios
+            ((pantallaInicio)contenedorPantalla1.PInicial).ListaReportesClick += (sender, e) => pmsReportes_ListaReportesClick(sender, e);
+            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteAreaTrabajoClick += (sender, e) => pmsReportes_ListaReportesClick(sender, e,"AT");
+            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteClienteClick += (sender, e) => pmsReportes_ListaReportesClick(sender, e,"Cliente");
+            ((pantallaInicio)contenedorPantalla1.PInicial).ReporteSiniestroClick += (sender, e) => pmsReportes_ListaReportesClick(sender, e,"Siniestro");
         }
         #endregion constructor
         #region Creacion Botones
@@ -563,9 +569,16 @@ namespace LP2MegaAutos
             // Cambiar los botones y rPanel excepto el enviado
             BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)btnPanelMenuProfile.Parent, panelMenu);
         }
+        private void pmsReportes_ListaReportesClick(object sender, EventArgs e, string generando= "")
+        {
+            contenedorPantalla1.PantallaActual = new pantallaListaReportes(generando);
+
+            // Cambiar los botones y rPanel excepto el enviado
+            BotonesDinamicosHelper.cambiarColoresBotonesMenu((RoundedPanel)btnMenuReportes.Parent, panelMenu);
+            pmsReportes.Visible = false;
+        } 
         private void pmsReportes_ListaReportesClick(object sender, EventArgs e)
         {
-
             contenedorPantalla1.PantallaActual = new pantallaListaReportes();
 
             // Cambiar los botones y rPanel excepto el enviado
@@ -574,23 +587,16 @@ namespace LP2MegaAutos
         }
         private void pmsReportes_ReporteAreaTrabajoClick(object sender, EventArgs e)
         {
-            pmsReportes_ListaReportesClick(sender, e);
-            // TODO En la vista de lista reportes hacer en enum de los botones seleccionados y 
-            // desde esta funcion mandar el valor para que lo haga
-            //pantallaListaReportes.Instancia.BotonSeleccionado = Cliente;
+            pmsReportes_ListaReportesClick(sender, e,"AT");
         }
         private void pmsReportes_ReporteClienteClick(object sender, EventArgs e)
         {
-            pmsReportes_ListaReportesClick(sender, e);
-            // TODO En la vista de lista reportes hacer en enum de los botones seleccionados y 
-            // desde esta funcion mandar el valor para que lo haga
-            //pantallaListaReportes.Instancia.BotonSeleccionado = Cliente;
+            pmsReportes_ListaReportesClick(sender, e,"Cliente");
         }
-        private void pmsReportes_ReporteVehiculoClick(object sender, EventArgs e)
+        private void pmsReportes_ReporteSiniestroClick(object sender, EventArgs e)
         {
-            pmsReportes_ListaReportesClick(sender, e);
+            pmsReportes_ListaReportesClick(sender, e,"Siniestro");
             // TODO Hacer en enum de los botones seleccionados y poner esto
-            //pantallaListaReportes.Instancia.BotonSeleccionado = Cliente;
         }
         private void pmsUltimoReporte_EstadisticasClick(object sender, EventArgs e)
         {

@@ -38,7 +38,6 @@ namespace LP2MegaAutos
         {
             if (usuario == null) this.DialogResult = DialogResult.Cancel;
             InitializeComponent();
-            toggleComponentes();
             txtNombre.Text = OtrosHelper.tipoOracion(usuario.nombre);    
             txt_Correo.Text = usuario.correo.ToLower();
             txt_RolUsuario.Text = OtrosHelper.tipoOracion(usuario.tipoUsuario);
@@ -48,6 +47,7 @@ namespace LP2MegaAutos
             agregando = false;
             if (_usuario.permisos == null) _usuario.permisos = permisosIniciales.ToArray();
             permisosIniciales = _usuario.permisos.ToList();
+            toggleComponentes();
         }
 
         #region title_bar
@@ -247,6 +247,8 @@ namespace LP2MegaAutos
             this.DialogResult = DialogResult.OK;
         }
 
+        public bool CambiarPass { get { return btnCambiarPassword.Enabled; } }
+
         private void btnAgregarPermisosClick(object sender, EventArgs e)
         {
             if (_usuario == null) return;
@@ -323,13 +325,21 @@ namespace LP2MegaAutos
         private void toggleComponentes()
         {
             bool en = txtNombre.Enabled = txt_Correo.Enabled =
-                txt_RolUsuario.Enabled = btn_guardar.Enabled =
-                //txt_NuevaCont.Enabled = txt_RepNCont.Enabled =
-                btnCambiarPassword.Enabled = 
-                //flpPermisos.Enabled =
+                txt_RolUsuario.Enabled = btnCambiarPassword.Enabled =
                 !txtNombre.Enabled;
 
-            if (!en)
+            // Si son los mismos permisos que al inicio, se desactiva 
+            if (_usuario.permisos.ToList().Equals(permisosIniciales))
+            {
+                btn_guardar.Enabled = false;
+                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Disabled;
+            }
+            else {
+                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.AmarilloInteractivo;
+                btn_guardar.Enabled = true;
+            }
+
+                if (!en)
             {
                 // No habilitado
                 txt_NuevaCont.Enabled = txt_RepNCont.Enabled = false;
@@ -340,10 +350,10 @@ namespace LP2MegaAutos
                     txt_RepNCont.ForeColor =
                     rnd_color_1.ColorPanel = rnd_color_2.ColorPanel =
                     rnd_color_3.ColorPanel = rnd_color_4.ColorPanel =
-                    rnd_guardar.ColorPanel = rpCambiarPassword.ColorPanel =
+                    rpCambiarPassword.ColorPanel =
                     rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
                     rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
-                    rnd_guardar.ColorBorde = rpCambiarPassword.ColorBorde
+                    rpCambiarPassword.ColorBorde
                     = Colores.Disabled;
 
                 btnEditar.BackgroundImage = Resources.editar;
@@ -360,7 +370,6 @@ namespace LP2MegaAutos
             //rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
             Colores.Rosa;
             
-            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde =
             rpCambiarPassword.ColorPanel = rpCambiarPassword.ColorBorde
             = Colores.AmarilloInteractivo;
 
@@ -393,6 +402,36 @@ namespace LP2MegaAutos
             }
         }
 
-
+        private bool newPassword_seen;
+        private void boton_ver_password_Click_1(object sender, EventArgs e)
+        {
+            // Cambiar variable 
+            password_seen = !password_seen;
+            if (password_seen)
+            {
+                txt_NuevaCont.PasswordChar = '\0';
+                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
+            }
+            else
+            {
+                txt_NuevaCont.PasswordChar = '•';
+                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            }
+        }
+        private void btnVerRepetir_Click(object sender, EventArgs e)
+        {
+            // Cambiar variable 
+            newPassword_seen = !newPassword_seen;
+            if (newPassword_seen)
+            {
+                txt_RepNCont.PasswordChar = '\0';
+                btnVerRepetir.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
+            }
+            else
+            {
+                txt_RepNCont.PasswordChar = '•';
+                btnVerRepetir.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            }
+        }
     }
 }

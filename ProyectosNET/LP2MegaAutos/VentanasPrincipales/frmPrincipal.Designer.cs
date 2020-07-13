@@ -269,7 +269,7 @@ namespace LP2MegaAutos
             this.pmsReportes.item1Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ListaReportesClick);
             this.pmsReportes.item2Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ReporteAreaTrabajoClick);
             this.pmsReportes.item3Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ReporteClienteClick);
-            this.pmsReportes.item4Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ReporteVehiculoClick);
+            this.pmsReportes.item4Click += new LP2MegaAutos.Framework.UserControls.PanelMenuStrip.ButtonClickEventHandler(this.pmsReportes_ReporteSiniestroClick);
             // 
             // pmsUltimoReporte
             // 
@@ -652,7 +652,6 @@ namespace LP2MegaAutos
             this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
-            this.ShowIcon = false;
             this.Style = MetroFramework.MetroColorStyle.Default;
             this.tags.SetTag2(this, null);
             this.tags.SetTag3(this, null);

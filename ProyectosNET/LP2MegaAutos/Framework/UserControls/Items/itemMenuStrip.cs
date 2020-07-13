@@ -17,6 +17,7 @@ namespace LP2MegaAutos.Framework.UserControls.Items
         public itemMenuStrip()
         {
             InitializeComponent();
+            btnItem.BackColor = Colores.CasiPuro;
         }
 
         #region Propiedades

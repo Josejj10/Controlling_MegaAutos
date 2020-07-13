@@ -108,6 +108,7 @@
             this.tagsExtender1.SetTagFontName(this.txtCorreo, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.txtCorreo, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txtCorreo, System.Drawing.FontStyle.Bold);
+            this.txtCorreo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCorreo_KeyDown);
             // 
             // lblCorreo
             // 

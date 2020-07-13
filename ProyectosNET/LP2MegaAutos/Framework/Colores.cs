@@ -31,6 +31,7 @@ namespace LP2MegaAutos
         // Forms
         public static Color FormText = Color.FromArgb(81, 81, 81);
         public static Color FormBackground = Color.FromArgb(244, 244, 245);
+        public static Color MetroFormBackground = Color.FromArgb(255, 254, 254);
         public static Color FormShape = Color.FromArgb(112, 112, 112);
         public static Color ChooseAmarillo = Color.FromArgb(250, 220, 124);
         public static Color ColorPanel = Color.FromArgb(26, 36, 50);
@@ -56,6 +57,7 @@ namespace LP2MegaAutos
         // Forms
         public static Color FormText = Color.FromArgb(181, 181, 181);
         public static Color FormBackground = Color.FromArgb(64, 64, 69);
+        public static Color MetroFormBackground = Color.FromArgb(18,18,17);
         public static Color FormShape = Color.FromArgb(99, 99, 102);
         public static Color ChooseAmarillo = Color.FromArgb(247, 199, 45);
         public static Color ColorPanel = Color.FromArgb(55, 55, 55);
@@ -90,12 +92,13 @@ namespace LP2MegaAutos
 
         // Background
         public static Color BackBackground = Color.FromArgb(245, 245, 246);
-        public static Color FrontBackground = Color.FromArgb(255, 255, 255);
+        public static Color FrontBackground = Color.FromArgb(255, 255, 254);
 
         // Coloridos
         public static Color Disabled = Color.FromArgb(189, 189, 189);
         public static Color PrincipalRojo = Color.FromArgb(229, 65, 33);
         public static Color PrincipalAzulMetalico = Color.FromArgb(54, 140, 161);
+        public static Color MetroFormBackground = Color.FromArgb(255,254,254);
 
         // Forms
         public static Color FormText = Color.FromArgb(81, 81, 81);
@@ -125,6 +128,7 @@ namespace LP2MegaAutos
                 if (c == Dark_Mode.PrincipalAzulMetalico.ToArgb()) color = White_Mode.PrincipalAzulMetalico;
                 if (c == Dark_Mode.FormText.ToArgb()) color = White_Mode.FormText;
                 if (c == Dark_Mode.FormBackground.ToArgb()) color = White_Mode.FormBackground;
+                if (c == Dark_Mode.MetroFormBackground.ToArgb()) color = White_Mode.MetroFormBackground;
                 if (c == Dark_Mode.FormShape.ToArgb()) color = White_Mode.FormShape;
                 if (c == Dark_Mode.ChooseAmarillo.ToArgb()) color = White_Mode.ChooseAmarillo;
                 if (c == Dark_Mode.ColorPanel.ToArgb()) color = White_Mode.ColorPanel;
@@ -148,6 +152,7 @@ namespace LP2MegaAutos
             if (c == White_Mode.FormText.ToArgb()) color = Dark_Mode.FormText;
             
             if (c == White_Mode.FormBackground.ToArgb()) color = Dark_Mode.FormBackground;
+            if (c == White_Mode.MetroFormBackground.ToArgb()) color = Dark_Mode.MetroFormBackground;
             if (c == White_Mode.FormShape.ToArgb()) color = Dark_Mode.FormShape;
             if (c == White_Mode.ChooseAmarillo.ToArgb()) color = Dark_Mode.ChooseAmarillo;
             if (c == White_Mode.ColorPanel.ToArgb()) color = Dark_Mode.ColorPanel;

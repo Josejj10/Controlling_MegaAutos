@@ -21,48 +21,75 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             flpReportes.AutoScroll = true;
+            this.btnAZ_Click(btnAZ,new EventArgs());
+            this.btn_todos_Click(btn_todos,new EventArgs());
         }
+        public pantallaListaReportes(string agregando)
+        {
+            InitializeComponent();
+            flpReportes.AutoScroll = true;
+            this.btnAZ_Click(btnAZ,new EventArgs());
+            switch (agregando) {
+                case "AT":
+                    this.btn_AreaTrabajo_Click(btn_AreaTrabajo,new EventArgs());
+                    this.btn_Agregar_Click(btnGenerar, new EventArgs());
+                    break;
+                case "Siniestro":
+                    this.btn_Siniestro_Click(btnTipoSiniestro,new EventArgs());
+                    this.btn_Agregar_Click(btnGenerar, new EventArgs());
+                    break;
+                case "Cliente":
+                    this.btn_cliente_Click(btn_cliente,new EventArgs());
+                    this.btn_Agregar_Click(btnGenerar, new EventArgs());
+                    break;
+                default:
+                    this.btn_todos_Click(btn_todos, new EventArgs());
+                    break;
+            }
+        }
+
+
+
         private void itemListaReporte_Click(object sender, EventArgs e)
         {
             frmResumenReporte frmReporte = new frmResumenReporte();
             if (frmReporte.ShowDialog() == DialogResult.OK)
             {
                 // Hacer algo
+                // TODO llamar al DAO
             }
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            pantallaGenerarReporte pgr = new pantallaGenerarReporte(this._btnSeleccionado);
+            frmGenerarReporte pgr = new frmGenerarReporte(this._btnSeleccionado);
             if (pgr.ShowDialog() == DialogResult.OK)
                 MessageBox.Show("OK");
-            //if (!this.Parent.Controls.Contains(pantallaGenerarReporte.Instancia))
-            //    this.Parent.Controls.Add(pantallaGenerarReporte.Instancia);
-            //pantallaGenerarReporte.Instancia.BringToFront();
+            
         }
 
         #region Botones Tipo Reporte
         private void btn_todos_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
-                rndTodos, rndVehiculo, rndAreaTrabajo, rndCliente);
+                rndTodos, rndSiniestro, rndAreaTrabajo, rndCliente);
             this._btnSeleccionado = "Todos";
         }
-        private void btn_vehiculo_Click(object sender, EventArgs e)
+        private void btn_Siniestro_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
-                rndVehiculo, rndTodos, rndAreaTrabajo, rndCliente);
-            this._btnSeleccionado = "Vehiculo";
+                rndSiniestro, rndTodos, rndAreaTrabajo, rndCliente);
+            this._btnSeleccionado = "Siniestro";
         }
         private void btn_AreaTrabajo_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
-                rndAreaTrabajo,rndVehiculo, rndTodos, rndCliente);
-            this._btnSeleccionado = "AreaTrabajo";
+                rndAreaTrabajo,rndSiniestro, rndTodos, rndCliente);
+            this._btnSeleccionado = "AT";
         }
         private void btn_cliente_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
-                rndCliente,rndAreaTrabajo, rndVehiculo, rndTodos);
+                rndCliente,rndAreaTrabajo, rndSiniestro, rndTodos);
             this._btnSeleccionado = "Cliente";
         }
         #endregion Botones Tipo Reporte

@@ -177,6 +177,11 @@ namespace LP2MegaAutos.Inicio
             }
             this.DialogResult = DialogResult.OK;
         }
+        private void btnAceptar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            btnAceptar_Click(sender, e);
+        }
 
         private void btnReenviar_Click(object sender, EventArgs e)
         {
@@ -193,6 +198,12 @@ namespace LP2MegaAutos.Inicio
             // Si no, se envio el correo
             frm = new frmMessageBox("Se ha reenviado el correo a " + _correo, MessageBoxButtons.OK);
             frm.ShowDialog();
+        }
+
+        private void txtToken_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            btnValidar_Click(sender, e);
         }
     }
 }

@@ -73,5 +73,11 @@ namespace LP2MegaAutos.VentanasPrincipales
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void eliminar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            btnDarDeBaja_Click(sender, e);
+        }
     }
 }

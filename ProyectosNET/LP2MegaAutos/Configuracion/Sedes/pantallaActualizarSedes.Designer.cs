@@ -201,7 +201,7 @@
             this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaServicios.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaServicios.Location = new System.Drawing.Point(253, 2);
+            this.lbl_ListaServicios.Location = new System.Drawing.Point(254, 2);
             this.lbl_ListaServicios.Name = "lbl_ListaServicios";
             this.lbl_ListaServicios.Size = new System.Drawing.Size(59, 22);
             this.lbl_ListaServicios.TabIndex = 0;

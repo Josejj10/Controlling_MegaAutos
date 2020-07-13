@@ -371,6 +371,7 @@
             this.tagsExtender1.SetTagFontSize(this.txtToken, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txtToken, System.Drawing.FontStyle.Bold);
             this.txtToken.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtToken.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtToken_KeyDown);
             // 
             // lblCorreo
             // 
@@ -446,6 +447,7 @@
             this.tagsExtender1.SetTagFontName(this.txtPassword, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txtPassword, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txtPassword, System.Drawing.FontStyle.Bold);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAceptar_KeyDown);
             // 
             // label1
             // 
@@ -521,6 +523,7 @@
             this.tagsExtender1.SetTagFontName(this.txtNewPass, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txtNewPass, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txtNewPass, System.Drawing.FontStyle.Bold);
+            this.txtNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAceptar_KeyDown);
             // 
             // label2
             // 

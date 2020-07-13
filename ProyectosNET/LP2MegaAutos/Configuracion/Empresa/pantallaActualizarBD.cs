@@ -31,6 +31,13 @@ namespace LP2MegaAutos
             daoExcel = new ServicioExcel.ExcelWSClient();
             _excelEnviado = new ServicioExcel.excel();
             _excelRecibido = new ServicioExcel.excel();
+            ServicioSede.SedeWSClient daoSede = new ServicioSede.SedeWSClient();
+            cboSede.DisplayMember = "distrito";
+            cboSede.DataSource = daoSede.listarSedes();
+            btn_guardar.Enabled =btnDescargar.Enabled= false;
+            rpBtnGuardar.ColorBorde = rpBtnGuardar.ColorPanel =
+            rpBtnDescargar.ColorBorde = rpBtnDescargar.ColorPanel =
+                Colores.Disabled;
         }
 
 
@@ -50,8 +57,12 @@ namespace LP2MegaAutos
                     this._excelEnviado.archivo = br.ReadBytes((int)fs.Length);
                     br.Close();
                     fs.Close();
-                    this.btn_guardar.Enabled = this.btnDescargar1.Enabled= true;
-                    this.btn_guardar.Cursor = Cursors.Hand;
+                    btn_guardar.Enabled = btnDescargar.Enabled 
+                        = true;
+                    rpBtnGuardar.ColorBorde = rpBtnGuardar.ColorPanel =
+                    rpBtnDescargar.ColorBorde = rpBtnDescargar.ColorPanel =
+                    Colores.ChooseAmarillo;
+                    this.btn_guardar.Cursor = btnDescargar.Cursor= Cursors.Hand;
                 }
             }
             catch (Exception ex)
@@ -91,9 +102,6 @@ namespace LP2MegaAutos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Almacenar los string en el back
-            // WebService.GuardarArchivo(txtArchivo1.Text);
-            // WebService.GuardarArchivo(txtArchivo2.Text);
             // Llamar a pantalla de carga
             Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
             thrdLoading.Start();

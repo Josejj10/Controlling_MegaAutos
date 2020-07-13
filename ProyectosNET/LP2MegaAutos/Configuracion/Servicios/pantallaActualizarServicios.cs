@@ -78,14 +78,11 @@ namespace LP2MegaAutos
             itemLista il = new itemLista();
             BotonesDinamicosHelper.personalizarItemLista(il);
             il.Name = "il" + servicio.id;
-            il.TextoAgregadoPor = agregadoPor;
-            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = OtrosHelper.tipoOracion(servicio.nombre);
             il.Textosecundario = OtrosHelper.tipoOracion(servicio.tipoServicio);
             il.TextoTercero = OtrosHelper.tipoOracion(servicio.codigoServicio);
             il.ItemListaClick += (sender, e) => { verDatosServicio(sender, e, servicio); };
             il.EditarClick += (sender, e) => { btnEditarClick(sender, e, servicio); };
-            il.esconderBotonEditar();
             flpServicios.Controls.Add(il);
             return il;
         }

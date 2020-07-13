@@ -200,7 +200,7 @@
             this.lbl_ListaDrivers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaDrivers.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaDrivers.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaDrivers.Location = new System.Drawing.Point(229, 2);
+            this.lbl_ListaDrivers.Location = new System.Drawing.Point(248, 2);
             this.lbl_ListaDrivers.Name = "lbl_ListaDrivers";
             this.lbl_ListaDrivers.Size = new System.Drawing.Size(70, 22);
             this.lbl_ListaDrivers.TabIndex = 0;

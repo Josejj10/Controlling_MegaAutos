@@ -38,6 +38,12 @@ namespace LP2MegaAutos
             {
                 DarkMode.iniciarDarkMode(panel_toggle_nocturno, boton_toggle_nocturno, reloj_dark, this);
             }
+            boton_ver_password.GotFocus += btn_GotFocus;
+        }
+
+        private void btn_GotFocus(object sender, EventArgs e)
+        {
+            boton_ver_password.NotifyDefault(false);
         }
 
 

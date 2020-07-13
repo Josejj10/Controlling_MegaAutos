@@ -41,21 +41,12 @@ namespace LP2MegaAutos
         private itemLista createItemListaUsuario(ServicioUsuario.usuario usuario, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
-            il.Anchor = AnchorStyles.Top;
-            il.BackColor = Color.Transparent;
-            il.ColorBack = Color.Transparent;
-            il.ColorBorde = Colores.PrincipalAzulMetalico;
-            il.ColorPanel = Colores.BackBackground;
-            il.Margin = new Padding(4);
+            BotonesDinamicosHelper.personalizarItemLista(il);
             il.Name = "il" + usuario.id;
-            il.Size = new Size(497, 104);
-            il.TextoAgregadoPor = agregadoPor;
-            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = usuario.nombre;
             il.Textosecundario = usuario.tipoUsuario;
             il.TextoTercero = usuario.correo;
             il.ItemListaClick += (sender, e) => { verDatosUsuario(sender, e, usuario); };
-            il.esconderBotonEditar();
             flpUsuarios.Controls.Add(il);
             return il;
         }
@@ -109,13 +100,21 @@ namespace LP2MegaAutos
         {
             pantallaEditarUsuario pas = new pantallaEditarUsuario(usu);
             DialogResult d = pas.ShowDialog();
-            if (d== DialogResult.OK)
+            if (d == DialogResult.OK)
             {
                 // Actualizar el Usuario
                 usuario u = pas.Usuario;
                 frmMessageBox frm = new frmMessageBox("Se actualizo correctamente el usuario", MessageBoxButtons.OK, "Mensaje", false);
-                if (daoUsuario.actualizarUsuario(u) == 0)
-                    frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK,"Error", true);
+
+                if (pas.CambiarPass)
+                { // Si se esta cambiando la contraseña, llamar a actualizar password
+                    if (daoUsuario.actualizarUsuarioPassword(u) == 0)
+                    {
+                        frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK, "Error", true); ;
+                    }
+                }
+                else if (daoUsuario.actualizarUsuario(u) == 0) // Si no, solo actualizar usuario
+                    frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK, "Error", true);
                 
                 frm.ShowDialog();
                 flpUsuarios.Controls.RemoveByKey("il" + usu.id);

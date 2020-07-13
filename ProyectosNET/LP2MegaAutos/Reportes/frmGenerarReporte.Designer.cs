@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos
 {
-    partial class pantallaGenerarReporte
+    partial class frmGenerarReporte
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaGenerarReporte));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGenerarReporte));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tags = new LP2MegaAutos.TagsExtender();
             this.rndOtro = new LP2MegaAutos.RoundedPanel();
@@ -42,18 +42,15 @@
             this.rpFechaIni = new LP2MegaAutos.RoundedPanel();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.pnlImgFechaIni = new System.Windows.Forms.Panel();
-            this.rpPorTipoSiniestro = new LP2MegaAutos.RoundedPanel();
-            this.btnPorAreaTrabajo = new System.Windows.Forms.Button();
-            this.rpPorVehiculo = new LP2MegaAutos.RoundedPanel();
-            this.btnPorVehiculo = new System.Windows.Forms.Button();
+            this.rpPorSiniestro = new LP2MegaAutos.RoundedPanel();
+            this.btnPorSiniestro = new System.Windows.Forms.Button();
+            this.rpPorAT = new LP2MegaAutos.RoundedPanel();
+            this.btnPorAT = new System.Windows.Forms.Button();
             this.rpPorCliente = new LP2MegaAutos.RoundedPanel();
             this.btnPorCliente = new System.Windows.Forms.Button();
             this.rpFechaFin = new LP2MegaAutos.RoundedPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.pnlImgFechaFin = new System.Windows.Forms.Panel();
-            this.pnlSede = new LP2MegaAutos.RoundedPanel();
-            this.txtSede = new System.Windows.Forms.TextBox();
-            this.pnlImgSede = new System.Windows.Forms.Panel();
             this.title_bar_2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.title_bar = new System.Windows.Forms.Panel();
@@ -61,26 +58,32 @@
             this.boton_cerrar = new System.Windows.Forms.Button();
             this.rnd_guardar = new LP2MegaAutos.RoundedPanel();
             this.btn_GenerarReporte = new System.Windows.Forms.Button();
+            this.cboSede = new System.Windows.Forms.ComboBox();
+            this.pnlBackground = new System.Windows.Forms.Panel();
+            this.rndCancelar = new LP2MegaAutos.RoundedPanel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.rndOtro.SuspendLayout();
             this.rndAnual.SuspendLayout();
             this.rndMensual.SuspendLayout();
             this.rpDiario.SuspendLayout();
             this.rpFechaIni.SuspendLayout();
-            this.rpPorTipoSiniestro.SuspendLayout();
-            this.rpPorVehiculo.SuspendLayout();
+            this.rpPorSiniestro.SuspendLayout();
+            this.rpPorAT.SuspendLayout();
             this.rpPorCliente.SuspendLayout();
             this.rpFechaFin.SuspendLayout();
-            this.pnlSede.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
+            this.pnlBackground.SuspendLayout();
+            this.rndCancelar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblTitulo.Location = new System.Drawing.Point(26, 55);
+            this.lblTitulo.Location = new System.Drawing.Point(48, 54);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(228, 35);
@@ -96,11 +99,12 @@
             // 
             this.rndOtro.ArcRadiusBorde = 8;
             this.rndOtro.ArcRadiusPanel = 8;
+            this.rndOtro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rndOtro.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rndOtro.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndOtro.Controls.Add(this.btnOtro);
             this.rndOtro.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndOtro.Location = new System.Drawing.Point(338, 113);
+            this.rndOtro.Location = new System.Drawing.Point(344, 113);
             this.rndOtro.MenosHeightBorde = 1;
             this.rndOtro.MenosHeightPanel = 1;
             this.rndOtro.MenosWidthBorde = 1;
@@ -123,6 +127,7 @@
             // 
             this.btnOtro.BackColor = System.Drawing.Color.White;
             this.btnOtro.FlatAppearance.BorderSize = 0;
+            this.btnOtro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnOtro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnOtro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOtro.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,16 +144,18 @@
             this.btnOtro.Text = "Otro";
             this.btnOtro.UseVisualStyleBackColor = false;
             this.btnOtro.Click += new System.EventHandler(this.btnOtro_Click);
+            this.btnOtro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             // 
             // rndAnual
             // 
             this.rndAnual.ArcRadiusBorde = 8;
             this.rndAnual.ArcRadiusPanel = 8;
+            this.rndAnual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rndAnual.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rndAnual.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndAnual.Controls.Add(this.btnAnual);
             this.rndAnual.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndAnual.Location = new System.Drawing.Point(238, 113);
+            this.rndAnual.Location = new System.Drawing.Point(244, 113);
             this.rndAnual.MenosHeightBorde = 1;
             this.rndAnual.MenosHeightPanel = 1;
             this.rndAnual.MenosWidthBorde = 1;
@@ -171,6 +178,7 @@
             // 
             this.btnAnual.BackColor = System.Drawing.Color.White;
             this.btnAnual.FlatAppearance.BorderSize = 0;
+            this.btnAnual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAnual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAnual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnual.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,16 +195,18 @@
             this.btnAnual.Text = "Anual";
             this.btnAnual.UseVisualStyleBackColor = false;
             this.btnAnual.Click += new System.EventHandler(this.btnAnual_Click);
+            this.btnAnual.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             // 
             // rndMensual
             // 
             this.rndMensual.ArcRadiusBorde = 8;
             this.rndMensual.ArcRadiusPanel = 8;
+            this.rndMensual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rndMensual.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rndMensual.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndMensual.Controls.Add(this.btnMensual);
             this.rndMensual.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndMensual.Location = new System.Drawing.Point(140, 113);
+            this.rndMensual.Location = new System.Drawing.Point(146, 113);
             this.rndMensual.MenosHeightBorde = 1;
             this.rndMensual.MenosHeightPanel = 1;
             this.rndMensual.MenosWidthBorde = 1;
@@ -219,6 +229,7 @@
             // 
             this.btnMensual.BackColor = System.Drawing.Color.White;
             this.btnMensual.FlatAppearance.BorderSize = 0;
+            this.btnMensual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMensual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMensual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMensual.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -235,16 +246,18 @@
             this.btnMensual.Text = "Mensual";
             this.btnMensual.UseVisualStyleBackColor = false;
             this.btnMensual.Click += new System.EventHandler(this.btnMensual_Click);
+            this.btnMensual.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             // 
             // rpDiario
             // 
             this.rpDiario.ArcRadiusBorde = 8;
             this.rpDiario.ArcRadiusPanel = 8;
+            this.rpDiario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rpDiario.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rpDiario.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rpDiario.Controls.Add(this.btnDiario);
             this.rpDiario.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpDiario.Location = new System.Drawing.Point(51, 113);
+            this.rpDiario.Location = new System.Drawing.Point(57, 113);
             this.rpDiario.MenosHeightBorde = 1;
             this.rpDiario.MenosHeightPanel = 1;
             this.rpDiario.MenosWidthBorde = 1;
@@ -267,13 +280,14 @@
             // 
             this.btnDiario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.btnDiario.FlatAppearance.BorderSize = 0;
+            this.btnDiario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDiario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDiario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiario.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnDiario.Location = new System.Drawing.Point(0, 0);
+            this.btnDiario.Location = new System.Drawing.Point(3, 3);
             this.btnDiario.Name = "btnDiario";
-            this.btnDiario.Size = new System.Drawing.Size(86, 35);
+            this.btnDiario.Size = new System.Drawing.Size(76, 29);
             this.btnDiario.TabIndex = 5;
             this.tags.SetTag2(this.btnDiario, null);
             this.tags.SetTag3(this.btnDiario, null);
@@ -283,17 +297,19 @@
             this.btnDiario.Text = "Diario";
             this.btnDiario.UseVisualStyleBackColor = false;
             this.btnDiario.Click += new System.EventHandler(this.btnDiario_Click);
+            this.btnDiario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             // 
             // rpFechaIni
             // 
             this.rpFechaIni.ArcRadiusBorde = 15;
             this.rpFechaIni.ArcRadiusPanel = 15;
+            this.rpFechaIni.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rpFechaIni.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.rpFechaIni.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.rpFechaIni.Controls.Add(this.dtpInicio);
             this.rpFechaIni.Controls.Add(this.pnlImgFechaIni);
             this.rpFechaIni.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpFechaIni.Location = new System.Drawing.Point(51, 162);
+            this.rpFechaIni.Location = new System.Drawing.Point(57, 162);
             this.rpFechaIni.Margin = new System.Windows.Forms.Padding(2);
             this.rpFechaIni.MenosHeightBorde = 1;
             this.rpFechaIni.MenosHeightPanel = 1;
@@ -348,111 +364,118 @@
             this.tags.SetTagFontSize(this.pnlImgFechaIni, 10F);
             this.tags.SetTagFontStyle(this.pnlImgFechaIni, System.Drawing.FontStyle.Regular);
             // 
-            // rpPorTipoSiniestro
+            // rpPorSiniestro
             // 
-            this.rpPorTipoSiniestro.ArcRadiusBorde = 8;
-            this.rpPorTipoSiniestro.ArcRadiusPanel = 8;
-            this.rpPorTipoSiniestro.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rpPorTipoSiniestro.ColorPanel = System.Drawing.Color.Transparent;
-            this.rpPorTipoSiniestro.Controls.Add(this.btnPorAreaTrabajo);
-            this.rpPorTipoSiniestro.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpPorTipoSiniestro.Location = new System.Drawing.Point(176, 240);
-            this.rpPorTipoSiniestro.MenosHeightBorde = 1;
-            this.rpPorTipoSiniestro.MenosHeightPanel = 1;
-            this.rpPorTipoSiniestro.MenosWidthBorde = 1;
-            this.rpPorTipoSiniestro.MenosWidthPanel = 1;
-            this.rpPorTipoSiniestro.Name = "rpPorTipoSiniestro";
-            this.rpPorTipoSiniestro.PorcLuzColorBorde = 0;
-            this.rpPorTipoSiniestro.Size = new System.Drawing.Size(144, 35);
-            this.rpPorTipoSiniestro.TabIndex = 38;
-            this.tags.SetTag2(this.rpPorTipoSiniestro, null);
-            this.tags.SetTag3(this.rpPorTipoSiniestro, null);
-            this.tags.SetTagFontName(this.rpPorTipoSiniestro, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpPorTipoSiniestro, 10F);
-            this.tags.SetTagFontStyle(this.rpPorTipoSiniestro, System.Drawing.FontStyle.Regular);
-            this.rpPorTipoSiniestro.XBorde = 0;
-            this.rpPorTipoSiniestro.XPanel = 0;
-            this.rpPorTipoSiniestro.YBorde = 0;
-            this.rpPorTipoSiniestro.YPanel = 0;
+            this.rpPorSiniestro.ArcRadiusBorde = 8;
+            this.rpPorSiniestro.ArcRadiusPanel = 8;
+            this.rpPorSiniestro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.rpPorSiniestro.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rpPorSiniestro.ColorPanel = System.Drawing.Color.White;
+            this.rpPorSiniestro.Controls.Add(this.btnPorSiniestro);
+            this.rpPorSiniestro.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rpPorSiniestro.Location = new System.Drawing.Point(182, 240);
+            this.rpPorSiniestro.MenosHeightBorde = 1;
+            this.rpPorSiniestro.MenosHeightPanel = 1;
+            this.rpPorSiniestro.MenosWidthBorde = 1;
+            this.rpPorSiniestro.MenosWidthPanel = 1;
+            this.rpPorSiniestro.Name = "rpPorSiniestro";
+            this.rpPorSiniestro.PorcLuzColorBorde = 0;
+            this.rpPorSiniestro.Size = new System.Drawing.Size(144, 35);
+            this.rpPorSiniestro.TabIndex = 38;
+            this.tags.SetTag2(this.rpPorSiniestro, null);
+            this.tags.SetTag3(this.rpPorSiniestro, null);
+            this.tags.SetTagFontName(this.rpPorSiniestro, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpPorSiniestro, 10F);
+            this.tags.SetTagFontStyle(this.rpPorSiniestro, System.Drawing.FontStyle.Regular);
+            this.rpPorSiniestro.XBorde = 0;
+            this.rpPorSiniestro.XPanel = 0;
+            this.rpPorSiniestro.YBorde = 0;
+            this.rpPorSiniestro.YPanel = 0;
             // 
-            // btnPorAreaTrabajo
+            // btnPorSiniestro
             // 
-            this.btnPorAreaTrabajo.BackColor = System.Drawing.Color.Transparent;
-            this.btnPorAreaTrabajo.FlatAppearance.BorderSize = 0;
-            this.btnPorAreaTrabajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPorAreaTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPorAreaTrabajo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPorAreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnPorAreaTrabajo.Location = new System.Drawing.Point(3, 3);
-            this.btnPorAreaTrabajo.Name = "btnPorAreaTrabajo";
-            this.btnPorAreaTrabajo.Size = new System.Drawing.Size(138, 28);
-            this.btnPorAreaTrabajo.TabIndex = 5;
-            this.tags.SetTag2(this.btnPorAreaTrabajo, null);
-            this.tags.SetTag3(this.btnPorAreaTrabajo, null);
-            this.tags.SetTagFontName(this.btnPorAreaTrabajo, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnPorAreaTrabajo, 10F);
-            this.tags.SetTagFontStyle(this.btnPorAreaTrabajo, System.Drawing.FontStyle.Regular);
-            this.btnPorAreaTrabajo.Text = "Tipo Siniestro";
-            this.btnPorAreaTrabajo.UseVisualStyleBackColor = false;
-            this.btnPorAreaTrabajo.Click += new System.EventHandler(this.btnPorAreaTrabajo_Click);
+            this.btnPorSiniestro.BackColor = System.Drawing.Color.Transparent;
+            this.btnPorSiniestro.FlatAppearance.BorderSize = 0;
+            this.btnPorSiniestro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPorSiniestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPorSiniestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPorSiniestro.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPorSiniestro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnPorSiniestro.Location = new System.Drawing.Point(3, 3);
+            this.btnPorSiniestro.Name = "btnPorSiniestro";
+            this.btnPorSiniestro.Size = new System.Drawing.Size(138, 28);
+            this.btnPorSiniestro.TabIndex = 5;
+            this.tags.SetTag2(this.btnPorSiniestro, null);
+            this.tags.SetTag3(this.btnPorSiniestro, null);
+            this.tags.SetTagFontName(this.btnPorSiniestro, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnPorSiniestro, 10F);
+            this.tags.SetTagFontStyle(this.btnPorSiniestro, System.Drawing.FontStyle.Regular);
+            this.btnPorSiniestro.Text = "Tipo Siniestro";
+            this.btnPorSiniestro.UseVisualStyleBackColor = false;
+            this.btnPorSiniestro.Click += new System.EventHandler(this.btnPorSiniestro_Click);
+            this.btnPorSiniestro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             // 
-            // rpPorVehiculo
+            // rpPorAT
             // 
-            this.rpPorVehiculo.ArcRadiusBorde = 8;
-            this.rpPorVehiculo.ArcRadiusPanel = 8;
-            this.rpPorVehiculo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rpPorVehiculo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rpPorVehiculo.Controls.Add(this.btnPorVehiculo);
-            this.rpPorVehiculo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpPorVehiculo.Location = new System.Drawing.Point(51, 240);
-            this.rpPorVehiculo.MenosHeightBorde = 1;
-            this.rpPorVehiculo.MenosHeightPanel = 1;
-            this.rpPorVehiculo.MenosWidthBorde = 1;
-            this.rpPorVehiculo.MenosWidthPanel = 1;
-            this.rpPorVehiculo.Name = "rpPorVehiculo";
-            this.rpPorVehiculo.PorcLuzColorBorde = 0;
-            this.rpPorVehiculo.Size = new System.Drawing.Size(119, 35);
-            this.rpPorVehiculo.TabIndex = 39;
-            this.tags.SetTag2(this.rpPorVehiculo, null);
-            this.tags.SetTag3(this.rpPorVehiculo, null);
-            this.tags.SetTagFontName(this.rpPorVehiculo, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.rpPorVehiculo, 10F);
-            this.tags.SetTagFontStyle(this.rpPorVehiculo, System.Drawing.FontStyle.Regular);
-            this.rpPorVehiculo.XBorde = 0;
-            this.rpPorVehiculo.XPanel = 0;
-            this.rpPorVehiculo.YBorde = 0;
-            this.rpPorVehiculo.YPanel = 0;
+            this.rpPorAT.ArcRadiusBorde = 8;
+            this.rpPorAT.ArcRadiusPanel = 8;
+            this.rpPorAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.rpPorAT.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rpPorAT.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rpPorAT.Controls.Add(this.btnPorAT);
+            this.rpPorAT.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rpPorAT.Location = new System.Drawing.Point(57, 240);
+            this.rpPorAT.MenosHeightBorde = 1;
+            this.rpPorAT.MenosHeightPanel = 1;
+            this.rpPorAT.MenosWidthBorde = 1;
+            this.rpPorAT.MenosWidthPanel = 1;
+            this.rpPorAT.Name = "rpPorAT";
+            this.rpPorAT.PorcLuzColorBorde = 0;
+            this.rpPorAT.Size = new System.Drawing.Size(119, 35);
+            this.rpPorAT.TabIndex = 39;
+            this.tags.SetTag2(this.rpPorAT, null);
+            this.tags.SetTag3(this.rpPorAT, null);
+            this.tags.SetTagFontName(this.rpPorAT, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rpPorAT, 10F);
+            this.tags.SetTagFontStyle(this.rpPorAT, System.Drawing.FontStyle.Regular);
+            this.rpPorAT.XBorde = 0;
+            this.rpPorAT.XPanel = 0;
+            this.rpPorAT.YBorde = 0;
+            this.rpPorAT.YPanel = 0;
             // 
-            // btnPorVehiculo
+            // btnPorAT
             // 
-            this.btnPorVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.btnPorVehiculo.FlatAppearance.BorderSize = 0;
-            this.btnPorVehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPorVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPorVehiculo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPorVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnPorVehiculo.Location = new System.Drawing.Point(3, 3);
-            this.btnPorVehiculo.Name = "btnPorVehiculo";
-            this.btnPorVehiculo.Size = new System.Drawing.Size(113, 28);
-            this.btnPorVehiculo.TabIndex = 5;
-            this.tags.SetTag2(this.btnPorVehiculo, null);
-            this.tags.SetTag3(this.btnPorVehiculo, null);
-            this.tags.SetTagFontName(this.btnPorVehiculo, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.btnPorVehiculo, 10F);
-            this.tags.SetTagFontStyle(this.btnPorVehiculo, System.Drawing.FontStyle.Regular);
-            this.btnPorVehiculo.Text = "A. Trabajo";
-            this.btnPorVehiculo.UseVisualStyleBackColor = false;
-            this.btnPorVehiculo.Click += new System.EventHandler(this.btnPorVehiculo_Click);
+            this.btnPorAT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.btnPorAT.FlatAppearance.BorderSize = 0;
+            this.btnPorAT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPorAT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPorAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPorAT.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPorAT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnPorAT.Location = new System.Drawing.Point(3, 3);
+            this.btnPorAT.Name = "btnPorAT";
+            this.btnPorAT.Size = new System.Drawing.Size(113, 28);
+            this.btnPorAT.TabIndex = 5;
+            this.tags.SetTag2(this.btnPorAT, null);
+            this.tags.SetTag3(this.btnPorAT, null);
+            this.tags.SetTagFontName(this.btnPorAT, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnPorAT, 10F);
+            this.tags.SetTagFontStyle(this.btnPorAT, System.Drawing.FontStyle.Regular);
+            this.btnPorAT.Text = "A. Trabajo";
+            this.btnPorAT.UseVisualStyleBackColor = false;
+            this.btnPorAT.Click += new System.EventHandler(this.btnPorAT_Click);
+            this.btnPorAT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             // 
             // rpPorCliente
             // 
             this.rpPorCliente.ArcRadiusBorde = 8;
             this.rpPorCliente.ArcRadiusPanel = 8;
+            this.rpPorCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rpPorCliente.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rpPorCliente.ColorPanel = System.Drawing.Color.Transparent;
+            this.rpPorCliente.ColorPanel = System.Drawing.Color.White;
             this.rpPorCliente.Controls.Add(this.btnPorCliente);
             this.rpPorCliente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpPorCliente.Location = new System.Drawing.Point(326, 240);
+            this.rpPorCliente.Location = new System.Drawing.Point(332, 240);
             this.rpPorCliente.MenosHeightBorde = 1;
             this.rpPorCliente.MenosHeightPanel = 1;
             this.rpPorCliente.MenosWidthBorde = 1;
@@ -475,6 +498,7 @@
             // 
             this.btnPorCliente.BackColor = System.Drawing.Color.Transparent;
             this.btnPorCliente.FlatAppearance.BorderSize = 0;
+            this.btnPorCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPorCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPorCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPorCliente.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
@@ -491,17 +515,19 @@
             this.btnPorCliente.Text = "Cliente";
             this.btnPorCliente.UseVisualStyleBackColor = false;
             this.btnPorCliente.Click += new System.EventHandler(this.btnPorCliente_Click);
+            this.btnPorCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             // 
             // rpFechaFin
             // 
             this.rpFechaFin.ArcRadiusBorde = 15;
             this.rpFechaFin.ArcRadiusPanel = 15;
+            this.rpFechaFin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rpFechaFin.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.rpFechaFin.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.rpFechaFin.Controls.Add(this.dateTimePicker1);
+            this.rpFechaFin.Controls.Add(this.dtpFechaFin);
             this.rpFechaFin.Controls.Add(this.pnlImgFechaFin);
             this.rpFechaFin.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpFechaFin.Location = new System.Drawing.Point(237, 162);
+            this.rpFechaFin.Location = new System.Drawing.Point(243, 162);
             this.rpFechaFin.Margin = new System.Windows.Forms.Padding(2);
             this.rpFechaFin.MenosHeightBorde = 1;
             this.rpFechaFin.MenosHeightPanel = 1;
@@ -521,25 +547,25 @@
             this.rpFechaFin.YBorde = 0;
             this.rpFechaFin.YPanel = 0;
             // 
-            // dateTimePicker1
+            // dtpFechaFin
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Montserrat", 13F);
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Transparent;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 13F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(51, 17);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 29);
-            this.dateTimePicker1.TabIndex = 38;
-            this.tags.SetTag2(this.dateTimePicker1, null);
-            this.tags.SetTag3(this.dateTimePicker1, null);
-            this.tags.SetTagFontName(this.dateTimePicker1, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.dateTimePicker1, 13F);
-            this.tags.SetTagFontStyle(this.dateTimePicker1, System.Drawing.FontStyle.Regular);
-            this.dateTimePicker1.Value = new System.DateTime(2020, 5, 27, 0, 0, 0, 0);
+            this.dtpFechaFin.CalendarFont = new System.Drawing.Font("Montserrat", 13F);
+            this.dtpFechaFin.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.dtpFechaFin.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.dtpFechaFin.CustomFormat = "dd/MM/yyyy";
+            this.dtpFechaFin.Font = new System.Drawing.Font("Montserrat", 13F);
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaFin.Location = new System.Drawing.Point(51, 17);
+            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(128, 29);
+            this.dtpFechaFin.TabIndex = 38;
+            this.tags.SetTag2(this.dtpFechaFin, null);
+            this.tags.SetTag3(this.dtpFechaFin, null);
+            this.tags.SetTagFontName(this.dtpFechaFin, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.dtpFechaFin, 13F);
+            this.tags.SetTagFontStyle(this.dtpFechaFin, System.Drawing.FontStyle.Regular);
+            this.dtpFechaFin.Value = new System.DateTime(2020, 5, 27, 0, 0, 0, 0);
             // 
             // pnlImgFechaFin
             // 
@@ -555,76 +581,6 @@
             this.tags.SetTagFontName(this.pnlImgFechaFin, fontsD.Ninguno);
             this.tags.SetTagFontSize(this.pnlImgFechaFin, 10F);
             this.tags.SetTagFontStyle(this.pnlImgFechaFin, System.Drawing.FontStyle.Regular);
-            // 
-            // pnlSede
-            // 
-            this.pnlSede.ArcRadiusBorde = 15;
-            this.pnlSede.ArcRadiusPanel = 15;
-            this.pnlSede.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.pnlSede.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.pnlSede.Controls.Add(this.txtSede);
-            this.pnlSede.Controls.Add(this.pnlImgSede);
-            this.pnlSede.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.pnlSede.Location = new System.Drawing.Point(308, 51);
-            this.pnlSede.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlSede.MenosHeightBorde = 1;
-            this.pnlSede.MenosHeightPanel = 1;
-            this.pnlSede.MenosWidthBorde = 1;
-            this.pnlSede.MenosWidthPanel = 1;
-            this.pnlSede.Name = "pnlSede";
-            this.pnlSede.PorcLuzColorBorde = 0;
-            this.pnlSede.Size = new System.Drawing.Size(183, 45);
-            this.pnlSede.TabIndex = 43;
-            this.tags.SetTag2(this.pnlSede, null);
-            this.tags.SetTag3(this.pnlSede, null);
-            this.tags.SetTagFontName(this.pnlSede, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.pnlSede, 10F);
-            this.tags.SetTagFontStyle(this.pnlSede, System.Drawing.FontStyle.Regular);
-            this.pnlSede.XBorde = 0;
-            this.pnlSede.XPanel = 0;
-            this.pnlSede.YBorde = 0;
-            this.pnlSede.YPanel = 0;
-            // 
-            // txtSede
-            // 
-            this.txtSede.AutoCompleteCustomSource.AddRange(new string[] {
-            "ABC-123",
-            "AAA-222",
-            "LWYRUP"});
-            this.txtSede.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtSede.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtSede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.txtSede.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSede.Font = new System.Drawing.Font("Montserrat", 15F);
-            this.txtSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.txtSede.Location = new System.Drawing.Point(37, 8);
-            this.txtSede.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSede.Name = "txtSede";
-            this.txtSede.Size = new System.Drawing.Size(143, 25);
-            this.txtSede.TabIndex = 38;
-            this.tags.SetTag2(this.txtSede, null);
-            this.tags.SetTag3(this.txtSede, null);
-            this.tags.SetTagFontName(this.txtSede, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.txtSede, 15F);
-            this.tags.SetTagFontStyle(this.txtSede, System.Drawing.FontStyle.Regular);
-            this.txtSede.Text = "Sede";
-            this.txtSede.Enter += new System.EventHandler(this.txtSede_Enter);
-            this.txtSede.Leave += new System.EventHandler(this.txtSede_Leave);
-            // 
-            // pnlImgSede
-            // 
-            this.pnlImgSede.BackColor = System.Drawing.Color.Transparent;
-            this.pnlImgSede.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlImgSede.BackgroundImage")));
-            this.pnlImgSede.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlImgSede.Location = new System.Drawing.Point(8, 10);
-            this.pnlImgSede.Name = "pnlImgSede";
-            this.pnlImgSede.Size = new System.Drawing.Size(25, 25);
-            this.pnlImgSede.TabIndex = 37;
-            this.tags.SetTag2(this.pnlImgSede, null);
-            this.tags.SetTag3(this.pnlImgSede, null);
-            this.tags.SetTagFontName(this.pnlImgSede, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.pnlImgSede, 10F);
-            this.tags.SetTagFontStyle(this.pnlImgSede, System.Drawing.FontStyle.Regular);
             // 
             // title_bar_2
             // 
@@ -661,7 +617,7 @@
             this.button3.Tag = "titlebar";
             this.tags.SetTag2(this.button3, null);
             this.tags.SetTag3(this.button3, null);
-            this.tags.SetTagFontName(this.button3, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.button3, fontsD.Lato);
             this.tags.SetTagFontSize(this.button3, 10F);
             this.tags.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
             this.button3.UseVisualStyleBackColor = false;
@@ -738,11 +694,12 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btn_GenerarReporte);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(152, 282);
+            this.rnd_guardar.Location = new System.Drawing.Point(73, 282);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -765,6 +722,7 @@
             // 
             this.btn_GenerarReporte.BackColor = System.Drawing.Color.Transparent;
             this.btn_GenerarReporte.FlatAppearance.BorderSize = 0;
+            this.btn_GenerarReporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_GenerarReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_GenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_GenerarReporte.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -782,55 +740,137 @@
             this.btn_GenerarReporte.UseVisualStyleBackColor = false;
             this.btn_GenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
-            // pantallaGenerarReporte
+            // cboSede
+            // 
+            this.cboSede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.cboSede.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cboSede.Font = new System.Drawing.Font("Montserrat", 12F);
+            this.cboSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
+            this.cboSede.FormattingEnabled = true;
+            this.cboSede.Location = new System.Drawing.Point(288, 60);
+            this.cboSede.Name = "cboSede";
+            this.cboSede.Size = new System.Drawing.Size(160, 30);
+            this.cboSede.TabIndex = 39;
+            this.tags.SetTag2(this.cboSede, null);
+            this.tags.SetTag3(this.cboSede, null);
+            this.tags.SetTagFontName(this.cboSede, fontsD.Montserrat);
+            this.tags.SetTagFontSize(this.cboSede, 12F);
+            this.tags.SetTagFontStyle(this.cboSede, System.Drawing.FontStyle.Regular);
+            // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Controls.Add(this.rndCancelar);
+            this.pnlBackground.Controls.Add(this.lblTitulo);
+            this.pnlBackground.Location = new System.Drawing.Point(0, 1);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(498, 345);
+            this.pnlBackground.TabIndex = 62;
+            this.tags.SetTag2(this.pnlBackground, null);
+            this.tags.SetTag3(this.pnlBackground, null);
+            this.tags.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.pnlBackground, 10F);
+            this.tags.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
+            // 
+            // rndCancelar
+            // 
+            this.rndCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rndCancelar.ArcRadiusBorde = 5;
+            this.rndCancelar.ArcRadiusPanel = 5;
+            this.rndCancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rndCancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rndCancelar.Controls.Add(this.btnCancelar);
+            this.rndCancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndCancelar.Location = new System.Drawing.Point(259, 282);
+            this.rndCancelar.MenosHeightBorde = 1;
+            this.rndCancelar.MenosHeightPanel = 1;
+            this.rndCancelar.MenosWidthBorde = 1;
+            this.rndCancelar.MenosWidthPanel = 1;
+            this.rndCancelar.Name = "rndCancelar";
+            this.rndCancelar.PorcLuzColorBorde = 0;
+            this.rndCancelar.Size = new System.Drawing.Size(165, 35);
+            this.rndCancelar.TabIndex = 77;
+            this.tags.SetTag2(this.rndCancelar, null);
+            this.tags.SetTag3(this.rndCancelar, null);
+            this.tags.SetTagFontName(this.rndCancelar, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.rndCancelar, 10F);
+            this.tags.SetTagFontStyle(this.rndCancelar, System.Drawing.FontStyle.Regular);
+            this.rndCancelar.XBorde = 0;
+            this.rndCancelar.XPanel = 0;
+            this.rndCancelar.YBorde = 0;
+            this.rndCancelar.YPanel = 0;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(1, 1);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(161, 33);
+            this.btnCancelar.TabIndex = 0;
+            this.tags.SetTag2(this.btnCancelar, null);
+            this.tags.SetTag3(this.btnCancelar, null);
+            this.tags.SetTagFontName(this.btnCancelar, fontsD.Ninguno);
+            this.tags.SetTagFontSize(this.btnCancelar, 10F);
+            this.tags.SetTagFontStyle(this.btnCancelar, System.Drawing.FontStyle.Regular);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // frmGenerarReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 346);
             this.ControlBox = false;
+            this.Controls.Add(this.cboSede);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar_2);
             this.Controls.Add(this.title_bar);
-            this.Controls.Add(this.pnlSede);
             this.Controls.Add(this.rpFechaFin);
             this.Controls.Add(this.rpPorCliente);
-            this.Controls.Add(this.rpPorVehiculo);
-            this.Controls.Add(this.rpPorTipoSiniestro);
+            this.Controls.Add(this.rpPorAT);
+            this.Controls.Add(this.rpPorSiniestro);
             this.Controls.Add(this.rpFechaIni);
             this.Controls.Add(this.rndOtro);
             this.Controls.Add(this.rndAnual);
             this.Controls.Add(this.rndMensual);
             this.Controls.Add(this.rpDiario);
-            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.pnlBackground);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "pantallaGenerarReporte";
+            this.Name = "frmGenerarReporte";
+            this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tags.SetTag2(this, null);
             this.tags.SetTag3(this, null);
             this.tags.SetTagFontName(this, fontsD.Ninguno);
             this.tags.SetTagFontSize(this, 10F);
             this.tags.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGenerarReporte_KeyDown);
             this.rndOtro.ResumeLayout(false);
             this.rndAnual.ResumeLayout(false);
             this.rndMensual.ResumeLayout(false);
             this.rpDiario.ResumeLayout(false);
             this.rpFechaIni.ResumeLayout(false);
-            this.rpPorTipoSiniestro.ResumeLayout(false);
-            this.rpPorVehiculo.ResumeLayout(false);
+            this.rpPorSiniestro.ResumeLayout(false);
+            this.rpPorAT.ResumeLayout(false);
             this.rpPorCliente.ResumeLayout(false);
             this.rpFechaFin.ResumeLayout(false);
-            this.pnlSede.ResumeLayout(false);
-            this.pnlSede.PerformLayout();
             this.title_bar.ResumeLayout(false);
             this.rnd_guardar.ResumeLayout(false);
+            this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
+            this.rndCancelar.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -848,18 +888,15 @@
         private RoundedPanel rpFechaIni;
         private System.Windows.Forms.Panel pnlImgFechaIni;
         private System.Windows.Forms.DateTimePicker dtpInicio;
-        private RoundedPanel rpPorTipoSiniestro;
-        private System.Windows.Forms.Button btnPorAreaTrabajo;
-        private RoundedPanel rpPorVehiculo;
-        private System.Windows.Forms.Button btnPorVehiculo;
+        private RoundedPanel rpPorSiniestro;
+        private System.Windows.Forms.Button btnPorSiniestro;
+        private RoundedPanel rpPorAT;
+        private System.Windows.Forms.Button btnPorAT;
         private System.Windows.Forms.Button btnPorCliente;
         private RoundedPanel rpPorCliente;
         private RoundedPanel rpFechaFin;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.Panel pnlImgFechaFin;
-        private RoundedPanel pnlSede;
-        private System.Windows.Forms.TextBox txtSede;
-        private System.Windows.Forms.Panel pnlImgSede;
         private System.Windows.Forms.Panel title_bar_2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel title_bar;
@@ -867,5 +904,9 @@
         private System.Windows.Forms.Button boton_cerrar;
         private RoundedPanel rnd_guardar;
         private System.Windows.Forms.Button btn_GenerarReporte;
+        private System.Windows.Forms.ComboBox cboSede;
+        private System.Windows.Forms.Panel pnlBackground;
+        private RoundedPanel rndCancelar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

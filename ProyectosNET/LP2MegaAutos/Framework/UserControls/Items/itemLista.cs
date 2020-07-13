@@ -25,13 +25,7 @@ namespace LP2MegaAutos
         //private tipoItem _tipoItem;
         public itemLista()
         {
-            InitializeComponent();
-            
-        }
-
-        public void esconderBotonEditar()
-        {
-            this.btnEditar.Visible = false;
+            InitializeComponent();   
         }
 
         #region Propiedades
@@ -55,20 +49,6 @@ namespace LP2MegaAutos
         {
             get { return lblTercerDato.Text; }
             set { lblTercerDato.Text = value; }
-        }
-
-        [Description("Texto Fecha"), Category("Item Lista")]
-        public string TextoFecha
-        {
-            get { return lblFecha.Text; }
-            set { lblFecha.Text = value; }
-        }
-
-        [Description("Texto Agregado Por"), Category("Item Lista")]
-        public string TextoAgregadoPor
-        {
-            get { return lblNombre.Text; }
-            set { lblNombre.Text = value; }
         }
 
         [Description("Color Borde Panel"), Category("Item Lista")]
@@ -95,6 +75,20 @@ namespace LP2MegaAutos
             get { return rpItem.BackColor; }
             set { rpItem.BackColor = value; }
         }
+
+        [Description("Tamaño"), Category("Item Lista")]
+        public Size SizeItem
+        {
+            get { return this.rpItem.Size; }
+            set
+            {
+                if (value.Height < 28) return;
+                this.Size = value;
+                this.rpItem.Size = new Size(value.Width,value.Height);
+                this.tableLayoutPanel1.Size = new Size(value.Width-33,value.Height-9);
+            }
+        }
+
         #endregion Propiedades
 
 

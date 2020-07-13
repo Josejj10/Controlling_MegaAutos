@@ -125,13 +125,10 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             itemLista il = new itemLista();
             BotonesDinamicosHelper.personalizarItemLista(il);
             il.Name = "il" + vehiculo.id;
-            il.TextoAgregadoPor = agregadoPor;
-            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = vehiculo.placa;
             il.Textosecundario = OtrosHelper.tipoOracion(vehiculo.propietario.nombre);
             il.TextoTercero = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
             il.ItemListaClick += (sender, e) => { verDatosVehiculo(sender, e, vehiculo); };
-            il.esconderBotonEditar();
             flpVehiculos.Controls.Add(il);
             return il;
         }

@@ -201,7 +201,7 @@
             this.lbl_ListaVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaVehiculos.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaVehiculos.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaVehiculos.Location = new System.Drawing.Point(229, 2);
+            this.lbl_ListaVehiculos.Location = new System.Drawing.Point(238, 2);
             this.lbl_ListaVehiculos.Name = "lbl_ListaVehiculos";
             this.lbl_ListaVehiculos.Size = new System.Drawing.Size(90, 22);
             this.lbl_ListaVehiculos.TabIndex = 0;

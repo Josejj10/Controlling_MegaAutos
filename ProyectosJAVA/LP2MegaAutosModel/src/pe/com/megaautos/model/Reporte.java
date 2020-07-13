@@ -26,6 +26,24 @@ public class Reporte {
     private Double egresos;
     private Sede sede;
 
+    public Double getIngresos() {
+        return ingresos;
+    }
+
+    public void setIngresos(Double ingresos) {
+        this.ingresos = ingresos;
+    }
+
+    public Double getEgresos() {
+        return egresos;
+    }
+
+    public void setEgresos(Double egresos) {
+        this.egresos = egresos;
+    }
+
+    
+    
     public int getIdExcelEntrada() {
         return idExcelEntrada;
     }

@@ -112,12 +112,18 @@ public class ExcelMySQL implements ExcelDAO {
          try{
             con = DBDataSource.getConnection();            
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_ARCHIVO(?,?,?)}");
+                    "{call INSERTAR_ARCHIVO(?,?,?,?,?,?)}");
             cs.registerOutParameter("_ID_ARCHIVO", java.sql.Types.INTEGER);
             cs.setBytes("_ARCHIVO", excel.getArchivo());
             cs.setInt("_TIPO", 2);
+            java.sql.Date fechaIni = new java.sql.Date(excel.getFechaIni().getTime());
+            cs.setDate("_FECHA_INICIO", fechaIni);
+            java.sql.Date fechaFin = new java.sql.Date(excel.getFechaFin().getTime());
+            cs.setDate("_FECHA_FIN", fechaFin);            
+            cs.setInt("_ID_SEDE", excel.getSede().getId());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_ARCHIVO");
+            cs.executeUpdate();
             // Actualiza el ID del cliente insertado para tenerlo en Java
             excel.setId(rpta);
         }catch(Exception ex){

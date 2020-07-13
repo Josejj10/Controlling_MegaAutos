@@ -52,7 +52,6 @@ namespace LP2MegaAutos
             il.TextoTercero = usuario.correo;
             il.ItemListaClick += (sender, e) => { verDatosUsuario(sender, e, usuario); };
             flpUsuarios.Controls.Add(il);
-            //if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(il);
             return il;
         }
 

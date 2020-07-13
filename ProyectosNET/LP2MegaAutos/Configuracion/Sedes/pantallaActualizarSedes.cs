@@ -54,13 +54,10 @@ namespace LP2MegaAutos
             itemLista il = new itemLista();
             BotonesDinamicosHelper.personalizarItemLista(il);
             il.Name = "il" + sede.id;
-            il.TextoAgregadoPor = agregadoPor;
-            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = sede.nombre;
             il.Textosecundario = sede.distrito;
             il.TextoTercero = sede.direccion;
             il.ItemListaClick += (sender, e) => { verDatosSede(sender, e, sede); };
-            il.esconderBotonEditar();
             flpSedes.Controls.Add(il);
             return il;
         }

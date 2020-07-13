@@ -33,8 +33,8 @@
             this.btn_cliente = new System.Windows.Forms.Button();
             this.rndAreaTrabajo = new LP2MegaAutos.RoundedPanel();
             this.btn_AreaTrabajo = new System.Windows.Forms.Button();
-            this.rndVehiculo = new LP2MegaAutos.RoundedPanel();
-            this.btn_vehiculo = new System.Windows.Forms.Button();
+            this.rndSiniestro = new LP2MegaAutos.RoundedPanel();
+            this.btnTipoSiniestro = new System.Windows.Forms.Button();
             this.rndTodos = new LP2MegaAutos.RoundedPanel();
             this.btn_todos = new System.Windows.Forms.Button();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
@@ -57,10 +57,10 @@
             this.btnZA = new System.Windows.Forms.Button();
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.rndCliente.SuspendLayout();
             this.rndAreaTrabajo.SuspendLayout();
-            this.rndVehiculo.SuspendLayout();
+            this.rndSiniestro.SuspendLayout();
             this.rndTodos.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -176,57 +176,57 @@
             this.btn_AreaTrabajo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
             this.btn_AreaTrabajo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
-            // rndVehiculo
+            // rndSiniestro
             // 
-            this.rndVehiculo.ArcRadiusBorde = 8;
-            this.rndVehiculo.ArcRadiusPanel = 8;
-            this.rndVehiculo.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
-            this.rndVehiculo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.rndVehiculo.Controls.Add(this.btn_vehiculo);
-            this.rndVehiculo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndVehiculo.Location = new System.Drawing.Point(26, 227);
-            this.rndVehiculo.MenosHeightBorde = 1;
-            this.rndVehiculo.MenosHeightPanel = 1;
-            this.rndVehiculo.MenosWidthBorde = 1;
-            this.rndVehiculo.MenosWidthPanel = 1;
-            this.rndVehiculo.Name = "rndVehiculo";
-            this.rndVehiculo.PorcLuzColorBorde = 0;
-            this.rndVehiculo.Size = new System.Drawing.Size(130, 35);
-            this.rndVehiculo.TabIndex = 39;
-            this.tagsExtender1.SetTag2(this.rndVehiculo, null);
-            this.tagsExtender1.SetTag3(this.rndVehiculo, null);
-            this.tagsExtender1.SetTagFontName(this.rndVehiculo, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.rndVehiculo, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.rndVehiculo, System.Drawing.FontStyle.Regular);
-            this.rndVehiculo.XBorde = 0;
-            this.rndVehiculo.XPanel = 0;
-            this.rndVehiculo.YBorde = 0;
-            this.rndVehiculo.YPanel = 0;
+            this.rndSiniestro.ArcRadiusBorde = 8;
+            this.rndSiniestro.ArcRadiusPanel = 8;
+            this.rndSiniestro.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
+            this.rndSiniestro.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndSiniestro.Controls.Add(this.btnTipoSiniestro);
+            this.rndSiniestro.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rndSiniestro.Location = new System.Drawing.Point(26, 227);
+            this.rndSiniestro.MenosHeightBorde = 1;
+            this.rndSiniestro.MenosHeightPanel = 1;
+            this.rndSiniestro.MenosWidthBorde = 1;
+            this.rndSiniestro.MenosWidthPanel = 1;
+            this.rndSiniestro.Name = "rndSiniestro";
+            this.rndSiniestro.PorcLuzColorBorde = 0;
+            this.rndSiniestro.Size = new System.Drawing.Size(130, 35);
+            this.rndSiniestro.TabIndex = 39;
+            this.tagsExtender1.SetTag2(this.rndSiniestro, null);
+            this.tagsExtender1.SetTag3(this.rndSiniestro, null);
+            this.tagsExtender1.SetTagFontName(this.rndSiniestro, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.rndSiniestro, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.rndSiniestro, System.Drawing.FontStyle.Regular);
+            this.rndSiniestro.XBorde = 0;
+            this.rndSiniestro.XPanel = 0;
+            this.rndSiniestro.YBorde = 0;
+            this.rndSiniestro.YPanel = 0;
             // 
-            // btn_vehiculo
+            // btnTipoSiniestro
             // 
-            this.btn_vehiculo.BackColor = System.Drawing.Color.White;
-            this.btn_vehiculo.FlatAppearance.BorderSize = 0;
-            this.btn_vehiculo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_vehiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_vehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_vehiculo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_vehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btn_vehiculo.Location = new System.Drawing.Point(3, 3);
-            this.btn_vehiculo.Name = "btn_vehiculo";
-            this.btn_vehiculo.Size = new System.Drawing.Size(125, 30);
-            this.btn_vehiculo.TabIndex = 6;
-            this.tagsExtender1.SetTag2(this.btn_vehiculo, null);
-            this.tagsExtender1.SetTag3(this.btn_vehiculo, null);
-            this.tagsExtender1.SetTagFontName(this.btn_vehiculo, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.btn_vehiculo, 12F);
-            this.tagsExtender1.SetTagFontStyle(this.btn_vehiculo, System.Drawing.FontStyle.Bold);
-            this.btn_vehiculo.Text = "Vehículo";
-            this.btn_vehiculo.UseVisualStyleBackColor = false;
-            this.btn_vehiculo.Click += new System.EventHandler(this.btn_vehiculo_Click);
-            this.btn_vehiculo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
-            this.btn_vehiculo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
-            this.btn_vehiculo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
+            this.btnTipoSiniestro.BackColor = System.Drawing.Color.White;
+            this.btnTipoSiniestro.FlatAppearance.BorderSize = 0;
+            this.btnTipoSiniestro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTipoSiniestro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTipoSiniestro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoSiniestro.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipoSiniestro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnTipoSiniestro.Location = new System.Drawing.Point(3, 3);
+            this.btnTipoSiniestro.Name = "btnTipoSiniestro";
+            this.btnTipoSiniestro.Size = new System.Drawing.Size(125, 30);
+            this.btnTipoSiniestro.TabIndex = 6;
+            this.tagsExtender1.SetTag2(this.btnTipoSiniestro, null);
+            this.tagsExtender1.SetTag3(this.btnTipoSiniestro, null);
+            this.tagsExtender1.SetTagFontName(this.btnTipoSiniestro, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnTipoSiniestro, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.btnTipoSiniestro, System.Drawing.FontStyle.Bold);
+            this.btnTipoSiniestro.Text = "Siniestro";
+            this.btnTipoSiniestro.UseVisualStyleBackColor = false;
+            this.btnTipoSiniestro.Click += new System.EventHandler(this.btn_Siniestro_Click);
+            this.btnTipoSiniestro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnTipoSiniestro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnTipoSiniestro.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // rndTodos
             // 
@@ -316,7 +316,7 @@
             this.txt_Buscar.BackColor = System.Drawing.Color.White;
             this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.Black;
+            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(515, 18);
@@ -732,27 +732,27 @@
             this.btnAZ.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
             this.btnAZ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
-            // button1
+            // btnGenerar
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.button1.Location = new System.Drawing.Point(26, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 31);
-            this.button1.TabIndex = 58;
-            this.tagsExtender1.SetTag2(this.button1, null);
-            this.tagsExtender1.SetTag3(this.button1, null);
-            this.tagsExtender1.SetTagFontName(this.button1, fontsD.Montserrat);
-            this.tagsExtender1.SetTagFontSize(this.button1, 11F);
-            this.tagsExtender1.SetTagFontStyle(this.button1, System.Drawing.FontStyle.Bold);
-            this.button1.Text = "+ Agregar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btn_Agregar_Click);
+            this.btnGenerar.AutoSize = true;
+            this.btnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnGenerar.FlatAppearance.BorderSize = 0;
+            this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
+            this.btnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
+            this.btnGenerar.Location = new System.Drawing.Point(26, 42);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(102, 31);
+            this.btnGenerar.TabIndex = 58;
+            this.tagsExtender1.SetTag2(this.btnGenerar, null);
+            this.tagsExtender1.SetTag3(this.btnGenerar, null);
+            this.tagsExtender1.SetTagFontName(this.btnGenerar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnGenerar, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.btnGenerar, System.Drawing.FontStyle.Bold);
+            this.btnGenerar.Text = "+ Generar";
+            this.btnGenerar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // pantallaListaReportes
             // 
@@ -761,7 +761,7 @@
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.rndReciente);
             this.Controls.Add(this.rndAntiguo);
             this.Controls.Add(this.rndZA);
@@ -770,7 +770,7 @@
             this.Controls.Add(this.pnlBuscar);
             this.Controls.Add(this.rndCliente);
             this.Controls.Add(this.rndAreaTrabajo);
-            this.Controls.Add(this.rndVehiculo);
+            this.Controls.Add(this.rndSiniestro);
             this.Controls.Add(this.rndTodos);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaListaReportes";
@@ -782,7 +782,7 @@
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
             this.rndCliente.ResumeLayout(false);
             this.rndAreaTrabajo.ResumeLayout(false);
-            this.rndVehiculo.ResumeLayout(false);
+            this.rndSiniestro.ResumeLayout(false);
             this.rndTodos.ResumeLayout(false);
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
@@ -804,8 +804,8 @@
         private System.Windows.Forms.Button btn_cliente;
         private RoundedPanel rndAreaTrabajo;
         private System.Windows.Forms.Button btn_AreaTrabajo;
-        private RoundedPanel rndVehiculo;
-        private System.Windows.Forms.Button btn_vehiculo;
+        private RoundedPanel rndSiniestro;
+        private System.Windows.Forms.Button btnTipoSiniestro;
         private RoundedPanel rndTodos;
         private System.Windows.Forms.Button btn_todos;
         private TagsExtender tagsExtender1;
@@ -826,7 +826,7 @@
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
         private itemListaReporte itemListaReporte1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerar;
         private itemListaReporte itemListaReporte2;
         private itemListaReporte itemListaReporte3;
     }

@@ -64,15 +64,12 @@ namespace LP2MegaAutos
         private itemLista createItemListaDriver(ServicioDriver.driver driver, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
-            BotonesDinamicosHelper.personalizarItemLista(il);
+            BotonesDinamicosHelper.personalizarItemLista(il,38);
             il.Name = "il" + driver.id;
-            il.TextoAgregadoPor = agregadoPor;
-            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = driver.formula.ToString();
             il.Textosecundario = "";
             il.TextoTercero = "";
             il.ItemListaClick += (sender, e) => { verDatosDriver(sender, e, driver); };
-            il.esconderBotonEditar();
             flpDrivers.Controls.Add(il);
             return il;
         }

@@ -282,6 +282,7 @@
             this.txt_ContraseñaActual.TabIndex = 0;
             this.txt_ContraseñaActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_ContraseñaActual.UseSystemPasswordChar = true;
+            this.txt_ContraseñaActual.KeyDown += new System.Windows.Forms.KeyEventHandler(this.eliminar_KeyDown);
             // 
             // panel1
             // 

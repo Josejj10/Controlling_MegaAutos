@@ -46,6 +46,7 @@
             this.flpUsuarios = new System.Windows.Forms.FlowLayoutPanel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
+            this.tlp = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
             this.btnVerInactivos = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
@@ -55,6 +56,7 @@
             this.rndAZ.SuspendLayout();
             this.panel3.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
+            this.tlp.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBuscar
@@ -64,9 +66,8 @@
             this.pnlBuscar.Controls.Add(this.txt_Buscar);
             this.pnlBuscar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBuscar.Location = new System.Drawing.Point(0, 0);
-            this.pnlBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBuscar.Name = "pnlBuscar";
-            this.pnlBuscar.Size = new System.Drawing.Size(1001, 37);
+            this.pnlBuscar.Size = new System.Drawing.Size(751, 30);
             this.pnlBuscar.TabIndex = 28;
             this.tagsExtender1.SetTag2(this.pnlBuscar, null);
             this.tagsExtender1.SetTag3(this.pnlBuscar, null);
@@ -78,10 +79,9 @@
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(8, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(6, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(33, 31);
+            this.panel2.Size = new System.Drawing.Size(25, 25);
             this.panel2.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.panel2, null);
             this.tagsExtender1.SetTag3(this.panel2, null);
@@ -94,11 +94,10 @@
             this.txt_Buscar.BackColor = System.Drawing.Color.White;
             this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.Black;
-            this.txt_Buscar.Location = new System.Drawing.Point(49, 7);
-            this.txt_Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
+            this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
-            this.txt_Buscar.Size = new System.Drawing.Size(933, 23);
+            this.txt_Buscar.Size = new System.Drawing.Size(700, 18);
             this.txt_Buscar.TabIndex = 17;
             this.tagsExtender1.SetTag2(this.txt_Buscar, null);
             this.tagsExtender1.SetTag3(this.txt_Buscar, null);
@@ -118,10 +117,9 @@
             this.btn_Agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Agregar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
             this.btn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.btn_Agregar.Location = new System.Drawing.Point(36, 57);
-            this.btn_Agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Agregar.Location = new System.Drawing.Point(27, 46);
             this.btn_Agregar.Name = "btn_Agregar";
-            this.btn_Agregar.Size = new System.Drawing.Size(128, 38);
+            this.btn_Agregar.Size = new System.Drawing.Size(96, 31);
             this.btn_Agregar.TabIndex = 52;
             this.tagsExtender1.SetTag2(this.btn_Agregar, null);
             this.tagsExtender1.SetTag3(this.btn_Agregar, null);
@@ -142,15 +140,14 @@
             this.rndReciente.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rndReciente.Controls.Add(this.btnReciente);
             this.rndReciente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndReciente.Location = new System.Drawing.Point(35, 279);
-            this.rndReciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndReciente.Location = new System.Drawing.Point(26, 227);
             this.rndReciente.MenosHeightBorde = 1;
             this.rndReciente.MenosHeightPanel = 1;
             this.rndReciente.MenosWidthBorde = 1;
             this.rndReciente.MenosWidthPanel = 1;
             this.rndReciente.Name = "rndReciente";
             this.rndReciente.PorcLuzColorBorde = 0;
-            this.rndReciente.Size = new System.Drawing.Size(173, 43);
+            this.rndReciente.Size = new System.Drawing.Size(130, 35);
             this.rndReciente.TabIndex = 56;
             this.tagsExtender1.SetTag2(this.rndReciente, null);
             this.tagsExtender1.SetTag3(this.rndReciente, null);
@@ -166,16 +163,16 @@
             // 
             this.btnReciente.BackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatAppearance.BorderSize = 0;
+            this.btnReciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReciente.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnReciente.Image = ((System.Drawing.Image)(resources.GetObject("btnReciente.Image")));
             this.btnReciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReciente.Location = new System.Drawing.Point(4, 4);
-            this.btnReciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReciente.Location = new System.Drawing.Point(3, 3);
             this.btnReciente.Name = "btnReciente";
-            this.btnReciente.Size = new System.Drawing.Size(165, 36);
+            this.btnReciente.Size = new System.Drawing.Size(124, 29);
             this.btnReciente.TabIndex = 8;
             this.tagsExtender1.SetTag2(this.btnReciente, null);
             this.tagsExtender1.SetTag3(this.btnReciente, null);
@@ -186,6 +183,9 @@
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
             this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
+            this.btnReciente.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnReciente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnReciente.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // rndAntiguo
             // 
@@ -196,15 +196,14 @@
             this.rndAntiguo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rndAntiguo.Controls.Add(this.btnAntiguo);
             this.rndAntiguo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndAntiguo.Location = new System.Drawing.Point(35, 223);
-            this.rndAntiguo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndAntiguo.Location = new System.Drawing.Point(26, 181);
             this.rndAntiguo.MenosHeightBorde = 1;
             this.rndAntiguo.MenosHeightPanel = 1;
             this.rndAntiguo.MenosWidthBorde = 1;
             this.rndAntiguo.MenosWidthPanel = 1;
             this.rndAntiguo.Name = "rndAntiguo";
             this.rndAntiguo.PorcLuzColorBorde = 0;
-            this.rndAntiguo.Size = new System.Drawing.Size(173, 43);
+            this.rndAntiguo.Size = new System.Drawing.Size(130, 35);
             this.rndAntiguo.TabIndex = 55;
             this.tagsExtender1.SetTag2(this.rndAntiguo, null);
             this.tagsExtender1.SetTag3(this.rndAntiguo, null);
@@ -220,16 +219,16 @@
             // 
             this.btnAntiguo.BackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatAppearance.BorderSize = 0;
+            this.btnAntiguo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAntiguo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAntiguo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnAntiguo.Image = ((System.Drawing.Image)(resources.GetObject("btnAntiguo.Image")));
             this.btnAntiguo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAntiguo.Location = new System.Drawing.Point(4, 4);
-            this.btnAntiguo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAntiguo.Location = new System.Drawing.Point(3, 3);
             this.btnAntiguo.Name = "btnAntiguo";
-            this.btnAntiguo.Size = new System.Drawing.Size(165, 36);
+            this.btnAntiguo.Size = new System.Drawing.Size(124, 29);
             this.btnAntiguo.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btnAntiguo, null);
             this.tagsExtender1.SetTag3(this.btnAntiguo, null);
@@ -240,6 +239,9 @@
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
             this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
+            this.btnAntiguo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnAntiguo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnAntiguo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // rndZA
             // 
@@ -250,15 +252,14 @@
             this.rndZA.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.rndZA.Controls.Add(this.btnZA);
             this.rndZA.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndZA.Location = new System.Drawing.Point(35, 166);
-            this.rndZA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndZA.Location = new System.Drawing.Point(26, 135);
             this.rndZA.MenosHeightBorde = 1;
             this.rndZA.MenosHeightPanel = 1;
             this.rndZA.MenosWidthBorde = 1;
             this.rndZA.MenosWidthPanel = 1;
             this.rndZA.Name = "rndZA";
             this.rndZA.PorcLuzColorBorde = 0;
-            this.rndZA.Size = new System.Drawing.Size(173, 43);
+            this.rndZA.Size = new System.Drawing.Size(130, 35);
             this.rndZA.TabIndex = 54;
             this.tagsExtender1.SetTag2(this.rndZA, null);
             this.tagsExtender1.SetTag3(this.rndZA, null);
@@ -274,16 +275,16 @@
             // 
             this.btnZA.BackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatAppearance.BorderSize = 0;
+            this.btnZA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnZA.Image = ((System.Drawing.Image)(resources.GetObject("btnZA.Image")));
             this.btnZA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZA.Location = new System.Drawing.Point(4, 4);
-            this.btnZA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnZA.Location = new System.Drawing.Point(3, 3);
             this.btnZA.Name = "btnZA";
-            this.btnZA.Size = new System.Drawing.Size(165, 36);
+            this.btnZA.Size = new System.Drawing.Size(124, 29);
             this.btnZA.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.btnZA, null);
             this.tagsExtender1.SetTag3(this.btnZA, null);
@@ -294,6 +295,9 @@
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
             this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
+            this.btnZA.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnZA.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnZA.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // rndAZ
             // 
@@ -304,15 +308,14 @@
             this.rndAZ.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.rndAZ.Controls.Add(this.btnAZ);
             this.rndAZ.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rndAZ.Location = new System.Drawing.Point(35, 110);
-            this.rndAZ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndAZ.Location = new System.Drawing.Point(26, 89);
             this.rndAZ.MenosHeightBorde = 1;
             this.rndAZ.MenosHeightPanel = 1;
             this.rndAZ.MenosWidthBorde = 1;
             this.rndAZ.MenosWidthPanel = 1;
             this.rndAZ.Name = "rndAZ";
             this.rndAZ.PorcLuzColorBorde = 0;
-            this.rndAZ.Size = new System.Drawing.Size(173, 43);
+            this.rndAZ.Size = new System.Drawing.Size(130, 35);
             this.rndAZ.TabIndex = 53;
             this.tagsExtender1.SetTag2(this.rndAZ, null);
             this.tagsExtender1.SetTag3(this.rndAZ, null);
@@ -328,16 +331,16 @@
             // 
             this.btnAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.btnAZ.FlatAppearance.BorderSize = 0;
+            this.btnAZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAZ.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAZ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnAZ.Image = ((System.Drawing.Image)(resources.GetObject("btnAZ.Image")));
             this.btnAZ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAZ.Location = new System.Drawing.Point(4, 4);
-            this.btnAZ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAZ.Location = new System.Drawing.Point(3, 3);
             this.btnAZ.Name = "btnAZ";
-            this.btnAZ.Size = new System.Drawing.Size(165, 36);
+            this.btnAZ.Size = new System.Drawing.Size(124, 29);
             this.btnAZ.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.btnAZ, null);
             this.tagsExtender1.SetTag3(this.btnAZ, null);
@@ -348,16 +351,18 @@
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
             this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
+            this.btnAZ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnAZ.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnAZ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.flpUsuarios);
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaServicios);
-            this.panel3.Location = new System.Drawing.Point(228, 57);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(171, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(755, 539);
+            this.panel3.Size = new System.Drawing.Size(566, 438);
             this.panel3.TabIndex = 58;
             this.tagsExtender1.SetTag2(this.panel3, null);
             this.tagsExtender1.SetTag3(this.panel3, null);
@@ -370,11 +375,10 @@
             this.flpUsuarios.AutoScroll = true;
             this.flpUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.flpUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpUsuarios.Location = new System.Drawing.Point(0, 33);
-            this.flpUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpUsuarios.Location = new System.Drawing.Point(0, 27);
             this.flpUsuarios.Name = "flpUsuarios";
-            this.flpUsuarios.Padding = new System.Windows.Forms.Padding(41, 0, 0, 0);
-            this.flpUsuarios.Size = new System.Drawing.Size(755, 486);
+            this.flpUsuarios.Padding = new System.Windows.Forms.Padding(31, 0, 0, 0);
+            this.flpUsuarios.Size = new System.Drawing.Size(566, 395);
             this.flpUsuarios.TabIndex = 54;
             this.tagsExtender1.SetTag2(this.flpUsuarios, null);
             this.tagsExtender1.SetTag3(this.flpUsuarios, null);
@@ -391,15 +395,14 @@
             this.roundedPanel4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.roundedPanel4.Location = new System.Drawing.Point(0, 519);
-            this.roundedPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel4.Location = new System.Drawing.Point(0, 422);
             this.roundedPanel4.MenosHeightBorde = 1;
             this.roundedPanel4.MenosHeightPanel = 1;
             this.roundedPanel4.MenosWidthBorde = 1;
             this.roundedPanel4.MenosWidthPanel = 1;
             this.roundedPanel4.Name = "roundedPanel4";
             this.roundedPanel4.PorcLuzColorBorde = 0;
-            this.roundedPanel4.Size = new System.Drawing.Size(755, 20);
+            this.roundedPanel4.Size = new System.Drawing.Size(566, 16);
             this.roundedPanel4.TabIndex = 53;
             this.tagsExtender1.SetTag2(this.roundedPanel4, null);
             this.tagsExtender1.SetTag3(this.roundedPanel4, null);
@@ -417,18 +420,17 @@
             this.rpn_ListaServicios.ArcRadiusPanel = 15;
             this.rpn_ListaServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpn_ListaServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.rpn_ListaServicios.Controls.Add(this.lbl_ListaServicios);
+            this.rpn_ListaServicios.Controls.Add(this.tlp);
             this.rpn_ListaServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.rpn_ListaServicios.Dock = System.Windows.Forms.DockStyle.Top;
             this.rpn_ListaServicios.Location = new System.Drawing.Point(0, 0);
-            this.rpn_ListaServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rpn_ListaServicios.MenosHeightBorde = 1;
             this.rpn_ListaServicios.MenosHeightPanel = 1;
             this.rpn_ListaServicios.MenosWidthBorde = 1;
             this.rpn_ListaServicios.MenosWidthPanel = 1;
             this.rpn_ListaServicios.Name = "rpn_ListaServicios";
             this.rpn_ListaServicios.PorcLuzColorBorde = 0;
-            this.rpn_ListaServicios.Size = new System.Drawing.Size(755, 33);
+            this.rpn_ListaServicios.Size = new System.Drawing.Size(566, 27);
             this.rpn_ListaServicios.TabIndex = 51;
             this.tagsExtender1.SetTag2(this.rpn_ListaServicios, null);
             this.tagsExtender1.SetTag3(this.rpn_ListaServicios, null);
@@ -440,24 +442,41 @@
             this.rpn_ListaServicios.YBorde = 0;
             this.rpn_ListaServicios.YPanel = 0;
             // 
+            // tlp
+            // 
+            this.tlp.BackColor = System.Drawing.Color.Transparent;
+            this.tlp.ColumnCount = 1;
+            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp.Controls.Add(this.lbl_ListaServicios, 0, 0);
+            this.tlp.Location = new System.Drawing.Point(0, 3);
+            this.tlp.Name = "tlp";
+            this.tlp.RowCount = 1;
+            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp.Size = new System.Drawing.Size(566, 21);
+            this.tlp.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.tlp, null);
+            this.tagsExtender1.SetTag3(this.tlp, null);
+            this.tagsExtender1.SetTagFontName(this.tlp, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.tlp, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.tlp, System.Drawing.FontStyle.Regular);
+            // 
             // lbl_ListaServicios
             // 
-            this.lbl_ListaServicios.AutoSize = true;
+            this.lbl_ListaServicios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_ListaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.lbl_ListaServicios.Location = new System.Drawing.Point(305, 2);
-            this.lbl_ListaServicios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_ListaServicios.Location = new System.Drawing.Point(86, 0);
             this.lbl_ListaServicios.Name = "lbl_ListaServicios";
-            this.lbl_ListaServicios.Size = new System.Drawing.Size(104, 28);
+            this.lbl_ListaServicios.Size = new System.Drawing.Size(394, 21);
             this.lbl_ListaServicios.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
             this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Montserrat);
             this.tagsExtender1.SetTagFontSize(this.lbl_ListaServicios, 12F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Bold);
-            this.lbl_ListaServicios.Text = "Usuarios";
+            this.lbl_ListaServicios.Text = "Usuarios Activos";
             this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnVerInactivos
@@ -468,10 +487,9 @@
             this.btnVerInactivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerInactivos.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
             this.btnVerInactivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.btnVerInactivos.Location = new System.Drawing.Point(39, 558);
-            this.btnVerInactivos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerInactivos.Location = new System.Drawing.Point(29, 453);
             this.btnVerInactivos.Name = "btnVerInactivos";
-            this.btnVerInactivos.Size = new System.Drawing.Size(149, 38);
+            this.btnVerInactivos.Size = new System.Drawing.Size(121, 31);
             this.btnVerInactivos.TabIndex = 59;
             this.btnVerInactivos.Tag = "";
             this.tagsExtender1.SetTag2(this.btnVerInactivos, null);
@@ -486,7 +504,7 @@
             // 
             // pantallaActualizarUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.Controls.Add(this.btnVerInactivos);
@@ -498,9 +516,9 @@
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.pnlBuscar);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaActualizarUsuarios";
-            this.Size = new System.Drawing.Size(1001, 640);
+            this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
@@ -514,7 +532,7 @@
             this.rndAZ.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.rpn_ListaServicios.ResumeLayout(false);
-            this.rpn_ListaServicios.PerformLayout();
+            this.tlp.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,5 +558,6 @@
         private RoundedPanel rpn_ListaServicios;
         private System.Windows.Forms.Label lbl_ListaServicios;
         private System.Windows.Forms.Button btnVerInactivos;
+        private System.Windows.Forms.TableLayoutPanel tlp;
     }
 }

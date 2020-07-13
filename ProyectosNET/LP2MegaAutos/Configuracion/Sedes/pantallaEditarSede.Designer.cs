@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaEditarSede));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.pnl_tipoServicio = new System.Windows.Forms.Panel();
@@ -54,12 +55,14 @@
             this.txt_NombreSede = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.pnl_tipoServicio.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
             this.panel2.SuspendLayout();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
+            this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +80,7 @@
             // 
             // pnl_tipoServicio
             // 
+            this.pnl_tipoServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_tipoServicio.Controls.Add(this.rnd_color_3);
             this.pnl_tipoServicio.Controls.Add(this.txt_telefono);
             this.pnl_tipoServicio.Controls.Add(this.lbl_teléfono);
@@ -126,7 +130,7 @@
             this.txt_telefono.Location = new System.Drawing.Point(7, 18);
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(284, 23);
-            this.txt_telefono.TabIndex = 2;
+            this.txt_telefono.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.txt_telefono, null);
             this.tagsExtender1.SetTag3(this.txt_telefono, null);
             this.tagsExtender1.SetTagFontName(this.txt_telefono, fontsD.Lato);
@@ -152,13 +156,14 @@
             // 
             // pnl_codServ
             // 
+            this.pnl_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_codServ.Controls.Add(this.cboDistritos);
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.lbl_distrito);
             this.pnl_codServ.Location = new System.Drawing.Point(90, 107);
             this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_codServ.Name = "pnl_codServ";
-            this.pnl_codServ.Size = new System.Drawing.Size(292, 41);
+            this.pnl_codServ.Size = new System.Drawing.Size(292, 46);
             this.pnl_codServ.TabIndex = 44;
             this.tagsExtender1.SetTag2(this.pnl_codServ, null);
             this.tagsExtender1.SetTag3(this.pnl_codServ, null);
@@ -170,7 +175,8 @@
             // 
             this.cboDistritos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.cboDistritos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboDistritos.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboDistritos.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold);
+            this.cboDistritos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.cboDistritos.FormattingEnabled = true;
             this.cboDistritos.Items.AddRange(new object[] {
             "Ancon",
@@ -218,12 +224,12 @@
             "Villa Maria del Triunfo"});
             this.cboDistritos.Location = new System.Drawing.Point(5, 17);
             this.cboDistritos.Name = "cboDistritos";
-            this.cboDistritos.Size = new System.Drawing.Size(286, 24);
-            this.cboDistritos.TabIndex = 67;
+            this.cboDistritos.Size = new System.Drawing.Size(286, 27);
+            this.cboDistritos.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.cboDistritos, null);
             this.tagsExtender1.SetTag3(this.cboDistritos, null);
             this.tagsExtender1.SetTagFontName(this.cboDistritos, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.cboDistritos, 10F);
+            this.tagsExtender1.SetTagFontSize(this.cboDistritos, 12F);
             this.tagsExtender1.SetTagFontStyle(this.cboDistritos, System.Drawing.FontStyle.Bold);
             // 
             // rnd_color_1
@@ -240,7 +246,7 @@
             this.rnd_color_1.MenosWidthPanel = 1;
             this.rnd_color_1.Name = "rnd_color_1";
             this.rnd_color_1.PorcLuzColorBorde = 0;
-            this.rnd_color_1.Size = new System.Drawing.Size(3, 36);
+            this.rnd_color_1.Size = new System.Drawing.Size(3, 40);
             this.rnd_color_1.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rnd_color_1, null);
             this.tagsExtender1.SetTag3(this.rnd_color_1, null);
@@ -271,6 +277,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel2.Controls.Add(this.roundedPanel2);
             this.panel2.Controls.Add(this.txt_direccion);
             this.panel2.Controls.Add(this.lbl_direccion);
@@ -320,7 +327,7 @@
             this.txt_direccion.Location = new System.Drawing.Point(7, 18);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(284, 23);
-            this.txt_direccion.TabIndex = 2;
+            this.txt_direccion.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.txt_direccion, null);
             this.tagsExtender1.SetTag3(this.txt_direccion, null);
             this.tagsExtender1.SetTagFontName(this.txt_direccion, fontsD.Lato);
@@ -468,11 +475,12 @@
             // 
             this.rnd_cancelar.ArcRadiusBorde = 5;
             this.rnd_cancelar.ArcRadiusPanel = 5;
+            this.rnd_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_cancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
             this.rnd_cancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_cancelar.Location = new System.Drawing.Point(37, 293);
+            this.rnd_cancelar.Location = new System.Drawing.Point(243, 292);
             this.rnd_cancelar.MenosHeightBorde = 1;
             this.rnd_cancelar.MenosHeightPanel = 1;
             this.rnd_cancelar.MenosWidthBorde = 1;
@@ -495,14 +503,15 @@
             // 
             this.btn_cancelar.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(178, 33);
-            this.btn_cancelar.TabIndex = 0;
+            this.btn_cancelar.Size = new System.Drawing.Size(174, 29);
+            this.btn_cancelar.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
             this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
@@ -516,11 +525,12 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(240, 292);
+            this.rnd_guardar.Location = new System.Drawing.Point(58, 292);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -543,14 +553,15 @@
             // 
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Location = new System.Drawing.Point(1, 1);
+            this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(178, 33);
-            this.btn_guardar.TabIndex = 0;
+            this.btn_guardar.Size = new System.Drawing.Size(174, 31);
+            this.btn_guardar.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
             this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
@@ -562,13 +573,14 @@
             // 
             // txt_NombreSede
             // 
+            this.txt_NombreSede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.txt_NombreSede.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_NombreSede.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold);
             this.txt_NombreSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.txt_NombreSede.Location = new System.Drawing.Point(27, 42);
+            this.txt_NombreSede.Location = new System.Drawing.Point(27, 46);
             this.txt_NombreSede.Name = "txt_NombreSede";
             this.txt_NombreSede.Size = new System.Drawing.Size(367, 35);
-            this.txt_NombreSede.TabIndex = 64;
+            this.txt_NombreSede.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.txt_NombreSede, null);
             this.tagsExtender1.SetTag3(this.txt_NombreSede, null);
             this.tagsExtender1.SetTagFontName(this.txt_NombreSede, fontsD.Lato);
@@ -580,19 +592,18 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Location = new System.Drawing.Point(399, 47);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(28, 28);
-            this.btnEditar.TabIndex = 65;
+            this.btnEditar.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btnEditar, null);
             this.tagsExtender1.SetTag3(this.btnEditar, null);
             this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);
@@ -603,19 +614,18 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEliminar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.eliminar;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(440, 47);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 28);
-            this.btnEliminar.TabIndex = 66;
+            this.btnEliminar.TabIndex = 8;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
             this.tagsExtender1.SetTag3(this.btnEliminar, null);
             this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);
@@ -624,15 +634,29 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Controls.Add(this.txt_NombreSede);
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(480, 340);
+            this.pnlBackground.TabIndex = 84;
+            this.tagsExtender1.SetTag2(this.pnlBackground, null);
+            this.tagsExtender1.SetTag3(this.pnlBackground, null);
+            this.tagsExtender1.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlBackground, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaEditarSede
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 350);
+            this.ClientSize = new System.Drawing.Size(480, 340);
             this.ControlBox = false;
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.txt_NombreSede);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.title_bar);
@@ -641,13 +665,13 @@
             this.Controls.Add(this.pnl_tipoServicio);
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlBackground);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "pantallaEditarSede";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.tagsExtender1.SetTag2(this, null);
             this.tagsExtender1.SetTag3(this, null);
@@ -663,8 +687,9 @@
             this.title_bar.ResumeLayout(false);
             this.rnd_cancelar.ResumeLayout(false);
             this.rnd_guardar.ResumeLayout(false);
+            this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -695,5 +720,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ComboBox cboDistritos;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

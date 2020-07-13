@@ -344,11 +344,11 @@
     <Compile Include="Configuracion\Usuarios\pantallaAgregarPermisos.Designer.cs">
       <DependentUpon>pantallaAgregarPermisos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\pantallaGenerarReporte.cs">
+    <Compile Include="Reportes\frmGenerarReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\pantallaGenerarReporte.Designer.cs">
-      <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
+    <Compile Include="Reportes\frmGenerarReporte.Designer.cs">
+      <DependentUpon>frmGenerarReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Configuracion\Empresa\pantallaActualizarBD.cs">
       <SubType>UserControl</SubType>
@@ -586,8 +586,8 @@
     <EmbeddedResource Include="Configuracion\Usuarios\pantallaAgregarPermisos.resx">
       <DependentUpon>pantallaAgregarPermisos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\pantallaGenerarReporte.resx">
-      <DependentUpon>pantallaGenerarReporte.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\frmGenerarReporte.resx">
+      <DependentUpon>frmGenerarReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion\Empresa\pantallaActualizarBD.resx">
       <DependentUpon>pantallaActualizarBD.cs</DependentUpon>

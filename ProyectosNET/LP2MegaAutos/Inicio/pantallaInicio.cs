@@ -94,7 +94,7 @@ namespace LP2MegaAutos
             // Crear el ims y agregarlo a 
             itemMenuStrip ims = new itemMenuStrip();
             Controls.Add(ims);
-            ims.Name = nombre;
+            ims.Name = nombre;;
             ims.BackgroundLayout = ImageLayout.Center;
             ims.Imagen = (Image) new Bitmap(img, new Size(54,54));
             ims.Size = new Size(80, 80);
@@ -295,7 +295,7 @@ namespace LP2MegaAutos
         public event ButtonClickEventHandler ListaReportesClick;
         public event ButtonClickEventHandler ReporteAreaTrabajoClick;
         public event ButtonClickEventHandler ReporteClienteClick;
-        public event ButtonClickEventHandler ReporteVehiculoClick;
+        public event ButtonClickEventHandler ReporteSiniestroClick;
         public event ButtonClickEventHandler CreditosClick;
         public event ButtonClickEventHandler ActualizarEmpresaClick;
         public event ButtonClickEventHandler VerUltimoReporteClick;
@@ -310,7 +310,7 @@ namespace LP2MegaAutos
 
         private void btnGenerarVehiculo_Click(object sender, EventArgs e)
         {
-            ButtonClickEventHandler h = ReporteVehiculoClick;
+            ButtonClickEventHandler h = ReporteSiniestroClick;
             if (h != null) h(this, e);
         }
 

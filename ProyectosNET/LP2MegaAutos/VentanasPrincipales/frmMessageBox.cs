@@ -16,6 +16,7 @@ namespace LP2MegaAutos.VentanasPrincipales
         public frmMessageBox()
         {
             InitializeComponent();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         public frmMessageBox(string mensaje, MessageBoxButtons btns = MessageBoxButtons.OKCancel,
@@ -30,6 +31,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 lblTitulo.Text =  titulo;
             lblTexto.Text = mensaje;
 
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
             if (btns.HasFlag(MessageBoxButtons.OKCancel))
                 return;
 
@@ -47,7 +49,6 @@ namespace LP2MegaAutos.VentanasPrincipales
 
             if (OKenRojo)
                 rndOk.ColorBorde = rndOk.ColorPanel = Colores.PrincipalRojo;
-            
         }
 
         #region title_bar
@@ -96,6 +97,15 @@ namespace LP2MegaAutos.VentanasPrincipales
         private void btnNo_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void frmMessageBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnOk_Click(sender, e);
+            else if (e.KeyCode == Keys.Escape)
+                btnNo_Click(sender, e);
+            //  Si no, nada
         }
     }
 }

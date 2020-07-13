@@ -150,7 +150,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                 }
             }
         }
-        public static void personalizarItemLista(itemLista il)
+        public static void personalizarItemLista(itemLista il, int height = 81)
         {
             il.Anchor = AnchorStyles.Top;
             il.BackColor = Color.Transparent;
@@ -158,7 +158,7 @@ namespace LP2MegaAutos.VentanasPrincipales
             il.ColorBorde = Colores.PrincipalAzulMetalico;
             il.ColorPanel = Colores.BackBackground;
             il.Margin = new Padding(4);
-            il.Size = new Size(497, 104);
+            il.SizeItem = new Size(497, height);
         }
 
         public static void personalizarItemListaCuadrado(itemListaCuadrado il, Image img)

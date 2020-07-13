@@ -36,6 +36,7 @@ namespace LP2MegaAutos.Configuracion.Empresa
             daoEmpresa = new ServicioEmpresa.EmpresaWSClient();
             _empresa = new ServicioEmpresa.empresa();
             _empresa = empresa;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         #region title_bar
@@ -108,6 +109,5 @@ namespace LP2MegaAutos.Configuracion.Empresa
             }
             return true;
         }
-
     }
 }

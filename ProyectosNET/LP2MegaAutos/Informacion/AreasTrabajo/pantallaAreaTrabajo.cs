@@ -50,17 +50,14 @@ namespace LP2MegaAutos
         private itemLista createItemListaAreaTrabajo(ServicioAreaTrabajo.areaTrabajo areaTrabajo, string agregadoPor, DateTime fechaAgregado)
         {
             itemLista il = new itemLista();
-            BotonesDinamicosHelper.personalizarItemLista(il);
+            BotonesDinamicosHelper.personalizarItemLista(il,42);
             il.Name = "il" + areaTrabajo.id;
-            il.TextoAgregadoPor = agregadoPor;
-            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = areaTrabajo.nombre;
             il.ItemListaClick += (sender, e) => { ItemLista_Click(sender, e, areaTrabajo); };
-            il.EditarClick += (sender, e) => { EditarClick(sender, e, areaTrabajo); };
             flowLayoutPanel1.Controls.Add(il);
             return il;
         }
-        private void EditarClick(Object sender, EventArgs e, areaTrabajo areaTrabajo)
+        private void ItemLista_Click(Object sender, EventArgs e, areaTrabajo areaTrabajo)
         {
             pantallaEditarAreaTrabajo pas = new pantallaEditarAreaTrabajo(areaTrabajo);
             DialogResult d = pas.ShowDialog();
@@ -77,7 +74,7 @@ namespace LP2MegaAutos
                 daoAreaTrabajo.eliminarAreaTrabajo(areaTrabajo.id);
                 organizarAZ();
                 _areasTrabajo.Remove(areaTrabajo);
-                btnAZ_Click(btnAZ, e);
+                btnAZ_Click(btnAZ, e); 
             }
         }
         #region Botones Filtros
@@ -166,12 +163,6 @@ namespace LP2MegaAutos
                 frm.ShowDialog();
                 btnAZ_Click(btnAZ, new EventArgs());
             }
-        }
-        private void ItemLista_Click(object sender, EventArgs e, areaTrabajo areaTrabajo)
-        {
-            frmAreaTrabajoxCC pas = new frmAreaTrabajoxCC(areaTrabajo);
-            if (pas.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
         }
         #region Buscar //AGREGADO PARA BUSCAR
         private void crearItemsListaBuscar(List<areaTrabajo> _areasTrabajo)

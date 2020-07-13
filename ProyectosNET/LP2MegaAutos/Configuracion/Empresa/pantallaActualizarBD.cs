@@ -31,69 +31,23 @@ namespace LP2MegaAutos
             daoExcel = new ServicioExcel.ExcelWSClient();
             _excelEnviado = new ServicioExcel.excel();
             _excelRecibido = new ServicioExcel.excel();
+            ServicioSede.SedeWSClient daoSede = new ServicioSede.SedeWSClient();
+            cboSede.DisplayMember = "distrito";
+            cboSede.DataSource = daoSede.listarSedes();
+            btn_guardar.Enabled =btnDescargar.Enabled= false;
+            rpBtnGuardar.ColorBorde = rpBtnGuardar.ColorPanel =
+            rpBtnDescargar.ColorBorde = rpBtnDescargar.ColorPanel =
+                Colores.Disabled;
         }
 
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
-           try
-            {
-                if (ofdArchivo1.ShowDialog() == DialogResult.OK)
-                {
-                    archivoSeleccionado1 = ofdArchivo1.FileName;
-                    txtArchivo1.Text = archivoSeleccionado1;
-                    FileStream fs = new FileStream(archivoSeleccionado1, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
 
-                    // Asignamos el archivo al objeto
-                    // Habilitar el boton guardar
-                    this._excelEnviado.archivo = br.ReadBytes((int)fs.Length);
-                    br.Close();
-                    fs.Close();
-                    this.btn_guardar.Enabled = this.btnDescargar1.Enabled= true;
-                    this.btn_guardar.Cursor = Cursors.Hand;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El archivo seleccionado no es un tipo valido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
-            }
-        }
-
-        private void btnExaminar2_Click(object sender, EventArgs e)
-        {
-            //FolderBrowserDialog fld = new FolderBrowserDialog();
-            //fld.ShowDialog();
-            //if (fld.ShowDialog() == DialogResult.OK)
-            //{
-            //    txtArchivo2.Text = fld.SelectedPath;                    
-            //}
-
-            try
-            {
-                if (ofdArchivo2.ShowDialog() == DialogResult.OK)
-                {
-                    archivoSeleccionado2 = ofdArchivo2.FileName;
-                    FileStream fs = new FileStream(archivoSeleccionado2, FileMode.Open, FileAccess.Read);
-                    BinaryReader br = new BinaryReader(fs);
-
-                    // Asignamos el archivo al objeto
-                    //this._excel.excel2 = br.ReadBytes((int)fs.Length);
-                    br.Close();
-                    fs.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El archivo seleccionado no es un tipo valido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
-            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // Almacenar los string en el back
-            // WebService.GuardarArchivo(txtArchivo1.Text);
-            // WebService.GuardarArchivo(txtArchivo2.Text);
             // Llamar a pantalla de carga
             Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
             thrdLoading.Start();
@@ -131,7 +85,7 @@ namespace LP2MegaAutos
             }
         }
 
-        private void btnDefault_Click(object sender, EventArgs e)
+        private void btnObtener_Click(object sender, EventArgs e)
         {
             
             if (sfdArchivoReporte.ShowDialog() == DialogResult.OK)

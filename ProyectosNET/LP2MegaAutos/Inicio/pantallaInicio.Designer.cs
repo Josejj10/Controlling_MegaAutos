@@ -233,7 +233,7 @@ namespace LP2MegaAutos
             this.tags.SetTagFontName(this.btnGenerarVehiculo, fontsD.Lato);
             this.tags.SetTagFontSize(this.btnGenerarVehiculo, 15F);
             this.tags.SetTagFontStyle(this.btnGenerarVehiculo, System.Drawing.FontStyle.Regular);
-            this.btnGenerarVehiculo.Text = "Generar por Vehículo";
+            this.btnGenerarVehiculo.Text = "Generar por Siniestro";
             this.btnGenerarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarVehiculo.UseVisualStyleBackColor = false;
             this.btnGenerarVehiculo.Click += new System.EventHandler(this.btnGenerarVehiculo_Click);

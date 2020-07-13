@@ -118,7 +118,6 @@ namespace LP2MegaAutos.Inicio
             return true;
         }
 
-
         private void txtCorreo_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;

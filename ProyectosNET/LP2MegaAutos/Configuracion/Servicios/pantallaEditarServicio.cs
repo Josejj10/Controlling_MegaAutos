@@ -23,7 +23,9 @@ namespace LP2MegaAutos
             InitializeComponent();
             _servicio = new ServicioServicio.servicio();
             txt_NombreServicio.Text = "Agregar nombre de servicio...";
+            txt_NombreServicio.ForeColor = Colores.LowContrast;
             this.btnEditar.Visible = this.btnEliminar.Visible = false;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         public pantallaEditarServicio(ServicioServicio.servicio servicio)
         {
@@ -33,8 +35,8 @@ namespace LP2MegaAutos
             this.txt_NombreServicio.Text = OtrosHelper.tipoOracion(servicio.nombre);
             this.txt_codServ.Text = servicio.codigoServicio;
             this.txt_descripcion.Text = OtrosHelper.tipoParrafo(servicio.descripcion);
-            //this.txt_tipoServicio.Text = OtrosHelper.tipoOracion(servicio.tipoServicio);
             this.cboTipoServicio.Text = OtrosHelper.tipoOracion(servicio.tipoServicio);
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -53,7 +55,7 @@ namespace LP2MegaAutos
                 // No habilitado
                 txt_NombreServicio.BackColor = txt_codServ.BackColor =
                     txt_descripcion.BackColor = cboTipoServicio.BackColor
-                    = Colores.FrontBackground;
+                    = Colores.FormBackground;
 
                 txt_NombreServicio.ForeColor = txt_codServ.ForeColor =
                     txt_descripcion.ForeColor = cboTipoServicio.ForeColor =
@@ -68,6 +70,7 @@ namespace LP2MegaAutos
                 btnEditar.BackgroundImage = Resources.editar;
                 return;
             }
+            
             // Habilitado
             txt_NombreServicio.ForeColor = Colores.HighContrast;
             txt_codServ.ForeColor =

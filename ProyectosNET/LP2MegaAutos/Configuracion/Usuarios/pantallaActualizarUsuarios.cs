@@ -34,29 +34,25 @@ namespace LP2MegaAutos
         #region lista
         private void inicializarItemsLista()
         {
-            _usuarios = daoUsuario.listarUsuarios().ToList();
+            quitarItemsLista();
+            if (viendoActivo)
+                _usuarios = daoUsuario.listarUsuarios().ToList();
+            else
+                _usuarios = daoUsuario.listarUsuariosInactivos().ToList();
             btnAZ_Click(btnAZ,new EventArgs());
         }
 
-        private itemLista createItemListaUsuario(ServicioUsuario.usuario usuario, string agregadoPor, DateTime fechaAgregado)
+        private itemLista createItemListaUsuario(ServicioUsuario.usuario usuario)
         {
             itemLista il = new itemLista();
-            il.Anchor = AnchorStyles.Top;
-            il.BackColor = Color.Transparent;
-            il.ColorBack = Color.Transparent;
-            il.ColorBorde = Colores.PrincipalAzulMetalico;
-            il.ColorPanel = Colores.BackBackground;
-            il.Margin = new Padding(4);
+            BotonesDinamicosHelper.personalizarItemLista(il);
             il.Name = "il" + usuario.id;
-            il.Size = new Size(497, 104);
-            il.TextoAgregadoPor = agregadoPor;
-            il.TextoFecha = fechaAgregado.ToString("dd/MM/yyyy");
             il.TextoPrincipal = usuario.nombre;
             il.Textosecundario = usuario.tipoUsuario;
             il.TextoTercero = usuario.correo;
             il.ItemListaClick += (sender, e) => { verDatosUsuario(sender, e, usuario); };
-            il.esconderBotonEditar();
             flpUsuarios.Controls.Add(il);
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(il);
             return il;
         }
 
@@ -66,7 +62,7 @@ namespace LP2MegaAutos
             if (_usuarios == null) return;
             foreach (usuario u in _usuarios)
             {
-                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+                createItemListaUsuario(u);
             }
         }
 
@@ -109,17 +105,25 @@ namespace LP2MegaAutos
         {
             pantallaEditarUsuario pas = new pantallaEditarUsuario(usu);
             DialogResult d = pas.ShowDialog();
-            if (d== DialogResult.OK)
+            if (d == DialogResult.OK)
             {
                 // Actualizar el Usuario
                 usuario u = pas.Usuario;
                 frmMessageBox frm = new frmMessageBox("Se actualizo correctamente el usuario", MessageBoxButtons.OK, "Mensaje", false);
-                if (daoUsuario.actualizarUsuario(u) != 0)
-                    frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK,"Error", true);
-                
+
+                if (pas.CambiarPass)
+                { // Si se esta cambiando la contraseña, llamar a actualizar password
+                    if (daoUsuario.actualizarUsuarioPassword(u) == 0)
+                    {
+                        frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK, "Error", true); ;
+                    }
+                }
+                else if (daoUsuario.actualizarUsuario(u) == 0) // Si no, solo actualizar usuario
+                    frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK, "Error", true);
+
                 frm.ShowDialog();
                 flpUsuarios.Controls.RemoveByKey("il" + usu.id);
-                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+                createItemListaUsuario(u);
                 _usuarios.Remove(usu);
                 _usuarios.Add(u);
                 btnAZ_Click(btnAZ, new EventArgs());
@@ -127,8 +131,20 @@ namespace LP2MegaAutos
             }
             else if(d == DialogResult.Retry)
             {
-                // Eliminar
-                daoUsuario.eliminarUsuario(usu.id);
+                frmMessageBox frm = new frmMessageBox("Hubo un error.", MessageBoxButtons.OK, "Mensaje", false);
+                if (pas.Activando)
+                {
+                    // Activar
+                    // if(daoUsuario.activarUsuario(usu.id) != 0)
+                    frm = new frmMessageBox("Se activo correctamente el usuario. Ahora puede verlo en usuarios activos.",
+                            MessageBoxButtons.OK, "Usuario Activado");
+                }
+                else // Eliminar
+                    if(daoUsuario.eliminarUsuario(usu.id) != 0)
+                        frm = new frmMessageBox("Se desactivo correctamente el usuario. Puede activarlo al ver usuarios inactivos.",
+                            MessageBoxButtons.OK,"Usuario Desactivado");
+                
+                frm.ShowDialog();
                 flpUsuarios.Controls.RemoveByKey("il" + usu.id);
                 _usuarios.Remove(usu);
                 // TODO seleccionar organizar segun el boton seleccionado
@@ -165,21 +181,26 @@ namespace LP2MegaAutos
                 rndReciente, rndAntiguo, rndZA, rndAZ);
             organizarReciente();
         }
+
+        private void btn_MouseDown(object sender, MouseEventArgs e)
+        {
+            pantallaListasHelper.btn_MouseDown((Button)sender);
+        }
+
+        private void btn_MouseUp(object sender, MouseEventArgs e)
+        {
+            pantallaListasHelper.btn_MouseUp((Button)sender);
+        }
+
+        private void btn_MouseMove(object sender, MouseEventArgs e)
+        {
+            pantallaListasHelper.btn_MouseMove((Button)sender);
+        }
+       
+
         #endregion Botones Filtros
-
-        #region Txt Buscar
-        private void txt_Buscar_Enter(object sender, EventArgs e)
-        {
-            pantallaListasHelper.buscarEnter(txt_Buscar,textoBuscar); //AGREGADO PARA BUSCAR
-        }
-
-        private void txt_Buscar_Leave(object sender, EventArgs e)
-        {
-            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
-        }
-        #endregion Txt Buscar
-
-        #region Buscar //AGREGADO PARA BUSCAR
+    
+        #region Buscar
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             pantallaEditarUsuario pas = new pantallaEditarUsuario();
@@ -208,7 +229,7 @@ namespace LP2MegaAutos
             if (_usuariosB == null) return;
             foreach (usuario u in _usuariosB)
             {
-                createItemListaUsuario(u, "Carter Kane", DateTime.Now);
+                createItemListaUsuario(u);
             }
         }
 
@@ -226,13 +247,28 @@ namespace LP2MegaAutos
             quitarItemsLista();
             crearItemsListaBuscar(_usuariosBuscados);
         }
+
+        #region Txt Buscar
+        private void txt_Buscar_Enter(object sender, EventArgs e)
+        {
+            pantallaListasHelper.buscarEnter(txt_Buscar, textoBuscar); //AGREGADO PARA BUSCAR
+        }
+
+        private void txt_Buscar_Leave(object sender, EventArgs e)
+        {
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
+        }
+        #endregion Txt Buscar
+
+
         #endregion Buscar
 
         private void btnVerInactivos_Click(object sender, EventArgs e)
         {
             this.viendoActivo = !this.viendoActivo;
-            // TODO llamar a DAO de Inactivos 
             btnVerInactivos.Text = this.viendoActivo ? "Ver Inactivos": "Ver Activos";
+            lbl_ListaServicios.Text = this.viendoActivo ? "Usuarios Activos": "Usuarios Inactivos";
+            inicializarItemsLista();
         }
     }
 }

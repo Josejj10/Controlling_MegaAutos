@@ -46,6 +46,7 @@
             this.flpUsuarios = new System.Windows.Forms.FlowLayoutPanel();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaServicios = new LP2MegaAutos.RoundedPanel();
+            this.tlp = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
             this.btnVerInactivos = new System.Windows.Forms.Button();
             this.pnlBuscar.SuspendLayout();
@@ -55,6 +56,7 @@
             this.rndAZ.SuspendLayout();
             this.panel3.SuspendLayout();
             this.rpn_ListaServicios.SuspendLayout();
+            this.tlp.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBuscar
@@ -92,7 +94,7 @@
             this.txt_Buscar.BackColor = System.Drawing.Color.White;
             this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.Black;
+            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.txt_Buscar.Location = new System.Drawing.Point(37, 6);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(700, 18);
@@ -161,6 +163,7 @@
             // 
             this.btnReciente.BackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatAppearance.BorderSize = 0;
+            this.btnReciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReciente.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,6 +183,9 @@
             this.btnReciente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReciente.UseVisualStyleBackColor = false;
             this.btnReciente.Click += new System.EventHandler(this.btnReciente_Click);
+            this.btnReciente.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnReciente.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnReciente.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // rndAntiguo
             // 
@@ -213,6 +219,7 @@
             // 
             this.btnAntiguo.BackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatAppearance.BorderSize = 0;
+            this.btnAntiguo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAntiguo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAntiguo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,6 +239,9 @@
             this.btnAntiguo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAntiguo.UseVisualStyleBackColor = false;
             this.btnAntiguo.Click += new System.EventHandler(this.btnAntiguo_Click);
+            this.btnAntiguo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnAntiguo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnAntiguo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // rndZA
             // 
@@ -265,6 +275,7 @@
             // 
             this.btnZA.BackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatAppearance.BorderSize = 0;
+            this.btnZA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnZA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZA.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -284,6 +295,9 @@
             this.btnZA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnZA.UseVisualStyleBackColor = false;
             this.btnZA.Click += new System.EventHandler(this.btnZA_Click);
+            this.btnZA.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnZA.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnZA.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // rndAZ
             // 
@@ -317,6 +331,7 @@
             // 
             this.btnAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(220)))), ((int)(((byte)(124)))));
             this.btnAZ.FlatAppearance.BorderSize = 0;
+            this.btnAZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAZ.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,6 +351,9 @@
             this.btnAZ.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAZ.UseVisualStyleBackColor = false;
             this.btnAZ.Click += new System.EventHandler(this.btnAZ_Click);
+            this.btnAZ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnAZ.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_MouseMove);
+            this.btnAZ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_MouseUp);
             // 
             // panel3
             // 
@@ -402,7 +420,7 @@
             this.rpn_ListaServicios.ArcRadiusPanel = 15;
             this.rpn_ListaServicios.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpn_ListaServicios.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.rpn_ListaServicios.Controls.Add(this.lbl_ListaServicios);
+            this.rpn_ListaServicios.Controls.Add(this.tlp);
             this.rpn_ListaServicios.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.rpn_ListaServicios.Dock = System.Windows.Forms.DockStyle.Top;
             this.rpn_ListaServicios.Location = new System.Drawing.Point(0, 0);
@@ -424,23 +442,41 @@
             this.rpn_ListaServicios.YBorde = 0;
             this.rpn_ListaServicios.YPanel = 0;
             // 
+            // tlp
+            // 
+            this.tlp.BackColor = System.Drawing.Color.Transparent;
+            this.tlp.ColumnCount = 1;
+            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp.Controls.Add(this.lbl_ListaServicios, 0, 0);
+            this.tlp.Location = new System.Drawing.Point(0, 3);
+            this.tlp.Name = "tlp";
+            this.tlp.RowCount = 1;
+            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp.Size = new System.Drawing.Size(566, 21);
+            this.tlp.TabIndex = 1;
+            this.tagsExtender1.SetTag2(this.tlp, null);
+            this.tagsExtender1.SetTag3(this.tlp, null);
+            this.tagsExtender1.SetTagFontName(this.tlp, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.tlp, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.tlp, System.Drawing.FontStyle.Regular);
+            // 
             // lbl_ListaServicios
             // 
-            this.lbl_ListaServicios.AutoSize = true;
+            this.lbl_ListaServicios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_ListaServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.lbl_ListaServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaServicios.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaServicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.lbl_ListaServicios.Location = new System.Drawing.Point(242, 2);
+            this.lbl_ListaServicios.Location = new System.Drawing.Point(86, 0);
             this.lbl_ListaServicios.Name = "lbl_ListaServicios";
-            this.lbl_ListaServicios.Size = new System.Drawing.Size(82, 22);
+            this.lbl_ListaServicios.Size = new System.Drawing.Size(394, 21);
             this.lbl_ListaServicios.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaServicios, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaServicios, null);
             this.tagsExtender1.SetTagFontName(this.lbl_ListaServicios, fontsD.Montserrat);
             this.tagsExtender1.SetTagFontSize(this.lbl_ListaServicios, 12F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_ListaServicios, System.Drawing.FontStyle.Bold);
-            this.lbl_ListaServicios.Text = "Usuarios";
+            this.lbl_ListaServicios.Text = "Usuarios Activos";
             this.lbl_ListaServicios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnVerInactivos
@@ -480,7 +516,7 @@
             this.Controls.Add(this.rndAZ);
             this.Controls.Add(this.pnlBuscar);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaActualizarUsuarios";
             this.Size = new System.Drawing.Size(751, 520);
             this.tagsExtender1.SetTag2(this, null);
@@ -496,7 +532,7 @@
             this.rndAZ.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.rpn_ListaServicios.ResumeLayout(false);
-            this.rpn_ListaServicios.PerformLayout();
+            this.tlp.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,5 +558,6 @@
         private RoundedPanel rpn_ListaServicios;
         private System.Windows.Forms.Label lbl_ListaServicios;
         private System.Windows.Forms.Button btnVerInactivos;
+        private System.Windows.Forms.TableLayoutPanel tlp;
     }
 }

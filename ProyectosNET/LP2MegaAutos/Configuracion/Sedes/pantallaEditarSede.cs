@@ -23,7 +23,10 @@ namespace LP2MegaAutos
             InitializeComponent();
             _sede = new ServicioSede.sede();
             txt_NombreSede.Text = "Agregar nombre de sede...";
+            txt_NombreSede.ForeColor = Colores.LowContrast;
             this.btnEliminar.Visible = this.btnEditar.Visible =false;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
+
         }
 
         public pantallaEditarSede(ServicioSede.sede sede)
@@ -35,6 +38,7 @@ namespace LP2MegaAutos
             this.txt_NombreSede.Text = OtrosHelper.tipoOracion(sede.nombre).Trim();
             this.txt_direccion.Text = OtrosHelper.tipoOracion(sede.direccion).Trim();
             this.txt_telefono.Text = OtrosHelper.tipoOracion(sede.telefono).Trim();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         #region title_bar
@@ -123,7 +127,9 @@ namespace LP2MegaAutos
             if (!en)
             {
                 // No habilitado
-                txt_NombreSede.BackColor = Colores.FrontBackground;
+                txt_NombreSede.BackColor = cboDistritos.BackColor =
+                txt_direccion.BackColor = txt_telefono.BackColor =
+                Colores.FormBackground;
 
                 txt_NombreSede.ForeColor = cboDistritos.ForeColor =
                     txt_direccion.ForeColor = txt_telefono.ForeColor =
@@ -183,7 +189,7 @@ namespace LP2MegaAutos
 
             if (string.IsNullOrEmpty(txt_direccion.Text))
             {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese una dirreccion.", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("Por favor ingrese una direccion.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }

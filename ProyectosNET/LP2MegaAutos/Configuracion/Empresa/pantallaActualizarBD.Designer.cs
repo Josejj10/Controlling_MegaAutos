@@ -87,17 +87,22 @@
             // 
             // btnExaminar
             // 
+            this.btnExaminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.btnExaminar.FlatAppearance.BorderSize = 0;
+            this.btnExaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExaminar.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.btnExaminar.ForeColor = System.Drawing.Color.White;
             this.btnExaminar.Location = new System.Drawing.Point(399, 3);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(37, 23);
             this.btnExaminar.TabIndex = 58;
             this.tagsExtender1.SetTag2(this.btnExaminar, null);
             this.tagsExtender1.SetTag3(this.btnExaminar, null);
-            this.tagsExtender1.SetTagFontName(this.btnExaminar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnExaminar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnExaminar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btnExaminar, System.Drawing.FontStyle.Regular);
-            this.btnExaminar.Text = "...";
-            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Text = ". . .";
+            this.btnExaminar.UseVisualStyleBackColor = false;
             this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
             // 
             // txtArchivo1
@@ -181,6 +186,7 @@
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.Enabled = false;
             this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -231,6 +237,7 @@
             this.btnDescargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDescargar.Enabled = false;
             this.btnDescargar.FlatAppearance.BorderSize = 0;
+            this.btnDescargar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDescargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDescargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDescargar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -282,6 +289,7 @@
             this.btnObtener.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnObtener.Enabled = false;
             this.btnObtener.FlatAppearance.BorderSize = 0;
+            this.btnObtener.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnObtener.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnObtener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnObtener.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -297,7 +305,7 @@
             this.tagsExtender1.SetTagFontStyle(this.btnObtener, System.Drawing.FontStyle.Bold);
             this.btnObtener.Text = "Obtener Reporte";
             this.btnObtener.UseVisualStyleBackColor = false;
-            this.btnObtener.Click += new System.EventHandler(this.btnDefault_Click);
+            this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click);
             // 
             // cboSede
             // 

@@ -625,6 +625,8 @@ namespace LP2MegaAutos
         }
         private void verCreditos(object sender, EventArgs e)
         {
+            // TODO Agregar form con creditos
+            // Leerlos de creditos.txt
             MessageBox.Show("TODO Agregar un form con creditos");
         }
 

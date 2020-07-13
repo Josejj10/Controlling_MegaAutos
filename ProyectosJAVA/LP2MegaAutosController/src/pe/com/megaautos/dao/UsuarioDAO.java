@@ -26,4 +26,5 @@ public interface UsuarioDAO {
     int actualizarPasswrd(String correo, String token, String passwrd);
     boolean verificarToken(String correo, String token);
     int invalidarToken(String correo, String token);
+    int activarInactivo(int idUsuario);
 }

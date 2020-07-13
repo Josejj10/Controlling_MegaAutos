@@ -114,7 +114,7 @@ namespace LP2MegaAutos
                 // Actualizar el Usuario
                 usuario u = pas.Usuario;
                 frmMessageBox frm = new frmMessageBox("Se actualizo correctamente el usuario", MessageBoxButtons.OK, "Mensaje", false);
-                if (daoUsuario.actualizarUsuario(u) == 0)
+                if (daoUsuario.actualizarUsuario(u) != 0)
                     frm = new frmMessageBox("No se pudo actualizar el usuario", MessageBoxButtons.OK,"Error", true);
                 
                 frm.ShowDialog();

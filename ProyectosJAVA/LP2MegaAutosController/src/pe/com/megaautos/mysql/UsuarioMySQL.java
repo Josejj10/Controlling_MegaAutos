@@ -101,7 +101,6 @@ public class UsuarioMySQL implements UsuarioDAO {
                     cs2.setInt("_ID_USUARIO", usuario.getId());
                     cs2.executeUpdate();
                 }
-                con2.close();
                 //Se recorre para agregar los permisos
                 for (EPermisos e : usuario.getPermisos()){
                     if (u2.getPermisos().contains(e))
@@ -113,11 +112,12 @@ public class UsuarioMySQL implements UsuarioDAO {
                     cs3.setInt("_ID_USUARIO", usuario.getId());
                     cs3.executeUpdate();
                 }
-                con3.close();
-            }
+            }            
+            con2.close();
+            con3.close();
+            rpta=usuario.getId();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
-            rpta = 1;
         }finally{
             try{
                 con.close();
@@ -133,12 +133,7 @@ public class UsuarioMySQL implements UsuarioDAO {
     public int actualizarConPassword(Usuario usuario) {
         int rpta = 0;
         try{
-            con = DBDataSource.getConnection();/*
-            //Registrar el JAR de conexión
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            //Establecer la conexion
-            con = DriverManager.getConnection(DBManager.url, 
-                    DBManager.user, DBManager.password);*/
+            con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall(
                     "{call ACTUALIZAR_USUARIO_CONTRASEÑA(?,?,?,?,?,?)}");
             cs.setInt("_ID_USUARIO", usuario.getId());
@@ -159,10 +154,9 @@ public class UsuarioMySQL implements UsuarioDAO {
                         continue;
                     CallableStatement cs2 = con2.prepareCall("{call ELIMINAR_PERMISO_USUARIO(?,?)");
                     cs2.setString("_NOMBRE",e.toString().toUpperCase());
-                    cs2.setInt("_ID_USUARIO", rpta);
+                    cs2.setInt("_ID_USUARIO", usuario.getId());
                     cs2.executeUpdate();
                 }
-                con2.close();
                 //Se recorre para agregar los permisos
                 for (EPermisos e : usuario.getPermisos()){
                     if (u2.getPermisos().contains(e))
@@ -171,14 +165,15 @@ public class UsuarioMySQL implements UsuarioDAO {
                          "{call INSERTAR_PERMISO_USUARIO(?,?,?)}");
                     cs3.registerOutParameter("_ID_PERMISO", java.sql.Types.INTEGER);
                     cs3.setString("_NOMBRE",e.toString().toUpperCase());
-                    cs3.setInt("_ID_USUARIO", rpta);
+                    cs3.setInt("_ID_USUARIO", usuario.getId());
                     cs3.executeUpdate();
                 }
-                con3.close();
-            }
+            }            
+            con2.close();
+            con3.close();
+            rpta=usuario.getId();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
-            rpta = 1;
         }finally{
             try{
                 con.close();
@@ -573,6 +568,7 @@ public class UsuarioMySQL implements UsuarioDAO {
                 usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
                 usuario.setCorreo(rs.getString("CORREO"));
                 usuario.setPassword(rs.getString("PASSWRD"));
+                usuario.setActivo(rs.getInt("ACTIVO"));
                 //usuario.setFechaCreado(rs.getDate("FECHA_CREACION"));
                 usuarios.add(usuario);
             CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");
@@ -628,4 +624,33 @@ public class UsuarioMySQL implements UsuarioDAO {
         //Devolviendo los usuarios
         return usuarios;    
     }
+
+    @Override
+    public int activarInactivo(int idUsuario) {
+        int rpta = 0;
+        try{
+            con = DBDataSource.getConnection();/*
+            //Registrar el JAR de conexión
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Establecer la conexion
+            con = DriverManager.getConnection(DBManager.url, 
+                    DBManager.user, DBManager.password);*/
+            CallableStatement cs = con.prepareCall(
+                    "{call ACTIVAR_USUARIO_INACTIVO(?)}");
+            cs.setInt("_ID_USUARIO", idUsuario);
+            cs.executeUpdate();
+            rpta=1;
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return rpta;
+    }
+    
 }

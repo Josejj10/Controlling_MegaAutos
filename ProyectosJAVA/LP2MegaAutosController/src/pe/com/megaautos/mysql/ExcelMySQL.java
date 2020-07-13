@@ -7,6 +7,7 @@ package pe.com.megaautos.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.util.Date;
 import java.sql.ResultSet;
 import pe.com.megaautos.config.DBDataSource;
 import pe.com.megaautos.dao.ExcelDAO;
@@ -79,10 +80,15 @@ public class ExcelMySQL implements ExcelDAO {
          try{
             con = DBDataSource.getConnection();            
             CallableStatement cs = con.prepareCall(
-                    "{call INSERTAR_ARCHIVO(?,?,?)}");
+                    "{call INSERTAR_ARCHIVO(?,?,?,?,?,?)}");
             cs.registerOutParameter("_ID_ARCHIVO", java.sql.Types.INTEGER);
             cs.setBytes("_ARCHIVO", excel.getArchivo());            
             cs.setInt("_TIPO", 1);
+            java.sql.Date fechaIni = new java.sql.Date(excel.getFechaIni().getTime());
+            cs.setDate("_FECHA_INICIO", fechaIni);
+            java.sql.Date fechaFin = new java.sql.Date(excel.getFechaFin().getTime());
+            cs.setDate("_FECHA_FIN", fechaFin);            
+            cs.setInt("_ID_SEDE", excel.getSede().getId());
             cs.executeUpdate();
             rpta = cs.getInt("_ID_ARCHIVO");
             // Actualiza el ID del cliente insertado para tenerlo en Java
@@ -125,6 +131,42 @@ public class ExcelMySQL implements ExcelDAO {
             }
         } 
          return rpta;
+    }
+
+    @Override
+    public Excel buscar(Date fecha1, Date fecha2,  int idSede) {
+        Excel excel = new Excel();
+        try{
+            con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_EXCEL(?,?,?,?)}");            
+            cs.setInt("_TIPO", 1);            
+            java.sql.Date fechaIni = new java.sql.Date(fecha1.getTime());
+            cs.setDate("_FECHA_INICIO", fechaIni);
+            java.sql.Date fechaFin = new java.sql.Date(fecha2.getTime());
+            cs.setDate("_FECHA_FIN", fechaFin);                        
+            cs.setInt("_ID_SEDE", idSede); 
+            ResultSet rs = cs.executeQuery(); 
+            while(rs.next()){
+                excel.setArchivo(rs.getBytes("ARCHIVO"));
+                excel.setFechaIni(rs.getDate("FECHA_INICIO"));
+                excel.setFechaFin(rs.getDate("FECHA_FIN"));
+                excel.getSede().setId(idSede);
+            }
+            con.close();
+        }
+        catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }         
+
+        return excel;    
     }
     
     

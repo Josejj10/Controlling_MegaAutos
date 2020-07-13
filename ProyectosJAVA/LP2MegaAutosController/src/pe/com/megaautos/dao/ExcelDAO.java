@@ -5,6 +5,7 @@
  */
 package pe.com.megaautos.dao;
 
+import java.util.Date;
 import pe.com.megaautos.model.Excel;
 
 /**
@@ -14,6 +15,7 @@ import pe.com.megaautos.model.Excel;
 public interface ExcelDAO {
     Excel leerArchivoEntrada();
     Excel leerArchivoSalida();
+    Excel buscar(Date fechaIni, Date fechaFin, int idSede);
     int insertarArchivoEntrada(Excel excel);
     int insertarArchivoSalida(Excel excel);
 }

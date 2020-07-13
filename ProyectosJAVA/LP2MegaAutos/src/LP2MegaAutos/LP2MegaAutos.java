@@ -20,6 +20,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Collections;
+import static java.util.Collections.sort;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -79,55 +81,62 @@ public class LP2MegaAutos {
 //        daoUsuario.actualizarPasswrd("rodrigo.dulanto@pucp.edu.pe", "Z7fMUX83IAcqBrIl", "1234");
         //Z7fMUX83IAcqBrIl
         
+        String sDate1="31/12/1998";  
+        Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);  
+        System.out.println(sDate1+"\t"+date1);  
         
-        
-        
-        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
-        Usuario u = new Usuario();
-        u = daoUsuario.buscarPorCorreo("t@");
-        System.out.println(u.getId() + " " + u.getNombre() + " " + 
-               u.getCorreo() + " " + u.getTipoUsuario());
-        
-        for (EPermisos e : u.getPermisos()){
-            System.out.println(e);
-        }
-        
-        u.addPermisos(EPermisos.Servicios);
-        
-        int a = daoUsuario.actualizar(u);
-        Usuario u2 = new Usuario();
-        u2 = daoUsuario.buscarPorCorreo("t@");
-        System.out.println(u2.getId() + " " + u2.getNombre() + " " + 
-                u2.getCorreo() + " " + u2.getTipoUsuario());
-        
-        for (EPermisos e : u2.getPermisos()){
-            System.out.println(e);
-        }
-        
-        u2.addPermisos(EPermisos.Sedes);
-        u2.addPermisos(EPermisos.Clientes);
-        u2.removePermiso(EPermisos.Servicios);
-        int b=daoUsuario.actualizar(u2);
-        Usuario u3 = new Usuario();
-        u3 = daoUsuario.buscarPorCorreo("t@");
-        System.out.println(u3.getId() + " " + u3.getNombre() + " " + 
-                u3.getCorreo() + " " + u3.getTipoUsuario());
-        
-        for (EPermisos e : u3.getPermisos()){
-            System.out.println(e);
-        }
+//        
+//        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();
+//        Usuario u = new Usuario();
+//        u = daoUsuario.buscarPorCorreo("t3@");
+//        System.out.println(u.getId() + " " + u.getNombre() + " " + 
+//               u.getCorreo() + " " + u.getTipoUsuario());
+//        
+//        for (EPermisos e : u.getPermisos()){
+//            System.out.println(e);
+//        }
+//        
+//        u.addPermisos(EPermisos.Servicios);
+//        
+//        int a = daoUsuario.actualizar(u);
+//        Usuario u2 = new Usuario();
+//        u2 = daoUsuario.buscarPorCorreo("t3@");
+//        System.out.println(u2.getId() + " " + u2.getNombre() + " " + 
+//                u2.getCorreo() + " " + u2.getTipoUsuario());
+//        
+//        for (EPermisos e : u2.getPermisos()){
+//            System.out.println(e);
+//        }
+//        
+//        u2.addPermisos(EPermisos.Sedes);
+//        u2.addPermisos(EPermisos.Clientes);
+//        u2.removePermiso(EPermisos.Servicios);
+//        int b=daoUsuario.actualizar(u2);
+//        Usuario u3 = new Usuario();
+//        u3 = daoUsuario.buscarPorCorreo("t3@");
+//        System.out.println(u3.getId() + " " + u3.getNombre() + " " + 
+//                u3.getCorreo() + " " + u3.getTipoUsuario());
+//        
+//        for (EPermisos e : u3.getPermisos()){
+//            System.out.println(e);
+//        }
 //        
 ////        Extraction
 //        String ruta = "D:\\Documentos\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Cuadro.xlsx";
 //        File initialFile = new File(ruta);
 //        InputStream targetStream1 = new FileInputStream(initialFile);
-//        InputStream targetStream2 = new FileInputStream(initialFile);
-//        InputStream targetStream3 = new FileInputStream(initialFile);
-//        InputStream targetStream4 = new FileInputStream(initialFile);
-//        InputStream targetStream5 = new FileInputStream(initialFile);
-//        
-//        //Obtenemos el dfFact del documento en excel
+////        InputStream targetStream2 = new FileInputStream(initialFile);
+////        InputStream targetStream3 = new FileInputStream(initialFile);
+////        InputStream targetStream4 = new FileInputStream(initialFile);
+////        InputStream targetStream5 = new FileInputStream(initialFile);
+////        
+////        //Obtenemos el dfFact del documento en excel
 //        DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5, 2);
+//        int lastRow = dfFact.length()-1;
+//        Date fechaIni = (Date)dfFact.slice(0, lastRow).sortBy(0).resetIndex().col(0).get(0);
+//        Date fechaFin = (Date)dfFact.slice(0, lastRow).sortBy(0).resetIndex().col(0).get(lastRow-1);
+//        System.out.println(dfFact);
+//        
 //        DataFrame dfAsig = JoineryExtension.readXlsx(targetStream2,1, 3);
 //        DataFrame dfSalxAlm = JoineryExtension.readXlsx(targetStream3, 3, 3);
 //        DataFrame dfCompras = JoineryExtension.readXlsx(targetStream4, 2, 2);

@@ -14,6 +14,7 @@ import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -25,6 +26,7 @@ import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.model.Excel;
+import pe.com.megaautos.model.Reporte;
 import static pe.com.megaautos.services.JoineryExtension.writeListXlsx;
 import static pe.com.megaautos.services.JoineryExtension.writeXlsx;
 
@@ -42,14 +44,63 @@ public class ExcelWS {
     public int insertarArchivoEntrada(@WebParam(name = "archivo") Excel excel) {
         int resultado = 0;
         try{
+            InputStream targetStream1 = new ByteArrayInputStream(excel.getArchivo());
+            DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5, 2);
+            
+            int lastRow = dfFact.length()-1;
+            Date fechaIni = (Date)dfFact.slice(0, lastRow).sortBy(0).resetIndex().col(0).get(0);
+            Date fechaFin = (Date)dfFact.slice(0, lastRow).sortBy(0).resetIndex().col(0).get(lastRow-1);
+            
+            excel.setFechaIni(fechaIni);
+            excel.setFechaFin(fechaFin);
+            
             resultado = daoExcel.insertarArchivoEntrada(excel);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        Excel excel2 = procesar(excel);
-        insertarArchivoSalida(excel2);
+        //TODO actualizarFechas-> genera df y actualiza fecha inicio y fin
+        //Generar reporte
+        //Buscar el más reciente dentrod el rango de fechas
+        //
         return resultado;
     }
+    
+    
+    //
+    @WebMethod(operationName = "generarReporte")
+    public int generarReporte(@WebParam(name = "fechaInicio") String fechaInicio,
+                              @WebParam(name = "fechaFin") String fechaFin,
+                              @WebParam(name = "tipo") String tipo,
+                              @WebParam(name = "idSede") int idSede,
+                              @WebParam(name = "idUsuario") int idUsuario) {
+        int resultado = 0;
+        try{  
+            Date fecha1=new SimpleDateFormat("dd-MM-yyyy").parse(fechaInicio);
+            Date fecha2=new SimpleDateFormat("dd-MM-yyyy").parse(fechaFin);
+            Excel excel = daoExcel.buscar(fecha1, fecha2, idSede);
+            //Reporte reporte = procesar(excel, tipo,fechaInicio, fechaFin,idSede);
+            //fecha1(dd-MM-aaaa)|fecha2|"s|at|tc"|idSede|idUsuario
+            //Buscas el excel que corresponde
+            //De la lista de excel que tienes
+            //Con ese excel llamaas a procesar(s, at, tc)
+            //en procesar guardas el excel de salida (que contiene las ots y el tipo de reporte)
+            //y lo subes a la bd
+            //procesar debe devolver la clase reporte
+            //Subir reporte a BD
+            //Retornar reporte
+            
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        //TODO actualizarFechas-> genera df y actualiza fecha inicio y fin
+        //Generar reporte
+        //Buscar el más reciente dentrod el rango de fechas
+        //
+//        Excel excel2 = procesar(excel);
+//        insertarArchivoSalida(excel2);
+        return resultado;
+    }
+    
     @WebMethod(operationName = "insertarArchivoSalida")
     public int insertarArchivoSalida(@WebParam(name = "archivo") Excel excel) {
         int resultado = 0;
@@ -87,9 +138,13 @@ public class ExcelWS {
         return excel;
     }
     
-    public Excel procesar(Excel excel){
+    public Excel procesar(Excel excel){//tipo
         Excel salida = new Excel();
         try{
+            //tipo=at
+            //Reporte reporte = 
+            
+            
             //String ruta = "D:\\Documentos\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Cuadro.xlsx";
             //excel.getArchivo = byte[];
             InputStream targetStream1 = new ByteArrayInputStream(excel.getArchivo());
@@ -100,6 +155,10 @@ public class ExcelWS {
 
             //Obtenemos el dfFact del documento en excel
             DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5, 2);
+            
+            //TODO Buscar fechas y actualizar
+            
+            
             DataFrame dfAsig = JoineryExtension.readXlsx(targetStream2,1, 3);
             DataFrame dfSalxAlm = JoineryExtension.readXlsx(targetStream3, 3, 3);
             DataFrame dfCompras = JoineryExtension.readXlsx(targetStream4, 2, 2);

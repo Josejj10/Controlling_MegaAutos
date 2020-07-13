@@ -82,6 +82,7 @@ namespace LP2MegaAutos
             il.TextoPrincipal = cliente.nombre;
             if (cliente.numDocumento.Length == 8) il.Textosecundario = "DNI: ";
             else if (cliente.numDocumento.Length == 11) il.Textosecundario = "RUC: ";
+            else if (cliente.numDocumento.Length == 9) il.Textosecundario = "C.E: ";
             il.Textosecundario += cliente.numDocumento;
             il.TextoTercero = cliente.tipoCliente;
             il.ItemListaClick += (sender, e) => { verDatosCliente(sender, e, cliente); };

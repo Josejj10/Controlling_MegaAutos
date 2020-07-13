@@ -24,6 +24,7 @@ namespace LP2MegaAutos
             txt_NombreCliente.Text = "Agregar nombre del cliente...";
             this.btnEditar.Visible = false;
             this.btnEliminar.Visible = false;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         public pantallaEditarCliente(ServicioCliente.cliente cliente)
@@ -38,7 +39,7 @@ namespace LP2MegaAutos
             this.txt_Telefono.Text = OtrosHelper.tipoOracion(cliente.telefono).Trim();
             this.txt_Correo.Text = OtrosHelper.tipoOracion(cliente.correo).Trim();
             this.cboTipoCliente.Text = OtrosHelper.tipoOracion(cliente.tipoCliente).Trim();
-
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         private void txt_NombreCliente_Enter(object sender, EventArgs e)

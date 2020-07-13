@@ -46,6 +46,7 @@
             this.lblDriver = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.pnl_NumeroDocumento.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
@@ -67,11 +68,11 @@
             // 
             // pnl_NumeroDocumento
             // 
-            this.pnl_NumeroDocumento.BackColor = System.Drawing.Color.White;
+            this.pnl_NumeroDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_NumeroDocumento.Controls.Add(this.rnd_color_1);
             this.pnl_NumeroDocumento.Controls.Add(this.txt_Formula);
             this.pnl_NumeroDocumento.Controls.Add(this.lbl_Formula);
-            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(152, 195);
+            this.pnl_NumeroDocumento.Location = new System.Drawing.Point(149, 96);
             this.pnl_NumeroDocumento.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_NumeroDocumento.Name = "pnl_NumeroDocumento";
             this.pnl_NumeroDocumento.Size = new System.Drawing.Size(292, 41);
@@ -145,11 +146,12 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(363, 385);
+            this.rnd_guardar.Location = new System.Drawing.Point(99, 144);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -176,9 +178,9 @@
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Location = new System.Drawing.Point(3, 1);
+            this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(178, 33);
+            this.btn_guardar.Size = new System.Drawing.Size(174, 29);
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
@@ -193,11 +195,12 @@
             // 
             this.rnd_cancelar.ArcRadiusBorde = 5;
             this.rnd_cancelar.ArcRadiusPanel = 5;
+            this.rnd_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_cancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
             this.rnd_cancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_cancelar.Location = new System.Drawing.Point(71, 386);
+            this.rnd_cancelar.Location = new System.Drawing.Point(301, 144);
             this.rnd_cancelar.MenosHeightBorde = 1;
             this.rnd_cancelar.MenosHeightPanel = 1;
             this.rnd_cancelar.MenosWidthBorde = 1;
@@ -224,9 +227,9 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(178, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(174, 29);
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
@@ -360,7 +363,7 @@
             // lblDriver
             // 
             this.lblDriver.AutoSize = true;
-            this.lblDriver.BackColor = System.Drawing.Color.White;
+            this.lblDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lblDriver.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDriver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lblDriver.Location = new System.Drawing.Point(27, 42);
@@ -376,7 +379,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -399,7 +402,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEliminar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.eliminar;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -420,11 +423,24 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(596, 197);
+            this.pnlBackground.TabIndex = 82;
+            this.tagsExtender1.SetTag2(this.pnlBackground, null);
+            this.tagsExtender1.SetTag3(this.pnlBackground, null);
+            this.tagsExtender1.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlBackground, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaEditarDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 431);
+            this.ClientSize = new System.Drawing.Size(595, 196);
             this.ControlBox = false;
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -435,6 +451,7 @@
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_NumeroDocumento);
+            this.Controls.Add(this.pnlBackground);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "pantallaEditarDriver";
@@ -479,5 +496,6 @@
         private System.Windows.Forms.Label lblDriver;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

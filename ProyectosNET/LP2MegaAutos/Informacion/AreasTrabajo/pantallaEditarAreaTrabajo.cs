@@ -22,6 +22,7 @@ namespace LP2MegaAutos.Informacion.AreasTrabajo
             _areaTrabajo = new ServicioAreaTrabajo.areaTrabajo();
             lbl_EditarAreaTrabajo.Text = "Agregar Área de Trabajo";
             btnEliminar.Visible = false;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         
         public pantallaEditarAreaTrabajo(ServicioAreaTrabajo.areaTrabajo areaTrabajo)
@@ -30,6 +31,7 @@ namespace LP2MegaAutos.Informacion.AreasTrabajo
             _areaTrabajo = areaTrabajo;
             lbl_EditarAreaTrabajo.Text = "Editar Área de Trabajo";
             this.txt_nombAreaTrabajo.Text = OtrosHelper.tipoOracion(areaTrabajo.nombre);
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         private void btn_guardar_Click(object sender, EventArgs e)
         {

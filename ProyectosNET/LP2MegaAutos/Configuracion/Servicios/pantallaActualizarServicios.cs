@@ -23,10 +23,10 @@ namespace LP2MegaAutos
             InitializeComponent();
             flpServicios.AutoScroll = true;
             daoServicio = new ServicioServicio.ServicioWSClient();
-            inicializarItemsLista();
+            //inicializarItemsLista();
         }
 
-        private void inicializarItemsLista()
+        public void inicializarItemsLista()
         {
             _servicios = daoServicio.listarServicios().ToList();
             crearItemsLista();

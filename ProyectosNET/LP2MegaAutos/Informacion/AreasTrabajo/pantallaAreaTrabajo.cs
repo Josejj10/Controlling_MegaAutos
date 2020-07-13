@@ -25,9 +25,9 @@ namespace LP2MegaAutos
             InitializeComponent();
             flowLayoutPanel1.AutoScroll = true;
             daoAreaTrabajo = new ServicioAreaTrabajo.AreaTrabajoWSClient();
-            inicializarItemsLista();
+            //inicializarItemsLista();
         }
-        private void inicializarItemsLista()
+        public void inicializarItemsLista()
         {
             _areasTrabajo = daoAreaTrabajo.listarAreaTrabajo().ToList();
             organizarAZ();

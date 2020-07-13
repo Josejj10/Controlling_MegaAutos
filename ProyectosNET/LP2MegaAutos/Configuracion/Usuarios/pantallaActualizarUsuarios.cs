@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Framework;
 using LP2MegaAutos.ServicioUsuario;
+using System.Threading;
 
 namespace LP2MegaAutos
 {
@@ -27,12 +28,11 @@ namespace LP2MegaAutos
             flpUsuarios.AutoScroll = true;
             daoUsuario =
                 new ServicioUsuario.UsuarioWSClient();
-            inicializarItemsLista();
             txt_Buscar.Text += textoBuscar;
         }
 
         #region lista
-        private void inicializarItemsLista()
+        public void inicializarItemsLista()
         {
             quitarItemsLista();
             if (viendoActivo)
@@ -52,7 +52,7 @@ namespace LP2MegaAutos
             il.TextoTercero = usuario.correo;
             il.ItemListaClick += (sender, e) => { verDatosUsuario(sender, e, usuario); };
             flpUsuarios.Controls.Add(il);
-            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(il);
+            //if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(il);
             return il;
         }
 

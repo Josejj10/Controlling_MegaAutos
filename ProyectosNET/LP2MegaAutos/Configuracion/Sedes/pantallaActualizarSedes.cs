@@ -23,11 +23,10 @@ namespace LP2MegaAutos
             InitializeComponent();
             flpSedes.AutoScroll = true;
             daoSede = new ServicioSede.SedeWSClient();
-            inicializarItemsLista();
         }
 
         #region itemLista
-        private void inicializarItemsLista()
+        public void inicializarItemsLista()
         {
             _sedes = daoSede.listarSedes().ToList();
             organizarAZ();

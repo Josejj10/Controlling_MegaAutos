@@ -55,12 +55,14 @@
             this.lbl_placaVehiculo = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.title_bar.SuspendLayout();
             this.rnd_cancelar.SuspendLayout();
             this.rnd_guardar.SuspendLayout();
             this.pnl_TipoVehiculo.SuspendLayout();
             this.pnl_nombCliente.SuspendLayout();
             this.pnl_placaVehiculo.SuspendLayout();
+            this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // title_bar
@@ -199,11 +201,12 @@
             // 
             this.rnd_cancelar.ArcRadiusBorde = 5;
             this.rnd_cancelar.ArcRadiusPanel = 5;
+            this.rnd_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_cancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
             this.rnd_cancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_cancelar.Location = new System.Drawing.Point(71, 293);
+            this.rnd_cancelar.Location = new System.Drawing.Point(300, 257);
             this.rnd_cancelar.MenosHeightBorde = 1;
             this.rnd_cancelar.MenosHeightPanel = 1;
             this.rnd_cancelar.MenosWidthBorde = 1;
@@ -230,9 +233,9 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(178, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(174, 29);
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
@@ -247,11 +250,12 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(363, 293);
+            this.rnd_guardar.Location = new System.Drawing.Point(114, 257);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -278,9 +282,9 @@
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Location = new System.Drawing.Point(1, 1);
+            this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(178, 33);
+            this.btn_guardar.Size = new System.Drawing.Size(174, 29);
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
@@ -294,19 +298,20 @@
             // lbl_EditarVehiculo
             // 
             this.lbl_EditarVehiculo.AutoSize = true;
-            this.lbl_EditarVehiculo.BackColor = System.Drawing.Color.White;
+            this.lbl_EditarVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lbl_EditarVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_EditarVehiculo.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_EditarVehiculo.ForeColor = System.Drawing.Color.Black;
+            this.lbl_EditarVehiculo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.lbl_EditarVehiculo.Location = new System.Drawing.Point(27, 42);
             this.lbl_EditarVehiculo.Name = "lbl_EditarVehiculo";
-            this.lbl_EditarVehiculo.Size = new System.Drawing.Size(0, 35);
+            this.lbl_EditarVehiculo.Size = new System.Drawing.Size(206, 35);
             this.lbl_EditarVehiculo.TabIndex = 80;
             this.tagsExtender1.SetTag2(this.lbl_EditarVehiculo, null);
             this.tagsExtender1.SetTag3(this.lbl_EditarVehiculo, null);
             this.tagsExtender1.SetTagFontName(this.lbl_EditarVehiculo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_EditarVehiculo, 22F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_EditarVehiculo, System.Drawing.FontStyle.Bold);
+            this.lbl_EditarVehiculo.Text = "Editar Vehiculo";
             this.lbl_EditarVehiculo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rpTopMain
@@ -338,10 +343,11 @@
             // 
             // pnl_TipoVehiculo
             // 
+            this.pnl_TipoVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_TipoVehiculo.Controls.Add(this.rnd_color_3);
             this.pnl_TipoVehiculo.Controls.Add(this.txt_TipoVehiculo);
             this.pnl_TipoVehiculo.Controls.Add(this.lbl_TipoVehiculo);
-            this.pnl_TipoVehiculo.Location = new System.Drawing.Point(161, 222);
+            this.pnl_TipoVehiculo.Location = new System.Drawing.Point(161, 210);
             this.pnl_TipoVehiculo.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_TipoVehiculo.Name = "pnl_TipoVehiculo";
             this.pnl_TipoVehiculo.Size = new System.Drawing.Size(292, 41);
@@ -414,13 +420,14 @@
             // 
             // pnl_nombCliente
             // 
+            this.pnl_nombCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_nombCliente.Controls.Add(this.cboTipoCliente);
             this.pnl_nombCliente.Controls.Add(this.rnd_color_2);
             this.pnl_nombCliente.Controls.Add(this.lbl_nombCliente);
-            this.pnl_nombCliente.Location = new System.Drawing.Point(161, 161);
+            this.pnl_nombCliente.Location = new System.Drawing.Point(161, 149);
             this.pnl_nombCliente.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_nombCliente.Name = "pnl_nombCliente";
-            this.pnl_nombCliente.Size = new System.Drawing.Size(292, 41);
+            this.pnl_nombCliente.Size = new System.Drawing.Size(292, 53);
             this.pnl_nombCliente.TabIndex = 81;
             this.tagsExtender1.SetTag2(this.pnl_nombCliente, null);
             this.tagsExtender1.SetTag3(this.pnl_nombCliente, null);
@@ -432,16 +439,17 @@
             // 
             this.cboTipoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.cboTipoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboTipoCliente.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
+            this.cboTipoCliente.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cboTipoCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.cboTipoCliente.FormattingEnabled = true;
             this.cboTipoCliente.Location = new System.Drawing.Point(4, 16);
             this.cboTipoCliente.Name = "cboTipoCliente";
-            this.cboTipoCliente.Size = new System.Drawing.Size(286, 24);
+            this.cboTipoCliente.Size = new System.Drawing.Size(286, 31);
             this.cboTipoCliente.TabIndex = 84;
             this.tagsExtender1.SetTag2(this.cboTipoCliente, null);
             this.tagsExtender1.SetTag3(this.cboTipoCliente, null);
             this.tagsExtender1.SetTagFontName(this.cboTipoCliente, fontsD.Lato);
-            this.tagsExtender1.SetTagFontSize(this.cboTipoCliente, 10F);
+            this.tagsExtender1.SetTagFontSize(this.cboTipoCliente, 14.25F);
             this.tagsExtender1.SetTagFontStyle(this.cboTipoCliente, System.Drawing.FontStyle.Bold);
             this.cboTipoCliente.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboTipoCliente_Format);
             // 
@@ -459,7 +467,7 @@
             this.rnd_color_2.MenosWidthPanel = 1;
             this.rnd_color_2.Name = "rnd_color_2";
             this.rnd_color_2.PorcLuzColorBorde = 0;
-            this.rnd_color_2.Size = new System.Drawing.Size(3, 36);
+            this.rnd_color_2.Size = new System.Drawing.Size(3, 42);
             this.rnd_color_2.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rnd_color_2, null);
             this.tagsExtender1.SetTag3(this.rnd_color_2, null);
@@ -491,6 +499,7 @@
             // 
             // pnl_placaVehiculo
             // 
+            this.pnl_placaVehiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_placaVehiculo.Controls.Add(this.rnd_color_1);
             this.pnl_placaVehiculo.Controls.Add(this.txt_placaVehiculo);
             this.pnl_placaVehiculo.Controls.Add(this.lbl_placaVehiculo);
@@ -567,13 +576,12 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEliminar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.eliminar;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(555, 49);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
@@ -590,13 +598,12 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Location = new System.Drawing.Point(514, 49);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
@@ -611,22 +618,36 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // pnlBackground
+            // 
+            this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Controls.Add(this.pnl_nombCliente);
+            this.pnlBackground.Controls.Add(this.pnl_TipoVehiculo);
+            this.pnlBackground.Location = new System.Drawing.Point(0, 0);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(598, 323);
+            this.pnlBackground.TabIndex = 84;
+            this.tagsExtender1.SetTag2(this.pnlBackground, null);
+            this.tagsExtender1.SetTag3(this.pnlBackground, null);
+            this.tagsExtender1.SetTagFontName(this.pnlBackground, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.pnlBackground, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.pnlBackground, System.Drawing.FontStyle.Regular);
+            // 
             // frmEditarVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 350);
+            this.ClientSize = new System.Drawing.Size(595, 321);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.pnl_placaVehiculo);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.pnl_TipoVehiculo);
-            this.Controls.Add(this.pnl_nombCliente);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.rnd_cancelar);
             this.Controls.Add(this.rnd_guardar);
             this.Controls.Add(this.lbl_EditarVehiculo);
             this.Controls.Add(this.rpTopMain);
+            this.Controls.Add(this.pnlBackground);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEditarVehiculo";
@@ -646,6 +667,7 @@
             this.pnl_nombCliente.PerformLayout();
             this.pnl_placaVehiculo.ResumeLayout(false);
             this.pnl_placaVehiculo.PerformLayout();
+            this.pnlBackground.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,5 +702,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.ComboBox cboTipoCliente;
+        private System.Windows.Forms.Panel pnlBackground;
     }
 }

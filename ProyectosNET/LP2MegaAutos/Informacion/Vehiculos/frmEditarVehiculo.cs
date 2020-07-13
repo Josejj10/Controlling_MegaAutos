@@ -34,6 +34,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             cboTipoCliente.ValueMember = "id";
             lbl_EditarVehiculo.Text = "Agregar vehículo";
             btnEliminar.Visible = btnEditar.Visible = false;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         public frmEditarVehiculo(ServicioVehiculo.vehiculo vehiculo)
         {
@@ -54,6 +55,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
             cboTipoCliente.ValueMember = "id";
 
             this.txt_TipoVehiculo.Text = OtrosHelper.tipoOracion(vehiculo.tipoVehiculo);
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         private void toggleComponentes()
         {

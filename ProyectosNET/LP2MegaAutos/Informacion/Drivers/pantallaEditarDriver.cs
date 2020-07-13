@@ -26,6 +26,7 @@ namespace LP2MegaAutos
             _driver = new ServicioDriver.driver();
             this.btnEditar.Visible = false;
             this.btnEliminar.Visible = false;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         public pantallaEditarDriver(ServicioDriver.driver driver)
@@ -34,7 +35,7 @@ namespace LP2MegaAutos
             _driver = driver;
             toggleComponentes();
             this.txt_Formula.Text = OtrosHelper.tipoOracion(driver.formula.ToString());
-
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {

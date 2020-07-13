@@ -9,10 +9,10 @@ namespace LP2MegaAutos.Framework.UserControls.Items
 {
     public static class itemListaHelper
     {
-        public static void rpItem_MouseEnter(RoundedPanel rpItem, bool colorFront = true)
+        public static void rpItem_MouseEnter(RoundedPanel rpItem)
         {
-            cambiarColores(rpItem, colorFront? Colores.FrontBackground: Colores.LowContrast);
-            rpItem.ColorPanel = colorFront? Colores.FrontBackground : Colores.LowContrast;
+            cambiarColores(rpItem, Colores.LowContrast);
+            rpItem.ColorPanel = Colores.LowContrast;
         }
 
         public static void rpItem_MouseLeave(RoundedPanel rpItem)

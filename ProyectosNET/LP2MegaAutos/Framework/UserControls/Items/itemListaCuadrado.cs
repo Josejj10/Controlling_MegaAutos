@@ -49,7 +49,7 @@ namespace LP2MegaAutos
 
         private void cambiarColores()
         {
-            rpItem.ColorPanel = lblTexto.BackColor = tableLayoutPanel1.BackColor =
+            rpItem.ColorPanel = lblTexto.BackColor = tlpTexto.BackColor =
                 pnlImg.BackColor = _seleccionado ? Colores.AmarilloInteractivo : Colores.FrontBackground;
             lblTexto.ForeColor = _seleccionado ? Colores.FrontBackground : Colores.MediumContrast;
         }
@@ -71,7 +71,7 @@ namespace LP2MegaAutos
 
         private void rpItem_MouseEnter(object sender, EventArgs e)
         {
-            itemListaHelper.rpItem_MouseEnter(rpItem,_seleccionado?true:false);
+            itemListaHelper.rpItem_MouseEnter(rpItem);
             lblTexto.ForeColor = !_seleccionado ? Colores.FrontBackground : Colores.MediumContrast;
         }
 

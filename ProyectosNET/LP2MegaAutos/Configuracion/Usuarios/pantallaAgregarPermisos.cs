@@ -54,6 +54,7 @@ namespace LP2MegaAutos
         #endregion title_bar
         
         private usuario _usuario;
+        List<ePermisos?> prsIni;
 
         public pantallaAgregarPermisos()
         {
@@ -64,6 +65,7 @@ namespace LP2MegaAutos
         #region listaPermisos
         private void crearItemsListaPermisos()
         {
+            quitarItemsLista();
             bool tieneAll = _usuario.permisos.Contains(ePermisos.All);
             foreach(ePermisos e in Enum.GetValues(typeof(ePermisos)))
             {
@@ -76,6 +78,11 @@ namespace LP2MegaAutos
             }
         }
 
+        private void quitarItemsLista()
+        {
+            for (int i = 0; i < flpPermisos.Controls.Count;)
+                flpPermisos.Controls.RemoveAt(i);
+        }
 
         private int i = 1;
         private itemListaCuadrado crearitemListaPermiso(string nom, ePermisos per)
@@ -106,14 +113,16 @@ namespace LP2MegaAutos
             InitializeComponent();
             _usuario = usuario;
             crearItemsListaPermisos();
-            List<ePermisos?> prs = _usuario.permisos.ToList();
+            List<ePermisos?> prs = prsIni = _usuario.permisos.ToList();
             prs.Remove(ePermisos.All);
             _usuario.permisos = prs.ToArray();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
+            _usuario.permisos = prsIni.ToArray();
             this.DialogResult = DialogResult.Cancel;
         }
 
@@ -146,6 +155,12 @@ namespace LP2MegaAutos
         {
             for (int i = 0; i < flpPermisos.Controls.Count; i++)
                 ((itemListaCuadrado)flpPermisos.Controls[i]).Seleccionado = false;
+        }
+
+        private void btnReestablecer_Click(object sender, EventArgs e)
+        {
+            _usuario.permisos = prsIni.ToArray();
+            crearItemsListaPermisos();
         }
     }
 }

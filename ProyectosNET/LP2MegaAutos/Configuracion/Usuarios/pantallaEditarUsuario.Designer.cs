@@ -68,6 +68,7 @@
             this.btnCambiarPassword = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnl_codServ.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,7 +83,7 @@
             // 
             // pnl_codServ
             // 
-            this.pnl_codServ.BackColor = System.Drawing.Color.White;
+            this.pnl_codServ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.txt_Correo);
             this.pnl_codServ.Controls.Add(this.lbl_Correo);
@@ -158,7 +159,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel2.Controls.Add(this.boton_ver_password);
             this.panel2.Controls.Add(this.rnd_color_3);
             this.panel2.Controls.Add(this.txt_NuevaCont);
@@ -263,7 +264,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel3.Controls.Add(this.btnVerRepetir);
             this.panel3.Controls.Add(this.rnd_color_4);
             this.panel3.Controls.Add(this.txt_RepNCont);
@@ -503,6 +504,7 @@
             // 
             this.rnd_cancelar.ArcRadiusBorde = 5;
             this.rnd_cancelar.ArcRadiusPanel = 5;
+            this.rnd_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rnd_cancelar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
@@ -534,9 +536,9 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(1, 1);
+            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(178, 33);
+            this.btn_cancelar.Size = new System.Drawing.Size(174, 30);
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
@@ -551,8 +553,9 @@
             // 
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
-            this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
+            this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_guardar.Location = new System.Drawing.Point(108, 396);
@@ -582,9 +585,9 @@
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Location = new System.Drawing.Point(1, 1);
+            this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(178, 33);
+            this.btn_guardar.Size = new System.Drawing.Size(174, 29);
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
@@ -640,7 +643,7 @@
             // 
             // pnl_Direccion
             // 
-            this.pnl_Direccion.BackColor = System.Drawing.Color.White;
+            this.pnl_Direccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnl_Direccion.Controls.Add(this.rnd_color_2);
             this.pnl_Direccion.Controls.Add(this.txt_RolUsuario);
             this.pnl_Direccion.Controls.Add(this.lbl_RolUsuario);
@@ -673,6 +676,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
@@ -824,6 +828,7 @@
             // 
             this.rpCambiarPassword.ArcRadiusBorde = 5;
             this.rpCambiarPassword.ArcRadiusPanel = 5;
+            this.rpCambiarPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.rpCambiarPassword.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rpCambiarPassword.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rpCambiarPassword.Controls.Add(this.btnCambiarPassword);
@@ -855,9 +860,9 @@
             this.btnCambiarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarPassword.Font = new System.Drawing.Font("Lato", 13F, System.Drawing.FontStyle.Bold);
             this.btnCambiarPassword.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarPassword.Location = new System.Drawing.Point(1, 1);
+            this.btnCambiarPassword.Location = new System.Drawing.Point(3, 3);
             this.btnCambiarPassword.Name = "btnCambiarPassword";
-            this.btnCambiarPassword.Size = new System.Drawing.Size(206, 26);
+            this.btnCambiarPassword.Size = new System.Drawing.Size(202, 26);
             this.btnCambiarPassword.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnCambiarPassword, null);
             this.tagsExtender1.SetTag3(this.btnCambiarPassword, null);
@@ -870,7 +875,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEliminar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.eliminar;
             this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -893,7 +898,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.btnEditar.BackgroundImage = global::LP2MegaAutos.Properties.Resources.editar;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -913,6 +918,19 @@
             this.tagsExtender1.SetTagFontStyle(this.btnEditar, System.Drawing.FontStyle.Regular);
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(596, 448);
+            this.panel4.TabIndex = 73;
+            this.tagsExtender1.SetTag2(this.panel4, null);
+            this.tagsExtender1.SetTag3(this.panel4, null);
+            this.tagsExtender1.SetTagFontName(this.panel4, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel4, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel4, System.Drawing.FontStyle.Regular);
             // 
             // pantallaEditarUsuario
             // 
@@ -936,6 +954,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnl_Direccion);
             this.Controls.Add(this.pnl_codServ);
+            this.Controls.Add(this.panel4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "pantallaEditarUsuario";
@@ -948,7 +967,7 @@
             this.tagsExtender1.SetTagFontName(this, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this, 10F);
             this.tagsExtender1.SetTagFontStyle(this, System.Drawing.FontStyle.Regular);
-            this.TransparencyKey = System.Drawing.SystemColors.Info;
+            this.TransparencyKey = System.Drawing.SystemColors.HotTrack;
             this.pnl_codServ.ResumeLayout(false);
             this.pnl_codServ.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1011,5 +1030,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button boton_ver_password;
         private System.Windows.Forms.Button btnVerRepetir;
+        private System.Windows.Forms.Panel panel4;
     }
 }

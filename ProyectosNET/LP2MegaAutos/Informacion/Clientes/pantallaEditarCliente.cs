@@ -24,6 +24,7 @@ namespace LP2MegaAutos
             txt_NombreCliente.Text = "Agregar nombre del cliente...";
             this.btnEditar.Visible = false;
             this.btnEliminar.Visible = false;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         public pantallaEditarCliente(ServicioCliente.cliente cliente)
@@ -38,7 +39,7 @@ namespace LP2MegaAutos
             this.txt_Telefono.Text = OtrosHelper.tipoOracion(cliente.telefono).Trim();
             this.txt_Correo.Text = OtrosHelper.tipoOracion(cliente.correo).Trim();
             this.cboTipoCliente.Text = OtrosHelper.tipoOracion(cliente.tipoCliente).Trim();
-
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
         private void txt_NombreCliente_Enter(object sender, EventArgs e)
@@ -230,7 +231,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if ((txt_NumeroDocumento.Text.Length != 8) && (txt_NumeroDocumento.Text.Length != 10))
+            if ((txt_NumeroDocumento.Text.Length != 8) && (txt_NumeroDocumento.Text.Length != 11) && (txt_NumeroDocumento.Text.Length != 9))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -282,17 +283,25 @@ namespace LP2MegaAutos
 
             if ((txt_NumeroDocumento.Text.Length == 8) && (cboTipoDocumento.Text != "DNI"))
             {
-                frmMessageBox f = new frmMessageBox("El RUC debe tener 11 digitos.", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("RUC (11 digitos), DNI (8 digitos), CARNET EXTRANJERIA (9 digitos)", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }
 
             if ((txt_NumeroDocumento.Text.Length == 11) && (cboTipoDocumento.Text != "RUC"))
             {
-                frmMessageBox f = new frmMessageBox("El DNI debe tener 8 digitos.", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("RUC (11 digitos), DNI (8 digitos), CARNET EXTRANJERIA (9 digitos)", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }
+
+            if ((txt_NumeroDocumento.Text.Length == 9) && (cboTipoDocumento.Text != "CARNET EXTRANJERIA"))
+            {
+                frmMessageBox f = new frmMessageBox("RUC (11 digitos), DNI (8 digitos), CARNET EXTRANJERIA (9 digitos)", MessageBoxButtons.OK);
+                f.ShowDialog();
+                return false;
+            }
+
 
             if (string.IsNullOrEmpty(txt_Correo.Text) || (!txt_Correo.Text.Contains("@")) || (!txt_Correo.Text.Contains(".")))
             {

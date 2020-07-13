@@ -170,18 +170,6 @@
     <Compile Include="Framework\UserControls\UltimoReporteDashboard.Designer.cs">
       <DependentUpon>UltimoReporteDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion\AreasTrabajo\frmAreaTrabajoxCC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\frmAreaTrabajoxCC.Designer.cs">
-      <DependentUpon>frmAreaTrabajoxCC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Informacion\AreasTrabajo\frmCuentaContable.Designer.cs">
-      <DependentUpon>frmCuentaContable.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,18 +283,6 @@
     </Compile>
     <Compile Include="Informacion\Drivers\pantallaAgregarDriver.Designer.cs">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAgregarUsuario.Designer.cs">
-      <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.Designer.cs">
-      <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </Compile>
     <Compile Include="Informacion\Clientes\pantallaEditarCliente.cs">
       <SubType>Form</SubType>
@@ -475,12 +451,6 @@
     <EmbeddedResource Include="Framework\UserControls\UltimoReporteDashboard.resx">
       <DependentUpon>UltimoReporteDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\AreasTrabajo\frmAreaTrabajoxCC.resx">
-      <DependentUpon>frmAreaTrabajoxCC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Informacion\AreasTrabajo\frmCuentaContable.resx">
-      <DependentUpon>frmCuentaContable.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaEditarAreaTrabajo.resx">
       <DependentUpon>pantallaEditarAreaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
@@ -558,12 +528,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Drivers\pantallaAgregarDriver.resx">
       <DependentUpon>pantallaAgregarDriver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAgregarUsuario.resx">
-      <DependentUpon>pantallaAgregarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Configuracion\Usuarios\pantallaAjustesUsuarioGerente.resx">
-      <DependentUpon>pantallaAjustesUsuarioGerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\AreasTrabajo\pantallaAreaTrabajo.resx">
       <DependentUpon>pantallaAreaTrabajo.cs</DependentUpon>

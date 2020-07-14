@@ -17,6 +17,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -312,6 +313,7 @@ public class JoineryExtension extends Serialization{
             List<String> anio = new ArrayList<>();//2020-20-01 20202002
             DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
             List<Integer> prior = new ArrayList<>();
+            List<Double> aux = new ArrayList<>();
             List<String> priorDiv = new ArrayList<>();
             
             //SI QUEREMOS UN REPORTE MENSUAL LA FUNCION RECIBE MES Y ANIO
@@ -336,6 +338,7 @@ public class JoineryExtension extends Serialization{
                 if (division.contentEquals("PLANCHADO"))    priorDiv.add("Planchado");
                 else if (division.contentEquals("PINTURA")) priorDiv.add("Pintura");
                 else priorDiv.add("Mecanica");
+                aux.add(0.0);
 
             }
             dfGris.add("Sin_IGV", sin_igv);
@@ -345,6 +348,8 @@ public class JoineryExtension extends Serialization{
             dfGris.add("DIA", dia);
             dfGris.add("PRIOR_DIV", priorDiv);
             System.out.println(dfGris);
+            
+            
 
             //Para el reporte Orden de Trabajo
             dfGris = dfGris.sortBy(4).resetIndex();
@@ -421,6 +426,11 @@ public class JoineryExtension extends Serialization{
             int elem;
             String OT;
 
+            HashMap<String, List<OrdenTrabajo>> detalle = new HashMap<>();
+            HashMap<String, List<Double>> detalleMontos = new HashMap<>();
+            
+            System.out.println(dfOT);
+            
             for (int i = 0; i < lastRowOT; i++){
                 OT = dfOT.get(i, 0).toString();
                 //Calculamos salidas x almacen
@@ -475,8 +485,10 @@ public class JoineryExtension extends Serialization{
                 double dato = (Double)dfOT.col("Sin_IGV").get(i);
                 double montoMargen = dato-suma;
                 margen.add(montoMargen);
-                if(dato==0) porc.add(0.0);
-                else    porc.add(montoMargen/dato*100);
+                double porcentaje=0.0;
+                if(dato==0) porcentaje=0.0;
+                else    porcentaje=(montoMargen/dato*100);
+                porc.add(porcentaje);
 
                 //Hallamos las columnas faltantes
                 elem = dfGris.col("No OT").indexOf(OT);
@@ -496,6 +508,49 @@ public class JoineryExtension extends Serialization{
                     tipo_sin.add("S/TIPO");
                     marca.add("S/MARCA");
                     modelo.add("S/MODELO");
+                }
+                
+                //TODO COSSIO FECHA
+                OrdenTrabajo ot = new OrdenTrabajo();
+                ot.setNumeroOrden(OT);
+                //REVISAR
+                ot.setFecha(new Date());
+                //FIN REVISAR
+                ot.setTotalEgresos(suma);
+                ot.setTotalIngresos(dato);
+                ot.setMargenBruto(montoMargen);
+                ot.setPorcentaje(porcentaje);
+                ot.setSalidasAlmacen(salidas_alm.get(i));
+                ot.setComprasRpto(compras_rpto.get(i));
+                ot.setmObraMecanica(mo_mecanica.get(i));
+                ot.setmObraPintura(mo_pintura.get(i));
+                ot.setmObraPlanchado(mo_planchado.get(i));
+                ot.setSerTerTaller(serv_ter.get(i));
+                ot.setServTerceros(serv_terceros.get(i));
+                ot.setTipoSiniestro(tipo_sin.get(i));
+                ot.getVehiculo().setPlaca(placas.get(i));
+                ot.getVehiculo().setTipoVehiculo(marca.get(i)+" "+modelo.get(i));
+                ot.getCliente().setNumDocumento(dfOT.get(i,5).toString());
+                ot.getCliente().setTipoCliente(tipo_cli.get(i));
+                
+                switch(tipoReporte){
+                    case "tipoCliente":
+                        if(!detalle.containsKey(ot.getCliente().getTipoCliente()))
+                            detalle.put(ot.getCliente().getTipoCliente(), new ArrayList<>());
+                        detalle.get(ot.getCliente().getTipoCliente()).add(ot);
+                        if(!detalleMontos.containsKey(ot.getCliente().getTipoCliente()))
+                            detalleMontos.put(ot.getCliente().getTipoCliente(), new ArrayList<>());
+                        break;
+                    case "tipoSiniestro":
+                        if (!detalle.containsKey(ot.getTipoSiniestro()))
+                            detalle.put(ot.getTipoSiniestro(), new ArrayList<>());
+                        detalle.get(ot.getTipoSiniestro()).add(ot);
+                        if (!detalleMontos.containsKey(ot.getTipoSiniestro()))
+                            detalleMontos.put(ot.getTipoSiniestro(), new ArrayList<>());
+                        break;
+                    case "areaTrabajo":
+                        
+                        break;
                 }
             }
 
@@ -527,11 +582,11 @@ public class JoineryExtension extends Serialization{
             nombres.add("Rep. por Orden de Trabajo");
             dfs.add(dfOT);
 
-            DataFrame<Object> repTipoCli = new DataFrame<>();
+            DataFrame repTipoCli = new DataFrame<>();
             
-            DataFrame<Object> repTipoSin = new DataFrame<>();
+            DataFrame repTipoSin = new DataFrame<>();
             
-            DataFrame<Object> repAreaTrabajo = new DataFrame<>();
+            DataFrame repAreaTrabajo = new DataFrame<>();
             double difDias = fecha2.getTime() - fecha1.getTime();
             difDias = difDias/8.64e7 + 1;        
             String titulo = "";
@@ -549,6 +604,9 @@ public class JoineryExtension extends Serialization{
                         Double totalI = (Double)repTipoCli.get(i, 1);
                         if(totalI == 0)   margenTipCli.add(0.0);
                         else margenTipCli.add((Double)repTipoCli.get(i, 3)/totalI*100);
+                        detalleMontos.get(repTipoCli.get(i, 0)).add(totalI);
+                        detalleMontos.get(repTipoCli.get(i, 0)).add((Double)repTipoCli.get(i, 2));
+                        detalleMontos.get(repTipoCli.get(i, 0)).add((Double)repTipoCli.get(i, 3));
                         totalFac += totalI;
                         totalCosto += (Double)repTipoCli.get(i, 2);
                         totalMargen += (Double)repTipoCli.get(i,3);
@@ -557,16 +615,21 @@ public class JoineryExtension extends Serialization{
                     else totalPorc = totalMargen/totalFac*100;
 
                     repTipoCli.rename("TOTAL INGRESOS", "Facturación");
-                    repTipoCli.rename("TOTAL GASTOS", "Costo");        
-                    repTipoCli.add(margenTipCli);
-                    repTipoCli.rename(lastRowTipoCli, "%");
+                    repTipoCli.rename("TOTAL GASTOS", "Costo");
+                    System.out.println(repTipoCli);
+                    System.out.println(margenTipCli);
+                    repTipoCli.add("%",margenTipCli);
+                    //repTipoCli.rename(lastRowTipoCli, "%");
                     List<Object> totalGeneral = new ArrayList<>();
                     totalGeneral.add("Total General");
                     totalGeneral.add(totalFac);
                     totalGeneral.add(totalCosto);
                     totalGeneral.add(totalMargen);
                     totalGeneral.add(totalPorc);
+                    System.out.println("Antes");
+                    System.out.println(repTipoCli);
                     repTipoCli = repTipoCli.append(totalGeneral);
+                    System.out.println("Despues");
                     System.out.println(repTipoCli); 
                     titulo = "Rep. por Tipo de Cliente";
                     ingresos = totalFac;
@@ -585,6 +648,9 @@ public class JoineryExtension extends Serialization{
                         Double totalI = (Double)repTipoSin.get(i, 1);
                         if(totalI == 0)   margenTipSin.add(0.0);
                         else margenTipSin.add((Double)repTipoSin.get(i, 3)/totalI*100);
+                        detalleMontos.get(repTipoSin.get(i, 0)).add(totalI);
+                        detalleMontos.get(repTipoSin.get(i, 0)).add((Double)repTipoSin.get(i, 2));
+                        detalleMontos.get(repTipoSin.get(i, 0)).add((Double)repTipoSin.get(i, 3));
                         totalFac += totalI;
                         totalCosto += (Double)repTipoSin.get(i, 2);
                         totalMargen += (Double)repTipoSin.get(i,3);
@@ -730,6 +796,8 @@ public class JoineryExtension extends Serialization{
             reporte.setTitulo(titulo);
             reporte.setIngresos(ingresos);
             reporte.setEgresos(egresos);
+            reporte.setMapaDetalle(detalle);
+            reporte.setMapaDetalleMontos(detalleMontos);
         }
         catch(Exception ex){
             System.out.println(ex);

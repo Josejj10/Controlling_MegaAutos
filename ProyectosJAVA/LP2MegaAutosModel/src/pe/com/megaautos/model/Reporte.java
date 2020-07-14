@@ -3,6 +3,8 @@ package pe.com.megaautos.model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,12 +24,45 @@ public class Reporte {
     private Date fechaFin;
     private Date fechaCreacion;
     private int idUsuario;
+    private String nombreUsuario;
     private String tipoReporte;
     private String titulo;
     private Double ingresos;
     private Double egresos;
     private Sede sede;
+    private HashMap<String, ArrayList<OrdenTrabajo>> mapaDetalle;
+    private HashMap<String, ArrayList<Double>> mapaDetalleMontos;
 
+    public Reporte() {
+        this.sede = new Sede();
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public HashMap<String, ArrayList<Double>> getMapaDetalleMontos() {
+        return mapaDetalleMontos;
+    }
+
+    public void setMapaDetalleMontos(HashMap<String, ArrayList<Double>> mapaDetalleMontos) {
+        this.mapaDetalleMontos = mapaDetalleMontos;
+    }
+
+    public HashMap<String, ArrayList<OrdenTrabajo>> getMapaDetalle() {
+        return mapaDetalle;
+    }
+
+    public void setMapaDetalle(HashMap<String, ArrayList<OrdenTrabajo>> mapaDetalle) {
+        this.mapaDetalle = mapaDetalle;
+    }
+
+    
+    
     public int getIdReporte() {
         return idReporte;
     }

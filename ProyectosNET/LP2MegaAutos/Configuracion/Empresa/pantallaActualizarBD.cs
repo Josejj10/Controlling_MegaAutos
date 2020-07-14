@@ -33,7 +33,7 @@ namespace LP2MegaAutos
             _excelEnviado = new ServicioExcel.excel();
             _excelRecibido = new ServicioExcel.excel();
             ServicioSede.SedeWSClient daoSede = new ServicioSede.SedeWSClient();
-            cboSede.DisplayMember = "distrito";
+            cboSede.DisplayMember = "nombre";
             cboSede.DataSource = daoSede.listarSedes();
             btn_guardar.Enabled =btnDescargar.Enabled= false;
             rpBtnGuardar.ColorBorde = rpBtnGuardar.ColorPanel =

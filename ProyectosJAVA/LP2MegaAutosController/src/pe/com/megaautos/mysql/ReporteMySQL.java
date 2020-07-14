@@ -91,6 +91,8 @@ public class ReporteMySQL implements ReporteDAO{
                 reporte.getSede().setId(rs.getInt("ID_SEDE"));
                 reporte.setTipoReporte(rs.getString("TIPO_REPORTE"));
                 reporte.setTitulo(rs.getString("TITULO"));
+                reporte.setNombreUsuario(rs.getString("NOMBRE"));
+                reporte.getSede().setDistrito(rs.getString("DISTRITO"));
                 reportes.add(reporte);
             }
         }catch(Exception ex){
@@ -130,6 +132,8 @@ public class ReporteMySQL implements ReporteDAO{
                 reporte.getSede().setId(rs.getInt("ID_SEDE"));
                 reporte.setTipoReporte(rs.getString("TIPO_REPORTE"));
                 reporte.setTitulo(rs.getString("TITULO"));
+                reporte.setNombreUsuario(rs.getString("NOMBRE"));
+                reporte.getSede().setDistrito(rs.getString("DISTRITO"));
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());

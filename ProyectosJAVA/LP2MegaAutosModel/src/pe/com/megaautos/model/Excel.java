@@ -54,6 +54,7 @@ public class Excel {
     
 
     public Excel(){
+        id=0;
         this.sede = new Sede();
     }
     

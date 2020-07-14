@@ -97,7 +97,8 @@ public class LP2MegaAutos {
         int res = 0;
 //        res = insertarArchivoEntrada(excel, 2); //69
         res = generarReporte("01-02-2020", "28-02-2020","tipoCliente",2,36);
-        System.out.println(res);
+        if(res==0)        System.out.println("No se encontro archivo");
+        else System.out.println("Correcto");
         
         
                 

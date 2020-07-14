@@ -24,6 +24,7 @@ namespace LP2MegaAutos
             txt_NombreCliente.Text = "Agregar nombre del cliente...";
             this.btnEditar.Visible = false;
             this.btnEliminar.Visible = false;
+            this.txt_NombreCliente.ForeColor = Colores.LowContrast;
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
@@ -67,9 +68,17 @@ namespace LP2MegaAutos
                 return;
             _cliente.nombre = txt_NombreCliente.Text;
             _cliente.numDocumento = txt_NumeroDocumento.Text.Trim();
+
+            if (txt_Telefono.Text.Trim() == string.Empty)
+                _cliente.telefono = "--";
+            else
+                _cliente.telefono = txt_Telefono.Text.Trim();
             _cliente.tipoDocumento = cboTipoDocumento.Text.Trim();
-            _cliente.telefono = txt_Telefono.Text.Trim();
-            _cliente.correo = txt_Correo.Text;
+
+            if (txt_Correo.Text.Trim() == string.Empty)
+                _cliente.correo = "--";
+            else
+                _cliente.correo = txt_Correo.Text;
             _cliente.tipoCliente = cboTipoCliente.Text;
             this.DialogResult = DialogResult.OK;
         }
@@ -138,7 +147,7 @@ namespace LP2MegaAutos
         private void toggleComponentes()
         {
             bool en = txt_NombreCliente.Enabled = txt_NumeroDocumento.Enabled =
-                cboTipoDocumento.Enabled = txt_Telefono.Enabled = 
+                cboTipoDocumento.Enabled = txt_Telefono.Enabled = txt_Correo.Enabled =
                 cboTipoCliente.Enabled = btn_guardar.Enabled
                 = !txt_NombreCliente.Enabled;
             
@@ -188,6 +197,7 @@ namespace LP2MegaAutos
                     rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
+            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
             btnEditar.BackgroundImage = Resources.Cancelar;
         }
 
@@ -245,12 +255,12 @@ namespace LP2MegaAutos
             }
 
             // Validacion Correo
-            if (string.IsNullOrEmpty(txt_Correo.Text))
-            {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese un correo correcto.", MessageBoxButtons.OK);
-                f.ShowDialog();
-                return false;
-            }
+            //if (string.IsNullOrEmpty(txt_Correo.Text))
+            //{
+            //    frmMessageBox f = new frmMessageBox("Por favor ingrese un correo correcto.", MessageBoxButtons.OK);
+            //    f.ShowDialog();
+            //    return false;
+            //}
 
             if (cboTipoCliente.SelectedIndex == -1)
             {
@@ -259,16 +269,16 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (string.IsNullOrEmpty(txt_Telefono.Text))
-            {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese un telefono correcto.", MessageBoxButtons.OK);
-                f.ShowDialog();
-                return false;
-            }
+            //if (string.IsNullOrEmpty(txt_Telefono.Text))
+            //{
+            //    frmMessageBox f = new frmMessageBox("Por favor ingrese un telefono correcto.", MessageBoxButtons.OK);
+            //    f.ShowDialog();
+            //    return false;
+            //}
 
-            if (txt_Telefono.Text.Length != 9)
+            if (txt_Telefono.Text.Length != 9 && txt_Telefono.Text != string.Empty)
             {
-                frmMessageBox f = new frmMessageBox("Por favor ingrese un telefono correcto (9 digitos).", MessageBoxButtons.OK);
+                frmMessageBox f = new frmMessageBox("Por favor ingrese un telefono correcto (9 digitos) o en blanco.", MessageBoxButtons.OK);
                 f.ShowDialog();
                 return false;
             }
@@ -295,7 +305,7 @@ namespace LP2MegaAutos
             }
 
 
-            if (string.IsNullOrEmpty(txt_Correo.Text) || (!txt_Correo.Text.Contains("@")) || (!txt_Correo.Text.Contains(".")))
+            if ((txt_Telefono.Text != string.Empty) && (!txt_Correo.Text.Contains("@")) && (!txt_Correo.Text.Contains(".")))
             {
                 frmMessageBox f = new frmMessageBox("Ingresar un correo correcto.", MessageBoxButtons.OK);
                 f.ShowDialog();

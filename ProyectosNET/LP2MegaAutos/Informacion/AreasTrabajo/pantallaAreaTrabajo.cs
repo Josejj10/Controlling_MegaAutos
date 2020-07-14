@@ -23,8 +23,10 @@ namespace LP2MegaAutos
         public pantallaAreaTrabajo()
         {
             InitializeComponent();
+            textoBuscar = " area de trabajo por nombre";
             flowLayoutPanel1.AutoScroll = true;
             daoAreaTrabajo = new ServicioAreaTrabajo.AreaTrabajoWSClient();
+            txt_Buscar.Text += textoBuscar;
             //inicializarItemsLista();
         }
         public void inicializarItemsLista()
@@ -108,13 +110,13 @@ namespace LP2MegaAutos
 
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            txt_Buscar.Text = string.Empty;
+            pantallaListasHelper.buscarEnter(txt_Buscar, textoBuscar);
         }
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            if (txt_Buscar.Text == string.Empty)
-                txt_Buscar.Text = "Buscar";
+            if (btnBuscar.Focused) return;
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
         }
         #endregion Botones Filtros
 
@@ -177,15 +179,37 @@ namespace LP2MegaAutos
         private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+            btnBuscar_Click(btnBuscar, e);
             // Tenemos la lista usuarios
-            List<areaTrabajo> _areasBuscadas = new List<areaTrabajo>();
-            foreach (areaTrabajo u in _areasTrabajo)
-                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()))
-                    _areasBuscadas.Add(u);
+            //List<areaTrabajo> _areasBuscadas = new List<areaTrabajo>();
+            //foreach (areaTrabajo u in _areasTrabajo)
+            //    if (u.nombre.Contains(txt_Buscar.Text.ToUpper()))
+            //        _areasBuscadas.Add(u);
 
-            quitarItemsLista();
-            crearItemsListaBuscar(_areasBuscadas);
+            //quitarItemsLista();
+            //crearItemsListaBuscar(_areasBuscadas);
         }
         #endregion Buscar
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // Se tiene la lista _usuarios localmente
+            List<areaTrabajo> _areaTrabajoBuscados = new List<areaTrabajo>();
+            foreach (areaTrabajo a in _areasTrabajo)
+                if (a.nombre.Contains(txt_Buscar.Text.ToUpper()))
+                    _areaTrabajoBuscados.Add(a);
+
+            quitarItemsLista();
+            if (_areaTrabajoBuscados.Count == 0)
+            {
+                frmMessageBox frm = new frmMessageBox("No se hallaron resultados para la búsqueda.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                _areaTrabajoBuscados = _areasTrabajo;
+                txt_Buscar.Text = string.Empty;
+            }
+            crearItemsListaBuscar(_areaTrabajoBuscados);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
+        }
+
     }
 }

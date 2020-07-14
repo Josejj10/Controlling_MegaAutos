@@ -25,6 +25,7 @@ public class Excel {
     private Date fechaFin;
     private Sede sede;
 
+    
     public Sede getSede() {
         return sede;
     }
@@ -53,7 +54,7 @@ public class Excel {
     
 
     public Excel(){
-        
+        this.sede = new Sede();
     }
     
     public Excel(byte[] excel1) {

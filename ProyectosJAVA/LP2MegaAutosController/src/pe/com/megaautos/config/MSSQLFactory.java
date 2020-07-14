@@ -9,6 +9,7 @@ import pe.com.megaautos.dao.DriverDAO;
 import pe.com.megaautos.dao.EmpresaDAO;
 import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.OrdenTrabajoDAO;
+import pe.com.megaautos.dao.ReporteDAO;
 import pe.com.megaautos.dao.SedeDAO;
 import pe.com.megaautos.dao.ServicioDAO;
 import pe.com.megaautos.dao.UsuarioDAO;
@@ -79,6 +80,11 @@ public class MSSQLFactory extends DAOFactory{
 
     @Override
     public ExcelDAO getExcelDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ReporteDAO getReporteDAO() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

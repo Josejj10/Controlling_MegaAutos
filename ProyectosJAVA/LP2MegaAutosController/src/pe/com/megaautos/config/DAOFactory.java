@@ -9,6 +9,7 @@ import pe.com.megaautos.dao.DriverDAO;
 import pe.com.megaautos.dao.EmpresaDAO;
 import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.OrdenTrabajoDAO;
+import pe.com.megaautos.dao.ReporteDAO;
 import pe.com.megaautos.dao.SedeDAO;
 import pe.com.megaautos.dao.ServicioDAO;
 import pe.com.megaautos.dao.UsuarioDAO;
@@ -39,4 +40,5 @@ public abstract class DAOFactory {
     public abstract UsuarioDAO getUsuarioDAO();
     public abstract VehiculoDAO getVehiculoDAO();
     public abstract ExcelDAO getExcelDAO();
+    public abstract ReporteDAO getReporteDAO();
 }

@@ -233,14 +233,14 @@
             this.lbl_nombAreaTrabajo.Location = new System.Drawing.Point(4, 2);
             this.lbl_nombAreaTrabajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nombAreaTrabajo.Name = "lbl_nombAreaTrabajo";
-            this.lbl_nombAreaTrabajo.Size = new System.Drawing.Size(132, 16);
+            this.lbl_nombAreaTrabajo.Size = new System.Drawing.Size(138, 16);
             this.lbl_nombAreaTrabajo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_nombAreaTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_nombAreaTrabajo, null);
             this.tagsExtender1.SetTagFontName(this.lbl_nombAreaTrabajo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_nombAreaTrabajo, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_nombAreaTrabajo, System.Drawing.FontStyle.Bold);
-            this.lbl_nombAreaTrabajo.Text = "Nombre Área Trabajo";
+            this.lbl_nombAreaTrabajo.Text = "Nombre Área Trabajo*";
             // 
             // rnd_cancelar
             // 

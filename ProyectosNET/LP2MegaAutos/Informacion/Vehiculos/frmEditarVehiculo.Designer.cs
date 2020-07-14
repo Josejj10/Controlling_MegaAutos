@@ -411,14 +411,14 @@
             this.lbl_TipoVehiculo.Location = new System.Drawing.Point(3, 2);
             this.lbl_TipoVehiculo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_TipoVehiculo.Name = "lbl_TipoVehiculo";
-            this.lbl_TipoVehiculo.Size = new System.Drawing.Size(84, 16);
+            this.lbl_TipoVehiculo.Size = new System.Drawing.Size(90, 16);
             this.lbl_TipoVehiculo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_TipoVehiculo, null);
             this.tagsExtender1.SetTag3(this.lbl_TipoVehiculo, null);
             this.tagsExtender1.SetTagFontName(this.lbl_TipoVehiculo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_TipoVehiculo, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_TipoVehiculo, System.Drawing.FontStyle.Bold);
-            this.lbl_TipoVehiculo.Text = "Tipo Vehiculo";
+            this.lbl_TipoVehiculo.Text = "Tipo Vehiculo*";
             // 
             // pnl_nombCliente
             // 
@@ -490,14 +490,14 @@
             this.lbl_nombCliente.Location = new System.Drawing.Point(3, 2);
             this.lbl_nombCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nombCliente.Name = "lbl_nombCliente";
-            this.lbl_nombCliente.Size = new System.Drawing.Size(49, 16);
+            this.lbl_nombCliente.Size = new System.Drawing.Size(55, 16);
             this.lbl_nombCliente.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_nombCliente, null);
             this.tagsExtender1.SetTag3(this.lbl_nombCliente, null);
             this.tagsExtender1.SetTagFontName(this.lbl_nombCliente, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_nombCliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_nombCliente, System.Drawing.FontStyle.Bold);
-            this.lbl_nombCliente.Text = "Cliente";
+            this.lbl_nombCliente.Text = "Cliente*";
             // 
             // pnl_placaVehiculo
             // 
@@ -567,14 +567,14 @@
             this.lbl_placaVehiculo.Location = new System.Drawing.Point(3, 2);
             this.lbl_placaVehiculo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_placaVehiculo.Name = "lbl_placaVehiculo";
-            this.lbl_placaVehiculo.Size = new System.Drawing.Size(90, 16);
+            this.lbl_placaVehiculo.Size = new System.Drawing.Size(96, 16);
             this.lbl_placaVehiculo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_placaVehiculo, null);
             this.tagsExtender1.SetTag3(this.lbl_placaVehiculo, null);
             this.tagsExtender1.SetTagFontName(this.lbl_placaVehiculo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_placaVehiculo, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_placaVehiculo, System.Drawing.FontStyle.Bold);
-            this.lbl_placaVehiculo.Text = "Placa Vehículo";
+            this.lbl_placaVehiculo.Text = "Placa Vehículo*";
             // 
             // btnEliminar
             // 

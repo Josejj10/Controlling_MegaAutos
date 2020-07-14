@@ -148,14 +148,14 @@
             this.lbl_Correo.Location = new System.Drawing.Point(4, 2);
             this.lbl_Correo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Correo.Name = "lbl_Correo";
-            this.lbl_Correo.Size = new System.Drawing.Size(48, 16);
+            this.lbl_Correo.Size = new System.Drawing.Size(54, 16);
             this.lbl_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Correo, null);
             this.tagsExtender1.SetTag3(this.lbl_Correo, null);
             this.tagsExtender1.SetTagFontName(this.lbl_Correo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Correo, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Correo, System.Drawing.FontStyle.Bold);
-            this.lbl_Correo.Text = "Correo";
+            this.lbl_Correo.Text = "Correo*";
             // 
             // panel2
             // 
@@ -168,7 +168,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 41);
-            this.panel2.TabIndex = 41;
+            this.panel2.TabIndex = 43;
             this.tagsExtender1.SetTag2(this.panel2, null);
             this.tagsExtender1.SetTag3(this.panel2, null);
             this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
@@ -253,14 +253,14 @@
             this.lbl_NuevaCont.Location = new System.Drawing.Point(4, 2);
             this.lbl_NuevaCont.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NuevaCont.Name = "lbl_NuevaCont";
-            this.lbl_NuevaCont.Size = new System.Drawing.Size(116, 16);
+            this.lbl_NuevaCont.Size = new System.Drawing.Size(122, 16);
             this.lbl_NuevaCont.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_NuevaCont, null);
             this.tagsExtender1.SetTag3(this.lbl_NuevaCont, null);
             this.tagsExtender1.SetTagFontName(this.lbl_NuevaCont, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_NuevaCont, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_NuevaCont, System.Drawing.FontStyle.Bold);
-            this.lbl_NuevaCont.Text = "Nueva Contraseña";
+            this.lbl_NuevaCont.Text = "Nueva Contraseña*";
             // 
             // panel3
             // 
@@ -273,7 +273,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(292, 41);
-            this.panel3.TabIndex = 41;
+            this.panel3.TabIndex = 44;
             this.tagsExtender1.SetTag2(this.panel3, null);
             this.tagsExtender1.SetTag3(this.panel3, null);
             this.tagsExtender1.SetTagFontName(this.panel3, fontsD.Ninguno);
@@ -358,14 +358,14 @@
             this.lbl_RepNCont.Location = new System.Drawing.Point(4, 2);
             this.lbl_RepNCont.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_RepNCont.Name = "lbl_RepNCont";
-            this.lbl_RepNCont.Size = new System.Drawing.Size(161, 16);
+            this.lbl_RepNCont.Size = new System.Drawing.Size(167, 16);
             this.lbl_RepNCont.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_RepNCont, null);
             this.tagsExtender1.SetTag3(this.lbl_RepNCont, null);
             this.tagsExtender1.SetTagFontName(this.lbl_RepNCont, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_RepNCont, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_RepNCont, System.Drawing.FontStyle.Bold);
-            this.lbl_RepNCont.Text = "Repetir Nueva Contraseña";
+            this.lbl_RepNCont.Text = "Repetir Nueva Contraseña*";
             // 
             // panel1
             // 
@@ -608,14 +608,14 @@
             this.lbl_RolUsuario.Location = new System.Drawing.Point(4, 2);
             this.lbl_RolUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_RolUsuario.Name = "lbl_RolUsuario";
-            this.lbl_RolUsuario.Size = new System.Drawing.Size(26, 16);
+            this.lbl_RolUsuario.Size = new System.Drawing.Size(32, 16);
             this.lbl_RolUsuario.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_RolUsuario, null);
             this.tagsExtender1.SetTag3(this.lbl_RolUsuario, null);
             this.tagsExtender1.SetTagFontName(this.lbl_RolUsuario, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_RolUsuario, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_RolUsuario, System.Drawing.FontStyle.Bold);
-            this.lbl_RolUsuario.Text = "Rol";
+            this.lbl_RolUsuario.Text = "Rol*";
             // 
             // rnd_color_2
             // 
@@ -794,7 +794,7 @@
             this.rnd_Reestablecer.Name = "rnd_Reestablecer";
             this.rnd_Reestablecer.PorcLuzColorBorde = 0;
             this.rnd_Reestablecer.Size = new System.Drawing.Size(208, 30);
-            this.rnd_Reestablecer.TabIndex = 69;
+            this.rnd_Reestablecer.TabIndex = 61;
             this.tagsExtender1.SetTag2(this.rnd_Reestablecer, null);
             this.tagsExtender1.SetTag3(this.rnd_Reestablecer, null);
             this.tagsExtender1.SetTagFontName(this.rnd_Reestablecer, fontsD.Ninguno);
@@ -844,7 +844,7 @@
             this.rpCambiarPassword.Name = "rpCambiarPassword";
             this.rpCambiarPassword.PorcLuzColorBorde = 0;
             this.rpCambiarPassword.Size = new System.Drawing.Size(208, 30);
-            this.rpCambiarPassword.TabIndex = 70;
+            this.rpCambiarPassword.TabIndex = 42;
             this.tagsExtender1.SetTag2(this.rpCambiarPassword, null);
             this.tagsExtender1.SetTag3(this.rpCambiarPassword, null);
             this.tagsExtender1.SetTagFontName(this.rpCambiarPassword, fontsD.Ninguno);

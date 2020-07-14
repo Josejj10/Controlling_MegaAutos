@@ -7,6 +7,8 @@ package LP2MegaAutos;
 import static LP2MegaAutos.JoineryExtension.guardarBatch;
 import static LP2MegaAutos.JoineryExtension.writeXlsx;
 import static LP2MegaAutos.JoineryExtension.enviarCorreo;
+import static LP2MegaAutos.JoineryExtension.insertarArchivoEntrada;
+import static LP2MegaAutos.JoineryExtension.generarReporte;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -65,7 +67,10 @@ import pe.com.megaautos.mysql.EmpresaMySQL;
 import pe.com.megaautos.mysql.OrdenTrabajoMySQL;
 import pe.com.megaautos.mysql.UsuarioMySQL;
 import pe.com.megaautos.config.DBDataSource;
+import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.model.EPermisos;
+import pe.com.megaautos.model.Excel;
+import pe.com.megaautos.model.Reporte;
 /**
  *
  * @author Jose
@@ -81,9 +86,21 @@ public class LP2MegaAutos {
 //        daoUsuario.actualizarPasswrd("rodrigo.dulanto@pucp.edu.pe", "Z7fMUX83IAcqBrIl", "1234");
         //Z7fMUX83IAcqBrIl
         
-        String sDate1="31/12/1998";  
-        Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);  
-        System.out.println(sDate1+"\t"+date1);  
+//        String sDate1="31/12/1998";  
+//        Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);  
+//        System.out.println(sDate1+"\t"+date1);  
+
+        ExcelDAO daoExcel = DBController.controller.getExcelDAO();
+        Excel excel = daoExcel.buscarPorId(69);
+//        Excel excel2 = new Excel();
+//        excel2.setArchivo(excel.getArchivo());
+        int res = 0;
+//        res = insertarArchivoEntrada(excel, 2); //69
+        res = generarReporte("01-02-2020", "28-02-2020","tipoCliente",2,36);
+        System.out.println(res);
+        
+        
+                
         
 //        
 //        UsuarioDAO daoUsuario = DBController.controller.getUsuarioDAO();

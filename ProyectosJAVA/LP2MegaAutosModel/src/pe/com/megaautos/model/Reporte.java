@@ -15,16 +15,34 @@ import java.util.Date;
  * @author Rodrigo
  */
 public class Reporte {
+    private int idReporte;
     private int idExcelEntrada;//"El reporte ya ha sido creado"
     private int idExcelSalida;
     private Date fechaInicio;
     private Date fechaFin;
+    private Date fechaCreacion;
     private int idUsuario;
     private String tipoReporte;
     private String titulo;
     private Double ingresos;
     private Double egresos;
     private Sede sede;
+
+    public int getIdReporte() {
+        return idReporte;
+    }
+
+    public void setIdReporte(int idReporte) {
+        this.idReporte = idReporte;
+    }
+
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(Date fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
 
     public Double getIngresos() {
         return ingresos;

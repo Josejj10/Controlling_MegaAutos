@@ -57,20 +57,20 @@ namespace LP2MegaAutos
                 this.btnAgregarPermisos.Visible = false;
             }
 
-            // if (usuario.activo != 0) return;
+            if (usuario.activo != 0) return;
 
             // Si el usuario es inactivo
-            //lbl_NuevaCont.Visible = rnd_color_3.Visible =
-            //txt_NuevaCont.Visible = boton_ver_password.Visible =
-            //lbl_RepNCont.Visible = rnd_color_4.Visible =
-            //txt_RepNCont.Visible = btnVerRepetir.Visible =
-            //btnAgregarPermisos.Visible =
-            //rnd_Reestablecer.Visible =
-            //rpCambiarPassword.Visible =
-            //btnEditar.Visible = btnEliminar.Visible =
-            //false;
-            //_activando = true;
-            //btn_guardar.Text = "Activar";
+            lbl_NuevaCont.Visible = rnd_color_3.Visible =
+            txt_NuevaCont.Visible = boton_ver_password.Visible =
+            lbl_RepNCont.Visible = rnd_color_4.Visible =
+            txt_RepNCont.Visible = btnVerRepetir.Visible =
+            btnAgregarPermisos.Visible =
+            rnd_Reestablecer.Visible =
+            rpCambiarPassword.Visible =
+            btnEditar.Visible = btnEliminar.Visible =
+            false;
+            _activando = true;
+            btn_guardar.Text = "Activar";
         }
 
         #region title_bar

@@ -188,6 +188,12 @@
     <Compile Include="Informacion\Vehiculos\pantallaActualizarVehiculos.Designer.cs">
       <DependentUpon>pantallaActualizarVehiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\frmCreditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\frmCreditos.Designer.cs">
+      <DependentUpon>frmCreditos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\frmRecuperacionPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion\Vehiculos\pantallaActualizarVehiculos.resx">
       <DependentUpon>pantallaActualizarVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\frmCreditos.resx">
+      <DependentUpon>frmCreditos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\frmRecuperacionPassword.resx">
       <DependentUpon>frmRecuperacionPassword.cs</DependentUpon>

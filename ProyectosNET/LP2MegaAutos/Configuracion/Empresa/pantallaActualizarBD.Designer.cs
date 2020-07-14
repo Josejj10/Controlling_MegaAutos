@@ -248,7 +248,7 @@
             this.btnDescargar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnDescargar, null);
             this.tagsExtender1.SetTag3(this.btnDescargar, null);
-            this.tagsExtender1.SetTagFontName(this.btnDescargar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnDescargar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnDescargar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btnDescargar, System.Drawing.FontStyle.Bold);
             this.btnDescargar.Text = "Descargar";
@@ -300,7 +300,7 @@
             this.btnObtener.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnObtener, null);
             this.tagsExtender1.SetTag3(this.btnObtener, null);
-            this.tagsExtender1.SetTagFontName(this.btnObtener, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnObtener, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnObtener, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btnObtener, System.Drawing.FontStyle.Bold);
             this.btnObtener.Text = "Obtener Reporte";

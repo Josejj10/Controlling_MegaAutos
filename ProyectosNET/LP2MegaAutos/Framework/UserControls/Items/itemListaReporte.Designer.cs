@@ -49,6 +49,7 @@
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.lblTipoReporte = new System.Windows.Forms.Label();
             this.rpItem.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tlpSede.SuspendLayout();
@@ -115,6 +116,8 @@
             this.tagsExtender1.SetTagFontSize(this.tableLayoutPanel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.tableLayoutPanel1, System.Drawing.FontStyle.Regular);
             this.tableLayoutPanel1.Click += new System.EventHandler(this.itemLista_Click);
+            this.tableLayoutPanel1.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
+            this.tableLayoutPanel1.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
             // 
             // lblGeneradoEl
             // 
@@ -209,15 +212,17 @@
             this.tlpSede.BackColor = System.Drawing.Color.Transparent;
             this.tlpSede.ColumnCount = 1;
             this.tlpSede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSede.Controls.Add(this.lblTipoReporte, 0, 1);
             this.tlpSede.Controls.Add(this.lblSede, 0, 0);
-            this.tlpSede.Location = new System.Drawing.Point(516, 5);
+            this.tlpSede.Location = new System.Drawing.Point(489, 71);
             this.tlpSede.Margin = new System.Windows.Forms.Padding(4);
             this.tlpSede.Name = "tlpSede";
             this.tlpSede.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tlpSede.RowCount = 1;
+            this.tlpSede.RowCount = 2;
             this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpSede.Size = new System.Drawing.Size(180, 30);
+            this.tlpSede.Size = new System.Drawing.Size(207, 113);
             this.tlpSede.TabIndex = 21;
             this.tagsExtender1.SetTag2(this.tlpSede, null);
             this.tagsExtender1.SetTag3(this.tlpSede, null);
@@ -233,7 +238,7 @@
             this.lblSede.BackColor = System.Drawing.Color.Transparent;
             this.lblSede.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lblSede.Location = new System.Drawing.Point(116, 1);
+            this.lblSede.Location = new System.Drawing.Point(143, 14);
             this.lblSede.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSede.Name = "lblSede";
             this.lblSede.Size = new System.Drawing.Size(60, 27);
@@ -264,7 +269,7 @@
             this.tloResumen.Controls.Add(this.lblMontoIngresos, 2, 1);
             this.tloResumen.Controls.Add(this.lblMontoEgresos, 2, 2);
             this.tloResumen.Controls.Add(this.lblMontoTotal, 2, 3);
-            this.tloResumen.Location = new System.Drawing.Point(209, 66);
+            this.tloResumen.Location = new System.Drawing.Point(21, 71);
             this.tloResumen.Margin = new System.Windows.Forms.Padding(4);
             this.tloResumen.Name = "tloResumen";
             this.tloResumen.RowCount = 4;
@@ -272,7 +277,7 @@
             this.tloResumen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tloResumen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tloResumen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tloResumen.Size = new System.Drawing.Size(305, 123);
+            this.tloResumen.Size = new System.Drawing.Size(371, 123);
             this.tloResumen.TabIndex = 20;
             this.tagsExtender1.SetTag2(this.tloResumen, null);
             this.tagsExtender1.SetTag3(this.tloResumen, null);
@@ -288,7 +293,7 @@
             this.lblResumen.AutoSize = true;
             this.lblResumen.BackColor = System.Drawing.Color.Transparent;
             this.lblResumen.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
+            this.lblResumen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.lblResumen.Location = new System.Drawing.Point(4, 0);
             this.lblResumen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResumen.Name = "lblResumen";
@@ -313,14 +318,14 @@
             this.lblEgresos.Location = new System.Drawing.Point(4, 60);
             this.lblEgresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEgresos.Name = "lblEgresos";
-            this.lblEgresos.Size = new System.Drawing.Size(75, 23);
+            this.lblEgresos.Size = new System.Drawing.Size(68, 23);
             this.lblEgresos.TabIndex = 11;
             this.tagsExtender1.SetTag2(this.lblEgresos, null);
             this.tagsExtender1.SetTag3(this.lblEgresos, null);
             this.tagsExtender1.SetTagFontName(this.lblEgresos, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lblEgresos, 11F);
             this.tagsExtender1.SetTagFontStyle(this.lblEgresos, System.Drawing.FontStyle.Regular);
-            this.lblEgresos.Text = "Egresos";
+            this.lblEgresos.Text = "Costos";
             this.lblEgresos.Click += new System.EventHandler(this.itemLista_Click);
             this.lblEgresos.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
             this.lblEgresos.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
@@ -334,14 +339,14 @@
             this.lblTotal.Location = new System.Drawing.Point(4, 90);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(52, 23);
+            this.lblTotal.Size = new System.Drawing.Size(76, 23);
             this.lblTotal.TabIndex = 12;
             this.tagsExtender1.SetTag2(this.lblTotal, null);
             this.tagsExtender1.SetTag3(this.lblTotal, null);
             this.tagsExtender1.SetTagFontName(this.lblTotal, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lblTotal, 11F);
             this.tagsExtender1.SetTagFontStyle(this.lblTotal, System.Drawing.FontStyle.Regular);
-            this.lblTotal.Text = "Total";
+            this.lblTotal.Text = "Margen";
             this.lblTotal.Click += new System.EventHandler(this.itemLista_Click);
             this.lblTotal.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
             this.lblTotal.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
@@ -352,7 +357,7 @@
             this.lblSol3.BackColor = System.Drawing.Color.Transparent;
             this.lblSol3.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSol3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblSol3.Location = new System.Drawing.Point(113, 90);
+            this.lblSol3.Location = new System.Drawing.Point(120, 90);
             this.lblSol3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSol3.Name = "lblSol3";
             this.lblSol3.Size = new System.Drawing.Size(29, 23);
@@ -373,7 +378,7 @@
             this.lblSol2.BackColor = System.Drawing.Color.Transparent;
             this.lblSol2.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSol2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblSol2.Location = new System.Drawing.Point(113, 60);
+            this.lblSol2.Location = new System.Drawing.Point(120, 60);
             this.lblSol2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSol2.Name = "lblSol2";
             this.lblSol2.Size = new System.Drawing.Size(29, 23);
@@ -397,14 +402,14 @@
             this.lblIngresos.Location = new System.Drawing.Point(4, 30);
             this.lblIngresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngresos.Name = "lblIngresos";
-            this.lblIngresos.Size = new System.Drawing.Size(80, 23);
+            this.lblIngresos.Size = new System.Drawing.Size(108, 23);
             this.lblIngresos.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lblIngresos, null);
             this.tagsExtender1.SetTag3(this.lblIngresos, null);
             this.tagsExtender1.SetTagFontName(this.lblIngresos, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lblIngresos, 11F);
             this.tagsExtender1.SetTagFontStyle(this.lblIngresos, System.Drawing.FontStyle.Regular);
-            this.lblIngresos.Text = "Ingresos";
+            this.lblIngresos.Text = "Facturación";
             this.lblIngresos.Click += new System.EventHandler(this.itemLista_Click);
             this.lblIngresos.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
             this.lblIngresos.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
@@ -415,7 +420,7 @@
             this.lblSol1.BackColor = System.Drawing.Color.Transparent;
             this.lblSol1.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSol1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblSol1.Location = new System.Drawing.Point(113, 30);
+            this.lblSol1.Location = new System.Drawing.Point(120, 30);
             this.lblSol1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSol1.Name = "lblSol1";
             this.lblSol1.Size = new System.Drawing.Size(29, 23);
@@ -437,7 +442,7 @@
             this.lblMontoIngresos.BackColor = System.Drawing.Color.Transparent;
             this.lblMontoIngresos.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontoIngresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblMontoIngresos.Location = new System.Drawing.Point(180, 30);
+            this.lblMontoIngresos.Location = new System.Drawing.Point(246, 30);
             this.lblMontoIngresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMontoIngresos.Name = "lblMontoIngresos";
             this.lblMontoIngresos.Size = new System.Drawing.Size(121, 23);
@@ -460,7 +465,7 @@
             this.lblMontoEgresos.BackColor = System.Drawing.Color.Transparent;
             this.lblMontoEgresos.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontoEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblMontoEgresos.Location = new System.Drawing.Point(243, 60);
+            this.lblMontoEgresos.Location = new System.Drawing.Point(309, 60);
             this.lblMontoEgresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMontoEgresos.Name = "lblMontoEgresos";
             this.lblMontoEgresos.Size = new System.Drawing.Size(58, 23);
@@ -483,7 +488,7 @@
             this.lblMontoTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblMontoTotal.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontoTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
-            this.lblMontoTotal.Location = new System.Drawing.Point(194, 90);
+            this.lblMontoTotal.Location = new System.Drawing.Point(260, 90);
             this.lblMontoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMontoTotal.Name = "lblMontoTotal";
             this.lblMontoTotal.Size = new System.Drawing.Size(107, 23);
@@ -519,6 +524,28 @@
             this.lblPrincipal.Click += new System.EventHandler(this.itemLista_Click);
             this.lblPrincipal.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
             this.lblPrincipal.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
+            // 
+            // lblTipoReporte
+            // 
+            this.lblTipoReporte.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTipoReporte.AutoSize = true;
+            this.lblTipoReporte.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipoReporte.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.lblTipoReporte.Location = new System.Drawing.Point(67, 70);
+            this.lblTipoReporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoReporte.Name = "lblTipoReporte";
+            this.lblTipoReporte.Size = new System.Drawing.Size(136, 27);
+            this.lblTipoReporte.TabIndex = 20;
+            this.tagsExtender1.SetTag2(this.lblTipoReporte, null);
+            this.tagsExtender1.SetTag3(this.lblTipoReporte, null);
+            this.tagsExtender1.SetTagFontName(this.lblTipoReporte, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lblTipoReporte, 13F);
+            this.tagsExtender1.SetTagFontStyle(this.lblTipoReporte, System.Drawing.FontStyle.Bold);
+            this.lblTipoReporte.Text = "TipoReporte";
+            this.lblTipoReporte.Click += new System.EventHandler(this.itemLista_Click);
+            this.lblTipoReporte.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
+            this.lblTipoReporte.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
             // 
             // itemListaReporte
             // 
@@ -569,5 +596,6 @@
         private System.Windows.Forms.Label lblSede;
         private System.Windows.Forms.TableLayoutPanel tlpSede;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblTipoReporte;
     }
 }

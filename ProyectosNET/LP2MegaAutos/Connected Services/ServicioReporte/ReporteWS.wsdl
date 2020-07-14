@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.megaautos.com.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ReporteWS" targetNamespace="http://services.megaautos.com.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/ReporteWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarReporte">
+    <part name="parameters" element="tns:insertarReporte" />
+  </message>
+  <message name="insertarReporteResponse">
+    <part name="parameters" element="tns:insertarReporteResponse" />
+  </message>
+  <message name="listarReportes">
+    <part name="parameters" element="tns:listarReportes" />
+  </message>
+  <message name="listarReportesResponse">
+    <part name="parameters" element="tns:listarReportesResponse" />
+  </message>
+  <message name="buscarReportePorId">
+    <part name="parameters" element="tns:buscarReportePorId" />
+  </message>
+  <message name="buscarReportePorIdResponse">
+    <part name="parameters" element="tns:buscarReportePorIdResponse" />
+  </message>
+  <portType name="ReporteWS">
+    <operation name="insertarReporte">
+      <input wsam:Action="http://services.megaautos.com.pe/ReporteWS/insertarReporteRequest" message="tns:insertarReporte" />
+      <output wsam:Action="http://services.megaautos.com.pe/ReporteWS/insertarReporteResponse" message="tns:insertarReporteResponse" />
+    </operation>
+    <operation name="listarReportes">
+      <input wsam:Action="http://services.megaautos.com.pe/ReporteWS/listarReportesRequest" message="tns:listarReportes" />
+      <output wsam:Action="http://services.megaautos.com.pe/ReporteWS/listarReportesResponse" message="tns:listarReportesResponse" />
+    </operation>
+    <operation name="buscarReportePorId">
+      <input wsam:Action="http://services.megaautos.com.pe/ReporteWS/buscarReportePorIdRequest" message="tns:buscarReportePorId" />
+      <output wsam:Action="http://services.megaautos.com.pe/ReporteWS/buscarReportePorIdResponse" message="tns:buscarReportePorIdResponse" />
+    </operation>
+  </portType>
+  <binding name="ReporteWSPortBinding" type="tns:ReporteWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarReporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReportes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarReportePorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ReporteWS">
+    <port name="ReporteWSPort" binding="tns:ReporteWSPortBinding">
+      <soap:address location="http://72.44.47.118:8080/LP2MegaAutosServices/ReporteWS" />
+    </port>
+  </service>
+</definitions>

@@ -11,19 +11,36 @@ using LP2MegaAutos.VentanasPrincipales;
 using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
 using LP2MegaAutos.Framework;
+using LP2MegaAutos.ServicioReporte;
+using LP2MegaAutos.ServicioUsuario;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaListaReportes : Pantalla
     {
+
+        private ServicioReporte.ReporteWSClient daoReportes;
+        private List<reporte> _reportes;
+        private string textoBuscar; // TODO
+
         private string _btnSeleccionado="Todos";
+        
         public pantallaListaReportes()
         {
             InitializeComponent();
             flpReportes.AutoScroll = true;
-            this.btnAZ_Click(btnAZ,new EventArgs());
-            this.btn_todos_Click(btn_todos,new EventArgs());
+            daoReportes = new ReporteWSClient();
+            txt_Buscar.Text += textoBuscar; 
         }
+        
+        public void inicializarItemsLista()
+        {
+            _reportes = daoReportes.listarReportes().ToList();
+            if (_reportes == null) return;
+            this.btnAZ_Click(btnAZ, new EventArgs());
+            this.btn_todos_Click(btn_todos, new EventArgs());
+        }
+
         public pantallaListaReportes(string agregando)
         {
             InitializeComponent();
@@ -48,22 +65,20 @@ namespace LP2MegaAutos
             }
         }
 
-
-
-        private void itemListaReporte_Click(object sender, EventArgs e)
+        private void itemListaReporte_Click(object sender, EventArgs e, reporte r)
         {
-            frmResumenReporte frmReporte = new frmResumenReporte();
-            if (frmReporte.ShowDialog() == DialogResult.OK)
-            {
-                // Hacer algo
-                // TODO llamar al DAO
-            }
+            frmResumenReporte frmReporte = new frmResumenReporte(r);
+            frmReporte.ShowDialog();
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             frmGenerarReporte pgr = new frmGenerarReporte(this._btnSeleccionado);
             if (pgr.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                // TODO daoReporte llamar a procesar
+
+                // Mostrar reporte generado
+            }
             
         }
 
@@ -93,12 +108,87 @@ namespace LP2MegaAutos
             this._btnSeleccionado = "Cliente";
         }
         #endregion Botones Tipo Reporte
-        
+
+
+        private void personalizarItemListaReporte(itemListaReporte item)
+        {
+            item.Anchor = AnchorStyles.None;
+            item.BackColor = Color.Transparent;
+            item.ColorBack = Color.Transparent;
+            item.ColorBorde = Colores.PrincipalAzulMetalico;
+            item.ColorPanel = Colores.BackBackground;
+            item.Margin = new Padding(5);
+            item.TabIndex = 0;
+        }
+
+        private void createItemListaReporte(reporte r)
+        {
+            itemListaReporte item = new itemListaReporte();
+            personalizarItemListaReporte(item);
+            item.TextoPrincipal = r.titulo;
+            item.Tipo = r.tipoReporte;
+            item.MontoEgresos = r.ingresos.ToString("0,000.00");
+            item.MontoIngresos = r.egresos.ToString("0,000.00");
+            item.MontoTotal = (r.ingresos-r.egresos).ToString("0,000.00");
+            item.Name = "itemListaReporte"+r.idReporte;
+            item.QuienGenero = r.idUsuario.ToString();
+            item.Sede = r.sede.distrito; // TODO Sede no devuelve distrito, solo id
+            item.FechaGenerado = r.fechaCreacion.ToString("dd/MM/yyyy");
+            item.ItemListaClick += (sender, e) => { itemListaReporte_Click(sender, e, r); };
+            flpReportes.Controls.Add(item);
+        }
+
+        #region Organizar
+        private void crearItemsLista()
+        {
+            if (_reportes == null) return;
+            foreach (reporte r in _reportes)
+            {
+                createItemListaReporte(r);
+            }
+        }
+
+        private void quitarItemsLista()
+        {
+            for (int i = 0; i < flpReportes.Controls.Count;)
+                flpReportes.Controls.RemoveAt(i);
+        }
+
+        private void organizarAZ()
+        {
+            _reportes = _reportes.OrderBy(r => r.tipoReporte).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarZA()
+        {
+            _reportes = _reportes.OrderByDescending(r => r.tipoReporte).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarAntiguo()
+        {
+            _reportes = _reportes.OrderBy(r => r.fechaCreacion).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+
+        private void organizarReciente()
+        {
+            _reportes = _reportes.OrderByDescending(r => r.fechaCreacion).ToList();
+            quitarItemsLista();
+            crearItemsLista();
+        }
+        #endregion Organizar
+
         #region Botones Filtro
         private void btnAZ_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndAZ, rndZA, rndAntiguo, rndReciente);
+            organizarAZ();
         }
         private void btnZA_Click(object sender, EventArgs e)
         {
@@ -141,5 +231,10 @@ namespace LP2MegaAutos
             pantallaListasHelper.buscarLeave(txt_Buscar);
         }
         #endregion Botones Filtro
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // TODO
+        }
     }
 }

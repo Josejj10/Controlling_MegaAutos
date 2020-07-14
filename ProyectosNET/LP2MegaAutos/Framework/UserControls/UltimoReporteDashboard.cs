@@ -101,5 +101,6 @@ namespace LP2MegaAutos.Framework.UserControls
             ButtonClickEventHandler h = VerReporteClick;
             if (h != null) h(this, e);
         }
+
     }
 }

@@ -69,10 +69,55 @@
       <xs:element name="idReporte" type="xs:int" />
       <xs:element name="idUsuario" type="xs:int" />
       <xs:element minOccurs="0" name="ingresos" type="xs:double" />
+      <xs:element name="mapaDetalle">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string" />
+                  <xs:element minOccurs="0" name="value" type="tns:arrayList" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="mapaDetalleMontos">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string" />
+                  <xs:element minOccurs="0" name="value" type="tns:arrayList" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <xs:element minOccurs="0" name="sede" type="tns:sede" />
       <xs:element minOccurs="0" name="tipoReporte" type="xs:string" />
       <xs:element minOccurs="0" name="titulo" type="xs:string" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arrayList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:abstractList">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="abstractList" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:abstractCollection">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="abstractCollection" abstract="true">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarArchivoEntrada">
     <xs:sequence>

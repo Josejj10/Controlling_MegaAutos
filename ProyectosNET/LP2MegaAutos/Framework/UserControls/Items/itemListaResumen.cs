@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.Reportes;
 
 namespace LP2MegaAutos
 {
     public partial class itemListaResumen : UserControl
     {
+        private int nItems = 0;
         public itemListaResumen()
         {
             InitializeComponent();
@@ -20,8 +22,18 @@ namespace LP2MegaAutos
         private bool _cuentasVisibles = false;
         private void lblBtnCuentasContables_Click(object sender, EventArgs e)
         {
-            this.flpCuentasContables.Visible = !_cuentasVisibles;
-            _cuentasVisibles = !_cuentasVisibles;
+            _cuentasVisibles = this.flpCuentasContables.Visible = !_cuentasVisibles;
+
+            if (_cuentasVisibles)
+            {
+                this.Height += 90 * nItems;
+                tlpLista.Height += 90 * nItems;
+                flpCuentasContables.Height += 90 * nItems;
+                return;
+            }
+            this.Height -= 90 * nItems;
+            tlpLista.Height -= 90 * nItems;
+            flpCuentasContables.Height -= 90 * nItems;
         }
 
 
@@ -81,8 +93,42 @@ namespace LP2MegaAutos
         }
         #endregion Propiedades
 
-        // TODO Al hacer dinamica la creacion de Cuentas Contables quitar el flp
-        // Se ve feo el scroll, asi que ir aumentando el tamaño del control
-        // a medida que se van aumentando los paneles de Cuentas Contables
+        private itemListaResumenReporte crearItemLista()
+        {
+            itemListaResumenReporte item = new itemListaResumenReporte();
+            item.ColorBack = Color.Transparent;
+            item.ColorBorde = Colores.PrincipalIndigo;
+            item.ColorPanel = Colores.CasiPuro;
+            item.Margin = new Padding(3, 3, 3, 3);
+            item.Anchor = AnchorStyles.None;
+            item.Name = "itemListaResumenReporte"+ ++nItems;
+            item.TabIndex = 5+ nItems;
+            return item;
+        }
+
+        public void addCuentaContable(string concepto, string monto /* ,ordenTrabajo ot*/)
+        {
+            if (nItems == 0)
+            {
+                this.Height +=92;
+                rpCuentasContables.Visible = true;
+            }
+            itemListaResumenReporte item = crearItemLista();
+            item.Concepto = concepto;
+            item.Monto = monto;
+            // TODO Delegar el click
+            item.ItemListaClick += (sender, e) => { abrirDetalleOrdentrabajo(sender, e/*.,ot*/); };
+            flpCuentasContables.Controls.Add(item);
+        }
+
+
+        private void abrirDetalleOrdentrabajo(Object sender, EventArgs e/*, ordenTrabajo ot*/)
+        {
+            pantallaOrdenTrabajo frm = new pantallaOrdenTrabajo();
+            frm.Show();
+        }
+
+
+
     }
 }

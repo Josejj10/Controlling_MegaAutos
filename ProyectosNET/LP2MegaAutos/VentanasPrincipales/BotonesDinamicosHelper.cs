@@ -149,7 +149,7 @@ namespace LP2MegaAutos.VentanasPrincipales
         }
         public static void personalizarItemLista(itemLista il, int height = 81)
         {
-            il.Anchor = AnchorStyles.Top;
+            il.Anchor = AnchorStyles.None;
             il.BackColor = Color.Transparent;
             il.ColorBack = Color.Transparent;
             il.ColorBorde = Colores.PrincipalAzulMetalico;

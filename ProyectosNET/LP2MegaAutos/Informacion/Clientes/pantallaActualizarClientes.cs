@@ -25,7 +25,6 @@ namespace LP2MegaAutos
             flpClientes.AutoScroll = true;
             daoCliente = new ServicioCliente.ClienteWSClient();
             txt_Buscar.Text += textoBuscar;
-            //inicializarItemsLista();
         }
         public void inicializarItemsLista()
         {

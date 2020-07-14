@@ -7,24 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.ServicioReporte;
 
 namespace LP2MegaAutos
 {
     public partial class pantallaDetalleReporte : UserControl
     {
-        #region instancia
-        private static pantallaDetalleReporte _instancia;
-        public static pantallaDetalleReporte Instancia
-        {
-            get
-            {
-                if (_instancia == null)
-                    _instancia = new pantallaDetalleReporte();
-                return _instancia;
-            }
-        }
-        #endregion instancia
-
+        private reporte _reporte;
         public pantallaDetalleReporte()
         {
             InitializeComponent();
@@ -53,7 +42,7 @@ namespace LP2MegaAutos
         private void btnResumen_Click(object sender, EventArgs e)
         {
             // Abrir Form Resumen
-            frmResumenReporte frmResumen = new frmResumenReporte();
+            frmResumenReporte frmResumen = new frmResumenReporte(_reporte);
             frmResumen.Show();
         }
 

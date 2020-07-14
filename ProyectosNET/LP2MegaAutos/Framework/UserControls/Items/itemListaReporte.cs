@@ -69,6 +69,13 @@ namespace LP2MegaAutos
             set { lblSede.Text = value; }
         }
 
+        [Description("Tipo del Reporte"), Category("Item Reporte")]
+        public string Tipo
+        {
+            get { return lblTipoReporte.Text; }
+            set { lblTipoReporte.Text = value; }
+        }
+
         [Description("Color Borde"), Category("Item Reporte")]
         public Color ColorBorde
         {
@@ -109,7 +116,7 @@ namespace LP2MegaAutos
 
         private void itemLista_MouseEnter(object sender, EventArgs e)
         {
-            itemListaHelper.rpItem_MouseEnter(rpItem);
+            itemListaHelper.rpItem_MouseEnter(rpItem,true);
         }
 
         private void itemLista_MouseLeave(object sender, EventArgs e)

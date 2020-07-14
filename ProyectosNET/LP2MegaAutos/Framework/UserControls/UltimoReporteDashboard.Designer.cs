@@ -145,14 +145,14 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblStringEgresos.Location = new System.Drawing.Point(7, 11);
             this.lblStringEgresos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStringEgresos.Name = "lblStringEgresos";
-            this.lblStringEgresos.Size = new System.Drawing.Size(42, 23);
+            this.lblStringEgresos.Size = new System.Drawing.Size(60, 23);
             this.lblStringEgresos.TabIndex = 48;
             this.tags.SetTag2(this.lblStringEgresos, null);
             this.tags.SetTag3(this.lblStringEgresos, null);
             this.tags.SetTagFontName(this.lblStringEgresos, fontsD.Lato);
             this.tags.SetTagFontSize(this.lblStringEgresos, 11F);
             this.tags.SetTagFontStyle(this.lblStringEgresos, System.Drawing.FontStyle.Bold);
-            this.lblStringEgresos.Text = "Egr.";
+            this.lblStringEgresos.Text = "Costo";
             this.lblStringEgresos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpEgresos
@@ -348,14 +348,14 @@ namespace LP2MegaAutos.Framework.UserControls
             this.lblStringTotal.Location = new System.Drawing.Point(7, 11);
             this.lblStringTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStringTotal.Name = "lblStringTotal";
-            this.lblStringTotal.Size = new System.Drawing.Size(76, 23);
+            this.lblStringTotal.Size = new System.Drawing.Size(60, 23);
             this.lblStringTotal.TabIndex = 48;
             this.tags.SetTag2(this.lblStringTotal, null);
             this.tags.SetTag3(this.lblStringTotal, null);
             this.tags.SetTagFontName(this.lblStringTotal, fontsD.Lato);
             this.tags.SetTagFontSize(this.lblStringTotal, 11F);
             this.tags.SetTagFontStyle(this.lblStringTotal, System.Drawing.FontStyle.Bold);
-            this.lblStringTotal.Text = "Margen";
+            this.lblStringTotal.Text = "Marg.";
             this.lblStringTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tlpTotal

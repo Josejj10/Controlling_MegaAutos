@@ -81,6 +81,11 @@
     <Compile Include="Configuracion\Empresa\frmEditarNombEmpresa.Designer.cs">
       <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioReporte\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServicioAreaTrabajo\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -575,6 +580,22 @@
     <EmbeddedResource Include="VentanasPrincipales\pantallaEliminar.resx">
       <DependentUpon>pantallaEliminar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\ServicioReporte\LP2MegaAutos.ServicioReporte.buscarReportePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioReporte\LP2MegaAutos.ServicioReporte.insertarReporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioReporte\LP2MegaAutos.ServicioReporte.listarReportesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioReporte\LP2MegaAutos.ServicioReporte.reporte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioReporte\ReporteWS.wsdl" />
+    <None Include="Connected Services\ServicioReporte\ReporteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServicioAreaTrabajo\AreaTrabajoWS.wsdl" />
     <None Include="Connected Services\ServicioAreaTrabajo\AreaTrabajoWS.xsd">
       <SubType>Designer</SubType>
@@ -948,6 +969,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Buscar.png" />
+    <None Include="Connected Services\ServicioReporte\configuration91.svcinfo" />
+    <None Include="Connected Services\ServicioReporte\configuration.svcinfo" />
+    <None Include="Connected Services\ServicioReporte\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\equis.png" />
     <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />
@@ -1048,6 +1075,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServicioReporte\" />
     <WCFMetadataStorage Include="Connected Services\ServicioAreaTrabajo\" />
     <WCFMetadataStorage Include="Connected Services\ServicioCliente\" />
     <WCFMetadataStorage Include="Connected Services\ServicioComprobantePago\" />

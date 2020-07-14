@@ -43,9 +43,6 @@
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flpReportes = new System.Windows.Forms.FlowLayoutPanel();
-            this.itemListaReporte1 = new LP2MegaAutos.itemListaReporte();
-            this.itemListaReporte2 = new LP2MegaAutos.itemListaReporte();
-            this.itemListaReporte3 = new LP2MegaAutos.itemListaReporte();
             this.roundedPanel4 = new LP2MegaAutos.RoundedPanel();
             this.rpn_ListaReportes = new LP2MegaAutos.RoundedPanel();
             this.lbl_ListaReportes = new System.Windows.Forms.Label();
@@ -64,7 +61,6 @@
             this.rndTodos.SuspendLayout();
             this.pnlBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.flpReportes.SuspendLayout();
             this.rpn_ListaReportes.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -81,7 +77,7 @@
             this.rndCliente.Controls.Add(this.btn_cliente);
             this.rndCliente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndCliente.Location = new System.Drawing.Point(35, 223);
-            this.rndCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndCliente.Margin = new System.Windows.Forms.Padding(4);
             this.rndCliente.MenosHeightBorde = 1;
             this.rndCliente.MenosHeightPanel = 1;
             this.rndCliente.MenosWidthBorde = 1;
@@ -110,7 +106,7 @@
             this.btn_cliente.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btn_cliente.Location = new System.Drawing.Point(4, 4);
-            this.btn_cliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cliente.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cliente.Name = "btn_cliente";
             this.btn_cliente.Size = new System.Drawing.Size(167, 37);
             this.btn_cliente.TabIndex = 8;
@@ -135,7 +131,7 @@
             this.rndAreaTrabajo.Controls.Add(this.btn_AreaTrabajo);
             this.rndAreaTrabajo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndAreaTrabajo.Location = new System.Drawing.Point(35, 166);
-            this.rndAreaTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndAreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.rndAreaTrabajo.MenosHeightBorde = 1;
             this.rndAreaTrabajo.MenosHeightPanel = 1;
             this.rndAreaTrabajo.MenosWidthBorde = 1;
@@ -164,7 +160,7 @@
             this.btn_AreaTrabajo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AreaTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btn_AreaTrabajo.Location = new System.Drawing.Point(4, 4);
-            this.btn_AreaTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_AreaTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_AreaTrabajo.Name = "btn_AreaTrabajo";
             this.btn_AreaTrabajo.Size = new System.Drawing.Size(167, 37);
             this.btn_AreaTrabajo.TabIndex = 7;
@@ -189,7 +185,7 @@
             this.rndSiniestro.Controls.Add(this.btnTipoSiniestro);
             this.rndSiniestro.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndSiniestro.Location = new System.Drawing.Point(35, 279);
-            this.rndSiniestro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndSiniestro.Margin = new System.Windows.Forms.Padding(4);
             this.rndSiniestro.MenosHeightBorde = 1;
             this.rndSiniestro.MenosHeightPanel = 1;
             this.rndSiniestro.MenosWidthBorde = 1;
@@ -218,7 +214,7 @@
             this.btnTipoSiniestro.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoSiniestro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnTipoSiniestro.Location = new System.Drawing.Point(4, 4);
-            this.btnTipoSiniestro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTipoSiniestro.Margin = new System.Windows.Forms.Padding(4);
             this.btnTipoSiniestro.Name = "btnTipoSiniestro";
             this.btnTipoSiniestro.Size = new System.Drawing.Size(167, 37);
             this.btnTipoSiniestro.TabIndex = 6;
@@ -243,7 +239,7 @@
             this.rndTodos.Controls.Add(this.btn_todos);
             this.rndTodos.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndTodos.Location = new System.Drawing.Point(35, 110);
-            this.rndTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndTodos.Margin = new System.Windows.Forms.Padding(4);
             this.rndTodos.MenosHeightBorde = 1;
             this.rndTodos.MenosHeightPanel = 1;
             this.rndTodos.MenosWidthBorde = 1;
@@ -272,7 +268,7 @@
             this.btn_todos.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_todos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btn_todos.Location = new System.Drawing.Point(4, 4);
-            this.btn_todos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_todos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_todos.Name = "btn_todos";
             this.btn_todos.Size = new System.Drawing.Size(165, 36);
             this.btn_todos.TabIndex = 5;
@@ -294,7 +290,7 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(8, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(33, 31);
             this.panel2.TabIndex = 0;
@@ -311,7 +307,7 @@
             this.pnlBuscar.Controls.Add(this.txt_Buscar);
             this.pnlBuscar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBuscar.Location = new System.Drawing.Point(0, 0);
-            this.pnlBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBuscar.Name = "pnlBuscar";
             this.pnlBuscar.Size = new System.Drawing.Size(1001, 37);
             this.pnlBuscar.TabIndex = 45;
@@ -328,7 +324,7 @@
             this.txt_Buscar.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txt_Buscar.Location = new System.Drawing.Point(49, 7);
-            this.txt_Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(687, 23);
             this.txt_Buscar.TabIndex = 17;
@@ -347,7 +343,7 @@
             this.panel3.Controls.Add(this.roundedPanel4);
             this.panel3.Controls.Add(this.rpn_ListaReportes);
             this.panel3.Location = new System.Drawing.Point(216, 110);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(781, 486);
             this.panel3.TabIndex = 53;
@@ -362,11 +358,8 @@
             this.flpReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flpReportes.AutoScroll = true;
             this.flpReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
-            this.flpReportes.Controls.Add(this.itemListaReporte1);
-            this.flpReportes.Controls.Add(this.itemListaReporte2);
-            this.flpReportes.Controls.Add(this.itemListaReporte3);
             this.flpReportes.Location = new System.Drawing.Point(0, 33);
-            this.flpReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpReportes.Margin = new System.Windows.Forms.Padding(4);
             this.flpReportes.Name = "flpReportes";
             this.flpReportes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.flpReportes.Size = new System.Drawing.Size(781, 433);
@@ -376,79 +369,6 @@
             this.tagsExtender1.SetTagFontName(this.flpReportes, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.flpReportes, 10F);
             this.tagsExtender1.SetTagFontStyle(this.flpReportes, System.Drawing.FontStyle.Regular);
-            // 
-            // itemListaReporte1
-            // 
-            this.itemListaReporte1.BackColor = System.Drawing.Color.Transparent;
-            this.itemListaReporte1.ColorBack = System.Drawing.Color.Transparent;
-            this.itemListaReporte1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemListaReporte1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte1.FechaGenerado = "24/05/2020";
-            this.itemListaReporte1.Location = new System.Drawing.Point(20, 5);
-            this.itemListaReporte1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.itemListaReporte1.MontoEgresos = "10.00";
-            this.itemListaReporte1.MontoIngresos = "1,000,000.00";
-            this.itemListaReporte1.MontoTotal = "100,000.00";
-            this.itemListaReporte1.Name = "itemListaReporte1";
-            this.itemListaReporte1.QuienGenero = "Percy Jackson";
-            this.itemListaReporte1.Sede = "Sede";
-            this.itemListaReporte1.Size = new System.Drawing.Size(723, 201);
-            this.itemListaReporte1.TabIndex = 0;
-            this.tagsExtender1.SetTag2(this.itemListaReporte1, null);
-            this.tagsExtender1.SetTag3(this.itemListaReporte1, null);
-            this.tagsExtender1.SetTagFontName(this.itemListaReporte1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemListaReporte1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte1, System.Drawing.FontStyle.Regular);
-            this.itemListaReporte1.TextoPrincipal = "Texto Principal";
-            this.itemListaReporte1.ItemListaClick += new LP2MegaAutos.itemListaReporte.ButtonClickEventHandler(this.itemListaReporte_Click);
-            // 
-            // itemListaReporte2
-            // 
-            this.itemListaReporte2.BackColor = System.Drawing.Color.Transparent;
-            this.itemListaReporte2.ColorBack = System.Drawing.Color.Transparent;
-            this.itemListaReporte2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemListaReporte2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte2.FechaGenerado = "24/05/2020";
-            this.itemListaReporte2.Location = new System.Drawing.Point(20, 216);
-            this.itemListaReporte2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.itemListaReporte2.MontoEgresos = "10.00";
-            this.itemListaReporte2.MontoIngresos = "1,000,000.00";
-            this.itemListaReporte2.MontoTotal = "100,000.00";
-            this.itemListaReporte2.Name = "itemListaReporte2";
-            this.itemListaReporte2.QuienGenero = "Percy Jackson";
-            this.itemListaReporte2.Sede = "Sede";
-            this.itemListaReporte2.Size = new System.Drawing.Size(723, 201);
-            this.itemListaReporte2.TabIndex = 1;
-            this.tagsExtender1.SetTag2(this.itemListaReporte2, null);
-            this.tagsExtender1.SetTag3(this.itemListaReporte2, null);
-            this.tagsExtender1.SetTagFontName(this.itemListaReporte2, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemListaReporte2, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte2, System.Drawing.FontStyle.Regular);
-            this.itemListaReporte2.TextoPrincipal = "Texto Principal";
-            // 
-            // itemListaReporte3
-            // 
-            this.itemListaReporte3.BackColor = System.Drawing.Color.Transparent;
-            this.itemListaReporte3.ColorBack = System.Drawing.Color.Transparent;
-            this.itemListaReporte3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemListaReporte3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
-            this.itemListaReporte3.FechaGenerado = "24/05/2020";
-            this.itemListaReporte3.Location = new System.Drawing.Point(20, 427);
-            this.itemListaReporte3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.itemListaReporte3.MontoEgresos = "10.00";
-            this.itemListaReporte3.MontoIngresos = "1,000,000.00";
-            this.itemListaReporte3.MontoTotal = "100,000.00";
-            this.itemListaReporte3.Name = "itemListaReporte3";
-            this.itemListaReporte3.QuienGenero = "Percy Jackson";
-            this.itemListaReporte3.Sede = "Sede";
-            this.itemListaReporte3.Size = new System.Drawing.Size(723, 201);
-            this.itemListaReporte3.TabIndex = 2;
-            this.tagsExtender1.SetTag2(this.itemListaReporte3, null);
-            this.tagsExtender1.SetTag3(this.itemListaReporte3, null);
-            this.tagsExtender1.SetTagFontName(this.itemListaReporte3, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.itemListaReporte3, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.itemListaReporte3, System.Drawing.FontStyle.Regular);
-            this.itemListaReporte3.TextoPrincipal = "Texto Principal";
             // 
             // roundedPanel4
             // 
@@ -460,7 +380,7 @@
             this.roundedPanel4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.roundedPanel4.Location = new System.Drawing.Point(0, 466);
-            this.roundedPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.roundedPanel4.MenosHeightBorde = 1;
             this.roundedPanel4.MenosHeightPanel = 1;
             this.roundedPanel4.MenosWidthBorde = 1;
@@ -489,7 +409,7 @@
             this.rpn_ListaReportes.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.rpn_ListaReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.rpn_ListaReportes.Location = new System.Drawing.Point(0, 0);
-            this.rpn_ListaReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpn_ListaReportes.Margin = new System.Windows.Forms.Padding(4);
             this.rpn_ListaReportes.MenosHeightBorde = 1;
             this.rpn_ListaReportes.MenosHeightPanel = 1;
             this.rpn_ListaReportes.MenosWidthBorde = 1;
@@ -537,7 +457,7 @@
             this.rndReciente.Controls.Add(this.btnReciente);
             this.rndReciente.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndReciente.Location = new System.Drawing.Point(809, 52);
-            this.rndReciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndReciente.Margin = new System.Windows.Forms.Padding(4);
             this.rndReciente.MenosHeightBorde = 1;
             this.rndReciente.MenosHeightPanel = 1;
             this.rndReciente.MenosWidthBorde = 1;
@@ -568,7 +488,7 @@
             this.btnReciente.Image = ((System.Drawing.Image)(resources.GetObject("btnReciente.Image")));
             this.btnReciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReciente.Location = new System.Drawing.Point(4, 4);
-            this.btnReciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReciente.Margin = new System.Windows.Forms.Padding(4);
             this.btnReciente.Name = "btnReciente";
             this.btnReciente.Size = new System.Drawing.Size(165, 36);
             this.btnReciente.TabIndex = 8;
@@ -594,7 +514,7 @@
             this.rndAntiguo.Controls.Add(this.btnAntiguo);
             this.rndAntiguo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndAntiguo.Location = new System.Drawing.Point(616, 52);
-            this.rndAntiguo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndAntiguo.Margin = new System.Windows.Forms.Padding(4);
             this.rndAntiguo.MenosHeightBorde = 1;
             this.rndAntiguo.MenosHeightPanel = 1;
             this.rndAntiguo.MenosWidthBorde = 1;
@@ -625,7 +545,7 @@
             this.btnAntiguo.Image = ((System.Drawing.Image)(resources.GetObject("btnAntiguo.Image")));
             this.btnAntiguo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAntiguo.Location = new System.Drawing.Point(4, 4);
-            this.btnAntiguo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAntiguo.Margin = new System.Windows.Forms.Padding(4);
             this.btnAntiguo.Name = "btnAntiguo";
             this.btnAntiguo.Size = new System.Drawing.Size(165, 36);
             this.btnAntiguo.TabIndex = 7;
@@ -651,7 +571,7 @@
             this.rndZA.Controls.Add(this.btnZA);
             this.rndZA.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndZA.Location = new System.Drawing.Point(421, 52);
-            this.rndZA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndZA.Margin = new System.Windows.Forms.Padding(4);
             this.rndZA.MenosHeightBorde = 1;
             this.rndZA.MenosHeightPanel = 1;
             this.rndZA.MenosWidthBorde = 1;
@@ -682,7 +602,7 @@
             this.btnZA.Image = ((System.Drawing.Image)(resources.GetObject("btnZA.Image")));
             this.btnZA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnZA.Location = new System.Drawing.Point(4, 4);
-            this.btnZA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnZA.Margin = new System.Windows.Forms.Padding(4);
             this.btnZA.Name = "btnZA";
             this.btnZA.Size = new System.Drawing.Size(165, 36);
             this.btnZA.TabIndex = 6;
@@ -708,7 +628,7 @@
             this.rndAZ.Controls.Add(this.btnAZ);
             this.rndAZ.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rndAZ.Location = new System.Drawing.Point(228, 52);
-            this.rndAZ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rndAZ.Margin = new System.Windows.Forms.Padding(4);
             this.rndAZ.MenosHeightBorde = 1;
             this.rndAZ.MenosHeightPanel = 1;
             this.rndAZ.MenosWidthBorde = 1;
@@ -739,7 +659,7 @@
             this.btnAZ.Image = ((System.Drawing.Image)(resources.GetObject("btnAZ.Image")));
             this.btnAZ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAZ.Location = new System.Drawing.Point(4, 4);
-            this.btnAZ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAZ.Margin = new System.Windows.Forms.Padding(4);
             this.btnAZ.Name = "btnAZ";
             this.btnAZ.Size = new System.Drawing.Size(165, 36);
             this.btnAZ.TabIndex = 5;
@@ -765,7 +685,7 @@
             this.btnGenerar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
             this.btnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.btnGenerar.Location = new System.Drawing.Point(35, 52);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(136, 38);
             this.btnGenerar.TabIndex = 58;
@@ -797,7 +717,7 @@
             this.Controls.Add(this.rndAreaTrabajo);
             this.Controls.Add(this.rndSiniestro);
             this.Controls.Add(this.rndTodos);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "pantallaListaReportes";
             this.Size = new System.Drawing.Size(1001, 640);
             this.tagsExtender1.SetTag2(this, null);
@@ -812,7 +732,6 @@
             this.pnlBuscar.ResumeLayout(false);
             this.pnlBuscar.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.flpReportes.ResumeLayout(false);
             this.rpn_ListaReportes.ResumeLayout(false);
             this.rpn_ListaReportes.PerformLayout();
             this.rndReciente.ResumeLayout(false);
@@ -850,9 +769,6 @@
         private System.Windows.Forms.Button btnZA;
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
-        private itemListaReporte itemListaReporte1;
         private System.Windows.Forms.Button btnGenerar;
-        private itemListaReporte itemListaReporte2;
-        private itemListaReporte itemListaReporte3;
     }
 }

@@ -47,7 +47,6 @@
             this.lblCuentaGrande = new System.Windows.Forms.Label();
             this.rpTitulo = new LP2MegaAutos.RoundedPanel();
             this.flpCuentasContables = new System.Windows.Forms.FlowLayoutPanel();
-            this.itemListaResumenReporte6 = new LP2MegaAutos.itemListaResumenReporte();
             this.tags = new LP2MegaAutos.TagsExtender();
             this.tlpLista.SuspendLayout();
             this.rpCuentasContables.SuspendLayout();
@@ -58,7 +57,6 @@
             this.tlpIngresos.SuspendLayout();
             this.rpTotal.SuspendLayout();
             this.tlpTotal.SuspendLayout();
-            this.flpCuentasContables.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpLista
@@ -73,7 +71,7 @@
             this.tlpLista.Controls.Add(this.rpTitulo, 0, 1);
             this.tlpLista.Controls.Add(this.flpCuentasContables, 0, 6);
             this.tlpLista.Location = new System.Drawing.Point(0, 0);
-            this.tlpLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpLista.Margin = new System.Windows.Forms.Padding(4);
             this.tlpLista.Name = "tlpLista";
             this.tlpLista.RowCount = 7;
             this.tlpLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
@@ -83,7 +81,7 @@
             this.tlpLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tlpLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tlpLista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tlpLista.Size = new System.Drawing.Size(280, 882);
+            this.tlpLista.Size = new System.Drawing.Size(280, 494);
             this.tlpLista.TabIndex = 0;
             this.tags.SetTag2(this.tlpLista, null);
             this.tags.SetTag3(this.tlpLista, null);
@@ -102,7 +100,7 @@
             this.rpCuentasContables.Controls.Add(this.tlpCuentas);
             this.rpCuentasContables.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpCuentasContables.Location = new System.Drawing.Point(15, 313);
-            this.rpCuentasContables.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpCuentasContables.Margin = new System.Windows.Forms.Padding(4);
             this.rpCuentasContables.MenosHeightBorde = 1;
             this.rpCuentasContables.MenosHeightPanel = 1;
             this.rpCuentasContables.MenosWidthBorde = 1;
@@ -128,7 +126,7 @@
             this.tlpCuentas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpCuentas.Controls.Add(this.lblBtnCuentasContables, 0, 0);
             this.tlpCuentas.Location = new System.Drawing.Point(9, 4);
-            this.tlpCuentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpCuentas.Margin = new System.Windows.Forms.Padding(4);
             this.tlpCuentas.Name = "tlpCuentas";
             this.tlpCuentas.RowCount = 1;
             this.tlpCuentas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -172,7 +170,7 @@
             this.rpEgresos.Controls.Add(this.tlpEgresos);
             this.rpEgresos.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpEgresos.Location = new System.Drawing.Point(15, 227);
-            this.rpEgresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpEgresos.Margin = new System.Windows.Forms.Padding(4);
             this.rpEgresos.MenosHeightBorde = 1;
             this.rpEgresos.MenosHeightPanel = 1;
             this.rpEgresos.MenosWidthBorde = 1;
@@ -216,7 +214,7 @@
             this.tlpEgresos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpEgresos.Controls.Add(this.lblEgresos, 0, 0);
             this.tlpEgresos.Location = new System.Drawing.Point(16, 27);
-            this.tlpEgresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpEgresos.Margin = new System.Windows.Forms.Padding(4);
             this.tlpEgresos.Name = "tlpEgresos";
             this.tlpEgresos.RowCount = 1;
             this.tlpEgresos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -259,7 +257,7 @@
             this.rpIngresos.Controls.Add(this.tlpIngresos);
             this.rpIngresos.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpIngresos.Location = new System.Drawing.Point(15, 141);
-            this.rpIngresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpIngresos.Margin = new System.Windows.Forms.Padding(4);
             this.rpIngresos.MenosHeightBorde = 1;
             this.rpIngresos.MenosHeightPanel = 1;
             this.rpIngresos.MenosWidthBorde = 1;
@@ -303,7 +301,7 @@
             this.tlpIngresos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpIngresos.Controls.Add(this.lblIngresos, 0, 0);
             this.tlpIngresos.Location = new System.Drawing.Point(16, 27);
-            this.tlpIngresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpIngresos.Margin = new System.Windows.Forms.Padding(4);
             this.tlpIngresos.Name = "tlpIngresos";
             this.tlpIngresos.RowCount = 1;
             this.tlpIngresos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -346,7 +344,7 @@
             this.rpTotal.Controls.Add(this.tlpTotal);
             this.rpTotal.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpTotal.Location = new System.Drawing.Point(15, 55);
-            this.rpTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpTotal.Margin = new System.Windows.Forms.Padding(4);
             this.rpTotal.MenosHeightBorde = 1;
             this.rpTotal.MenosHeightPanel = 1;
             this.rpTotal.MenosWidthBorde = 1;
@@ -390,7 +388,7 @@
             this.tlpTotal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpTotal.Controls.Add(this.lblTotal, 0, 0);
             this.tlpTotal.Location = new System.Drawing.Point(16, 27);
-            this.tlpTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpTotal.Margin = new System.Windows.Forms.Padding(4);
             this.tlpTotal.Name = "tlpTotal";
             this.tlpTotal.RowCount = 1;
             this.tlpTotal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -451,7 +449,7 @@
             this.rpTitulo.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.rpTitulo.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rpTitulo.Location = new System.Drawing.Point(15, 40);
-            this.rpTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.rpTitulo.MenosHeightBorde = 1;
             this.rpTitulo.MenosHeightPanel = 1;
             this.rpTitulo.MenosWidthBorde = 1;
@@ -472,13 +470,11 @@
             // 
             // flpCuentasContables
             // 
-            this.flpCuentasContables.AutoScroll = true;
             this.flpCuentasContables.BackColor = System.Drawing.Color.Transparent;
-            this.flpCuentasContables.Controls.Add(this.itemListaResumenReporte6);
             this.flpCuentasContables.Location = new System.Drawing.Point(4, 399);
-            this.flpCuentasContables.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpCuentasContables.Margin = new System.Windows.Forms.Padding(4);
             this.flpCuentasContables.Name = "flpCuentasContables";
-            this.flpCuentasContables.Size = new System.Drawing.Size(267, 479);
+            this.flpCuentasContables.Size = new System.Drawing.Size(272, 90);
             this.flpCuentasContables.TabIndex = 54;
             this.tags.SetTag2(this.flpCuentasContables, null);
             this.tags.SetTag3(this.flpCuentasContables, null);
@@ -487,32 +483,14 @@
             this.tags.SetTagFontStyle(this.flpCuentasContables, System.Drawing.FontStyle.Regular);
             this.flpCuentasContables.Visible = false;
             // 
-            // itemListaResumenReporte6
-            // 
-            this.itemListaResumenReporte6.ColorBack = System.Drawing.Color.Transparent;
-            this.itemListaResumenReporte6.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
-            this.itemListaResumenReporte6.ColorPanel = System.Drawing.Color.Transparent;
-            this.itemListaResumenReporte6.Concepto = "Concepto";
-            this.itemListaResumenReporte6.Location = new System.Drawing.Point(5, 5);
-            this.itemListaResumenReporte6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.itemListaResumenReporte6.Monto = "999,999,999.00";
-            this.itemListaResumenReporte6.Name = "itemListaResumenReporte6";
-            this.itemListaResumenReporte6.Size = new System.Drawing.Size(267, 79);
-            this.itemListaResumenReporte6.TabIndex = 5;
-            this.tags.SetTag2(this.itemListaResumenReporte6, null);
-            this.tags.SetTag3(this.itemListaResumenReporte6, null);
-            this.tags.SetTagFontName(this.itemListaResumenReporte6, fontsD.Ninguno);
-            this.tags.SetTagFontSize(this.itemListaResumenReporte6, 10F);
-            this.tags.SetTagFontStyle(this.itemListaResumenReporte6, System.Drawing.FontStyle.Regular);
-            // 
             // itemListaResumen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpLista);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "itemListaResumen";
-            this.Size = new System.Drawing.Size(280, 882);
+            this.Size = new System.Drawing.Size(280, 307);
             this.tags.SetTag2(this, null);
             this.tags.SetTag3(this, null);
             this.tags.SetTagFontName(this, fontsD.Ninguno);
@@ -534,7 +512,6 @@
             this.rpTotal.PerformLayout();
             this.tlpTotal.ResumeLayout(false);
             this.tlpTotal.PerformLayout();
-            this.flpCuentasContables.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -561,6 +538,5 @@
         private System.Windows.Forms.TableLayoutPanel tlpCuentas;
         private System.Windows.Forms.Label lblBtnCuentasContables;
         private System.Windows.Forms.FlowLayoutPanel flpCuentasContables;
-        private itemListaResumenReporte itemListaResumenReporte6;
     }
 }

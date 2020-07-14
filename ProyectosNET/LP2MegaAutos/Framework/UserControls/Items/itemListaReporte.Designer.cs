@@ -49,6 +49,7 @@
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
+            this.lblTipoReporte = new System.Windows.Forms.Label();
             this.rpItem.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tlpSede.SuspendLayout();
@@ -115,6 +116,8 @@
             this.tagsExtender1.SetTagFontSize(this.tableLayoutPanel1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.tableLayoutPanel1, System.Drawing.FontStyle.Regular);
             this.tableLayoutPanel1.Click += new System.EventHandler(this.itemLista_Click);
+            this.tableLayoutPanel1.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
+            this.tableLayoutPanel1.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
             // 
             // lblGeneradoEl
             // 
@@ -209,15 +212,17 @@
             this.tlpSede.BackColor = System.Drawing.Color.Transparent;
             this.tlpSede.ColumnCount = 1;
             this.tlpSede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSede.Controls.Add(this.lblTipoReporte, 0, 1);
             this.tlpSede.Controls.Add(this.lblSede, 0, 0);
-            this.tlpSede.Location = new System.Drawing.Point(489, 5);
+            this.tlpSede.Location = new System.Drawing.Point(489, 71);
             this.tlpSede.Margin = new System.Windows.Forms.Padding(4);
             this.tlpSede.Name = "tlpSede";
             this.tlpSede.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tlpSede.RowCount = 1;
+            this.tlpSede.RowCount = 2;
             this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tlpSede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpSede.Size = new System.Drawing.Size(207, 30);
+            this.tlpSede.Size = new System.Drawing.Size(207, 113);
             this.tlpSede.TabIndex = 21;
             this.tagsExtender1.SetTag2(this.tlpSede, null);
             this.tagsExtender1.SetTag3(this.tlpSede, null);
@@ -233,7 +238,7 @@
             this.lblSede.BackColor = System.Drawing.Color.Transparent;
             this.lblSede.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSede.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lblSede.Location = new System.Drawing.Point(143, 1);
+            this.lblSede.Location = new System.Drawing.Point(143, 14);
             this.lblSede.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSede.Name = "lblSede";
             this.lblSede.Size = new System.Drawing.Size(60, 27);
@@ -264,7 +269,7 @@
             this.tloResumen.Controls.Add(this.lblMontoIngresos, 2, 1);
             this.tloResumen.Controls.Add(this.lblMontoEgresos, 2, 2);
             this.tloResumen.Controls.Add(this.lblMontoTotal, 2, 3);
-            this.tloResumen.Location = new System.Drawing.Point(176, 71);
+            this.tloResumen.Location = new System.Drawing.Point(21, 71);
             this.tloResumen.Margin = new System.Windows.Forms.Padding(4);
             this.tloResumen.Name = "tloResumen";
             this.tloResumen.RowCount = 4;
@@ -520,6 +525,28 @@
             this.lblPrincipal.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
             this.lblPrincipal.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
             // 
+            // lblTipoReporte
+            // 
+            this.lblTipoReporte.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTipoReporte.AutoSize = true;
+            this.lblTipoReporte.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipoReporte.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.lblTipoReporte.Location = new System.Drawing.Point(67, 70);
+            this.lblTipoReporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoReporte.Name = "lblTipoReporte";
+            this.lblTipoReporte.Size = new System.Drawing.Size(136, 27);
+            this.lblTipoReporte.TabIndex = 20;
+            this.tagsExtender1.SetTag2(this.lblTipoReporte, null);
+            this.tagsExtender1.SetTag3(this.lblTipoReporte, null);
+            this.tagsExtender1.SetTagFontName(this.lblTipoReporte, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lblTipoReporte, 13F);
+            this.tagsExtender1.SetTagFontStyle(this.lblTipoReporte, System.Drawing.FontStyle.Bold);
+            this.lblTipoReporte.Text = "TipoReporte";
+            this.lblTipoReporte.Click += new System.EventHandler(this.itemLista_Click);
+            this.lblTipoReporte.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
+            this.lblTipoReporte.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
+            // 
             // itemListaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -569,5 +596,6 @@
         private System.Windows.Forms.Label lblSede;
         private System.Windows.Forms.TableLayoutPanel tlpSede;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblTipoReporte;
     }
 }

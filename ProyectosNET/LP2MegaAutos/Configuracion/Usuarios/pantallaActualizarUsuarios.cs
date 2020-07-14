@@ -62,6 +62,7 @@ namespace LP2MegaAutos
                 _usuarios = daoUsuario.listarUsuarios().ToList();
             else
                 _usuarios = daoUsuario.listarUsuariosInactivos().ToList();
+            if (_usuarios == null) return;
             btnAZ_Click(btnAZ,new EventArgs());
         }
 

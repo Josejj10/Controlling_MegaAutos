@@ -18,6 +18,7 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/buscarPorIdRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/buscarPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.buscarPorIdResponse buscarPorId(LP2MegaAutos.ServicioExcel.buscarPorIdRequest request);
         
@@ -27,6 +28,7 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request);
         
@@ -36,6 +38,7 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse leerArchivoSalida(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request);
         
@@ -45,6 +48,7 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse insertarArchivoSalida(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
         
@@ -54,6 +58,7 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse leerArchivoEntrada(LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest request);
         
@@ -63,6 +68,7 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/procesarRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/procesarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.procesarResponse procesar(LP2MegaAutos.ServicioExcel.procesarRequest request);
         
@@ -72,6 +78,7 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/generarReporteRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/generarReporteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.generarReporteResponse generarReporte(LP2MegaAutos.ServicioExcel.generarReporteRequest request);
         
@@ -284,6 +291,45 @@ namespace LP2MegaAutos.ServicioExcel {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractList))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(arrayList))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public abstract partial class abstractCollection : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(arrayList))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public abstract partial class abstractList : abstractCollection {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public partial class arrayList : abstractList {
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -318,6 +364,10 @@ namespace LP2MegaAutos.ServicioExcel {
         private double ingresosField;
         
         private bool ingresosFieldSpecified;
+        
+        private reporteEntry[] mapaDetalleField;
+        
+        private reporteEntry1[] mapaDetalleMontosField;
         
         private sede sedeField;
         
@@ -494,7 +544,33 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("entry", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
+        public reporteEntry[] mapaDetalle {
+            get {
+                return this.mapaDetalleField;
+            }
+            set {
+                this.mapaDetalleField = value;
+                this.RaisePropertyChanged("mapaDetalle");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("entry", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
+        public reporteEntry1[] mapaDetalleMontos {
+            get {
+                return this.mapaDetalleMontosField;
+            }
+            set {
+                this.mapaDetalleMontosField = value;
+                this.RaisePropertyChanged("mapaDetalleMontos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public sede sede {
             get {
                 return this.sedeField;
@@ -506,7 +582,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string tipoReporte {
             get {
                 return this.tipoReporteField;
@@ -518,7 +594,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string titulo {
             get {
                 return this.tituloField;
@@ -526,6 +602,98 @@ namespace LP2MegaAutos.ServicioExcel {
             set {
                 this.tituloField = value;
                 this.RaisePropertyChanged("titulo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://services.megaautos.com.pe/")]
+    public partial class reporteEntry : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string keyField;
+        
+        private arrayList valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+                this.RaisePropertyChanged("key");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public arrayList value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("value");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://services.megaautos.com.pe/")]
+    public partial class reporteEntry1 : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string keyField;
+        
+        private arrayList valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+                this.RaisePropertyChanged("key");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public arrayList value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("value");
             }
         }
         

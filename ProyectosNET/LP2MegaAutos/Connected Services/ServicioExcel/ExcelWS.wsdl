@@ -5,23 +5,29 @@
       <xsd:import schemaLocation="http://72.44.47.118:8080/LP2MegaAutosServices/ExcelWS?xsd=1" namespace="http://services.megaautos.com.pe/" />
     </xsd:schema>
   </types>
+  <message name="buscarPorId">
+    <part name="parameters" element="tns:buscarPorId" />
+  </message>
+  <message name="buscarPorIdResponse">
+    <part name="parameters" element="tns:buscarPorIdResponse" />
+  </message>
   <message name="insertarArchivoEntrada">
     <part name="parameters" element="tns:insertarArchivoEntrada" />
   </message>
   <message name="insertarArchivoEntradaResponse">
     <part name="parameters" element="tns:insertarArchivoEntradaResponse" />
   </message>
-  <message name="insertarArchivoSalida">
-    <part name="parameters" element="tns:insertarArchivoSalida" />
-  </message>
-  <message name="insertarArchivoSalidaResponse">
-    <part name="parameters" element="tns:insertarArchivoSalidaResponse" />
-  </message>
   <message name="leerArchivoSalida">
     <part name="parameters" element="tns:leerArchivoSalida" />
   </message>
   <message name="leerArchivoSalidaResponse">
     <part name="parameters" element="tns:leerArchivoSalidaResponse" />
+  </message>
+  <message name="insertarArchivoSalida">
+    <part name="parameters" element="tns:insertarArchivoSalida" />
+  </message>
+  <message name="insertarArchivoSalidaResponse">
+    <part name="parameters" element="tns:insertarArchivoSalidaResponse" />
   </message>
   <message name="leerArchivoEntrada">
     <part name="parameters" element="tns:leerArchivoEntrada" />
@@ -35,18 +41,28 @@
   <message name="procesarResponse">
     <part name="parameters" element="tns:procesarResponse" />
   </message>
+  <message name="generarReporte">
+    <part name="parameters" element="tns:generarReporte" />
+  </message>
+  <message name="generarReporteResponse">
+    <part name="parameters" element="tns:generarReporteResponse" />
+  </message>
   <portType name="ExcelWS">
+    <operation name="buscarPorId">
+      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/buscarPorIdRequest" message="tns:buscarPorId" />
+      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/buscarPorIdResponse" message="tns:buscarPorIdResponse" />
+    </operation>
     <operation name="insertarArchivoEntrada">
       <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaRequest" message="tns:insertarArchivoEntrada" />
       <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaResponse" message="tns:insertarArchivoEntradaResponse" />
     </operation>
-    <operation name="insertarArchivoSalida">
-      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest" message="tns:insertarArchivoSalida" />
-      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse" message="tns:insertarArchivoSalidaResponse" />
-    </operation>
     <operation name="leerArchivoSalida">
       <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest" message="tns:leerArchivoSalida" />
       <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse" message="tns:leerArchivoSalidaResponse" />
+    </operation>
+    <operation name="insertarArchivoSalida">
+      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest" message="tns:insertarArchivoSalida" />
+      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse" message="tns:insertarArchivoSalidaResponse" />
     </operation>
     <operation name="leerArchivoEntrada">
       <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaRequest" message="tns:leerArchivoEntrada" />
@@ -56,9 +72,22 @@
       <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/procesarRequest" message="tns:procesar" />
       <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/procesarResponse" message="tns:procesarResponse" />
     </operation>
+    <operation name="generarReporte">
+      <input wsam:Action="http://services.megaautos.com.pe/ExcelWS/generarReporteRequest" message="tns:generarReporte" />
+      <output wsam:Action="http://services.megaautos.com.pe/ExcelWS/generarReporteResponse" message="tns:generarReporteResponse" />
+    </operation>
   </portType>
   <binding name="ExcelWSPortBinding" type="tns:ExcelWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="buscarPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarArchivoEntrada">
       <soap:operation soapAction="" />
       <input>
@@ -68,7 +97,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarArchivoSalida">
+    <operation name="leerArchivoSalida">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +106,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="leerArchivoSalida">
+    <operation name="insertarArchivoSalida">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,6 +125,15 @@
       </output>
     </operation>
     <operation name="procesar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReporte">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="buscarPorId" type="tns:buscarPorId" />
+  <xs:element name="buscarPorIdResponse" type="tns:buscarPorIdResponse" />
+  <xs:element name="generarReporte" type="tns:generarReporte" />
+  <xs:element name="generarReporteResponse" type="tns:generarReporteResponse" />
   <xs:element name="insertarArchivoEntrada" type="tns:insertarArchivoEntrada" />
   <xs:element name="insertarArchivoEntradaResponse" type="tns:insertarArchivoEntradaResponse" />
   <xs:element name="insertarArchivoSalida" type="tns:insertarArchivoSalida" />
@@ -21,27 +25,74 @@
   <xs:complexType name="excel">
     <xs:sequence>
       <xs:element minOccurs="0" name="archivo" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaIni" type="xs:dateTime" />
       <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="sede" type="tns:sede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="procesar">
     <xs:sequence>
       <xs:element minOccurs="0" name="arg0" type="tns:excel" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element minOccurs="0" name="arg3" type="xs:string" />
+      <xs:element name="arg4" type="xs:int" />
+      <xs:element minOccurs="0" name="arg5" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="arg6" type="xs:dateTime" />
+      <xs:element name="arg7" type="xs:int" />
+      <xs:element name="arg8" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="procesarResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:excel" />
+      <xs:element minOccurs="0" name="return" type="tns:reporte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="egresos" type="xs:double" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idExcelEntrada" type="xs:int" />
+      <xs:element name="idExcelSalida" type="xs:int" />
+      <xs:element name="idReporte" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="ingresos" type="xs:double" />
+      <xs:element minOccurs="0" name="sede" type="tns:sede" />
+      <xs:element minOccurs="0" name="tipoReporte" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarArchivoEntrada">
     <xs:sequence>
       <xs:element minOccurs="0" name="archivo" type="tns:excel" />
+      <xs:element name="arg1" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarArchivoEntradaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarPorId">
+    <xs:sequence>
+      <xs:element name="idExcel" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:excel" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="leerArchivoEntrada">
@@ -50,6 +101,20 @@
   <xs:complexType name="leerArchivoEntradaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:excel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element name="idSede" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarArchivoSalida">

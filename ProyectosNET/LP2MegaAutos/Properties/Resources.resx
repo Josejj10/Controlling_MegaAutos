@@ -133,11 +133,17 @@
   <data name="toggle_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\equis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fontLato_Semibold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Semibold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Estadisticas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Estadisticas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boton_minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton_minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toggle_modo_nocturno_activado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle_modo_nocturno_activado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,29 +169,20 @@
   <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fontLato_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="fontLato_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Medium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="carroLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carroLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Informacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu\Informacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="boton_cerrar_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boton_cerrar_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fontLato_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fonts\Lato-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Vehiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu\car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fontMontserrat_SemiBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-SemiBold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Vehiculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu\car.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ReporteDetalle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu\ReporteDetalle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fontMontserrat_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Bold.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -193,17 +190,20 @@
   <data name="ReporteResumen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\ReporteResumen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Reporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu\Reporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boton_unsee_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton_unsee_password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fontLato_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Lato-Regular.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Ajustes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu\Sort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boton_see_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton_see_password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,14 +214,11 @@
   <data name="Sede" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Sede.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sort" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu\Sort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fontLato_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fonts\Lato-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="boton_minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boton_minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tshadowright" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tshadowright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fontLato_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fonts\Lato-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BaseDatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\BaseDatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,11 +232,20 @@
   <data name="fontMontserrat_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Medium.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Reporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu\Reporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tshadowdown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tshadowdown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fontMontserrat_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fonts\Montserrat-Regular.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tshadowright" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tshadowright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,19 +259,16 @@
   <data name="Driver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu\Driver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ReporteDetalle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu\ReporteDetalle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Informacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu\Informacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boton_cerrar_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boton_cerrar_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tshadowtopright" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tshadowtopright.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton_unsee_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\boton_unsee_password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\equis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

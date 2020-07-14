@@ -763,6 +763,9 @@
     <None Include="Connected Services\ServicioServicio\ServicioWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.activarInactivoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioUsuario\LP2MegaAutos.ServicioUsuario.actualizarUsuarioPasswordResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -927,6 +930,7 @@
     <None Include="Resources\toggle_modo_nocturno_activado.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Buscar.png" />
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\equis.png" />
     <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />

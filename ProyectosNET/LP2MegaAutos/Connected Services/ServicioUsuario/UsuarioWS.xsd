@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.megaautos.com.pe/" targetNamespace="http://services.megaautos.com.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="activarInactivo" type="tns:activarInactivo" />
+  <xs:element name="activarInactivoResponse" type="tns:activarInactivoResponse" />
   <xs:element name="actualizarUsuario" type="tns:actualizarUsuario" />
   <xs:element name="actualizarUsuarioPassword" type="tns:actualizarUsuarioPassword" />
   <xs:element name="actualizarUsuarioPasswordResponse" type="tns:actualizarUsuarioPasswordResponse" />
@@ -29,6 +31,7 @@
   </xs:complexType>
   <xs:complexType name="usuario">
     <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="fechaCreado" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaValidezToken" type="xs:dateTime" />
@@ -56,6 +59,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activarInactivo">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="activarInactivoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

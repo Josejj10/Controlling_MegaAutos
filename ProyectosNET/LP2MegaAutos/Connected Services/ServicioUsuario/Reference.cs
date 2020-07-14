@@ -16,6 +16,15 @@ namespace LP2MegaAutos.ServicioUsuario {
     public interface UsuarioWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/activarInactivoRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/activarInactivoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioUsuario.activarInactivoResponse activarInactivo(LP2MegaAutos.ServicioUsuario.activarInactivoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/activarInactivoRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/activarInactivoResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.activarInactivoResponse> activarInactivoAsync(LP2MegaAutos.ServicioUsuario.activarInactivoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/actualizarUsuarioPasswordRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/actualizarUsuarioPasswordResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -70,15 +79,6 @@ namespace LP2MegaAutos.ServicioUsuario {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.listarUsuariosResponse> listarUsuariosAsync(LP2MegaAutos.ServicioUsuario.listarUsuariosRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -86,6 +86,51 @@ namespace LP2MegaAutos.ServicioUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/insertarUsuarioResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse> insertarUsuarioAsync(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.megaautos.com.pe/UsuarioWS/eliminarUsuarioResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="activarInactivo", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class activarInactivoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public activarInactivoRequest() {
+        }
+        
+        public activarInactivoRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="activarInactivoResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class activarInactivoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public activarInactivoResponse() {
+        }
+        
+        public activarInactivoResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -95,6 +140,8 @@ namespace LP2MegaAutos.ServicioUsuario {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
     public partial class usuario : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int activoField;
         
         private string correoField;
         
@@ -120,6 +167,18 @@ namespace LP2MegaAutos.ServicioUsuario {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string correo {
             get {
                 return this.correoField;
@@ -131,7 +190,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public System.DateTime fechaCreado {
             get {
                 return this.fechaCreadoField;
@@ -155,7 +214,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public System.DateTime fechaValidezToken {
             get {
                 return this.fechaValidezTokenField;
@@ -179,7 +238,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int id {
             get {
                 return this.idField;
@@ -191,7 +250,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -203,7 +262,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public string password {
             get {
                 return this.passwordField;
@@ -215,7 +274,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("permisos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute("permisos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
         public System.Nullable<ePermisos>[] permisos {
             get {
                 return this.permisosField;
@@ -227,7 +286,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string tipoUsuario {
             get {
                 return this.tipoUsuarioField;
@@ -239,7 +298,7 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string token {
             get {
                 return this.tokenField;
@@ -505,42 +564,6 @@ namespace LP2MegaAutos.ServicioUsuario {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuario", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public eliminarUsuarioRequest() {
-        }
-        
-        public eliminarUsuarioRequest(int idUsuario) {
-            this.idUsuario = idUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuarioResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class eliminarUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarUsuarioResponse() {
-        }
-        
-        public eliminarUsuarioResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class insertarUsuarioRequest {
         
@@ -574,6 +597,42 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuario", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public eliminarUsuarioRequest() {
+        }
+        
+        public eliminarUsuarioRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuarioResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class eliminarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarUsuarioResponse() {
+        }
+        
+        public eliminarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : LP2MegaAutos.ServicioUsuario.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -599,6 +658,29 @@ namespace LP2MegaAutos.ServicioUsuario {
         
         public UsuarioWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioUsuario.activarInactivoResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.activarInactivo(LP2MegaAutos.ServicioUsuario.activarInactivoRequest request) {
+            return base.Channel.activarInactivo(request);
+        }
+        
+        public int activarInactivo(int idUsuario) {
+            LP2MegaAutos.ServicioUsuario.activarInactivoRequest inValue = new LP2MegaAutos.ServicioUsuario.activarInactivoRequest();
+            inValue.idUsuario = idUsuario;
+            LP2MegaAutos.ServicioUsuario.activarInactivoResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).activarInactivo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.activarInactivoResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.activarInactivoAsync(LP2MegaAutos.ServicioUsuario.activarInactivoRequest request) {
+            return base.Channel.activarInactivoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.activarInactivoResponse> activarInactivoAsync(int idUsuario) {
+            LP2MegaAutos.ServicioUsuario.activarInactivoRequest inValue = new LP2MegaAutos.ServicioUsuario.activarInactivoRequest();
+            inValue.idUsuario = idUsuario;
+            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).activarInactivoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -738,29 +820,6 @@ namespace LP2MegaAutos.ServicioUsuario {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
-            return base.Channel.eliminarUsuario(request);
-        }
-        
-        public int eliminarUsuario(int idUsuario) {
-            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
-            inValue.idUsuario = idUsuario;
-            LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
-            return base.Channel.eliminarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(int idUsuario) {
-            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
-            inValue.idUsuario = idUsuario;
-            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2MegaAutos.ServicioUsuario.insertarUsuarioResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.insertarUsuario(LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest request) {
             return base.Channel.insertarUsuario(request);
         }
@@ -781,6 +840,29 @@ namespace LP2MegaAutos.ServicioUsuario {
             LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.insertarUsuarioRequest();
             inValue.objUsuario = objUsuario;
             return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).insertarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuario(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
+            return base.Channel.eliminarUsuario(request);
+        }
+        
+        public int eliminarUsuario(int idUsuario) {
+            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse retVal = ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> LP2MegaAutos.ServicioUsuario.UsuarioWS.eliminarUsuarioAsync(LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest request) {
+            return base.Channel.eliminarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioUsuario.eliminarUsuarioResponse> eliminarUsuarioAsync(int idUsuario) {
+            LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest inValue = new LP2MegaAutos.ServicioUsuario.eliminarUsuarioRequest();
+            inValue.idUsuario = idUsuario;
+            return ((LP2MegaAutos.ServicioUsuario.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
         }
     }
 }

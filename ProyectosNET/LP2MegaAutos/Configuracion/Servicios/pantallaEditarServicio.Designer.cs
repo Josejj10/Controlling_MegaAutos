@@ -115,7 +115,7 @@
             this.txt_codServ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.txt_codServ.Location = new System.Drawing.Point(7, 18);
             this.txt_codServ.Name = "txt_codServ";
-            this.txt_codServ.Size = new System.Drawing.Size(284, 29);
+            this.txt_codServ.Size = new System.Drawing.Size(284, 23);
             this.txt_codServ.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_codServ, null);
             this.tagsExtender1.SetTag3(this.txt_codServ, null);
@@ -130,7 +130,7 @@
             this.lbl_codServ.Location = new System.Drawing.Point(4, 2);
             this.lbl_codServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_codServ.Name = "lbl_codServ";
-            this.lbl_codServ.Size = new System.Drawing.Size(155, 21);
+            this.lbl_codServ.Size = new System.Drawing.Size(118, 16);
             this.lbl_codServ.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_codServ, null);
             this.tagsExtender1.SetTag3(this.lbl_codServ, null);
@@ -219,7 +219,7 @@
             this.lbl_desc.Location = new System.Drawing.Point(4, 2);
             this.lbl_desc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desc.Name = "lbl_desc";
-            this.lbl_desc.Size = new System.Drawing.Size(106, 21);
+            this.lbl_desc.Size = new System.Drawing.Size(81, 16);
             this.lbl_desc.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_desc, null);
             this.tagsExtender1.SetTag3(this.lbl_desc, null);
@@ -258,7 +258,7 @@
             "REPUESTOS"});
             this.cboTipoServicio.Location = new System.Drawing.Point(5, 16);
             this.cboTipoServicio.Name = "cboTipoServicio";
-            this.cboTipoServicio.Size = new System.Drawing.Size(286, 29);
+            this.cboTipoServicio.Size = new System.Drawing.Size(286, 24);
             this.cboTipoServicio.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.cboTipoServicio, null);
             this.tagsExtender1.SetTag3(this.cboTipoServicio, null);
@@ -299,7 +299,7 @@
             this.lbl_tipoServicio.Location = new System.Drawing.Point(4, 2);
             this.lbl_tipoServicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_tipoServicio.Name = "lbl_tipoServicio";
-            this.lbl_tipoServicio.Size = new System.Drawing.Size(135, 21);
+            this.lbl_tipoServicio.Size = new System.Drawing.Size(103, 16);
             this.lbl_tipoServicio.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_tipoServicio, null);
             this.tagsExtender1.SetTag3(this.lbl_tipoServicio, null);
@@ -343,7 +343,7 @@
             this.txt_NombreServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
             this.txt_NombreServicio.Location = new System.Drawing.Point(27, 42);
             this.txt_NombreServicio.Name = "txt_NombreServicio";
-            this.txt_NombreServicio.Size = new System.Drawing.Size(441, 44);
+            this.txt_NombreServicio.Size = new System.Drawing.Size(441, 35);
             this.txt_NombreServicio.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.txt_NombreServicio, null);
             this.tagsExtender1.SetTag3(this.txt_NombreServicio, null);
@@ -499,8 +499,8 @@
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
             this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
+            this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_guardar.Location = new System.Drawing.Point(115, 381);
@@ -604,7 +604,7 @@
             // 
             // pantallaEditarServicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 431);
             this.ControlBox = false;

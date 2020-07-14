@@ -1,14 +1,11 @@
-﻿using LP2MegaAutos.Framework.UserControls;
+﻿using LP2MegaAutos.Configuracion.Empresa;
+using LP2MegaAutos.Framework.UserControls;
 using LP2MegaAutos.Informacion.Vehiculos;
 using LP2MegaAutos.Properties;
 using LP2MegaAutos.ServicioUsuario;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LP2MegaAutos.VentanasPrincipales
@@ -19,13 +16,13 @@ namespace LP2MegaAutos.VentanasPrincipales
         // Y también el numero de items de cada menu
         public static void recibirParametros(List<ePermisos?> permisos, ref int menu, ref int nItemsInfo, ref int nItemsConfig)
         {
-
             foreach (ePermisos permiso in permisos)
             {
                 switch (permiso)
                 {
                     case ePermisos.All:
-                        nItemsInfo = 4;
+                        //nItemsInfo = 4;
+                        nItemsInfo = 3; // No se usa drivers
                         nItemsConfig = 4;
                         menu |= 7;
                         break;
@@ -45,8 +42,8 @@ namespace LP2MegaAutos.VentanasPrincipales
                         nItemsInfo++;
                         break;
                     case ePermisos.Drivers:
-                        menu |= 4;
-                        nItemsInfo++;
+                        //menu |= 4;
+                        //nItemsInfo++;
                         break;
                     case ePermisos.Sedes:
                         menu |= 2;
@@ -66,7 +63,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                         break;
                 }
                 // Si ya tiene todos los permisos (config, info, bd), entonces salir
-                if (nItemsConfig == 4 && nItemsInfo == 4 && (menu & 1) == 1) return;
+                if (nItemsConfig == 4 && nItemsInfo == 3 && (menu & 1) == 1) return;
             }
         }
 
@@ -82,7 +79,7 @@ namespace LP2MegaAutos.VentanasPrincipales
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarClientes>(sender, e, btn, img, panelMenu, cont); };
                 case ePermisos.Drivers:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarDrivers>(sender, e, btn, img, panelMenu, cont); };
-                case ePermisos.ActualizarBD: 
+                case ePermisos.ActualizarBD:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarBD>(sender, e, btn, img, panelMenu, cont); };
                 case ePermisos.Sedes:
                     return (sender, e) => { pmsBtn_Click<pantallaActualizarSedes>(sender, e, btn, img, panelMenu, cont); };

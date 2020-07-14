@@ -438,7 +438,6 @@
     <Compile Include="VentanasPrincipales\pantallaEliminar.Designer.cs">
       <DependentUpon>pantallaEliminar.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentanasPrincipales\Usuario.cs" />
     <EmbeddedResource Include="Configuracion\Empresa\frmEditarNombEmpresa.resx">
       <DependentUpon>frmEditarNombEmpresa.cs</DependentUpon>
     </EmbeddedResource>

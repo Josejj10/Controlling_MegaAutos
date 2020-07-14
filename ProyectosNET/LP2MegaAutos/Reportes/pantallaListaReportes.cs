@@ -141,9 +141,5 @@ namespace LP2MegaAutos
             pantallaListasHelper.buscarLeave(txt_Buscar);
         }
         #endregion Botones Filtro
-
-
-        //TODO CAMBIAR BOTONES
-        // TODO COLORES 250,220,123
     }
 }

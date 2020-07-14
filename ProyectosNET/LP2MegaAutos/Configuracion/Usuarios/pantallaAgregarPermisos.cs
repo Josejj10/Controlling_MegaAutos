@@ -69,7 +69,7 @@ namespace LP2MegaAutos
             bool tieneAll = _usuario.permisos.Contains(ePermisos.All);
             foreach(ePermisos e in Enum.GetValues(typeof(ePermisos)))
             {
-                if (e == ePermisos.All) continue; 
+                if (e == ePermisos.All || e == ePermisos.Drivers) continue; 
                 itemListaCuadrado il = crearitemListaPermiso(e.ToString(), e);
                 il.Seleccionado = false;
                 if (tieneAll || _usuario.permisos.Contains(e)) il.Seleccionado = true;

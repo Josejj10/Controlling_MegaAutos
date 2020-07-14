@@ -26,8 +26,10 @@ namespace LP2MegaAutos
     {
 
         private static usuario _usuario;
-        ServicioEmpresa.EmpresaWSClient daoEmpresa;
-        empresa _empresa;
+        private ServicioEmpresa.EmpresaWSClient daoEmpresa;
+        private static empresa _empresa;
+
+        public static empresa Empresa { get { return _empresa; } }
 
         #region Getters y Setters
         public static usuario Usuario { get => _usuario; set => _usuario = value; }
@@ -145,14 +147,9 @@ namespace LP2MegaAutos
                 //return;
             }
             uPer= _usuario.permisos.ToList();
-            uPer.Add(ePermisos.All);
-            uPer.Add(ePermisos.Sedes);
-            _usuario.permisos = uPer.ToArray();
-
-            foreach (ePermisos p in _usuario.permisos)
-            {
-                Console.WriteLine(p.ToString());
-            }   
+            //uPer.Add(ePermisos.All);
+            //uPer.Add(ePermisos.Sedes);
+            _usuario.permisos = uPer.ToArray();   
         }
 
         private void inicializarPms()
@@ -198,7 +195,6 @@ namespace LP2MegaAutos
             ((pantallaInicio)contenedorPantalla1.PInicial).ActualizarEmpresaClick += btnMenuActualizarEmpresa_Click;
             ((pantallaInicio)contenedorPantalla1.PInicial).VerUltimoReporteClick+= btnMenuUltimoReporte_Click;
             ((pantallaInicio)contenedorPantalla1.PInicial).perfilUsuarioClick += btnMenuUsuario_Click;
-            // TODO Cambios
             ((pantallaInicio)contenedorPantalla1.PInicial).ListaReportesClick += (sender, e) => pmsReportes_ListaReportesClick(sender, e);
             ((pantallaInicio)contenedorPantalla1.PInicial).ReporteAreaTrabajoClick += (sender, e) => pmsReportes_ListaReportesClick(sender, e,"AT");
             ((pantallaInicio)contenedorPantalla1.PInicial).ReporteClienteClick += (sender, e) => pmsReportes_ListaReportesClick(sender, e,"Cliente");
@@ -560,8 +556,6 @@ namespace LP2MegaAutos
         private void btnMenuCerrarSesion_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            // TODO Cambiar valor dark mode pq login no sale bien
-
         }
         private void btnMenuUsuario_Click(object sender, EventArgs e)
         {
@@ -595,7 +589,6 @@ namespace LP2MegaAutos
         private void pmsReportes_ReporteSiniestroClick(object sender, EventArgs e)
         {
             pmsReportes_ListaReportesClick(sender, e,"Siniestro");
-            // TODO Hacer en enum de los botones seleccionados y poner esto
         }
         private void pmsUltimoReporte_EstadisticasClick(object sender, EventArgs e)
         {
@@ -655,14 +648,10 @@ namespace LP2MegaAutos
         private void btnAtras_Click(object sender, EventArgs e)
         {
             contenedorPantalla1.volverUltimaPantalla();
-            // TODO volver al estado del boton anterior
-            // Idea llamar al evento 
         }
         private void btnAdelante_Click(object sender, EventArgs e)
         {
             contenedorPantalla1.adelantarPantalla();
-            // TODO volver al estado del boton siguiente
-            // Idea llamar al evento 
         }
 
         private void btnAdelante_MouseDown(object sender, MouseEventArgs e)

@@ -27,14 +27,36 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             _usuario = u;
+            quitarPermisoDriver();
             if (_usuario.permisos.Length == 0)
                 sinPermisos();
                
             lblBienvenido.Text += OtrosHelper.tipoOracion(_usuario.nombre);
         }
 
+        private void quitarPermisoDriver()
+        {
+            List<ePermisos?> permisos = new List<ePermisos?>(_usuario.permisos);
+            // Quitar permiso de Drivers
+            if (permisos.Contains(ePermisos.All))
+            {
+                foreach (ePermisos e in _usuario.permisos)
+                    permisos.Remove(e);
+                foreach (ePermisos e in Enum.GetValues(typeof(ePermisos)))
+                {
+                    if (e == ePermisos.All || e == ePermisos.Drivers) continue;
+                    permisos.Add(e);
+                }
+            }
+
+            if (permisos.Contains(ePermisos.Drivers))
+                permisos.Remove(ePermisos.Drivers);
+
+            _usuario.permisos = permisos.ToArray();
+        }
+
         #region Dynamic
-        
+
         private void sinPermisos()
         {
             pnlInformacion.Visible = pnlAbajoInformacion.Visible =
@@ -62,8 +84,11 @@ namespace LP2MegaAutos
             int botones = 0;
             int nItemsInfo = 0;
             int nItemsConfig = 0;
+            // Esconder paneles al comienzo
+            this.pnlInformacion.Visible = this.pnlAbajoInformacion.Visible = false;
+            this.pnlConfiguracion.Visible = this.pnlAbajoConfiguracion.Visible = false;
+
             BotonesDinamicosHelper.recibirParametros(_usuario.permisos.ToList<ePermisos?>(), ref botones, ref nItemsInfo, ref nItemsConfig);
-            // TODO
             if ((botones & 4) == 4)
             {
                 // Hacer Visible el panel de informacion
@@ -86,6 +111,8 @@ namespace LP2MegaAutos
                 // Hacer Visible el Label de Actualizar BD
                 this.lblActualizarEmpresa.Visible = true;
             }
+
+
 
         }
 
@@ -154,8 +181,6 @@ namespace LP2MegaAutos
                 // Crear el itemMenuStrip correspondiente con xLoc, yLoc, nombre e Imagen
                 itemMenuStrip ims = crearItemMenuStrip(xLoc, yLoc, nombres[0], imgs[0], txts[0]);
 
-                // TODO Suscribir el itemMenuStrip al click delegandolo al frmPrincipal
-                // ims.click += itemStrip_Click;
                 ims.click += new itemMenuStrip.ButtonClickEventHandler(
                     BotonesDinamicosHelper.asignarBoton(per[0], btnMenu, imgs[0],
                     panelMenu, cnt));

@@ -40,7 +40,7 @@ namespace LP2MegaAutos
 
                 if (login.ShowDialog() == DialogResult.OK)
                 {
-                    // TODO
+                    // TODO Multithread para verificar los permisos
                     // usuario _usuario = login.Usuario;
                     // Sacar un hilo donde esta verificando 
                     // los permisos del usuario y el hilo quitaria la sesion

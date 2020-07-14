@@ -138,7 +138,7 @@
             this.btnOtro.TabIndex = 8;
             this.tags.SetTag2(this.btnOtro, null);
             this.tags.SetTag3(this.btnOtro, null);
-            this.tags.SetTagFontName(this.btnOtro, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnOtro, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.btnOtro, 10F);
             this.tags.SetTagFontStyle(this.btnOtro, System.Drawing.FontStyle.Regular);
             this.btnOtro.Text = "Otro";
@@ -189,7 +189,7 @@
             this.btnAnual.TabIndex = 7;
             this.tags.SetTag2(this.btnAnual, null);
             this.tags.SetTag3(this.btnAnual, null);
-            this.tags.SetTagFontName(this.btnAnual, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnAnual, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.btnAnual, 10F);
             this.tags.SetTagFontStyle(this.btnAnual, System.Drawing.FontStyle.Regular);
             this.btnAnual.Text = "Anual";
@@ -240,7 +240,7 @@
             this.btnMensual.TabIndex = 6;
             this.tags.SetTag2(this.btnMensual, null);
             this.tags.SetTag3(this.btnMensual, null);
-            this.tags.SetTagFontName(this.btnMensual, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnMensual, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.btnMensual, 10F);
             this.tags.SetTagFontStyle(this.btnMensual, System.Drawing.FontStyle.Regular);
             this.btnMensual.Text = "Mensual";
@@ -291,7 +291,7 @@
             this.btnDiario.TabIndex = 5;
             this.tags.SetTag2(this.btnDiario, null);
             this.tags.SetTag3(this.btnDiario, null);
-            this.tags.SetTagFontName(this.btnDiario, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnDiario, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.btnDiario, 10F);
             this.tags.SetTagFontStyle(this.btnDiario, System.Drawing.FontStyle.Regular);
             this.btnDiario.Text = "Diario";
@@ -344,7 +344,7 @@
             this.dtpInicio.TabIndex = 38;
             this.tags.SetTag2(this.dtpInicio, null);
             this.tags.SetTag3(this.dtpInicio, null);
-            this.tags.SetTagFontName(this.dtpInicio, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.dtpInicio, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.dtpInicio, 13F);
             this.tags.SetTagFontStyle(this.dtpInicio, System.Drawing.FontStyle.Regular);
             this.dtpInicio.Value = new System.DateTime(2020, 5, 27, 0, 0, 0, 0);
@@ -407,7 +407,7 @@
             this.btnPorSiniestro.TabIndex = 5;
             this.tags.SetTag2(this.btnPorSiniestro, null);
             this.tags.SetTag3(this.btnPorSiniestro, null);
-            this.tags.SetTagFontName(this.btnPorSiniestro, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnPorSiniestro, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.btnPorSiniestro, 10F);
             this.tags.SetTagFontStyle(this.btnPorSiniestro, System.Drawing.FontStyle.Regular);
             this.btnPorSiniestro.Text = "Tipo Siniestro";
@@ -458,7 +458,7 @@
             this.btnPorAT.TabIndex = 5;
             this.tags.SetTag2(this.btnPorAT, null);
             this.tags.SetTag3(this.btnPorAT, null);
-            this.tags.SetTagFontName(this.btnPorAT, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnPorAT, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.btnPorAT, 10F);
             this.tags.SetTagFontStyle(this.btnPorAT, System.Drawing.FontStyle.Regular);
             this.btnPorAT.Text = "A. Trabajo";
@@ -509,7 +509,7 @@
             this.btnPorCliente.TabIndex = 5;
             this.tags.SetTag2(this.btnPorCliente, null);
             this.tags.SetTag3(this.btnPorCliente, null);
-            this.tags.SetTagFontName(this.btnPorCliente, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnPorCliente, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.btnPorCliente, 10F);
             this.tags.SetTagFontStyle(this.btnPorCliente, System.Drawing.FontStyle.Regular);
             this.btnPorCliente.Text = "Cliente";
@@ -562,7 +562,7 @@
             this.dtpFechaFin.TabIndex = 38;
             this.tags.SetTag2(this.dtpFechaFin, null);
             this.tags.SetTag3(this.dtpFechaFin, null);
-            this.tags.SetTagFontName(this.dtpFechaFin, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.dtpFechaFin, fontsD.Montserrat);
             this.tags.SetTagFontSize(this.dtpFechaFin, 13F);
             this.tags.SetTagFontStyle(this.dtpFechaFin, System.Drawing.FontStyle.Regular);
             this.dtpFechaFin.Value = new System.DateTime(2020, 5, 27, 0, 0, 0, 0);
@@ -733,7 +733,7 @@
             this.btn_GenerarReporte.TabIndex = 0;
             this.tags.SetTag2(this.btn_GenerarReporte, null);
             this.tags.SetTag3(this.btn_GenerarReporte, null);
-            this.tags.SetTagFontName(this.btn_GenerarReporte, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btn_GenerarReporte, fontsD.Lato);
             this.tags.SetTagFontSize(this.btn_GenerarReporte, 10F);
             this.tags.SetTagFontStyle(this.btn_GenerarReporte, System.Drawing.FontStyle.Regular);
             this.btn_GenerarReporte.Text = "Generar";
@@ -816,7 +816,7 @@
             this.btnCancelar.TabIndex = 0;
             this.tags.SetTag2(this.btnCancelar, null);
             this.tags.SetTag3(this.btnCancelar, null);
-            this.tags.SetTagFontName(this.btnCancelar, fontsD.Ninguno);
+            this.tags.SetTagFontName(this.btnCancelar, fontsD.Lato);
             this.tags.SetTagFontSize(this.btnCancelar, 10F);
             this.tags.SetTagFontStyle(this.btnCancelar, System.Drawing.FontStyle.Regular);
             this.btnCancelar.Text = "Cancelar";

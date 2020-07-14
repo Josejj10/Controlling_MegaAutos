@@ -231,7 +231,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Bold);
             this.btn_cancelar.Text = "Cancelar";
@@ -281,7 +281,7 @@
             this.btnAceptar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnAceptar, null);
             this.tagsExtender1.SetTag3(this.btnAceptar, null);
-            this.tagsExtender1.SetTagFontName(this.btnAceptar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnAceptar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnAceptar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btnAceptar, System.Drawing.FontStyle.Bold);
             this.btnAceptar.Text = "Aceptar";
@@ -374,7 +374,7 @@
             this.txtToken.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txtToken, null);
             this.tagsExtender1.SetTag3(this.txtToken, null);
-            this.tagsExtender1.SetTagFontName(this.txtToken, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.txtToken, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.txtToken, 14F);
             this.tagsExtender1.SetTagFontStyle(this.txtToken, System.Drawing.FontStyle.Bold);
             this.txtToken.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -391,7 +391,7 @@
             this.lblCorreo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lblCorreo, null);
             this.tagsExtender1.SetTag3(this.lblCorreo, null);
-            this.tagsExtender1.SetTagFontName(this.lblCorreo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lblCorreo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lblCorreo, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lblCorreo, System.Drawing.FontStyle.Bold);
             this.lblCorreo.Text = "Token";
@@ -468,7 +468,7 @@
             this.label1.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.label1, null);
             this.tagsExtender1.SetTag3(this.label1, null);
-            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.label1, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.label1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Bold);
             this.label1.Text = "Contraseña";
@@ -545,7 +545,7 @@
             this.label2.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.label2, null);
             this.tagsExtender1.SetTag3(this.label2, null);
-            this.tagsExtender1.SetTagFontName(this.label2, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.label2, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.label2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.label2, System.Drawing.FontStyle.Bold);
             this.label2.Text = "Nueva Contraseña";
@@ -594,7 +594,7 @@
             this.btnValidar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnValidar, null);
             this.tagsExtender1.SetTag3(this.btnValidar, null);
-            this.tagsExtender1.SetTagFontName(this.btnValidar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnValidar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnValidar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btnValidar, System.Drawing.FontStyle.Bold);
             this.btnValidar.Text = "Validar";
@@ -613,7 +613,7 @@
             this.lblTexto.TabIndex = 68;
             this.tagsExtender1.SetTag2(this.lblTexto, null);
             this.tagsExtender1.SetTag3(this.lblTexto, null);
-            this.tagsExtender1.SetTagFontName(this.lblTexto, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lblTexto, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lblTexto, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lblTexto, System.Drawing.FontStyle.Bold);
             this.lblTexto.Text = "Se le envió un correo desde megaautos@gmail.com con\r\nun token que expirará en 2 h" +
@@ -663,7 +663,7 @@
             this.btnReenviar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btnReenviar, null);
             this.tagsExtender1.SetTag3(this.btnReenviar, null);
-            this.tagsExtender1.SetTagFontName(this.btnReenviar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnReenviar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnReenviar, 15F);
             this.tagsExtender1.SetTagFontStyle(this.btnReenviar, System.Drawing.FontStyle.Bold);
             this.btnReenviar.Text = "Reenviar Correo";

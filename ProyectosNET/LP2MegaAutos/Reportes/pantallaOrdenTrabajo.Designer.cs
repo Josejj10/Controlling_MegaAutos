@@ -243,7 +243,7 @@
             this.lbl_Servicios.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_Servicios, null);
             this.tagsExtender1.SetTag3(this.lbl_Servicios, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Servicios, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_Servicios, fontsD.Montserrat);
             this.tagsExtender1.SetTagFontSize(this.lbl_Servicios, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Servicios, System.Drawing.FontStyle.Regular);
             this.lbl_Servicios.Text = "Servicios";
@@ -382,7 +382,7 @@
             this.lbl_TotalIngresos.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_TotalIngresos, null);
             this.tagsExtender1.SetTag3(this.lbl_TotalIngresos, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TotalIngresos, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_TotalIngresos, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_TotalIngresos, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_TotalIngresos, System.Drawing.FontStyle.Bold);
             this.lbl_TotalIngresos.Text = "Total Ingresos";
@@ -458,7 +458,7 @@
             this.lbl_Placa.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Placa, null);
             this.tagsExtender1.SetTag3(this.lbl_Placa, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Placa, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_Placa, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Placa, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Placa, System.Drawing.FontStyle.Bold);
             this.lbl_Placa.Text = "Placa";
@@ -534,7 +534,7 @@
             this.lbl_Cliente.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Cliente, null);
             this.tagsExtender1.SetTag3(this.lbl_Cliente, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Cliente, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_Cliente, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Cliente, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Cliente, System.Drawing.FontStyle.Bold);
             this.lbl_Cliente.Text = "Cliente";
@@ -610,7 +610,7 @@
             this.lbl_Sede.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Sede, null);
             this.tagsExtender1.SetTag3(this.lbl_Sede, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Sede, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_Sede, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Sede, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Sede, System.Drawing.FontStyle.Bold);
             this.lbl_Sede.Text = "Sede";
@@ -627,7 +627,7 @@
             this.lbl_OrdenTrabajo.TabIndex = 85;
             this.tagsExtender1.SetTag2(this.lbl_OrdenTrabajo, null);
             this.tagsExtender1.SetTag3(this.lbl_OrdenTrabajo, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_OrdenTrabajo, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_OrdenTrabajo, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_OrdenTrabajo, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_OrdenTrabajo, System.Drawing.FontStyle.Bold);
             this.lbl_OrdenTrabajo.Text = "OT - 05";
@@ -644,7 +644,7 @@
             this.lbl_Fecha.TabIndex = 86;
             this.tagsExtender1.SetTag2(this.lbl_Fecha, null);
             this.tagsExtender1.SetTag3(this.lbl_Fecha, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_Fecha, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_Fecha, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Fecha, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Fecha, System.Drawing.FontStyle.Bold);
             this.lbl_Fecha.Text = "26/05/20";
@@ -720,7 +720,7 @@
             this.lbl_TotalEgresos.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_TotalEgresos, null);
             this.tagsExtender1.SetTag3(this.lbl_TotalEgresos, null);
-            this.tagsExtender1.SetTagFontName(this.lbl_TotalEgresos, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lbl_TotalEgresos, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_TotalEgresos, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_TotalEgresos, System.Drawing.FontStyle.Bold);
             this.lbl_TotalEgresos.Text = "Total Egresos";

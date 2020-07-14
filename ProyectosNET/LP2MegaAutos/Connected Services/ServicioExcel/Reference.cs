@@ -16,6 +16,15 @@ namespace LP2MegaAutos.ServicioExcel {
     public interface ExcelWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/buscarPorIdRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/buscarPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioExcel.buscarPorIdResponse buscarPorId(LP2MegaAutos.ServicioExcel.buscarPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/buscarPorIdRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/buscarPorIdResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.buscarPorIdResponse> buscarPorIdAsync(LP2MegaAutos.ServicioExcel.buscarPorIdRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -25,15 +34,6 @@ namespace LP2MegaAutos.ServicioExcel {
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse> insertarArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse insertarArchivoSalida(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse> insertarArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,6 +41,15 @@ namespace LP2MegaAutos.ServicioExcel {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> leerArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse insertarArchivoSalida(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse> insertarArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaResponse")]
@@ -59,6 +68,15 @@ namespace LP2MegaAutos.ServicioExcel {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/procesarRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/procesarResponse")]
         System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.procesarResponse> procesarAsync(LP2MegaAutos.ServicioExcel.procesarRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/generarReporteRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/generarReporteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        LP2MegaAutos.ServicioExcel.generarReporteResponse generarReporte(LP2MegaAutos.ServicioExcel.generarReporteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/generarReporteRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/generarReporteResponse")]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.generarReporteResponse> generarReporteAsync(LP2MegaAutos.ServicioExcel.generarReporteRequest request);
     }
     
     /// <remarks/>
@@ -71,7 +89,17 @@ namespace LP2MegaAutos.ServicioExcel {
         
         private byte[] archivoField;
         
+        private System.DateTime fechaFinField;
+        
+        private bool fechaFinFieldSpecified;
+        
+        private System.DateTime fechaIniField;
+        
+        private bool fechaIniFieldSpecified;
+        
         private int idField;
+        
+        private sede sedeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=0)]
@@ -87,6 +115,54 @@ namespace LP2MegaAutos.ServicioExcel {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fechaFin {
+            get {
+                return this.fechaFinField;
+            }
+            set {
+                this.fechaFinField = value;
+                this.RaisePropertyChanged("fechaFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaFinSpecified {
+            get {
+                return this.fechaFinFieldSpecified;
+            }
+            set {
+                this.fechaFinFieldSpecified = value;
+                this.RaisePropertyChanged("fechaFinSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fechaIni {
+            get {
+                return this.fechaIniField;
+            }
+            set {
+                this.fechaIniField = value;
+                this.RaisePropertyChanged("fechaIni");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaIniSpecified {
+            get {
+                return this.fechaIniFieldSpecified;
+            }
+            set {
+                this.fechaIniFieldSpecified = value;
+                this.RaisePropertyChanged("fechaIniSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int id {
             get {
                 return this.idField;
@@ -94,6 +170,362 @@ namespace LP2MegaAutos.ServicioExcel {
             set {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public sede sede {
+            get {
+                return this.sedeField;
+            }
+            set {
+                this.sedeField = value;
+                this.RaisePropertyChanged("sede");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public partial class sede : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string direccionField;
+        
+        private string distritoField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string distrito {
+            get {
+                return this.distritoField;
+            }
+            set {
+                this.distritoField = value;
+                this.RaisePropertyChanged("distrito");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public partial class reporte : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double egresosField;
+        
+        private bool egresosFieldSpecified;
+        
+        private System.DateTime fechaCreacionField;
+        
+        private bool fechaCreacionFieldSpecified;
+        
+        private System.DateTime fechaFinField;
+        
+        private bool fechaFinFieldSpecified;
+        
+        private System.DateTime fechaInicioField;
+        
+        private bool fechaInicioFieldSpecified;
+        
+        private int idExcelEntradaField;
+        
+        private int idExcelSalidaField;
+        
+        private int idReporteField;
+        
+        private int idUsuarioField;
+        
+        private double ingresosField;
+        
+        private bool ingresosFieldSpecified;
+        
+        private sede sedeField;
+        
+        private string tipoReporteField;
+        
+        private string tituloField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double egresos {
+            get {
+                return this.egresosField;
+            }
+            set {
+                this.egresosField = value;
+                this.RaisePropertyChanged("egresos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool egresosSpecified {
+            get {
+                return this.egresosFieldSpecified;
+            }
+            set {
+                this.egresosFieldSpecified = value;
+                this.RaisePropertyChanged("egresosSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fechaCreacion {
+            get {
+                return this.fechaCreacionField;
+            }
+            set {
+                this.fechaCreacionField = value;
+                this.RaisePropertyChanged("fechaCreacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaCreacionSpecified {
+            get {
+                return this.fechaCreacionFieldSpecified;
+            }
+            set {
+                this.fechaCreacionFieldSpecified = value;
+                this.RaisePropertyChanged("fechaCreacionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fechaFin {
+            get {
+                return this.fechaFinField;
+            }
+            set {
+                this.fechaFinField = value;
+                this.RaisePropertyChanged("fechaFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaFinSpecified {
+            get {
+                return this.fechaFinFieldSpecified;
+            }
+            set {
+                this.fechaFinFieldSpecified = value;
+                this.RaisePropertyChanged("fechaFinSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fechaInicio {
+            get {
+                return this.fechaInicioField;
+            }
+            set {
+                this.fechaInicioField = value;
+                this.RaisePropertyChanged("fechaInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaInicioSpecified {
+            get {
+                return this.fechaInicioFieldSpecified;
+            }
+            set {
+                this.fechaInicioFieldSpecified = value;
+                this.RaisePropertyChanged("fechaInicioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int idExcelEntrada {
+            get {
+                return this.idExcelEntradaField;
+            }
+            set {
+                this.idExcelEntradaField = value;
+                this.RaisePropertyChanged("idExcelEntrada");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int idExcelSalida {
+            get {
+                return this.idExcelSalidaField;
+            }
+            set {
+                this.idExcelSalidaField = value;
+                this.RaisePropertyChanged("idExcelSalida");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int idReporte {
+            get {
+                return this.idReporteField;
+            }
+            set {
+                this.idReporteField = value;
+                this.RaisePropertyChanged("idReporte");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public int idUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("idUsuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public double ingresos {
+            get {
+                return this.ingresosField;
+            }
+            set {
+                this.ingresosField = value;
+                this.RaisePropertyChanged("ingresos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ingresosSpecified {
+            get {
+                return this.ingresosFieldSpecified;
+            }
+            set {
+                this.ingresosFieldSpecified = value;
+                this.RaisePropertyChanged("ingresosSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public sede sede {
+            get {
+                return this.sedeField;
+            }
+            set {
+                this.sedeField = value;
+                this.RaisePropertyChanged("sede");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string tipoReporte {
+            get {
+                return this.tipoReporteField;
+            }
+            set {
+                this.tipoReporteField = value;
+                this.RaisePropertyChanged("tipoReporte");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string titulo {
+            get {
+                return this.tituloField;
+            }
+            set {
+                this.tituloField = value;
+                this.RaisePropertyChanged("titulo");
             }
         }
         
@@ -110,6 +542,42 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorId", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class buscarPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idExcel;
+        
+        public buscarPorIdRequest() {
+        }
+        
+        public buscarPorIdRequest(int idExcel) {
+            this.idExcel = idExcel;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarPorIdResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class buscarPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioExcel.excel @return;
+        
+        public buscarPorIdResponse() {
+        }
+        
+        public buscarPorIdResponse(LP2MegaAutos.ServicioExcel.excel @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarArchivoEntrada", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class insertarArchivoEntradaRequest {
         
@@ -117,11 +585,16 @@ namespace LP2MegaAutos.ServicioExcel {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2MegaAutos.ServicioExcel.excel archivo;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg1;
+        
         public insertarArchivoEntradaRequest() {
         }
         
-        public insertarArchivoEntradaRequest(LP2MegaAutos.ServicioExcel.excel archivo) {
+        public insertarArchivoEntradaRequest(LP2MegaAutos.ServicioExcel.excel archivo, int arg1) {
             this.archivo = archivo;
+            this.arg1 = arg1;
         }
     }
     
@@ -139,6 +612,34 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         public insertarArchivoEntradaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoSalida", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class leerArchivoSalidaRequest {
+        
+        public leerArchivoSalidaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoSalidaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class leerArchivoSalidaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public LP2MegaAutos.ServicioExcel.excel @return;
+        
+        public leerArchivoSalidaResponse() {
+        }
+        
+        public leerArchivoSalidaResponse(LP2MegaAutos.ServicioExcel.excel @return) {
             this.@return = @return;
         }
     }
@@ -182,34 +683,6 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoSalida", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class leerArchivoSalidaRequest {
-        
-        public leerArchivoSalidaRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoSalidaResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
-    public partial class leerArchivoSalidaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioExcel.excel @return;
-        
-        public leerArchivoSalidaResponse() {
-        }
-        
-        public leerArchivoSalidaResponse(LP2MegaAutos.ServicioExcel.excel @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="leerArchivoEntrada", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
     public partial class leerArchivoEntradaRequest {
         
@@ -245,11 +718,51 @@ namespace LP2MegaAutos.ServicioExcel {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LP2MegaAutos.ServicioExcel.excel arg0;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg1;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg2;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg3;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg4;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime arg5;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime arg6;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg7;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg8;
+        
         public procesarRequest() {
         }
         
-        public procesarRequest(LP2MegaAutos.ServicioExcel.excel arg0) {
+        public procesarRequest(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8) {
             this.arg0 = arg0;
+            this.arg1 = arg1;
+            this.arg2 = arg2;
+            this.arg3 = arg3;
+            this.arg4 = arg4;
+            this.arg5 = arg5;
+            this.arg6 = arg6;
+            this.arg7 = arg7;
+            this.arg8 = arg8;
         }
     }
     
@@ -261,12 +774,68 @@ namespace LP2MegaAutos.ServicioExcel {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public LP2MegaAutos.ServicioExcel.excel @return;
+        public LP2MegaAutos.ServicioExcel.reporte @return;
         
         public procesarResponse() {
         }
         
-        public procesarResponse(LP2MegaAutos.ServicioExcel.excel @return) {
+        public procesarResponse(LP2MegaAutos.ServicioExcel.reporte @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporte", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class generarReporteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaInicio;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaFin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public generarReporteRequest() {
+        }
+        
+        public generarReporteRequest(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario) {
+            this.fechaInicio = fechaInicio;
+            this.fechaFin = fechaFin;
+            this.tipo = tipo;
+            this.idSede = idSede;
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteResponse", WrapperNamespace="http://services.megaautos.com.pe/", IsWrapped=true)]
+    public partial class generarReporteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public generarReporteResponse() {
+        }
+        
+        public generarReporteResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -299,13 +868,37 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioExcel.buscarPorIdResponse LP2MegaAutos.ServicioExcel.ExcelWS.buscarPorId(LP2MegaAutos.ServicioExcel.buscarPorIdRequest request) {
+            return base.Channel.buscarPorId(request);
+        }
+        
+        public LP2MegaAutos.ServicioExcel.excel buscarPorId(int idExcel) {
+            LP2MegaAutos.ServicioExcel.buscarPorIdRequest inValue = new LP2MegaAutos.ServicioExcel.buscarPorIdRequest();
+            inValue.idExcel = idExcel;
+            LP2MegaAutos.ServicioExcel.buscarPorIdResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).buscarPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.buscarPorIdResponse> LP2MegaAutos.ServicioExcel.ExcelWS.buscarPorIdAsync(LP2MegaAutos.ServicioExcel.buscarPorIdRequest request) {
+            return base.Channel.buscarPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.buscarPorIdResponse> buscarPorIdAsync(int idExcel) {
+            LP2MegaAutos.ServicioExcel.buscarPorIdRequest inValue = new LP2MegaAutos.ServicioExcel.buscarPorIdRequest();
+            inValue.idExcel = idExcel;
+            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).buscarPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse LP2MegaAutos.ServicioExcel.ExcelWS.insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request) {
             return base.Channel.insertarArchivoEntrada(request);
         }
         
-        public int insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.excel archivo) {
+        public int insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.excel archivo, int arg1) {
             LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest inValue = new LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest();
             inValue.archivo = archivo;
+            inValue.arg1 = arg1;
             LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).insertarArchivoEntrada(inValue);
             return retVal.@return;
         }
@@ -315,10 +908,32 @@ namespace LP2MegaAutos.ServicioExcel {
             return base.Channel.insertarArchivoEntradaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse> insertarArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.excel archivo) {
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse> insertarArchivoEntradaAsync(LP2MegaAutos.ServicioExcel.excel archivo, int arg1) {
             LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest inValue = new LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest();
             inValue.archivo = archivo;
+            inValue.arg1 = arg1;
             return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).insertarArchivoEntradaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoSalida(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request) {
+            return base.Channel.leerArchivoSalida(request);
+        }
+        
+        public LP2MegaAutos.ServicioExcel.excel leerArchivoSalida() {
+            LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest();
+            LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoSalida(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request) {
+            return base.Channel.leerArchivoSalidaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> leerArchivoSalidaAsync() {
+            LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest();
+            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoSalidaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -342,27 +957,6 @@ namespace LP2MegaAutos.ServicioExcel {
             LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest();
             inValue.archivo = archivo;
             return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).insertarArchivoSalidaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoSalida(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request) {
-            return base.Channel.leerArchivoSalida(request);
-        }
-        
-        public LP2MegaAutos.ServicioExcel.excel leerArchivoSalida() {
-            LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest();
-            LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoSalida(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> LP2MegaAutos.ServicioExcel.ExcelWS.leerArchivoSalidaAsync(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request) {
-            return base.Channel.leerArchivoSalidaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse> leerArchivoSalidaAsync() {
-            LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest inValue = new LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest();
-            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).leerArchivoSalidaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -391,9 +985,17 @@ namespace LP2MegaAutos.ServicioExcel {
             return base.Channel.procesar(request);
         }
         
-        public LP2MegaAutos.ServicioExcel.excel procesar(LP2MegaAutos.ServicioExcel.excel arg0) {
+        public LP2MegaAutos.ServicioExcel.reporte procesar(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8) {
             LP2MegaAutos.ServicioExcel.procesarRequest inValue = new LP2MegaAutos.ServicioExcel.procesarRequest();
             inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            inValue.arg2 = arg2;
+            inValue.arg3 = arg3;
+            inValue.arg4 = arg4;
+            inValue.arg5 = arg5;
+            inValue.arg6 = arg6;
+            inValue.arg7 = arg7;
+            inValue.arg8 = arg8;
             LP2MegaAutos.ServicioExcel.procesarResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).procesar(inValue);
             return retVal.@return;
         }
@@ -403,10 +1005,49 @@ namespace LP2MegaAutos.ServicioExcel {
             return base.Channel.procesarAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.procesarResponse> procesarAsync(LP2MegaAutos.ServicioExcel.excel arg0) {
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.procesarResponse> procesarAsync(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8) {
             LP2MegaAutos.ServicioExcel.procesarRequest inValue = new LP2MegaAutos.ServicioExcel.procesarRequest();
             inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            inValue.arg2 = arg2;
+            inValue.arg3 = arg3;
+            inValue.arg4 = arg4;
+            inValue.arg5 = arg5;
+            inValue.arg6 = arg6;
+            inValue.arg7 = arg7;
+            inValue.arg8 = arg8;
             return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).procesarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        LP2MegaAutos.ServicioExcel.generarReporteResponse LP2MegaAutos.ServicioExcel.ExcelWS.generarReporte(LP2MegaAutos.ServicioExcel.generarReporteRequest request) {
+            return base.Channel.generarReporte(request);
+        }
+        
+        public int generarReporte(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario) {
+            LP2MegaAutos.ServicioExcel.generarReporteRequest inValue = new LP2MegaAutos.ServicioExcel.generarReporteRequest();
+            inValue.fechaInicio = fechaInicio;
+            inValue.fechaFin = fechaFin;
+            inValue.tipo = tipo;
+            inValue.idSede = idSede;
+            inValue.idUsuario = idUsuario;
+            LP2MegaAutos.ServicioExcel.generarReporteResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).generarReporte(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.generarReporteResponse> LP2MegaAutos.ServicioExcel.ExcelWS.generarReporteAsync(LP2MegaAutos.ServicioExcel.generarReporteRequest request) {
+            return base.Channel.generarReporteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.generarReporteResponse> generarReporteAsync(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario) {
+            LP2MegaAutos.ServicioExcel.generarReporteRequest inValue = new LP2MegaAutos.ServicioExcel.generarReporteRequest();
+            inValue.fechaInicio = fechaInicio;
+            inValue.fechaFin = fechaFin;
+            inValue.tipo = tipo;
+            inValue.idSede = idSede;
+            inValue.idUsuario = idUsuario;
+            return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).generarReporteAsync(inValue);
         }
     }
 }

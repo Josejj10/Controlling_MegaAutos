@@ -678,7 +678,13 @@
     <None Include="Connected Services\ServicioExcel\ExcelWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.buscarPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.excel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.generarReporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse.datasource">
@@ -694,6 +700,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.procesarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioExcel\LP2MegaAutos.ServicioExcel.reporte.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServicioOrdenTrabajo\LP2MegaAutos.ServicioOrdenTrabajo.actualizarOrdenTrabajoResponse.datasource">

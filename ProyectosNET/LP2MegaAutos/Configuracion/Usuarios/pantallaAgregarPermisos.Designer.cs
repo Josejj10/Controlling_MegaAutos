@@ -140,7 +140,7 @@
             this.btn_guardar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_guardar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btn_guardar, System.Drawing.FontStyle.Regular);
             this.btn_guardar.Text = "Guardar";
@@ -252,7 +252,7 @@
             this.lblNombre.TabIndex = 78;
             this.tagsExtender1.SetTag2(this.lblNombre, null);
             this.tagsExtender1.SetTag3(this.lblNombre, null);
-            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.lblNombre, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lblNombre, 21.75F);
             this.tagsExtender1.SetTagFontStyle(this.lblNombre, System.Drawing.FontStyle.Bold);
             this.lblNombre.Text = "Permisos";
@@ -272,7 +272,7 @@
             this.btn_cancelar.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
-            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btn_cancelar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.btn_cancelar, System.Drawing.FontStyle.Regular);
             this.btn_cancelar.Text = "Cancelar";
@@ -468,7 +468,7 @@
             this.btnReestablecer.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.btnReestablecer, null);
             this.tagsExtender1.SetTag3(this.btnReestablecer, null);
-            this.tagsExtender1.SetTagFontName(this.btnReestablecer, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontName(this.btnReestablecer, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.btnReestablecer, 11F);
             this.tagsExtender1.SetTagFontStyle(this.btnReestablecer, System.Drawing.FontStyle.Bold);
             this.btnReestablecer.Text = "Reiniciar";

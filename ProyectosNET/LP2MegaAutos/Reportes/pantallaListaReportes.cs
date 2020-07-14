@@ -231,5 +231,10 @@ namespace LP2MegaAutos
             pantallaListasHelper.buscarLeave(txt_Buscar);
         }
         #endregion Botones Filtro
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // TODO
+        }
     }
 }

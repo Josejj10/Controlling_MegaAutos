@@ -12,6 +12,7 @@ using LP2MegaAutos.Configuracion.Empresa;
 using LP2MegaAutos.ServicioEmpresa;
 using System.IO;
 using System.Threading;
+using LP2MegaAutos.ServicioSede;
 
 namespace LP2MegaAutos
 {
@@ -74,8 +75,9 @@ namespace LP2MegaAutos
             Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
             thrdLoading.Start();
 
+            int id = ((sede)cboSede.SelectedItem).id;
             frmMessageBox frm;
-            bool inserto = daoExcel.insertarArchivoEntrada(_excelEnviado) ==  0;
+            bool inserto = daoExcel.insertarArchivoEntrada(_excelEnviado, id) ==  0;
             thrdLoading.Abort();
             if (inserto)
             {

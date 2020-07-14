@@ -557,6 +557,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 28);
             this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
             this.tagsExtender1.SetTag3(this.btnEliminar, null);
             this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);
@@ -578,6 +579,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(28, 28);
             this.btnEditar.TabIndex = 7;
+            this.btnEditar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEditar, null);
             this.tagsExtender1.SetTag3(this.btnEditar, null);
             this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);

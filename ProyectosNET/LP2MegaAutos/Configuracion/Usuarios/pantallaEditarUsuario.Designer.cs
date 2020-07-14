@@ -238,7 +238,7 @@
             this.txt_NuevaCont.Name = "txt_NuevaCont";
             this.txt_NuevaCont.PasswordChar = '*';
             this.txt_NuevaCont.Size = new System.Drawing.Size(284, 23);
-            this.txt_NuevaCont.TabIndex = 2;
+            this.txt_NuevaCont.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.txt_NuevaCont, null);
             this.tagsExtender1.SetTag3(this.txt_NuevaCont, null);
             this.tagsExtender1.SetTagFontName(this.txt_NuevaCont, fontsD.Lato);
@@ -343,7 +343,7 @@
             this.txt_RepNCont.Name = "txt_RepNCont";
             this.txt_RepNCont.PasswordChar = '*';
             this.txt_RepNCont.Size = new System.Drawing.Size(284, 23);
-            this.txt_RepNCont.TabIndex = 2;
+            this.txt_RepNCont.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.txt_RepNCont, null);
             this.tagsExtender1.SetTag3(this.txt_RepNCont, null);
             this.tagsExtender1.SetTagFontName(this.txt_RepNCont, fontsD.Lato);
@@ -540,7 +540,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(174, 30);
-            this.btn_cancelar.TabIndex = 0;
+            this.btn_cancelar.TabIndex = 10;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
             this.tagsExtender1.SetTagFontName(this.btn_cancelar, fontsD.Lato);
@@ -590,7 +590,7 @@
             this.btn_guardar.Location = new System.Drawing.Point(3, 3);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(174, 29);
-            this.btn_guardar.TabIndex = 0;
+            this.btn_guardar.TabIndex = 9;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
             this.tagsExtender1.SetTagFontName(this.btn_guardar, fontsD.Lato);
@@ -669,7 +669,7 @@
             this.txt_RolUsuario.Location = new System.Drawing.Point(7, 18);
             this.txt_RolUsuario.Name = "txt_RolUsuario";
             this.txt_RolUsuario.Size = new System.Drawing.Size(284, 23);
-            this.txt_RolUsuario.TabIndex = 2;
+            this.txt_RolUsuario.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.txt_RolUsuario, null);
             this.tagsExtender1.SetTag3(this.txt_RolUsuario, null);
             this.tagsExtender1.SetTagFontName(this.txt_RolUsuario, fontsD.Lato);
@@ -685,7 +685,7 @@
             this.txtNombre.Location = new System.Drawing.Point(23, 46);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(482, 35);
-            this.txtNombre.TabIndex = 65;
+            this.txtNombre.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.txtNombre, null);
             this.tagsExtender1.SetTag3(this.txtNombre, null);
             this.tagsExtender1.SetTagFontName(this.txtNombre, fontsD.Lato);
@@ -749,7 +749,7 @@
             this.btnAgregarPermisos.Location = new System.Drawing.Point(199, 3);
             this.btnAgregarPermisos.Name = "btnAgregarPermisos";
             this.btnAgregarPermisos.Size = new System.Drawing.Size(46, 29);
-            this.btnAgregarPermisos.TabIndex = 2;
+            this.btnAgregarPermisos.TabIndex = 8;
             this.tagsExtender1.SetTag2(this.btnAgregarPermisos, null);
             this.tagsExtender1.SetTag3(this.btnAgregarPermisos, null);
             this.tagsExtender1.SetTagFontName(this.btnAgregarPermisos, fontsD.Lato);
@@ -817,7 +817,7 @@
             this.btnReestablecer.Location = new System.Drawing.Point(1, 1);
             this.btnReestablecer.Name = "btnReestablecer";
             this.btnReestablecer.Size = new System.Drawing.Size(204, 26);
-            this.btnReestablecer.TabIndex = 0;
+            this.btnReestablecer.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btnReestablecer, null);
             this.tagsExtender1.SetTag3(this.btnReestablecer, null);
             this.tagsExtender1.SetTagFontName(this.btnReestablecer, fontsD.Lato);
@@ -867,7 +867,7 @@
             this.btnCambiarPassword.Location = new System.Drawing.Point(3, 3);
             this.btnCambiarPassword.Name = "btnCambiarPassword";
             this.btnCambiarPassword.Size = new System.Drawing.Size(202, 26);
-            this.btnCambiarPassword.TabIndex = 0;
+            this.btnCambiarPassword.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.btnCambiarPassword, null);
             this.tagsExtender1.SetTag3(this.btnCambiarPassword, null);
             this.tagsExtender1.SetTagFontName(this.btnCambiarPassword, fontsD.Lato);
@@ -890,6 +890,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(28, 28);
             this.btnEliminar.TabIndex = 72;
+            this.btnEliminar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
             this.tagsExtender1.SetTag3(this.btnEliminar, null);
             this.tagsExtender1.SetTagFontName(this.btnEliminar, fontsD.Ninguno);
@@ -911,6 +912,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(28, 28);
             this.btnEditar.TabIndex = 71;
+            this.btnEditar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEditar, null);
             this.tagsExtender1.SetTag3(this.btnEditar, null);
             this.tagsExtender1.SetTagFontName(this.btnEditar, fontsD.Ninguno);

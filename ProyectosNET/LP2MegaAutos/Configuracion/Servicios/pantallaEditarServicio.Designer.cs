@@ -130,14 +130,14 @@
             this.lbl_codServ.Location = new System.Drawing.Point(4, 2);
             this.lbl_codServ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_codServ.Name = "lbl_codServ";
-            this.lbl_codServ.Size = new System.Drawing.Size(112, 16);
+            this.lbl_codServ.Size = new System.Drawing.Size(118, 16);
             this.lbl_codServ.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_codServ, null);
             this.tagsExtender1.SetTag3(this.lbl_codServ, null);
             this.tagsExtender1.SetTagFontName(this.lbl_codServ, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_codServ, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_codServ, System.Drawing.FontStyle.Bold);
-            this.lbl_codServ.Text = "Código de servicio";
+            this.lbl_codServ.Text = "Código de servicio*";
             // 
             // panel1
             // 
@@ -219,14 +219,14 @@
             this.lbl_desc.Location = new System.Drawing.Point(4, 2);
             this.lbl_desc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desc.Name = "lbl_desc";
-            this.lbl_desc.Size = new System.Drawing.Size(75, 16);
+            this.lbl_desc.Size = new System.Drawing.Size(81, 16);
             this.lbl_desc.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_desc, null);
             this.tagsExtender1.SetTag3(this.lbl_desc, null);
             this.tagsExtender1.SetTagFontName(this.lbl_desc, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_desc, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_desc, System.Drawing.FontStyle.Bold);
-            this.lbl_desc.Text = "Descripción";
+            this.lbl_desc.Text = "Descripción*";
             // 
             // pnl_tipoServicio
             // 
@@ -299,14 +299,14 @@
             this.lbl_tipoServicio.Location = new System.Drawing.Point(4, 2);
             this.lbl_tipoServicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_tipoServicio.Name = "lbl_tipoServicio";
-            this.lbl_tipoServicio.Size = new System.Drawing.Size(97, 16);
+            this.lbl_tipoServicio.Size = new System.Drawing.Size(103, 16);
             this.lbl_tipoServicio.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_tipoServicio, null);
             this.tagsExtender1.SetTag3(this.lbl_tipoServicio, null);
             this.tagsExtender1.SetTagFontName(this.lbl_tipoServicio, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_tipoServicio, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_tipoServicio, System.Drawing.FontStyle.Bold);
-            this.lbl_tipoServicio.Text = "Tipo de servicio";
+            this.lbl_tipoServicio.Text = "Tipo de servicio*";
             // 
             // rpTopMain
             // 

@@ -21,9 +21,11 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         public pantallaActualizarVehiculos()
         {
             InitializeComponent();
+            textoBuscar = " vehiculo por placa, cliente o tipo de vehiculo";
             flpVehiculos.AutoScroll = true;
             daoVehiculo = new ServicioVehiculo.VehiculoWSClient();
             inicializarItemsLista();
+            txt_Buscar.Text += textoBuscar;
         }
 
         #region Organizar
@@ -182,6 +184,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
+            if (btnBuscar.Focused) return;
             pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
         }
         #endregion Txt Buscar
@@ -199,16 +202,40 @@ namespace LP2MegaAutos.Informacion.Vehiculos
         private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+            btnBuscar_Click(btnBuscar, e);
             // Tenemos la lista servicios
+            //List<vehiculo> _vehiculosBuscados = new List<vehiculo>();
+            //foreach (vehiculo v in _vehiculos)
+            //    if (v.placa.Contains(txt_Buscar.Text.ToUpper())||
+            //        v.propietario.nombre.Contains(txt_Buscar.Text.ToUpper()))
+            //        _vehiculosBuscados.Add(v);
+
+            //quitarItemsLista();
+            //crearItemsListaBuscar(_vehiculosBuscados);
+        }
+        #endregion Buscar
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
             List<vehiculo> _vehiculosBuscados = new List<vehiculo>();
             foreach (vehiculo v in _vehiculos)
-                if (v.placa.Contains(txt_Buscar.Text.ToUpper())||
-                    v.propietario.nombre.Contains(txt_Buscar.Text.ToUpper()))
+                if (v.placa.Contains(txt_Buscar.Text.ToUpper()) ||
+                    v.tipoVehiculo.Contains(txt_Buscar.Text.ToUpper()) ||
+                    v.tipoVehiculo.Contains(txt_Buscar.Text) ||
+                    v.propietario.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    v.propietario.nombre.Contains(txt_Buscar.Text))
                     _vehiculosBuscados.Add(v);
 
             quitarItemsLista();
+            if (_vehiculosBuscados.Count == 0)
+            {
+                frmMessageBox frm = new frmMessageBox("No se hallaron resultados para la búsqueda.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                _vehiculosBuscados = _vehiculos;
+                txt_Buscar.Text = string.Empty;
+            }
             crearItemsListaBuscar(_vehiculosBuscados);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
         }
-        #endregion Buscar
     }
 }

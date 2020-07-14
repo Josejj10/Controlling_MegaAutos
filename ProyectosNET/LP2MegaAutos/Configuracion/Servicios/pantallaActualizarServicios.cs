@@ -21,9 +21,11 @@ namespace LP2MegaAutos
         public pantallaActualizarServicios()
         {
             InitializeComponent();
+            textoBuscar = " servicios por nombre o codigo";
             flpServicios.AutoScroll = true;
             daoServicio = new ServicioServicio.ServicioWSClient();
             //inicializarItemsLista();
+            txt_Buscar.Text += textoBuscar;
         }
 
         public void inicializarItemsLista()
@@ -209,6 +211,7 @@ namespace LP2MegaAutos
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
+            if (btnBuscar.Focused) return;
             pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
         }
         #endregion Txt Buscar
@@ -244,16 +247,39 @@ namespace LP2MegaAutos
         private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+            btnBuscar_Click(btnBuscar, e);
             // Tenemos la lista servicios
-            List<servicio> _serviciosBuscados = new List<servicio>();
-            foreach (servicio s in _servicios)
-                if (s.nombre.Contains(txt_Buscar.Text.ToUpper())||
-                    s.codigoServicio.Contains(txt_Buscar.Text.ToUpper()))
-                    _serviciosBuscados.Add(s);
+            //List<servicio> _serviciosBuscados = new List<servicio>();
+            //foreach (servicio s in _servicios)
+            //    if (s.nombre.Contains(txt_Buscar.Text.ToUpper())||
+            //        s.codigoServicio.Contains(txt_Buscar.Text.ToUpper()))
+            //        _serviciosBuscados.Add(s);
 
-            quitarItemsLista();
-            crearItemsListaBuscar(_serviciosBuscados);
+            //quitarItemsLista();
+            //crearItemsListaBuscar(_serviciosBuscados);
         }
         #endregion Buscar
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<servicio> _serviciosBuscados = new List<servicio>();
+            foreach (servicio u in _servicios)
+                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.nombre.Contains(txt_Buscar.Text) ||
+                    u.codigoServicio.Contains(txt_Buscar.Text.ToUpper()) ||
+                    u.codigoServicio.Contains(txt_Buscar.Text))
+                    _serviciosBuscados.Add(u);
+
+            quitarItemsLista();
+            if (_serviciosBuscados.Count == 0)
+            {
+                frmMessageBox frm = new frmMessageBox("No se hallaron resultados para la búsqueda.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                _serviciosBuscados = _servicios;
+                txt_Buscar.Text = string.Empty;
+            }
+            crearItemsListaBuscar(_serviciosBuscados);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
+        }
     }
 }

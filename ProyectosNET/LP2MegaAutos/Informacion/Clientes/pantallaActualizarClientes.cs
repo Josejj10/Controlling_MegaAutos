@@ -21,8 +21,10 @@ namespace LP2MegaAutos
         public pantallaActualizarClientes()
         {
             InitializeComponent();
+            textoBuscar = " cliente por nombre, #documento, tipo documento o tipo cliente";
             flpClientes.AutoScroll = true;
             daoCliente = new ServicioCliente.ClienteWSClient();
+            txt_Buscar.Text += textoBuscar;
             //inicializarItemsLista();
         }
         public void inicializarItemsLista()
@@ -82,7 +84,7 @@ namespace LP2MegaAutos
             il.TextoPrincipal = cliente.nombre;
             if (cliente.numDocumento.Length == 8) il.Textosecundario = "DNI: ";
             else if (cliente.numDocumento.Length == 11) il.Textosecundario = "RUC: ";
-            else if (cliente.numDocumento.Length == 9) il.Textosecundario = "C.E: ";
+            else if (cliente.numDocumento.Length == 9) il.Textosecundario = "CARNET: ";
             il.Textosecundario += cliente.numDocumento;
             il.TextoTercero = cliente.tipoCliente;
             il.ItemListaClick += (sender, e) => { verDatosCliente(sender, e, cliente); };
@@ -161,14 +163,13 @@ namespace LP2MegaAutos
         }
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            if (txt_Buscar.Text == "Buscar")
-                txt_Buscar.Text = string.Empty;
+            pantallaListasHelper.buscarEnter(txt_Buscar, textoBuscar);
         }
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            if (txt_Buscar.Text == string.Empty)
-                txt_Buscar.Text = "Buscar";
+            if (btnBuscar.Focused) return;
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
@@ -202,18 +203,41 @@ namespace LP2MegaAutos
         private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+            btnBuscar_Click(btnBuscar, e);
             // Tenemos la lista usuarios
-            List<cliente> _clientesBuscados = new List<cliente>();
-            foreach (cliente u in _clientes)
-                if (u.nombre.Contains(txt_Buscar.Text) ||
-                    u.tipoCliente.Contains(txt_Buscar.Text) ||
-                    u.correo.Contains(txt_Buscar.Text) ||
-                    u.tipoDocumento.Contains(txt_Buscar.Text.ToUpper()))
-                    _clientesBuscados.Add(u);
+            //List<cliente> _clientesBuscados = new List<cliente>();
+            //foreach (cliente u in _clientes)
+            //    if (u.nombre.Contains(txt_Buscar.Text) ||
+            //        u.tipoCliente.Contains(txt_Buscar.Text) ||
+            //        u.correo.Contains(txt_Buscar.Text) ||
+            //        u.tipoDocumento.Contains(txt_Buscar.Text.ToUpper()))
+            //        _clientesBuscados.Add(u);
 
-            quitarItemsLista();
-            crearItemsListaBuscar(_clientesBuscados);
+            //quitarItemsLista();
+            //crearItemsListaBuscar(_clientesBuscados);
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<cliente> _clientesBuscados = new List<cliente>();
+            foreach (cliente c in _clientes)
+                if (c.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    c.nombre.Contains(txt_Buscar.Text) ||
+                    c.tipoCliente.Contains(txt_Buscar.Text.ToUpper()) ||
+                    c.numDocumento.Contains(txt_Buscar.Text.ToUpper()) ||
+                    c.tipoDocumento.Contains(txt_Buscar.Text.ToUpper()))
+                    _clientesBuscados.Add(c);
+
+            quitarItemsLista();
+            if (_clientesBuscados.Count == 0)
+            {
+                frmMessageBox frm = new frmMessageBox("No se hallaron resultados para la búsqueda.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                _clientesBuscados = _clientes;
+                txt_Buscar.Text = string.Empty;
+            }
+            crearItemsListaBuscar(_clientesBuscados);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
+        }
     }
 }

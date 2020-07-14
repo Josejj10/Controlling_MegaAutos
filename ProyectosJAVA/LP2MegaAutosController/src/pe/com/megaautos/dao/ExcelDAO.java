@@ -18,4 +18,5 @@ public interface ExcelDAO {
     Excel buscar(Date fechaIni, Date fechaFin, int idSede);
     int insertarArchivoEntrada(Excel excel);
     int insertarArchivoSalida(Excel excel);
+    Excel buscarPorId(int idExcel);
 }

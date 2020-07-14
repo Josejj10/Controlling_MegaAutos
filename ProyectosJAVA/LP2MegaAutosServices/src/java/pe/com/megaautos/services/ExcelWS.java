@@ -24,6 +24,7 @@ import pe.com.megaautos.config.DBController;
 import pe.com.megaautos.dao.AreaTrabajoDAO;
 import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.dao.ExcelDAO;
+import pe.com.megaautos.dao.ReporteDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
 import pe.com.megaautos.model.Excel;
 import pe.com.megaautos.model.Reporte;
@@ -40,8 +41,21 @@ public class ExcelWS {
     public ExcelWS(){
         daoExcel = DBController.controller.getExcelDAO();
     }
+    
+    @WebMethod(operationName = "buscarPorId")
+    public Excel buscarPorId(@WebParam(name = "idExcel") int idExcel) {
+        Excel excel = new Excel();
+        try{
+            excel = daoExcel.buscarPorId(idExcel);
+        }
+        catch(Exception ex){
+            System.out.println(ex);
+        }
+        return excel;
+    }
+    
     @WebMethod(operationName = "insertarArchivoEntrada")
-    public int insertarArchivoEntrada(@WebParam(name = "archivo") Excel excel) {
+    public int insertarArchivoEntrada(@WebParam(name = "archivo") Excel excel, int idSede) {
         int resultado = 0;
         try{
             InputStream targetStream1 = new ByteArrayInputStream(excel.getArchivo());
@@ -53,7 +67,7 @@ public class ExcelWS {
             
             excel.setFechaIni(fechaIni);
             excel.setFechaFin(fechaFin);
-            
+            excel.getSede().setId(idSede);
             resultado = daoExcel.insertarArchivoEntrada(excel);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -81,6 +95,8 @@ public class ExcelWS {
             Reporte reporte = procesar(excel, fechaInicio, fechaFin,
                     tipo, idSede, fecha1, fecha2,
                     excel.getId(), idUsuario);
+            ReporteDAO daoReporte = DBController.controller.getReporteDAO();
+            resultado = daoReporte.insertar(reporte);
             //Reporte reporte = procesar(excel, tipo,fechaInicio, fechaFin,idSede);
             //fecha1(dd-MM-aaaa)|fecha2|"s|at|tc"|idSede|idUsuario
             //Buscas el excel que corresponde
@@ -158,6 +174,7 @@ public class ExcelWS {
             InputStream targetStream3 = new ByteArrayInputStream(excel.getArchivo());
             InputStream targetStream4 = new ByteArrayInputStream(excel.getArchivo());
             InputStream targetStream5 = new ByteArrayInputStream(excel.getArchivo());
+            InputStream targetStream6 = new ByteArrayInputStream(excel.getArchivo());
 
             //Obtenemos el dfFact del documento en excel
             DataFrame dfFact = JoineryExtension.readXlsx(targetStream1,5, 2);      
@@ -165,6 +182,8 @@ public class ExcelWS {
             DataFrame dfSalxAlm = JoineryExtension.readXlsx(targetStream3, 3, 3);
             DataFrame dfCompras = JoineryExtension.readXlsx(targetStream4, 2, 2);
             DataFrame dfCostos = JoineryExtension.readXlsx(targetStream5, 13, 2);
+            DataFrame dfGastAdmin = JoineryExtension.readXlsx(targetStream6, 14, 1);
+            
 
             //Transformation
             int lastRow = dfFact.length() - 1;
@@ -222,6 +241,7 @@ public class ExcelWS {
             DataFrame dfOT = dfGris.retain("ANIO", "MES", "No OT", "Sin_IGV").groupBy("No OT", "ANIO", "MES").sum();
             List<String> colDias = dfGris.retain("ANIO", "MES", "No OT", "DIA").unique("No OT", "ANIO", "MES").col("DIA");
             dfOT.add("DIA", colDias);
+            dfOT.add("RUC", dfGris.retain("ANIO", "MES", "No OT", "R.U.C.").unique("No OT", "ANIO", "MES").col("R.U.C."));
             int lastRowOT = dfOT.length();
             dfOT = dfOT.resetIndex();
             //System.out.println(dfOT);   
@@ -397,7 +417,8 @@ public class ExcelWS {
             DataFrame<Object> repTipoSin = new DataFrame<>();
             
             DataFrame<Object> repAreaTrabajo = new DataFrame<>();
-                    
+            double difDias = fecha2.getTime() - fecha1.getTime();
+            difDias = difDias/8.64e7 + 1;        
             String titulo = "";
             Double ingresos = 0.0;
             Double egresos = 0.0;
@@ -477,14 +498,19 @@ public class ExcelWS {
                     Double totalPlanchado, totalPintura, totalMecanica;
                     totalPlanchado = totalPintura = totalMecanica = 0.0;
                     for (int i = 0;i<lastRowOT; i++){
-                        totalPlanchado += (Double)dfOT.get(i, 9);
-                        totalPintura += (Double)dfOT.get(i, 10);
-                        totalMecanica += (Double)dfOT.get(i, 8) 
+                        totalPlanchado += (Double)dfOT.get(i, 10);
+                        totalPintura += (Double)dfOT.get(i, 11);
+                        totalMecanica += (Double)dfOT.get(i, 9) 
+                                       + (Double)dfOT.get(i, 8)
                                        + (Double)dfOT.get(i, 7)
-                                       + (Double)dfOT.get(i, 6)
-                                       + (Double)dfOT.get(i, 5);
+                                       + (Double)dfOT.get(i, 6);
                     }
                     repAreaTrabajo = dfGris.retain("PRIOR_DIV", "Sin_IGV").groupBy("PRIOR_DIV").sum();
+                    List<Object> rowAdmin = new ArrayList<>();
+                    rowAdmin.add("Administracion");
+                    rowAdmin.add(0.0);
+                    Double totalAdmin = (Double)dfGastAdmin.get(18, 2)*difDias/30;
+                    rowAdmin.add(totalAdmin);
                     totalGeneral = new ArrayList<>();
                     totalGeneral.add(totalPintura);
                     totalGeneral.add(totalPlanchado);
@@ -492,13 +518,12 @@ public class ExcelWS {
                     repAreaTrabajo.rename("PRIOR_DIV", "Area de Trabajo");
                     repAreaTrabajo.rename("Sin_IGV", "Total Ingresos");
                     repAreaTrabajo.add("Total Egresos", totalGeneral);
+                    repAreaTrabajo = repAreaTrabajo.append(rowAdmin);
                     repAreaTrabajo = repAreaTrabajo.resetIndex();
                     System.out.println(repAreaTrabajo);
-                    titulo = "Rep. por Area de Trabajo";
-                    nombres.add(titulo);
-                    dfs.add(repAreaTrabajo);
                     break;
             }
+            
             
             //Para la tabla cliente:
             DataFrame dfCliente = dfOT.retain("No OT", "RUC", "Cliente", "Tipo de Cliente");
@@ -521,8 +546,8 @@ public class ExcelWS {
             tablaCliente.add("CORREO", a);
             tablaCliente = tablaCliente.unique("NOMBRE CLIENTE");
             //System.out.println(tablaCliente);
-            ClienteDAO daoCliente = DBController.controller.getClienteDAO();
-            daoCliente.guardarBatch(tablaCliente);
+            //ClienteDAO daoCliente = DBController.controller.getClienteDAO();
+            //daoCliente.guardarBatch(tablaCliente);
     //
             //Para la tabla Vehiculo
             DataFrame dfVehiculo = dfOT.retain("No OT", "Placa", "Marca", "Modelo", "Cliente");
@@ -538,37 +563,40 @@ public class ExcelWS {
             tablaVehiculo.add("TIPO VEHICULO", tipoVeh);
             tablaVehiculo.add("CLIENTE", dfVehiculo.col("Cliente"));
             tablaVehiculo = tablaVehiculo.unique("PLACA");
-            System.out.println(tablaVehiculo);
-            VehiculoDAO daoVehiculo = DBController.controller.getVehiculoDAO();
-            daoVehiculo.guardarBatch(tablaVehiculo);
+            //System.out.println(tablaVehiculo);
+            //VehiculoDAO daoVehiculo = DBController.controller.getVehiculoDAO();
+            //daoVehiculo.guardarBatch(tablaVehiculo);
 
-            if(tipoReporte.equals("areaTrabajo")){
-                AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
-                daoAreaTrabajo.guardarBatch(repAreaTrabajo);
-            }
-            else {
+            if(!tipoReporte.equals("areaTrabajo")){
                 Double totalPlanchado, totalPintura, totalMecanica;
-                totalPlanchado = totalPintura = totalMecanica = 0.0;
-                for (int i = 0;i<lastRowOT; i++){
-                    totalPlanchado += (Double)dfOT.get(i, 9);
-                    totalPintura += (Double)dfOT.get(i, 10);
-                    totalMecanica += (Double)dfOT.get(i, 8) 
-                                   + (Double)dfOT.get(i, 7)
-                                   + (Double)dfOT.get(i, 6)
-                                   + (Double)dfOT.get(i, 5);
-                }
-                repAreaTrabajo = dfGris.retain("PRIOR_DIV", "Sin_IGV").groupBy("PRIOR_DIV").sum();
-                List<Object> totalGeneral = new ArrayList<>();
-                totalGeneral.add(totalPintura);
-                totalGeneral.add(totalPlanchado);
-                totalGeneral.add(totalMecanica);
-                repAreaTrabajo.rename("PRIOR_DIV", "Area de Trabajo");
-                repAreaTrabajo.rename("Sin_IGV", "Total Ingresos");
-                repAreaTrabajo.add("Total Egresos", totalGeneral);
-                repAreaTrabajo = repAreaTrabajo.resetIndex();
-                AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
-                daoAreaTrabajo.guardarBatch(repAreaTrabajo);
+                    totalPlanchado = totalPintura = totalMecanica = 0.0;
+                    for (int i = 0;i<lastRowOT; i++){
+                        totalPlanchado += (Double)dfOT.get(i, 10);
+                        totalPintura += (Double)dfOT.get(i, 11);
+                        totalMecanica += (Double)dfOT.get(i, 9) 
+                                       + (Double)dfOT.get(i, 8)
+                                       + (Double)dfOT.get(i, 7)
+                                       + (Double)dfOT.get(i, 6);
+                    }
+                    repAreaTrabajo = dfGris.retain("PRIOR_DIV", "Sin_IGV").groupBy("PRIOR_DIV").sum();
+                    List<Object> rowAdmin = new ArrayList<>();
+                    rowAdmin.add("Administracion");
+                    rowAdmin.add(0.0);
+                    Double totalAdmin = (Double)dfGastAdmin.get(18, 2)*difDias/30;
+                    rowAdmin.add(totalAdmin);
+                    List<Object> totalGeneral = new ArrayList<>();
+                    totalGeneral.add(totalPintura);
+                    totalGeneral.add(totalPlanchado);
+                    totalGeneral.add(totalMecanica);
+                    repAreaTrabajo.rename("PRIOR_DIV", "Area de Trabajo");
+                    repAreaTrabajo.rename("Sin_IGV", "Total Ingresos");
+                    repAreaTrabajo.add("Total Egresos", totalGeneral);
+                    repAreaTrabajo = repAreaTrabajo.append(rowAdmin);
+                    repAreaTrabajo = repAreaTrabajo.resetIndex();
+                    System.out.println(repAreaTrabajo);
             }
+            //AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
+            //daoAreaTrabajo.guardarBatch(repAreaTrabajo);
             
             //IMPRIMIR TABLAS Y REPORTES
             
@@ -579,6 +607,7 @@ public class ExcelWS {
             int idExcelSalida = insertarArchivoSalida(salida);
             reporte.setFechaInicio(fecha1);
             reporte.setFechaFin(fecha2);
+            reporte.setFechaCreacion(new Date());
             reporte.getSede().setId(idSede);
             reporte.setIdExcelSalida(idExcelSalida);
             reporte.setIdExcelEntrada(idEntrada);

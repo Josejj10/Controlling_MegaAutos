@@ -236,6 +236,7 @@ public class UsuarioMySQL implements UsuarioDAO {
                 usuario.setTipoUsuario(rs.getString("TIPO_USUARIO"));
                 usuario.setCorreo(rs.getString("CORREO"));
                 usuario.setPassword(rs.getString("PASSWRD"));
+                usuario.setActivo(rs.getInt("ACTIVO"));
                 //usuario.setFechaCreado(rs.getDate("FECHA_CREACION"));
                 usuarios.add(usuario);
             CallableStatement cs2 = con.prepareCall("{call LISTAR_PERMISOS_X_USUARIO(?)}");

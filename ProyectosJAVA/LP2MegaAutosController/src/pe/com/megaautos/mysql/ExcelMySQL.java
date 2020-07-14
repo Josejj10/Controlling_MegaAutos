@@ -85,7 +85,7 @@ public class ExcelMySQL implements ExcelDAO {
             cs.setBytes("_ARCHIVO", excel.getArchivo());            
             cs.setInt("_TIPO", 1);
             java.sql.Date fechaIni = new java.sql.Date(excel.getFechaIni().getTime());
-            cs.setDate("_FECHA_INICIO", fechaIni);
+            cs.setDate("_FECHA_INI", fechaIni);
             java.sql.Date fechaFin = new java.sql.Date(excel.getFechaFin().getTime());
             cs.setDate("_FECHA_FIN", fechaFin);            
             cs.setInt("_ID_SEDE", excel.getSede().getId());
@@ -145,7 +145,7 @@ public class ExcelMySQL implements ExcelDAO {
         try{
             con = DBDataSource.getConnection();
             CallableStatement cs = con.prepareCall(
-                    "{call BUSCAR_EXCEL(?,?,?,?)}");            
+                    "{call BUSCAR_ARCHIVO(?,?,?,?)}");            
             cs.setInt("_TIPO", 1);            
             java.sql.Date fechaIni = new java.sql.Date(fecha1.getTime());
             cs.setDate("_FECHA_INICIO", fechaIni);
@@ -154,12 +154,13 @@ public class ExcelMySQL implements ExcelDAO {
             cs.setInt("_ID_SEDE", idSede); 
             ResultSet rs = cs.executeQuery(); 
             while(rs.next()){
+                excel.setId(rs.getInt("ID_ARCHIVO"));
                 excel.setArchivo(rs.getBytes("ARCHIVO"));
                 excel.setFechaIni(rs.getDate("FECHA_INICIO"));
                 excel.setFechaFin(rs.getDate("FECHA_FIN"));
                 excel.getSede().setId(idSede);
             }
-            con.close();
+            
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());
@@ -175,6 +176,36 @@ public class ExcelMySQL implements ExcelDAO {
         return excel;    
     }
     
-    
+    @Override
+    public Excel buscarPorId(int idExcel) {
+        Excel excel = new Excel();
+        try{
+            con = DBDataSource.getConnection();
+            CallableStatement cs = con.prepareCall(
+                    "{call BUSCAR_ARCHIVO_ID(?)}");            
+            cs.setInt("_ID_ARCHIVO", idExcel);
+            ResultSet rs = cs.executeQuery(); 
+            while(rs.next()){                
+                excel.setId(rs.getInt("ID_ARCHIVO"));
+                excel.setArchivo(rs.getBytes("ARCHIVO"));
+                excel.setFechaIni(rs.getDate("FECHA_INICIO"));
+                excel.setFechaFin(rs.getDate("FECHA_FIN"));
+                excel.getSede().setId(rs.getInt("ID_SEDE"));
+            }
+            con.close();
+        }
+        catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }
+            catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }         
+
+        return excel;        
+    }
     
 }

@@ -55,15 +55,18 @@ namespace LP2MegaAutos
             frmResumenReporte frmReporte = new frmResumenReporte();
             if (frmReporte.ShowDialog() == DialogResult.OK)
             {
-                // Hacer algo
-                // TODO llamar al DAO
+                // TODO dao
             }
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             frmGenerarReporte pgr = new frmGenerarReporte(this._btnSeleccionado);
             if (pgr.ShowDialog() == DialogResult.OK)
-                MessageBox.Show("OK");
+            {
+                // TODO daoReporte llamar a procesar
+
+                // Mostrar reporte generado
+            }
             
         }
 

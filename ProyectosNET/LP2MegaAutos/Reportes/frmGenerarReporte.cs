@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using LP2MegaAutos.Framework;
 using LP2MegaAutos.VentanasPrincipales;
+using LP2MegaAutos.ServicioExcel;
+using LP2MegaAutos.ServicioSede;
 
 namespace LP2MegaAutos
 {
@@ -144,10 +146,60 @@ namespace LP2MegaAutos
         }
         #endregion Tipo Reporte
 
+        private void getFirstDayMonth(ref string fdm, ref string ldm)
+        {
+            var firstDayOfMonth = new DateTime(dtpInicio.Value.Year, dtpInicio.Value.Month, 1);
+            var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1);
+            fdm = firstDayOfMonth.ToString("dd-MM-yyyy");
+            ldm = lastDayOfMonth.ToString("dd-MM-yyyy");
+        }
+        
+        private void getFirstDayYear(ref string fdm, ref string ldm)
+        {
+            var firstDay = new DateTime(dtpInicio.Value.Year, dtpInicio.Value.Month, 1);
+            var lastDay  = firstDay.AddYears(1).AddDays(-1);
+            fdm = firstDay.ToString("dd-MM-yyyy");
+            ldm = lastDay.ToString("dd-MM-yyyy");
+        }
+
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
+            // Preprocesar los datos
+            ServicioSede.sede sede = (ServicioSede.sede)cboSede.SelectedItem;
+            int idUsuario = frmPrincipal.Usuario.id;
+            string fechaInicio = "";
+            string fechaFin = "";
+            string stringConfirmacion = $"¿Desea generar un reporte {_periodoReporte} por {_tipoReporte} de la sede {sede.distrito}";
+            
+            switch (_periodoReporte)
+            {
+                case "Diario":
+                    fechaInicio = fechaFin = dtpFechaFin.Value.ToString("dd-MM-yyyy");
+                    break;
+                case "Mensual":
+                    getFirstDayMonth(ref fechaInicio, ref fechaFin);
+                    break;
+                case "Anual":
+                    getFirstDayYear(ref fechaInicio, ref fechaFin);
+                    break;
+                default: // Otro
+                    fechaInicio = dtpInicio.Value.ToString("dd-MM-yyyy");
+                    fechaFin = dtpFechaFin.Value.ToString("dd-MM-yyyy");
+                    stringConfirmacion += $" del {fechaInicio} al {fechaFin}";
+                    break; 
+            }
+            stringConfirmacion += "?";         
+            
+            // Confirmar los datos del reporte
+            frmMessageBox confirmacion = new frmMessageBox(stringConfirmacion, MessageBoxButtons.OKCancel, "Confirmar Creación");
+            if (confirmacion.ShowDialog() != DialogResult.OK) return;
+            
+
+            // Si acepta, generar
+            ExcelWSClient daoCliente = new ExcelWSClient();
+            daoCliente.generarReporte(fechaInicio, fechaFin, _tipoReporte, sede.id, idUsuario);
+            
             this.DialogResult = DialogResult.OK;
-            // TODO Abrir Reporte Creado 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

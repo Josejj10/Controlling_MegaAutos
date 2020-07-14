@@ -208,7 +208,7 @@
             this.rnd_cancelar.Name = "rnd_cancelar";
             this.rnd_cancelar.PorcLuzColorBorde = 0;
             this.rnd_cancelar.Size = new System.Drawing.Size(180, 35);
-            this.rnd_cancelar.TabIndex = 63;
+            this.rnd_cancelar.TabIndex = 65;
             this.tagsExtender1.SetTag2(this.rnd_cancelar, null);
             this.tagsExtender1.SetTag3(this.rnd_cancelar, null);
             this.tagsExtender1.SetTagFontName(this.rnd_cancelar, fontsD.Ninguno);

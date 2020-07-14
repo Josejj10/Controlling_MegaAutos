@@ -162,7 +162,7 @@
             this.pnl_descripcion.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_descripcion.Name = "pnl_descripcion";
             this.pnl_descripcion.Size = new System.Drawing.Size(292, 145);
-            this.pnl_descripcion.TabIndex = 3;
+            this.pnl_descripcion.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.pnl_descripcion, null);
             this.tagsExtender1.SetTag3(this.pnl_descripcion, null);
             this.tagsExtender1.SetTagFontName(this.pnl_descripcion, fontsD.Ninguno);

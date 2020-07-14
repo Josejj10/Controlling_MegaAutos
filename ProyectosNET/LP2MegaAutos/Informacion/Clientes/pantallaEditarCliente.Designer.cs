@@ -319,8 +319,8 @@
             this.rnd_guardar.ArcRadiusBorde = 5;
             this.rnd_guardar.ArcRadiusPanel = 5;
             this.rnd_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
-            this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
+            this.rnd_guardar.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
+            this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_guardar.Location = new System.Drawing.Point(114, 370);
@@ -331,7 +331,7 @@
             this.rnd_guardar.Name = "rnd_guardar";
             this.rnd_guardar.PorcLuzColorBorde = 0;
             this.rnd_guardar.Size = new System.Drawing.Size(180, 35);
-            this.rnd_guardar.TabIndex = 65;
+            this.rnd_guardar.TabIndex = 63;
             this.tagsExtender1.SetTag2(this.rnd_guardar, null);
             this.tagsExtender1.SetTag3(this.rnd_guardar, null);
             this.tagsExtender1.SetTagFontName(this.rnd_guardar, fontsD.Ninguno);

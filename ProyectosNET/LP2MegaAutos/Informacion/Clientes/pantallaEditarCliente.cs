@@ -24,6 +24,7 @@ namespace LP2MegaAutos
             txt_NombreCliente.Text = "Agregar nombre del cliente...";
             this.btnEditar.Visible = false;
             this.btnEliminar.Visible = false;
+            this.txt_NombreCliente.ForeColor = Colores.LowContrast;
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
@@ -188,6 +189,7 @@ namespace LP2MegaAutos
                     rnd_guardar.ColorBorde
                     = Colores.Rosa;
 
+            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
             btnEditar.BackgroundImage = Resources.Cancelar;
         }
 

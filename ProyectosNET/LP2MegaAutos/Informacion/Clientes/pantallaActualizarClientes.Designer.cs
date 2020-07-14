@@ -276,7 +276,7 @@
             this.btnReciente.Location = new System.Drawing.Point(3, 3);
             this.btnReciente.Name = "btnReciente";
             this.btnReciente.Size = new System.Drawing.Size(124, 29);
-            this.btnReciente.TabIndex = 8;
+            this.btnReciente.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.btnReciente, null);
             this.tagsExtender1.SetTag3(this.btnReciente, null);
             this.tagsExtender1.SetTagFontName(this.btnReciente, fontsD.Montserrat);
@@ -327,7 +327,7 @@
             this.btnAntiguo.Location = new System.Drawing.Point(3, 3);
             this.btnAntiguo.Name = "btnAntiguo";
             this.btnAntiguo.Size = new System.Drawing.Size(124, 29);
-            this.btnAntiguo.TabIndex = 7;
+            this.btnAntiguo.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.btnAntiguo, null);
             this.tagsExtender1.SetTag3(this.btnAntiguo, null);
             this.tagsExtender1.SetTagFontName(this.btnAntiguo, fontsD.Montserrat);
@@ -378,7 +378,7 @@
             this.btnZA.Location = new System.Drawing.Point(3, 3);
             this.btnZA.Name = "btnZA";
             this.btnZA.Size = new System.Drawing.Size(124, 29);
-            this.btnZA.TabIndex = 6;
+            this.btnZA.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.btnZA, null);
             this.tagsExtender1.SetTag3(this.btnZA, null);
             this.tagsExtender1.SetTagFontName(this.btnZA, fontsD.Montserrat);
@@ -430,7 +430,7 @@
             this.btnAZ.Location = new System.Drawing.Point(3, 3);
             this.btnAZ.Name = "btnAZ";
             this.btnAZ.Size = new System.Drawing.Size(124, 29);
-            this.btnAZ.TabIndex = 5;
+            this.btnAZ.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.btnAZ, null);
             this.tagsExtender1.SetTag3(this.btnAZ, null);
             this.tagsExtender1.SetTagFontName(this.btnAZ, fontsD.Montserrat);

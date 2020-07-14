@@ -168,7 +168,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 41);
-            this.panel2.TabIndex = 41;
+            this.panel2.TabIndex = 43;
             this.tagsExtender1.SetTag2(this.panel2, null);
             this.tagsExtender1.SetTag3(this.panel2, null);
             this.tagsExtender1.SetTagFontName(this.panel2, fontsD.Ninguno);
@@ -273,7 +273,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(292, 41);
-            this.panel3.TabIndex = 41;
+            this.panel3.TabIndex = 44;
             this.tagsExtender1.SetTag2(this.panel3, null);
             this.tagsExtender1.SetTag3(this.panel3, null);
             this.tagsExtender1.SetTagFontName(this.panel3, fontsD.Ninguno);
@@ -794,7 +794,7 @@
             this.rnd_Reestablecer.Name = "rnd_Reestablecer";
             this.rnd_Reestablecer.PorcLuzColorBorde = 0;
             this.rnd_Reestablecer.Size = new System.Drawing.Size(208, 30);
-            this.rnd_Reestablecer.TabIndex = 69;
+            this.rnd_Reestablecer.TabIndex = 61;
             this.tagsExtender1.SetTag2(this.rnd_Reestablecer, null);
             this.tagsExtender1.SetTag3(this.rnd_Reestablecer, null);
             this.tagsExtender1.SetTagFontName(this.rnd_Reestablecer, fontsD.Ninguno);
@@ -844,7 +844,7 @@
             this.rpCambiarPassword.Name = "rpCambiarPassword";
             this.rpCambiarPassword.PorcLuzColorBorde = 0;
             this.rpCambiarPassword.Size = new System.Drawing.Size(208, 30);
-            this.rpCambiarPassword.TabIndex = 70;
+            this.rpCambiarPassword.TabIndex = 42;
             this.tagsExtender1.SetTag2(this.rpCambiarPassword, null);
             this.tagsExtender1.SetTag3(this.rpCambiarPassword, null);
             this.tagsExtender1.SetTagFontName(this.rpCambiarPassword, fontsD.Ninguno);

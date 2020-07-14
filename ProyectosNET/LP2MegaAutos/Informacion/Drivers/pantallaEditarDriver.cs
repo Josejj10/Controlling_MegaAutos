@@ -26,6 +26,7 @@ namespace LP2MegaAutos
             _driver = new ServicioDriver.driver();
             this.btnEditar.Visible = false;
             this.btnEliminar.Visible = false;
+            this.lblDriver.ForeColor = Colores.LowContrast;
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
@@ -130,6 +131,7 @@ namespace LP2MegaAutos
                     = Colores.Rosa;
 
             lblDriver.Enabled = true;
+            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
             btnEditar.BackgroundImage = Resources.Cancelar;
         }
 

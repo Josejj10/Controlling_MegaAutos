@@ -122,10 +122,10 @@ namespace LP2MegaAutos
 
                 // Suscribir todos
                 ims1.click += new itemMenuStrip.ButtonClickEventHandler(
-                    BotonesDinamicosHelper.asignarBoton(per[0],btnMenu, imgs[1],
+                    BotonesDinamicosHelper.asignarBoton(per[0],btnMenu, imgs[0],
                     panelMenu, cnt));
                 ims2.click += new itemMenuStrip.ButtonClickEventHandler(
-                    BotonesDinamicosHelper.asignarBoton(per[1],btnMenu, imgs[2],
+                    BotonesDinamicosHelper.asignarBoton(per[1],btnMenu, imgs[1],
                     panelMenu, cnt));
                 ims3.click += new itemMenuStrip.ButtonClickEventHandler(
                     BotonesDinamicosHelper.asignarBoton(per[2],btnMenu, imgs[2],

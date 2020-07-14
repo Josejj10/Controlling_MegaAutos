@@ -31,10 +31,33 @@ namespace LP2MegaAutos
             txt_Buscar.Text += textoBuscar;
         }
 
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            pantallaEditarUsuario pas = new pantallaEditarUsuario();
+
+            if (pas.ShowDialog() == DialogResult.OK)
+            {
+                // Agregar usuario
+                usuario _usuario = pas.Usuario;
+                frmMessageBox frm;
+                if (daoUsuario.insertarUsuario(_usuario) == 0)
+                { // Ta mal
+                    frm = new frmMessageBox("No se pudo insertar.", MessageBoxButtons.OK);
+                    frm.ShowDialog();
+                    return;
+                }
+                else // Inserto bien
+                    frm = new frmMessageBox("Se inserto correctamente el usuario " + _usuario.nombre, MessageBoxButtons.OK);
+                _usuarios.Add(_usuario);
+                frm.ShowDialog();
+                btnAZ_Click(btnAZ, new EventArgs());
+            }
+        }
+
         #region lista
         public void inicializarItemsLista()
         {
-            quitarItemsLista();
+            //quitarItemsLista();
             if (viendoActivo)
                 _usuarios = daoUsuario.listarUsuarios().ToList();
             else
@@ -200,29 +223,6 @@ namespace LP2MegaAutos
         #endregion Botones Filtros
     
         #region Buscar
-        private void btn_Agregar_Click(object sender, EventArgs e)
-        {
-            pantallaEditarUsuario pas = new pantallaEditarUsuario();
-
-            if (pas.ShowDialog() == DialogResult.OK)
-            {
-                // Agregar usuario
-                usuario _usuario= pas.Usuario;
-                frmMessageBox frm;
-                if (daoUsuario.insertarUsuario(_usuario) == 0)
-                { // Ta mal
-                    frm = new frmMessageBox("No se pudo insertar.",MessageBoxButtons.OK);
-                    frm.ShowDialog();
-                    return;
-                }
-                else // Inserto bien
-                    frm = new frmMessageBox("Se inserto correctamente el usuario " + _usuario.nombre,MessageBoxButtons.OK);
-                _usuarios.Add(_usuario);
-                frm.ShowDialog();
-                btnAZ_Click(btnAZ, new EventArgs());
-            }
-        }
-
         private void crearItemsListaBuscar(List<usuario> _usuariosB)
         {
             if (_usuariosB == null) return;
@@ -232,10 +232,9 @@ namespace LP2MegaAutos
             }
         }
 
-        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode != Keys.Enter) return;
-            // Tenemos la lista usuarios
+            // Se tiene la lista _usuarios localmente
             List<usuario> _usuariosBuscados = new List<usuario>();
             foreach (usuario u in _usuarios)
                 if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
@@ -244,18 +243,33 @@ namespace LP2MegaAutos
                     _usuariosBuscados.Add(u);
 
             quitarItemsLista();
+            if(_usuariosBuscados.Count == 0)
+            {
+                frmMessageBox frm = new frmMessageBox("No se hallaron resultados para la búsqueda.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                _usuariosBuscados = _usuarios;
+                txt_Buscar.Text = string.Empty;
+            }
             crearItemsListaBuscar(_usuariosBuscados);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
+        }
+
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            btnBuscar_Click(btnBuscar, e);
         }
 
         #region Txt Buscar
         private void txt_Buscar_Enter(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarEnter(txt_Buscar, textoBuscar); //AGREGADO PARA BUSCAR
+            pantallaListasHelper.buscarEnter(txt_Buscar, textoBuscar); 
         }
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
-            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
+            if (btnBuscar.Focused) return;
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
         }
         #endregion Txt Buscar
 
@@ -269,5 +283,7 @@ namespace LP2MegaAutos
             lbl_ListaServicios.Text = this.viendoActivo ? "Usuarios Activos": "Usuarios Inactivos";
             inicializarItemsLista();
         }
+
+       
     }
 }

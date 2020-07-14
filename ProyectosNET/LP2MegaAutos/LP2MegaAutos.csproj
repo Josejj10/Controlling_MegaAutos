@@ -930,6 +930,7 @@
     <None Include="Resources\toggle_modo_nocturno_activado.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Buscar.png" />
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\equis.png" />
     <None Include="Connected Services\ServicioUsuario\configuration91.svcinfo" />

@@ -43,8 +43,30 @@ namespace LP2MegaAutos
 
         private void btnExaminar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (ofdArchivo1.ShowDialog() == DialogResult.OK)
+                {
+                    archivoSeleccionado1 = ofdArchivo1.FileName;
+                    txtArchivo1.Text = archivoSeleccionado1;
+                    FileStream fs = new FileStream(archivoSeleccionado1, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
 
+                    // Asignamos el archivo al objeto
+                    // Habilitar el boton guardar
+                    this._excelEnviado.archivo = br.ReadBytes((int)fs.Length);
+                    br.Close();
+                    fs.Close();
+                    this.btn_guardar.Enabled = this.btnDescargar.Enabled = true;
+                    this.btn_guardar.Cursor = Cursors.Hand;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo valido", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {

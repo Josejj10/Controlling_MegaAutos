@@ -23,9 +23,6 @@ namespace LP2MegaAutos.Framework.UserControls
             DarkMode.agregarExcepcion("lblUltimoReporte");
         }
 
-
-        // TODO Agregar Tags de Font
-
         #region Propiedades
 
         [Description("Titulo"), Category("Ultimo Reporte")]

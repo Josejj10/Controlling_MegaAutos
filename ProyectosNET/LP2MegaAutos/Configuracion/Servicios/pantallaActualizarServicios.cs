@@ -103,7 +103,6 @@ namespace LP2MegaAutos
                 _servicios.Remove(serv);
                 _servicios.Add(s);
                 btnAZ_Click(btnAZ, new EventArgs());
-                // todo actualizar FechaUltimaModificacion en BD
             }
             else if (d == DialogResult.Retry)
             {
@@ -111,7 +110,6 @@ namespace LP2MegaAutos
                 daoServicio.eliminarServicio(serv.id);
                 flpServicios.Controls.RemoveByKey("il" + serv.id);
                 _servicios.Remove(serv);
-                // TODO seleccionar organizar segun el boton seleccionado
                 btnAZ_Click(btnAZ, e);
             }
         }

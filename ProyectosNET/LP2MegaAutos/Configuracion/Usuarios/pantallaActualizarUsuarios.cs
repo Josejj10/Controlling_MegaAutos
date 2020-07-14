@@ -149,7 +149,6 @@ namespace LP2MegaAutos
                 _usuarios.Remove(usu);
                 _usuarios.Add(u);
                 btnAZ_Click(btnAZ, new EventArgs());
-                // todo actualizar FechaUltimaModificacion en BD
             }
             else if(d == DialogResult.Retry)
             {
@@ -169,7 +168,6 @@ namespace LP2MegaAutos
                 frm.ShowDialog();
                 flpUsuarios.Controls.RemoveByKey("il" + usu.id);
                 _usuarios.Remove(usu);
-                // TODO seleccionar organizar segun el boton seleccionado
                 btnAZ_Click(btnAZ, e);
             }
         }

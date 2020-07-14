@@ -71,6 +71,8 @@ namespace LP2MegaAutos
             false;
             _activando = true;
             btn_guardar.Text = "Activar";
+            btn_guardar.Enabled = true;
+            rnd_guardar.ColorBorde = rnd_guardar.ColorPanel = Colores.Rosa;
         }
 
         #region title_bar
@@ -137,7 +139,7 @@ namespace LP2MegaAutos
             {
                 foreach (ePermisos e in Enum.GetValues(typeof(ePermisos)))
                 {
-                    if (e == ePermisos.All) continue;
+                    if (e == ePermisos.All || e == ePermisos.Drivers) continue;
                     itemListaCuadrado il = crearitemListaPermiso(e.ToString(), e);
                     BotonesDinamicosHelper.agregarImgFondo(e, il);
                     flpPermisos.Controls.Add(il);
@@ -245,7 +247,7 @@ namespace LP2MegaAutos
             if (_activando)
             {
                 f = new frmEliminar("activar el usuario " + txtNombre.Text, "Activar Usuario");
-                if (f.ShowDialog() != DialogResult.OK) ;
+                if (f.ShowDialog() != DialogResult.OK) return;
                 this.DialogResult = DialogResult.Retry;
                 return;
             }

@@ -75,7 +75,6 @@ namespace LP2MegaAutos
                 _sedes.Remove(sede);
                 _sedes.Add(_sede);
                 btnAZ_Click(btnAZ, new EventArgs());
-                // todo actualizar FechaUltimaModificacion en BD
             }
             else if (d == DialogResult.Retry)
             {
@@ -84,7 +83,6 @@ namespace LP2MegaAutos
                 organizarAZ();
                 // Eliminar
                 _sedes.Remove(sede);
-                // TODO seleccionar organizar segun el boton seleccionado
                 btnAZ_Click(btnAZ, e);
             }
         }

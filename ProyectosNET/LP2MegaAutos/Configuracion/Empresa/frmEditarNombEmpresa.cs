@@ -81,7 +81,6 @@ namespace LP2MegaAutos.Configuracion.Empresa
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            // TODO actualizar nombre de la empresa
             if (!validarEmpresa())
                 return;
 
@@ -93,10 +92,11 @@ namespace LP2MegaAutos.Configuracion.Empresa
                 _empresa.nombre = txt_nombEmpresa.Text;
                 daoEmpresa.actualizarEmpresa(_empresa);
                 this.DialogResult = DialogResult.OK;
+                return;
             }
-            //confirmar = new frmMessageBox(
-            //    "No se realizo ningún cambio.", MessageBoxButtons.OK);
-            //confirmar.ShowDialog();
+            confirmar = new frmMessageBox(
+                "No se realizo ningún cambio.", MessageBoxButtons.OK);
+            confirmar.ShowDialog();
         }
 
         private bool validarEmpresa()

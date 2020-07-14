@@ -147,7 +147,7 @@ namespace LP2MegaAutos
         private void toggleComponentes()
         {
             bool en = txt_NombreCliente.Enabled = txt_NumeroDocumento.Enabled =
-                cboTipoDocumento.Enabled = txt_Telefono.Enabled = txt_Correo.Enabled =
+                txt_Telefono.Enabled = txt_Correo.Enabled =
                 cboTipoCliente.Enabled = btn_guardar.Enabled
                 = !txt_NombreCliente.Enabled;
             
@@ -157,7 +157,7 @@ namespace LP2MegaAutos
             {
                 // No habilitado
                 txt_NombreCliente.ForeColor = txt_NumeroDocumento.ForeColor =
-                    cboTipoDocumento.ForeColor = txt_Telefono.ForeColor =
+                    txt_Telefono.ForeColor =
                     txt_Correo.ForeColor = cboTipoCliente.ForeColor =
                     rnd_color_1.ColorPanel = 
                     roundedPanel1.ColorPanel =
@@ -180,7 +180,7 @@ namespace LP2MegaAutos
             // Habilitado
             txt_NombreCliente.ForeColor = Colores.HighContrast;
             txt_NumeroDocumento.ForeColor =
-               cboTipoDocumento.ForeColor = txt_Telefono.ForeColor =
+              txt_Telefono.ForeColor =
                txt_Correo.ForeColor = cboTipoCliente.ForeColor = 
                Colores.HighContrast;
 
@@ -215,9 +215,7 @@ namespace LP2MegaAutos
         private bool clienteValido()
         {
             double resultado = 0;
-            bool isDouble = false;
-            isDouble = Double.TryParse(txt_NumeroDocumento.Text, out resultado);
-
+            
             // Sacapalabras al txt
             if (string.IsNullOrEmpty(txt_NombreCliente.Text) || txt_NombreCliente.Text == "Agregar nombre del cliente...")
             {
@@ -240,7 +238,7 @@ namespace LP2MegaAutos
                 return false;
             }
 
-            if (isDouble == false)
+            if (Double.TryParse(txt_NumeroDocumento.Text, out resultado) == false)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un numero de documento correcto", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -315,5 +313,22 @@ namespace LP2MegaAutos
             return true;
         }
 
+        private void txt_NumeroDocumento_Leave(object sender, EventArgs e)
+        {
+            double resultado;
+            if (Double.TryParse(txt_NumeroDocumento.Text, out resultado) == false)
+                return;
+            
+            // Verificar los digitos del numero de documetno
+            if (txt_NumeroDocumento.Text.Length == 8)
+                cboTipoDocumento.SelectedIndex = 0;
+
+            if (txt_NumeroDocumento.Text.Length == 11)
+                cboTipoDocumento.SelectedIndex = 1;
+
+            if (txt_NumeroDocumento.Text.Length == 9)
+                cboTipoDocumento.SelectedIndex = 2;
+
+        }
     }
 }

@@ -22,7 +22,9 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             flpSedes.AutoScroll = true;
+            textoBuscar = "sede por nombre o distrito";
             daoSede = new ServicioSede.SedeWSClient();
+            txt_Buscar.Text += textoBuscar;
         }
 
         #region itemLista
@@ -173,6 +175,7 @@ namespace LP2MegaAutos
 
         private void txt_Buscar_Leave(object sender, EventArgs e)
         {
+            if (btnBuscar.Focused) return;
             pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);//AGREGADO PARA BUSCAR
         }
         #endregion Botones Filtros
@@ -190,17 +193,40 @@ namespace LP2MegaAutos
         private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter) return;
+            btnBuscar_Click(btnBuscar, e);
             // Tenemos la lista usuarios
-            List<sede> _usuariosBuscados = new List<sede>();
-            foreach (sede u in _sedes)
-                if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
-                    u.distrito.Contains(txt_Buscar.Text.ToUpper()) ||
-                    u.direccion.Contains(txt_Buscar.Text.ToUpper()))
-                    _usuariosBuscados.Add(u);
+            //List<sede> _usuariosBuscados = new List<sede>();
+            //foreach (sede u in _sedes)
+            //    if (u.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+            //        u.distrito.Contains(txt_Buscar.Text.ToUpper()) ||
+            //        u.direccion.Contains(txt_Buscar.Text.ToUpper()))
+            //        _usuariosBuscados.Add(u);
 
-            quitarItemsLista();
-            crearItemsListaBuscar(_usuariosBuscados);
+            //quitarItemsLista();
+            //crearItemsListaBuscar(_usuariosBuscados);
         }
         #endregion Buscar
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<sede> _sedesBuscados = new List<sede>();
+            foreach (sede s in _sedes)
+                if (s.nombre.Contains(txt_Buscar.Text.ToUpper()) ||
+                    s.nombre.Contains(txt_Buscar.Text) ||
+                    s.distrito.Contains(txt_Buscar.Text.ToUpper()) ||
+                    s.distrito.Contains(txt_Buscar.Text))
+                    _sedesBuscados.Add(s);
+
+            quitarItemsLista();
+            if (_sedesBuscados.Count == 0)
+            {
+                frmMessageBox frm = new frmMessageBox("No se hallaron resultados para la búsqueda.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                _sedesBuscados = _sedes;
+                txt_Buscar.Text = string.Empty;
+            }
+            crearItemsListaBuscar(_sedesBuscados);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
+        }
     }
 }

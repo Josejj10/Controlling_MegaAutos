@@ -145,14 +145,14 @@
             this.lbl_teléfono.Location = new System.Drawing.Point(4, 2);
             this.lbl_teléfono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_teléfono.Name = "lbl_teléfono";
-            this.lbl_teléfono.Size = new System.Drawing.Size(57, 16);
+            this.lbl_teléfono.Size = new System.Drawing.Size(84, 16);
             this.lbl_teléfono.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_teléfono, null);
             this.tagsExtender1.SetTag3(this.lbl_teléfono, null);
             this.tagsExtender1.SetTagFontName(this.lbl_teléfono, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_teléfono, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_teléfono, System.Drawing.FontStyle.Bold);
-            this.lbl_teléfono.Text = "Teléfono";
+            this.lbl_teléfono.Text = "Teléfono fijo*";
             // 
             // pnl_codServ
             // 
@@ -266,14 +266,14 @@
             this.lbl_distrito.Location = new System.Drawing.Point(4, 2);
             this.lbl_distrito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_distrito.Name = "lbl_distrito";
-            this.lbl_distrito.Size = new System.Drawing.Size(52, 16);
+            this.lbl_distrito.Size = new System.Drawing.Size(58, 16);
             this.lbl_distrito.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_distrito, null);
             this.tagsExtender1.SetTag3(this.lbl_distrito, null);
             this.tagsExtender1.SetTagFontName(this.lbl_distrito, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_distrito, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_distrito, System.Drawing.FontStyle.Bold);
-            this.lbl_distrito.Text = "Distrito";
+            this.lbl_distrito.Text = "Distrito*";
             // 
             // panel2
             // 
@@ -342,14 +342,14 @@
             this.lbl_direccion.Location = new System.Drawing.Point(4, 2);
             this.lbl_direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_direccion.Name = "lbl_direccion";
-            this.lbl_direccion.Size = new System.Drawing.Size(62, 16);
+            this.lbl_direccion.Size = new System.Drawing.Size(68, 16);
             this.lbl_direccion.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_direccion, null);
             this.tagsExtender1.SetTag3(this.lbl_direccion, null);
             this.tagsExtender1.SetTagFontName(this.lbl_direccion, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_direccion, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_direccion, System.Drawing.FontStyle.Bold);
-            this.lbl_direccion.Text = "Dirección";
+            this.lbl_direccion.Text = "Dirección*";
             // 
             // title_bar
             // 

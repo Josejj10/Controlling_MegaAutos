@@ -216,14 +216,14 @@
             this.lbl_Telefono.Location = new System.Drawing.Point(4, 2);
             this.lbl_Telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Telefono.Name = "lbl_Telefono";
-            this.lbl_Telefono.Size = new System.Drawing.Size(57, 16);
+            this.lbl_Telefono.Size = new System.Drawing.Size(49, 16);
             this.lbl_Telefono.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Telefono, null);
             this.tagsExtender1.SetTag3(this.lbl_Telefono, null);
             this.tagsExtender1.SetTagFontName(this.lbl_Telefono, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_Telefono, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_Telefono, System.Drawing.FontStyle.Bold);
-            this.lbl_Telefono.Text = "Teléfono";
+            this.lbl_Telefono.Text = "Celular";
             // 
             // panel1
             // 
@@ -305,14 +305,14 @@
             this.lbl_NumeroDocumento.Location = new System.Drawing.Point(4, 2);
             this.lbl_NumeroDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NumeroDocumento.Name = "lbl_NumeroDocumento";
-            this.lbl_NumeroDocumento.Size = new System.Drawing.Size(142, 16);
+            this.lbl_NumeroDocumento.Size = new System.Drawing.Size(148, 16);
             this.lbl_NumeroDocumento.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_NumeroDocumento, null);
             this.tagsExtender1.SetTag3(this.lbl_NumeroDocumento, null);
             this.tagsExtender1.SetTagFontName(this.lbl_NumeroDocumento, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_NumeroDocumento, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_NumeroDocumento, System.Drawing.FontStyle.Bold);
-            this.lbl_NumeroDocumento.Text = "Número de Documento";
+            this.lbl_NumeroDocumento.Text = "Número de Documento*";
             // 
             // rnd_guardar
             // 
@@ -607,14 +607,14 @@
             this.label1.Location = new System.Drawing.Point(4, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.Size = new System.Drawing.Size(100, 16);
             this.label1.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.label1, null);
             this.tagsExtender1.SetTag3(this.label1, null);
             this.tagsExtender1.SetTagFontName(this.label1, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.label1, 10F);
             this.tagsExtender1.SetTagFontStyle(this.label1, System.Drawing.FontStyle.Bold);
-            this.label1.Text = "Tipo de Cliente";
+            this.label1.Text = "Tipo de Cliente*";
             // 
             // txt_NombreCliente
             // 
@@ -686,14 +686,14 @@
             this.lbl_TipoDocumento.Location = new System.Drawing.Point(4, 2);
             this.lbl_TipoDocumento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_TipoDocumento.Name = "lbl_TipoDocumento";
-            this.lbl_TipoDocumento.Size = new System.Drawing.Size(120, 16);
+            this.lbl_TipoDocumento.Size = new System.Drawing.Size(126, 16);
             this.lbl_TipoDocumento.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_TipoDocumento, null);
             this.tagsExtender1.SetTag3(this.lbl_TipoDocumento, null);
             this.tagsExtender1.SetTagFontName(this.lbl_TipoDocumento, fontsD.Lato);
             this.tagsExtender1.SetTagFontSize(this.lbl_TipoDocumento, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_TipoDocumento, System.Drawing.FontStyle.Bold);
-            this.lbl_TipoDocumento.Text = "Tipo de Documento";
+            this.lbl_TipoDocumento.Text = "Tipo de Documento*";
             // 
             // roundedPanel2
             // 

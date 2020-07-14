@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaActualizarUsuarios));
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
             this.pnlBuscar = new System.Windows.Forms.Panel();
+            this.lblEnterBuscar = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_Buscar = new System.Windows.Forms.TextBox();
             this.btn_Agregar = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.lbl_ListaServicios = new System.Windows.Forms.Label();
             this.btnVerInactivos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblEnterBuscar = new System.Windows.Forms.Label();
             this.pnlBuscar.SuspendLayout();
             this.rndReciente.SuspendLayout();
             this.rndAntiguo.SuspendLayout();
@@ -77,6 +77,25 @@
             this.tagsExtender1.SetTagFontName(this.pnlBuscar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.pnlBuscar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.pnlBuscar, System.Drawing.FontStyle.Regular);
+            // 
+            // lblEnterBuscar
+            // 
+            this.lblEnterBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblEnterBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.lblEnterBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEnterBuscar.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblEnterBuscar.Location = new System.Drawing.Point(684, 5);
+            this.lblEnterBuscar.Name = "lblEnterBuscar";
+            this.lblEnterBuscar.Size = new System.Drawing.Size(64, 21);
+            this.lblEnterBuscar.TabIndex = 18;
+            this.tagsExtender1.SetTag2(this.lblEnterBuscar, null);
+            this.tagsExtender1.SetTag3(this.lblEnterBuscar, null);
+            this.tagsExtender1.SetTagFontName(this.lblEnterBuscar, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lblEnterBuscar, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.lblEnterBuscar, System.Drawing.FontStyle.Bold);
+            this.lblEnterBuscar.Text = "↵ Enter";
+            this.lblEnterBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -527,25 +546,6 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // lblEnterBuscar
-            // 
-            this.lblEnterBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblEnterBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.lblEnterBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEnterBuscar.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnterBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblEnterBuscar.Location = new System.Drawing.Point(684, 5);
-            this.lblEnterBuscar.Name = "lblEnterBuscar";
-            this.lblEnterBuscar.Size = new System.Drawing.Size(64, 21);
-            this.lblEnterBuscar.TabIndex = 18;
-            this.tagsExtender1.SetTag2(this.lblEnterBuscar, null);
-            this.tagsExtender1.SetTag3(this.lblEnterBuscar, null);
-            this.tagsExtender1.SetTagFontName(this.lblEnterBuscar, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lblEnterBuscar, 12F);
-            this.tagsExtender1.SetTagFontStyle(this.lblEnterBuscar, System.Drawing.FontStyle.Bold);
-            this.lblEnterBuscar.Text = "↵ Enter";
-            this.lblEnterBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pantallaActualizarUsuarios
             // 

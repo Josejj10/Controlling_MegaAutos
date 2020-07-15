@@ -53,6 +53,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
       <xs:element minOccurs="0" name="sede" type="tns:sede" />
       <xs:element minOccurs="0" name="tipoReporte" type="xs:string" />
       <xs:element minOccurs="0" name="titulo" type="xs:string" />

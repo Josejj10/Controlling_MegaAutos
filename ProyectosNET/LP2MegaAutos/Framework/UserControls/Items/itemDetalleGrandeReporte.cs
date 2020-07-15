@@ -46,8 +46,15 @@ namespace LP2MegaAutos
             get { return lblEgreso.Text; }
             set { lblEgreso.Text = value; }
         }
-        #endregion Propiedades
 
+        [Description("Monto Total de hasta 9 digitos aparte de los dos decimales."), Category("Item Detalle")]
+        public string MontoTotal
+        {
+            get { return lblTotal.Text; }
+            set { lblTotal.Text = value; }
+        }
+
+        #endregion Propiedades
 
     }
 }

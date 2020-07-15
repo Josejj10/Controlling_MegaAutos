@@ -18,7 +18,6 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/buscarPorIdRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/buscarPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.buscarPorIdResponse buscarPorId(LP2MegaAutos.ServicioExcel.buscarPorIdRequest request);
         
@@ -28,7 +27,6 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoEntradaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.insertarArchivoEntradaResponse insertarArchivoEntrada(LP2MegaAutos.ServicioExcel.insertarArchivoEntradaRequest request);
         
@@ -38,7 +36,6 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.leerArchivoSalidaResponse leerArchivoSalida(LP2MegaAutos.ServicioExcel.leerArchivoSalidaRequest request);
         
@@ -48,7 +45,6 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/insertarArchivoSalidaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.insertarArchivoSalidaResponse insertarArchivoSalida(LP2MegaAutos.ServicioExcel.insertarArchivoSalidaRequest request);
         
@@ -58,7 +54,6 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/leerArchivoEntradaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.leerArchivoEntradaResponse leerArchivoEntrada(LP2MegaAutos.ServicioExcel.leerArchivoEntradaRequest request);
         
@@ -68,7 +63,6 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/procesarRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/procesarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.procesarResponse procesar(LP2MegaAutos.ServicioExcel.procesarRequest request);
         
@@ -78,7 +72,6 @@ namespace LP2MegaAutos.ServicioExcel {
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.megaautos.com.pe/ExcelWS/generarReporteRequest", ReplyAction="http://services.megaautos.com.pe/ExcelWS/generarReporteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(abstractCollection))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         LP2MegaAutos.ServicioExcel.generarReporteResponse generarReporte(LP2MegaAutos.ServicioExcel.generarReporteRequest request);
         
@@ -291,14 +284,68 @@ namespace LP2MegaAutos.ServicioExcel {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(abstractList))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(arrayList))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
-    public abstract partial class abstractCollection : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class vehiculo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idField;
+        
+        private string placaField;
+        
+        private cliente propietarioField;
+        
+        private string tipoVehiculoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string placa {
+            get {
+                return this.placaField;
+            }
+            set {
+                this.placaField = value;
+                this.RaisePropertyChanged("placa");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public cliente propietario {
+            get {
+                return this.propietarioField;
+            }
+            set {
+                this.propietarioField = value;
+                this.RaisePropertyChanged("propietario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string tipoVehiculo {
+            get {
+                return this.tipoVehiculoField;
+            }
+            set {
+                this.tipoVehiculoField = value;
+                this.RaisePropertyChanged("tipoVehiculo");
+            }
+        }
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -311,13 +358,119 @@ namespace LP2MegaAutos.ServicioExcel {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(arrayList))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
-    public abstract partial class abstractList : abstractCollection {
+    public partial class cliente : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string correoField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        private string numDocumentoField;
+        
+        private string telefonoField;
+        
+        private string tipoClienteField;
+        
+        private string tipoDocumentoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string correo {
+            get {
+                return this.correoField;
+            }
+            set {
+                this.correoField = value;
+                this.RaisePropertyChanged("correo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string numDocumento {
+            get {
+                return this.numDocumentoField;
+            }
+            set {
+                this.numDocumentoField = value;
+                this.RaisePropertyChanged("numDocumento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string tipoCliente {
+            get {
+                return this.tipoClienteField;
+            }
+            set {
+                this.tipoClienteField = value;
+                this.RaisePropertyChanged("tipoCliente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string tipoDocumento {
+            get {
+                return this.tipoDocumentoField;
+            }
+            set {
+                this.tipoDocumentoField = value;
+                this.RaisePropertyChanged("tipoDocumento");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     /// <remarks/>
@@ -326,7 +479,574 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
-    public partial class arrayList : abstractList {
+    public partial class servicio : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string codigoServicioField;
+        
+        private string descripcionField;
+        
+        private int idField;
+        
+        private string nombreField;
+        
+        private string tipoServicioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string codigoServicio {
+            get {
+                return this.codigoServicioField;
+            }
+            set {
+                this.codigoServicioField = value;
+                this.RaisePropertyChanged("codigoServicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string tipoServicio {
+            get {
+                return this.tipoServicioField;
+            }
+            set {
+                this.tipoServicioField = value;
+                this.RaisePropertyChanged("tipoServicio");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public partial class comprobantePago : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idField;
+        
+        private double montoField;
+        
+        private string numeroComprobanteField;
+        
+        private ordenTrabajo ordenTrabajoField;
+        
+        private string tipoComprobanteField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public double monto {
+            get {
+                return this.montoField;
+            }
+            set {
+                this.montoField = value;
+                this.RaisePropertyChanged("monto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string numeroComprobante {
+            get {
+                return this.numeroComprobanteField;
+            }
+            set {
+                this.numeroComprobanteField = value;
+                this.RaisePropertyChanged("numeroComprobante");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public ordenTrabajo ordenTrabajo {
+            get {
+                return this.ordenTrabajoField;
+            }
+            set {
+                this.ordenTrabajoField = value;
+                this.RaisePropertyChanged("ordenTrabajo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string tipoComprobante {
+            get {
+                return this.tipoComprobanteField;
+            }
+            set {
+                this.tipoComprobanteField = value;
+                this.RaisePropertyChanged("tipoComprobante");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public partial class ordenTrabajo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private cliente clienteField;
+        
+        private double comprasRptoField;
+        
+        private comprobantePago comprobantePagoField;
+        
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idField;
+        
+        private double margenBrutoField;
+        
+        private string numeroOrdenField;
+        
+        private double porcentajeField;
+        
+        private double salidasAlmacenField;
+        
+        private sede sedeField;
+        
+        private double serTerTallerField;
+        
+        private double servTercerosField;
+        
+        private servicio[] serviciosField;
+        
+        private string tipoSiniestroField;
+        
+        private double totalEgresosField;
+        
+        private double totalIngresosField;
+        
+        private vehiculo vehiculoField;
+        
+        private double mObraMecanicaField;
+        
+        private double mObraPinturaField;
+        
+        private double mObraPlanchadoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public cliente cliente {
+            get {
+                return this.clienteField;
+            }
+            set {
+                this.clienteField = value;
+                this.RaisePropertyChanged("cliente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public double comprasRpto {
+            get {
+                return this.comprasRptoField;
+            }
+            set {
+                this.comprasRptoField = value;
+                this.RaisePropertyChanged("comprasRpto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public comprobantePago comprobantePago {
+            get {
+                return this.comprobantePagoField;
+            }
+            set {
+                this.comprobantePagoField = value;
+                this.RaisePropertyChanged("comprobantePago");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public double margenBruto {
+            get {
+                return this.margenBrutoField;
+            }
+            set {
+                this.margenBrutoField = value;
+                this.RaisePropertyChanged("margenBruto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string numeroOrden {
+            get {
+                return this.numeroOrdenField;
+            }
+            set {
+                this.numeroOrdenField = value;
+                this.RaisePropertyChanged("numeroOrden");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public double porcentaje {
+            get {
+                return this.porcentajeField;
+            }
+            set {
+                this.porcentajeField = value;
+                this.RaisePropertyChanged("porcentaje");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public double salidasAlmacen {
+            get {
+                return this.salidasAlmacenField;
+            }
+            set {
+                this.salidasAlmacenField = value;
+                this.RaisePropertyChanged("salidasAlmacen");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public sede sede {
+            get {
+                return this.sedeField;
+            }
+            set {
+                this.sedeField = value;
+                this.RaisePropertyChanged("sede");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public double serTerTaller {
+            get {
+                return this.serTerTallerField;
+            }
+            set {
+                this.serTerTallerField = value;
+                this.RaisePropertyChanged("serTerTaller");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public double servTerceros {
+            get {
+                return this.servTercerosField;
+            }
+            set {
+                this.servTercerosField = value;
+                this.RaisePropertyChanged("servTerceros");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("servicios", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=12)]
+        public servicio[] servicios {
+            get {
+                return this.serviciosField;
+            }
+            set {
+                this.serviciosField = value;
+                this.RaisePropertyChanged("servicios");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public string tipoSiniestro {
+            get {
+                return this.tipoSiniestroField;
+            }
+            set {
+                this.tipoSiniestroField = value;
+                this.RaisePropertyChanged("tipoSiniestro");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public double totalEgresos {
+            get {
+                return this.totalEgresosField;
+            }
+            set {
+                this.totalEgresosField = value;
+                this.RaisePropertyChanged("totalEgresos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
+        public double totalIngresos {
+            get {
+                return this.totalIngresosField;
+            }
+            set {
+                this.totalIngresosField = value;
+                this.RaisePropertyChanged("totalIngresos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
+        public vehiculo vehiculo {
+            get {
+                return this.vehiculoField;
+            }
+            set {
+                this.vehiculoField = value;
+                this.RaisePropertyChanged("vehiculo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
+        public double mObraMecanica {
+            get {
+                return this.mObraMecanicaField;
+            }
+            set {
+                this.mObraMecanicaField = value;
+                this.RaisePropertyChanged("mObraMecanica");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
+        public double mObraPintura {
+            get {
+                return this.mObraPinturaField;
+            }
+            set {
+                this.mObraPinturaField = value;
+                this.RaisePropertyChanged("mObraPintura");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public double mObraPlanchado {
+            get {
+                return this.mObraPlanchadoField;
+            }
+            set {
+                this.mObraPlanchadoField = value;
+                this.RaisePropertyChanged("mObraPlanchado");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public partial class detalleReporte : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string cuentaField;
+        
+        private System.Nullable<double>[] montosField;
+        
+        private ordenTrabajo[] ordenesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string cuenta {
+            get {
+                return this.cuentaField;
+            }
+            set {
+                this.cuentaField = value;
+                this.RaisePropertyChanged("cuenta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("montos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public System.Nullable<double>[] montos {
+            get {
+                return this.montosField;
+            }
+            set {
+                this.montosField = value;
+                this.RaisePropertyChanged("montos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ordenes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public ordenTrabajo[] ordenes {
+            get {
+                return this.ordenesField;
+            }
+            set {
+                this.ordenesField = value;
+                this.RaisePropertyChanged("ordenes");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     /// <remarks/>
@@ -336,6 +1056,8 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
     public partial class reporte : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private detalleReporte[] detalleField;
         
         private double egresosField;
         
@@ -365,9 +1087,7 @@ namespace LP2MegaAutos.ServicioExcel {
         
         private bool ingresosFieldSpecified;
         
-        private reporteEntry[] mapaDetalleField;
-        
-        private reporteEntry1[] mapaDetalleMontosField;
+        private string nombreUsuarioField;
         
         private sede sedeField;
         
@@ -376,7 +1096,19 @@ namespace LP2MegaAutos.ServicioExcel {
         private string tituloField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("detalle", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public detalleReporte[] detalle {
+            get {
+                return this.detalleField;
+            }
+            set {
+                this.detalleField = value;
+                this.RaisePropertyChanged("detalle");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public double egresos {
             get {
                 return this.egresosField;
@@ -400,7 +1132,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public System.DateTime fechaCreacion {
             get {
                 return this.fechaCreacionField;
@@ -424,7 +1156,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public System.DateTime fechaFin {
             get {
                 return this.fechaFinField;
@@ -448,7 +1180,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public System.DateTime fechaInicio {
             get {
                 return this.fechaInicioField;
@@ -472,7 +1204,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int idExcelEntrada {
             get {
                 return this.idExcelEntradaField;
@@ -484,7 +1216,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int idExcelSalida {
             get {
                 return this.idExcelSalidaField;
@@ -496,7 +1228,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int idReporte {
             get {
                 return this.idReporteField;
@@ -508,7 +1240,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public int idUsuario {
             get {
                 return this.idUsuarioField;
@@ -520,7 +1252,7 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public double ingresos {
             get {
                 return this.ingresosField;
@@ -544,28 +1276,14 @@ namespace LP2MegaAutos.ServicioExcel {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("entry", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-        public reporteEntry[] mapaDetalle {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string nombreUsuario {
             get {
-                return this.mapaDetalleField;
+                return this.nombreUsuarioField;
             }
             set {
-                this.mapaDetalleField = value;
-                this.RaisePropertyChanged("mapaDetalle");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("entry", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-        public reporteEntry1[] mapaDetalleMontos {
-            get {
-                return this.mapaDetalleMontosField;
-            }
-            set {
-                this.mapaDetalleMontosField = value;
-                this.RaisePropertyChanged("mapaDetalleMontos");
+                this.nombreUsuarioField = value;
+                this.RaisePropertyChanged("nombreUsuario");
             }
         }
         
@@ -602,98 +1320,6 @@ namespace LP2MegaAutos.ServicioExcel {
             set {
                 this.tituloField = value;
                 this.RaisePropertyChanged("titulo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://services.megaautos.com.pe/")]
-    public partial class reporteEntry : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string keyField;
-        
-        private arrayList valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-                this.RaisePropertyChanged("key");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public arrayList value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("value");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://services.megaautos.com.pe/")]
-    public partial class reporteEntry1 : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string keyField;
-        
-        private arrayList valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-                this.RaisePropertyChanged("key");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public arrayList value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-                this.RaisePropertyChanged("value");
             }
         }
         
@@ -918,10 +1544,14 @@ namespace LP2MegaAutos.ServicioExcel {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int arg8;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg9;
+        
         public procesarRequest() {
         }
         
-        public procesarRequest(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8) {
+        public procesarRequest(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8, int arg9) {
             this.arg0 = arg0;
             this.arg1 = arg1;
             this.arg2 = arg2;
@@ -931,6 +1561,7 @@ namespace LP2MegaAutos.ServicioExcel {
             this.arg6 = arg6;
             this.arg7 = arg7;
             this.arg8 = arg8;
+            this.arg9 = arg9;
         }
     }
     
@@ -978,15 +1609,25 @@ namespace LP2MegaAutos.ServicioExcel {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idUsuario;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string titulo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idReporte;
+        
         public generarReporteRequest() {
         }
         
-        public generarReporteRequest(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario) {
+        public generarReporteRequest(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario, string titulo, int idReporte) {
             this.fechaInicio = fechaInicio;
             this.fechaFin = fechaFin;
             this.tipo = tipo;
             this.idSede = idSede;
             this.idUsuario = idUsuario;
+            this.titulo = titulo;
+            this.idReporte = idReporte;
         }
     }
     
@@ -998,12 +1639,12 @@ namespace LP2MegaAutos.ServicioExcel {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.megaautos.com.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public LP2MegaAutos.ServicioExcel.reporte @return;
         
         public generarReporteResponse() {
         }
         
-        public generarReporteResponse(int @return) {
+        public generarReporteResponse(LP2MegaAutos.ServicioExcel.reporte @return) {
             this.@return = @return;
         }
     }
@@ -1153,7 +1794,7 @@ namespace LP2MegaAutos.ServicioExcel {
             return base.Channel.procesar(request);
         }
         
-        public LP2MegaAutos.ServicioExcel.reporte procesar(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8) {
+        public LP2MegaAutos.ServicioExcel.reporte procesar(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8, int arg9) {
             LP2MegaAutos.ServicioExcel.procesarRequest inValue = new LP2MegaAutos.ServicioExcel.procesarRequest();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
@@ -1164,6 +1805,7 @@ namespace LP2MegaAutos.ServicioExcel {
             inValue.arg6 = arg6;
             inValue.arg7 = arg7;
             inValue.arg8 = arg8;
+            inValue.arg9 = arg9;
             LP2MegaAutos.ServicioExcel.procesarResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).procesar(inValue);
             return retVal.@return;
         }
@@ -1173,7 +1815,7 @@ namespace LP2MegaAutos.ServicioExcel {
             return base.Channel.procesarAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.procesarResponse> procesarAsync(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8) {
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.procesarResponse> procesarAsync(LP2MegaAutos.ServicioExcel.excel arg0, string arg1, string arg2, string arg3, int arg4, System.DateTime arg5, System.DateTime arg6, int arg7, int arg8, int arg9) {
             LP2MegaAutos.ServicioExcel.procesarRequest inValue = new LP2MegaAutos.ServicioExcel.procesarRequest();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
@@ -1184,6 +1826,7 @@ namespace LP2MegaAutos.ServicioExcel {
             inValue.arg6 = arg6;
             inValue.arg7 = arg7;
             inValue.arg8 = arg8;
+            inValue.arg9 = arg9;
             return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).procesarAsync(inValue);
         }
         
@@ -1192,13 +1835,15 @@ namespace LP2MegaAutos.ServicioExcel {
             return base.Channel.generarReporte(request);
         }
         
-        public int generarReporte(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario) {
+        public LP2MegaAutos.ServicioExcel.reporte generarReporte(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario, string titulo, int idReporte) {
             LP2MegaAutos.ServicioExcel.generarReporteRequest inValue = new LP2MegaAutos.ServicioExcel.generarReporteRequest();
             inValue.fechaInicio = fechaInicio;
             inValue.fechaFin = fechaFin;
             inValue.tipo = tipo;
             inValue.idSede = idSede;
             inValue.idUsuario = idUsuario;
+            inValue.titulo = titulo;
+            inValue.idReporte = idReporte;
             LP2MegaAutos.ServicioExcel.generarReporteResponse retVal = ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).generarReporte(inValue);
             return retVal.@return;
         }
@@ -1208,13 +1853,15 @@ namespace LP2MegaAutos.ServicioExcel {
             return base.Channel.generarReporteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.generarReporteResponse> generarReporteAsync(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario) {
+        public System.Threading.Tasks.Task<LP2MegaAutos.ServicioExcel.generarReporteResponse> generarReporteAsync(string fechaInicio, string fechaFin, string tipo, int idSede, int idUsuario, string titulo, int idReporte) {
             LP2MegaAutos.ServicioExcel.generarReporteRequest inValue = new LP2MegaAutos.ServicioExcel.generarReporteRequest();
             inValue.fechaInicio = fechaInicio;
             inValue.fechaFin = fechaFin;
             inValue.tipo = tipo;
             inValue.idSede = idSede;
             inValue.idUsuario = idUsuario;
+            inValue.titulo = titulo;
+            inValue.idReporte = idReporte;
             return ((LP2MegaAutos.ServicioExcel.ExcelWS)(this)).generarReporteAsync(inValue);
         }
     }

@@ -12,16 +12,54 @@ using LP2MegaAutos.ServicioUsuario;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.Framework;
 using LP2MegaAutos.Properties;
+using LP2MegaAutos.ServicioExcel;
 
 namespace LP2MegaAutos.Reportes
 {
     public partial class pantallaOrdenTrabajo : MetroForm
     {
+        ServicioExcel.ordenTrabajo _ot;
         public pantallaOrdenTrabajo()
         {
             InitializeComponent();
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
+        public pantallaOrdenTrabajo(ServicioExcel.ordenTrabajo ot)
+        {
+            InitializeComponent();
+            _ot = ot;
+            inicializarOrden();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
+        }
+
+        private void inicializarOrden()
+        {
+            lbl_OrdenTrabajo.Text = _ot.numeroOrden;
+            lbl_SedeEscrito.Text = _ot.sede.distrito;
+            lbl_ClienteEscrito.Text = _ot.cliente.nombre;
+            lbl_PlacaEscrito.Text = _ot.vehiculo.placa;
+            lbl_TotalIngresosEscrito.Text = _ot.totalIngresos.ToString("n2");
+            lbl_TotalEgresosEscrito.Text = _ot.totalEgresos.ToString("n2");
+            lbl_Fecha.Text = _ot.fecha.ToString("dd/MM/yyyy");
+            if (_ot.servicios == null) return;
+            foreach(servicio s in _ot.servicios)
+            {
+                crearItemListaCuadrado(s);
+            }
+        }
+
+        private void crearItemListaCuadrado(servicio s)
+        {
+            itemListaCuadrado item = new itemListaCuadrado();
+            item.BackColor = Color.Transparent;
+            item.imgFondo = Resources.Servicio;
+            item.Margin = new Padding(4);
+            item.Name = "itemListaCuadrado"+s.id;
+            item.Seleccionado = false;
+            item.TextoPrincipal = s.nombre;
+            flpServicios.Controls.Add(item);
+        }
+
 
         #region title_bar
 
@@ -55,9 +93,15 @@ namespace LP2MegaAutos.Reportes
             TitleBar.mouse_Move(MousePosition, this);
         }
 
+        private void btn_Ok_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
         #endregion movement
 
         #endregion title_bar
+        // TODO
 
     }
 }

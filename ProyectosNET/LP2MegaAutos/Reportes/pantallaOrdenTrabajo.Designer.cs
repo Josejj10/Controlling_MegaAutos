@@ -81,7 +81,7 @@
             this.title_bar.Controls.Add(this.boton_minimizar);
             this.title_bar.Controls.Add(this.boton_cerrar);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
-            this.title_bar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.title_bar.Margin = new System.Windows.Forms.Padding(4);
             this.title_bar.Name = "title_bar";
             this.title_bar.Size = new System.Drawing.Size(793, 29);
             this.title_bar.TabIndex = 62;
@@ -126,7 +126,7 @@
             this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_minimizar.Location = new System.Drawing.Point(1045, 0);
-            this.boton_minimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.boton_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.boton_minimizar.Name = "boton_minimizar";
             this.boton_minimizar.Size = new System.Drawing.Size(32, 30);
             this.boton_minimizar.TabIndex = 0;
@@ -172,8 +172,8 @@
             this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 30);
-            this.rpTopMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpTopMain.Location = new System.Drawing.Point(0, 29);
+            this.rpTopMain.Margin = new System.Windows.Forms.Padding(4);
             this.rpTopMain.MenosHeightBorde = 1;
             this.rpTopMain.MenosHeightPanel = 1;
             this.rpTopMain.MenosWidthBorde = 1;
@@ -197,7 +197,7 @@
             this.flpServicios.AutoScroll = true;
             this.flpServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(254)))));
             this.flpServicios.Location = new System.Drawing.Point(436, 161);
-            this.flpServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpServicios.Margin = new System.Windows.Forms.Padding(4);
             this.flpServicios.Name = "flpServicios";
             this.flpServicios.Size = new System.Drawing.Size(331, 257);
             this.flpServicios.TabIndex = 82;
@@ -216,7 +216,7 @@
             this.rpn_ListaPermisosUsuario.Controls.Add(this.lbl_Servicios);
             this.rpn_ListaPermisosUsuario.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
             this.rpn_ListaPermisosUsuario.Location = new System.Drawing.Point(436, 117);
-            this.rpn_ListaPermisosUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpn_ListaPermisosUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.rpn_ListaPermisosUsuario.MenosHeightBorde = 1;
             this.rpn_ListaPermisosUsuario.MenosHeightPanel = 1;
             this.rpn_ListaPermisosUsuario.MenosWidthBorde = 1;
@@ -265,7 +265,7 @@
             this.rnd_guardar.Controls.Add(this.btn_Ok);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_guardar.Location = new System.Drawing.Point(276, 431);
-            this.rnd_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rnd_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
@@ -294,7 +294,7 @@
             this.btn_Ok.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ok.ForeColor = System.Drawing.Color.White;
             this.btn_Ok.Location = new System.Drawing.Point(4, 4);
-            this.btn_Ok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Ok.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Ok.Name = "btn_Ok";
             this.btn_Ok.Size = new System.Drawing.Size(232, 36);
             this.btn_Ok.TabIndex = 0;
@@ -305,12 +305,13 @@
             this.tagsExtender1.SetTagFontStyle(this.btn_Ok, System.Drawing.FontStyle.Bold);
             this.btn_Ok.Text = "OK";
             this.btn_Ok.UseVisualStyleBackColor = false;
+            this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.panel1.Location = new System.Drawing.Point(20, 101);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(753, 1);
             this.panel1.TabIndex = 77;
@@ -327,7 +328,7 @@
             this.panel3.Controls.Add(this.rnd_color_4);
             this.panel3.Controls.Add(this.lbl_TotalIngresos);
             this.panel3.Location = new System.Drawing.Point(27, 302);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(389, 50);
             this.panel3.TabIndex = 74;
@@ -362,7 +363,7 @@
             this.rnd_color_4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_color_4.Location = new System.Drawing.Point(3, 5);
-            this.rnd_color_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rnd_color_4.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_4.MenosHeightBorde = 1;
             this.rnd_color_4.MenosHeightPanel = 1;
             this.rnd_color_4.MenosWidthBorde = 1;
@@ -405,7 +406,7 @@
             this.panel2.Controls.Add(this.rnd_color_3);
             this.panel2.Controls.Add(this.lbl_Placa);
             this.panel2.Location = new System.Drawing.Point(27, 241);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(389, 50);
             this.panel2.TabIndex = 75;
@@ -440,7 +441,7 @@
             this.rnd_color_3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_color_3.Location = new System.Drawing.Point(3, 5);
-            this.rnd_color_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rnd_color_3.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_3.MenosHeightBorde = 1;
             this.rnd_color_3.MenosHeightPanel = 1;
             this.rnd_color_3.MenosWidthBorde = 1;
@@ -483,7 +484,7 @@
             this.pnl_Direccion.Controls.Add(this.rnd_color_2);
             this.pnl_Direccion.Controls.Add(this.lbl_Cliente);
             this.pnl_Direccion.Location = new System.Drawing.Point(27, 181);
-            this.pnl_Direccion.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pnl_Direccion.Margin = new System.Windows.Forms.Padding(5);
             this.pnl_Direccion.Name = "pnl_Direccion";
             this.pnl_Direccion.Size = new System.Drawing.Size(389, 50);
             this.pnl_Direccion.TabIndex = 76;
@@ -518,7 +519,7 @@
             this.rnd_color_2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_color_2.Location = new System.Drawing.Point(3, 5);
-            this.rnd_color_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rnd_color_2.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_2.MenosHeightBorde = 1;
             this.rnd_color_2.MenosHeightPanel = 1;
             this.rnd_color_2.MenosWidthBorde = 1;
@@ -561,7 +562,7 @@
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.lbl_Sede);
             this.pnl_codServ.Location = new System.Drawing.Point(27, 121);
-            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(5);
             this.pnl_codServ.Name = "pnl_codServ";
             this.pnl_codServ.Size = new System.Drawing.Size(389, 50);
             this.pnl_codServ.TabIndex = 73;
@@ -596,7 +597,7 @@
             this.rnd_color_1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.rnd_color_1.Location = new System.Drawing.Point(3, 5);
-            this.rnd_color_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rnd_color_1.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_1.MenosHeightBorde = 1;
             this.rnd_color_1.MenosHeightPanel = 1;
             this.rnd_color_1.MenosWidthBorde = 1;
@@ -675,7 +676,7 @@
             this.panel4.Controls.Add(this.roundedPanel1);
             this.panel4.Controls.Add(this.lbl_TotalEgresos);
             this.panel4.Location = new System.Drawing.Point(27, 362);
-            this.panel4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(389, 50);
             this.panel4.TabIndex = 75;
@@ -710,7 +711,7 @@
             this.roundedPanel1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.roundedPanel1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
             this.roundedPanel1.Location = new System.Drawing.Point(3, 5);
-            this.roundedPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.roundedPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.roundedPanel1.MenosHeightBorde = 1;
             this.roundedPanel1.MenosHeightPanel = 1;
             this.roundedPanel1.MenosWidthBorde = 1;
@@ -750,7 +751,7 @@
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
-            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBackground.Name = "pnlBackground";
             this.pnlBackground.Size = new System.Drawing.Size(795, 494);
             this.pnlBackground.TabIndex = 87;
@@ -779,7 +780,7 @@
             this.Controls.Add(this.rpTopMain);
             this.Controls.Add(this.title_bar);
             this.Controls.Add(this.pnlBackground);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "pantallaOrdenTrabajo";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.tagsExtender1.SetTag2(this, null);

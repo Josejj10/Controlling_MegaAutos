@@ -34,7 +34,7 @@
             this.txt_Correo = new System.Windows.Forms.TextBox();
             this.lbl_Correo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.boton_ver_password = new System.Windows.Forms.Button();
+            this.btnVerPwd = new System.Windows.Forms.Button();
             this.rnd_color_3 = new LP2MegaAutos.RoundedPanel();
             this.txt_NuevaCont = new System.Windows.Forms.TextBox();
             this.lbl_NuevaCont = new System.Windows.Forms.Label();
@@ -43,7 +43,6 @@
             this.rnd_color_4 = new LP2MegaAutos.RoundedPanel();
             this.txt_RepNCont = new System.Windows.Forms.TextBox();
             this.lbl_RepNCont = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.title_bar = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.boton_minimizar = new System.Windows.Forms.Button();
@@ -69,6 +68,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_codServ.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,10 +87,10 @@
             this.pnl_codServ.Controls.Add(this.rnd_color_1);
             this.pnl_codServ.Controls.Add(this.txt_Correo);
             this.pnl_codServ.Controls.Add(this.lbl_Correo);
-            this.pnl_codServ.Location = new System.Drawing.Point(24, 111);
-            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_codServ.Location = new System.Drawing.Point(32, 137);
+            this.pnl_codServ.Margin = new System.Windows.Forms.Padding(5);
             this.pnl_codServ.Name = "pnl_codServ";
-            this.pnl_codServ.Size = new System.Drawing.Size(292, 41);
+            this.pnl_codServ.Size = new System.Drawing.Size(389, 50);
             this.pnl_codServ.TabIndex = 40;
             this.tagsExtender1.SetTag2(this.pnl_codServ, null);
             this.tagsExtender1.SetTag3(this.pnl_codServ, null);
@@ -105,14 +105,15 @@
             this.rnd_color_1.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_1.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_1.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_color_1.Location = new System.Drawing.Point(2, 4);
+            this.rnd_color_1.Location = new System.Drawing.Point(3, 5);
+            this.rnd_color_1.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_1.MenosHeightBorde = 1;
             this.rnd_color_1.MenosHeightPanel = 1;
             this.rnd_color_1.MenosWidthBorde = 1;
             this.rnd_color_1.MenosWidthPanel = 1;
             this.rnd_color_1.Name = "rnd_color_1";
             this.rnd_color_1.PorcLuzColorBorde = 0;
-            this.rnd_color_1.Size = new System.Drawing.Size(3, 36);
+            this.rnd_color_1.Size = new System.Drawing.Size(4, 44);
             this.rnd_color_1.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rnd_color_1, null);
             this.tagsExtender1.SetTag3(this.rnd_color_1, null);
@@ -130,9 +131,10 @@
             this.txt_Correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Correo.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_Correo.Location = new System.Drawing.Point(7, 18);
+            this.txt_Correo.Location = new System.Drawing.Point(9, 22);
+            this.txt_Correo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Correo.Name = "txt_Correo";
-            this.txt_Correo.Size = new System.Drawing.Size(284, 23);
+            this.txt_Correo.Size = new System.Drawing.Size(379, 29);
             this.txt_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.txt_Correo, null);
             this.tagsExtender1.SetTag3(this.txt_Correo, null);
@@ -145,10 +147,10 @@
             this.lbl_Correo.AutoSize = true;
             this.lbl_Correo.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Correo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_Correo.Location = new System.Drawing.Point(4, 2);
-            this.lbl_Correo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Correo.Location = new System.Drawing.Point(5, 2);
+            this.lbl_Correo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_Correo.Name = "lbl_Correo";
-            this.lbl_Correo.Size = new System.Drawing.Size(54, 16);
+            this.lbl_Correo.Size = new System.Drawing.Size(69, 21);
             this.lbl_Correo.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_Correo, null);
             this.tagsExtender1.SetTag3(this.lbl_Correo, null);
@@ -160,14 +162,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
-            this.panel2.Controls.Add(this.boton_ver_password);
+            this.panel2.Controls.Add(this.btnVerPwd);
             this.panel2.Controls.Add(this.rnd_color_3);
             this.panel2.Controls.Add(this.txt_NuevaCont);
             this.panel2.Controls.Add(this.lbl_NuevaCont);
-            this.panel2.Location = new System.Drawing.Point(24, 250);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(32, 308);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 41);
+            this.panel2.Size = new System.Drawing.Size(389, 50);
             this.panel2.TabIndex = 43;
             this.tagsExtender1.SetTag2(this.panel2, null);
             this.tagsExtender1.SetTag3(this.panel2, null);
@@ -175,32 +177,34 @@
             this.tagsExtender1.SetTagFontSize(this.panel2, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel2, System.Drawing.FontStyle.Regular);
             // 
-            // boton_ver_password
+            // btnVerPwd
             // 
-            this.boton_ver_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
-            this.boton_ver_password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.boton_ver_password.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boton_ver_password.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.boton_ver_password.FlatAppearance.BorderSize = 0;
-            this.boton_ver_password.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.boton_ver_password.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.boton_ver_password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_ver_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.boton_ver_password.ForeColor = System.Drawing.Color.White;
-            this.boton_ver_password.Location = new System.Drawing.Point(264, 20);
-            this.boton_ver_password.Name = "boton_ver_password";
-            this.boton_ver_password.Size = new System.Drawing.Size(25, 20);
-            this.boton_ver_password.TabIndex = 4;
-            this.boton_ver_password.TabStop = false;
-            this.boton_ver_password.Tag = "botonImagen";
-            this.tagsExtender1.SetTag2(this.boton_ver_password, null);
-            this.tagsExtender1.SetTag3(this.boton_ver_password, null);
-            this.tagsExtender1.SetTagFontName(this.boton_ver_password, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.boton_ver_password, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.boton_ver_password, System.Drawing.FontStyle.Regular);
-            this.boton_ver_password.UseVisualStyleBackColor = false;
-            this.boton_ver_password.Click += new System.EventHandler(this.boton_ver_password_Click_1);
+            this.btnVerPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.btnVerPwd.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+            this.btnVerPwd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnVerPwd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerPwd.Enabled = false;
+            this.btnVerPwd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVerPwd.FlatAppearance.BorderSize = 0;
+            this.btnVerPwd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.btnVerPwd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
+            this.btnVerPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnVerPwd.ForeColor = System.Drawing.Color.White;
+            this.btnVerPwd.Location = new System.Drawing.Point(352, 25);
+            this.btnVerPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVerPwd.Name = "btnVerPwd";
+            this.btnVerPwd.Size = new System.Drawing.Size(33, 25);
+            this.btnVerPwd.TabIndex = 4;
+            this.btnVerPwd.TabStop = false;
+            this.btnVerPwd.Tag = "botonImagen";
+            this.tagsExtender1.SetTag2(this.btnVerPwd, null);
+            this.tagsExtender1.SetTag3(this.btnVerPwd, null);
+            this.tagsExtender1.SetTagFontName(this.btnVerPwd, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.btnVerPwd, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.btnVerPwd, System.Drawing.FontStyle.Regular);
+            this.btnVerPwd.UseVisualStyleBackColor = false;
+            this.btnVerPwd.Click += new System.EventHandler(this.boton_ver_password_Click_1);
             // 
             // rnd_color_3
             // 
@@ -209,14 +213,15 @@
             this.rnd_color_3.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_3.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_3.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_color_3.Location = new System.Drawing.Point(2, 4);
+            this.rnd_color_3.Location = new System.Drawing.Point(3, 5);
+            this.rnd_color_3.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_3.MenosHeightBorde = 1;
             this.rnd_color_3.MenosHeightPanel = 1;
             this.rnd_color_3.MenosWidthBorde = 1;
             this.rnd_color_3.MenosWidthPanel = 1;
             this.rnd_color_3.Name = "rnd_color_3";
             this.rnd_color_3.PorcLuzColorBorde = 0;
-            this.rnd_color_3.Size = new System.Drawing.Size(3, 36);
+            this.rnd_color_3.Size = new System.Drawing.Size(4, 44);
             this.rnd_color_3.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rnd_color_3, null);
             this.tagsExtender1.SetTag3(this.rnd_color_3, null);
@@ -232,12 +237,14 @@
             // 
             this.txt_NuevaCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.txt_NuevaCont.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_NuevaCont.Enabled = false;
             this.txt_NuevaCont.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NuevaCont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_NuevaCont.Location = new System.Drawing.Point(7, 18);
+            this.txt_NuevaCont.Location = new System.Drawing.Point(9, 22);
+            this.txt_NuevaCont.Margin = new System.Windows.Forms.Padding(4);
             this.txt_NuevaCont.Name = "txt_NuevaCont";
             this.txt_NuevaCont.PasswordChar = '*';
-            this.txt_NuevaCont.Size = new System.Drawing.Size(284, 23);
+            this.txt_NuevaCont.Size = new System.Drawing.Size(379, 29);
             this.txt_NuevaCont.TabIndex = 5;
             this.tagsExtender1.SetTag2(this.txt_NuevaCont, null);
             this.tagsExtender1.SetTag3(this.txt_NuevaCont, null);
@@ -250,10 +257,10 @@
             this.lbl_NuevaCont.AutoSize = true;
             this.lbl_NuevaCont.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_NuevaCont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_NuevaCont.Location = new System.Drawing.Point(4, 2);
-            this.lbl_NuevaCont.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_NuevaCont.Location = new System.Drawing.Point(5, 2);
+            this.lbl_NuevaCont.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_NuevaCont.Name = "lbl_NuevaCont";
-            this.lbl_NuevaCont.Size = new System.Drawing.Size(122, 16);
+            this.lbl_NuevaCont.Size = new System.Drawing.Size(158, 21);
             this.lbl_NuevaCont.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_NuevaCont, null);
             this.tagsExtender1.SetTag3(this.lbl_NuevaCont, null);
@@ -269,10 +276,10 @@
             this.panel3.Controls.Add(this.rnd_color_4);
             this.panel3.Controls.Add(this.txt_RepNCont);
             this.panel3.Controls.Add(this.lbl_RepNCont);
-            this.panel3.Location = new System.Drawing.Point(24, 299);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(32, 368);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(292, 41);
+            this.panel3.Size = new System.Drawing.Size(389, 50);
             this.panel3.TabIndex = 44;
             this.tagsExtender1.SetTag2(this.panel3, null);
             this.tagsExtender1.SetTag3(this.panel3, null);
@@ -286,6 +293,7 @@
             this.btnVerRepetir.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
             this.btnVerRepetir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnVerRepetir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerRepetir.Enabled = false;
             this.btnVerRepetir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnVerRepetir.FlatAppearance.BorderSize = 0;
             this.btnVerRepetir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
@@ -293,9 +301,10 @@
             this.btnVerRepetir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerRepetir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnVerRepetir.ForeColor = System.Drawing.Color.White;
-            this.btnVerRepetir.Location = new System.Drawing.Point(264, 19);
+            this.btnVerRepetir.Location = new System.Drawing.Point(352, 23);
+            this.btnVerRepetir.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerRepetir.Name = "btnVerRepetir";
-            this.btnVerRepetir.Size = new System.Drawing.Size(25, 20);
+            this.btnVerRepetir.Size = new System.Drawing.Size(33, 25);
             this.btnVerRepetir.TabIndex = 4;
             this.btnVerRepetir.TabStop = false;
             this.btnVerRepetir.Tag = "botonImagen";
@@ -314,14 +323,15 @@
             this.rnd_color_4.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_4.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_4.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_color_4.Location = new System.Drawing.Point(2, 4);
+            this.rnd_color_4.Location = new System.Drawing.Point(3, 5);
+            this.rnd_color_4.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_4.MenosHeightBorde = 1;
             this.rnd_color_4.MenosHeightPanel = 1;
             this.rnd_color_4.MenosWidthBorde = 1;
             this.rnd_color_4.MenosWidthPanel = 1;
             this.rnd_color_4.Name = "rnd_color_4";
             this.rnd_color_4.PorcLuzColorBorde = 0;
-            this.rnd_color_4.Size = new System.Drawing.Size(3, 36);
+            this.rnd_color_4.Size = new System.Drawing.Size(4, 44);
             this.rnd_color_4.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rnd_color_4, null);
             this.tagsExtender1.SetTag3(this.rnd_color_4, null);
@@ -337,12 +347,14 @@
             // 
             this.txt_RepNCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
             this.txt_RepNCont.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_RepNCont.Enabled = false;
             this.txt_RepNCont.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_RepNCont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_RepNCont.Location = new System.Drawing.Point(7, 18);
+            this.txt_RepNCont.Location = new System.Drawing.Point(9, 22);
+            this.txt_RepNCont.Margin = new System.Windows.Forms.Padding(4);
             this.txt_RepNCont.Name = "txt_RepNCont";
             this.txt_RepNCont.PasswordChar = '*';
-            this.txt_RepNCont.Size = new System.Drawing.Size(284, 23);
+            this.txt_RepNCont.Size = new System.Drawing.Size(379, 29);
             this.txt_RepNCont.TabIndex = 6;
             this.tagsExtender1.SetTag2(this.txt_RepNCont, null);
             this.tagsExtender1.SetTag3(this.txt_RepNCont, null);
@@ -355,10 +367,10 @@
             this.lbl_RepNCont.AutoSize = true;
             this.lbl_RepNCont.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_RepNCont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_RepNCont.Location = new System.Drawing.Point(4, 2);
-            this.lbl_RepNCont.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_RepNCont.Location = new System.Drawing.Point(5, 2);
+            this.lbl_RepNCont.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_RepNCont.Name = "lbl_RepNCont";
-            this.lbl_RepNCont.Size = new System.Drawing.Size(167, 16);
+            this.lbl_RepNCont.Size = new System.Drawing.Size(217, 21);
             this.lbl_RepNCont.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_RepNCont, null);
             this.tagsExtender1.SetTag3(this.lbl_RepNCont, null);
@@ -366,19 +378,6 @@
             this.tagsExtender1.SetTagFontSize(this.lbl_RepNCont, 10F);
             this.tagsExtender1.SetTagFontStyle(this.lbl_RepNCont, System.Drawing.FontStyle.Bold);
             this.lbl_RepNCont.Text = "Repetir Nueva Contraseña*";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.panel1.Location = new System.Drawing.Point(15, 82);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 1);
-            this.panel1.TabIndex = 43;
-            this.tagsExtender1.SetTag2(this.panel1, null);
-            this.tagsExtender1.SetTag3(this.panel1, null);
-            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
-            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
             // 
             // title_bar
             // 
@@ -388,8 +387,9 @@
             this.title_bar.Controls.Add(this.boton_minimizar);
             this.title_bar.Controls.Add(this.boton_cerrar);
             this.title_bar.Location = new System.Drawing.Point(0, 0);
+            this.title_bar.Margin = new System.Windows.Forms.Padding(4);
             this.title_bar.Name = "title_bar";
-            this.title_bar.Size = new System.Drawing.Size(595, 24);
+            this.title_bar.Size = new System.Drawing.Size(793, 29);
             this.title_bar.TabIndex = 61;
             this.title_bar.Tag = "titlebar";
             this.tagsExtender1.SetTag2(this.title_bar, null);
@@ -412,10 +412,10 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(571, -1);
+            this.button3.Location = new System.Drawing.Point(761, -1);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 24);
+            this.button3.Size = new System.Drawing.Size(32, 30);
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
             this.button3.Tag = "titlebar";
@@ -435,9 +435,10 @@
             this.boton_minimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.boton_minimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton_minimizar.Location = new System.Drawing.Point(784, 0);
+            this.boton_minimizar.Location = new System.Drawing.Point(1045, 0);
+            this.boton_minimizar.Margin = new System.Windows.Forms.Padding(4);
             this.boton_minimizar.Name = "boton_minimizar";
-            this.boton_minimizar.Size = new System.Drawing.Size(24, 24);
+            this.boton_minimizar.Size = new System.Drawing.Size(32, 30);
             this.boton_minimizar.TabIndex = 0;
             this.boton_minimizar.TabStop = false;
             this.boton_minimizar.Tag = "titlebar";
@@ -459,10 +460,10 @@
             this.boton_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(65)))), ((int)(((byte)(33)))));
             this.boton_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton_cerrar.ForeColor = System.Drawing.Color.Transparent;
-            this.boton_cerrar.Location = new System.Drawing.Point(808, 0);
+            this.boton_cerrar.Location = new System.Drawing.Point(1077, 0);
             this.boton_cerrar.Margin = new System.Windows.Forms.Padding(0);
             this.boton_cerrar.Name = "boton_cerrar";
-            this.boton_cerrar.Size = new System.Drawing.Size(24, 24);
+            this.boton_cerrar.Size = new System.Drawing.Size(32, 30);
             this.boton_cerrar.TabIndex = 0;
             this.boton_cerrar.TabStop = false;
             this.boton_cerrar.Tag = "titlebar";
@@ -481,14 +482,15 @@
             this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 24);
+            this.rpTopMain.Location = new System.Drawing.Point(0, 28);
+            this.rpTopMain.Margin = new System.Windows.Forms.Padding(4);
             this.rpTopMain.MenosHeightBorde = 1;
             this.rpTopMain.MenosHeightPanel = 1;
             this.rpTopMain.MenosWidthBorde = 1;
             this.rpTopMain.MenosWidthPanel = 1;
             this.rpTopMain.Name = "rpTopMain";
             this.rpTopMain.PorcLuzColorBorde = 0;
-            this.rpTopMain.Size = new System.Drawing.Size(595, 8);
+            this.rpTopMain.Size = new System.Drawing.Size(793, 10);
             this.rpTopMain.TabIndex = 60;
             this.tagsExtender1.SetTag2(this.rpTopMain, null);
             this.tagsExtender1.SetTag3(this.rpTopMain, null);
@@ -509,14 +511,15 @@
             this.rnd_cancelar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_cancelar.Controls.Add(this.btn_cancelar);
             this.rnd_cancelar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_cancelar.Location = new System.Drawing.Point(306, 395);
+            this.rnd_cancelar.Location = new System.Drawing.Point(408, 486);
+            this.rnd_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_cancelar.MenosHeightBorde = 1;
             this.rnd_cancelar.MenosHeightPanel = 1;
             this.rnd_cancelar.MenosWidthBorde = 1;
             this.rnd_cancelar.MenosWidthPanel = 1;
             this.rnd_cancelar.Name = "rnd_cancelar";
             this.rnd_cancelar.PorcLuzColorBorde = 0;
-            this.rnd_cancelar.Size = new System.Drawing.Size(180, 35);
+            this.rnd_cancelar.Size = new System.Drawing.Size(240, 43);
             this.rnd_cancelar.TabIndex = 63;
             this.tagsExtender1.SetTag2(this.rnd_cancelar, null);
             this.tagsExtender1.SetTag3(this.rnd_cancelar, null);
@@ -537,9 +540,10 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(3, 3);
+            this.btn_cancelar.Location = new System.Drawing.Point(4, 4);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(174, 30);
+            this.btn_cancelar.Size = new System.Drawing.Size(232, 37);
             this.btn_cancelar.TabIndex = 10;
             this.tagsExtender1.SetTag2(this.btn_cancelar, null);
             this.tagsExtender1.SetTag3(this.btn_cancelar, null);
@@ -559,14 +563,15 @@
             this.rnd_guardar.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(64)))), ((int)(((byte)(94)))));
             this.rnd_guardar.Controls.Add(this.btn_guardar);
             this.rnd_guardar.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_guardar.Location = new System.Drawing.Point(108, 396);
+            this.rnd_guardar.Location = new System.Drawing.Point(144, 487);
+            this.rnd_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_guardar.MenosHeightBorde = 1;
             this.rnd_guardar.MenosHeightPanel = 1;
             this.rnd_guardar.MenosWidthBorde = 1;
             this.rnd_guardar.MenosWidthPanel = 1;
             this.rnd_guardar.Name = "rnd_guardar";
             this.rnd_guardar.PorcLuzColorBorde = 0;
-            this.rnd_guardar.Size = new System.Drawing.Size(180, 35);
+            this.rnd_guardar.Size = new System.Drawing.Size(240, 43);
             this.rnd_guardar.TabIndex = 62;
             this.tagsExtender1.SetTag2(this.rnd_guardar, null);
             this.tagsExtender1.SetTag3(this.rnd_guardar, null);
@@ -587,9 +592,10 @@
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.White;
-            this.btn_guardar.Location = new System.Drawing.Point(3, 3);
+            this.btn_guardar.Location = new System.Drawing.Point(4, 4);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(174, 29);
+            this.btn_guardar.Size = new System.Drawing.Size(232, 36);
             this.btn_guardar.TabIndex = 9;
             this.tagsExtender1.SetTag2(this.btn_guardar, null);
             this.tagsExtender1.SetTag3(this.btn_guardar, null);
@@ -605,10 +611,10 @@
             this.lbl_RolUsuario.AutoSize = true;
             this.lbl_RolUsuario.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_RolUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lbl_RolUsuario.Location = new System.Drawing.Point(4, 2);
-            this.lbl_RolUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_RolUsuario.Location = new System.Drawing.Point(5, 2);
+            this.lbl_RolUsuario.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_RolUsuario.Name = "lbl_RolUsuario";
-            this.lbl_RolUsuario.Size = new System.Drawing.Size(32, 16);
+            this.lbl_RolUsuario.Size = new System.Drawing.Size(41, 21);
             this.lbl_RolUsuario.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.lbl_RolUsuario, null);
             this.tagsExtender1.SetTag3(this.lbl_RolUsuario, null);
@@ -624,14 +630,15 @@
             this.rnd_color_2.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_2.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rnd_color_2.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_color_2.Location = new System.Drawing.Point(2, 4);
+            this.rnd_color_2.Location = new System.Drawing.Point(3, 5);
+            this.rnd_color_2.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_color_2.MenosHeightBorde = 1;
             this.rnd_color_2.MenosHeightPanel = 1;
             this.rnd_color_2.MenosWidthBorde = 1;
             this.rnd_color_2.MenosWidthPanel = 1;
             this.rnd_color_2.Name = "rnd_color_2";
             this.rnd_color_2.PorcLuzColorBorde = 0;
-            this.rnd_color_2.Size = new System.Drawing.Size(3, 36);
+            this.rnd_color_2.Size = new System.Drawing.Size(4, 44);
             this.rnd_color_2.TabIndex = 2;
             this.tagsExtender1.SetTag2(this.rnd_color_2, null);
             this.tagsExtender1.SetTag3(this.rnd_color_2, null);
@@ -649,10 +656,10 @@
             this.pnl_Direccion.Controls.Add(this.rnd_color_2);
             this.pnl_Direccion.Controls.Add(this.txt_RolUsuario);
             this.pnl_Direccion.Controls.Add(this.lbl_RolUsuario);
-            this.pnl_Direccion.Location = new System.Drawing.Point(24, 160);
-            this.pnl_Direccion.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_Direccion.Location = new System.Drawing.Point(32, 197);
+            this.pnl_Direccion.Margin = new System.Windows.Forms.Padding(5);
             this.pnl_Direccion.Name = "pnl_Direccion";
-            this.pnl_Direccion.Size = new System.Drawing.Size(292, 41);
+            this.pnl_Direccion.Size = new System.Drawing.Size(389, 50);
             this.pnl_Direccion.TabIndex = 41;
             this.tagsExtender1.SetTag2(this.pnl_Direccion, null);
             this.tagsExtender1.SetTag3(this.pnl_Direccion, null);
@@ -666,9 +673,10 @@
             this.txt_RolUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_RolUsuario.Font = new System.Drawing.Font("Lato", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_RolUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txt_RolUsuario.Location = new System.Drawing.Point(7, 18);
+            this.txt_RolUsuario.Location = new System.Drawing.Point(9, 22);
+            this.txt_RolUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txt_RolUsuario.Name = "txt_RolUsuario";
-            this.txt_RolUsuario.Size = new System.Drawing.Size(284, 23);
+            this.txt_RolUsuario.Size = new System.Drawing.Size(379, 29);
             this.txt_RolUsuario.TabIndex = 3;
             this.tagsExtender1.SetTag2(this.txt_RolUsuario, null);
             this.tagsExtender1.SetTag3(this.txt_RolUsuario, null);
@@ -682,9 +690,10 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.txtNombre.Location = new System.Drawing.Point(23, 46);
+            this.txtNombre.Location = new System.Drawing.Point(31, 57);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(482, 35);
+            this.txtNombre.Size = new System.Drawing.Size(643, 44);
             this.txtNombre.TabIndex = 1;
             this.tagsExtender1.SetTag2(this.txtNombre, null);
             this.tagsExtender1.SetTag3(this.txtNombre, null);
@@ -699,9 +708,10 @@
             // 
             this.flpPermisos.AutoScroll = true;
             this.flpPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(245)))));
-            this.flpPermisos.Location = new System.Drawing.Point(336, 131);
+            this.flpPermisos.Location = new System.Drawing.Point(448, 161);
+            this.flpPermisos.Margin = new System.Windows.Forms.Padding(4);
             this.flpPermisos.Name = "flpPermisos";
-            this.flpPermisos.Size = new System.Drawing.Size(248, 209);
+            this.flpPermisos.Size = new System.Drawing.Size(331, 257);
             this.flpPermisos.TabIndex = 68;
             this.tagsExtender1.SetTag2(this.flpPermisos, null);
             this.tagsExtender1.SetTag3(this.flpPermisos, null);
@@ -718,14 +728,15 @@
             this.rpn_ListaPermisosUsuario.Controls.Add(this.btnAgregarPermisos);
             this.rpn_ListaPermisosUsuario.Controls.Add(this.lbl_ListaPermisosUsuario);
             this.rpn_ListaPermisosUsuario.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpn_ListaPermisosUsuario.Location = new System.Drawing.Point(336, 95);
+            this.rpn_ListaPermisosUsuario.Location = new System.Drawing.Point(448, 117);
+            this.rpn_ListaPermisosUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.rpn_ListaPermisosUsuario.MenosHeightBorde = 1;
             this.rpn_ListaPermisosUsuario.MenosHeightPanel = 1;
             this.rpn_ListaPermisosUsuario.MenosWidthBorde = 1;
             this.rpn_ListaPermisosUsuario.MenosWidthPanel = 1;
             this.rpn_ListaPermisosUsuario.Name = "rpn_ListaPermisosUsuario";
             this.rpn_ListaPermisosUsuario.PorcLuzColorBorde = 0;
-            this.rpn_ListaPermisosUsuario.Size = new System.Drawing.Size(248, 36);
+            this.rpn_ListaPermisosUsuario.Size = new System.Drawing.Size(331, 44);
             this.rpn_ListaPermisosUsuario.TabIndex = 67;
             this.tagsExtender1.SetTag2(this.rpn_ListaPermisosUsuario, null);
             this.tagsExtender1.SetTag3(this.rpn_ListaPermisosUsuario, null);
@@ -746,9 +757,10 @@
             this.btnAgregarPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarPermisos.Font = new System.Drawing.Font("Lato", 13F, System.Drawing.FontStyle.Bold);
             this.btnAgregarPermisos.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarPermisos.Location = new System.Drawing.Point(199, 3);
+            this.btnAgregarPermisos.Location = new System.Drawing.Point(265, 4);
+            this.btnAgregarPermisos.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarPermisos.Name = "btnAgregarPermisos";
-            this.btnAgregarPermisos.Size = new System.Drawing.Size(46, 29);
+            this.btnAgregarPermisos.Size = new System.Drawing.Size(61, 36);
             this.btnAgregarPermisos.TabIndex = 8;
             this.tagsExtender1.SetTag2(this.btnAgregarPermisos, null);
             this.tagsExtender1.SetTag3(this.btnAgregarPermisos, null);
@@ -766,9 +778,10 @@
             this.lbl_ListaPermisosUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_ListaPermisosUsuario.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ListaPermisosUsuario.ForeColor = System.Drawing.Color.White;
-            this.lbl_ListaPermisosUsuario.Location = new System.Drawing.Point(71, 3);
+            this.lbl_ListaPermisosUsuario.Location = new System.Drawing.Point(95, 4);
+            this.lbl_ListaPermisosUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_ListaPermisosUsuario.Name = "lbl_ListaPermisosUsuario";
-            this.lbl_ListaPermisosUsuario.Size = new System.Drawing.Size(114, 29);
+            this.lbl_ListaPermisosUsuario.Size = new System.Drawing.Size(148, 37);
             this.lbl_ListaPermisosUsuario.TabIndex = 0;
             this.tagsExtender1.SetTag2(this.lbl_ListaPermisosUsuario, null);
             this.tagsExtender1.SetTag3(this.lbl_ListaPermisosUsuario, null);
@@ -786,14 +799,15 @@
             this.rnd_Reestablecer.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rnd_Reestablecer.Controls.Add(this.btnReestablecer);
             this.rnd_Reestablecer.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rnd_Reestablecer.Location = new System.Drawing.Point(70, 347);
+            this.rnd_Reestablecer.Location = new System.Drawing.Point(93, 427);
+            this.rnd_Reestablecer.Margin = new System.Windows.Forms.Padding(4);
             this.rnd_Reestablecer.MenosHeightBorde = 1;
             this.rnd_Reestablecer.MenosHeightPanel = 1;
             this.rnd_Reestablecer.MenosWidthBorde = 1;
             this.rnd_Reestablecer.MenosWidthPanel = 1;
             this.rnd_Reestablecer.Name = "rnd_Reestablecer";
             this.rnd_Reestablecer.PorcLuzColorBorde = 0;
-            this.rnd_Reestablecer.Size = new System.Drawing.Size(208, 30);
+            this.rnd_Reestablecer.Size = new System.Drawing.Size(277, 37);
             this.rnd_Reestablecer.TabIndex = 61;
             this.tagsExtender1.SetTag2(this.rnd_Reestablecer, null);
             this.tagsExtender1.SetTag3(this.rnd_Reestablecer, null);
@@ -815,8 +829,9 @@
             this.btnReestablecer.Font = new System.Drawing.Font("Lato", 13F, System.Drawing.FontStyle.Bold);
             this.btnReestablecer.ForeColor = System.Drawing.Color.White;
             this.btnReestablecer.Location = new System.Drawing.Point(1, 1);
+            this.btnReestablecer.Margin = new System.Windows.Forms.Padding(4);
             this.btnReestablecer.Name = "btnReestablecer";
-            this.btnReestablecer.Size = new System.Drawing.Size(204, 26);
+            this.btnReestablecer.Size = new System.Drawing.Size(272, 32);
             this.btnReestablecer.TabIndex = 7;
             this.tagsExtender1.SetTag2(this.btnReestablecer, null);
             this.tagsExtender1.SetTag3(this.btnReestablecer, null);
@@ -836,14 +851,15 @@
             this.rpCambiarPassword.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(199)))), ((int)(((byte)(45)))));
             this.rpCambiarPassword.Controls.Add(this.btnCambiarPassword);
             this.rpCambiarPassword.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpCambiarPassword.Location = new System.Drawing.Point(70, 213);
+            this.rpCambiarPassword.Location = new System.Drawing.Point(93, 262);
+            this.rpCambiarPassword.Margin = new System.Windows.Forms.Padding(4);
             this.rpCambiarPassword.MenosHeightBorde = 1;
             this.rpCambiarPassword.MenosHeightPanel = 1;
             this.rpCambiarPassword.MenosWidthBorde = 1;
             this.rpCambiarPassword.MenosWidthPanel = 1;
             this.rpCambiarPassword.Name = "rpCambiarPassword";
             this.rpCambiarPassword.PorcLuzColorBorde = 0;
-            this.rpCambiarPassword.Size = new System.Drawing.Size(208, 30);
+            this.rpCambiarPassword.Size = new System.Drawing.Size(277, 37);
             this.rpCambiarPassword.TabIndex = 42;
             this.tagsExtender1.SetTag2(this.rpCambiarPassword, null);
             this.tagsExtender1.SetTag3(this.rpCambiarPassword, null);
@@ -864,9 +880,10 @@
             this.btnCambiarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarPassword.Font = new System.Drawing.Font("Lato", 13F, System.Drawing.FontStyle.Bold);
             this.btnCambiarPassword.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarPassword.Location = new System.Drawing.Point(3, 3);
+            this.btnCambiarPassword.Location = new System.Drawing.Point(4, 4);
+            this.btnCambiarPassword.Margin = new System.Windows.Forms.Padding(4);
             this.btnCambiarPassword.Name = "btnCambiarPassword";
-            this.btnCambiarPassword.Size = new System.Drawing.Size(202, 26);
+            this.btnCambiarPassword.Size = new System.Drawing.Size(269, 32);
             this.btnCambiarPassword.TabIndex = 4;
             this.tagsExtender1.SetTag2(this.btnCambiarPassword, null);
             this.tagsExtender1.SetTag3(this.btnCambiarPassword, null);
@@ -885,10 +902,10 @@
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(551, 46);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(735, 57);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(28, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(37, 34);
             this.btnEliminar.TabIndex = 72;
             this.btnEliminar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEliminar, null);
@@ -907,10 +924,10 @@
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(510, 46);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Location = new System.Drawing.Point(680, 57);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(28, 28);
+            this.btnEditar.Size = new System.Drawing.Size(37, 34);
             this.btnEditar.TabIndex = 71;
             this.btnEditar.TabStop = false;
             this.tagsExtender1.SetTag2(this.btnEditar, null);
@@ -925,8 +942,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(596, 448);
+            this.panel4.Size = new System.Drawing.Size(795, 551);
             this.panel4.TabIndex = 73;
             this.tagsExtender1.SetTag2(this.panel4, null);
             this.tagsExtender1.SetTag3(this.panel4, null);
@@ -934,11 +952,25 @@
             this.tagsExtender1.SetTagFontSize(this.panel4, 10F);
             this.tagsExtender1.SetTagFontStyle(this.panel4, System.Drawing.FontStyle.Regular);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.panel1.Location = new System.Drawing.Point(20, 101);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(753, 1);
+            this.panel1.TabIndex = 43;
+            this.tagsExtender1.SetTag2(this.panel1, null);
+            this.tagsExtender1.SetTag3(this.panel1, null);
+            this.tagsExtender1.SetTagFontName(this.panel1, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.panel1, 10F);
+            this.tagsExtender1.SetTagFontStyle(this.panel1, System.Drawing.FontStyle.Regular);
+            // 
             // pantallaEditarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 447);
+            this.ClientSize = new System.Drawing.Size(793, 550);
             this.ControlBox = false;
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -957,9 +989,11 @@
             this.Controls.Add(this.pnl_Direccion);
             this.Controls.Add(this.pnl_codServ);
             this.Controls.Add(this.panel4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "pantallaEditarUsuario";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.ShowIcon = false;
@@ -1005,7 +1039,6 @@
         private RoundedPanel rnd_color_4;
         private System.Windows.Forms.TextBox txt_RepNCont;
         private System.Windows.Forms.Label lbl_RepNCont;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel title_bar;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button boton_minimizar;
@@ -1030,8 +1063,9 @@
         private System.Windows.Forms.Button btnCambiarPassword;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button boton_ver_password;
+        private System.Windows.Forms.Button btnVerPwd;
         private System.Windows.Forms.Button btnVerRepetir;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
     }
 }

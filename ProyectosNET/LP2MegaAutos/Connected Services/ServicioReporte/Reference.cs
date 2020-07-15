@@ -86,6 +86,8 @@ namespace LP2MegaAutos.ServicioReporte {
         
         private reporteEntry1[] mapaDetalleMontosField;
         
+        private string nombreUsuarioField;
+        
         private sede sedeField;
         
         private string tipoReporteField;
@@ -288,6 +290,18 @@ namespace LP2MegaAutos.ServicioReporte {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string nombreUsuario {
+            get {
+                return this.nombreUsuarioField;
+            }
+            set {
+                this.nombreUsuarioField = value;
+                this.RaisePropertyChanged("nombreUsuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public sede sede {
             get {
                 return this.sedeField;
@@ -299,7 +313,7 @@ namespace LP2MegaAutos.ServicioReporte {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string tipoReporte {
             get {
                 return this.tipoReporteField;
@@ -311,7 +325,7 @@ namespace LP2MegaAutos.ServicioReporte {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public string titulo {
             get {
                 return this.tituloField;

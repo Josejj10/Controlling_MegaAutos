@@ -343,11 +343,11 @@
     <Compile Include="Inicio\pantallaInicio.Designer.cs">
       <DependentUpon>pantallaInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\pantallaDetalleReporte.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Reportes\frmDetalleReporte.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\pantallaDetalleReporte.Designer.cs">
-      <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
+    <Compile Include="Reportes\frmDetalleReporte.Designer.cs">
+      <DependentUpon>frmDetalleReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\pantallaListaReportes.cs">
       <SubType>UserControl</SubType>
@@ -431,6 +431,7 @@
     <Compile Include="Framework\MetaDesign\RoundedPanel.Designer.cs">
       <DependentUpon>RoundedPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanasPrincipales\LoadingHelper.cs" />
     <Compile Include="VentanasPrincipales\Pantalla.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -563,8 +564,8 @@
     <EmbeddedResource Include="Inicio\pantallaInicio.resx">
       <DependentUpon>pantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\pantallaDetalleReporte.resx">
-      <DependentUpon>pantallaDetalleReporte.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\frmDetalleReporte.resx">
+      <DependentUpon>frmDetalleReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\pantallaListaReportes.resx">
       <DependentUpon>pantallaListaReportes.cs</DependentUpon>

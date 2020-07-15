@@ -12,6 +12,7 @@ using LP2MegaAutos.Framework;
 using LP2MegaAutos.VentanasPrincipales;
 using LP2MegaAutos.ServicioExcel;
 using LP2MegaAutos.ServicioSede;
+using System.Text.RegularExpressions;
 
 namespace LP2MegaAutos
 {
@@ -19,6 +20,8 @@ namespace LP2MegaAutos
     {
         private string _tipoReporte;
         private string _periodoReporte = "Diario";
+        private reporte _reporte;
+        public reporte Reporte { get { return _reporte; } }
 
         #region title_bar
 
@@ -169,8 +172,23 @@ namespace LP2MegaAutos
             int idUsuario = frmPrincipal.Usuario.id;
             string fechaInicio = "";
             string fechaFin = "";
+            string tReporte;
+            switch (_tipoReporte)
+            {
+                case "Siniestro":
+                    tReporte = "tipoSiniestro";
+                    break;
+                case "Cliente":
+                    tReporte = "tipoCliente";
+                    break;
+                default:
+                    tReporte = "areaTrabajo";
+                    break;
+            }
+
             string stringConfirmacion = $"¿Desea generar un reporte {_periodoReporte} por {_tipoReporte} de la sede {sede.distrito}";
-            
+            string titulo = String.IsNullOrEmpty(Regex.Replace(txtTitulo.Text, @"\s+", " ").Replace(" ","")) ? $"Reporte {_tipoReporte} de {sede.distrito}"
+                : Regex.Replace(txtTitulo.Text, @"\s+"," ");
             switch (_periodoReporte)
             {
                 case "Diario":
@@ -191,14 +209,14 @@ namespace LP2MegaAutos
             stringConfirmacion += "?";         
             
             // Confirmar los datos del reporte
-            frmMessageBox confirmacion = new frmMessageBox(stringConfirmacion, MessageBoxButtons.OKCancel, "Confirmar Creación");
+            frmMessageBox confirmacion = new frmMessageBox(stringConfirmacion, MessageBoxButtons.OKCancel, titulo);
             if (confirmacion.ShowDialog() != DialogResult.OK) return;
             
 
             // Si acepta, generar
-            ExcelWSClient daoCliente = new ExcelWSClient();
-            daoCliente.generarReporte(fechaInicio, fechaFin, _tipoReporte, sede.id, idUsuario);
+            ExcelWSClient daoExcel = new ExcelWSClient();
             
+            reporte r= daoExcel.generarReporte(fechaInicio, fechaFin, tReporte, sede.id, idUsuario,titulo, 0);
             this.DialogResult = DialogResult.OK;
         }
 

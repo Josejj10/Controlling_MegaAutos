@@ -51,6 +51,7 @@
       <xs:element minOccurs="0" name="arg6" type="xs:dateTime" />
       <xs:element name="arg7" type="xs:int" />
       <xs:element name="arg8" type="xs:int" />
+      <xs:element name="arg9" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="procesarResponse">
@@ -60,6 +61,7 @@
   </xs:complexType>
   <xs:complexType name="reporte">
     <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="detalle" nillable="true" type="tns:detalleReporte" />
       <xs:element minOccurs="0" name="egresos" type="xs:double" />
       <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
@@ -69,55 +71,80 @@
       <xs:element name="idReporte" type="xs:int" />
       <xs:element name="idUsuario" type="xs:int" />
       <xs:element minOccurs="0" name="ingresos" type="xs:double" />
-      <xs:element name="mapaDetalle">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element minOccurs="0" name="key" type="xs:string" />
-                  <xs:element minOccurs="0" name="value" type="tns:arrayList" />
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="mapaDetalleMontos">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element minOccurs="0" name="key" type="xs:string" />
-                  <xs:element minOccurs="0" name="value" type="tns:arrayList" />
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
+      <xs:element minOccurs="0" name="nombreUsuario" type="xs:string" />
       <xs:element minOccurs="0" name="sede" type="tns:sede" />
       <xs:element minOccurs="0" name="tipoReporte" type="xs:string" />
       <xs:element minOccurs="0" name="titulo" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="arrayList">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:abstractList">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="detalleReporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cuenta" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="montos" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ordenes" nillable="true" type="tns:ordenTrabajo" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="abstractList" abstract="true">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:abstractCollection">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
+  <xs:complexType name="ordenTrabajo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element name="comprasRpto" type="xs:double" />
+      <xs:element minOccurs="0" name="comprobantePago" type="tns:comprobantePago" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="margenBruto" type="xs:double" />
+      <xs:element minOccurs="0" name="numeroOrden" type="xs:string" />
+      <xs:element name="porcentaje" type="xs:double" />
+      <xs:element name="salidasAlmacen" type="xs:double" />
+      <xs:element minOccurs="0" name="sede" type="tns:sede" />
+      <xs:element name="serTerTaller" type="xs:double" />
+      <xs:element name="servTerceros" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="servicios" nillable="true" type="tns:servicio" />
+      <xs:element minOccurs="0" name="tipoSiniestro" type="xs:string" />
+      <xs:element name="totalEgresos" type="xs:double" />
+      <xs:element name="totalIngresos" type="xs:double" />
+      <xs:element minOccurs="0" name="vehiculo" type="tns:vehiculo" />
+      <xs:element name="mObraMecanica" type="xs:double" />
+      <xs:element name="mObraPintura" type="xs:double" />
+      <xs:element name="mObraPlanchado" type="xs:double" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="abstractCollection" abstract="true">
-    <xs:sequence />
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobantePago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="numeroComprobante" type="xs:string" />
+      <xs:element minOccurs="0" name="ordenTrabajo" type="tns:ordenTrabajo" />
+      <xs:element minOccurs="0" name="tipoComprobante" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="servicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoServicio" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoServicio" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vehiculo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="placa" type="xs:string" />
+      <xs:element minOccurs="0" name="propietario" type="tns:cliente" />
+      <xs:element minOccurs="0" name="tipoVehiculo" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarArchivoEntrada">
     <xs:sequence>
@@ -155,11 +182,13 @@
       <xs:element minOccurs="0" name="tipo" type="xs:string" />
       <xs:element name="idSede" type="xs:int" />
       <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+      <xs:element name="idReporte" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="generarReporteResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" name="return" type="tns:reporte" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarArchivoSalida">

@@ -19,9 +19,7 @@ namespace LP2MegaAutos
     public partial class pantallaActualizarBD : Pantalla
     {
         ServicioExcel.ExcelWSClient daoExcel;
-        private static frmLoading loading = null;
         private string archivoSeleccionado1;
-        private string archivoSeleccionado2;
         private ServicioExcel.excel _excelEnviado;
         private ServicioExcel.excel _excelRecibido;
 
@@ -72,13 +70,11 @@ namespace LP2MegaAutos
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             // Llamar a pantalla de carga
-            Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
-            thrdLoading.Start();
-
+            LoadingHelper.loadingStart();
             int id = ((sede)cboSede.SelectedItem).id;
             frmMessageBox frm;
             bool inserto = daoExcel.insertarArchivoEntrada(_excelEnviado, id) ==  0;
-            thrdLoading.Abort();
+            LoadingHelper.stopLoading();
             if (inserto)
             {
                 frm = new frmMessageBox("No se pudo insertar el archivo.", MessageBoxButtons.OK);
@@ -90,37 +86,18 @@ namespace LP2MegaAutos
                 this.btnObtener.Enabled = true;
             }
             frm.ShowDialog();
-
-        }
-
-        private void showLoadingScreen()
-        {
-            try
-            {
-                if (loading == null) loading = new frmLoading();
-                loading.Enabled = true;
-                loading.ShowDialog();
-            }
-            finally
-            {
-                loading.stopTick();
-                loading.Dispose();
-                loading = null;
-            }
         }
 
         private void btnObtener_Click(object sender, EventArgs e)
-        {
-            
+        {    
             if (sfdArchivoReporte.ShowDialog() == DialogResult.OK)
             {
                 // Poner las rutas por default
                 frmMessageBox f;
                 String archivoEntrada = sfdArchivoReporte.FileName + ".xlsx";
-                Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
-                thrdLoading.Start();
+                LoadingHelper.loadingStart();
                 _excelRecibido = daoExcel.leerArchivoSalida();
-                thrdLoading.Abort();
+                LoadingHelper.stopLoading();
                 if(_excelRecibido.archivo == null)
                 {
                     f = new frmMessageBox("No se recibió ningún dato. .El archivo insertado probablemente sea incorrecto", MessageBoxButtons.OK, "ERROR", true);
@@ -140,10 +117,9 @@ namespace LP2MegaAutos
                 try
                 {
                     String archivoEntrada = sfdArchivoEntrada.FileName + ".xlsx";
-                    Thread thrdLoading = new Thread(new ThreadStart(showLoadingScreen)); ;
-                    thrdLoading.Start();
+                    LoadingHelper.loadingStart();
                     _excelRecibido = daoExcel.leerArchivoEntrada();
-                    thrdLoading.Abort();
+                    LoadingHelper.stopLoading();
 
                     File.WriteAllBytes(archivoEntrada, _excelRecibido.archivo);
                     MessageBox.Show("Se ha guardado el archivo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -18,63 +18,6 @@ namespace LP2MegaAutos
 {
     public partial class pantallaEditarUsuario : MetroForm
     {
-        private usuario _usuario;
-        private List<ePermisos?> _permisosIniciales = new List<ePermisos?>();
-        private bool _agregando = true;
-        private bool _activando = false;
-
-        public pantallaEditarUsuario()
-        {
-            InitializeComponent();
-            txtNombre.Text = "Agregar nombre de usuario...";
-            _usuario = new usuario();
-            _agregando = true;
-            btnCambiarPassword.Visible =
-            rpCambiarPassword.Visible =
-            btnEditar.Visible =
-            btnEliminar.Visible = false;
-            _usuario.permisos = _permisosIniciales.ToArray();
-            txtNombre.ForeColor = Colores.LowContrast;
-            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
-        }
-        public pantallaEditarUsuario(usuario usuario, bool viendoPropio = false)
-        {
-            if (usuario == null) this.DialogResult = DialogResult.Cancel;
-            InitializeComponent();
-            _usuario = usuario;
-            txtNombre.Text = OtrosHelper.tipoOracion(usuario.nombre);    
-            txt_Correo.Text = usuario.correo.ToLower();
-            txt_RolUsuario.Text = OtrosHelper.tipoOracion(usuario.tipoUsuario);
-            txt_NuevaCont.Text = txt_RepNCont.Text = "";
-            _agregando = false;
-            if (_usuario.permisos == null) _usuario.permisos = _permisosIniciales.ToArray();
-            _permisosIniciales = _usuario.permisos.ToList();
-            toggleComponentes();
-            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
-            crearItemsListaPermisos();
-            if (viendoPropio)
-            {
-                this.btnAgregarPermisos.Visible = false;
-            }
-
-            if (usuario.activo != 0) return;
-
-            // Si el usuario es inactivo
-            lbl_NuevaCont.Visible = rnd_color_3.Visible =
-            txt_NuevaCont.Visible = boton_ver_password.Visible =
-            lbl_RepNCont.Visible = rnd_color_4.Visible =
-            txt_RepNCont.Visible = btnVerRepetir.Visible =
-            btnAgregarPermisos.Visible =
-            rnd_Reestablecer.Visible =
-            rpCambiarPassword.Visible =
-            btnEditar.Visible = btnEliminar.Visible =
-            false;
-            _activando = true;
-            btn_guardar.Text = "Activar";
-            btn_guardar.Enabled = true;
-            rnd_guardar.ColorBorde = rnd_guardar.ColorPanel = Colores.Rosa;
-        }
-
         #region title_bar
 
         #region botones
@@ -110,6 +53,73 @@ namespace LP2MegaAutos
         #endregion movement
 
         #endregion title_bar
+        
+        #region inicializar
+        private usuario _usuario;
+        private List<ePermisos?> _permisosIniciales = new List<ePermisos?>();
+        private bool _agregando = true;
+        private bool _activando = false;
+        public usuario Usuario { get { return _usuario; } }
+        public bool Activando { get { return _activando; } }
+        public bool CambiarPass { get { return btnCambiarPassword.Enabled; } }
+        public pantallaEditarUsuario()
+        {
+            InitializeComponent();
+            txtNombre.Text = "Agregar nombre de usuario...";
+            _usuario = new usuario();
+            _agregando = true;
+            btnCambiarPassword.Visible =
+            rpCambiarPassword.Visible =
+            btnEditar.Visible =
+            btnEliminar.Visible = false;
+            _usuario.permisos = _permisosIniciales.ToArray();
+            txtNombre.ForeColor = Colores.LowContrast;
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
+        }
+        
+        public pantallaEditarUsuario(usuario usuario, bool viendoPropio = false)
+        {
+            if (usuario == null) this.DialogResult = DialogResult.Cancel;
+            InitializeComponent();
+            _usuario = usuario;
+            txtNombre.Text = OtrosHelper.tipoOracion(usuario.nombre);    
+            txt_Correo.Text = usuario.correo.ToLower();
+            txt_RolUsuario.Text = OtrosHelper.tipoOracion(usuario.tipoUsuario);
+            txt_NuevaCont.Text = txt_RepNCont.Text = "";
+            _agregando = false;
+            if (_usuario.permisos == null) _usuario.permisos = _permisosIniciales.ToArray();
+            _permisosIniciales = _usuario.permisos.ToList();
+            toggleComponentes();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
+            crearItemsListaPermisos();
+            if (viendoPropio)
+            {
+                this.btnAgregarPermisos.Visible = false;
+                return;
+            }
+
+            if (usuario.activo == 0) inicializarInactivo();
+        }
+
+        private void inicializarInactivo()
+        {
+            // Si el usuario es inactivo
+            lbl_NuevaCont.Visible = rnd_color_3.Visible =
+            txt_NuevaCont.Visible = btnVerPwd.Visible =
+            lbl_RepNCont.Visible = rnd_color_4.Visible =
+            txt_RepNCont.Visible = btnVerRepetir.Visible =
+            btnAgregarPermisos.Visible =
+            rnd_Reestablecer.Visible =
+            rpCambiarPassword.Visible =
+            btnEditar.Visible = btnEliminar.Visible =
+            false;
+            _activando = true;
+            btn_guardar.Text = "Activar";
+            btn_guardar.Enabled = true;
+            rnd_guardar.ColorBorde = rnd_guardar.ColorPanel = Colores.Rosa;
+        }
+        #endregion inicializar
+
         #region Ver Password
         private bool password_seen = false;
         private void boton_ver_password_Click(object sender, EventArgs e)
@@ -119,16 +129,22 @@ namespace LP2MegaAutos
                 if (password_seen)
                 {
                     txt_NuevaCont.PasswordChar = '\0';
-                    boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
+                    btnVerPwd.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
                 }
                 else
                 {
                     txt_NuevaCont.PasswordChar = '•';
-                    boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+                    btnVerPwd.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
                 }
         }
         #endregion Ver Password
+
         #region listaPermisos
+        private void borrarItemsLista()
+        {
+            for (int i = 0; i < flpPermisos.Controls.Count;)
+                flpPermisos.Controls.RemoveAt(i);
+        }
         private void crearItemsListaPermisos()
         {
             borrarItemsLista();
@@ -180,19 +196,14 @@ namespace LP2MegaAutos
             f.ShowDialog();
         }
         #endregion listaPermisos
+        
+        #region botonesAccion
 
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-        }
-
-        public usuario Usuario { get {return _usuario; } }
-
+        #region guardar
         private bool usuarioValido()
         {
             // Sacapalabras al txt
-            if (string.IsNullOrEmpty(txtNombre.Text) || 
+            if (string.IsNullOrEmpty(txtNombre.Text) ||
                 txtNombre.Text == "Agregar nombre de usuario...")
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese un nombre para el usuario.", MessageBoxButtons.OK);
@@ -217,7 +228,7 @@ namespace LP2MegaAutos
 
             if (_agregando) //Si se agrega
             {
-                if(txt_NuevaCont.Text != txt_RepNCont.Text || string.IsNullOrEmpty(txt_NuevaCont.Text))
+                if (txt_NuevaCont.Text != txt_RepNCont.Text || string.IsNullOrEmpty(txt_NuevaCont.Text))
                 {
                     frmMessageBox f = new frmMessageBox("Por favor ingrese y repita correctamente la nueva contraseña.", MessageBoxButtons.OK);
                     f.ShowDialog();
@@ -226,7 +237,7 @@ namespace LP2MegaAutos
 
             }
             else
-            if (txt_NuevaCont.Enabled && ( txt_NuevaCont.Text != txt_RepNCont.Text || string.IsNullOrEmpty(txt_NuevaCont.Text)))
+            if (txt_NuevaCont.Enabled && (txt_NuevaCont.Text != txt_RepNCont.Text || string.IsNullOrEmpty(txt_NuevaCont.Text)))
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese y repita correctamente la nueva contraseña.", MessageBoxButtons.OK);
                 f.ShowDialog();
@@ -235,8 +246,6 @@ namespace LP2MegaAutos
 
             return true;
         }
-
-        public bool Activando { get { return _activando; } }
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
@@ -254,17 +263,17 @@ namespace LP2MegaAutos
 
             if (!usuarioValido())
                 return;
-            
+
             if (_agregando)
                 f = new frmEliminar("agregar el usuario " + txtNombre.Text, "Agregar Usuario");
             else
                 f = new frmEliminar("modificar el usuario " + txtNombre.Text, "Modificar Usuario");
-            
+
             if (f.ShowDialog() != DialogResult.OK)
                 return;
 
             ServicioUsuario.UsuarioWSClient daoUsuario = new UsuarioWSClient();
-            
+
             if (daoUsuario.verificarPassword(frmPrincipal.Usuario.correo, f.Password) == null)
             {
                 frmMessageBox frm = new frmMessageBox("La contraseña es invalida", MessageBoxButtons.OK);
@@ -280,12 +289,29 @@ namespace LP2MegaAutos
             // Actualizar contraseña si cambiarcontraseña esta activo
             if (btnCambiarPassword.Enabled || _agregando)
                 _usuario.password = txt_RepNCont.Text;
-            
+
             this.DialogResult = DialogResult.OK;
         }
-
-        public bool CambiarPass { get { return btnCambiarPassword.Enabled; } }
-
+        #endregion guardar
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            toggleComponentes();
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmEliminar frm = new frmEliminar("eliminar el usuario " + _usuario.nombre);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                this.DialogResult = DialogResult.Retry;
+            }
+        }
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+        }
+        
+        #endregion botonesAccion
+       
         private void btnAgregarPermisosClick(object sender, EventArgs e)
         {
             if (_usuario == null) return;
@@ -309,7 +335,7 @@ namespace LP2MegaAutos
             {
                 btn_guardar.Enabled = true;
                 rnd_guardar.ColorBorde = rnd_guardar.ColorPanel 
-                    = Colores.AmarilloInteractivo;
+                    = Colores.Rosa;
             }
 
             // Si devolvio OK, cargar de nuevo la pantalla de permisos del usuario
@@ -317,11 +343,70 @@ namespace LP2MegaAutos
             _usuario.permisos = pes.Usuario.permisos;
             crearItemsListaPermisos();
         }
-      
-        private void borrarItemsLista()
+
+        #region toggle
+        private void toggleComponentes()
         {
-            for (int i = 0; i < flpPermisos.Controls.Count;)
-                flpPermisos.Controls.RemoveAt(i);
+            bool en = txtNombre.Enabled = txt_Correo.Enabled =
+                txt_RolUsuario.Enabled = btnCambiarPassword.Enabled =
+                rpCambiarPassword.Enabled = btnVerRepetir.Enabled =
+                btnVerPwd.Enabled =
+                !txtNombre.Enabled;
+
+            bool a = true;
+            foreach (ePermisos e in _usuario.permisos)
+            {
+                a &= _permisosIniciales.Contains(e);
+            }
+
+            // Si son los mismos permisos que al inicio, se desactiva 
+            if (a)
+            {
+                btn_guardar.Enabled = false;
+                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Disabled;
+            }
+            else
+            {
+                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
+                btn_guardar.Enabled = true;
+            }
+
+            if (!en)
+            {
+                // No habilitado
+                txtNombre.ForeColor = txt_Correo.ForeColor =
+                    txt_NuevaCont.ForeColor = txt_RolUsuario.ForeColor =
+                    txt_RepNCont.ForeColor =
+                    rnd_color_1.ColorPanel = rnd_color_2.ColorPanel =
+                    rnd_color_3.ColorPanel = rnd_color_4.ColorPanel =
+                    rpCambiarPassword.ColorPanel =
+                    rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
+                    rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
+                    rpCambiarPassword.ColorBorde
+                    = Colores.Disabled;
+
+                btnEditar.BackgroundImage = Resources.editar;
+                return;
+            }
+            // Habilitado
+            txtNombre.ForeColor = txt_Correo.ForeColor =
+            txt_NuevaCont.ForeColor = txt_RolUsuario.ForeColor =
+            txt_RepNCont.ForeColor = Colores.HighContrast;
+
+            rnd_color_1.ColorPanel = rnd_color_2.ColorPanel =
+            //rnd_color_3.ColorPanel = rnd_color_4.ColorPanel =
+            rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
+            //rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
+            Colores.Rosa;
+
+            rpCambiarPassword.ColorPanel = rpCambiarPassword.ColorBorde
+            = Colores.AmarilloInteractivo;
+
+            btnEditar.BackgroundImage = Resources.Cancelar;
+
+            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
+            btn_guardar.Enabled = true;
+
         }
 
         private void btnReestablecer_Click(object sender, EventArgs e)
@@ -336,11 +421,12 @@ namespace LP2MegaAutos
             rnd_guardar.ColorBorde = rnd_guardar.ColorPanel
             = Colores.Disabled;
         }
-
+        #endregion toggle
+        
         private void btnCambiarPassword_Click(object sender, EventArgs e)
         {
-            bool en = txt_NuevaCont.Enabled = txt_RepNCont.Enabled = !txt_RepNCont.Enabled;
-            // cambiar colores de password
+            bool en = btnVerPwd.Enabled = btnVerRepetir.Enabled = txt_NuevaCont.Enabled = txt_RepNCont.Enabled = !txt_RepNCont.Enabled;
+            // Cambiar colores de password
             if (en)
             {
                 txt_NuevaCont.ForeColor = txt_RepNCont.ForeColor =
@@ -363,89 +449,14 @@ namespace LP2MegaAutos
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            toggleComponentes();
-        }
-
-        private void toggleComponentes()
-        {
-            bool en = txtNombre.Enabled = txt_Correo.Enabled =
-                txt_RolUsuario.Enabled = btnCambiarPassword.Enabled =
-                !txtNombre.Enabled;
-
-            bool a = true;
-            foreach(ePermisos e in _usuario.permisos)
-            {
-                a &= _permisosIniciales.Contains(e);
-            }
-            
-            // Si son los mismos permisos que al inicio, se desactiva 
-            if (a)
-            {
-                btn_guardar.Enabled = false;
-                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Disabled;
-            }
-            else {
-                rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
-                btn_guardar.Enabled = true;
-            }
-
-                if (!en)
-            {
-                // No habilitado
-                txtNombre.ForeColor = txt_Correo.ForeColor =
-                    txt_NuevaCont.ForeColor = txt_RolUsuario.ForeColor =
-                    txt_RepNCont.ForeColor =
-                    rnd_color_1.ColorPanel = rnd_color_2.ColorPanel =
-                    rnd_color_3.ColorPanel = rnd_color_4.ColorPanel =
-                    rpCambiarPassword.ColorPanel =
-                    rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
-                    rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
-                    rpCambiarPassword.ColorBorde
-                    = Colores.Disabled;
-
-                btnEditar.BackgroundImage = Resources.editar;
-                return;
-            }
-            // Habilitado
-            txtNombre.ForeColor = txt_Correo.ForeColor =
-            txt_NuevaCont.ForeColor = txt_RolUsuario.ForeColor =
-            txt_RepNCont.ForeColor = Colores.HighContrast;
         
-            rnd_color_1.ColorPanel = rnd_color_2.ColorPanel =
-            //rnd_color_3.ColorPanel = rnd_color_4.ColorPanel =
-            rnd_color_1.ColorBorde = rnd_color_2.ColorBorde =
-            //rnd_color_3.ColorBorde = rnd_color_4.ColorBorde =
-            Colores.Rosa;
-            
-            rpCambiarPassword.ColorPanel = rpCambiarPassword.ColorBorde
-            = Colores.AmarilloInteractivo;
-
-            btnEditar.BackgroundImage = Resources.Cancelar;
-
-            rnd_guardar.ColorPanel = rnd_guardar.ColorBorde = Colores.Rosa;
-            btn_guardar.Enabled = true;
-
-        }
-
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            frmEliminar frm = new frmEliminar("eliminar el usuario " + _usuario.nombre);
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                this.DialogResult = DialogResult.Retry;
-            }
-        }
-
+        #region nameAndSeen
         private void txtNombre_Enter(object sender, EventArgs e)
         {
             if (txtNombre.Text == "Agregar nombre de usuario...")
                 txtNombre.Text = string.Empty;
             txtNombre.ForeColor = Colores.HighContrast;
         }
-
         private void txt_Nombre_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNombre.Text))
@@ -463,12 +474,12 @@ namespace LP2MegaAutos
             if (password_seen)
             {
                 txt_NuevaCont.PasswordChar = '\0';
-                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
+                btnVerPwd.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_unsee_password;
             }
             else
             {
                 txt_NuevaCont.PasswordChar = '•';
-                boton_ver_password.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
+                btnVerPwd.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
             }
         }
         private void btnVerRepetir_Click(object sender, EventArgs e)
@@ -486,5 +497,6 @@ namespace LP2MegaAutos
                 btnVerRepetir.BackgroundImage = global::LP2MegaAutos.Properties.Resources.boton_see_password;
             }
         }
+        #endregion nameAndSeen
     }
 }

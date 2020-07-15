@@ -11,8 +11,8 @@ namespace LP2MegaAutos.Framework.UserControls.Items
     {
         public static void rpItem_MouseEnter(RoundedPanel rpItem, bool itemListaReporte = false)
         {
-            cambiarColores(rpItem, itemListaReporte? Colores.AmarilloInteractivoMenos2 : Colores.LowContrast);
-            rpItem.ColorPanel = itemListaReporte ? Colores.AmarilloInteractivoMenos2 : Colores.LowContrast;
+            cambiarColores(rpItem, itemListaReporte? Colores.FrontBackground: Colores.LowContrast);
+            rpItem.ColorPanel = itemListaReporte ? Colores.FrontBackground : Colores.LowContrast;
         }
 
         public static void rpItem_MouseLeave(RoundedPanel rpItem)

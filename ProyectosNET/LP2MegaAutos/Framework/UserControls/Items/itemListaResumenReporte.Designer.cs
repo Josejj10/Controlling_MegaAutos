@@ -46,19 +46,21 @@
             this.rpItem.ColorPanel = System.Drawing.Color.Transparent;
             this.rpItem.Controls.Add(this.tlpItem);
             this.rpItem.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
-            this.rpItem.Location = new System.Drawing.Point(7, 0);
+            this.rpItem.Location = new System.Drawing.Point(9, 0);
+            this.rpItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rpItem.MenosHeightBorde = 1;
             this.rpItem.MenosHeightPanel = 1;
             this.rpItem.MenosWidthBorde = 1;
             this.rpItem.MenosWidthPanel = 1;
             this.rpItem.Name = "rpItem";
             this.rpItem.PorcLuzColorBorde = 0;
-            this.rpItem.Size = new System.Drawing.Size(187, 64);
+            this.rpItem.Size = new System.Drawing.Size(249, 79);
             this.rpItem.TabIndex = 55;
             this.rpItem.XBorde = 0;
             this.rpItem.XPanel = 0;
             this.rpItem.YBorde = 0;
             this.rpItem.YPanel = 0;
+            this.rpItem.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // tlpItem
             // 
@@ -67,14 +69,16 @@
             this.tlpItem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpItem.Controls.Add(this.lblMonto, 0, 1);
             this.tlpItem.Controls.Add(this.lblConcepto, 0, 1);
-            this.tlpItem.Location = new System.Drawing.Point(7, 3);
+            this.tlpItem.Location = new System.Drawing.Point(9, 4);
+            this.tlpItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tlpItem.Name = "tlpItem";
             this.tlpItem.RowCount = 2;
             this.tlpItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tlpItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tlpItem.Size = new System.Drawing.Size(174, 58);
+            this.tlpItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tlpItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tlpItem.Size = new System.Drawing.Size(232, 71);
             this.tlpItem.TabIndex = 0;
+            this.tlpItem.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // lblMonto
             // 
@@ -82,12 +86,14 @@
             this.lblMonto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMonto.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold);
             this.lblMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblMonto.Location = new System.Drawing.Point(4, 25);
+            this.lblMonto.Location = new System.Drawing.Point(6, 30);
+            this.lblMonto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(165, 28);
+            this.lblMonto.Size = new System.Drawing.Size(220, 34);
             this.lblMonto.TabIndex = 49;
             this.lblMonto.Text = "999,999,999.00";
             this.lblMonto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMonto.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // lblConcepto
             // 
@@ -95,20 +101,23 @@
             this.lblConcepto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblConcepto.Font = new System.Drawing.Font("Lato", 10F, System.Drawing.FontStyle.Bold);
             this.lblConcepto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lblConcepto.Location = new System.Drawing.Point(4, 1);
+            this.lblConcepto.Location = new System.Drawing.Point(6, 1);
+            this.lblConcepto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConcepto.Name = "lblConcepto";
-            this.lblConcepto.Size = new System.Drawing.Size(165, 19);
+            this.lblConcepto.Size = new System.Drawing.Size(220, 23);
             this.lblConcepto.TabIndex = 48;
             this.lblConcepto.Text = "Concepto";
             this.lblConcepto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblConcepto.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // itemListaResumenReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.rpItem);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "itemListaResumenReporte";
-            this.Size = new System.Drawing.Size(200, 64);
+            this.Size = new System.Drawing.Size(267, 79);
             this.rpItem.ResumeLayout(false);
             this.tlpItem.ResumeLayout(false);
             this.ResumeLayout(false);

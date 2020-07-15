@@ -13,6 +13,7 @@ using System.Runtime.CompilerServices;
 using LP2MegaAutos.Framework;
 using LP2MegaAutos.ServicioReporte;
 using LP2MegaAutos.ServicioUsuario;
+using LP2MegaAutos.ServicioExcel;
 
 namespace LP2MegaAutos
 {
@@ -20,7 +21,7 @@ namespace LP2MegaAutos
     {
 
         private ServicioReporte.ReporteWSClient daoReportes;
-        private List<reporte> _reportes;
+        private List<ServicioReporte.reporte> _reportes;
         private string textoBuscar; // TODO
 
         private string _btnSeleccionado="Todos";
@@ -45,7 +46,8 @@ namespace LP2MegaAutos
         {
             InitializeComponent();
             flpReportes.AutoScroll = true;
-            this.btnAZ_Click(btnAZ,new EventArgs());
+            daoReportes = new ReporteWSClient();
+            txt_Buscar.Text += textoBuscar;
             switch (agregando) {
                 case "AT":
                     this.btn_AreaTrabajo_Click(btn_AreaTrabajo,new EventArgs());
@@ -63,24 +65,51 @@ namespace LP2MegaAutos
                     this.btn_todos_Click(btn_todos, new EventArgs());
                     break;
             }
+            daoReportes = new ReporteWSClient();
         }
 
-        private void itemListaReporte_Click(object sender, EventArgs e, reporte r)
+        private void itemListaReporte_Click(object sender, EventArgs e, ServicioReporte.reporte r)
         {
-            frmResumenReporte frmReporte = new frmResumenReporte(r);
-            frmReporte.ShowDialog();
+            ExcelWSClient daoExcel = new ExcelWSClient();
+            string fechaInicio = r.fechaInicio.ToString("dd-MM-yyyy");
+            string fechaFin = r.fechaFin.ToString("dd-MM-yyyy");
+
+            LoadingHelper.loadingStart();
+            ServicioExcel.reporte rep = daoExcel.generarReporte(fechaInicio, fechaFin, r.tipoReporte, 
+                r.sede.id, r.idUsuario, r.titulo, r.idReporte);
+            LoadingHelper.stopLoading();
+            abrirResumen(rep);
         }
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
             frmGenerarReporte pgr = new frmGenerarReporte(this._btnSeleccionado);
-            if (pgr.ShowDialog() == DialogResult.OK)
+            if(pgr.ShowDialog() == DialogResult.OK)
             {
-                // TODO daoReporte llamar a procesar
-
-                // Mostrar reporte generado
+                frmResumenReporte frm = new frmResumenReporte(pgr.Reporte);
+                frm.ShowDialog();
             }
-            
         }
+
+        private void abrirResumen(ServicioExcel.reporte r)
+        {
+            frmResumenReporte frm = new frmResumenReporte(r);
+            if(frm.ShowDialog() == DialogResult.Retry)
+            {
+                abrirDetalle(r);
+            }
+        }
+
+        private void abrirDetalle(ServicioExcel.reporte r)
+        {
+            frmDetalleReporte frm = new frmDetalleReporte(r);
+            if (frm.ShowDialog() == DialogResult.Retry)
+            {
+                abrirResumen(r);
+            }
+
+
+        }
+
 
         #region Botones Tipo Reporte
         private void btn_todos_Click(object sender, EventArgs e)
@@ -121,18 +150,32 @@ namespace LP2MegaAutos
             item.TabIndex = 0;
         }
 
-        private void createItemListaReporte(reporte r)
+        private void createItemListaReporte(ServicioReporte.reporte r)
         {
             itemListaReporte item = new itemListaReporte();
             personalizarItemListaReporte(item);
             item.TextoPrincipal = r.titulo;
-            item.Tipo = r.tipoReporte;
-            item.MontoEgresos = r.ingresos.ToString("0,000.00");
-            item.MontoIngresos = r.egresos.ToString("0,000.00");
-            item.MontoTotal = (r.ingresos-r.egresos).ToString("0,000.00");
+            switch (r.tipoReporte)
+            {
+                case "tipoCliente":
+                    item.Tipo = "Tipo Cliente";
+                    break;
+                case "tipoSiniestro":
+                    item.Tipo = "Tipo Siniestro";
+                    break;
+                case "areaTrabajo":
+                    item.Tipo = "Area Trabajo";
+                    break;
+                default:
+                    item.Tipo = r.tipoReporte;
+                    break;
+            }
+            item.MontoEgresos = r.ingresos.ToString("n2");
+            item.MontoIngresos = r.egresos.ToString("n2");
+            item.MontoTotal = (r.ingresos-r.egresos).ToString("n2");
             item.Name = "itemListaReporte"+r.idReporte;
-            item.QuienGenero = r.idUsuario.ToString();
-            item.Sede = r.sede.distrito; // TODO Sede no devuelve distrito, solo id
+            item.QuienGenero = r.nombreUsuario;
+            item.Sede = r.sede.distrito; 
             item.FechaGenerado = r.fechaCreacion.ToString("dd/MM/yyyy");
             item.ItemListaClick += (sender, e) => { itemListaReporte_Click(sender, e, r); };
             flpReportes.Controls.Add(item);
@@ -142,7 +185,7 @@ namespace LP2MegaAutos
         private void crearItemsLista()
         {
             if (_reportes == null) return;
-            foreach (reporte r in _reportes)
+            foreach (ServicioReporte.reporte r in _reportes)
             {
                 createItemListaReporte(r);
             }

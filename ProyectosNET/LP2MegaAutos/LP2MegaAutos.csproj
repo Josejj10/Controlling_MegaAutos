@@ -359,11 +359,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Framework\DarkMode.cs" />
-    <Compile Include="Reportes\pantallaOrdenTrabajo.cs">
+    <Compile Include="Reportes\frmOrdenTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\pantallaOrdenTrabajo.Designer.cs">
-      <DependentUpon>pantallaOrdenTrabajo.cs</DependentUpon>
+    <Compile Include="Reportes\frmOrdenTrabajo.Designer.cs">
+      <DependentUpon>frmOrdenTrabajo.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanasPrincipales\BotonesDinamicosHelper.cs" />
     <Compile Include="VentanasPrincipales\ContenedorPantalla.cs">
@@ -474,8 +474,8 @@
     <EmbeddedResource Include="Inicio\frmRecuperarPassword.resx">
       <DependentUpon>frmRecuperarPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\pantallaOrdenTrabajo.resx">
-      <DependentUpon>pantallaOrdenTrabajo.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\frmOrdenTrabajo.resx">
+      <DependentUpon>frmOrdenTrabajo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanasPrincipales\ContenedorPantalla.resx">
       <DependentUpon>ContenedorPantalla.cs</DependentUpon>

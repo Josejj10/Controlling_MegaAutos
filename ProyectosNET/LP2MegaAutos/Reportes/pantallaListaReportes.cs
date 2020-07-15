@@ -22,6 +22,7 @@ namespace LP2MegaAutos
 
         private ServicioReporte.ReporteWSClient daoReportes;
         private List<ServicioReporte.reporte> _reportes;
+        private List<ServicioReporte.reporte> _reportesB;
         private string textoBuscar; // TODO
 
         private string _btnSeleccionado="Todos";
@@ -36,7 +37,7 @@ namespace LP2MegaAutos
         
         public void inicializarItemsLista()
         {
-            _reportes = daoReportes.listarReportes().ToList();
+            _reportes  = _reportesB = daoReportes.listarReportes().ToList();
             if (_reportes == null) return;
             this.btnAZ_Click(btnAZ, new EventArgs());
             this.btn_todos_Click(btn_todos, new EventArgs());
@@ -190,6 +191,16 @@ namespace LP2MegaAutos
                 createItemListaReporte(r);
             }
         }
+        private void crearItemsListaReportes()
+        {
+            quitarItemsLista();
+            if (_reportes == null) return;
+            foreach (ServicioReporte.reporte r in _reportesB)
+            {
+                createItemListaReporte(r);
+            }
+        }
+        
 
         private void quitarItemsLista()
         {
@@ -277,7 +288,36 @@ namespace LP2MegaAutos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            // TODO
+            // Se tiene la lista _usuarios localmente
+            List<ServicioReporte.reporte> _reportesBuscados = new List<ServicioReporte.reporte>();
+            foreach (ServicioReporte.reporte r in _reportes)
+                if (r.titulo.Contains(txt_Buscar.Text.ToUpper()))
+                    _reportesBuscados.Add(r); 
+
+            quitarItemsLista();
+            if (_reportesBuscados.Count == 0)
+            {
+                frmMessageBox frm = new frmMessageBox("No se hallaron resultados para la búsqueda.", MessageBoxButtons.OK);
+                frm.ShowDialog();
+                _reportesBuscados= _reportes;
+                txt_Buscar.Text = string.Empty;
+            }
+            crearItemsListaBuscar(_reportesBuscados);
+            pantallaListasHelper.buscarLeave(txt_Buscar, textoBuscar);
+        }
+
+        private void crearItemsListaBuscar(List<ServicioReporte.reporte> reportesBuscados)
+        {
+            _reportesB = reportesBuscados;
+            if (_reportesB== null) return;
+            crearItemsListaReportes();
+        }
+
+        private void txt_Buscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) return;
+            // buscar
+            btnBuscar_Click(btnBuscar, e);
         }
     }
 }

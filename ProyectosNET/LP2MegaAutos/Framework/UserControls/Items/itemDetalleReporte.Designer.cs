@@ -69,6 +69,7 @@
             this.tagsExtender1.SetTagFontName(this.tlpEgreso, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.tlpEgreso, 10F);
             this.tagsExtender1.SetTagFontStyle(this.tlpEgreso, System.Drawing.FontStyle.Regular);
+            this.tlpEgreso.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // rpRosa
             // 
@@ -80,7 +81,7 @@
             this.rpRosa.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
             this.rpRosa.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
             this.rpRosa.Location = new System.Drawing.Point(157, 6);
-            this.rpRosa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpRosa.Margin = new System.Windows.Forms.Padding(4);
             this.rpRosa.MenosHeightBorde = 1;
             this.rpRosa.MenosHeightPanel = 1;
             this.rpRosa.MenosWidthBorde = 1;
@@ -98,6 +99,7 @@
             this.rpRosa.XPanel = 0;
             this.rpRosa.YBorde = 0;
             this.rpRosa.YPanel = 0;
+            this.rpRosa.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // lblEgreso
             // 
@@ -117,6 +119,7 @@
             this.tagsExtender1.SetTagFontStyle(this.lblEgreso, System.Drawing.FontStyle.Bold);
             this.lblEgreso.Text = "9,999,999.00";
             this.lblEgreso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblEgreso.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // tlpIngreso
             // 
@@ -139,6 +142,7 @@
             this.tagsExtender1.SetTagFontName(this.tlpIngreso, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.tlpIngreso, 10F);
             this.tagsExtender1.SetTagFontStyle(this.tlpIngreso, System.Drawing.FontStyle.Regular);
+            this.tlpIngreso.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // rpVerde
             // 
@@ -150,7 +154,7 @@
             this.rpVerde.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(212)))), ((int)(((byte)(73)))));
             this.rpVerde.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
             this.rpVerde.Location = new System.Drawing.Point(157, 6);
-            this.rpVerde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpVerde.Margin = new System.Windows.Forms.Padding(4);
             this.rpVerde.MenosHeightBorde = 1;
             this.rpVerde.MenosHeightPanel = 1;
             this.rpVerde.MenosWidthBorde = 1;
@@ -168,6 +172,7 @@
             this.rpVerde.XPanel = 0;
             this.rpVerde.YBorde = 0;
             this.rpVerde.YPanel = 0;
+            this.rpVerde.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // lblIngreso
             // 
@@ -187,6 +192,7 @@
             this.tagsExtender1.SetTagFontStyle(this.lblIngreso, System.Drawing.FontStyle.Bold);
             this.lblIngreso.Text = "9,999,999.00";
             this.lblIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblIngreso.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // tlpCuenta
             // 
@@ -198,7 +204,7 @@
             this.tlpCuenta.Controls.Add(this.lblTipoCuenta, 1, 1);
             this.tlpCuenta.Controls.Add(this.lblCuentaGrande, 1, 0);
             this.tlpCuenta.Location = new System.Drawing.Point(0, 0);
-            this.tlpCuenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpCuenta.Margin = new System.Windows.Forms.Padding(4);
             this.tlpCuenta.Name = "tlpCuenta";
             this.tlpCuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tlpCuenta.RowCount = 2;
@@ -211,6 +217,7 @@
             this.tagsExtender1.SetTagFontName(this.tlpCuenta, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.tlpCuenta, 10F);
             this.tagsExtender1.SetTagFontStyle(this.tlpCuenta, System.Drawing.FontStyle.Regular);
+            this.tlpCuenta.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // rpIngresos
             // 
@@ -222,7 +229,7 @@
             this.rpIngresos.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(161)))));
             this.rpIngresos.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.Top;
             this.rpIngresos.Location = new System.Drawing.Point(14, 4);
-            this.rpIngresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpIngresos.Margin = new System.Windows.Forms.Padding(4);
             this.rpIngresos.MenosHeightBorde = 1;
             this.rpIngresos.MenosHeightPanel = 1;
             this.rpIngresos.MenosWidthBorde = 1;
@@ -241,6 +248,7 @@
             this.rpIngresos.XPanel = 0;
             this.rpIngresos.YBorde = 0;
             this.rpIngresos.YPanel = 0;
+            this.rpIngresos.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // lblTipoCuenta
             // 
@@ -260,6 +268,7 @@
             this.tagsExtender1.SetTagFontStyle(this.lblTipoCuenta, System.Drawing.FontStyle.Bold);
             this.lblTipoCuenta.Text = "Tipo de Cuenta";
             this.lblTipoCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTipoCuenta.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // lblCuentaGrande
             // 
@@ -280,6 +289,7 @@
             this.tagsExtender1.SetTagFontStyle(this.lblCuentaGrande, System.Drawing.FontStyle.Bold);
             this.lblCuentaGrande.Text = "Cuenta Grande";
             this.lblCuentaGrande.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCuentaGrande.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // tlpTotal
             // 
@@ -302,6 +312,7 @@
             this.tagsExtender1.SetTagFontName(this.tlpTotal, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.tlpTotal, 10F);
             this.tagsExtender1.SetTagFontStyle(this.tlpTotal, System.Drawing.FontStyle.Regular);
+            this.tlpTotal.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // roundedPanel1
             // 
@@ -331,6 +342,7 @@
             this.roundedPanel1.XPanel = 0;
             this.roundedPanel1.YBorde = 0;
             this.roundedPanel1.YPanel = 0;
+            this.roundedPanel1.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // lblTotal
             // 
@@ -350,6 +362,7 @@
             this.tagsExtender1.SetTagFontStyle(this.lblTotal, System.Drawing.FontStyle.Bold);
             this.lblTotal.Text = "9,999,999.00";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotal.Click += new System.EventHandler(this.itemLista_Click);
             // 
             // itemDetalleReporte
             // 
@@ -359,7 +372,7 @@
             this.Controls.Add(this.tlpCuenta);
             this.Controls.Add(this.tlpIngreso);
             this.Controls.Add(this.tlpEgreso);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "itemDetalleReporte";
             this.Size = new System.Drawing.Size(884, 74);
             this.tagsExtender1.SetTag2(this, null);

@@ -55,5 +55,16 @@ namespace LP2MegaAutos
         }
         #endregion Propiedades
 
+        // Delegar click
+        public delegate void ButtonClickEventHandler(object sender, EventArgs e);
+        public event ButtonClickEventHandler ItemListaClick;
+
+        private void itemLista_Click(object sender, EventArgs e)
+        {
+            ButtonClickEventHandler h = ItemListaClick;
+            if (h != null) h(this, e);
+        }
+
+
     }
 }

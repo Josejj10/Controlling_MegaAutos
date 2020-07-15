@@ -16,19 +16,64 @@ using LP2MegaAutos.ServicioExcel;
 
 namespace LP2MegaAutos.Reportes
 {
-    public partial class pantallaOrdenTrabajo : MetroForm
+    public partial class frmOrdenTrabajo : MetroForm
     {
+        #region title_bar
+
+        #region botones
+        private void boton_cerrar_MouseClick(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void boton_minimizar_MouseClick(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Minimized;
+        }
+        #endregion botones
+
+        #region movement
+        // Llama a la clase estatica TitleBar
+        private void title_bar_MouseUp(object sender, MouseEventArgs e)
+        {
+            TitleBar.mouse_Up();
+        }
+
+        private void title_bar_MouseDown(object sender, MouseEventArgs e)
+        {
+            TitleBar.mouse_Down(MousePosition, Bounds);
+        }
+
+        private void title_bar_MouseMove(object sender, MouseEventArgs e)
+        {
+            TitleBar.mouse_Move(MousePosition, this);
+        }
+
+        #endregion movement
+
+        #endregion title_bar
+
+
         ServicioExcel.ordenTrabajo _ot;
-        public pantallaOrdenTrabajo()
+        public frmOrdenTrabajo()
         {
             InitializeComponent();
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
-        public pantallaOrdenTrabajo(ServicioExcel.ordenTrabajo ot)
+        public frmOrdenTrabajo(ServicioExcel.ordenTrabajo ot)
         {
             InitializeComponent();
             _ot = ot;
             inicializarOrden();
+            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
+        }
+        public frmOrdenTrabajo(ServicioExcel.ordenTrabajo ot, string distrito)
+        {
+            InitializeComponent();
+            _ot = ot;
+            inicializarOrden();
+            lbl_SedeEscrito.Text = distrito;
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
         }
 
@@ -60,47 +105,11 @@ namespace LP2MegaAutos.Reportes
             flpServicios.Controls.Add(item);
         }
 
-
-        #region title_bar
-
-        #region botones
-        private void boton_cerrar_MouseClick(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.No;
-        }
-
-        private void boton_minimizar_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (this.WindowState != FormWindowState.Minimized)
-                this.WindowState = FormWindowState.Minimized;
-        }
-        #endregion botones
-
-        #region movement
-        // Llama a la clase estatica TitleBar
-        private void title_bar_MouseUp(object sender, MouseEventArgs e)
-        {
-            TitleBar.mouse_Up();
-        }
-
-        private void title_bar_MouseDown(object sender, MouseEventArgs e)
-        {
-            TitleBar.mouse_Down(MousePosition, Bounds);
-        }
-
-        private void title_bar_MouseMove(object sender, MouseEventArgs e)
-        {
-            TitleBar.mouse_Move(MousePosition, this);
-        }
-
         private void btn_Ok_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
         }
 
-        #endregion movement
-
-        #endregion title_bar
         // TODO
 
     }

@@ -82,6 +82,7 @@
       <xs:element minOccurs="0" name="cuenta" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="montos" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ordenes" nillable="true" type="tns:ordenTrabajo" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ordenesAT" nillable="true" type="tns:detalleAT" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ordenTrabajo">
@@ -144,6 +145,14 @@
       <xs:element minOccurs="0" name="placa" type="xs:string" />
       <xs:element minOccurs="0" name="propietario" type="tns:cliente" />
       <xs:element minOccurs="0" name="tipoVehiculo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detalleAT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="egreso" type="xs:double" />
+      <xs:element minOccurs="0" name="ingreso" type="xs:double" />
+      <xs:element minOccurs="0" name="margen" type="xs:double" />
+      <xs:element minOccurs="0" name="numOT" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarArchivoEntrada">

@@ -289,6 +289,122 @@ namespace LP2MegaAutos.ServicioExcel {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
+    public partial class detalleAT : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private double egresoField;
+        
+        private bool egresoFieldSpecified;
+        
+        private double ingresoField;
+        
+        private bool ingresoFieldSpecified;
+        
+        private double margenField;
+        
+        private bool margenFieldSpecified;
+        
+        private string numOTField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double egreso {
+            get {
+                return this.egresoField;
+            }
+            set {
+                this.egresoField = value;
+                this.RaisePropertyChanged("egreso");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool egresoSpecified {
+            get {
+                return this.egresoFieldSpecified;
+            }
+            set {
+                this.egresoFieldSpecified = value;
+                this.RaisePropertyChanged("egresoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public double ingreso {
+            get {
+                return this.ingresoField;
+            }
+            set {
+                this.ingresoField = value;
+                this.RaisePropertyChanged("ingreso");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ingresoSpecified {
+            get {
+                return this.ingresoFieldSpecified;
+            }
+            set {
+                this.ingresoFieldSpecified = value;
+                this.RaisePropertyChanged("ingresoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public double margen {
+            get {
+                return this.margenField;
+            }
+            set {
+                this.margenField = value;
+                this.RaisePropertyChanged("margen");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool margenSpecified {
+            get {
+                return this.margenFieldSpecified;
+            }
+            set {
+                this.margenFieldSpecified = value;
+                this.RaisePropertyChanged("margenSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string numOT {
+            get {
+                return this.numOTField;
+            }
+            set {
+                this.numOTField = value;
+                this.RaisePropertyChanged("numOT");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.megaautos.com.pe/")]
     public partial class vehiculo : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int idField;
@@ -1003,6 +1119,8 @@ namespace LP2MegaAutos.ServicioExcel {
         
         private ordenTrabajo[] ordenesField;
         
+        private detalleAT[] ordenesATField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string cuenta {
@@ -1036,6 +1154,18 @@ namespace LP2MegaAutos.ServicioExcel {
             set {
                 this.ordenesField = value;
                 this.RaisePropertyChanged("ordenes");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ordenesAT", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+        public detalleAT[] ordenesAT {
+            get {
+                return this.ordenesATField;
+            }
+            set {
+                this.ordenesATField = value;
+                this.RaisePropertyChanged("ordenesAT");
             }
         }
         

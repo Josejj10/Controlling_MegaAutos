@@ -692,6 +692,7 @@ public class ExcelWS {
                     System.out.println(repAreaTrabajo);
                     System.out.println(repDetalleAT);
                     
+                    totalFac=totalCosto=0.0;                    
                     for (int i=0; i<repAreaTrabajo.length();i++){
                         DetalleReporte deta = new DetalleReporte();
                         deta.setCuenta(repAreaTrabajo.get(i,0).toString());
@@ -699,6 +700,9 @@ public class ExcelWS {
                         deta.getMontos().add((Double)repAreaTrabajo.get(i,1));
                         deta.getMontos().add((Double)repAreaTrabajo.get(i,2));                        
                         deta.getMontos().add((Double)repAreaTrabajo.get(i,1)-(Double)repAreaTrabajo.get(i,2));
+                        
+                        totalFac+=(Double)repAreaTrabajo.get(i,1);
+                        totalCosto+=(Double)repAreaTrabajo.get(i,2);
                         
                         for (int j=0; j<repDetalleAT.length();j++){
                             if(repDetalleAT.get(j, 3).equals(deta.getCuenta())){
@@ -713,6 +717,8 @@ public class ExcelWS {
                         detalle.add(deta);
                     }
                     
+                    ingresos = totalFac;
+                    egresos = totalCosto;
                     break;
             }
             

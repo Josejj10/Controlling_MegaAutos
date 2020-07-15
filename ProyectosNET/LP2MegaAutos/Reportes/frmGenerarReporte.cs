@@ -192,7 +192,7 @@ namespace LP2MegaAutos
             switch (_periodoReporte)
             {
                 case "Diario":
-                    fechaInicio = fechaFin = dtpFechaFin.Value.ToString("dd-MM-yyyy");
+                    fechaInicio = fechaFin = dtpInicio.Value.ToString("dd-MM-yyyy");
                     break;
                 case "Mensual":
                     getFirstDayMonth(ref fechaInicio, ref fechaFin);
@@ -216,7 +216,17 @@ namespace LP2MegaAutos
             // Si acepta, generar
             ExcelWSClient daoExcel = new ExcelWSClient();
             
-            reporte r= daoExcel.generarReporte(fechaInicio, fechaFin, tReporte, sede.id, idUsuario,titulo, 0);
+
+            LoadingHelper.loadingStart();
+            _reporte = daoExcel.generarReporte(fechaInicio, fechaFin, tReporte, sede.id, idUsuario,titulo, 0);
+            LoadingHelper.stopLoading();
+            if (_reporte.idReporte == 0)
+            {
+                frmMessageBox mb = new frmMessageBox("No ha sido posible generar el reporte, por favor, seleccione un rango de fechas diferente."
+                    , MessageBoxButtons.OK, "Error", true);
+                mb.ShowDialog();
+                return;
+            }
             this.DialogResult = DialogResult.OK;
         }
 

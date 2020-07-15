@@ -249,17 +249,20 @@ namespace LP2MegaAutos
 
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndZA, rndAZ, rndAntiguo, rndReciente);
+            organizarZA();
         }
         private void btnAntiguo_Click(object sender, EventArgs e)
         {
 
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndAntiguo,rndAZ, rndZA, rndReciente);
+            organizarAntiguo();
         }
         private void btnReciente_Click(object sender, EventArgs e)
         {
             pantallaListasHelper.cambiarCuatroPaneles(
                 rndReciente,rndAZ, rndZA, rndAntiguo);
+            organizarReciente();
         }
         private void btn_MouseDown(object sender, MouseEventArgs e)
         {

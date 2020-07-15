@@ -35,6 +35,7 @@
             this.lblPor = new System.Windows.Forms.Label();
             this.lblQuienGenero = new System.Windows.Forms.Label();
             this.tlpSede = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTipoReporte = new System.Windows.Forms.Label();
             this.lblSede = new System.Windows.Forms.Label();
             this.tloResumen = new System.Windows.Forms.TableLayoutPanel();
             this.lblResumen = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.lblMontoTotal = new System.Windows.Forms.Label();
             this.lblPrincipal = new System.Windows.Forms.Label();
             this.tagsExtender1 = new LP2MegaAutos.TagsExtender();
-            this.lblTipoReporte = new System.Windows.Forms.Label();
             this.rpItem.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tlpSede.SuspendLayout();
@@ -67,6 +67,7 @@
             this.rpItem.Controls.Add(this.tloResumen);
             this.rpItem.Controls.Add(this.lblPrincipal);
             this.rpItem.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.All;
+            this.rpItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rpItem.Location = new System.Drawing.Point(0, 0);
             this.rpItem.Margin = new System.Windows.Forms.Padding(4);
             this.rpItem.MenosHeightBorde = 1;
@@ -230,6 +231,30 @@
             this.tagsExtender1.SetTagFontSize(this.tlpSede, 10F);
             this.tagsExtender1.SetTagFontStyle(this.tlpSede, System.Drawing.FontStyle.Regular);
             this.tlpSede.Click += new System.EventHandler(this.itemLista_Click);
+            this.tlpSede.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
+            this.tlpSede.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
+            // 
+            // lblTipoReporte
+            // 
+            this.lblTipoReporte.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTipoReporte.AutoSize = true;
+            this.lblTipoReporte.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipoReporte.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
+            this.lblTipoReporte.Location = new System.Drawing.Point(67, 70);
+            this.lblTipoReporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoReporte.Name = "lblTipoReporte";
+            this.lblTipoReporte.Size = new System.Drawing.Size(136, 27);
+            this.lblTipoReporte.TabIndex = 20;
+            this.tagsExtender1.SetTag2(this.lblTipoReporte, null);
+            this.tagsExtender1.SetTag3(this.lblTipoReporte, null);
+            this.tagsExtender1.SetTagFontName(this.lblTipoReporte, fontsD.Ninguno);
+            this.tagsExtender1.SetTagFontSize(this.lblTipoReporte, 13F);
+            this.tagsExtender1.SetTagFontStyle(this.lblTipoReporte, System.Drawing.FontStyle.Bold);
+            this.lblTipoReporte.Text = "TipoReporte";
+            this.lblTipoReporte.Click += new System.EventHandler(this.itemLista_Click);
+            this.lblTipoReporte.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
+            this.lblTipoReporte.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
             // 
             // lblSede
             // 
@@ -510,7 +535,7 @@
             this.lblPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.lblPrincipal.Font = new System.Drawing.Font("Lato", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lblPrincipal.Location = new System.Drawing.Point(16, 5);
+            this.lblPrincipal.Location = new System.Drawing.Point(23, 5);
             this.lblPrincipal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrincipal.Name = "lblPrincipal";
             this.lblPrincipal.Size = new System.Drawing.Size(175, 30);
@@ -524,28 +549,6 @@
             this.lblPrincipal.Click += new System.EventHandler(this.itemLista_Click);
             this.lblPrincipal.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
             this.lblPrincipal.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
-            // 
-            // lblTipoReporte
-            // 
-            this.lblTipoReporte.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblTipoReporte.AutoSize = true;
-            this.lblTipoReporte.BackColor = System.Drawing.Color.Transparent;
-            this.lblTipoReporte.Font = new System.Drawing.Font("Lato", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoReporte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(147)))));
-            this.lblTipoReporte.Location = new System.Drawing.Point(67, 70);
-            this.lblTipoReporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTipoReporte.Name = "lblTipoReporte";
-            this.lblTipoReporte.Size = new System.Drawing.Size(136, 27);
-            this.lblTipoReporte.TabIndex = 20;
-            this.tagsExtender1.SetTag2(this.lblTipoReporte, null);
-            this.tagsExtender1.SetTag3(this.lblTipoReporte, null);
-            this.tagsExtender1.SetTagFontName(this.lblTipoReporte, fontsD.Ninguno);
-            this.tagsExtender1.SetTagFontSize(this.lblTipoReporte, 13F);
-            this.tagsExtender1.SetTagFontStyle(this.lblTipoReporte, System.Drawing.FontStyle.Bold);
-            this.lblTipoReporte.Text = "TipoReporte";
-            this.lblTipoReporte.Click += new System.EventHandler(this.itemLista_Click);
-            this.lblTipoReporte.MouseEnter += new System.EventHandler(this.itemLista_MouseEnter);
-            this.lblTipoReporte.MouseLeave += new System.EventHandler(this.itemLista_MouseLeave);
             // 
             // itemListaReporte
             // 

@@ -1,22 +1,22 @@
-﻿using LP2MegaAutos.ServicioComprobantePago;
-using LP2MegaAutos.ServicioExcel;
-using LP2MegaAutos.ServicioReporte;
-using LP2MegaAutos.VentanasPrincipales;
-using MetroFramework.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LP2MegaAutos.ServicioReporte;
+using MetroFramework.Forms;
+using LP2MegaAutos.ServicioExcel;
+using LP2MegaAutos.VentanasPrincipales;
+using System.IO;
+using LP2MegaAutos.Reportes;
 
 namespace LP2MegaAutos
 {
-    public partial class frmResumenReporte : MetroForm
+    public partial class frmDetalleReporte : MetroForm
     {
 
         #region title_bar
@@ -54,22 +54,12 @@ namespace LP2MegaAutos
         #endregion movement
 
         #endregion title_bar
-
         #region inicializar
-        private int nItems = 0;
         private ServicioExcel.reporte _reporte;
-        public ServicioExcel.reporte Reporte { get { return this._reporte; } }
-
-        public frmResumenReporte()
+        public frmDetalleReporte(ServicioExcel.reporte reporte)
         {
             InitializeComponent();
-            if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
-        }
-
-        public frmResumenReporte(ServicioExcel.reporte r)
-        {
-            InitializeComponent();
-            _reporte = r;
+            _reporte = reporte;
             inicializarDatos();
             inicializarItemsLista();
             if (DarkMode.is_dark_mode_active()) DarkMode.iniciarSinTimer(this);
@@ -94,48 +84,80 @@ namespace LP2MegaAutos
                     this.lblTipoReporte.Text = "Area Trabajo";
                     break;
             }
-
         }
 
-        #region inicializarLista
+        #region inicializarItems
         private void inicializarItemsLista()
         {
             BindingList<detalleReporte> lista = new BindingList<detalleReporte>(_reporte.detalle);
-            foreach(detalleReporte dr in lista)
+            foreach (detalleReporte dr in lista)
             {
-                itemListaResumen il = crearItemLista(dr);
-                flpReporteResumen.Controls.Add(il);
+                crearItemLista(dr);
             }
         }
-        private itemListaResumen crearItemLista(detalleReporte detalleReporte)
+
+        private string switchTipoReporte()
         {
-            itemListaResumen item = new itemListaResumen();
-            item.ColorPanelSubrayado  = item.ColorBordeSubrayado = Colores.VerdeSuccess;
-            item.CuentasContables = "Detalle";
-            item.Margin = new Padding(4, 4, 25, 4);
-            item.TabIndex = 2 + nItems;
-            item.Name = "itemListaResumen"+ ++nItems;
-
-            // Personalizados
-            item.TextoPrincipal = detalleReporte.cuenta;
-            item.MontoIngresos = ((double)detalleReporte.montos.GetValue(0)).ToString("n2");
-            item.MontoEgresos = ((double)detalleReporte.montos.GetValue(1)).ToString("n2");
-            item.MontoTotal= ((double)detalleReporte.montos.GetValue(2)).ToString("n2");
-
-            // Agregar las areas de trabajo
-            foreach(ServicioExcel.ordenTrabajo ot in detalleReporte.ordenes){
-                item.addCuentaContable(ot);
+            switch (_reporte.tipoReporte)
+            {
+                case "tipoCliente":
+                    return "Tipo Cliente";
+                case "tipoSiniestro":
+                    return "Tipo Siniestro";
+                default:
+                    return "Area Trabajo";
             }
-
-            return item;   
         }
 
+        private void crearItemLista(detalleReporte detalleReporte)
+        {
+            itemDetalleGrandeReporte item = new itemDetalleGrandeReporte();
+            item.Margin = new Padding(4, 4, 25, 4);
+            item.CuentaGrande = detalleReporte.cuenta;
+            item.TipoCuenta = switchTipoReporte();
+            item.Ingreso = ((double)detalleReporte.montos.GetValue(0)).ToString("n2");
+            item.Egreso = ((double)detalleReporte.montos.GetValue(1)).ToString("n2");
+            item.MontoTotal = ((double)detalleReporte.montos.GetValue(2)).ToString("n2");
+            item.RightToLeft = RightToLeft.Yes;
+            flpReportes.Controls.Add(item);
+            // Agregar las areas de trabajo
+            foreach (ServicioExcel.ordenTrabajo ot in detalleReporte.ordenes)
+            {
+                crearItemDetalle(ot);
+            }
+        }
 
-        #endregion inicializarLista
+        private void crearItemDetalle(ordenTrabajo ot)
+        {
+            itemDetalleReporte item = new itemDetalleReporte();
+            item.Margin = new Padding(4);
+            item.CuentaGrande = ot.numeroOrden;
+            item.Egreso = (ot.totalEgresos).ToString("n2"); 
+            item.Ingreso = (ot.totalIngresos).ToString("n2");
+            item.TipoCuenta = ot.vehiculo.placa;
+            item.Total = (ot.totalIngresos - ot.totalEgresos).ToString("n2");
+            item.RightToLeft = RightToLeft.Yes;
+            item.Cursor = Cursors.Hand;
+            // Suscribir click
+            item.MouseClick += (sender, e) => { abrirOrdenTrabajo(sender, e, ot); };
+            flpReportes.Controls.Add(item);
+        }
 
+        private void abrirOrdenTrabajo(Object sender, EventArgs e, ordenTrabajo ot)
+        {
+            pantallaOrdenTrabajo frm = new pantallaOrdenTrabajo(ot);
+            frm.ShowDialog();
+        }
+
+        #endregion inicializarItems
         #endregion inicializar
 
         #region botones
+        private void btnResumen_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Retry;
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
@@ -165,10 +187,6 @@ namespace LP2MegaAutos
             }
         }
 
-        private void btnDetalle_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Retry; // TODO cuando reciba retry abrir Detalle
-        }
         #endregion botones
     }
 }

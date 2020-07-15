@@ -106,6 +106,7 @@ public class ExcelWS {
             reporte = procesar(excel, fechaInicio, fechaFin,
                     tipo, idSede, fecha1, fecha2,
                     excel.getId(), idUsuario, idReporte);
+            reporte.setTitulo(titulo);
             System.out.println(reporte.getDetalle());
 //            System.out.println(reporte.getMapaDetalleMontos());
 //            reporte.setTitulo(titulo);

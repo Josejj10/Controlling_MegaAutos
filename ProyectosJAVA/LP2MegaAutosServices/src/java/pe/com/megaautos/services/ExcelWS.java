@@ -106,6 +106,7 @@ public class ExcelWS {
             reporte = procesar(excel, fechaInicio, fechaFin,
                     tipo, idSede, fecha1, fecha2,
                     excel.getId(), idUsuario, idReporte);
+            reporte.setTitulo(titulo);
             System.out.println(reporte.getDetalle());
 //            System.out.println(reporte.getMapaDetalleMontos());
 //            reporte.setTitulo(titulo);
@@ -429,6 +430,7 @@ public class ExcelWS {
                 OrdenTrabajo ot = new OrdenTrabajo();
                 ot.setNumeroOrden(OT);
                 //REVISAR
+                System.out.print(dfOT);
                 
                 ot.setFecha(new SimpleDateFormat("dd-MM-yyyy").parse(cadFecha));
                 //FIN REVISAR
@@ -447,6 +449,7 @@ public class ExcelWS {
                 ot.getVehiculo().setPlaca(placas.get(i));
                 ot.getVehiculo().setTipoVehiculo(marca.get(i)+" "+modelo.get(i));
                 ot.getCliente().setNumDocumento(dfOT.get(i,5).toString());
+//                ot.getCliente().setNombre(dfOT.get(i, 20).toString());
                 ot.getCliente().setTipoCliente(tipo_cli.get(i));
                 boolean esta;
                 DetalleReporte det;
@@ -788,8 +791,8 @@ public class ExcelWS {
             //Guardar y crear cosas (si idReporte es 0)
             if (idReporte == 0){
                 //todo cambiar a "/Salida.xlsx"
-//                String rutaSalida = "/Salida.xlsx";
-                String rutaSalida = "D:\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Salida.xlsx";
+                String rutaSalida = "/Salida.xlsx";
+//                String rutaSalida = "D:\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Salida.xlsx";
                 File fileSalida = new File(rutaSalida);
                 OutputStream targetStream = new FileOutputStream(fileSalida);
                 ClienteDAO daoCliente = DBController.controller.getClienteDAO();

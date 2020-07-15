@@ -117,7 +117,7 @@ public class ExcelMySQL implements ExcelDAO {
             cs.setBytes("_ARCHIVO", excel.getArchivo());
             cs.setInt("_TIPO", 2);
             java.sql.Date fechaIni = new java.sql.Date(excel.getFechaIni().getTime());
-            cs.setDate("_FECHA_INICIO", fechaIni);
+            cs.setDate("_FECHA_INI", fechaIni);
             java.sql.Date fechaFin = new java.sql.Date(excel.getFechaFin().getTime());
             cs.setDate("_FECHA_FIN", fechaFin);            
             cs.setInt("_ID_SEDE", excel.getSede().getId());
@@ -192,7 +192,6 @@ public class ExcelMySQL implements ExcelDAO {
                 excel.setFechaFin(rs.getDate("FECHA_FIN"));
                 excel.getSede().setId(rs.getInt("ID_SEDE"));
             }
-            con.close();
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());

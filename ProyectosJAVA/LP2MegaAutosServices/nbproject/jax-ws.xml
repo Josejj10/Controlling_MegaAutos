@@ -43,6 +43,9 @@
     <service name="PasswordWS">
       <implementation-class>pe.com.megaautos.services.PasswordWS</implementation-class>
     </service>
+    <service name="ReporteWS">
+      <implementation-class>pe.com.megaautos.services.ReporteWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

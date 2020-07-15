@@ -45,7 +45,7 @@ public class ReporteMySQL implements ReporteDAO{
             cs.setDate("_FECHA_INICIO", sqlDateInicio);
             java.sql.Date sqlDateFin = new java.sql.Date(reporte.getFechaFin().getTime());
             cs.setDate("_FECHA_FIN", sqlDateFin);
-            cs.setString("_TIPO_REPORTE", reporte.getTipoReporte().toUpperCase());
+            cs.setString("_TIPO_REPORTE", reporte.getTipoReporte());
             cs.setString("_TITULO", reporte.getTitulo().toUpperCase());
             cs.setDouble("_INGRESOS", reporte.getIngresos());
             cs.setDouble("_EGRESOS", reporte.getEgresos());
@@ -91,6 +91,8 @@ public class ReporteMySQL implements ReporteDAO{
                 reporte.getSede().setId(rs.getInt("ID_SEDE"));
                 reporte.setTipoReporte(rs.getString("TIPO_REPORTE"));
                 reporte.setTitulo(rs.getString("TITULO"));
+                reporte.setNombreUsuario(rs.getString("NOMBRE"));
+                reporte.getSede().setDistrito(rs.getString("DISTRITO"));
                 reportes.add(reporte);
             }
         }catch(Exception ex){
@@ -130,6 +132,8 @@ public class ReporteMySQL implements ReporteDAO{
                 reporte.getSede().setId(rs.getInt("ID_SEDE"));
                 reporte.setTipoReporte(rs.getString("TIPO_REPORTE"));
                 reporte.setTitulo(rs.getString("TITULO"));
+                reporte.setNombreUsuario(rs.getString("NOMBRE"));
+                reporte.getSede().setDistrito(rs.getString("DISTRITO"));
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());

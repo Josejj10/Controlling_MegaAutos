@@ -110,7 +110,10 @@ namespace LP2MegaAutos
         private itemListaResumen crearItemLista(detalleReporte detalleReporte)
         {
             itemListaResumen item = new itemListaResumen();
-            item.ColorPanelSubrayado  = item.ColorBordeSubrayado = Colores.VerdeSuccess;
+            if((double)detalleReporte.montos.GetValue(2)>0)
+                item.ColorPanelSubrayado  = item.ColorBordeSubrayado = Colores.VerdeSuccess;
+            else
+                item.ColorPanelSubrayado = item.ColorBordeSubrayado = Colores.Rosa;
             item.CuentasContables = "Detalle";
             item.Margin = new Padding(4, 4, 25, 4);
             item.TabIndex = 2 + nItems;

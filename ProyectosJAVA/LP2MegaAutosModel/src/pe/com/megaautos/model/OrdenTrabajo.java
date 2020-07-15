@@ -28,6 +28,7 @@ public class OrdenTrabajo {
     //Constructores
     public OrdenTrabajo(){
         this.servicios = new ArrayList<>();
+        this.sede = new Sede();
         this.cliente = new Cliente();
         this.vehiculo = new Vehiculo();
     }

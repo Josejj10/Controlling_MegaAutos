@@ -23,7 +23,7 @@ public class DBDataSource {
 			ds.setJdbcUrl(DBManager.url);
 			ds.setUser(DBManager.user);
 			ds.setPassword(DBManager.password);
-                        
+                        ds.setMaxPoolSize(40);
                         ds.setInitialPoolSize(5);
 			ds.setMinPoolSize(5);
                         ds.setAcquireIncrement(5);     

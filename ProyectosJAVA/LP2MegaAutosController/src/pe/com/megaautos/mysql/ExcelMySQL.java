@@ -192,7 +192,6 @@ public class ExcelMySQL implements ExcelDAO {
                 excel.setFechaFin(rs.getDate("FECHA_FIN"));
                 excel.getSede().setId(rs.getInt("ID_SEDE"));
             }
-            con.close();
         }
         catch (Exception ex){
             System.out.println(ex.getMessage());

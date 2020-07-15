@@ -45,7 +45,7 @@ public class ReporteMySQL implements ReporteDAO{
             cs.setDate("_FECHA_INICIO", sqlDateInicio);
             java.sql.Date sqlDateFin = new java.sql.Date(reporte.getFechaFin().getTime());
             cs.setDate("_FECHA_FIN", sqlDateFin);
-            cs.setString("_TIPO_REPORTE", reporte.getTipoReporte().toUpperCase());
+            cs.setString("_TIPO_REPORTE", reporte.getTipoReporte());
             cs.setString("_TITULO", reporte.getTitulo().toUpperCase());
             cs.setDouble("_INGRESOS", reporte.getIngresos());
             cs.setDouble("_EGRESOS", reporte.getEgresos());

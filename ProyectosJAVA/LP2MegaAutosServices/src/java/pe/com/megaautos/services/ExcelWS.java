@@ -27,6 +27,7 @@ import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.ReporteDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
+import pe.com.megaautos.model.DetalleReporte;
 import pe.com.megaautos.model.Excel;
 import pe.com.megaautos.model.OrdenTrabajo;
 import pe.com.megaautos.model.Reporte;
@@ -104,9 +105,17 @@ public class ExcelWS {
             reporte = procesar(excel, fechaInicio, fechaFin,
                     tipo, idSede, fecha1, fecha2,
                     excel.getId(), idUsuario, idReporte);
-            reporte.setTitulo(titulo);
-            ReporteDAO daoReporte = DBController.controller.getReporteDAO();
-            resultado = daoReporte.insertar(reporte);
+            System.out.println(reporte.getDetalle());
+//            System.out.println(reporte.getMapaDetalleMontos());
+//            reporte.setTitulo(titulo);
+//            for (List<OrdenTrabajo> ot : reporte.getMapaDetalle().values()){
+//                System.out.println(ot);
+//            }
+            if(idReporte==0){
+                ReporteDAO daoReporte = DBController.controller.getReporteDAO();
+                resultado = daoReporte.insertar(reporte);
+            }
+            
             //si existe
             //buscamos el reporte en la bd
             
@@ -266,9 +275,9 @@ public class ExcelWS {
             List<Integer> filtFecha = new ArrayList<>();
             //Filtramos el DF en base a la fecha solicitada:
             for(int i = 0; i<lastRow; i++){
-                dfAnio = dfGris.get(i, 1).toString();
-                dfMes = dfGris.get(i,2).toString();
-                dfDia = dfGris.get(i, 4).toString();
+                dfAnio = dfGris.get(i, 25).toString();
+                dfMes = dfGris.get(i,26).toString();
+                dfDia = dfGris.get(i, 27).toString();
                 if(anio1.compareTo(dfAnio) <= 0 && anio2.compareTo(dfAnio) >= 0  &&
                    mes1.compareTo(dfMes) <= 0 && mes2.compareTo(dfMes) >=  0 &&
                    dia1.compareTo(dfDia) <= 0 && dia2.compareTo(dfDia) >=  0)
@@ -331,11 +340,11 @@ public class ExcelWS {
             int elem;
             String OT;
 
-            
-            HashMap<String, ArrayList<OrdenTrabajo>> detalle = new HashMap<>();
-            HashMap<String, ArrayList<Double>> detalleMontos = new HashMap<>();
-            
-            for (int i = 0; i < lastRowOT; i++){
+            List<DetalleReporte> detalle = new ArrayList<>();
+            List<String> fecha = new ArrayList<>();
+            for (int i = 0; i < lastRowOT; i++){                
+                String cadFecha = dfOT.get(i,4) + "-" + dfOT.get(i,2) + "-" + dfOT.get(i,1);
+                fecha.add(cadFecha);
                 OT = dfOT.get(i, 0).toString();
                 //Calculamos salidas x almacen
                 elem = dfSalxAlm.col(0).indexOf(OT);
@@ -416,7 +425,8 @@ public class ExcelWS {
                 OrdenTrabajo ot = new OrdenTrabajo();
                 ot.setNumeroOrden(OT);
                 //REVISAR
-                ot.setFecha(new Date());
+                
+                ot.setFecha(new SimpleDateFormat("dd-MM-yyyy").parse(cadFecha));
                 //FIN REVISAR
                 ot.setTotalEgresos(suma);
                 ot.setTotalIngresos(dato);
@@ -434,28 +444,51 @@ public class ExcelWS {
                 ot.getVehiculo().setTipoVehiculo(marca.get(i)+" "+modelo.get(i));
                 ot.getCliente().setNumDocumento(dfOT.get(i,5).toString());
                 ot.getCliente().setTipoCliente(tipo_cli.get(i));
-                
+                boolean esta;
+                DetalleReporte det;
                 switch(tipoReporte){
                     case "tipoCliente":
-                        if(!detalle.containsKey(ot.getCliente().getTipoCliente()))
-                            detalle.put(ot.getCliente().getTipoCliente(), new ArrayList<>());
-                        detalle.get(ot.getCliente().getTipoCliente()).add(ot);
-                        if(!detalleMontos.containsKey(ot.getCliente().getTipoCliente()))
-                            detalleMontos.put(ot.getCliente().getTipoCliente(), new ArrayList<>());
+                        esta = false;
+                        det = new DetalleReporte();
+                        for (DetalleReporte deta : detalle){
+                            if(deta.getCuenta().equals(ot.getCliente().getTipoCliente())){
+                                esta = true;
+                                det = deta;
+                            }
+                        }
+                        if (!esta){
+                            det.setCuenta(ot.getCliente().getTipoCliente());
+                            det.getOrdenes().add(ot);
+                            detalle.add(det);
+                        }
+                        else{
+                            det.getOrdenes().add(ot);
+                        }                        
                         break;
                     case "tipoSiniestro":
-                        if (!detalle.containsKey(ot.getTipoSiniestro()))
-                            detalle.put(ot.getTipoSiniestro(), new ArrayList<>());
-                        detalle.get(ot.getTipoSiniestro()).add(ot);
-                        if (!detalleMontos.containsKey(ot.getTipoSiniestro()))
-                            detalleMontos.put(ot.getTipoSiniestro(), new ArrayList<>());
+                        esta = false;
+                        det = new DetalleReporte();
+                        for (DetalleReporte deta : detalle){
+                            if(deta.getCuenta().equals(ot.getTipoSiniestro())){
+                                esta = true;
+                                det = deta;
+                            }
+                        }
+                        if (!esta){
+                            det.setCuenta(ot.getTipoSiniestro());
+                            det.getOrdenes().add(ot);
+                            detalle.add(det);
+                        }
+                        else{
+                            det.getOrdenes().add(ot);
+                        }   
                         break;
                     case "areaTrabajo":
                         
                         break;
                 }
             }
-
+            
             dfOT.rename("Sin_IGV", "TOTAL INGRESOS");
             dfOT.add("Salidas_Almacen", salidas_alm); //CHECK
             dfOT.add("Compras_Rpto", compras_rpto); //CHECK
@@ -473,11 +506,10 @@ public class ExcelWS {
             dfOT.add("Modelo", modelo);
             dfOT.add("Cliente", clientes);
             dfOT.add("Tipo de Cliente", tipo_cli);
+            dfOT.add("Fecha", fecha);
 //            System.out.println(dfOT);  
 
-            String rutaSalida = "/Salida.xlsx";
-            File fileSalida = new File(rutaSalida);
-            OutputStream targetStream = new FileOutputStream(fileSalida);
+            
             List<String> nombres = new ArrayList<>();
             List<DataFrame> dfs = new ArrayList<>();
             nombres.add("Rep. por Orden de Trabajo");
@@ -493,7 +525,6 @@ public class ExcelWS {
             String titulo = "";
             Double ingresos = 0.0;
             Double egresos = 0.0;
-            
             switch(tipoReporte){
                 case "tipoCliente":
                     //Reporte por tipo_cliente:"
@@ -505,9 +536,14 @@ public class ExcelWS {
                         Double totalI = (Double)repTipoCli.get(i, 1);
                         if(totalI == 0)   margenTipCli.add(0.0);
                         else margenTipCli.add((Double)repTipoCli.get(i, 3)/totalI*100);
-                        detalleMontos.get(repTipoCli.get(i, 0)).add(totalI);
-                        detalleMontos.get(repTipoCli.get(i, 0)).add((Double)repTipoCli.get(i, 2));
-                        detalleMontos.get(repTipoCli.get(i, 0)).add((Double)repTipoCli.get(i, 3));
+                        
+                        for (DetalleReporte deta : detalle){
+                            if(deta.getCuenta().equals(repTipoCli.get(i,0))){
+                                deta.getMontos().add(totalI);
+                                deta.getMontos().add((Double)repTipoCli.get(i, 2));
+                                deta.getMontos().add((Double)repTipoCli.get(i, 3));
+                            }
+                        }
                         totalFac += totalI;
                         totalCosto += (Double)repTipoCli.get(i, 2);
                         totalMargen += (Double)repTipoCli.get(i,3);
@@ -544,10 +580,14 @@ public class ExcelWS {
                     for (int i = 0; i<lastRowTipoSin; i++){
                         Double totalI = (Double)repTipoSin.get(i, 1);
                         if(totalI == 0)   margenTipSin.add(0.0);
-                        else margenTipSin.add((Double)repTipoSin.get(i, 3)/totalI*100);
-                        detalleMontos.get(repTipoSin.get(i, 0)).add(totalI);
-                        detalleMontos.get(repTipoSin.get(i, 0)).add((Double)repTipoSin.get(i, 2));
-                        detalleMontos.get(repTipoSin.get(i, 0)).add((Double)repTipoSin.get(i, 3));
+                        else margenTipSin.add((Double)repTipoSin.get(i, 3)/totalI*100);                        
+                        for (DetalleReporte deta : detalle){
+                            if(deta.getCuenta().equals(repTipoSin.get(i,0))){
+                                deta.getMontos().add(totalI);
+                                deta.getMontos().add((Double)repTipoSin.get(i, 2));
+                                deta.getMontos().add((Double)repTipoSin.get(i, 3));
+                            }
+                        }
                         totalFac += totalI;
                         totalCosto += (Double)repTipoSin.get(i, 2);
                         totalMargen += (Double)repTipoSin.get(i,3);
@@ -720,6 +760,10 @@ public class ExcelWS {
             
             //Guardar y crear cosas (si idReporte es 0)
             if (idReporte == 0){
+                //todo cambiar a "/Salida.xlsx"
+                String rutaSalida = "/Salida.xlsx";
+                File fileSalida = new File(rutaSalida);
+                OutputStream targetStream = new FileOutputStream(fileSalida);
                 ClienteDAO daoCliente = DBController.controller.getClienteDAO();
                 daoCliente.guardarBatch(tablaCliente);
                 AreaTrabajoDAO daoAreaTrabajo = DBController.controller.getAreaTrabajoDAO();
@@ -744,8 +788,7 @@ public class ExcelWS {
                 reporte.setIdExcelSalida(idExcelSalida);
             }
             
-            reporte.setMapaDetalle(detalle);
-            reporte.setMapaDetalleMontos(detalleMontos);
+            reporte.setDetalle(detalle);
             
         }
         catch(Exception ex){

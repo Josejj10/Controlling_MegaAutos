@@ -30,11 +30,11 @@ public class Reporte {
     private Double ingresos;
     private Double egresos;
     private Sede sede;
-    private HashMap<String, ArrayList<OrdenTrabajo>> mapaDetalle;
-    private HashMap<String, ArrayList<Double>> mapaDetalleMontos;
+    private List<DetalleReporte> detalle;
 
     public Reporte() {
         this.sede = new Sede();
+        this.detalle = new ArrayList<>();
     }
 
     public String getNombreUsuario() {
@@ -45,22 +45,15 @@ public class Reporte {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public HashMap<String, ArrayList<Double>> getMapaDetalleMontos() {
-        return mapaDetalleMontos;
+    public List<DetalleReporte> getDetalle() {
+        return detalle;
     }
 
-    public void setMapaDetalleMontos(HashMap<String, ArrayList<Double>> mapaDetalleMontos) {
-        this.mapaDetalleMontos = mapaDetalleMontos;
+    public void setDetalle(List<DetalleReporte> detalle) {
+        this.detalle = detalle;
     }
 
-    public HashMap<String, ArrayList<OrdenTrabajo>> getMapaDetalle() {
-        return mapaDetalle;
-    }
-
-    public void setMapaDetalle(HashMap<String, ArrayList<OrdenTrabajo>> mapaDetalle) {
-        this.mapaDetalle = mapaDetalle;
-    }
-
+    
     
     
     public int getIdReporte() {

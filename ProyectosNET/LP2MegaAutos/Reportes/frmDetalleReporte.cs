@@ -139,13 +139,13 @@ namespace LP2MegaAutos
             item.RightToLeft = RightToLeft.Yes;
             item.Cursor = Cursors.Hand;
             // Suscribir click
-            item.MouseClick += (sender, e) => { abrirOrdenTrabajo(sender, e, ot); };
+            item.ItemListaClick+= (sender, e) => { abrirOrdenTrabajo(sender, e, ot); };
             flpReportes.Controls.Add(item);
         }
 
         private void abrirOrdenTrabajo(Object sender, EventArgs e, ordenTrabajo ot)
         {
-            pantallaOrdenTrabajo frm = new pantallaOrdenTrabajo(ot);
+            frmOrdenTrabajo frm = new frmOrdenTrabajo(ot, _reporte.sede.distrito);
             frm.ShowDialog();
         }
 

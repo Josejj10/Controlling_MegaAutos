@@ -106,7 +106,7 @@ namespace LP2MegaAutos
             return item;
         }
 
-        public void addCuentaContable(ServicioExcel.ordenTrabajo ot)
+        public void addCuentaContable(ServicioExcel.ordenTrabajo ot, string distrito)
         {
             if (nItems == 0)
             {
@@ -117,13 +117,13 @@ namespace LP2MegaAutos
             item.Concepto = ot.numeroOrden;
             item.Monto = (ot.totalIngresos-ot.totalEgresos).ToString("0,000.00");
             // Delegar el click
-            item.ItemListaClick += (sender, e) => { abrirDetalleOrdentrabajo(sender, e,ot); Console.WriteLine(ot); };
+            item.ItemListaClick += (sender, e) => { abrirDetalleOrdentrabajo(sender, e,ot, distrito); };
             flpCuentasContables.Controls.Add(item);
         }
 
-        private void abrirDetalleOrdentrabajo(Object sender, EventArgs e, ServicioExcel.ordenTrabajo ot)
+        private void abrirDetalleOrdentrabajo(Object sender, EventArgs e, ServicioExcel.ordenTrabajo ot, string distrito)
         {
-            pantallaOrdenTrabajo frm = new pantallaOrdenTrabajo(ot);
+            frmOrdenTrabajo frm = new frmOrdenTrabajo(ot,distrito);
             frm.ShowDialog();
         }
 

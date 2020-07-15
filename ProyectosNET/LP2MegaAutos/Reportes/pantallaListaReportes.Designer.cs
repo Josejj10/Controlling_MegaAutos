@@ -55,6 +55,8 @@
             this.rndAZ = new LP2MegaAutos.RoundedPanel();
             this.btnAZ = new System.Windows.Forms.Button();
             this.btnGenerar = new System.Windows.Forms.Button();
+            this.lblEnterBuscar = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.rndCliente.SuspendLayout();
             this.rndAreaTrabajo.SuspendLayout();
             this.rndSiniestro.SuspendLayout();
@@ -303,6 +305,7 @@
             // pnlBuscar
             // 
             this.pnlBuscar.BackColor = System.Drawing.Color.White;
+            this.pnlBuscar.Controls.Add(this.lblEnterBuscar);
             this.pnlBuscar.Controls.Add(this.panel2);
             this.pnlBuscar.Controls.Add(this.txt_Buscar);
             this.pnlBuscar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -326,7 +329,7 @@
             this.txt_Buscar.Location = new System.Drawing.Point(49, 7);
             this.txt_Buscar.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Buscar.Name = "txt_Buscar";
-            this.txt_Buscar.Size = new System.Drawing.Size(687, 23);
+            this.txt_Buscar.Size = new System.Drawing.Size(840, 23);
             this.txt_Buscar.TabIndex = 17;
             this.tagsExtender1.SetTag2(this.txt_Buscar, null);
             this.tagsExtender1.SetTag3(this.txt_Buscar, null);
@@ -335,6 +338,7 @@
             this.tagsExtender1.SetTagFontStyle(this.txt_Buscar, System.Drawing.FontStyle.Regular);
             this.txt_Buscar.Text = "Buscar";
             this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
+            this.txt_Buscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Buscar_KeyDown);
             this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
             // 
             // panel3
@@ -684,7 +688,7 @@
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
             this.btnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.btnGenerar.Location = new System.Drawing.Point(35, 52);
+            this.btnGenerar.Location = new System.Drawing.Point(35, 558);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(136, 38);
@@ -699,6 +703,50 @@
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
+            // lblEnterBuscar
+            // 
+            this.lblEnterBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblEnterBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.lblEnterBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEnterBuscar.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnterBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblEnterBuscar.Location = new System.Drawing.Point(897, 4);
+            this.lblEnterBuscar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEnterBuscar.Name = "lblEnterBuscar";
+            this.lblEnterBuscar.Size = new System.Drawing.Size(85, 26);
+            this.lblEnterBuscar.TabIndex = 19;
+            this.tagsExtender1.SetTag2(this.lblEnterBuscar, null);
+            this.tagsExtender1.SetTag3(this.lblEnterBuscar, null);
+            this.tagsExtender1.SetTagFontName(this.lblEnterBuscar, fontsD.Lato);
+            this.tagsExtender1.SetTagFontSize(this.lblEnterBuscar, 12F);
+            this.tagsExtender1.SetTagFontStyle(this.lblEnterBuscar, System.Drawing.FontStyle.Bold);
+            this.lblEnterBuscar.Text = "↵ Enter";
+            this.lblEnterBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AutoSize = true;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(161)))), ((int)(((byte)(45)))));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
+            this.btnBuscar.Location = new System.Drawing.Point(36, 52);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(172, 38);
+            this.btnBuscar.TabIndex = 61;
+            this.tagsExtender1.SetTag2(this.btnBuscar, null);
+            this.tagsExtender1.SetTag3(this.btnBuscar, null);
+            this.tagsExtender1.SetTagFontName(this.btnBuscar, fontsD.Montserrat);
+            this.tagsExtender1.SetTagFontSize(this.btnBuscar, 11F);
+            this.tagsExtender1.SetTagFontStyle(this.btnBuscar, System.Drawing.FontStyle.Bold);
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // pantallaListaReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -706,6 +754,7 @@
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.rndReciente);
             this.Controls.Add(this.rndAntiguo);
@@ -770,5 +819,7 @@
         private RoundedPanel rndAZ;
         private System.Windows.Forms.Button btnAZ;
         private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Label lblEnterBuscar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

@@ -124,7 +124,7 @@ namespace LP2MegaAutos
 
             // Agregar las areas de trabajo
             foreach(ServicioExcel.ordenTrabajo ot in detalleReporte.ordenes){
-                item.addCuentaContable(ot);
+                item.addCuentaContable(ot, _reporte.sede.distrito);
             }
 
             return item;   

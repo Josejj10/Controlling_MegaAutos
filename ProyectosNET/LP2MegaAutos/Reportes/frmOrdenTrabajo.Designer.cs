@@ -1,6 +1,6 @@
 ﻿namespace LP2MegaAutos.Reportes
 {
-    partial class pantallaOrdenTrabajo
+    partial class frmOrdenTrabajo
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -71,6 +71,7 @@
             this.pnl_Direccion.SuspendLayout();
             this.pnl_codServ.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // title_bar
@@ -91,6 +92,9 @@
             this.tagsExtender1.SetTagFontName(this.title_bar, fontsD.Ninguno);
             this.tagsExtender1.SetTagFontSize(this.title_bar, 10F);
             this.tagsExtender1.SetTagFontStyle(this.title_bar, System.Drawing.FontStyle.Regular);
+            this.title_bar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseDown);
+            this.title_bar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseMove);
+            this.title_bar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.title_bar_MouseUp);
             // 
             // button3
             // 
@@ -116,6 +120,7 @@
             this.tagsExtender1.SetTagFontSize(this.button3, 10F);
             this.tagsExtender1.SetTagFontStyle(this.button3, System.Drawing.FontStyle.Regular);
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.boton_cerrar_MouseClick);
             // 
             // boton_minimizar
             // 
@@ -172,7 +177,7 @@
             this.rpTopMain.ColorBorde = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(246)))));
             this.rpTopMain.ColorPanel = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(191)))), ((int)(((byte)(209)))));
             this.rpTopMain.CornersRound = Plasmoid.Extensions.RectangleEdgeFilter.None;
-            this.rpTopMain.Location = new System.Drawing.Point(0, 29);
+            this.rpTopMain.Location = new System.Drawing.Point(0, 27);
             this.rpTopMain.Margin = new System.Windows.Forms.Padding(4);
             this.rpTopMain.MenosHeightBorde = 1;
             this.rpTopMain.MenosHeightPanel = 1;
@@ -657,7 +662,7 @@
             this.lbl_Fecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.lbl_Fecha.Font = new System.Drawing.Font("Lato", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(37)))), ((int)(((byte)(50)))));
-            this.lbl_Fecha.Location = new System.Drawing.Point(580, 54);
+            this.lbl_Fecha.Location = new System.Drawing.Point(557, 52);
             this.lbl_Fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Fecha.Name = "lbl_Fecha";
             this.lbl_Fecha.Size = new System.Drawing.Size(180, 45);
@@ -750,6 +755,7 @@
             // pnlBackground
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.pnlBackground.Controls.Add(this.lbl_Fecha);
             this.pnlBackground.Location = new System.Drawing.Point(0, 0);
             this.pnlBackground.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBackground.Name = "pnlBackground";
@@ -767,7 +773,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 491);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.lbl_Fecha);
             this.Controls.Add(this.lbl_OrdenTrabajo);
             this.Controls.Add(this.flpServicios);
             this.Controls.Add(this.rpn_ListaPermisosUsuario);
@@ -802,6 +807,8 @@
             this.pnl_codServ.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

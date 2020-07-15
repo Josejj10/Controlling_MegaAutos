@@ -16,10 +16,20 @@ public class DetalleReporte {
     private String cuenta;
     private List<OrdenTrabajo> ordenes;
     private List<Double> montos;
+    private List<DetalleAT> ordenesAT;
 
     public DetalleReporte() {
         ordenes = new ArrayList<>();
         montos = new ArrayList<>();
+        ordenesAT = new ArrayList<>();
+    }
+
+    public List<DetalleAT> getOrdenesAT() {
+        return ordenesAT;
+    }
+
+    public void setOrdenesAT(List<DetalleAT> ordenesAT) {
+        this.ordenesAT = ordenesAT;
     }
 
     

@@ -27,6 +27,7 @@ import pe.com.megaautos.dao.ClienteDAO;
 import pe.com.megaautos.dao.ExcelDAO;
 import pe.com.megaautos.dao.ReporteDAO;
 import pe.com.megaautos.dao.VehiculoDAO;
+import pe.com.megaautos.model.DetalleAT;
 import pe.com.megaautos.model.DetalleReporte;
 import pe.com.megaautos.model.Excel;
 import pe.com.megaautos.model.OrdenTrabajo;
@@ -260,6 +261,7 @@ public class ExcelWS {
             dfGris.add("ANIO", anio);
             dfGris.add("MES", mes);
             dfGris.add("DIA", dia);
+            dfGris.add("AUX",aux);
             dfGris.add("PRIOR_DIV", priorDiv);
             //System.out.println(dfGris);
             
@@ -341,6 +343,8 @@ public class ExcelWS {
             String OT;
 
             List<DetalleReporte> detalle = new ArrayList<>();
+            List<OrdenTrabajo> ordenesTrab = new ArrayList<>();
+            
             List<String> fecha = new ArrayList<>();
             for (int i = 0; i < lastRowOT; i++){                
                 String cadFecha = dfOT.get(i,4) + "-" + dfOT.get(i,2) + "-" + dfOT.get(i,1);
@@ -484,7 +488,7 @@ public class ExcelWS {
                         }   
                         break;
                     case "areaTrabajo":
-                        
+                        ordenesTrab.add(ot);
                         break;
                 }
             }
@@ -613,6 +617,7 @@ public class ExcelWS {
                     dfs.add(repTipoSin);
                     break;
                 case "areaTrabajo":
+                    System.out.println(dfGris);
                     repAreaTrabajo = dfGris.retain("PRIOR_DIV", "Sin_IGV").groupBy("PRIOR_DIV").sum();
                     DataFrame repDetalleAT = new DataFrame<>("Concepto", "Total Ingresos", "Total Gastos", "AT");
                     Double totalPlanchado, totalPintura, totalMecanica;
@@ -683,6 +688,28 @@ public class ExcelWS {
                     repAreaTrabajo = repAreaTrabajo.resetIndex();
                     System.out.println(repAreaTrabajo);
                     System.out.println(repDetalleAT);
+                    
+                    for (int i=0; i<repAreaTrabajo.length();i++){
+                        DetalleReporte deta = new DetalleReporte();
+                        deta.setCuenta(repAreaTrabajo.get(i,0).toString());
+                        deta.setOrdenes(ordenesTrab);
+                        deta.getMontos().add((Double)repAreaTrabajo.get(i,1));
+                        deta.getMontos().add((Double)repAreaTrabajo.get(i,2));                        
+                        deta.getMontos().add((Double)repAreaTrabajo.get(i,1)-(Double)repAreaTrabajo.get(i,2));
+                        
+                        for (int j=0; j<repDetalleAT.length();j++){
+                            if(repDetalleAT.get(j, 3).equals(deta.getCuenta())){
+                                DetalleAT detaAT = new DetalleAT();
+                                detaAT.setNumOT(repDetalleAT.get(j, 0).toString());
+                                detaAT.setIngreso((Double)repDetalleAT.get(j, 1));
+                                detaAT.setEgreso((Double)repDetalleAT.get(j, 2));
+                                detaAT.setMargen((Double)repDetalleAT.get(j, 1)-(Double)repDetalleAT.get(j, 2));
+                                deta.getOrdenesAT().add(detaAT);
+                            }
+                        }
+                        detalle.add(deta);
+                    }
+                    
                     break;
             }
             
@@ -761,7 +788,8 @@ public class ExcelWS {
             //Guardar y crear cosas (si idReporte es 0)
             if (idReporte == 0){
                 //todo cambiar a "/Salida.xlsx"
-                String rutaSalida = "/Salida.xlsx";
+//                String rutaSalida = "/Salida.xlsx";
+                String rutaSalida = "D:\\PUCP\\2020-1\\LP2\\Proyecto\\Archivos\\Salida.xlsx";
                 File fileSalida = new File(rutaSalida);
                 OutputStream targetStream = new FileOutputStream(fileSalida);
                 ClienteDAO daoCliente = DBController.controller.getClienteDAO();

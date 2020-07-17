@@ -125,7 +125,7 @@ namespace LP2MegaAutos.Informacion.Vehiculos
                 return false;
             }
 
-            if (txt_placaVehiculo.Text.Length != 6)
+            if (txt_placaVehiculo.Text.Length != 7)
             {
                 frmMessageBox f = new frmMessageBox("Por favor ingrese una placa correcta.", MessageBoxButtons.OK);
                 f.ShowDialog();

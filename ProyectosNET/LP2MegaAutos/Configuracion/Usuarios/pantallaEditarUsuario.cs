@@ -68,6 +68,8 @@ namespace LP2MegaAutos
             txtNombre.Text = "Agregar nombre de usuario...";
             _usuario = new usuario();
             _agregando = true;
+            txt_NuevaCont.Enabled = txt_RepNCont.Enabled = true;
+            btnVerPwd.Enabled = btnVerRepetir.Enabled= true;
             btnCambiarPassword.Visible =
             rpCambiarPassword.Visible =
             btnEditar.Visible =
@@ -95,6 +97,7 @@ namespace LP2MegaAutos
             if (viendoPropio)
             {
                 this.btnAgregarPermisos.Visible = false;
+                this.btnEliminar.Visible = false;
                 return;
             }
 

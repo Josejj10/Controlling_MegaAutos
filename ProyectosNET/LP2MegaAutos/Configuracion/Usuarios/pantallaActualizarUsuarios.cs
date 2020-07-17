@@ -157,12 +157,12 @@ namespace LP2MegaAutos
                 if (pas.Activando)
                 {
                     // Activar
-                    // if(daoUsuario.activarUsuario(usu.id) != 0)
-                    frm = new frmMessageBox("Se activo correctamente el usuario. Ahora puede verlo en usuarios activos.",
+                    if (daoUsuario.activarInactivo(usu.id) != 0)
+                        frm = new frmMessageBox("Se activo correctamente el usuario. Ahora puede verlo en usuarios activos.",
                             MessageBoxButtons.OK, "Usuario Activado");
                 }
                 else // Eliminar
-                    if(daoUsuario.eliminarUsuario(usu.id) != 0)
+                    if(daoUsuario.eliminarUsuario(usu.id) == 0)
                         frm = new frmMessageBox("Se desactivo correctamente el usuario. Puede activarlo al ver usuarios inactivos.",
                             MessageBoxButtons.OK,"Usuario Desactivado");
                 
